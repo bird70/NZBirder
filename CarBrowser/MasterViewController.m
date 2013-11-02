@@ -21,7 +21,6 @@
 @end
 
 @implementation MasterViewController
-//nur ein Test
 
 @synthesize birdname;
 @synthesize cell;
