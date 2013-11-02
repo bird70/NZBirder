@@ -1,0 +1,1589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B8E777E216C2F2F400949FEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E777E116C2F2F400949FEE /* UIKit.framework */; };
+		B8E777E416C2F2F400949FEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E777E316C2F2F400949FEE /* Foundation.framework */; };
+		B8E777E616C2F2F400949FEE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E777E516C2F2F400949FEE /* CoreGraphics.framework */; };
+		B8E777EC16C2F2F400949FEE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B8E777EA16C2F2F400949FEE /* InfoPlist.strings */; };
+		B8E777EE16C2F2F400949FEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E777ED16C2F2F400949FEE /* main.m */; };
+		B8E777F216C2F2F400949FEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E777F116C2F2F400949FEE /* AppDelegate.m */; };
+		B8E777F816C2F2F400949FEE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E777F716C2F2F400949FEE /* Default-568h@2x.png */; };
+		B8E777FB16C2F2F400949FEE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8E777F916C2F2F400949FEE /* MainStoryboard.storyboard */; };
+		B8E7780916C2F43000949FEE /* BirdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E7780816C2F43000949FEE /* BirdTableViewCell.m */; };
+		B8E7780C16C2F6A700949FEE /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E7780B16C2F6A700949FEE /* Bird.m */; };
+		B909A9B917AE294F00B12655 /* Watvogel_IMG_6674_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B909A9B817AE294F00B12655 /* Watvogel_IMG_6674_TN.jpg */; };
+		B909A9BB17AE45C800B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B909A9BA17AE45C800B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg */; };
+		B909A9BD17AE4B8600B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B909A9BC17AE4B8600B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN.jpg */; };
+		B909A9C017AEDD3400B12655 /* PickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B909A9BF17AEDD3400B12655 /* PickViewController.m */; };
+		B91682ED17A8CE76007C7161 /* goldfinch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B91682EC17A8CE76007C7161 /* goldfinch.mp3 */; };
+		B91682F617A8CE99007C7161 /* starling.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B91682EE17A8CE99007C7161 /* starling.mp3 */; };
+		B91682F817A8CE99007C7161 /* tomtit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B91682F017A8CE99007C7161 /* tomtit.mp3 */; };
+		B91682F917A8CE99007C7161 /* gannet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B91682F117A8CE99007C7161 /* gannet.mp3 */; };
+		B91682FA17A8CE99007C7161 /* oystercatcher.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B91682F217A8CE99007C7161 /* oystercatcher.mp3 */; };
+		B91682FB17A8CE99007C7161 /* blackbackedgull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B91682F317A8CE99007C7161 /* blackbackedgull.mp3 */; };
+		B91682FC17A8CE99007C7161 /* redbilledgull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B91682F417A8CE99007C7161 /* redbilledgull.mp3 */; };
+		B91682FD17A8CE99007C7161 /* SHOREPLOVER.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B91682F517A8CE99007C7161 /* SHOREPLOVER.mp3 */; };
+		B916830717A99355007C7161 /* HawkSperber_Accnis.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B916830417A99355007C7161 /* HawkSperber_Accnis.mp3 */; };
+		B916830817A99355007C7161 /* goldammer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B916830517A99355007C7161 /* goldammer.mp3 */; };
+		B916830917A99355007C7161 /* chaffinch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B916830617A99355007C7161 /* chaffinch.mp3 */; };
+		B916831D17AC418B007C7161 /* kingfisher_square_114.png in Resources */ = {isa = PBXBuildFile; fileRef = B916831917AC418B007C7161 /* kingfisher_square_114.png */; };
+		B916831E17AC418B007C7161 /* kingfisher_square_57_2.png in Resources */ = {isa = PBXBuildFile; fileRef = B916831A17AC418B007C7161 /* kingfisher_square_57_2.png */; };
+		B916832117AC41AF007C7161 /* kingfisher_square_57_2.png in Resources */ = {isa = PBXBuildFile; fileRef = B916832017AC41AF007C7161 /* kingfisher_square_57_2.png */; };
+		B916832317AC41BB007C7161 /* kingfisher_square_114.png in Resources */ = {isa = PBXBuildFile; fileRef = B916832217AC41BB007C7161 /* kingfisher_square_114.png */; };
+		B91683BA17AE0006007C7161 /* 685px-Drozd_zpevny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916837E17AE0006007C7161 /* 685px-Drozd_zpevny.jpg */; };
+		B91683BB17AE0006007C7161 /* 800px-Charadrius_bicinctus_breeding_-_Ralphs_Bay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916837F17AE0006007C7161 /* 800px-Charadrius_bicinctus_breeding_-_Ralphs_Bay.jpg */; };
+		B91683BC17AE0006007C7161 /* 800px-Tui_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916838017AE0006007C7161 /* 800px-Tui_10.jpg */; };
+		B91683BD17AE0006007C7161 /* 823px-Dinornis1387.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916838117AE0006007C7161 /* 823px-Dinornis1387.jpg */; };
+		B91683BE17AE0006007C7161 /* 1008px-G_tibicen_dorsalis_gnangarra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916838217AE0006007C7161 /* 1008px-G_tibicen_dorsalis_gnangarra.jpg */; };
+		B91683C017AE0006007C7161 /* Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916838417AE0006007C7161 /* Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water.jpg */; };
+		B91683C117AE0006007C7161 /* Anthornis_melanura_New_Zealand_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916838517AE0006007C7161 /* Anthornis_melanura_New_Zealand_8.jpg */; };
+		B91683C217AE0006007C7161 /* Blackbird.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916838617AE0006007C7161 /* Blackbird.jpg */; };
+		B91683C317AE0006007C7161 /* BlackSwanCygnus_atratus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916838717AE0006007C7161 /* BlackSwanCygnus_atratus.jpg */; };
+		B91683C417AE0006007C7161 /* BlackWingGull_IMG_6659.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916838817AE0006007C7161 /* BlackWingGull_IMG_6659.jpg */; };
+		B91683C517AE0006007C7161 /* Chaffinch_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916838917AE0006007C7161 /* Chaffinch_2.jpg */; };
+		B91683C617AE0006007C7161 /* Charadrius_bicinctus_breeding_Ralphs_Bay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916838A17AE0006007C7161 /* Charadrius_bicinctus_breeding_Ralphs_Bay.jpg */; };
+		B91683C717AE0006007C7161 /* Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916838B17AE0006007C7161 /* Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8.jpg */; };
+		B91683C917AE0006007C7161 /* DSC09462.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B916838D17AE0006007C7161 /* DSC09462.JPG */; };
+		B91683CA17AE0006007C7161 /* Dunnock_IMG_7140.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916838E17AE0006007C7161 /* Dunnock_IMG_7140.jpg */; };
+		B91683CB17AE0006007C7161 /* Gannet_IMG_6624.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916838F17AE0006007C7161 /* Gannet_IMG_6624.jpg */; };
+		B91683CD17AE0006007C7161 /* Goldfinch_IMG_6721.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839117AE0006007C7161 /* Goldfinch_IMG_6721.jpg */; };
+		B91683CE17AE0006007C7161 /* Goldhammer_IMG_6809.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839217AE0006007C7161 /* Goldhammer_IMG_6809.jpg */; };
+		B91683D017AE0006007C7161 /* harrierHawk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839417AE0006007C7161 /* harrierHawk.jpg */; };
+		B91683D117AE0006007C7161 /* Hihi_Stitchbird1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839517AE0006007C7161 /* Hihi_Stitchbird1.jpg */; };
+		B91683D217AE0006007C7161 /* Kingfisher_IMG_6929.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839617AE0006007C7161 /* Kingfisher_IMG_6929.jpg */; };
+		B91683D317AE0006007C7161 /* Little_Penguin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839717AE0006007C7161 /* Little_Penguin.jpg */; };
+		B91683D517AE0006007C7161 /* LittleSpottedKiwi_Apteryx_owenii.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839917AE0006007C7161 /* LittleSpottedKiwi_Apteryx_owenii.jpg */; };
+		B91683D617AE0006007C7161 /* Magpie_Australian_IMG_6747.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839A17AE0006007C7161 /* Magpie_Australian_IMG_6747.jpg */; };
+		B91683D717AE0006007C7161 /* MoreporkMaunga.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839B17AE0006007C7161 /* MoreporkMaunga.jpg */; };
+		B91683D817AE0006007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839C17AE0006007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg */; };
+		B91683DA17AE0006007C7161 /* NZKingfisher_Kotare_IMG_6861.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839E17AE0006007C7161 /* NZKingfisher_Kotare_IMG_6861.jpg */; };
+		B91683DB17AE0006007C7161 /* ParadiseDuck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839F17AE0006007C7161 /* ParadiseDuck.jpg */; };
+		B91683DD17AE0006007C7161 /* Peacock3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683A117AE0006007C7161 /* Peacock3.jpg */; };
+		B91683DE17AE0006007C7161 /* Pheasant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683A217AE0006007C7161 /* Pheasant.jpg */; };
+		B91683DF17AE0006007C7161 /* Pukeko_Porphyrio_porphyrio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683A317AE0006007C7161 /* Pukeko_Porphyrio_porphyrio.jpg */; };
+		B91683E017AE0006007C7161 /* RedBilledGull_IMG_6599.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683A417AE0006007C7161 /* RedBilledGull_IMG_6599.jpg */; };
+		B91683E117AE0006007C7161 /* Rifleman_Acanthisitta_chloris.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683A517AE0006007C7161 /* Rifleman_Acanthisitta_chloris.jpg */; };
+		B91683E217AE0006007C7161 /* RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683A617AE0006007C7161 /* RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c.jpg */; };
+		B91683E417AE0006007C7161 /* Shag_IMG_7093.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683A817AE0006007C7161 /* Shag_IMG_7093.jpg */; };
+		B91683E617AE0006007C7161 /* SI_Tomtit_male2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683AA17AE0006007C7161 /* SI_Tomtit_male2.jpg */; };
+		B91683E717AE0006007C7161 /* Silvereye_DSC09462.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683AB17AE0006007C7161 /* Silvereye_DSC09462.jpg */; };
+		B91683E817AE0006007C7161 /* SilverEye.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683AC17AE0006007C7161 /* SilverEye.jpg */; };
+		B91683E917AE0006007C7161 /* Sparrow_IMG_6604.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683AD17AE0006007C7161 /* Sparrow_IMG_6604.jpg */; };
+		B91683EA17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.1001.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B91683AE17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.1001.JPG */; };
+		B91683EB17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683AF17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg */; };
+		B91683EC17AE0006007C7161 /* Starling_IMG_6964.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683B017AE0006007C7161 /* Starling_IMG_6964.jpg */; };
+		B91683EE17AE0006007C7161 /* Takahe_Maunga.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683B217AE0006007C7161 /* Takahe_Maunga.jpg */; };
+		B91683EF17AE0006007C7161 /* Thrush_song_06-03_SCOT.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683B317AE0006007C7161 /* Thrush_song_06-03_SCOT.jpg */; };
+		B91683F017AE0006007C7161 /* Tomtit2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683B417AE0006007C7161 /* Tomtit2.jpg */; };
+		B91683F217AE0006007C7161 /* Tui_on_flax.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683B617AE0006007C7161 /* Tui_on_flax.jpg */; };
+		B91683F317AE0006007C7161 /* Watvogel_IMG_6674.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683B717AE0006007C7161 /* Watvogel_IMG_6674.jpg */; };
+		B91683F417AE0006007C7161 /* WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683B817AE0006007C7161 /* WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch.jpg */; };
+		B91683F517AE0006007C7161 /* Yellowhammer_IMG_7001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683B917AE0006007C7161 /* Yellowhammer_IMG_7001.jpg */; };
+		B91683FC17AE007F007C7161 /* 800px-Nestor_notabilis_-Fiordland_National_Park-8a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683F617AE007F007C7161 /* 800px-Nestor_notabilis_-Fiordland_National_Park-8a.jpg */; };
+		B91683FD17AE007F007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683F717AE007F007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02.jpg */; };
+		B91683FE17AE007F007C7161 /* Grey_Fantail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683F817AE007F007C7161 /* Grey_Fantail.jpg */; };
+		B91683FF17AE007F007C7161 /* GreyWarbler_Gerygone1888.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683F917AE007F007C7161 /* GreyWarbler_Gerygone1888.jpg */; };
+		B916840017AE007F007C7161 /* MoreporkMaunga.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683FA17AE007F007C7161 /* MoreporkMaunga.jpg */; };
+		B916840117AE007F007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683FB17AE007F007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg */; };
+		B91684E517AE0512007C7161 /* 800px-Nestor_notabilis_-Fiordland_National_Park-8a_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684B817AE0512007C7161 /* 800px-Nestor_notabilis_-Fiordland_National_Park-8a_TN.jpg */; };
+		B91684E617AE0512007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684B917AE0512007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02_TN.jpg */; };
+		B91684E717AE0512007C7161 /* 823px-Dinornis1387_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684BA17AE0512007C7161 /* 823px-Dinornis1387_TN.jpg */; };
+		B91684E817AE0512007C7161 /* Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684BB17AE0512007C7161 /* Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water_TN.jpg */; };
+		B91684E917AE0512007C7161 /* Anthornis_melanura_New_Zealand_8_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684BC17AE0512007C7161 /* Anthornis_melanura_New_Zealand_8_TN.jpg */; };
+		B91684EA17AE0512007C7161 /* Blackbird_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684BD17AE0512007C7161 /* Blackbird_TN.jpg */; };
+		B91684EB17AE0512007C7161 /* BlackSwanCygnus_atratus_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684BE17AE0512007C7161 /* BlackSwanCygnus_atratus_TN.jpg */; };
+		B91684EC17AE0512007C7161 /* BlackWingGull_IMG_6659_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684BF17AE0512007C7161 /* BlackWingGull_IMG_6659_TN.jpg */; };
+		B91684ED17AE0512007C7161 /* Chaffinch_2_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684C017AE0512007C7161 /* Chaffinch_2_TN.jpg */; };
+		B91684EE17AE0512007C7161 /* Charadrius_bicinctus_breeding_Ralphs_Bay_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684C117AE0512007C7161 /* Charadrius_bicinctus_breeding_Ralphs_Bay_TN.jpg */; };
+		B91684EF17AE0512007C7161 /* Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684C217AE0512007C7161 /* Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8_TN.jpg */; };
+		B91684F017AE0512007C7161 /* Dunnock_IMG_7140_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684C317AE0512007C7161 /* Dunnock_IMG_7140_TN.jpg */; };
+		B91684F117AE0512007C7161 /* Gannet_IMG_6624_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684C417AE0512007C7161 /* Gannet_IMG_6624_TN.jpg */; };
+		B91684F217AE0512007C7161 /* Goldfinch_IMG_6721_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684C517AE0512007C7161 /* Goldfinch_IMG_6721_TN.jpg */; };
+		B91684F317AE0512007C7161 /* Grey_Fantail_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684C617AE0512007C7161 /* Grey_Fantail_TN.jpg */; };
+		B91684F417AE0512007C7161 /* GreyWarbler_Gerygone1888_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684C717AE0512007C7161 /* GreyWarbler_Gerygone1888_TN.jpg */; };
+		B91684F517AE0512007C7161 /* harrierHawk_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684C817AE0512007C7161 /* harrierHawk_TN.jpg */; };
+		B91684F617AE0512007C7161 /* Hihi_Stitchbird1_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684C917AE0512007C7161 /* Hihi_Stitchbird1_TN.jpg */; };
+		B91684F717AE0512007C7161 /* Kingfisher_IMG_6929_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684CA17AE0512007C7161 /* Kingfisher_IMG_6929_TN.jpg */; };
+		B91684F817AE0512007C7161 /* Little_Penguin_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684CB17AE0512007C7161 /* Little_Penguin_TN.jpg */; };
+		B91684F917AE0512007C7161 /* LittleSpottedKiwi_Apteryx_owenii_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684CC17AE0512007C7161 /* LittleSpottedKiwi_Apteryx_owenii_TN.jpg */; };
+		B91684FA17AE0512007C7161 /* Magpie_Australian_IMG_6747_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684CD17AE0512007C7161 /* Magpie_Australian_IMG_6747_TN.jpg */; };
+		B91684FB17AE0512007C7161 /* MoreporkMaunga_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684CE17AE0512007C7161 /* MoreporkMaunga_TN.jpg */; };
+		B91684FC17AE0512007C7161 /* New_Zealand_Pigeon_Southstar_02_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684CF17AE0512007C7161 /* New_Zealand_Pigeon_Southstar_02_TN.jpg */; };
+		B91684FD17AE0512007C7161 /* ParadiseDuck_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684D017AE0512007C7161 /* ParadiseDuck_TN.jpg */; };
+		B91684FE17AE0512007C7161 /* Peacock3_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684D117AE0512007C7161 /* Peacock3_TN.jpg */; };
+		B91684FF17AE0512007C7161 /* Pheasant_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684D217AE0512007C7161 /* Pheasant_TN.jpg */; };
+		B916850017AE0512007C7161 /* Pukeko_Porphyrio_porphyrio_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684D317AE0512007C7161 /* Pukeko_Porphyrio_porphyrio_TN.jpg */; };
+		B916850117AE0512007C7161 /* RedBilledGull_IMG_6599_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684D417AE0512007C7161 /* RedBilledGull_IMG_6599_TN.jpg */; };
+		B916850217AE0512007C7161 /* Rifleman_Acanthisitta_chloris_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684D517AE0512007C7161 /* Rifleman_Acanthisitta_chloris_TN.jpg */; };
+		B916850317AE0512007C7161 /* RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684D617AE0512007C7161 /* RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c_TN.jpg */; };
+		B916850417AE0512007C7161 /* Shag_IMG_6849_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684D717AE0512007C7161 /* Shag_IMG_6849_TN.jpg */; };
+		B916850517AE0512007C7161 /* Shag_IMG_7093_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684D817AE0512007C7161 /* Shag_IMG_7093_TN.jpg */; };
+		B916850617AE0512007C7161 /* SI_Tomtit_male2_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684D917AE0512007C7161 /* SI_Tomtit_male2_TN.jpg */; };
+		B916850717AE0512007C7161 /* Silvereye_DSC09462_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684DA17AE0512007C7161 /* Silvereye_DSC09462_TN.jpg */; };
+		B916850817AE0512007C7161 /* Sparrow_IMG_6604_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684DB17AE0512007C7161 /* Sparrow_IMG_6604_TN.jpg */; };
+		B916850917AE0512007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684DC17AE0512007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo_TN.jpg */; };
+		B916850B17AE0512007C7161 /* Starling_IMG_6964_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684DE17AE0512007C7161 /* Starling_IMG_6964_TN.jpg */; };
+		B916850C17AE0512007C7161 /* Takahe_Maunga_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684DF17AE0512007C7161 /* Takahe_Maunga_TN.jpg */; };
+		B916850D17AE0512007C7161 /* Thrush_song_06-03_SCOT_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684E017AE0512007C7161 /* Thrush_song_06-03_SCOT_TN.jpg */; };
+		B916850E17AE0512007C7161 /* Tui_on_flax_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684E117AE0512007C7161 /* Tui_on_flax_TN.jpg */; };
+		B916850F17AE0512007C7161 /* Turkey_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684E217AE0512007C7161 /* Turkey_TN.jpg */; };
+		B916851017AE0512007C7161 /* WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684E317AE0512007C7161 /* WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch_TN.jpg */; };
+		B916851117AE0512007C7161 /* Yellowhammer_IMG_7001_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684E417AE0512007C7161 /* Yellowhammer_IMG_7001_TN.jpg */; };
+		B934A52F178D4B2F00D3F6F7 /* ObservationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B934A52E178D4B2E00D3F6F7 /* ObservationTableViewController.m */; };
+		B934A5841793E2C900D3F6F7 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B934A5831793E2C700D3F6F7 /* CHCSVParser.m */; };
+		B934A590179485B000D3F6F7 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B934A58F179485AF00D3F6F7 /* libsqlite3.0.dylib */; };
+		B934A592179485CF00D3F6F7 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B934A591179485CE00D3F6F7 /* libsqlite3.dylib */; };
+		B934A59D1794865D00D3F6F7 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B934A5941794864A00D3F6F7 /* FMDatabase.m */; };
+		B934A59E1794865D00D3F6F7 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B934A5961794864F00D3F6F7 /* FMDatabaseAdditions.m */; };
+		B934A59F1794865D00D3F6F7 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B934A5981794865300D3F6F7 /* FMDatabasePool.m */; };
+		B934A5A01794865D00D3F6F7 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B934A59A1794865700D3F6F7 /* FMDatabaseQueue.m */; };
+		B934A5A11794865D00D3F6F7 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B934A59C1794865B00D3F6F7 /* FMResultSet.m */; };
+		B934A5A317950A0500D3F6F7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B934A5A217950A0400D3F6F7 /* MessageUI.framework */; };
+		B934A5AD1795DD8000D3F6F7 /* Black_Swan_20110325_XC74379.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B934A5A61795DD8000D3F6F7 /* Black_Swan_20110325_XC74379.mp3 */; };
+		B934A5AE1795DD8000D3F6F7 /* Little-PenguineEudyptilaMinor_XC98203.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B934A5A71795DD8000D3F6F7 /* Little-PenguineEudyptilaMinor_XC98203.mp3 */; };
+		B934A5AF1795DD8000D3F6F7 /* Weka_Song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B934A5A81795DD8000D3F6F7 /* Weka_Song.mp3 */; };
+		B934A5B01795DD8000D3F6F7 /* Purple_Swamphen_Tiritiri_Matangi_Island.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B934A5A91795DD8000D3F6F7 /* Purple_Swamphen_Tiritiri_Matangi_Island.mp3 */; };
+		B934A5B11795DD8000D3F6F7 /* Sparrow_XC112666-Pasdom_Sohar_27dec2009.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B934A5AA1795DD8000D3F6F7 /* Sparrow_XC112666-Pasdom_Sohar_27dec2009.mp3 */; };
+		B934A5B21795DD8000D3F6F7 /* Singdrossel_1753.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B934A5AB1795DD8000D3F6F7 /* Singdrossel_1753.mp3 */; };
+		B934A5B31795DD8000D3F6F7 /* Tadorna_variegata100309_16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B934A5AC1795DD8000D3F6F7 /* Tadorna_variegata100309_16.mp3 */; };
+		B934A5CA17968A4B00D3F6F7 /* FullBirdImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B934A5C917968A4B00D3F6F7 /* FullBirdImage.m */; };
+		B934A5CD17968A4D00D3F6F7 /* Bird_attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = B934A5CC17968A4D00D3F6F7 /* Bird_attributes.m */; };
+		B943EDC11738DC9E007DB011 /* silvereye-song-22sy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B943EDC01738DC9E007DB011 /* silvereye-song-22sy.mp3 */; };
+		B943EDF7173A4790007DB011 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B943EDF6173A4790007DB011 /* AVFoundation.framework */; };
+		B9461D9017421910007A8A20 /* 0043.png in Resources */ = {isa = PBXBuildFile; fileRef = B9461D8917421910007A8A20 /* 0043.png */; };
+		B9461D9117421910007A8A20 /* 0043@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9461D8A17421910007A8A20 /* 0043@2x.png */; };
+		B9461D9617421B12007A8A20 /* 0063.png in Resources */ = {isa = PBXBuildFile; fileRef = B9461D9217421B12007A8A20 /* 0063.png */; };
+		B9461D9717421B12007A8A20 /* 0063@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9461D9317421B12007A8A20 /* 0063@2x.png */; };
+		B9461D9817421B12007A8A20 /* 0300.png in Resources */ = {isa = PBXBuildFile; fileRef = B9461D9417421B12007A8A20 /* 0300.png */; };
+		B9461D9917421B12007A8A20 /* 0300@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9461D9517421B12007A8A20 /* 0300@2x.png */; };
+		B946225217421BBF007A8A20 /* 0209.png in Resources */ = {isa = PBXBuildFile; fileRef = B946224E17421BBF007A8A20 /* 0209.png */; };
+		B946225317421BBF007A8A20 /* 0209@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B946224F17421BBF007A8A20 /* 0209@2x.png */; };
+		B946225417421BBF007A8A20 /* 0269.png in Resources */ = {isa = PBXBuildFile; fileRef = B946225017421BBF007A8A20 /* 0269.png */; };
+		B946225517421BBF007A8A20 /* 0269@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B946225117421BBF007A8A20 /* 0269@2x.png */; };
+		B94622661743221A007A8A20 /* 0266.png in Resources */ = {isa = PBXBuildFile; fileRef = B94622621743221A007A8A20 /* 0266.png */; };
+		B94622671743221A007A8A20 /* 0266@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B94622631743221A007A8A20 /* 0266@2x.png */; };
+		B94622681743221A007A8A20 /* 0280.png in Resources */ = {isa = PBXBuildFile; fileRef = B94622641743221A007A8A20 /* 0280.png */; };
+		B94622691743221A007A8A20 /* 0280@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B94622651743221A007A8A20 /* 0280@2x.png */; };
+		B946226B174387D1007A8A20 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B946226A174387D1007A8A20 /* CoreLocation.framework */; };
+		B946226D174387DE007A8A20 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B946226C174387DE007A8A20 /* MapKit.framework */; };
+		B946228A17439047007A8A20 /* BirdMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B946228917439047007A8A20 /* BirdMapViewController.m */; };
+		B95B943A17C06A6900EBC8E7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B95B943917C06A6900EBC8E7 /* Default.png */; };
+		B961701917B4D53700A6167E /* 0236.png in Resources */ = {isa = PBXBuildFile; fileRef = B961701717B4D53700A6167E /* 0236.png */; };
+		B961701A17B4D53700A6167E /* 0236@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B961701817B4D53700A6167E /* 0236@2x.png */; };
+		B9682477176233640093F493 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9682476176233640093F493 /* CoreData.framework */; };
+		B968247A176234380093F493 /* BirdBrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9682478176234380093F493 /* BirdBrowser.xcdatamodeld */; };
+		B9708E5F17BACBAA00B90254 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9708E5E17BACBAA00B90254 /* BrowserViewController.m */; };
+		B9708E6517BC6F3A00B90254 /* NZBirder.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B9708E6417BC6F3A00B90254 /* NZBirder.sqlite */; };
+		B98227C21772390700A97BD3 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98227C11772390700A97BD3 /* ModelController.m */; };
+		B98227C517723FAA00A97BD3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98227C417723FAA00A97BD3 /* MapViewController.m */; };
+		B98227D81772444100A97BD3 /* MapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = B98227D31772444100A97BD3 /* MapViewAnnotation.m */; };
+		B98227D91772444100A97BD3 /* NSCoder+FavSpots.m in Sources */ = {isa = PBXBuildFile; fileRef = B98227D51772444100A97BD3 /* NSCoder+FavSpots.m */; };
+		B98227DA1772444100A97BD3 /* NSCoder+RNMapKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B98227D71772444100A97BD3 /* NSCoder+RNMapKit.m */; };
+		B98227E01772468000A97BD3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98227DF1772468000A97BD3 /* DetailViewController.m */; };
+		B98227E6177257A800A97BD3 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98227E5177257A800A97BD3 /* MasterViewController.m */; };
+		B98227E917728C0700A97BD3 /* TextEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98227E817728C0700A97BD3 /* TextEditViewController.m */; };
+		B98227EB1773B38C00A97BD3 /* Hihi_Stitchbird.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B98227EA1773B38C00A97BD3 /* Hihi_Stitchbird.mp3 */; };
+		B98227EE1773B61000A97BD3 /* 0002.png in Resources */ = {isa = PBXBuildFile; fileRef = B98227EC1773B61000A97BD3 /* 0002.png */; };
+		B98227EF1773B61000A97BD3 /* 0002@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B98227ED1773B61000A97BD3 /* 0002@2x.png */; };
+		B9A86A98173FB2C6006908C0 /* bellbird-56.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9A86A97173FB2C6006908C0 /* bellbird-56.mp3 */; };
+		B9ACFDEC17C84AB0002CE932 /* Shining_BronzeCuckoo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9ACFDE317C84AB0002CE932 /* Shining_BronzeCuckoo.mp3 */; };
+		B9ACFDED17C84AB0002CE932 /* Hirundotahitica.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9ACFDE417C84AB0002CE932 /* Hirundotahitica.mp3 */; };
+		B9ACFDEE17C84AB0002CE932 /* Carduelis_chloris_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9ACFDE517C84AB0002CE932 /* Carduelis_chloris_TN.jpg */; };
+		B9ACFDEF17C84AB0002CE932 /* Chrysococcyx_lucidus_-Brisbane,_Queensland,_Australia_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9ACFDE617C84AB0002CE932 /* Chrysococcyx_lucidus_-Brisbane,_Queensland,_Australia_TN.jpg */; };
+		B9ACFDF017C84AB0002CE932 /* Welcome_Swallow_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9ACFDE717C84AB0002CE932 /* Welcome_Swallow_TN.jpg */; };
+		B9ACFDF117C84AB0002CE932 /* commonswikimedia.orgwikiFileWelcome_Swallowjpg800px-Welcome_Swallow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9ACFDE817C84AB0002CE932 /* commonswikimedia.orgwikiFileWelcome_Swallowjpg800px-Welcome_Swallow.jpg */; };
+		B9ACFDF317C84AB0002CE932 /* Carduelis_chloris_AuthorOlivierFromFranceWikiCommons.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9ACFDEA17C84AB0002CE932 /* Carduelis_chloris_AuthorOlivierFromFranceWikiCommons.jpg */; };
+		B9ACFDF417C84AB0002CE932 /* Chrysococcyx_lucidus_JamesNiland_Brisbane_Queensland_Australia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9ACFDEB17C84AB0002CE932 /* Chrysococcyx_lucidus_JamesNiland_Brisbane_Queensland_Australia.jpg */; };
+		B9B917031744D46600B9916D /* fantail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9B916FD1744D46600B9916D /* fantail.mp3 */; };
+		B9B917041744D46600B9916D /* is_kiwi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9B916FE1744D46600B9916D /* is_kiwi.mp3 */; };
+		B9B917061744D46600B9916D /* kakariki.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9B917001744D46600B9916D /* kakariki.mp3 */; };
+		B9B917081744D46600B9916D /* morepork.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9B917021744D46600B9916D /* morepork.mp3 */; };
+		B9BA7EDF177C3846003DA778 /* Australian-Magpie.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9BA7EDE177C3846003DA778 /* Australian-Magpie.mp3 */; };
+		B9BA7EE51780B671003DA778 /* BirdDetailViewController_CD.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BA7EE41780B671003DA778 /* BirdDetailViewController_CD.m */; };
+		B9BE104917FB3E31005BA377 /* NSData+MKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BE103517FB3E31005BA377 /* NSData+MKBase64.m */; };
+		B9BE104A17FB3E31005BA377 /* NSDate+RFC1123.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BE103717FB3E31005BA377 /* NSDate+RFC1123.m */; };
+		B9BE104B17FB3E31005BA377 /* NSDictionary+RequestEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BE103917FB3E31005BA377 /* NSDictionary+RequestEncoding.m */; };
+		B9BE104C17FB3E31005BA377 /* NSString+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BE103B17FB3E31005BA377 /* NSString+MKNetworkKitAdditions.m */; };
+		B9BE104D17FB3E31005BA377 /* UIAlertView+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BE103D17FB3E31005BA377 /* UIAlertView+MKNetworkKitAdditions.m */; };
+		B9BE104E17FB3E31005BA377 /* UIImageView+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BE103F17FB3E31005BA377 /* UIImageView+MKNetworkKitAdditions.m */; };
+		B9BE104F17FB3E31005BA377 /* MKNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BE104117FB3E31005BA377 /* MKNetworkEngine.m */; };
+		B9BE105017FB3E31005BA377 /* MKNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BE104417FB3E31005BA377 /* MKNetworkOperation.m */; };
+		B9BE105117FB3E31005BA377 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BE104717FB3E31005BA377 /* Reachability.m */; };
+		B9BE105317FB4020005BA377 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BE105217FB4020005BA377 /* Security.framework */; };
+		B9BE105517FB402F005BA377 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BE105417FB402F005BA377 /* SystemConfiguration.framework */; };
+		B9BE105817FB49C1005BA377 /* FileUploadEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BE105717FB49C1005BA377 /* FileUploadEngine.m */; };
+		B9BED1231797D9E600E6FE0E /* greypeacockpheasantbarkingcallthaiFarrow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9BED11E1797D9E600E6FE0E /* greypeacockpheasantbarkingcallthaiFarrow.mp3 */; };
+		B9BED1251797D9E600E6FE0E /* SHAG_Phalacrocorax_magellanicus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9BED1201797D9E600E6FE0E /* SHAG_Phalacrocorax_magellanicus.mp3 */; };
+		B9BED1261797D9E600E6FE0E /* SHAGAuklandIs_FL Enderby26Nov2000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9BED1211797D9E600E6FE0E /* SHAGAuklandIs_FL Enderby26Nov2000.mp3 */; };
+		B9BED1271797D9E600E6FE0E /* rosellas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9BED1221797D9E600E6FE0E /* rosellas.mp3 */; };
+		B9BED1291797DE6D00E6FE0E /* PiedStilt_WhhSti-20090712_083000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9BED1281797DE6D00E6FE0E /* PiedStilt_WhhSti-20090712_083000.mp3 */; };
+		B9BED13E17993C4200E6FE0E /* home_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED12A17993C4000E6FE0E /* home_selected.png */; };
+		B9BED13F17993C4200E6FE0E /* home_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED12B17993C4100E6FE0E /* home_selected@2x.png */; };
+		B9BED14017993C4200E6FE0E /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED12C17993C4100E6FE0E /* home.png */; };
+		B9BED14117993C4200E6FE0E /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED12D17993C4100E6FE0E /* home@2x.png */; };
+		B9BED14217993C4200E6FE0E /* maps_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED12E17993C4100E6FE0E /* maps_selected.png */; };
+		B9BED14317993C4200E6FE0E /* maps_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED12F17993C4100E6FE0E /* maps_selected@2x.png */; };
+		B9BED14417993C4200E6FE0E /* maps.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED13017993C4100E6FE0E /* maps.png */; };
+		B9BED14517993C4200E6FE0E /* maps@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED13117993C4100E6FE0E /* maps@2x.png */; };
+		B9BED14817993C4200E6FE0E /* myplan.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED13417993C4200E6FE0E /* myplan.png */; };
+		B9BED14917993C4200E6FE0E /* myplan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED13517993C4200E6FE0E /* myplan@2x.png */; };
+		B9BED14A17993C4200E6FE0E /* settings_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED13617993C4200E6FE0E /* settings_selected.png */; };
+		B9BED14B17993C4200E6FE0E /* settings_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED13717993C4200E6FE0E /* settings_selected@2x.png */; };
+		B9BED14C17993C4200E6FE0E /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED13817993C4200E6FE0E /* settings.png */; };
+		B9BED14D17993C4200E6FE0E /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED13917993C4200E6FE0E /* settings@2x.png */; };
+		B9BED14E17993C4200E6FE0E /* tabbar_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED13A17993C4200E6FE0E /* tabbar_selected.png */; };
+		B9BED14F17993C4200E6FE0E /* tabbar_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED13B17993C4200E6FE0E /* tabbar_selected@2x.png */; };
+		B9BED15017993C4200E6FE0E /* tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED13C17993C4200E6FE0E /* tabbar.png */; };
+		B9BED15117993C4200E6FE0E /* tabbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED13D17993C4200E6FE0E /* tabbar@2x.png */; };
+		B9BED1541799402000E6FE0E /* Spot.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BED1531799402000E6FE0E /* Spot.m */; };
+		B9BED157179A0F5E00E6FE0E /* CurrentSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BED156179A0F5D00E6FE0E /* CurrentSpot.m */; };
+		B9CDE3A617A4F56200661AF9 /* 0088.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE3A217A4F56100661AF9 /* 0088.png */; };
+		B9CDE3A717A4F56200661AF9 /* 0088@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE3A317A4F56100661AF9 /* 0088@2x.png */; };
+		B9CDE3A817A4F56200661AF9 /* 0239.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE3A417A4F56100661AF9 /* 0239.png */; };
+		B9CDE3A917A4F56200661AF9 /* 0239@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE3A517A4F56100661AF9 /* 0239@2x.png */; };
+		B9D92E461748DEB0001B6D79 /* button_back.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E391748DEB0001B6D79 /* button_back.png */; };
+		B9D92E471748DEB0001B6D79 /* button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E3A1748DEB0001B6D79 /* button_normal.png */; };
+		B9D92E481748DEB0001B6D79 /* cell_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E3B1748DEB0001B6D79 /* cell_bottom.png */; };
+		B9D92E491748DEB0001B6D79 /* cell_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E3C1748DEB0001B6D79 /* cell_bottom@2x.png */; };
+		B9D92E4A1748DEB0001B6D79 /* cell_middle.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E3D1748DEB0001B6D79 /* cell_middle.png */; };
+		B9D92E4B1748DEB0001B6D79 /* cell_middle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E3E1748DEB0001B6D79 /* cell_middle@2x.png */; };
+		B9D92E4C1748DEB0001B6D79 /* cell_top_tile.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E3F1748DEB0001B6D79 /* cell_top_tile.png */; };
+		B9D92E4D1748DEB0001B6D79 /* cell_top.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E401748DEB0001B6D79 /* cell_top.png */; };
+		B9D92E4E1748DEB0001B6D79 /* cell_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E411748DEB0001B6D79 /* cell_top@2x.png */; };
+		B9D92E4F1748DEB0001B6D79 /* common_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E421748DEB0001B6D79 /* common_bg.png */; };
+		B9D92E501748DEB0001B6D79 /* common_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E431748DEB0001B6D79 /* common_bg@2x.png */; };
+		B9D92E511748DEB0001B6D79 /* navbar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E441748DEB0001B6D79 /* navbar_bg.png */; };
+		B9D92E521748DEB0001B6D79 /* navbar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E451748DEB0001B6D79 /* navbar_bg@2x.png */; };
+		B9D92E6C174CEEC0001B6D79 /* kereru.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E6B174CEEBF001B6D79 /* kereru.mp3 */; };
+		B9D92E71174E5651001B6D79 /* 0283.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E6D174E5650001B6D79 /* 0283.png */; };
+		B9D92E72174E5651001B6D79 /* 0283@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E6E174E5651001B6D79 /* 0283@2x.png */; };
+		B9D92E73174E5651001B6D79 /* 0284.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E6F174E5651001B6D79 /* 0284.png */; };
+		B9D92E74174E5651001B6D79 /* 0284@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E70174E5651001B6D79 /* 0284@2x.png */; };
+		B9D92E79174E5717001B6D79 /* 0263.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E75174E5711001B6D79 /* 0263.png */; };
+		B9D92E7A174E5717001B6D79 /* 0263@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E76174E5712001B6D79 /* 0263@2x.png */; };
+		B9D92E7B174E5717001B6D79 /* 0264.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E77174E5714001B6D79 /* 0264.png */; };
+		B9D92E7C174E5717001B6D79 /* 0264@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E78174E5716001B6D79 /* 0264@2x.png */; };
+		B9DF1E471775A6FF00F5DA74 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DF1E461775A6FF00F5DA74 /* AudioToolbox.framework */; };
+		B9DF1E4A1775AB8D00F5DA74 /* kea2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9DF1E481775AB8D00F5DA74 /* kea2.mp3 */; };
+		B9DF1E4B1775AB8D00F5DA74 /* tui2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9DF1E491775AB8D00F5DA74 /* tui2.mp3 */; };
+		B9DF1E4D1775AD0000F5DA74 /* blackbird.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9DF1E4C1775AD0000F5DA74 /* blackbird.mp3 */; };
+		B9DF1E4F1775AEF900F5DA74 /* Rifleman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9DF1E4E1775AEF900F5DA74 /* Rifleman.mp3 */; };
+		B9DF1E57177619DA00F5DA74 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DF1E56177619DA00F5DA74 /* Default@2x.png */; };
+		B9DF1E5F1776708300F5DA74 /* BirdMasterTableViewController_CD.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DF1E5E1776708200F5DA74 /* BirdMasterTableViewController_CD.m */; };
+		B9FEE0B7178A2C2F00768240 /* Info.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FEE0B6178A2C2F00768240 /* Info.m */; };
+		B9FEE0D7178A734900768240 /* Observation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FEE0D6178A734800768240 /* Observation.m */; };
+		B9FEE0E0178A838A00768240 /* 0038.png in Resources */ = {isa = PBXBuildFile; fileRef = B9FEE0D8178A838800768240 /* 0038.png */; };
+		B9FEE0E1178A838A00768240 /* 0038@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9FEE0D9178A838800768240 /* 0038@2x.png */; };
+		B9FEE0E2178A838A00768240 /* 0065.png in Resources */ = {isa = PBXBuildFile; fileRef = B9FEE0DA178A838800768240 /* 0065.png */; };
+		B9FEE0E3178A838A00768240 /* 0065@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9FEE0DB178A838900768240 /* 0065@2x.png */; };
+		B9FEE0E4178A838A00768240 /* 0090.png in Resources */ = {isa = PBXBuildFile; fileRef = B9FEE0DC178A838900768240 /* 0090.png */; };
+		B9FEE0E5178A838A00768240 /* 0090@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9FEE0DD178A838900768240 /* 0090@2x.png */; };
+		B9FEE0E6178A838A00768240 /* 0207.png in Resources */ = {isa = PBXBuildFile; fileRef = B9FEE0DE178A838A00768240 /* 0207.png */; };
+		B9FEE0E7178A838A00768240 /* 0207@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9FEE0DF178A838A00768240 /* 0207@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B8E777DE16C2F2F400949FEE /* NZBirder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NZBirder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E777E116C2F2F400949FEE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B8E777E316C2F2F400949FEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B8E777E516C2F2F400949FEE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B8E777E916C2F2F400949FEE /* BirdBrowser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BirdBrowser-Info.plist"; sourceTree = "<group>"; };
+		B8E777EB16C2F2F400949FEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B8E777ED16C2F2F400949FEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B8E777EF16C2F2F400949FEE /* BirdBrowser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BirdBrowser-Prefix.pch"; sourceTree = "<group>"; };
+		B8E777F016C2F2F400949FEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B8E777F116C2F2F400949FEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B8E777F316C2F2F400949FEE /* Original_Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Original_Default.png; sourceTree = "<group>"; };
+		B8E777F516C2F2F400949FEE /* Original_Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Original_Default@2x.png"; sourceTree = "<group>"; };
+		B8E777F716C2F2F400949FEE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B8E777FA16C2F2F400949FEE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		B8E7780716C2F43000949FEE /* BirdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdTableViewCell.h; sourceTree = "<group>"; };
+		B8E7780816C2F43000949FEE /* BirdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdTableViewCell.m; sourceTree = "<group>"; };
+		B8E7780A16C2F6A700949FEE /* Bird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bird.h; sourceTree = "<group>"; };
+		B8E7780B16C2F6A700949FEE /* Bird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bird.m; sourceTree = "<group>"; };
+		B909A9B817AE294F00B12655 /* Watvogel_IMG_6674_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Watvogel_IMG_6674_TN.jpg; sourceTree = "<group>"; };
+		B909A9BA17AE45C800B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg"; sourceTree = "<group>"; };
+		B909A9BC17AE4B8600B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN.jpg"; sourceTree = "<group>"; };
+		B909A9BE17AEDD3400B12655 /* PickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickViewController.h; sourceTree = "<group>"; };
+		B909A9BF17AEDD3400B12655 /* PickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickViewController.m; sourceTree = "<group>"; };
+		B91682EC17A8CE76007C7161 /* goldfinch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = goldfinch.mp3; sourceTree = "<group>"; };
+		B91682EE17A8CE99007C7161 /* starling.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = starling.mp3; sourceTree = "<group>"; };
+		B91682F017A8CE99007C7161 /* tomtit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tomtit.mp3; sourceTree = "<group>"; };
+		B91682F117A8CE99007C7161 /* gannet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gannet.mp3; sourceTree = "<group>"; };
+		B91682F217A8CE99007C7161 /* oystercatcher.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = oystercatcher.mp3; sourceTree = "<group>"; };
+		B91682F317A8CE99007C7161 /* blackbackedgull.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = blackbackedgull.mp3; sourceTree = "<group>"; };
+		B91682F417A8CE99007C7161 /* redbilledgull.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = redbilledgull.mp3; sourceTree = "<group>"; };
+		B91682F517A8CE99007C7161 /* SHOREPLOVER.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SHOREPLOVER.mp3; sourceTree = "<group>"; };
+		B916830417A99355007C7161 /* HawkSperber_Accnis.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HawkSperber_Accnis.mp3; sourceTree = "<group>"; };
+		B916830517A99355007C7161 /* goldammer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = goldammer.mp3; sourceTree = "<group>"; };
+		B916830617A99355007C7161 /* chaffinch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chaffinch.mp3; sourceTree = "<group>"; };
+		B916831917AC418B007C7161 /* kingfisher_square_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kingfisher_square_114.png; sourceTree = "<group>"; };
+		B916831A17AC418B007C7161 /* kingfisher_square_57_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kingfisher_square_57_2.png; sourceTree = "<group>"; };
+		B916832017AC41AF007C7161 /* kingfisher_square_57_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kingfisher_square_57_2.png; path = ../kingfisher_square_57_2.png; sourceTree = "<group>"; };
+		B916832217AC41BB007C7161 /* kingfisher_square_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kingfisher_square_114.png; path = ../kingfisher_square_114.png; sourceTree = "<group>"; };
+		B916837E17AE0006007C7161 /* 685px-Drozd_zpevny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "685px-Drozd_zpevny.jpg"; sourceTree = "<group>"; };
+		B916837F17AE0006007C7161 /* 800px-Charadrius_bicinctus_breeding_-_Ralphs_Bay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "800px-Charadrius_bicinctus_breeding_-_Ralphs_Bay.jpg"; sourceTree = "<group>"; };
+		B916838017AE0006007C7161 /* 800px-Tui_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "800px-Tui_10.jpg"; sourceTree = "<group>"; };
+		B916838117AE0006007C7161 /* 823px-Dinornis1387.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "823px-Dinornis1387.jpg"; sourceTree = "<group>"; };
+		B916838217AE0006007C7161 /* 1008px-G_tibicen_dorsalis_gnangarra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1008px-G_tibicen_dorsalis_gnangarra.jpg"; sourceTree = "<group>"; };
+		B916838417AE0006007C7161 /* Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water.jpg"; sourceTree = "<group>"; };
+		B916838517AE0006007C7161 /* Anthornis_melanura_New_Zealand_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Anthornis_melanura_New_Zealand_8.jpg; sourceTree = "<group>"; };
+		B916838617AE0006007C7161 /* Blackbird.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Blackbird.jpg; sourceTree = "<group>"; };
+		B916838717AE0006007C7161 /* BlackSwanCygnus_atratus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlackSwanCygnus_atratus.jpg; sourceTree = "<group>"; };
+		B916838817AE0006007C7161 /* BlackWingGull_IMG_6659.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlackWingGull_IMG_6659.jpg; sourceTree = "<group>"; };
+		B916838917AE0006007C7161 /* Chaffinch_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Chaffinch_2.jpg; sourceTree = "<group>"; };
+		B916838A17AE0006007C7161 /* Charadrius_bicinctus_breeding_Ralphs_Bay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Charadrius_bicinctus_breeding_Ralphs_Bay.jpg; sourceTree = "<group>"; };
+		B916838B17AE0006007C7161 /* Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8.jpg"; sourceTree = "<group>"; };
+		B916838D17AE0006007C7161 /* DSC09462.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSC09462.JPG; sourceTree = "<group>"; };
+		B916838E17AE0006007C7161 /* Dunnock_IMG_7140.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dunnock_IMG_7140.jpg; sourceTree = "<group>"; };
+		B916838F17AE0006007C7161 /* Gannet_IMG_6624.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Gannet_IMG_6624.jpg; sourceTree = "<group>"; };
+		B916839117AE0006007C7161 /* Goldfinch_IMG_6721.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Goldfinch_IMG_6721.jpg; sourceTree = "<group>"; };
+		B916839217AE0006007C7161 /* Goldhammer_IMG_6809.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Goldhammer_IMG_6809.jpg; sourceTree = "<group>"; };
+		B916839417AE0006007C7161 /* harrierHawk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = harrierHawk.jpg; sourceTree = "<group>"; };
+		B916839517AE0006007C7161 /* Hihi_Stitchbird1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hihi_Stitchbird1.jpg; sourceTree = "<group>"; };
+		B916839617AE0006007C7161 /* Kingfisher_IMG_6929.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kingfisher_IMG_6929.jpg; sourceTree = "<group>"; };
+		B916839717AE0006007C7161 /* Little_Penguin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Little_Penguin.jpg; sourceTree = "<group>"; };
+		B916839917AE0006007C7161 /* LittleSpottedKiwi_Apteryx_owenii.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LittleSpottedKiwi_Apteryx_owenii.jpg; sourceTree = "<group>"; };
+		B916839A17AE0006007C7161 /* Magpie_Australian_IMG_6747.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Magpie_Australian_IMG_6747.jpg; sourceTree = "<group>"; };
+		B916839B17AE0006007C7161 /* MoreporkMaunga.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MoreporkMaunga.jpg; sourceTree = "<group>"; };
+		B916839C17AE0006007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = New_Zealand_Pigeon_Southstar_02.jpg; sourceTree = "<group>"; };
+		B916839E17AE0006007C7161 /* NZKingfisher_Kotare_IMG_6861.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NZKingfisher_Kotare_IMG_6861.jpg; sourceTree = "<group>"; };
+		B916839F17AE0006007C7161 /* ParadiseDuck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ParadiseDuck.jpg; sourceTree = "<group>"; };
+		B91683A117AE0006007C7161 /* Peacock3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Peacock3.jpg; sourceTree = "<group>"; };
+		B91683A217AE0006007C7161 /* Pheasant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pheasant.jpg; sourceTree = "<group>"; };
+		B91683A317AE0006007C7161 /* Pukeko_Porphyrio_porphyrio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pukeko_Porphyrio_porphyrio.jpg; sourceTree = "<group>"; };
+		B91683A417AE0006007C7161 /* RedBilledGull_IMG_6599.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RedBilledGull_IMG_6599.jpg; sourceTree = "<group>"; };
+		B91683A517AE0006007C7161 /* Rifleman_Acanthisitta_chloris.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rifleman_Acanthisitta_chloris.jpg; sourceTree = "<group>"; };
+		B91683A617AE0006007C7161 /* RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c.jpg"; sourceTree = "<group>"; };
+		B91683A817AE0006007C7161 /* Shag_IMG_7093.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Shag_IMG_7093.jpg; sourceTree = "<group>"; };
+		B91683AA17AE0006007C7161 /* SI_Tomtit_male2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SI_Tomtit_male2.jpg; sourceTree = "<group>"; };
+		B91683AB17AE0006007C7161 /* Silvereye_DSC09462.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Silvereye_DSC09462.jpg; sourceTree = "<group>"; };
+		B91683AC17AE0006007C7161 /* SilverEye.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SilverEye.jpg; sourceTree = "<group>"; };
+		B91683AD17AE0006007C7161 /* Sparrow_IMG_6604.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sparrow_IMG_6604.jpg; sourceTree = "<group>"; };
+		B91683AE17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.1001.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SpottedShag_Phalacrocorax_punctatus_AucklandZoo.1001.JPG; sourceTree = "<group>"; };
+		B91683AF17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg; sourceTree = "<group>"; };
+		B91683B017AE0006007C7161 /* Starling_IMG_6964.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Starling_IMG_6964.jpg; sourceTree = "<group>"; };
+		B91683B117AE0006007C7161 /* Starling1_IMG_6704_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Starling1_IMG_6704_2.jpg; sourceTree = "<group>"; };
+		B91683B217AE0006007C7161 /* Takahe_Maunga.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Takahe_Maunga.jpg; sourceTree = "<group>"; };
+		B91683B317AE0006007C7161 /* Thrush_song_06-03_SCOT.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Thrush_song_06-03_SCOT.jpg"; sourceTree = "<group>"; };
+		B91683B417AE0006007C7161 /* Tomtit2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tomtit2.jpg; sourceTree = "<group>"; };
+		B91683B517AE0006007C7161 /* Tui_adult_and_young.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tui_adult_and_young.jpg; sourceTree = "<group>"; };
+		B91683B617AE0006007C7161 /* Tui_on_flax.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tui_on_flax.jpg; sourceTree = "<group>"; };
+		B91683B717AE0006007C7161 /* Watvogel_IMG_6674.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Watvogel_IMG_6674.jpg; sourceTree = "<group>"; };
+		B91683B817AE0006007C7161 /* WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch.jpg; sourceTree = "<group>"; };
+		B91683B917AE0006007C7161 /* Yellowhammer_IMG_7001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Yellowhammer_IMG_7001.jpg; sourceTree = "<group>"; };
+		B91683F617AE007F007C7161 /* 800px-Nestor_notabilis_-Fiordland_National_Park-8a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "800px-Nestor_notabilis_-Fiordland_National_Park-8a.jpg"; sourceTree = "<group>"; };
+		B91683F717AE007F007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "800px-New_Zealand_Pigeon_Southstar_02.jpg"; sourceTree = "<group>"; };
+		B91683F817AE007F007C7161 /* Grey_Fantail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Grey_Fantail.jpg; sourceTree = "<group>"; };
+		B91683F917AE007F007C7161 /* GreyWarbler_Gerygone1888.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GreyWarbler_Gerygone1888.jpg; sourceTree = "<group>"; };
+		B91683FA17AE007F007C7161 /* MoreporkMaunga.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MoreporkMaunga.jpg; sourceTree = "<group>"; };
+		B91683FB17AE007F007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = New_Zealand_Pigeon_Southstar_02.jpg; sourceTree = "<group>"; };
+		B91684B817AE0512007C7161 /* 800px-Nestor_notabilis_-Fiordland_National_Park-8a_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "800px-Nestor_notabilis_-Fiordland_National_Park-8a_TN.jpg"; sourceTree = "<group>"; };
+		B91684B917AE0512007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "800px-New_Zealand_Pigeon_Southstar_02_TN.jpg"; sourceTree = "<group>"; };
+		B91684BA17AE0512007C7161 /* 823px-Dinornis1387_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "823px-Dinornis1387_TN.jpg"; sourceTree = "<group>"; };
+		B91684BB17AE0512007C7161 /* Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water_TN.jpg"; sourceTree = "<group>"; };
+		B91684BC17AE0512007C7161 /* Anthornis_melanura_New_Zealand_8_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Anthornis_melanura_New_Zealand_8_TN.jpg; sourceTree = "<group>"; };
+		B91684BD17AE0512007C7161 /* Blackbird_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Blackbird_TN.jpg; sourceTree = "<group>"; };
+		B91684BE17AE0512007C7161 /* BlackSwanCygnus_atratus_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlackSwanCygnus_atratus_TN.jpg; sourceTree = "<group>"; };
+		B91684BF17AE0512007C7161 /* BlackWingGull_IMG_6659_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlackWingGull_IMG_6659_TN.jpg; sourceTree = "<group>"; };
+		B91684C017AE0512007C7161 /* Chaffinch_2_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Chaffinch_2_TN.jpg; sourceTree = "<group>"; };
+		B91684C117AE0512007C7161 /* Charadrius_bicinctus_breeding_Ralphs_Bay_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Charadrius_bicinctus_breeding_Ralphs_Bay_TN.jpg; sourceTree = "<group>"; };
+		B91684C217AE0512007C7161 /* Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8_TN.jpg"; sourceTree = "<group>"; };
+		B91684C317AE0512007C7161 /* Dunnock_IMG_7140_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dunnock_IMG_7140_TN.jpg; sourceTree = "<group>"; };
+		B91684C417AE0512007C7161 /* Gannet_IMG_6624_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Gannet_IMG_6624_TN.jpg; sourceTree = "<group>"; };
+		B91684C517AE0512007C7161 /* Goldfinch_IMG_6721_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Goldfinch_IMG_6721_TN.jpg; sourceTree = "<group>"; };
+		B91684C617AE0512007C7161 /* Grey_Fantail_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Grey_Fantail_TN.jpg; sourceTree = "<group>"; };
+		B91684C717AE0512007C7161 /* GreyWarbler_Gerygone1888_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GreyWarbler_Gerygone1888_TN.jpg; sourceTree = "<group>"; };
+		B91684C817AE0512007C7161 /* harrierHawk_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = harrierHawk_TN.jpg; sourceTree = "<group>"; };
+		B91684C917AE0512007C7161 /* Hihi_Stitchbird1_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hihi_Stitchbird1_TN.jpg; sourceTree = "<group>"; };
+		B91684CA17AE0512007C7161 /* Kingfisher_IMG_6929_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kingfisher_IMG_6929_TN.jpg; sourceTree = "<group>"; };
+		B91684CB17AE0512007C7161 /* Little_Penguin_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Little_Penguin_TN.jpg; sourceTree = "<group>"; };
+		B91684CC17AE0512007C7161 /* LittleSpottedKiwi_Apteryx_owenii_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LittleSpottedKiwi_Apteryx_owenii_TN.jpg; sourceTree = "<group>"; };
+		B91684CD17AE0512007C7161 /* Magpie_Australian_IMG_6747_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Magpie_Australian_IMG_6747_TN.jpg; sourceTree = "<group>"; };
+		B91684CE17AE0512007C7161 /* MoreporkMaunga_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MoreporkMaunga_TN.jpg; sourceTree = "<group>"; };
+		B91684CF17AE0512007C7161 /* New_Zealand_Pigeon_Southstar_02_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = New_Zealand_Pigeon_Southstar_02_TN.jpg; sourceTree = "<group>"; };
+		B91684D017AE0512007C7161 /* ParadiseDuck_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ParadiseDuck_TN.jpg; sourceTree = "<group>"; };
+		B91684D117AE0512007C7161 /* Peacock3_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Peacock3_TN.jpg; sourceTree = "<group>"; };
+		B91684D217AE0512007C7161 /* Pheasant_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pheasant_TN.jpg; sourceTree = "<group>"; };
+		B91684D317AE0512007C7161 /* Pukeko_Porphyrio_porphyrio_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pukeko_Porphyrio_porphyrio_TN.jpg; sourceTree = "<group>"; };
+		B91684D417AE0512007C7161 /* RedBilledGull_IMG_6599_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RedBilledGull_IMG_6599_TN.jpg; sourceTree = "<group>"; };
+		B91684D517AE0512007C7161 /* Rifleman_Acanthisitta_chloris_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rifleman_Acanthisitta_chloris_TN.jpg; sourceTree = "<group>"; };
+		B91684D617AE0512007C7161 /* RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c_TN.jpg"; sourceTree = "<group>"; };
+		B91684D717AE0512007C7161 /* Shag_IMG_6849_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Shag_IMG_6849_TN.jpg; sourceTree = "<group>"; };
+		B91684D817AE0512007C7161 /* Shag_IMG_7093_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Shag_IMG_7093_TN.jpg; sourceTree = "<group>"; };
+		B91684D917AE0512007C7161 /* SI_Tomtit_male2_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SI_Tomtit_male2_TN.jpg; sourceTree = "<group>"; };
+		B91684DA17AE0512007C7161 /* Silvereye_DSC09462_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Silvereye_DSC09462_TN.jpg; sourceTree = "<group>"; };
+		B91684DB17AE0512007C7161 /* Sparrow_IMG_6604_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sparrow_IMG_6604_TN.jpg; sourceTree = "<group>"; };
+		B91684DC17AE0512007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SpottedShag_Phalacrocorax_punctatus_AucklandZoo_TN.jpg; sourceTree = "<group>"; };
+		B91684DD17AE0512007C7161 /* Starling1_IMG_6704_2_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Starling1_IMG_6704_2_TN.jpg; sourceTree = "<group>"; };
+		B91684DE17AE0512007C7161 /* Starling_IMG_6964_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Starling_IMG_6964_TN.jpg; sourceTree = "<group>"; };
+		B91684DF17AE0512007C7161 /* Takahe_Maunga_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Takahe_Maunga_TN.jpg; sourceTree = "<group>"; };
+		B91684E017AE0512007C7161 /* Thrush_song_06-03_SCOT_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Thrush_song_06-03_SCOT_TN.jpg"; sourceTree = "<group>"; };
+		B91684E117AE0512007C7161 /* Tui_on_flax_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tui_on_flax_TN.jpg; sourceTree = "<group>"; };
+		B91684E217AE0512007C7161 /* Turkey_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Turkey_TN.jpg; sourceTree = "<group>"; };
+		B91684E317AE0512007C7161 /* WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch_TN.jpg; sourceTree = "<group>"; };
+		B91684E417AE0512007C7161 /* Yellowhammer_IMG_7001_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Yellowhammer_IMG_7001_TN.jpg; sourceTree = "<group>"; };
+		B934A52D178D4B2E00D3F6F7 /* ObservationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObservationTableViewController.h; path = ../ObservationTableViewController.h; sourceTree = "<group>"; };
+		B934A52E178D4B2E00D3F6F7 /* ObservationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObservationTableViewController.m; path = ../ObservationTableViewController.m; sourceTree = "<group>"; };
+		B934A5821793E2C500D3F6F7 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
+		B934A5831793E2C700D3F6F7 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
+		B934A58F179485AF00D3F6F7 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		B934A591179485CE00D3F6F7 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		B934A5931794864800D3F6F7 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		B934A5941794864A00D3F6F7 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		B934A5951794864D00D3F6F7 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		B934A5961794864F00D3F6F7 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		B934A5971794865100D3F6F7 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		B934A5981794865300D3F6F7 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		B934A5991794865400D3F6F7 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		B934A59A1794865700D3F6F7 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		B934A59B1794865900D3F6F7 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		B934A59C1794865B00D3F6F7 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		B934A5A217950A0400D3F6F7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		B934A5A61795DD8000D3F6F7 /* Black_Swan_20110325_XC74379.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Black_Swan_20110325_XC74379.mp3; sourceTree = "<group>"; };
+		B934A5A71795DD8000D3F6F7 /* Little-PenguineEudyptilaMinor_XC98203.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Little-PenguineEudyptilaMinor_XC98203.mp3"; sourceTree = "<group>"; };
+		B934A5A81795DD8000D3F6F7 /* Weka_Song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Weka_Song.mp3; sourceTree = "<group>"; };
+		B934A5A91795DD8000D3F6F7 /* Purple_Swamphen_Tiritiri_Matangi_Island.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Purple_Swamphen_Tiritiri_Matangi_Island.mp3; sourceTree = "<group>"; };
+		B934A5AA1795DD8000D3F6F7 /* Sparrow_XC112666-Pasdom_Sohar_27dec2009.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sparrow_XC112666-Pasdom_Sohar_27dec2009.mp3"; sourceTree = "<group>"; };
+		B934A5AB1795DD8000D3F6F7 /* Singdrossel_1753.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Singdrossel_1753.mp3; sourceTree = "<group>"; };
+		B934A5AC1795DD8000D3F6F7 /* Tadorna_variegata100309_16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tadorna_variegata100309_16.mp3; sourceTree = "<group>"; };
+		B934A5C817968A4A00D3F6F7 /* FullBirdImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullBirdImage.h; sourceTree = "<group>"; };
+		B934A5C917968A4B00D3F6F7 /* FullBirdImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullBirdImage.m; sourceTree = "<group>"; };
+		B934A5CB17968A4C00D3F6F7 /* Bird_attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bird_attributes.h; sourceTree = "<group>"; };
+		B934A5CC17968A4D00D3F6F7 /* Bird_attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bird_attributes.m; sourceTree = "<group>"; };
+		B943EDC01738DC9E007DB011 /* silvereye-song-22sy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "silvereye-song-22sy.mp3"; sourceTree = "<group>"; };
+		B943EDF6173A4790007DB011 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B9461D8917421910007A8A20 /* 0043.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0043.png; sourceTree = "<group>"; };
+		B9461D8A17421910007A8A20 /* 0043@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0043@2x.png"; sourceTree = "<group>"; };
+		B9461D9217421B12007A8A20 /* 0063.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0063.png; sourceTree = "<group>"; };
+		B9461D9317421B12007A8A20 /* 0063@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0063@2x.png"; sourceTree = "<group>"; };
+		B9461D9417421B12007A8A20 /* 0300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0300.png; sourceTree = "<group>"; };
+		B9461D9517421B12007A8A20 /* 0300@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0300@2x.png"; sourceTree = "<group>"; };
+		B946224E17421BBF007A8A20 /* 0209.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0209.png; sourceTree = "<group>"; };
+		B946224F17421BBF007A8A20 /* 0209@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0209@2x.png"; sourceTree = "<group>"; };
+		B946225017421BBF007A8A20 /* 0269.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0269.png; sourceTree = "<group>"; };
+		B946225117421BBF007A8A20 /* 0269@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0269@2x.png"; sourceTree = "<group>"; };
+		B94622561742C67C007A8A20 /* cockatiel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cockatiel.mp3; sourceTree = "<group>"; };
+		B94622571742C67C007A8A20 /* kaka.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kaka.mp3; sourceTree = "<group>"; };
+		B94622621743221A007A8A20 /* 0266.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0266.png; sourceTree = "<group>"; };
+		B94622631743221A007A8A20 /* 0266@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0266@2x.png"; sourceTree = "<group>"; };
+		B94622641743221A007A8A20 /* 0280.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0280.png; sourceTree = "<group>"; };
+		B94622651743221A007A8A20 /* 0280@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0280@2x.png"; sourceTree = "<group>"; };
+		B946226A174387D1007A8A20 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B946226C174387DE007A8A20 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B946228817439047007A8A20 /* BirdMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdMapViewController.h; sourceTree = "<group>"; };
+		B946228917439047007A8A20 /* BirdMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdMapViewController.m; sourceTree = "<group>"; };
+		B95B943917C06A6900EBC8E7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B961701717B4D53700A6167E /* 0236.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0236.png; sourceTree = "<group>"; };
+		B961701817B4D53700A6167E /* 0236@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0236@2x.png"; sourceTree = "<group>"; };
+		B9682476176233640093F493 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B9682479176234380093F493 /* BirdBrowser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BirdBrowser.xcdatamodel; sourceTree = "<group>"; };
+		B9708E5D17BACBAA00B90254 /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
+		B9708E5E17BACBAA00B90254 /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
+		B9708E6417BC6F3A00B90254 /* NZBirder.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = NZBirder.sqlite; path = CarBrowser/NZBirder.sqlite; sourceTree = "<group>"; };
+		B98227C01772390700A97BD3 /* ModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
+		B98227C11772390700A97BD3 /* ModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
+		B98227C317723FAA00A97BD3 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		B98227C417723FAA00A97BD3 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		B98227D21772444100A97BD3 /* MapViewAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewAnnotation.h; sourceTree = "<group>"; };
+		B98227D31772444100A97BD3 /* MapViewAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewAnnotation.m; sourceTree = "<group>"; };
+		B98227D41772444100A97BD3 /* NSCoder+FavSpots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCoder+FavSpots.h"; sourceTree = "<group>"; };
+		B98227D51772444100A97BD3 /* NSCoder+FavSpots.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCoder+FavSpots.m"; sourceTree = "<group>"; };
+		B98227D61772444100A97BD3 /* NSCoder+RNMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCoder+RNMapKit.h"; sourceTree = "<group>"; };
+		B98227D71772444100A97BD3 /* NSCoder+RNMapKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCoder+RNMapKit.m"; sourceTree = "<group>"; };
+		B98227DE1772468000A97BD3 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		B98227DF1772468000A97BD3 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B98227E4177257A800A97BD3 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		B98227E5177257A800A97BD3 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		B98227E717728C0600A97BD3 /* TextEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditViewController.h; sourceTree = "<group>"; };
+		B98227E817728C0700A97BD3 /* TextEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextEditViewController.m; sourceTree = "<group>"; };
+		B98227EA1773B38C00A97BD3 /* Hihi_Stitchbird.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hihi_Stitchbird.mp3; sourceTree = "<group>"; };
+		B98227EC1773B61000A97BD3 /* 0002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0002.png; sourceTree = "<group>"; };
+		B98227ED1773B61000A97BD3 /* 0002@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0002@2x.png"; sourceTree = "<group>"; };
+		B9A86A97173FB2C6006908C0 /* bellbird-56.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bellbird-56.mp3"; path = "assets/bellbird/bellbird-56.mp3"; sourceTree = SOURCE_ROOT; };
+		B9ACFDE317C84AB0002CE932 /* Shining_BronzeCuckoo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Shining_BronzeCuckoo.mp3; sourceTree = "<group>"; };
+		B9ACFDE417C84AB0002CE932 /* Hirundotahitica.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hirundotahitica.mp3; sourceTree = "<group>"; };
+		B9ACFDE517C84AB0002CE932 /* Carduelis_chloris_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Carduelis_chloris_TN.jpg; path = ../Carduelis_chloris_TN.jpg; sourceTree = "<group>"; };
+		B9ACFDE617C84AB0002CE932 /* Chrysococcyx_lucidus_-Brisbane,_Queensland,_Australia_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Chrysococcyx_lucidus_-Brisbane,_Queensland,_Australia_TN.jpg"; path = "../Chrysococcyx_lucidus_-Brisbane,_Queensland,_Australia_TN.jpg"; sourceTree = "<group>"; };
+		B9ACFDE717C84AB0002CE932 /* Welcome_Swallow_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Welcome_Swallow_TN.jpg; path = ../Welcome_Swallow_TN.jpg; sourceTree = "<group>"; };
+		B9ACFDE817C84AB0002CE932 /* commonswikimedia.orgwikiFileWelcome_Swallowjpg800px-Welcome_Swallow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "commonswikimedia.orgwikiFileWelcome_Swallowjpg800px-Welcome_Swallow.jpg"; sourceTree = "<group>"; };
+		B9ACFDEA17C84AB0002CE932 /* Carduelis_chloris_AuthorOlivierFromFranceWikiCommons.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Carduelis_chloris_AuthorOlivierFromFranceWikiCommons.jpg; sourceTree = "<group>"; };
+		B9ACFDEB17C84AB0002CE932 /* Chrysococcyx_lucidus_JamesNiland_Brisbane_Queensland_Australia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Chrysococcyx_lucidus_JamesNiland_Brisbane_Queensland_Australia.jpg; sourceTree = "<group>"; };
+		B9B916FD1744D46600B9916D /* fantail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = fantail.mp3; path = ../../../../Downloads/fantail.mp3; sourceTree = "<group>"; };
+		B9B916FE1744D46600B9916D /* is_kiwi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = is_kiwi.mp3; path = ../../../../Downloads/is_kiwi.mp3; sourceTree = "<group>"; };
+		B9B916FF1744D46600B9916D /* kakapo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kakapo.mp3; path = ../../../../Downloads/kakapo.mp3; sourceTree = "<group>"; };
+		B9B917001744D46600B9916D /* kakariki.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kakariki.mp3; path = ../../../../Downloads/kakariki.mp3; sourceTree = "<group>"; };
+		B9B917021744D46600B9916D /* morepork.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = morepork.mp3; path = ../../../../Downloads/morepork.mp3; sourceTree = "<group>"; };
+		B9BA7EDE177C3846003DA778 /* Australian-Magpie.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Australian-Magpie.mp3"; sourceTree = "<group>"; };
+		B9BA7EE31780B671003DA778 /* BirdDetailViewController_CD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdDetailViewController_CD.h; sourceTree = "<group>"; };
+		B9BA7EE41780B671003DA778 /* BirdDetailViewController_CD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdDetailViewController_CD.m; sourceTree = "<group>"; };
+		B9BE103417FB3E31005BA377 /* NSData+MKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MKBase64.h"; sourceTree = "<group>"; };
+		B9BE103517FB3E31005BA377 /* NSData+MKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MKBase64.m"; sourceTree = "<group>"; };
+		B9BE103617FB3E31005BA377 /* NSDate+RFC1123.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RFC1123.h"; sourceTree = "<group>"; };
+		B9BE103717FB3E31005BA377 /* NSDate+RFC1123.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RFC1123.m"; sourceTree = "<group>"; };
+		B9BE103817FB3E31005BA377 /* NSDictionary+RequestEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RequestEncoding.h"; sourceTree = "<group>"; };
+		B9BE103917FB3E31005BA377 /* NSDictionary+RequestEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RequestEncoding.m"; sourceTree = "<group>"; };
+		B9BE103A17FB3E31005BA377 /* NSString+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		B9BE103B17FB3E31005BA377 /* NSString+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		B9BE103C17FB3E31005BA377 /* UIAlertView+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		B9BE103D17FB3E31005BA377 /* UIAlertView+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		B9BE103E17FB3E31005BA377 /* UIImageView+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		B9BE103F17FB3E31005BA377 /* UIImageView+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		B9BE104017FB3E31005BA377 /* MKNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkEngine.h; sourceTree = "<group>"; };
+		B9BE104117FB3E31005BA377 /* MKNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkEngine.m; sourceTree = "<group>"; };
+		B9BE104217FB3E31005BA377 /* MKNetworkKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkKit.h; sourceTree = "<group>"; };
+		B9BE104317FB3E31005BA377 /* MKNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkOperation.h; sourceTree = "<group>"; };
+		B9BE104417FB3E31005BA377 /* MKNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkOperation.m; sourceTree = "<group>"; };
+		B9BE104617FB3E31005BA377 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		B9BE104717FB3E31005BA377 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		B9BE105217FB4020005BA377 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B9BE105417FB402F005BA377 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B9BE105617FB49C1005BA377 /* FileUploadEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUploadEngine.h; sourceTree = "<group>"; };
+		B9BE105717FB49C1005BA377 /* FileUploadEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUploadEngine.m; sourceTree = "<group>"; };
+		B9BED11E1797D9E600E6FE0E /* greypeacockpheasantbarkingcallthaiFarrow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = greypeacockpheasantbarkingcallthaiFarrow.mp3; sourceTree = "<group>"; };
+		B9BED11F1797D9E600E6FE0E /* SHAGPhalacrocorax atriceps atriceps a_Puerto de Comodoro Rivadavia_Chubut_23OCT2010 0843_Bernabe Lopez-Lanus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "SHAGPhalacrocorax atriceps atriceps a_Puerto de Comodoro Rivadavia_Chubut_23OCT2010 0843_Bernabe Lopez-Lanus.mp3"; sourceTree = "<group>"; };
+		B9BED1201797D9E600E6FE0E /* SHAG_Phalacrocorax_magellanicus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SHAG_Phalacrocorax_magellanicus.mp3; sourceTree = "<group>"; };
+		B9BED1211797D9E600E6FE0E /* SHAGAuklandIs_FL Enderby26Nov2000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "SHAGAuklandIs_FL Enderby26Nov2000.mp3"; sourceTree = "<group>"; };
+		B9BED1221797D9E600E6FE0E /* rosellas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rosellas.mp3; sourceTree = "<group>"; };
+		B9BED1281797DE6D00E6FE0E /* PiedStilt_WhhSti-20090712_083000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "PiedStilt_WhhSti-20090712_083000.mp3"; sourceTree = "<group>"; };
+		B9BED12A17993C4000E6FE0E /* home_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_selected.png; sourceTree = "<group>"; };
+		B9BED12B17993C4100E6FE0E /* home_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_selected@2x.png"; sourceTree = "<group>"; };
+		B9BED12C17993C4100E6FE0E /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		B9BED12D17993C4100E6FE0E /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
+		B9BED12E17993C4100E6FE0E /* maps_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps_selected.png; sourceTree = "<group>"; };
+		B9BED12F17993C4100E6FE0E /* maps_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "maps_selected@2x.png"; sourceTree = "<group>"; };
+		B9BED13017993C4100E6FE0E /* maps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps.png; sourceTree = "<group>"; };
+		B9BED13117993C4100E6FE0E /* maps@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "maps@2x.png"; sourceTree = "<group>"; };
+		B9BED13417993C4200E6FE0E /* myplan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myplan.png; sourceTree = "<group>"; };
+		B9BED13517993C4200E6FE0E /* myplan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myplan@2x.png"; sourceTree = "<group>"; };
+		B9BED13617993C4200E6FE0E /* settings_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_selected.png; sourceTree = "<group>"; };
+		B9BED13717993C4200E6FE0E /* settings_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings_selected@2x.png"; sourceTree = "<group>"; };
+		B9BED13817993C4200E6FE0E /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		B9BED13917993C4200E6FE0E /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		B9BED13A17993C4200E6FE0E /* tabbar_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_selected.png; sourceTree = "<group>"; };
+		B9BED13B17993C4200E6FE0E /* tabbar_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_selected@2x.png"; sourceTree = "<group>"; };
+		B9BED13C17993C4200E6FE0E /* tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar.png; sourceTree = "<group>"; };
+		B9BED13D17993C4200E6FE0E /* tabbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar@2x.png"; sourceTree = "<group>"; };
+		B9BED1521799402000E6FE0E /* Spot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spot.h; sourceTree = "<group>"; };
+		B9BED1531799402000E6FE0E /* Spot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spot.m; sourceTree = "<group>"; };
+		B9BED155179A0F5D00E6FE0E /* CurrentSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrentSpot.h; path = ../CurrentSpot.h; sourceTree = "<group>"; };
+		B9BED156179A0F5D00E6FE0E /* CurrentSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrentSpot.m; path = ../CurrentSpot.m; sourceTree = "<group>"; };
+		B9CDE3A217A4F56100661AF9 /* 0088.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0088.png; sourceTree = "<group>"; };
+		B9CDE3A317A4F56100661AF9 /* 0088@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0088@2x.png"; sourceTree = "<group>"; };
+		B9CDE3A417A4F56100661AF9 /* 0239.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0239.png; sourceTree = "<group>"; };
+		B9CDE3A517A4F56100661AF9 /* 0239@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0239@2x.png"; sourceTree = "<group>"; };
+		B9D92E391748DEB0001B6D79 /* button_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_back.png; sourceTree = "<group>"; };
+		B9D92E3A1748DEB0001B6D79 /* button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_normal.png; sourceTree = "<group>"; };
+		B9D92E3B1748DEB0001B6D79 /* cell_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_bottom.png; sourceTree = "<group>"; };
+		B9D92E3C1748DEB0001B6D79 /* cell_bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_bottom@2x.png"; sourceTree = "<group>"; };
+		B9D92E3D1748DEB0001B6D79 /* cell_middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_middle.png; sourceTree = "<group>"; };
+		B9D92E3E1748DEB0001B6D79 /* cell_middle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_middle@2x.png"; sourceTree = "<group>"; };
+		B9D92E3F1748DEB0001B6D79 /* cell_top_tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_top_tile.png; sourceTree = "<group>"; };
+		B9D92E401748DEB0001B6D79 /* cell_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_top.png; sourceTree = "<group>"; };
+		B9D92E411748DEB0001B6D79 /* cell_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_top@2x.png"; sourceTree = "<group>"; };
+		B9D92E421748DEB0001B6D79 /* common_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_bg.png; sourceTree = "<group>"; };
+		B9D92E431748DEB0001B6D79 /* common_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_bg@2x.png"; sourceTree = "<group>"; };
+		B9D92E441748DEB0001B6D79 /* navbar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_bg.png; sourceTree = "<group>"; };
+		B9D92E451748DEB0001B6D79 /* navbar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_bg@2x.png"; sourceTree = "<group>"; };
+		B9D92E6B174CEEBF001B6D79 /* kereru.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kereru.mp3; path = ../../../../Downloads/kereru.mp3; sourceTree = "<group>"; };
+		B9D92E6D174E5650001B6D79 /* 0283.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0283.png; sourceTree = "<group>"; };
+		B9D92E6E174E5651001B6D79 /* 0283@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0283@2x.png"; sourceTree = "<group>"; };
+		B9D92E6F174E5651001B6D79 /* 0284.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0284.png; sourceTree = "<group>"; };
+		B9D92E70174E5651001B6D79 /* 0284@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0284@2x.png"; sourceTree = "<group>"; };
+		B9D92E75174E5711001B6D79 /* 0263.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0263.png; sourceTree = "<group>"; };
+		B9D92E76174E5712001B6D79 /* 0263@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0263@2x.png"; sourceTree = "<group>"; };
+		B9D92E77174E5714001B6D79 /* 0264.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0264.png; sourceTree = "<group>"; };
+		B9D92E78174E5716001B6D79 /* 0264@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0264@2x.png"; sourceTree = "<group>"; };
+		B9DF1E441775A5F000F5DA74 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		B9DF1E461775A6FF00F5DA74 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B9DF1E481775AB8D00F5DA74 /* kea2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kea2.mp3; sourceTree = "<group>"; };
+		B9DF1E491775AB8D00F5DA74 /* tui2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tui2.mp3; sourceTree = "<group>"; };
+		B9DF1E4C1775AD0000F5DA74 /* blackbird.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = blackbird.mp3; sourceTree = "<group>"; };
+		B9DF1E4E1775AEF900F5DA74 /* Rifleman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rifleman.mp3; sourceTree = "<group>"; };
+		B9DF1E56177619DA00F5DA74 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B9DF1E5D1776708200F5DA74 /* BirdMasterTableViewController_CD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdMasterTableViewController_CD.h; sourceTree = "<group>"; };
+		B9DF1E5E1776708200F5DA74 /* BirdMasterTableViewController_CD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdMasterTableViewController_CD.m; sourceTree = "<group>"; };
+		B9FEE0B5178A2C2F00768240 /* Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Info.h; sourceTree = "<group>"; };
+		B9FEE0B6178A2C2F00768240 /* Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Info.m; sourceTree = "<group>"; };
+		B9FEE0D5178A734800768240 /* Observation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observation.h; sourceTree = "<group>"; };
+		B9FEE0D6178A734800768240 /* Observation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Observation.m; sourceTree = "<group>"; };
+		B9FEE0D8178A838800768240 /* 0038.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0038.png; sourceTree = "<group>"; };
+		B9FEE0D9178A838800768240 /* 0038@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0038@2x.png"; sourceTree = "<group>"; };
+		B9FEE0DA178A838800768240 /* 0065.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0065.png; sourceTree = "<group>"; };
+		B9FEE0DB178A838900768240 /* 0065@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0065@2x.png"; sourceTree = "<group>"; };
+		B9FEE0DC178A838900768240 /* 0090.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0090.png; sourceTree = "<group>"; };
+		B9FEE0DD178A838900768240 /* 0090@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0090@2x.png"; sourceTree = "<group>"; };
+		B9FEE0DE178A838A00768240 /* 0207.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0207.png; sourceTree = "<group>"; };
+		B9FEE0DF178A838A00768240 /* 0207@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0207@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8E777DB16C2F2F400949FEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9BE105517FB402F005BA377 /* SystemConfiguration.framework in Frameworks */,
+				B9BE105317FB4020005BA377 /* Security.framework in Frameworks */,
+				B934A5A317950A0500D3F6F7 /* MessageUI.framework in Frameworks */,
+				B934A592179485CF00D3F6F7 /* libsqlite3.dylib in Frameworks */,
+				B934A590179485B000D3F6F7 /* libsqlite3.0.dylib in Frameworks */,
+				B9DF1E471775A6FF00F5DA74 /* AudioToolbox.framework in Frameworks */,
+				B9682477176233640093F493 /* CoreData.framework in Frameworks */,
+				B946226D174387DE007A8A20 /* MapKit.framework in Frameworks */,
+				B946226B174387D1007A8A20 /* CoreLocation.framework in Frameworks */,
+				B943EDF7173A4790007DB011 /* AVFoundation.framework in Frameworks */,
+				B8E777E216C2F2F400949FEE /* UIKit.framework in Frameworks */,
+				B8E777E416C2F2F400949FEE /* Foundation.framework in Frameworks */,
+				B8E777E616C2F2F400949FEE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B8E777D516C2F2F400949FEE = {
+			isa = PBXGroup;
+			children = (
+				B9BE105617FB49C1005BA377 /* FileUploadEngine.h */,
+				B9BE105717FB49C1005BA377 /* FileUploadEngine.m */,
+				B9708E6417BC6F3A00B90254 /* NZBirder.sqlite */,
+				B8E777E716C2F2F400949FEE /* BirdBrowser */,
+				B8E777E016C2F2F400949FEE /* Frameworks */,
+				B8E777DF16C2F2F400949FEE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B8E777DF16C2F2F400949FEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8E777DE16C2F2F400949FEE /* NZBirder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8E777E016C2F2F400949FEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9BE105417FB402F005BA377 /* SystemConfiguration.framework */,
+				B9BE105217FB4020005BA377 /* Security.framework */,
+				B9BE103017FB3E31005BA377 /* MKNetworkKit */,
+				B934A58F179485AF00D3F6F7 /* libsqlite3.0.dylib */,
+				B934A591179485CE00D3F6F7 /* libsqlite3.dylib */,
+				B934A5A217950A0400D3F6F7 /* MessageUI.framework */,
+				B9DF1E461775A6FF00F5DA74 /* AudioToolbox.framework */,
+				B9DF1E441775A5F000F5DA74 /* AudioUnit.framework */,
+				B9682476176233640093F493 /* CoreData.framework */,
+				B946226C174387DE007A8A20 /* MapKit.framework */,
+				B946226A174387D1007A8A20 /* CoreLocation.framework */,
+				B943EDF6173A4790007DB011 /* AVFoundation.framework */,
+				B8E777E116C2F2F400949FEE /* UIKit.framework */,
+				B8E777E316C2F2F400949FEE /* Foundation.framework */,
+				B8E777E516C2F2F400949FEE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8E777E716C2F2F400949FEE /* BirdBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				B9DF1E59177625D300F5DA74 /* Model */,
+				B9DF1E581776259C00F5DA74 /* ViewController */,
+				B98227D21772444100A97BD3 /* MapViewAnnotation.h */,
+				B98227D31772444100A97BD3 /* MapViewAnnotation.m */,
+				B98227D41772444100A97BD3 /* NSCoder+FavSpots.h */,
+				B98227D51772444100A97BD3 /* NSCoder+FavSpots.m */,
+				B98227D61772444100A97BD3 /* NSCoder+RNMapKit.h */,
+				B98227D71772444100A97BD3 /* NSCoder+RNMapKit.m */,
+				B8E777F016C2F2F400949FEE /* AppDelegate.h */,
+				B8E777F116C2F2F400949FEE /* AppDelegate.m */,
+				B8E7780716C2F43000949FEE /* BirdTableViewCell.h */,
+				B8E7780816C2F43000949FEE /* BirdTableViewCell.m */,
+				B8E777F916C2F2F400949FEE /* MainStoryboard.storyboard */,
+				B8E777E816C2F2F400949FEE /* Supporting Files */,
+			);
+			name = BirdBrowser;
+			path = CarBrowser;
+			sourceTree = "<group>";
+		};
+		B8E777E816C2F2F400949FEE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B934A5931794864800D3F6F7 /* FMDatabase.h */,
+				B934A5941794864A00D3F6F7 /* FMDatabase.m */,
+				B934A5951794864D00D3F6F7 /* FMDatabaseAdditions.h */,
+				B934A5961794864F00D3F6F7 /* FMDatabaseAdditions.m */,
+				B934A5971794865100D3F6F7 /* FMDatabasePool.h */,
+				B934A5981794865300D3F6F7 /* FMDatabasePool.m */,
+				B934A5991794865400D3F6F7 /* FMDatabaseQueue.h */,
+				B934A59A1794865700D3F6F7 /* FMDatabaseQueue.m */,
+				B934A59B1794865900D3F6F7 /* FMResultSet.h */,
+				B934A59C1794865B00D3F6F7 /* FMResultSet.m */,
+				B934A5821793E2C500D3F6F7 /* CHCSVParser.h */,
+				B934A5831793E2C700D3F6F7 /* CHCSVParser.m */,
+				B9DF1E5A1776263200F5DA74 /* Soundfiles */,
+				B9DF1E5B1776268900F5DA74 /* Images */,
+				B9DF1E5C177626BA00F5DA74 /* Icons */,
+				B8E777E916C2F2F400949FEE /* BirdBrowser-Info.plist */,
+				B8E777EA16C2F2F400949FEE /* InfoPlist.strings */,
+				B8E777ED16C2F2F400949FEE /* main.m */,
+				B8E777EF16C2F2F400949FEE /* BirdBrowser-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B91684B717AE0512007C7161 /* Thumbnails */ = {
+			isa = PBXGroup;
+			children = (
+				B9ACFDE517C84AB0002CE932 /* Carduelis_chloris_TN.jpg */,
+				B9ACFDE617C84AB0002CE932 /* Chrysococcyx_lucidus_-Brisbane,_Queensland,_Australia_TN.jpg */,
+				B9ACFDE717C84AB0002CE932 /* Welcome_Swallow_TN.jpg */,
+				B909A9BC17AE4B8600B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN.jpg */,
+				B91684B817AE0512007C7161 /* 800px-Nestor_notabilis_-Fiordland_National_Park-8a_TN.jpg */,
+				B91684B917AE0512007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02_TN.jpg */,
+				B91684BA17AE0512007C7161 /* 823px-Dinornis1387_TN.jpg */,
+				B91684BB17AE0512007C7161 /* Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water_TN.jpg */,
+				B91684BC17AE0512007C7161 /* Anthornis_melanura_New_Zealand_8_TN.jpg */,
+				B91684BD17AE0512007C7161 /* Blackbird_TN.jpg */,
+				B91684BE17AE0512007C7161 /* BlackSwanCygnus_atratus_TN.jpg */,
+				B91684BF17AE0512007C7161 /* BlackWingGull_IMG_6659_TN.jpg */,
+				B91684C017AE0512007C7161 /* Chaffinch_2_TN.jpg */,
+				B91684C117AE0512007C7161 /* Charadrius_bicinctus_breeding_Ralphs_Bay_TN.jpg */,
+				B91684C217AE0512007C7161 /* Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8_TN.jpg */,
+				B91684C317AE0512007C7161 /* Dunnock_IMG_7140_TN.jpg */,
+				B91684C417AE0512007C7161 /* Gannet_IMG_6624_TN.jpg */,
+				B91684C517AE0512007C7161 /* Goldfinch_IMG_6721_TN.jpg */,
+				B91684C617AE0512007C7161 /* Grey_Fantail_TN.jpg */,
+				B91684C717AE0512007C7161 /* GreyWarbler_Gerygone1888_TN.jpg */,
+				B91684C817AE0512007C7161 /* harrierHawk_TN.jpg */,
+				B91684C917AE0512007C7161 /* Hihi_Stitchbird1_TN.jpg */,
+				B91684CA17AE0512007C7161 /* Kingfisher_IMG_6929_TN.jpg */,
+				B91684CB17AE0512007C7161 /* Little_Penguin_TN.jpg */,
+				B91684CC17AE0512007C7161 /* LittleSpottedKiwi_Apteryx_owenii_TN.jpg */,
+				B91684CD17AE0512007C7161 /* Magpie_Australian_IMG_6747_TN.jpg */,
+				B91684CE17AE0512007C7161 /* MoreporkMaunga_TN.jpg */,
+				B91684CF17AE0512007C7161 /* New_Zealand_Pigeon_Southstar_02_TN.jpg */,
+				B91684D017AE0512007C7161 /* ParadiseDuck_TN.jpg */,
+				B91684D117AE0512007C7161 /* Peacock3_TN.jpg */,
+				B91684D217AE0512007C7161 /* Pheasant_TN.jpg */,
+				B91684D317AE0512007C7161 /* Pukeko_Porphyrio_porphyrio_TN.jpg */,
+				B91684D417AE0512007C7161 /* RedBilledGull_IMG_6599_TN.jpg */,
+				B91684D517AE0512007C7161 /* Rifleman_Acanthisitta_chloris_TN.jpg */,
+				B91684D617AE0512007C7161 /* RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c_TN.jpg */,
+				B91684D717AE0512007C7161 /* Shag_IMG_6849_TN.jpg */,
+				B91684D817AE0512007C7161 /* Shag_IMG_7093_TN.jpg */,
+				B91684D917AE0512007C7161 /* SI_Tomtit_male2_TN.jpg */,
+				B91684DA17AE0512007C7161 /* Silvereye_DSC09462_TN.jpg */,
+				B91684DB17AE0512007C7161 /* Sparrow_IMG_6604_TN.jpg */,
+				B91684DC17AE0512007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo_TN.jpg */,
+				B91684DD17AE0512007C7161 /* Starling1_IMG_6704_2_TN.jpg */,
+				B91684DE17AE0512007C7161 /* Starling_IMG_6964_TN.jpg */,
+				B91684DF17AE0512007C7161 /* Takahe_Maunga_TN.jpg */,
+				B91684E017AE0512007C7161 /* Thrush_song_06-03_SCOT_TN.jpg */,
+				B91684E117AE0512007C7161 /* Tui_on_flax_TN.jpg */,
+				B91684E217AE0512007C7161 /* Turkey_TN.jpg */,
+				B909A9B817AE294F00B12655 /* Watvogel_IMG_6674_TN.jpg */,
+				B91684E317AE0512007C7161 /* WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch_TN.jpg */,
+				B91684E417AE0512007C7161 /* Yellowhammer_IMG_7001_TN.jpg */,
+			);
+			path = Thumbnails;
+			sourceTree = "<group>";
+		};
+		B934A521178CEFE900D3F6F7 /* used */ = {
+			isa = PBXGroup;
+			children = (
+				B9ACFDE817C84AB0002CE932 /* commonswikimedia.orgwikiFileWelcome_Swallowjpg800px-Welcome_Swallow.jpg */,
+				B9ACFDEA17C84AB0002CE932 /* Carduelis_chloris_AuthorOlivierFromFranceWikiCommons.jpg */,
+				B9ACFDEB17C84AB0002CE932 /* Chrysococcyx_lucidus_JamesNiland_Brisbane_Queensland_Australia.jpg */,
+				B91684B717AE0512007C7161 /* Thumbnails */,
+				B91683F617AE007F007C7161 /* 800px-Nestor_notabilis_-Fiordland_National_Park-8a.jpg */,
+				B909A9BA17AE45C800B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg */,
+				B91683F717AE007F007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02.jpg */,
+				B91683F817AE007F007C7161 /* Grey_Fantail.jpg */,
+				B91683F917AE007F007C7161 /* GreyWarbler_Gerygone1888.jpg */,
+				B91683FA17AE007F007C7161 /* MoreporkMaunga.jpg */,
+				B91683FB17AE007F007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg */,
+				B916837E17AE0006007C7161 /* 685px-Drozd_zpevny.jpg */,
+				B916837F17AE0006007C7161 /* 800px-Charadrius_bicinctus_breeding_-_Ralphs_Bay.jpg */,
+				B916838017AE0006007C7161 /* 800px-Tui_10.jpg */,
+				B916838117AE0006007C7161 /* 823px-Dinornis1387.jpg */,
+				B916838217AE0006007C7161 /* 1008px-G_tibicen_dorsalis_gnangarra.jpg */,
+				B916838417AE0006007C7161 /* Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water.jpg */,
+				B916838517AE0006007C7161 /* Anthornis_melanura_New_Zealand_8.jpg */,
+				B916838617AE0006007C7161 /* Blackbird.jpg */,
+				B916838717AE0006007C7161 /* BlackSwanCygnus_atratus.jpg */,
+				B916838817AE0006007C7161 /* BlackWingGull_IMG_6659.jpg */,
+				B916838917AE0006007C7161 /* Chaffinch_2.jpg */,
+				B916838A17AE0006007C7161 /* Charadrius_bicinctus_breeding_Ralphs_Bay.jpg */,
+				B916838B17AE0006007C7161 /* Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8.jpg */,
+				B916838D17AE0006007C7161 /* DSC09462.JPG */,
+				B916838E17AE0006007C7161 /* Dunnock_IMG_7140.jpg */,
+				B916838F17AE0006007C7161 /* Gannet_IMG_6624.jpg */,
+				B916839117AE0006007C7161 /* Goldfinch_IMG_6721.jpg */,
+				B916839217AE0006007C7161 /* Goldhammer_IMG_6809.jpg */,
+				B916839417AE0006007C7161 /* harrierHawk.jpg */,
+				B916839517AE0006007C7161 /* Hihi_Stitchbird1.jpg */,
+				B916839617AE0006007C7161 /* Kingfisher_IMG_6929.jpg */,
+				B916839717AE0006007C7161 /* Little_Penguin.jpg */,
+				B916839917AE0006007C7161 /* LittleSpottedKiwi_Apteryx_owenii.jpg */,
+				B916839A17AE0006007C7161 /* Magpie_Australian_IMG_6747.jpg */,
+				B916839B17AE0006007C7161 /* MoreporkMaunga.jpg */,
+				B916839C17AE0006007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg */,
+				B916839E17AE0006007C7161 /* NZKingfisher_Kotare_IMG_6861.jpg */,
+				B916839F17AE0006007C7161 /* ParadiseDuck.jpg */,
+				B91683A117AE0006007C7161 /* Peacock3.jpg */,
+				B91683A217AE0006007C7161 /* Pheasant.jpg */,
+				B91683A317AE0006007C7161 /* Pukeko_Porphyrio_porphyrio.jpg */,
+				B91683A417AE0006007C7161 /* RedBilledGull_IMG_6599.jpg */,
+				B91683A517AE0006007C7161 /* Rifleman_Acanthisitta_chloris.jpg */,
+				B91683A617AE0006007C7161 /* RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c.jpg */,
+				B91683A817AE0006007C7161 /* Shag_IMG_7093.jpg */,
+				B91683AA17AE0006007C7161 /* SI_Tomtit_male2.jpg */,
+				B91683AB17AE0006007C7161 /* Silvereye_DSC09462.jpg */,
+				B91683AC17AE0006007C7161 /* SilverEye.jpg */,
+				B91683AD17AE0006007C7161 /* Sparrow_IMG_6604.jpg */,
+				B91683AE17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.1001.JPG */,
+				B91683AF17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg */,
+				B91683B017AE0006007C7161 /* Starling_IMG_6964.jpg */,
+				B91683B117AE0006007C7161 /* Starling1_IMG_6704_2.jpg */,
+				B91683B217AE0006007C7161 /* Takahe_Maunga.jpg */,
+				B91683B317AE0006007C7161 /* Thrush_song_06-03_SCOT.jpg */,
+				B91683B417AE0006007C7161 /* Tomtit2.jpg */,
+				B91683B517AE0006007C7161 /* Tui_adult_and_young.jpg */,
+				B91683B617AE0006007C7161 /* Tui_on_flax.jpg */,
+				B91683B717AE0006007C7161 /* Watvogel_IMG_6674.jpg */,
+				B91683B817AE0006007C7161 /* WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch.jpg */,
+				B91683B917AE0006007C7161 /* Yellowhammer_IMG_7001.jpg */,
+			);
+			name = used;
+			sourceTree = "<group>";
+		};
+		B934A522178CEFF300D3F6F7 /* used */ = {
+			isa = PBXGroup;
+			children = (
+				B9ACFDE317C84AB0002CE932 /* Shining_BronzeCuckoo.mp3 */,
+				B9ACFDE417C84AB0002CE932 /* Hirundotahitica.mp3 */,
+				B916830617A99355007C7161 /* chaffinch.mp3 */,
+				B916830517A99355007C7161 /* goldammer.mp3 */,
+				B916830417A99355007C7161 /* HawkSperber_Accnis.mp3 */,
+				B91682F517A8CE99007C7161 /* SHOREPLOVER.mp3 */,
+				B91682EE17A8CE99007C7161 /* starling.mp3 */,
+				B91682F017A8CE99007C7161 /* tomtit.mp3 */,
+				B91682F117A8CE99007C7161 /* gannet.mp3 */,
+				B91682F217A8CE99007C7161 /* oystercatcher.mp3 */,
+				B91682F317A8CE99007C7161 /* blackbackedgull.mp3 */,
+				B91682F417A8CE99007C7161 /* redbilledgull.mp3 */,
+				B91682EC17A8CE76007C7161 /* goldfinch.mp3 */,
+				B9BED1281797DE6D00E6FE0E /* PiedStilt_WhhSti-20090712_083000.mp3 */,
+				B9BED1201797D9E600E6FE0E /* SHAG_Phalacrocorax_magellanicus.mp3 */,
+				B9BED1211797D9E600E6FE0E /* SHAGAuklandIs_FL Enderby26Nov2000.mp3 */,
+				B9BED1221797D9E600E6FE0E /* rosellas.mp3 */,
+				B9BED11E1797D9E600E6FE0E /* greypeacockpheasantbarkingcallthaiFarrow.mp3 */,
+				B934A5A81795DD8000D3F6F7 /* Weka_Song.mp3 */,
+				B934A5A61795DD8000D3F6F7 /* Black_Swan_20110325_XC74379.mp3 */,
+				B934A5A71795DD8000D3F6F7 /* Little-PenguineEudyptilaMinor_XC98203.mp3 */,
+				B934A5A91795DD8000D3F6F7 /* Purple_Swamphen_Tiritiri_Matangi_Island.mp3 */,
+				B934A5AA1795DD8000D3F6F7 /* Sparrow_XC112666-Pasdom_Sohar_27dec2009.mp3 */,
+				B934A5AB1795DD8000D3F6F7 /* Singdrossel_1753.mp3 */,
+				B934A5AC1795DD8000D3F6F7 /* Tadorna_variegata100309_16.mp3 */,
+				B9B917001744D46600B9916D /* kakariki.mp3 */,
+				B9BA7EDE177C3846003DA778 /* Australian-Magpie.mp3 */,
+				B94622561742C67C007A8A20 /* cockatiel.mp3 */,
+				B9DF1E4C1775AD0000F5DA74 /* blackbird.mp3 */,
+				B9DF1E4E1775AEF900F5DA74 /* Rifleman.mp3 */,
+				B9D92E6B174CEEBF001B6D79 /* kereru.mp3 */,
+				B9B917021744D46600B9916D /* morepork.mp3 */,
+				B9DF1E481775AB8D00F5DA74 /* kea2.mp3 */,
+				B9B916FE1744D46600B9916D /* is_kiwi.mp3 */,
+				B9A86A97173FB2C6006908C0 /* bellbird-56.mp3 */,
+				B9DF1E491775AB8D00F5DA74 /* tui2.mp3 */,
+				B943EDC01738DC9E007DB011 /* silvereye-song-22sy.mp3 */,
+				B9B916FD1744D46600B9916D /* fantail.mp3 */,
+				B98227EA1773B38C00A97BD3 /* Hihi_Stitchbird.mp3 */,
+			);
+			name = used;
+			sourceTree = "<group>";
+		};
+		B934A529178D2B8000D3F6F7 /* used */ = {
+			isa = PBXGroup;
+			children = (
+				B961701717B4D53700A6167E /* 0236.png */,
+				B961701817B4D53700A6167E /* 0236@2x.png */,
+				B916831917AC418B007C7161 /* kingfisher_square_114.png */,
+				B916831A17AC418B007C7161 /* kingfisher_square_57_2.png */,
+				B8E777F716C2F2F400949FEE /* Default-568h@2x.png */,
+				B9DF1E56177619DA00F5DA74 /* Default@2x.png */,
+				B98227EC1773B61000A97BD3 /* 0002.png */,
+				B98227ED1773B61000A97BD3 /* 0002@2x.png */,
+				B9FEE0D8178A838800768240 /* 0038.png */,
+				B9FEE0D9178A838800768240 /* 0038@2x.png */,
+				B9FEE0DC178A838900768240 /* 0090.png */,
+				B9FEE0DD178A838900768240 /* 0090@2x.png */,
+			);
+			name = used;
+			sourceTree = "<group>";
+		};
+		B9BE103017FB3E31005BA377 /* MKNetworkKit */ = {
+			isa = PBXGroup;
+			children = (
+				B9BE103117FB3E31005BA377 /* Categories */,
+				B9BE104017FB3E31005BA377 /* MKNetworkEngine.h */,
+				B9BE104117FB3E31005BA377 /* MKNetworkEngine.m */,
+				B9BE104217FB3E31005BA377 /* MKNetworkKit.h */,
+				B9BE104317FB3E31005BA377 /* MKNetworkOperation.h */,
+				B9BE104417FB3E31005BA377 /* MKNetworkOperation.m */,
+				B9BE104517FB3E31005BA377 /* Reachability */,
+			);
+			name = MKNetworkKit;
+			path = "MKNetworkKit-master/MKNetworkKit";
+			sourceTree = "<group>";
+		};
+		B9BE103117FB3E31005BA377 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B9BE103417FB3E31005BA377 /* NSData+MKBase64.h */,
+				B9BE103517FB3E31005BA377 /* NSData+MKBase64.m */,
+				B9BE103617FB3E31005BA377 /* NSDate+RFC1123.h */,
+				B9BE103717FB3E31005BA377 /* NSDate+RFC1123.m */,
+				B9BE103817FB3E31005BA377 /* NSDictionary+RequestEncoding.h */,
+				B9BE103917FB3E31005BA377 /* NSDictionary+RequestEncoding.m */,
+				B9BE103A17FB3E31005BA377 /* NSString+MKNetworkKitAdditions.h */,
+				B9BE103B17FB3E31005BA377 /* NSString+MKNetworkKitAdditions.m */,
+				B9BE103C17FB3E31005BA377 /* UIAlertView+MKNetworkKitAdditions.h */,
+				B9BE103D17FB3E31005BA377 /* UIAlertView+MKNetworkKitAdditions.m */,
+				B9BE103E17FB3E31005BA377 /* UIImageView+MKNetworkKitAdditions.h */,
+				B9BE103F17FB3E31005BA377 /* UIImageView+MKNetworkKitAdditions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		B9BE104517FB3E31005BA377 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				B9BE104617FB3E31005BA377 /* Reachability.h */,
+				B9BE104717FB3E31005BA377 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		B9DF1E581776259C00F5DA74 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B9708E5D17BACBAA00B90254 /* BrowserViewController.h */,
+				B9708E5E17BACBAA00B90254 /* BrowserViewController.m */,
+				B909A9BE17AEDD3400B12655 /* PickViewController.h */,
+				B909A9BF17AEDD3400B12655 /* PickViewController.m */,
+				B934A52D178D4B2E00D3F6F7 /* ObservationTableViewController.h */,
+				B934A52E178D4B2E00D3F6F7 /* ObservationTableViewController.m */,
+				B98227E717728C0600A97BD3 /* TextEditViewController.h */,
+				B98227E817728C0700A97BD3 /* TextEditViewController.m */,
+				B98227E4177257A800A97BD3 /* MasterViewController.h */,
+				B98227E5177257A800A97BD3 /* MasterViewController.m */,
+				B98227DE1772468000A97BD3 /* DetailViewController.h */,
+				B98227DF1772468000A97BD3 /* DetailViewController.m */,
+				B98227C317723FAA00A97BD3 /* MapViewController.h */,
+				B98227C417723FAA00A97BD3 /* MapViewController.m */,
+				B946228817439047007A8A20 /* BirdMapViewController.h */,
+				B946228917439047007A8A20 /* BirdMapViewController.m */,
+				B9DF1E5D1776708200F5DA74 /* BirdMasterTableViewController_CD.h */,
+				B9DF1E5E1776708200F5DA74 /* BirdMasterTableViewController_CD.m */,
+				B9BA7EE31780B671003DA778 /* BirdDetailViewController_CD.h */,
+				B9BA7EE41780B671003DA778 /* BirdDetailViewController_CD.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		B9DF1E59177625D300F5DA74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9BED155179A0F5D00E6FE0E /* CurrentSpot.h */,
+				B9BED156179A0F5D00E6FE0E /* CurrentSpot.m */,
+				B9682478176234380093F493 /* BirdBrowser.xcdatamodeld */,
+				B9BED1521799402000E6FE0E /* Spot.h */,
+				B9BED1531799402000E6FE0E /* Spot.m */,
+				B934A5C817968A4A00D3F6F7 /* FullBirdImage.h */,
+				B934A5C917968A4B00D3F6F7 /* FullBirdImage.m */,
+				B934A5CB17968A4C00D3F6F7 /* Bird_attributes.h */,
+				B934A5CC17968A4D00D3F6F7 /* Bird_attributes.m */,
+				B9FEE0D5178A734800768240 /* Observation.h */,
+				B9FEE0D6178A734800768240 /* Observation.m */,
+				B9FEE0B5178A2C2F00768240 /* Info.h */,
+				B9FEE0B6178A2C2F00768240 /* Info.m */,
+				B98227C01772390700A97BD3 /* ModelController.h */,
+				B98227C11772390700A97BD3 /* ModelController.m */,
+				B8E7780A16C2F6A700949FEE /* Bird.h */,
+				B8E7780B16C2F6A700949FEE /* Bird.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B9DF1E5A1776263200F5DA74 /* Soundfiles */ = {
+			isa = PBXGroup;
+			children = (
+				B9BED11F1797D9E600E6FE0E /* SHAGPhalacrocorax atriceps atriceps a_Puerto de Comodoro Rivadavia_Chubut_23OCT2010 0843_Bernabe Lopez-Lanus.mp3 */,
+				B934A522178CEFF300D3F6F7 /* used */,
+				B9B916FF1744D46600B9916D /* kakapo.mp3 */,
+				B94622571742C67C007A8A20 /* kaka.mp3 */,
+			);
+			name = Soundfiles;
+			sourceTree = "<group>";
+		};
+		B9DF1E5B1776268900F5DA74 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B934A521178CEFE900D3F6F7 /* used */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		B9DF1E5C177626BA00F5DA74 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				B95B943917C06A6900EBC8E7 /* Default.png */,
+				B916832217AC41BB007C7161 /* kingfisher_square_114.png */,
+				B916832017AC41AF007C7161 /* kingfisher_square_57_2.png */,
+				B9CDE3A217A4F56100661AF9 /* 0088.png */,
+				B9CDE3A317A4F56100661AF9 /* 0088@2x.png */,
+				B9CDE3A417A4F56100661AF9 /* 0239.png */,
+				B9CDE3A517A4F56100661AF9 /* 0239@2x.png */,
+				B9BED12A17993C4000E6FE0E /* home_selected.png */,
+				B9BED12B17993C4100E6FE0E /* home_selected@2x.png */,
+				B9BED12C17993C4100E6FE0E /* home.png */,
+				B9BED12D17993C4100E6FE0E /* home@2x.png */,
+				B9BED12E17993C4100E6FE0E /* maps_selected.png */,
+				B9BED12F17993C4100E6FE0E /* maps_selected@2x.png */,
+				B9BED13017993C4100E6FE0E /* maps.png */,
+				B9BED13117993C4100E6FE0E /* maps@2x.png */,
+				B9BED13417993C4200E6FE0E /* myplan.png */,
+				B9BED13517993C4200E6FE0E /* myplan@2x.png */,
+				B9BED13617993C4200E6FE0E /* settings_selected.png */,
+				B9BED13717993C4200E6FE0E /* settings_selected@2x.png */,
+				B9BED13817993C4200E6FE0E /* settings.png */,
+				B9BED13917993C4200E6FE0E /* settings@2x.png */,
+				B9BED13A17993C4200E6FE0E /* tabbar_selected.png */,
+				B9BED13B17993C4200E6FE0E /* tabbar_selected@2x.png */,
+				B9BED13C17993C4200E6FE0E /* tabbar.png */,
+				B9BED13D17993C4200E6FE0E /* tabbar@2x.png */,
+				B934A529178D2B8000D3F6F7 /* used */,
+				B9FEE0DA178A838800768240 /* 0065.png */,
+				B9FEE0DB178A838900768240 /* 0065@2x.png */,
+				B9FEE0DE178A838A00768240 /* 0207.png */,
+				B9FEE0DF178A838A00768240 /* 0207@2x.png */,
+				B9D92E75174E5711001B6D79 /* 0263.png */,
+				B9D92E76174E5712001B6D79 /* 0263@2x.png */,
+				B9D92E77174E5714001B6D79 /* 0264.png */,
+				B9D92E78174E5716001B6D79 /* 0264@2x.png */,
+				B9D92E6D174E5650001B6D79 /* 0283.png */,
+				B9D92E6E174E5651001B6D79 /* 0283@2x.png */,
+				B9D92E6F174E5651001B6D79 /* 0284.png */,
+				B9D92E70174E5651001B6D79 /* 0284@2x.png */,
+				B9D92E391748DEB0001B6D79 /* button_back.png */,
+				B9D92E3A1748DEB0001B6D79 /* button_normal.png */,
+				B9D92E3B1748DEB0001B6D79 /* cell_bottom.png */,
+				B9D92E3C1748DEB0001B6D79 /* cell_bottom@2x.png */,
+				B9D92E3D1748DEB0001B6D79 /* cell_middle.png */,
+				B9D92E3E1748DEB0001B6D79 /* cell_middle@2x.png */,
+				B9D92E3F1748DEB0001B6D79 /* cell_top_tile.png */,
+				B9D92E401748DEB0001B6D79 /* cell_top.png */,
+				B9D92E411748DEB0001B6D79 /* cell_top@2x.png */,
+				B9D92E421748DEB0001B6D79 /* common_bg.png */,
+				B9D92E431748DEB0001B6D79 /* common_bg@2x.png */,
+				B9D92E441748DEB0001B6D79 /* navbar_bg.png */,
+				B9D92E451748DEB0001B6D79 /* navbar_bg@2x.png */,
+				B94622621743221A007A8A20 /* 0266.png */,
+				B94622631743221A007A8A20 /* 0266@2x.png */,
+				B94622641743221A007A8A20 /* 0280.png */,
+				B94622651743221A007A8A20 /* 0280@2x.png */,
+				B946224E17421BBF007A8A20 /* 0209.png */,
+				B946224F17421BBF007A8A20 /* 0209@2x.png */,
+				B946225017421BBF007A8A20 /* 0269.png */,
+				B946225117421BBF007A8A20 /* 0269@2x.png */,
+				B9461D9217421B12007A8A20 /* 0063.png */,
+				B9461D9317421B12007A8A20 /* 0063@2x.png */,
+				B9461D9417421B12007A8A20 /* 0300.png */,
+				B9461D9517421B12007A8A20 /* 0300@2x.png */,
+				B9461D8917421910007A8A20 /* 0043.png */,
+				B9461D8A17421910007A8A20 /* 0043@2x.png */,
+				B8E777F316C2F2F400949FEE /* Original_Default.png */,
+				B8E777F516C2F2F400949FEE /* Original_Default@2x.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B8E777DD16C2F2F400949FEE /* NZBirder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8E7780116C2F2F400949FEE /* Build configuration list for PBXNativeTarget "NZBirder" */;
+			buildPhases = (
+				B8E777DA16C2F2F400949FEE /* Sources */,
+				B8E777DB16C2F2F400949FEE /* Frameworks */,
+				B8E777DC16C2F2F400949FEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NZBirder;
+			productName = CarBrowser;
+			productReference = B8E777DE16C2F2F400949FEE /* NZBirder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8E777D616C2F2F400949FEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Acme;
+			};
+			buildConfigurationList = B8E777D916C2F2F400949FEE /* Build configuration list for PBXProject "BirdBrowser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B8E777D516C2F2F400949FEE;
+			productRefGroup = B8E777DF16C2F2F400949FEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8E777DD16C2F2F400949FEE /* NZBirder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8E777DC16C2F2F400949FEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8E777EC16C2F2F400949FEE /* InfoPlist.strings in Resources */,
+				B8E777F816C2F2F400949FEE /* Default-568h@2x.png in Resources */,
+				B8E777FB16C2F2F400949FEE /* MainStoryboard.storyboard in Resources */,
+				B943EDC11738DC9E007DB011 /* silvereye-song-22sy.mp3 in Resources */,
+				B9A86A98173FB2C6006908C0 /* bellbird-56.mp3 in Resources */,
+				B9461D9017421910007A8A20 /* 0043.png in Resources */,
+				B9461D9117421910007A8A20 /* 0043@2x.png in Resources */,
+				B9461D9617421B12007A8A20 /* 0063.png in Resources */,
+				B9461D9717421B12007A8A20 /* 0063@2x.png in Resources */,
+				B9461D9817421B12007A8A20 /* 0300.png in Resources */,
+				B9461D9917421B12007A8A20 /* 0300@2x.png in Resources */,
+				B946225217421BBF007A8A20 /* 0209.png in Resources */,
+				B946225317421BBF007A8A20 /* 0209@2x.png in Resources */,
+				B946225417421BBF007A8A20 /* 0269.png in Resources */,
+				B946225517421BBF007A8A20 /* 0269@2x.png in Resources */,
+				B94622661743221A007A8A20 /* 0266.png in Resources */,
+				B94622671743221A007A8A20 /* 0266@2x.png in Resources */,
+				B94622681743221A007A8A20 /* 0280.png in Resources */,
+				B94622691743221A007A8A20 /* 0280@2x.png in Resources */,
+				B9B917031744D46600B9916D /* fantail.mp3 in Resources */,
+				B9B917041744D46600B9916D /* is_kiwi.mp3 in Resources */,
+				B9B917061744D46600B9916D /* kakariki.mp3 in Resources */,
+				B9B917081744D46600B9916D /* morepork.mp3 in Resources */,
+				B9D92E461748DEB0001B6D79 /* button_back.png in Resources */,
+				B9D92E471748DEB0001B6D79 /* button_normal.png in Resources */,
+				B9D92E481748DEB0001B6D79 /* cell_bottom.png in Resources */,
+				B9D92E491748DEB0001B6D79 /* cell_bottom@2x.png in Resources */,
+				B9D92E4A1748DEB0001B6D79 /* cell_middle.png in Resources */,
+				B9D92E4B1748DEB0001B6D79 /* cell_middle@2x.png in Resources */,
+				B9D92E4C1748DEB0001B6D79 /* cell_top_tile.png in Resources */,
+				B9D92E4D1748DEB0001B6D79 /* cell_top.png in Resources */,
+				B9D92E4E1748DEB0001B6D79 /* cell_top@2x.png in Resources */,
+				B9D92E4F1748DEB0001B6D79 /* common_bg.png in Resources */,
+				B9D92E501748DEB0001B6D79 /* common_bg@2x.png in Resources */,
+				B9D92E511748DEB0001B6D79 /* navbar_bg.png in Resources */,
+				B9D92E521748DEB0001B6D79 /* navbar_bg@2x.png in Resources */,
+				B9D92E6C174CEEC0001B6D79 /* kereru.mp3 in Resources */,
+				B9D92E71174E5651001B6D79 /* 0283.png in Resources */,
+				B9D92E72174E5651001B6D79 /* 0283@2x.png in Resources */,
+				B9D92E73174E5651001B6D79 /* 0284.png in Resources */,
+				B9D92E74174E5651001B6D79 /* 0284@2x.png in Resources */,
+				B9D92E79174E5717001B6D79 /* 0263.png in Resources */,
+				B9D92E7A174E5717001B6D79 /* 0263@2x.png in Resources */,
+				B9D92E7B174E5717001B6D79 /* 0264.png in Resources */,
+				B9D92E7C174E5717001B6D79 /* 0264@2x.png in Resources */,
+				B98227EB1773B38C00A97BD3 /* Hihi_Stitchbird.mp3 in Resources */,
+				B98227EE1773B61000A97BD3 /* 0002.png in Resources */,
+				B98227EF1773B61000A97BD3 /* 0002@2x.png in Resources */,
+				B9DF1E4A1775AB8D00F5DA74 /* kea2.mp3 in Resources */,
+				B9DF1E4B1775AB8D00F5DA74 /* tui2.mp3 in Resources */,
+				B9DF1E4D1775AD0000F5DA74 /* blackbird.mp3 in Resources */,
+				B9DF1E4F1775AEF900F5DA74 /* Rifleman.mp3 in Resources */,
+				B9DF1E57177619DA00F5DA74 /* Default@2x.png in Resources */,
+				B9BA7EDF177C3846003DA778 /* Australian-Magpie.mp3 in Resources */,
+				B9FEE0E0178A838A00768240 /* 0038.png in Resources */,
+				B9FEE0E1178A838A00768240 /* 0038@2x.png in Resources */,
+				B9FEE0E2178A838A00768240 /* 0065.png in Resources */,
+				B9FEE0E3178A838A00768240 /* 0065@2x.png in Resources */,
+				B9FEE0E4178A838A00768240 /* 0090.png in Resources */,
+				B9FEE0E5178A838A00768240 /* 0090@2x.png in Resources */,
+				B9FEE0E6178A838A00768240 /* 0207.png in Resources */,
+				B9FEE0E7178A838A00768240 /* 0207@2x.png in Resources */,
+				B934A5AD1795DD8000D3F6F7 /* Black_Swan_20110325_XC74379.mp3 in Resources */,
+				B934A5AE1795DD8000D3F6F7 /* Little-PenguineEudyptilaMinor_XC98203.mp3 in Resources */,
+				B934A5AF1795DD8000D3F6F7 /* Weka_Song.mp3 in Resources */,
+				B934A5B01795DD8000D3F6F7 /* Purple_Swamphen_Tiritiri_Matangi_Island.mp3 in Resources */,
+				B934A5B11795DD8000D3F6F7 /* Sparrow_XC112666-Pasdom_Sohar_27dec2009.mp3 in Resources */,
+				B934A5B21795DD8000D3F6F7 /* Singdrossel_1753.mp3 in Resources */,
+				B934A5B31795DD8000D3F6F7 /* Tadorna_variegata100309_16.mp3 in Resources */,
+				B9BED1231797D9E600E6FE0E /* greypeacockpheasantbarkingcallthaiFarrow.mp3 in Resources */,
+				B9BED1251797D9E600E6FE0E /* SHAG_Phalacrocorax_magellanicus.mp3 in Resources */,
+				B9BED1261797D9E600E6FE0E /* SHAGAuklandIs_FL Enderby26Nov2000.mp3 in Resources */,
+				B9BED1271797D9E600E6FE0E /* rosellas.mp3 in Resources */,
+				B9BED1291797DE6D00E6FE0E /* PiedStilt_WhhSti-20090712_083000.mp3 in Resources */,
+				B9BED13E17993C4200E6FE0E /* home_selected.png in Resources */,
+				B9BED13F17993C4200E6FE0E /* home_selected@2x.png in Resources */,
+				B9BED14017993C4200E6FE0E /* home.png in Resources */,
+				B9BED14117993C4200E6FE0E /* home@2x.png in Resources */,
+				B9BED14217993C4200E6FE0E /* maps_selected.png in Resources */,
+				B9BED14317993C4200E6FE0E /* maps_selected@2x.png in Resources */,
+				B9BED14417993C4200E6FE0E /* maps.png in Resources */,
+				B9BED14517993C4200E6FE0E /* maps@2x.png in Resources */,
+				B9BED14817993C4200E6FE0E /* myplan.png in Resources */,
+				B9BED14917993C4200E6FE0E /* myplan@2x.png in Resources */,
+				B9BED14A17993C4200E6FE0E /* settings_selected.png in Resources */,
+				B9BED14B17993C4200E6FE0E /* settings_selected@2x.png in Resources */,
+				B9BED14C17993C4200E6FE0E /* settings.png in Resources */,
+				B9BED14D17993C4200E6FE0E /* settings@2x.png in Resources */,
+				B9BED14E17993C4200E6FE0E /* tabbar_selected.png in Resources */,
+				B9BED14F17993C4200E6FE0E /* tabbar_selected@2x.png in Resources */,
+				B9BED15017993C4200E6FE0E /* tabbar.png in Resources */,
+				B9BED15117993C4200E6FE0E /* tabbar@2x.png in Resources */,
+				B9CDE3A617A4F56200661AF9 /* 0088.png in Resources */,
+				B9CDE3A717A4F56200661AF9 /* 0088@2x.png in Resources */,
+				B9CDE3A817A4F56200661AF9 /* 0239.png in Resources */,
+				B9CDE3A917A4F56200661AF9 /* 0239@2x.png in Resources */,
+				B91682ED17A8CE76007C7161 /* goldfinch.mp3 in Resources */,
+				B91682F617A8CE99007C7161 /* starling.mp3 in Resources */,
+				B91682F817A8CE99007C7161 /* tomtit.mp3 in Resources */,
+				B91682F917A8CE99007C7161 /* gannet.mp3 in Resources */,
+				B91682FA17A8CE99007C7161 /* oystercatcher.mp3 in Resources */,
+				B91682FB17A8CE99007C7161 /* blackbackedgull.mp3 in Resources */,
+				B91682FC17A8CE99007C7161 /* redbilledgull.mp3 in Resources */,
+				B91682FD17A8CE99007C7161 /* SHOREPLOVER.mp3 in Resources */,
+				B916830717A99355007C7161 /* HawkSperber_Accnis.mp3 in Resources */,
+				B916830817A99355007C7161 /* goldammer.mp3 in Resources */,
+				B916830917A99355007C7161 /* chaffinch.mp3 in Resources */,
+				B916831D17AC418B007C7161 /* kingfisher_square_114.png in Resources */,
+				B916831E17AC418B007C7161 /* kingfisher_square_57_2.png in Resources */,
+				B916832117AC41AF007C7161 /* kingfisher_square_57_2.png in Resources */,
+				B916832317AC41BB007C7161 /* kingfisher_square_114.png in Resources */,
+				B91683BA17AE0006007C7161 /* 685px-Drozd_zpevny.jpg in Resources */,
+				B91683BB17AE0006007C7161 /* 800px-Charadrius_bicinctus_breeding_-_Ralphs_Bay.jpg in Resources */,
+				B91683BC17AE0006007C7161 /* 800px-Tui_10.jpg in Resources */,
+				B91683BD17AE0006007C7161 /* 823px-Dinornis1387.jpg in Resources */,
+				B91683BE17AE0006007C7161 /* 1008px-G_tibicen_dorsalis_gnangarra.jpg in Resources */,
+				B91683C017AE0006007C7161 /* Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water.jpg in Resources */,
+				B91683C117AE0006007C7161 /* Anthornis_melanura_New_Zealand_8.jpg in Resources */,
+				B91683C217AE0006007C7161 /* Blackbird.jpg in Resources */,
+				B91683C317AE0006007C7161 /* BlackSwanCygnus_atratus.jpg in Resources */,
+				B91683C417AE0006007C7161 /* BlackWingGull_IMG_6659.jpg in Resources */,
+				B91683C517AE0006007C7161 /* Chaffinch_2.jpg in Resources */,
+				B91683C617AE0006007C7161 /* Charadrius_bicinctus_breeding_Ralphs_Bay.jpg in Resources */,
+				B91683C717AE0006007C7161 /* Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8.jpg in Resources */,
+				B91683C917AE0006007C7161 /* DSC09462.JPG in Resources */,
+				B91683CA17AE0006007C7161 /* Dunnock_IMG_7140.jpg in Resources */,
+				B91683CB17AE0006007C7161 /* Gannet_IMG_6624.jpg in Resources */,
+				B91683CD17AE0006007C7161 /* Goldfinch_IMG_6721.jpg in Resources */,
+				B91683CE17AE0006007C7161 /* Goldhammer_IMG_6809.jpg in Resources */,
+				B91683D017AE0006007C7161 /* harrierHawk.jpg in Resources */,
+				B91683D117AE0006007C7161 /* Hihi_Stitchbird1.jpg in Resources */,
+				B91683D217AE0006007C7161 /* Kingfisher_IMG_6929.jpg in Resources */,
+				B91683D317AE0006007C7161 /* Little_Penguin.jpg in Resources */,
+				B91683D517AE0006007C7161 /* LittleSpottedKiwi_Apteryx_owenii.jpg in Resources */,
+				B91683D617AE0006007C7161 /* Magpie_Australian_IMG_6747.jpg in Resources */,
+				B91683D717AE0006007C7161 /* MoreporkMaunga.jpg in Resources */,
+				B91683D817AE0006007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg in Resources */,
+				B91683DA17AE0006007C7161 /* NZKingfisher_Kotare_IMG_6861.jpg in Resources */,
+				B91683DB17AE0006007C7161 /* ParadiseDuck.jpg in Resources */,
+				B91683DD17AE0006007C7161 /* Peacock3.jpg in Resources */,
+				B91683DE17AE0006007C7161 /* Pheasant.jpg in Resources */,
+				B91683DF17AE0006007C7161 /* Pukeko_Porphyrio_porphyrio.jpg in Resources */,
+				B91683E017AE0006007C7161 /* RedBilledGull_IMG_6599.jpg in Resources */,
+				B91683E117AE0006007C7161 /* Rifleman_Acanthisitta_chloris.jpg in Resources */,
+				B91683E217AE0006007C7161 /* RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c.jpg in Resources */,
+				B91683E417AE0006007C7161 /* Shag_IMG_7093.jpg in Resources */,
+				B91683E617AE0006007C7161 /* SI_Tomtit_male2.jpg in Resources */,
+				B91683E717AE0006007C7161 /* Silvereye_DSC09462.jpg in Resources */,
+				B91683E817AE0006007C7161 /* SilverEye.jpg in Resources */,
+				B91683E917AE0006007C7161 /* Sparrow_IMG_6604.jpg in Resources */,
+				B91683EA17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.1001.JPG in Resources */,
+				B91683EB17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg in Resources */,
+				B91683EC17AE0006007C7161 /* Starling_IMG_6964.jpg in Resources */,
+				B91683EE17AE0006007C7161 /* Takahe_Maunga.jpg in Resources */,
+				B91683EF17AE0006007C7161 /* Thrush_song_06-03_SCOT.jpg in Resources */,
+				B91683F017AE0006007C7161 /* Tomtit2.jpg in Resources */,
+				B91683F217AE0006007C7161 /* Tui_on_flax.jpg in Resources */,
+				B91683F317AE0006007C7161 /* Watvogel_IMG_6674.jpg in Resources */,
+				B91683F417AE0006007C7161 /* WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch.jpg in Resources */,
+				B91683F517AE0006007C7161 /* Yellowhammer_IMG_7001.jpg in Resources */,
+				B91683FC17AE007F007C7161 /* 800px-Nestor_notabilis_-Fiordland_National_Park-8a.jpg in Resources */,
+				B91683FD17AE007F007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02.jpg in Resources */,
+				B91683FE17AE007F007C7161 /* Grey_Fantail.jpg in Resources */,
+				B91683FF17AE007F007C7161 /* GreyWarbler_Gerygone1888.jpg in Resources */,
+				B916840017AE007F007C7161 /* MoreporkMaunga.jpg in Resources */,
+				B916840117AE007F007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg in Resources */,
+				B91684E517AE0512007C7161 /* 800px-Nestor_notabilis_-Fiordland_National_Park-8a_TN.jpg in Resources */,
+				B91684E617AE0512007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02_TN.jpg in Resources */,
+				B91684E717AE0512007C7161 /* 823px-Dinornis1387_TN.jpg in Resources */,
+				B91684E817AE0512007C7161 /* Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water_TN.jpg in Resources */,
+				B91684E917AE0512007C7161 /* Anthornis_melanura_New_Zealand_8_TN.jpg in Resources */,
+				B91684EA17AE0512007C7161 /* Blackbird_TN.jpg in Resources */,
+				B91684EB17AE0512007C7161 /* BlackSwanCygnus_atratus_TN.jpg in Resources */,
+				B91684EC17AE0512007C7161 /* BlackWingGull_IMG_6659_TN.jpg in Resources */,
+				B91684ED17AE0512007C7161 /* Chaffinch_2_TN.jpg in Resources */,
+				B91684EE17AE0512007C7161 /* Charadrius_bicinctus_breeding_Ralphs_Bay_TN.jpg in Resources */,
+				B91684EF17AE0512007C7161 /* Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8_TN.jpg in Resources */,
+				B91684F017AE0512007C7161 /* Dunnock_IMG_7140_TN.jpg in Resources */,
+				B91684F117AE0512007C7161 /* Gannet_IMG_6624_TN.jpg in Resources */,
+				B91684F217AE0512007C7161 /* Goldfinch_IMG_6721_TN.jpg in Resources */,
+				B91684F317AE0512007C7161 /* Grey_Fantail_TN.jpg in Resources */,
+				B91684F417AE0512007C7161 /* GreyWarbler_Gerygone1888_TN.jpg in Resources */,
+				B91684F517AE0512007C7161 /* harrierHawk_TN.jpg in Resources */,
+				B91684F617AE0512007C7161 /* Hihi_Stitchbird1_TN.jpg in Resources */,
+				B91684F717AE0512007C7161 /* Kingfisher_IMG_6929_TN.jpg in Resources */,
+				B91684F817AE0512007C7161 /* Little_Penguin_TN.jpg in Resources */,
+				B91684F917AE0512007C7161 /* LittleSpottedKiwi_Apteryx_owenii_TN.jpg in Resources */,
+				B91684FA17AE0512007C7161 /* Magpie_Australian_IMG_6747_TN.jpg in Resources */,
+				B91684FB17AE0512007C7161 /* MoreporkMaunga_TN.jpg in Resources */,
+				B91684FC17AE0512007C7161 /* New_Zealand_Pigeon_Southstar_02_TN.jpg in Resources */,
+				B91684FD17AE0512007C7161 /* ParadiseDuck_TN.jpg in Resources */,
+				B91684FE17AE0512007C7161 /* Peacock3_TN.jpg in Resources */,
+				B91684FF17AE0512007C7161 /* Pheasant_TN.jpg in Resources */,
+				B916850017AE0512007C7161 /* Pukeko_Porphyrio_porphyrio_TN.jpg in Resources */,
+				B916850117AE0512007C7161 /* RedBilledGull_IMG_6599_TN.jpg in Resources */,
+				B916850217AE0512007C7161 /* Rifleman_Acanthisitta_chloris_TN.jpg in Resources */,
+				B916850317AE0512007C7161 /* RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c_TN.jpg in Resources */,
+				B916850417AE0512007C7161 /* Shag_IMG_6849_TN.jpg in Resources */,
+				B916850517AE0512007C7161 /* Shag_IMG_7093_TN.jpg in Resources */,
+				B916850617AE0512007C7161 /* SI_Tomtit_male2_TN.jpg in Resources */,
+				B916850717AE0512007C7161 /* Silvereye_DSC09462_TN.jpg in Resources */,
+				B916850817AE0512007C7161 /* Sparrow_IMG_6604_TN.jpg in Resources */,
+				B916850917AE0512007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo_TN.jpg in Resources */,
+				B916850B17AE0512007C7161 /* Starling_IMG_6964_TN.jpg in Resources */,
+				B916850C17AE0512007C7161 /* Takahe_Maunga_TN.jpg in Resources */,
+				B916850D17AE0512007C7161 /* Thrush_song_06-03_SCOT_TN.jpg in Resources */,
+				B916850E17AE0512007C7161 /* Tui_on_flax_TN.jpg in Resources */,
+				B916850F17AE0512007C7161 /* Turkey_TN.jpg in Resources */,
+				B916851017AE0512007C7161 /* WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch_TN.jpg in Resources */,
+				B916851117AE0512007C7161 /* Yellowhammer_IMG_7001_TN.jpg in Resources */,
+				B909A9B917AE294F00B12655 /* Watvogel_IMG_6674_TN.jpg in Resources */,
+				B909A9BB17AE45C800B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg in Resources */,
+				B909A9BD17AE4B8600B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN.jpg in Resources */,
+				B961701917B4D53700A6167E /* 0236.png in Resources */,
+				B961701A17B4D53700A6167E /* 0236@2x.png in Resources */,
+				B9708E6517BC6F3A00B90254 /* NZBirder.sqlite in Resources */,
+				B95B943A17C06A6900EBC8E7 /* Default.png in Resources */,
+				B9ACFDEC17C84AB0002CE932 /* Shining_BronzeCuckoo.mp3 in Resources */,
+				B9ACFDED17C84AB0002CE932 /* Hirundotahitica.mp3 in Resources */,
+				B9ACFDEE17C84AB0002CE932 /* Carduelis_chloris_TN.jpg in Resources */,
+				B9ACFDEF17C84AB0002CE932 /* Chrysococcyx_lucidus_-Brisbane,_Queensland,_Australia_TN.jpg in Resources */,
+				B9ACFDF017C84AB0002CE932 /* Welcome_Swallow_TN.jpg in Resources */,
+				B9ACFDF117C84AB0002CE932 /* commonswikimedia.orgwikiFileWelcome_Swallowjpg800px-Welcome_Swallow.jpg in Resources */,
+				B9ACFDF317C84AB0002CE932 /* Carduelis_chloris_AuthorOlivierFromFranceWikiCommons.jpg in Resources */,
+				B9ACFDF417C84AB0002CE932 /* Chrysococcyx_lucidus_JamesNiland_Brisbane_Queensland_Australia.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B8E777DA16C2F2F400949FEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8E777EE16C2F2F400949FEE /* main.m in Sources */,
+				B9BE104D17FB3E31005BA377 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
+				B8E777F216C2F2F400949FEE /* AppDelegate.m in Sources */,
+				B8E7780916C2F43000949FEE /* BirdTableViewCell.m in Sources */,
+				B9BE104E17FB3E31005BA377 /* UIImageView+MKNetworkKitAdditions.m in Sources */,
+				B8E7780C16C2F6A700949FEE /* Bird.m in Sources */,
+				B946228A17439047007A8A20 /* BirdMapViewController.m in Sources */,
+				B968247A176234380093F493 /* BirdBrowser.xcdatamodeld in Sources */,
+				B98227C21772390700A97BD3 /* ModelController.m in Sources */,
+				B98227C517723FAA00A97BD3 /* MapViewController.m in Sources */,
+				B98227D81772444100A97BD3 /* MapViewAnnotation.m in Sources */,
+				B98227D91772444100A97BD3 /* NSCoder+FavSpots.m in Sources */,
+				B98227DA1772444100A97BD3 /* NSCoder+RNMapKit.m in Sources */,
+				B98227E01772468000A97BD3 /* DetailViewController.m in Sources */,
+				B98227E6177257A800A97BD3 /* MasterViewController.m in Sources */,
+				B9BE104917FB3E31005BA377 /* NSData+MKBase64.m in Sources */,
+				B9BE104B17FB3E31005BA377 /* NSDictionary+RequestEncoding.m in Sources */,
+				B98227E917728C0700A97BD3 /* TextEditViewController.m in Sources */,
+				B9DF1E5F1776708300F5DA74 /* BirdMasterTableViewController_CD.m in Sources */,
+				B9BE104C17FB3E31005BA377 /* NSString+MKNetworkKitAdditions.m in Sources */,
+				B9BA7EE51780B671003DA778 /* BirdDetailViewController_CD.m in Sources */,
+				B9FEE0B7178A2C2F00768240 /* Info.m in Sources */,
+				B9FEE0D7178A734900768240 /* Observation.m in Sources */,
+				B934A52F178D4B2F00D3F6F7 /* ObservationTableViewController.m in Sources */,
+				B934A5841793E2C900D3F6F7 /* CHCSVParser.m in Sources */,
+				B9BE105017FB3E31005BA377 /* MKNetworkOperation.m in Sources */,
+				B934A59D1794865D00D3F6F7 /* FMDatabase.m in Sources */,
+				B934A59E1794865D00D3F6F7 /* FMDatabaseAdditions.m in Sources */,
+				B9BE104F17FB3E31005BA377 /* MKNetworkEngine.m in Sources */,
+				B934A59F1794865D00D3F6F7 /* FMDatabasePool.m in Sources */,
+				B9BE105817FB49C1005BA377 /* FileUploadEngine.m in Sources */,
+				B9BE104A17FB3E31005BA377 /* NSDate+RFC1123.m in Sources */,
+				B934A5A01794865D00D3F6F7 /* FMDatabaseQueue.m in Sources */,
+				B934A5A11794865D00D3F6F7 /* FMResultSet.m in Sources */,
+				B934A5CA17968A4B00D3F6F7 /* FullBirdImage.m in Sources */,
+				B934A5CD17968A4D00D3F6F7 /* Bird_attributes.m in Sources */,
+				B9BED1541799402000E6FE0E /* Spot.m in Sources */,
+				B9BED157179A0F5E00E6FE0E /* CurrentSpot.m in Sources */,
+				B909A9C017AEDD3400B12655 /* PickViewController.m in Sources */,
+				B9BE105117FB3E31005BA377 /* Reachability.m in Sources */,
+				B9708E5F17BACBAA00B90254 /* BrowserViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B8E777EA16C2F2F400949FEE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8E777EB16C2F2F400949FEE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B8E777F916C2F2F400949FEE /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8E777FA16C2F2F400949FEE /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B8E777FF16C2F2F400949FEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B8E7780016C2F2F400949FEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B8E7780216C2F2F400949FEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CarBrowser/BirdBrowser-Prefix.pch";
+				INFOPLIST_FILE = "CarBrowser/BirdBrowser-Info.plist";
+				PRODUCT_NAME = NZBirder;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B8E7780316C2F2F400949FEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CarBrowser/BirdBrowser-Prefix.pch";
+				INFOPLIST_FILE = "CarBrowser/BirdBrowser-Info.plist";
+				PRODUCT_NAME = NZBirder;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B8E777D916C2F2F400949FEE /* Build configuration list for PBXProject "BirdBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8E777FF16C2F2F400949FEE /* Debug */,
+				B8E7780016C2F2F400949FEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8E7780116C2F2F400949FEE /* Build configuration list for PBXNativeTarget "NZBirder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8E7780216C2F2F400949FEE /* Debug */,
+				B8E7780316C2F2F400949FEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B9682478176234380093F493 /* BirdBrowser.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B9682479176234380093F493 /* BirdBrowser.xcdatamodel */,
+			);
+			currentVersion = B9682479176234380093F493 /* BirdBrowser.xcdatamodel */;
+			path = BirdBrowser.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B8E777D616C2F2F400949FEE /* Project object */;
+}
