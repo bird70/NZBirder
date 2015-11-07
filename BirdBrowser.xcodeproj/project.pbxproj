@@ -58,7 +58,6 @@
 		B91683D117AE0006007C7161 /* Hihi_Stitchbird1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839517AE0006007C7161 /* Hihi_Stitchbird1.jpg */; };
 		B91683D217AE0006007C7161 /* Kingfisher_IMG_6929.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839617AE0006007C7161 /* Kingfisher_IMG_6929.jpg */; };
 		B91683D317AE0006007C7161 /* Little_Penguin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839717AE0006007C7161 /* Little_Penguin.jpg */; };
-		B91683D517AE0006007C7161 /* LittleSpottedKiwi_Apteryx_owenii.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839917AE0006007C7161 /* LittleSpottedKiwi_Apteryx_owenii.jpg */; };
 		B91683D617AE0006007C7161 /* Magpie_Australian_IMG_6747.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839A17AE0006007C7161 /* Magpie_Australian_IMG_6747.jpg */; };
 		B91683D717AE0006007C7161 /* MoreporkMaunga.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839B17AE0006007C7161 /* MoreporkMaunga.jpg */; };
 		B91683D817AE0006007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916839C17AE0006007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg */; };
@@ -75,8 +74,7 @@
 		B91683E717AE0006007C7161 /* Silvereye_DSC09462.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683AB17AE0006007C7161 /* Silvereye_DSC09462.jpg */; };
 		B91683E817AE0006007C7161 /* SilverEye.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683AC17AE0006007C7161 /* SilverEye.jpg */; };
 		B91683E917AE0006007C7161 /* Sparrow_IMG_6604.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683AD17AE0006007C7161 /* Sparrow_IMG_6604.jpg */; };
-		B91683EA17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.1001.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B91683AE17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.1001.JPG */; };
-		B91683EB17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683AF17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg */; };
+		B91683EA17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683AE17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg */; };
 		B91683EC17AE0006007C7161 /* Starling_IMG_6964.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683B017AE0006007C7161 /* Starling_IMG_6964.jpg */; };
 		B91683EE17AE0006007C7161 /* Takahe_Maunga.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683B217AE0006007C7161 /* Takahe_Maunga.jpg */; };
 		B91683EF17AE0006007C7161 /* Thrush_song_06-03_SCOT.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683B317AE0006007C7161 /* Thrush_song_06-03_SCOT.jpg */; };
@@ -89,8 +87,6 @@
 		B91683FD17AE007F007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683F717AE007F007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02.jpg */; };
 		B91683FE17AE007F007C7161 /* Grey_Fantail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683F817AE007F007C7161 /* Grey_Fantail.jpg */; };
 		B91683FF17AE007F007C7161 /* GreyWarbler_Gerygone1888.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683F917AE007F007C7161 /* GreyWarbler_Gerygone1888.jpg */; };
-		B916840017AE007F007C7161 /* MoreporkMaunga.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683FA17AE007F007C7161 /* MoreporkMaunga.jpg */; };
-		B916840117AE007F007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91683FB17AE007F007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg */; };
 		B91684E517AE0512007C7161 /* 800px-Nestor_notabilis_-Fiordland_National_Park-8a_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684B817AE0512007C7161 /* 800px-Nestor_notabilis_-Fiordland_National_Park-8a_TN.jpg */; };
 		B91684E617AE0512007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684B917AE0512007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02_TN.jpg */; };
 		B91684E717AE0512007C7161 /* 823px-Dinornis1387_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B91684BA17AE0512007C7161 /* 823px-Dinornis1387_TN.jpg */; };
@@ -173,13 +169,13 @@
 		B946226B174387D1007A8A20 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B946226A174387D1007A8A20 /* CoreLocation.framework */; };
 		B946226D174387DE007A8A20 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B946226C174387DE007A8A20 /* MapKit.framework */; };
 		B946228A17439047007A8A20 /* BirdMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B946228917439047007A8A20 /* BirdMapViewController.m */; };
+		B959C50619962BC60015FD31 /* Kaka_on_Branch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B959C50519962BC60015FD31 /* Kaka_on_Branch.jpg */; };
 		B95B943A17C06A6900EBC8E7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B95B943917C06A6900EBC8E7 /* Default.png */; };
 		B961701917B4D53700A6167E /* 0236.png in Resources */ = {isa = PBXBuildFile; fileRef = B961701717B4D53700A6167E /* 0236.png */; };
 		B961701A17B4D53700A6167E /* 0236@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B961701817B4D53700A6167E /* 0236@2x.png */; };
 		B9682477176233640093F493 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9682476176233640093F493 /* CoreData.framework */; };
 		B968247A176234380093F493 /* BirdBrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9682478176234380093F493 /* BirdBrowser.xcdatamodeld */; };
 		B9708E5F17BACBAA00B90254 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9708E5E17BACBAA00B90254 /* BrowserViewController.m */; };
-		B9708E6517BC6F3A00B90254 /* NZBirder.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B9708E6417BC6F3A00B90254 /* NZBirder.sqlite */; };
 		B98227C21772390700A97BD3 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98227C11772390700A97BD3 /* ModelController.m */; };
 		B98227C517723FAA00A97BD3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98227C417723FAA00A97BD3 /* MapViewController.m */; };
 		B98227D81772444100A97BD3 /* MapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = B98227D31772444100A97BD3 /* MapViewAnnotation.m */; };
@@ -191,6 +187,7 @@
 		B98227EB1773B38C00A97BD3 /* Hihi_Stitchbird.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B98227EA1773B38C00A97BD3 /* Hihi_Stitchbird.mp3 */; };
 		B98227EE1773B61000A97BD3 /* 0002.png in Resources */ = {isa = PBXBuildFile; fileRef = B98227EC1773B61000A97BD3 /* 0002.png */; };
 		B98227EF1773B61000A97BD3 /* 0002@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B98227ED1773B61000A97BD3 /* 0002@2x.png */; };
+		B9A5865619F79C20000901A9 /* CaliforniaQuail_SidMosdell.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9A5865519F79C20000901A9 /* CaliforniaQuail_SidMosdell.jpg */; };
 		B9A86A98173FB2C6006908C0 /* bellbird-56.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9A86A97173FB2C6006908C0 /* bellbird-56.mp3 */; };
 		B9ACFDEC17C84AB0002CE932 /* Shining_BronzeCuckoo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9ACFDE317C84AB0002CE932 /* Shining_BronzeCuckoo.mp3 */; };
 		B9ACFDED17C84AB0002CE932 /* Hirundotahitica.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9ACFDE417C84AB0002CE932 /* Hirundotahitica.mp3 */; };
@@ -200,12 +197,112 @@
 		B9ACFDF117C84AB0002CE932 /* commonswikimedia.orgwikiFileWelcome_Swallowjpg800px-Welcome_Swallow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9ACFDE817C84AB0002CE932 /* commonswikimedia.orgwikiFileWelcome_Swallowjpg800px-Welcome_Swallow.jpg */; };
 		B9ACFDF317C84AB0002CE932 /* Carduelis_chloris_AuthorOlivierFromFranceWikiCommons.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9ACFDEA17C84AB0002CE932 /* Carduelis_chloris_AuthorOlivierFromFranceWikiCommons.jpg */; };
 		B9ACFDF417C84AB0002CE932 /* Chrysococcyx_lucidus_JamesNiland_Brisbane_Queensland_Australia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9ACFDEB17C84AB0002CE932 /* Chrysococcyx_lucidus_JamesNiland_Brisbane_Queensland_Australia.jpg */; };
+		B9AE1C9B19723C500081E8CE /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9AE1C9A19723C500081E8CE /* MainStoryboard_iPad.storyboard */; };
+		B9B120981999FC5300CB8F80 /* Kakapo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B120971999FC5300CB8F80 /* Kakapo.jpg */; };
+		B9B120A8199A037C00CB8F80 /* Fantail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1209A199A037C00CB8F80 /* Fantail.jpg */; };
+		B9B120A9199A037C00CB8F80 /* CaspianTern_Steintil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1209B199A037C00CB8F80 /* CaspianTern_Steintil.jpg */; };
+		B9B120AA199A037C00CB8F80 /* NorthIsland_Tomtit_steintil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1209C199A037C00CB8F80 /* NorthIsland_Tomtit_steintil.jpg */; };
+		B9B120AB199A037C00CB8F80 /* WhiteFrontedTern.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1209D199A037C00CB8F80 /* WhiteFrontedTern.jpg */; };
+		B9B120AC199A037C00CB8F80 /* CrestedGrebe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1209E199A037C00CB8F80 /* CrestedGrebe.jpg */; };
+		B9B120AD199A037C00CB8F80 /* WhiteHeron.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1209F199A037C00CB8F80 /* WhiteHeron.jpg */; };
+		B9B120AE199A037C00CB8F80 /* CattleEgret.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B120A0199A037C00CB8F80 /* CattleEgret.jpg */; };
+		B9B120AF199A037C00CB8F80 /* NZFalcon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B120A1199A037C00CB8F80 /* NZFalcon.jpg */; };
+		B9B120B0199A037C00CB8F80 /* Wrybill_Ben.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B120A2199A037C00CB8F80 /* Wrybill_Ben.jpg */; };
+		B9B120B1199A037C00CB8F80 /* Black_billed_gull.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B120A3199A037C00CB8F80 /* Black_billed_gull.jpg */; };
+		B9B120B2199A037C00CB8F80 /* Red_necked_stint.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B120A4199A037C00CB8F80 /* Red_necked_stint.jpg */; };
+		B9B120B3199A037C00CB8F80 /* GreyWarbler.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B120A5199A037C00CB8F80 /* GreyWarbler.jpg */; };
+		B9B120B4199A037C00CB8F80 /* Australasian_Harrier_Hawk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B120A6199A037C00CB8F80 /* Australasian_Harrier_Hawk.jpg */; };
+		B9B120B6199A048700CB8F80 /* WhiteFacedHeron.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B120B5199A048700CB8F80 /* WhiteFacedHeron.jpg */; };
+		B9B120B8199A0C8B00CB8F80 /* RoyalSpoonbill.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B120B7199A0C8B00CB8F80 /* RoyalSpoonbill.jpg */; };
+		B9B120BA199A0D4000CB8F80 /* GreatSpottedKiwi_J_Brew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B120B9199A0D4000CB8F80 /* GreatSpottedKiwi_J_Brew.jpg */; };
+		B9B120BC199A0E3400CB8F80 /* Mallard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B120BB199A0E3400CB8F80 /* Mallard.jpg */; };
+		B9B120BE199A103000CB8F80 /* AustralasianShoveler_digitaltrails.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B120BD199A103000CB8F80 /* AustralasianShoveler_digitaltrails.jpg */; };
+		B9B120C3199A147900CB8F80 /* White-fronted_Terns.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B120BF199A147900CB8F80 /* White-fronted_Terns.jpg */; };
+		B9B120C4199A147900CB8F80 /* BlackFrontedTern_JocelynKinghorn.html in Resources */ = {isa = PBXBuildFile; fileRef = B9B120C0199A147900CB8F80 /* BlackFrontedTern_JocelynKinghorn.html */; };
+		B9B120C5199A147900CB8F80 /* WhiteFronted_Terns_BrianRalphs.html in Resources */ = {isa = PBXBuildFile; fileRef = B9B120C1199A147900CB8F80 /* WhiteFronted_Terns_BrianRalphs.html */; };
+		B9B120C6199A147900CB8F80 /* MaskedLapwing_JamesNiland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B120C2199A147900CB8F80 /* MaskedLapwing_JamesNiland.jpg */; };
+		B9B12CC419B8CA09007503E0 /* Authors.license in Resources */ = {isa = PBXBuildFile; fileRef = B9B12CC319B8CA09007503E0 /* Authors.license */; };
+		B9B1437D199B4AC000908EFB /* NZDotterel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1437B199B4AC000908EFB /* NZDotterel.jpg */; };
+		B9B14380199B4E3000908EFB /* RockPigeon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1437F199B4E3000908EFB /* RockPigeon.jpg */; };
+		B9B14382199B50E900908EFB /* Skylark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B14381199B50E900908EFB /* Skylark.jpg */; };
+		B9B14384199B53F000908EFB /* BullersShearwater.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B14383199B53F000908EFB /* BullersShearwater.jpg */; };
+		B9B14386199B561C00908EFB /* BarTailedGodwit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B14385199B561C00908EFB /* BarTailedGodwit.jpg */; };
+		B9B14388199B59F400908EFB /* NorthIsland_Robin_Duncan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B14387199B59F400908EFB /* NorthIsland_Robin_Duncan.jpg */; };
+		B9B1438A199B5A0500908EFB /* NZPipit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B14389199B5A0500908EFB /* NZPipit.jpg */; };
+		B9B143A4199B624500908EFB /* BarTailedGodwit_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1438B199B624500908EFB /* BarTailedGodwit_TN.jpg */; };
+		B9B143A5199B624500908EFB /* Black_billed_gull_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1438C199B624500908EFB /* Black_billed_gull_TN.jpg */; };
+		B9B143A6199B624500908EFB /* BullersShearwater_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1438D199B624500908EFB /* BullersShearwater_TN.jpg */; };
+		B9B143A7199B624500908EFB /* CaspianTern_Steintil_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1438E199B624500908EFB /* CaspianTern_Steintil_TN.jpg */; };
+		B9B143A8199B624500908EFB /* CattleEgret_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1438F199B624500908EFB /* CattleEgret_TN.jpg */; };
+		B9B143A9199B624500908EFB /* CrestedGrebe_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B14390199B624500908EFB /* CrestedGrebe_TN.jpg */; };
+		B9B143AA199B624500908EFB /* Fantail_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B14391199B624500908EFB /* Fantail_TN.jpg */; };
+		B9B143AB199B624500908EFB /* GreatSpottedKiwi_J_Brew_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B14392199B624500908EFB /* GreatSpottedKiwi_J_Brew_TN.jpg */; };
+		B9B143AC199B624500908EFB /* GreyWarbler_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B14393199B624500908EFB /* GreyWarbler_TN.jpg */; };
+		B9B143AD199B624500908EFB /* Kaka_on_Branch_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B14394199B624500908EFB /* Kaka_on_Branch_TN.jpg */; };
+		B9B143AE199B624500908EFB /* Mallard_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B14395199B624500908EFB /* Mallard_TN.jpg */; };
+		B9B143AF199B624500908EFB /* NorthIsland_Robin_Duncan_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B14396199B624500908EFB /* NorthIsland_Robin_Duncan_TN.jpg */; };
+		B9B143B0199B624500908EFB /* NorthIsland_Tomtit_steintil_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B14397199B624500908EFB /* NorthIsland_Tomtit_steintil_TN.jpg */; };
+		B9B143B1199B624500908EFB /* NZDotterel_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B14398199B624500908EFB /* NZDotterel_TN.jpg */; };
+		B9B143B2199B624500908EFB /* NZFalcon_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B14399199B624500908EFB /* NZFalcon_TN.jpg */; };
+		B9B143B3199B624500908EFB /* NZPipit_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1439A199B624500908EFB /* NZPipit_TN.jpg */; };
+		B9B143B4199B624500908EFB /* Red_necked_stint_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1439B199B624500908EFB /* Red_necked_stint_TN.jpg */; };
+		B9B143B5199B624500908EFB /* RedpollAndyMorffew_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1439C199B624500908EFB /* RedpollAndyMorffew_TN.jpg */; };
+		B9B143B6199B624500908EFB /* RockPigeon_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1439D199B624500908EFB /* RockPigeon_TN.jpg */; };
+		B9B143B7199B624500908EFB /* RoyalSpoonbill_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1439E199B624500908EFB /* RoyalSpoonbill_TN.jpg */; };
+		B9B143B8199B624500908EFB /* Skylark_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B1439F199B624500908EFB /* Skylark_TN.jpg */; };
+		B9B143B9199B624500908EFB /* WhiteFacedHeron_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B143A0199B624500908EFB /* WhiteFacedHeron_TN.jpg */; };
+		B9B143BA199B624500908EFB /* WhiteFrontedTern_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B143A1199B624500908EFB /* WhiteFrontedTern_TN.jpg */; };
+		B9B143BB199B624500908EFB /* WhiteHeron_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B143A2199B624500908EFB /* WhiteHeron_TN.jpg */; };
+		B9B143BC199B624500908EFB /* Wrybill_Ben_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B143A3199B624500908EFB /* Wrybill_Ben_TN.jpg */; };
+		B9B3801C19A171FD00733646 /* Whitehead_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B3801B19A171FD00733646 /* Whitehead_TN.jpg */; };
+		B9B3801E19A173DD00733646 /* Fernbird_BrianRalphs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B3801D19A173DD00733646 /* Fernbird_BrianRalphs.jpg */; };
+		B9B3802319A176D500733646 /* AustralasianShoveler_digitaltrails_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B3801F19A176D500733646 /* AustralasianShoveler_digitaltrails_TN.jpg */; };
+		B9B3802419A176D500733646 /* Fernbird_BrianRalphs_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B3802019A176D500733646 /* Fernbird_BrianRalphs_TN.jpg */; };
+		B9B3802519A176D500733646 /* Kakapo_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B3802119A176D500733646 /* Kakapo_TN.jpg */; };
+		B9B3802619A176D500733646 /* MaskedLapwing_JamesNiland_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B3802219A176D500733646 /* MaskedLapwing_JamesNiland_TN.jpg */; };
+		B9B3802A19A17BD000733646 /* NZBirder_pre28Aug14.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B9B3802919A17BC100733646 /* NZBirder_pre28Aug14.sqlite */; };
+		B9B3B0111998BECA0078BE75 /* RedpollAndyMorffew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B3B0101998BECA0078BE75 /* RedpollAndyMorffew.jpg */; };
+		B9B4B12119C97F3F004E010D /* NorthIslandBrownKiwi_JamesStJohn_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B4B12019C97F3F004E010D /* NorthIslandBrownKiwi_JamesStJohn_TN.jpg */; };
+		B9B4B12319C97F5D004E010D /* NorthIslandBrownKiwi_JamesStJohn_red.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B4B12219C97F5D004E010D /* NorthIslandBrownKiwi_JamesStJohn_red.jpg */; };
+		B9B4B12519C98109004E010D /* LittleSpottedKiwi_Apteryx_owenii_REDUCEDSIZE.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B4B12419C98109004E010D /* LittleSpottedKiwi_Apteryx_owenii_REDUCEDSIZE.jpg */; };
+		B9B4B12C19CA1C4A004E010D /* BlackShag_steintil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B4B12619CA1C4A004E010D /* BlackShag_steintil.jpg */; };
+		B9B4B12D19CA1C4A004E010D /* HouseSparrow_steintil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B4B12719CA1C4A004E010D /* HouseSparrow_steintil.jpg */; };
+		B9B4B12E19CA1C4A004E010D /* LittleBluePenguin_steintil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B4B12819CA1C4A004E010D /* LittleBluePenguin_steintil.jpg */; };
+		B9B4B12F19CA1C4A004E010D /* PiedShag_steintil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B4B12919CA1C4A004E010D /* PiedShag_steintil.jpg */; };
+		B9B4B13019CA1C4A004E010D /* PiedStilt_steintil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B4B12A19CA1C4A004E010D /* PiedStilt_steintil.jpg */; };
+		B9B4B13119CA1C4A004E010D /* Saddleback_Duncan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B4B12B19CA1C4A004E010D /* Saddleback_Duncan.jpg */; };
+		B9B4B13819CA1CB1004E010D /* BlackShag_steintil_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B4B13219CA1CB1004E010D /* BlackShag_steintil_TN.jpg */; };
+		B9B4B13919CA1CB1004E010D /* HouseSparrow_steintil_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B4B13319CA1CB1004E010D /* HouseSparrow_steintil_TN.jpg */; };
+		B9B4B13A19CA1CB1004E010D /* LittleBluePenguin_steintil_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B4B13419CA1CB1004E010D /* LittleBluePenguin_steintil_TN.jpg */; };
+		B9B4B13B19CA1CB1004E010D /* PiedShag_steintil_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B4B13519CA1CB1004E010D /* PiedShag_steintil_TN.jpg */; };
+		B9B4B13C19CA1CB1004E010D /* PiedStilt_steintil_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B4B13619CA1CB1004E010D /* PiedStilt_steintil_TN.jpg */; };
+		B9B4B13D19CA1CB1004E010D /* Saddleback_Duncan_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B4B13719CA1CB1004E010D /* Saddleback_Duncan_TN.jpg */; };
+		B9B8236819B64D9B0055A50A /* CreativeCommonsSA.license in Resources */ = {isa = PBXBuildFile; fileRef = B9B8236719B64D9B0055A50A /* CreativeCommonsSA.license */; };
+		B9B8236A19B64DA30055A50A /* PerlScript_Acknowledgements.pl in Resources */ = {isa = PBXBuildFile; fileRef = B9B8236919B64DA30055A50A /* PerlScript_Acknowledgements.pl */; };
+		B9B85DDF19AC703800FC688C /* NorthernRoyalAlbatross_Ben.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B85DDE19AC703800FC688C /* NorthernRoyalAlbatross_Ben.jpg */; };
+		B9B85DE219AC7C7B00FC688C /* NorthernRoyalAlbatross_Ben2_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B85DE019AC7C7B00FC688C /* NorthernRoyalAlbatross_Ben2_TN.jpg */; };
+		B9B85DE319AC7C7B00FC688C /* NorthernRoyalAlbatross_Ben_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B85DE119AC7C7B00FC688C /* NorthernRoyalAlbatross_Ben_TN.jpg */; };
 		B9B917031744D46600B9916D /* fantail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9B916FD1744D46600B9916D /* fantail.mp3 */; };
 		B9B917041744D46600B9916D /* is_kiwi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9B916FE1744D46600B9916D /* is_kiwi.mp3 */; };
 		B9B917061744D46600B9916D /* kakariki.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9B917001744D46600B9916D /* kakariki.mp3 */; };
 		B9B917081744D46600B9916D /* morepork.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9B917021744D46600B9916D /* morepork.mp3 */; };
 		B9BA7EDF177C3846003DA778 /* Australian-Magpie.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9BA7EDE177C3846003DA778 /* Australian-Magpie.mp3 */; };
 		B9BA7EE51780B671003DA778 /* BirdDetailViewController_CD.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BA7EE41780B671003DA778 /* BirdDetailViewController_CD.m */; };
+		B9BC55FB19A89BAB0007A0B2 /* IASKAppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BC55DD19A89BAB0007A0B2 /* IASKAppSettingsViewController.m */; };
+		B9BC55FC19A89BAB0007A0B2 /* IASKAppSettingsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BC55DF19A89BAB0007A0B2 /* IASKAppSettingsWebViewController.m */; };
+		B9BC55FD19A89BAB0007A0B2 /* IASKSpecifierValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BC55E119A89BAB0007A0B2 /* IASKSpecifierValuesViewController.m */; };
+		B9BC55FE19A89BAB0007A0B2 /* IASKSettingsReader.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BC55E519A89BAB0007A0B2 /* IASKSettingsReader.m */; };
+		B9BC55FF19A89BAB0007A0B2 /* IASKSettingsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BC55E719A89BAB0007A0B2 /* IASKSettingsStore.m */; };
+		B9BC560019A89BAB0007A0B2 /* IASKSettingsStoreFile.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BC55E919A89BAB0007A0B2 /* IASKSettingsStoreFile.m */; };
+		B9BC560119A89BAB0007A0B2 /* IASKSettingsStoreUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BC55EB19A89BAB0007A0B2 /* IASKSettingsStoreUserDefaults.m */; };
+		B9BC560219A89BAB0007A0B2 /* IASKSpecifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BC55ED19A89BAB0007A0B2 /* IASKSpecifier.m */; };
+		B9BC560319A89BAB0007A0B2 /* IASKPSSliderSpecifierViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BC55F019A89BAB0007A0B2 /* IASKPSSliderSpecifierViewCell.m */; };
+		B9BC560419A89BAB0007A0B2 /* IASKPSTextFieldSpecifierViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BC55F219A89BAB0007A0B2 /* IASKPSTextFieldSpecifierViewCell.m */; };
+		B9BC560519A89BAB0007A0B2 /* IASKPSTitleValueSpecifierViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BC55F419A89BAB0007A0B2 /* IASKPSTitleValueSpecifierViewCell.m */; };
+		B9BC560619A89BAB0007A0B2 /* IASKSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BC55F619A89BAB0007A0B2 /* IASKSlider.m */; };
+		B9BC560719A89BAB0007A0B2 /* IASKSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BC55F819A89BAB0007A0B2 /* IASKSwitch.m */; };
+		B9BC560819A89BAB0007A0B2 /* IASKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BC55FA19A89BAB0007A0B2 /* IASKTextField.m */; };
+		B9BC560C19A9D1990007A0B2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B9BC560B19A9D1990007A0B2 /* Settings.bundle */; };
 		B9BE104917FB3E31005BA377 /* NSData+MKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BE103517FB3E31005BA377 /* NSData+MKBase64.m */; };
 		B9BE104A17FB3E31005BA377 /* NSDate+RFC1123.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BE103717FB3E31005BA377 /* NSDate+RFC1123.m */; };
 		B9BE104B17FB3E31005BA377 /* NSDictionary+RequestEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BE103917FB3E31005BA377 /* NSDictionary+RequestEncoding.m */; };
@@ -349,7 +446,6 @@
 		B916839517AE0006007C7161 /* Hihi_Stitchbird1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hihi_Stitchbird1.jpg; sourceTree = "<group>"; };
 		B916839617AE0006007C7161 /* Kingfisher_IMG_6929.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kingfisher_IMG_6929.jpg; sourceTree = "<group>"; };
 		B916839717AE0006007C7161 /* Little_Penguin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Little_Penguin.jpg; sourceTree = "<group>"; };
-		B916839917AE0006007C7161 /* LittleSpottedKiwi_Apteryx_owenii.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LittleSpottedKiwi_Apteryx_owenii.jpg; sourceTree = "<group>"; };
 		B916839A17AE0006007C7161 /* Magpie_Australian_IMG_6747.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Magpie_Australian_IMG_6747.jpg; sourceTree = "<group>"; };
 		B916839B17AE0006007C7161 /* MoreporkMaunga.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MoreporkMaunga.jpg; sourceTree = "<group>"; };
 		B916839C17AE0006007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = New_Zealand_Pigeon_Southstar_02.jpg; sourceTree = "<group>"; };
@@ -366,8 +462,7 @@
 		B91683AB17AE0006007C7161 /* Silvereye_DSC09462.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Silvereye_DSC09462.jpg; sourceTree = "<group>"; };
 		B91683AC17AE0006007C7161 /* SilverEye.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SilverEye.jpg; sourceTree = "<group>"; };
 		B91683AD17AE0006007C7161 /* Sparrow_IMG_6604.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sparrow_IMG_6604.jpg; sourceTree = "<group>"; };
-		B91683AE17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.1001.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SpottedShag_Phalacrocorax_punctatus_AucklandZoo.1001.JPG; sourceTree = "<group>"; };
-		B91683AF17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg; sourceTree = "<group>"; };
+		B91683AE17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg; sourceTree = "<group>"; };
 		B91683B017AE0006007C7161 /* Starling_IMG_6964.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Starling_IMG_6964.jpg; sourceTree = "<group>"; };
 		B91683B117AE0006007C7161 /* Starling1_IMG_6704_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Starling1_IMG_6704_2.jpg; sourceTree = "<group>"; };
 		B91683B217AE0006007C7161 /* Takahe_Maunga.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Takahe_Maunga.jpg; sourceTree = "<group>"; };
@@ -479,6 +574,7 @@
 		B946226C174387DE007A8A20 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B946228817439047007A8A20 /* BirdMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdMapViewController.h; sourceTree = "<group>"; };
 		B946228917439047007A8A20 /* BirdMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdMapViewController.m; sourceTree = "<group>"; };
+		B959C50519962BC60015FD31 /* Kaka_on_Branch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kaka_on_Branch.jpg; sourceTree = "<group>"; };
 		B95B943917C06A6900EBC8E7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B961701717B4D53700A6167E /* 0236.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0236.png; sourceTree = "<group>"; };
 		B961701817B4D53700A6167E /* 0236@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0236@2x.png"; sourceTree = "<group>"; };
@@ -486,7 +582,6 @@
 		B9682479176234380093F493 /* BirdBrowser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BirdBrowser.xcdatamodel; sourceTree = "<group>"; };
 		B9708E5D17BACBAA00B90254 /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
 		B9708E5E17BACBAA00B90254 /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
-		B9708E6417BC6F3A00B90254 /* NZBirder.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = NZBirder.sqlite; path = CarBrowser/NZBirder.sqlite; sourceTree = "<group>"; };
 		B98227C01772390700A97BD3 /* ModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
 		B98227C11772390700A97BD3 /* ModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
 		B98227C317723FAA00A97BD3 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -506,6 +601,7 @@
 		B98227EA1773B38C00A97BD3 /* Hihi_Stitchbird.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hihi_Stitchbird.mp3; sourceTree = "<group>"; };
 		B98227EC1773B61000A97BD3 /* 0002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0002.png; sourceTree = "<group>"; };
 		B98227ED1773B61000A97BD3 /* 0002@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0002@2x.png"; sourceTree = "<group>"; };
+		B9A5865519F79C20000901A9 /* CaliforniaQuail_SidMosdell.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CaliforniaQuail_SidMosdell.jpg; sourceTree = "<group>"; };
 		B9A86A97173FB2C6006908C0 /* bellbird-56.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bellbird-56.mp3"; path = "assets/bellbird/bellbird-56.mp3"; sourceTree = SOURCE_ROOT; };
 		B9ACFDE317C84AB0002CE932 /* Shining_BronzeCuckoo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Shining_BronzeCuckoo.mp3; sourceTree = "<group>"; };
 		B9ACFDE417C84AB0002CE932 /* Hirundotahitica.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hirundotahitica.mp3; sourceTree = "<group>"; };
@@ -515,14 +611,129 @@
 		B9ACFDE817C84AB0002CE932 /* commonswikimedia.orgwikiFileWelcome_Swallowjpg800px-Welcome_Swallow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "commonswikimedia.orgwikiFileWelcome_Swallowjpg800px-Welcome_Swallow.jpg"; sourceTree = "<group>"; };
 		B9ACFDEA17C84AB0002CE932 /* Carduelis_chloris_AuthorOlivierFromFranceWikiCommons.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Carduelis_chloris_AuthorOlivierFromFranceWikiCommons.jpg; sourceTree = "<group>"; };
 		B9ACFDEB17C84AB0002CE932 /* Chrysococcyx_lucidus_JamesNiland_Brisbane_Queensland_Australia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Chrysococcyx_lucidus_JamesNiland_Brisbane_Queensland_Australia.jpg; sourceTree = "<group>"; };
-		B9B916FD1744D46600B9916D /* fantail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = fantail.mp3; path = ../../../../Downloads/fantail.mp3; sourceTree = "<group>"; };
-		B9B916FE1744D46600B9916D /* is_kiwi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = is_kiwi.mp3; path = ../../../../Downloads/is_kiwi.mp3; sourceTree = "<group>"; };
-		B9B916FF1744D46600B9916D /* kakapo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kakapo.mp3; path = ../../../../Downloads/kakapo.mp3; sourceTree = "<group>"; };
-		B9B917001744D46600B9916D /* kakariki.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kakariki.mp3; path = ../../../../Downloads/kakariki.mp3; sourceTree = "<group>"; };
-		B9B917021744D46600B9916D /* morepork.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = morepork.mp3; path = ../../../../Downloads/morepork.mp3; sourceTree = "<group>"; };
+		B9AE1C9A19723C500081E8CE /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		B9AE4E1D19FE1F4B008D6F09 /* NZBirder_12.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = NZBirder_12.sqlite; sourceTree = "<group>"; };
+		B9B120971999FC5300CB8F80 /* Kakapo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kakapo.jpg; sourceTree = "<group>"; };
+		B9B1209A199A037C00CB8F80 /* Fantail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Fantail.jpg; sourceTree = "<group>"; };
+		B9B1209B199A037C00CB8F80 /* CaspianTern_Steintil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CaspianTern_Steintil.jpg; sourceTree = "<group>"; };
+		B9B1209C199A037C00CB8F80 /* NorthIsland_Tomtit_steintil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NorthIsland_Tomtit_steintil.jpg; sourceTree = "<group>"; };
+		B9B1209D199A037C00CB8F80 /* WhiteFrontedTern.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WhiteFrontedTern.jpg; sourceTree = "<group>"; };
+		B9B1209E199A037C00CB8F80 /* CrestedGrebe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CrestedGrebe.jpg; sourceTree = "<group>"; };
+		B9B1209F199A037C00CB8F80 /* WhiteHeron.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WhiteHeron.jpg; sourceTree = "<group>"; };
+		B9B120A0199A037C00CB8F80 /* CattleEgret.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CattleEgret.jpg; sourceTree = "<group>"; };
+		B9B120A1199A037C00CB8F80 /* NZFalcon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NZFalcon.jpg; sourceTree = "<group>"; };
+		B9B120A2199A037C00CB8F80 /* Wrybill_Ben.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wrybill_Ben.jpg; sourceTree = "<group>"; };
+		B9B120A3199A037C00CB8F80 /* Black_billed_gull.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Black_billed_gull.jpg; sourceTree = "<group>"; };
+		B9B120A4199A037C00CB8F80 /* Red_necked_stint.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Red_necked_stint.jpg; sourceTree = "<group>"; };
+		B9B120A5199A037C00CB8F80 /* GreyWarbler.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GreyWarbler.jpg; sourceTree = "<group>"; };
+		B9B120A6199A037C00CB8F80 /* Australasian_Harrier_Hawk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Australasian_Harrier_Hawk.jpg; sourceTree = "<group>"; };
+		B9B120B5199A048700CB8F80 /* WhiteFacedHeron.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WhiteFacedHeron.jpg; sourceTree = "<group>"; };
+		B9B120B7199A0C8B00CB8F80 /* RoyalSpoonbill.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RoyalSpoonbill.jpg; sourceTree = "<group>"; };
+		B9B120B9199A0D4000CB8F80 /* GreatSpottedKiwi_J_Brew.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GreatSpottedKiwi_J_Brew.jpg; sourceTree = "<group>"; };
+		B9B120BB199A0E3400CB8F80 /* Mallard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mallard.jpg; sourceTree = "<group>"; };
+		B9B120BD199A103000CB8F80 /* AustralasianShoveler_digitaltrails.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AustralasianShoveler_digitaltrails.jpg; sourceTree = "<group>"; };
+		B9B120BF199A147900CB8F80 /* White-fronted_Terns.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "White-fronted_Terns.jpg"; sourceTree = "<group>"; };
+		B9B120C0199A147900CB8F80 /* BlackFrontedTern_JocelynKinghorn.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BlackFrontedTern_JocelynKinghorn.html; sourceTree = "<group>"; };
+		B9B120C1199A147900CB8F80 /* WhiteFronted_Terns_BrianRalphs.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = WhiteFronted_Terns_BrianRalphs.html; sourceTree = "<group>"; };
+		B9B120C2199A147900CB8F80 /* MaskedLapwing_JamesNiland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MaskedLapwing_JamesNiland.jpg; sourceTree = "<group>"; };
+		B9B12CC319B8CA09007503E0 /* Authors.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Authors.license; path = CarBrowser/License/Authors.license; sourceTree = "<group>"; };
+		B9B1437B199B4AC000908EFB /* NZDotterel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NZDotterel.jpg; sourceTree = "<group>"; };
+		B9B1437F199B4E3000908EFB /* RockPigeon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RockPigeon.jpg; sourceTree = "<group>"; };
+		B9B14381199B50E900908EFB /* Skylark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Skylark.jpg; sourceTree = "<group>"; };
+		B9B14383199B53F000908EFB /* BullersShearwater.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BullersShearwater.jpg; sourceTree = "<group>"; };
+		B9B14385199B561C00908EFB /* BarTailedGodwit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BarTailedGodwit.jpg; sourceTree = "<group>"; };
+		B9B14387199B59F400908EFB /* NorthIsland_Robin_Duncan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NorthIsland_Robin_Duncan.jpg; sourceTree = "<group>"; };
+		B9B14389199B5A0500908EFB /* NZPipit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NZPipit.jpg; sourceTree = "<group>"; };
+		B9B1438B199B624500908EFB /* BarTailedGodwit_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BarTailedGodwit_TN.jpg; sourceTree = "<group>"; };
+		B9B1438C199B624500908EFB /* Black_billed_gull_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Black_billed_gull_TN.jpg; sourceTree = "<group>"; };
+		B9B1438D199B624500908EFB /* BullersShearwater_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BullersShearwater_TN.jpg; sourceTree = "<group>"; };
+		B9B1438E199B624500908EFB /* CaspianTern_Steintil_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CaspianTern_Steintil_TN.jpg; sourceTree = "<group>"; };
+		B9B1438F199B624500908EFB /* CattleEgret_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CattleEgret_TN.jpg; sourceTree = "<group>"; };
+		B9B14390199B624500908EFB /* CrestedGrebe_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CrestedGrebe_TN.jpg; sourceTree = "<group>"; };
+		B9B14391199B624500908EFB /* Fantail_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Fantail_TN.jpg; sourceTree = "<group>"; };
+		B9B14392199B624500908EFB /* GreatSpottedKiwi_J_Brew_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GreatSpottedKiwi_J_Brew_TN.jpg; sourceTree = "<group>"; };
+		B9B14393199B624500908EFB /* GreyWarbler_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GreyWarbler_TN.jpg; sourceTree = "<group>"; };
+		B9B14394199B624500908EFB /* Kaka_on_Branch_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kaka_on_Branch_TN.jpg; sourceTree = "<group>"; };
+		B9B14395199B624500908EFB /* Mallard_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mallard_TN.jpg; sourceTree = "<group>"; };
+		B9B14396199B624500908EFB /* NorthIsland_Robin_Duncan_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NorthIsland_Robin_Duncan_TN.jpg; sourceTree = "<group>"; };
+		B9B14397199B624500908EFB /* NorthIsland_Tomtit_steintil_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NorthIsland_Tomtit_steintil_TN.jpg; sourceTree = "<group>"; };
+		B9B14398199B624500908EFB /* NZDotterel_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NZDotterel_TN.jpg; sourceTree = "<group>"; };
+		B9B14399199B624500908EFB /* NZFalcon_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NZFalcon_TN.jpg; sourceTree = "<group>"; };
+		B9B1439A199B624500908EFB /* NZPipit_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NZPipit_TN.jpg; sourceTree = "<group>"; };
+		B9B1439B199B624500908EFB /* Red_necked_stint_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Red_necked_stint_TN.jpg; sourceTree = "<group>"; };
+		B9B1439C199B624500908EFB /* RedpollAndyMorffew_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RedpollAndyMorffew_TN.jpg; sourceTree = "<group>"; };
+		B9B1439D199B624500908EFB /* RockPigeon_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RockPigeon_TN.jpg; sourceTree = "<group>"; };
+		B9B1439E199B624500908EFB /* RoyalSpoonbill_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RoyalSpoonbill_TN.jpg; sourceTree = "<group>"; };
+		B9B1439F199B624500908EFB /* Skylark_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Skylark_TN.jpg; sourceTree = "<group>"; };
+		B9B143A0199B624500908EFB /* WhiteFacedHeron_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WhiteFacedHeron_TN.jpg; sourceTree = "<group>"; };
+		B9B143A1199B624500908EFB /* WhiteFrontedTern_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WhiteFrontedTern_TN.jpg; sourceTree = "<group>"; };
+		B9B143A2199B624500908EFB /* WhiteHeron_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WhiteHeron_TN.jpg; sourceTree = "<group>"; };
+		B9B143A3199B624500908EFB /* Wrybill_Ben_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wrybill_Ben_TN.jpg; sourceTree = "<group>"; };
+		B9B3801B19A171FD00733646 /* Whitehead_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Whitehead_TN.jpg; sourceTree = "<group>"; };
+		B9B3801D19A173DD00733646 /* Fernbird_BrianRalphs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Fernbird_BrianRalphs.jpg; sourceTree = "<group>"; };
+		B9B3801F19A176D500733646 /* AustralasianShoveler_digitaltrails_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AustralasianShoveler_digitaltrails_TN.jpg; sourceTree = "<group>"; };
+		B9B3802019A176D500733646 /* Fernbird_BrianRalphs_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Fernbird_BrianRalphs_TN.jpg; sourceTree = "<group>"; };
+		B9B3802119A176D500733646 /* Kakapo_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kakapo_TN.jpg; sourceTree = "<group>"; };
+		B9B3802219A176D500733646 /* MaskedLapwing_JamesNiland_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MaskedLapwing_JamesNiland_TN.jpg; sourceTree = "<group>"; };
+		B9B3802919A17BC100733646 /* NZBirder_pre28Aug14.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = NZBirder_pre28Aug14.sqlite; sourceTree = "<group>"; };
+		B9B3B0101998BECA0078BE75 /* RedpollAndyMorffew.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RedpollAndyMorffew.jpg; sourceTree = "<group>"; };
+		B9B4B12019C97F3F004E010D /* NorthIslandBrownKiwi_JamesStJohn_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NorthIslandBrownKiwi_JamesStJohn_TN.jpg; sourceTree = "<group>"; };
+		B9B4B12219C97F5D004E010D /* NorthIslandBrownKiwi_JamesStJohn_red.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NorthIslandBrownKiwi_JamesStJohn_red.jpg; sourceTree = "<group>"; };
+		B9B4B12419C98109004E010D /* LittleSpottedKiwi_Apteryx_owenii_REDUCEDSIZE.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LittleSpottedKiwi_Apteryx_owenii_REDUCEDSIZE.jpg; sourceTree = "<group>"; };
+		B9B4B12619CA1C4A004E010D /* BlackShag_steintil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlackShag_steintil.jpg; sourceTree = "<group>"; };
+		B9B4B12719CA1C4A004E010D /* HouseSparrow_steintil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HouseSparrow_steintil.jpg; sourceTree = "<group>"; };
+		B9B4B12819CA1C4A004E010D /* LittleBluePenguin_steintil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LittleBluePenguin_steintil.jpg; sourceTree = "<group>"; };
+		B9B4B12919CA1C4A004E010D /* PiedShag_steintil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PiedShag_steintil.jpg; sourceTree = "<group>"; };
+		B9B4B12A19CA1C4A004E010D /* PiedStilt_steintil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PiedStilt_steintil.jpg; sourceTree = "<group>"; };
+		B9B4B12B19CA1C4A004E010D /* Saddleback_Duncan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Saddleback_Duncan.jpg; sourceTree = "<group>"; };
+		B9B4B13219CA1CB1004E010D /* BlackShag_steintil_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlackShag_steintil_TN.jpg; sourceTree = "<group>"; };
+		B9B4B13319CA1CB1004E010D /* HouseSparrow_steintil_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HouseSparrow_steintil_TN.jpg; sourceTree = "<group>"; };
+		B9B4B13419CA1CB1004E010D /* LittleBluePenguin_steintil_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LittleBluePenguin_steintil_TN.jpg; sourceTree = "<group>"; };
+		B9B4B13519CA1CB1004E010D /* PiedShag_steintil_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PiedShag_steintil_TN.jpg; sourceTree = "<group>"; };
+		B9B4B13619CA1CB1004E010D /* PiedStilt_steintil_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PiedStilt_steintil_TN.jpg; sourceTree = "<group>"; };
+		B9B4B13719CA1CB1004E010D /* Saddleback_Duncan_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Saddleback_Duncan_TN.jpg; sourceTree = "<group>"; };
+		B9B8236719B64D9B0055A50A /* CreativeCommonsSA.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CreativeCommonsSA.license; path = CarBrowser/License/CreativeCommonsSA.license; sourceTree = "<group>"; };
+		B9B8236919B64DA30055A50A /* PerlScript_Acknowledgements.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; name = PerlScript_Acknowledgements.pl; path = CarBrowser/License/PerlScript_Acknowledgements.pl; sourceTree = "<group>"; };
+		B9B85DDE19AC703800FC688C /* NorthernRoyalAlbatross_Ben.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NorthernRoyalAlbatross_Ben.jpg; sourceTree = "<group>"; };
+		B9B85DE019AC7C7B00FC688C /* NorthernRoyalAlbatross_Ben2_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NorthernRoyalAlbatross_Ben2_TN.jpg; sourceTree = "<group>"; };
+		B9B85DE119AC7C7B00FC688C /* NorthernRoyalAlbatross_Ben_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = NorthernRoyalAlbatross_Ben_TN.jpg; path = ../NorthernRoyalAlbatross_Ben_TN.jpg; sourceTree = "<group>"; };
+		B9B916FD1744D46600B9916D /* fantail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fantail.mp3; sourceTree = "<group>"; };
+		B9B916FE1744D46600B9916D /* is_kiwi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = is_kiwi.mp3; sourceTree = "<group>"; };
+		B9B917001744D46600B9916D /* kakariki.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kakariki.mp3; path = /Users/txs/Documents/iOS_Dev/localgit_macBird3/CarBrowser/kakariki.mp3; sourceTree = "<absolute>"; };
+		B9B917021744D46600B9916D /* morepork.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = morepork.mp3; sourceTree = "<group>"; };
 		B9BA7EDE177C3846003DA778 /* Australian-Magpie.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Australian-Magpie.mp3"; sourceTree = "<group>"; };
 		B9BA7EE31780B671003DA778 /* BirdDetailViewController_CD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdDetailViewController_CD.h; sourceTree = "<group>"; };
 		B9BA7EE41780B671003DA778 /* BirdDetailViewController_CD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdDetailViewController_CD.m; sourceTree = "<group>"; };
+		B9BC55DC19A89BAB0007A0B2 /* IASKAppSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKAppSettingsViewController.h; sourceTree = "<group>"; };
+		B9BC55DD19A89BAB0007A0B2 /* IASKAppSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKAppSettingsViewController.m; sourceTree = "<group>"; };
+		B9BC55DE19A89BAB0007A0B2 /* IASKAppSettingsWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKAppSettingsWebViewController.h; sourceTree = "<group>"; };
+		B9BC55DF19A89BAB0007A0B2 /* IASKAppSettingsWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKAppSettingsWebViewController.m; sourceTree = "<group>"; };
+		B9BC55E019A89BAB0007A0B2 /* IASKSpecifierValuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSpecifierValuesViewController.h; sourceTree = "<group>"; };
+		B9BC55E119A89BAB0007A0B2 /* IASKSpecifierValuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSpecifierValuesViewController.m; sourceTree = "<group>"; };
+		B9BC55E219A89BAB0007A0B2 /* IASKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKViewController.h; sourceTree = "<group>"; };
+		B9BC55E419A89BAB0007A0B2 /* IASKSettingsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSettingsReader.h; sourceTree = "<group>"; };
+		B9BC55E519A89BAB0007A0B2 /* IASKSettingsReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSettingsReader.m; sourceTree = "<group>"; };
+		B9BC55E619A89BAB0007A0B2 /* IASKSettingsStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSettingsStore.h; sourceTree = "<group>"; };
+		B9BC55E719A89BAB0007A0B2 /* IASKSettingsStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSettingsStore.m; sourceTree = "<group>"; };
+		B9BC55E819A89BAB0007A0B2 /* IASKSettingsStoreFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSettingsStoreFile.h; sourceTree = "<group>"; };
+		B9BC55E919A89BAB0007A0B2 /* IASKSettingsStoreFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSettingsStoreFile.m; sourceTree = "<group>"; };
+		B9BC55EA19A89BAB0007A0B2 /* IASKSettingsStoreUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSettingsStoreUserDefaults.h; sourceTree = "<group>"; };
+		B9BC55EB19A89BAB0007A0B2 /* IASKSettingsStoreUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSettingsStoreUserDefaults.m; sourceTree = "<group>"; };
+		B9BC55EC19A89BAB0007A0B2 /* IASKSpecifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSpecifier.h; sourceTree = "<group>"; };
+		B9BC55ED19A89BAB0007A0B2 /* IASKSpecifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSpecifier.m; sourceTree = "<group>"; };
+		B9BC55EF19A89BAB0007A0B2 /* IASKPSSliderSpecifierViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKPSSliderSpecifierViewCell.h; sourceTree = "<group>"; };
+		B9BC55F019A89BAB0007A0B2 /* IASKPSSliderSpecifierViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKPSSliderSpecifierViewCell.m; sourceTree = "<group>"; };
+		B9BC55F119A89BAB0007A0B2 /* IASKPSTextFieldSpecifierViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKPSTextFieldSpecifierViewCell.h; sourceTree = "<group>"; };
+		B9BC55F219A89BAB0007A0B2 /* IASKPSTextFieldSpecifierViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKPSTextFieldSpecifierViewCell.m; sourceTree = "<group>"; };
+		B9BC55F319A89BAB0007A0B2 /* IASKPSTitleValueSpecifierViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKPSTitleValueSpecifierViewCell.h; sourceTree = "<group>"; };
+		B9BC55F419A89BAB0007A0B2 /* IASKPSTitleValueSpecifierViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKPSTitleValueSpecifierViewCell.m; sourceTree = "<group>"; };
+		B9BC55F519A89BAB0007A0B2 /* IASKSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSlider.h; sourceTree = "<group>"; };
+		B9BC55F619A89BAB0007A0B2 /* IASKSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSlider.m; sourceTree = "<group>"; };
+		B9BC55F719A89BAB0007A0B2 /* IASKSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSwitch.h; sourceTree = "<group>"; };
+		B9BC55F819A89BAB0007A0B2 /* IASKSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSwitch.m; sourceTree = "<group>"; };
+		B9BC55F919A89BAB0007A0B2 /* IASKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKTextField.h; sourceTree = "<group>"; };
+		B9BC55FA19A89BAB0007A0B2 /* IASKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKTextField.m; sourceTree = "<group>"; };
+		B9BC560B19A9D1990007A0B2 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B9BE103417FB3E31005BA377 /* NSData+MKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MKBase64.h"; sourceTree = "<group>"; };
 		B9BE103517FB3E31005BA377 /* NSData+MKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MKBase64.m"; sourceTree = "<group>"; };
 		B9BE103617FB3E31005BA377 /* NSDate+RFC1123.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RFC1123.h"; sourceTree = "<group>"; };
@@ -591,7 +802,7 @@
 		B9D92E431748DEB0001B6D79 /* common_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_bg@2x.png"; sourceTree = "<group>"; };
 		B9D92E441748DEB0001B6D79 /* navbar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_bg.png; sourceTree = "<group>"; };
 		B9D92E451748DEB0001B6D79 /* navbar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_bg@2x.png"; sourceTree = "<group>"; };
-		B9D92E6B174CEEBF001B6D79 /* kereru.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kereru.mp3; path = ../../../../Downloads/kereru.mp3; sourceTree = "<group>"; };
+		B9D92E6B174CEEBF001B6D79 /* kereru.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kereru.mp3; sourceTree = "<group>"; };
 		B9D92E6D174E5650001B6D79 /* 0283.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0283.png; sourceTree = "<group>"; };
 		B9D92E6E174E5651001B6D79 /* 0283@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0283@2x.png"; sourceTree = "<group>"; };
 		B9D92E6F174E5651001B6D79 /* 0284.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0284.png; sourceTree = "<group>"; };
@@ -650,9 +861,12 @@
 		B8E777D516C2F2F400949FEE = {
 			isa = PBXGroup;
 			children = (
+				B9B12CC519B8CA1D007503E0 /* Acknowledgements */,
+				B9B3802919A17BC100733646 /* NZBirder_pre28Aug14.sqlite */,
+				B9AE4E1D19FE1F4B008D6F09 /* NZBirder_12.sqlite */,
+				B9AE1C99197236D10081E8CE /* iPad */,
 				B9BE105617FB49C1005BA377 /* FileUploadEngine.h */,
 				B9BE105717FB49C1005BA377 /* FileUploadEngine.m */,
-				B9708E6417BC6F3A00B90254 /* NZBirder.sqlite */,
 				B8E777E716C2F2F400949FEE /* BirdBrowser */,
 				B8E777E016C2F2F400949FEE /* Frameworks */,
 				B8E777DF16C2F2F400949FEE /* Products */,
@@ -670,6 +884,7 @@
 		B8E777E016C2F2F400949FEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9BC55DA19A89BAB0007A0B2 /* InAppSettingsKit */,
 				B9BE105417FB402F005BA377 /* SystemConfiguration.framework */,
 				B9BE105217FB4020005BA377 /* Security.framework */,
 				B9BE103017FB3E31005BA377 /* MKNetworkKit */,
@@ -704,6 +919,8 @@
 				B8E777F116C2F2F400949FEE /* AppDelegate.m */,
 				B8E7780716C2F43000949FEE /* BirdTableViewCell.h */,
 				B8E7780816C2F43000949FEE /* BirdTableViewCell.m */,
+				B9BC560B19A9D1990007A0B2 /* Settings.bundle */,
+				B9AE1C9A19723C500081E8CE /* MainStoryboard_iPad.storyboard */,
 				B8E777F916C2F2F400949FEE /* MainStoryboard.storyboard */,
 				B8E777E816C2F2F400949FEE /* Supporting Files */,
 			);
@@ -740,6 +957,43 @@
 		B91684B717AE0512007C7161 /* Thumbnails */ = {
 			isa = PBXGroup;
 			children = (
+				B9B4B13219CA1CB1004E010D /* BlackShag_steintil_TN.jpg */,
+				B9B4B13319CA1CB1004E010D /* HouseSparrow_steintil_TN.jpg */,
+				B9B4B13419CA1CB1004E010D /* LittleBluePenguin_steintil_TN.jpg */,
+				B9B4B13519CA1CB1004E010D /* PiedShag_steintil_TN.jpg */,
+				B9B4B13619CA1CB1004E010D /* PiedStilt_steintil_TN.jpg */,
+				B9B4B13719CA1CB1004E010D /* Saddleback_Duncan_TN.jpg */,
+				B9B85DE119AC7C7B00FC688C /* NorthernRoyalAlbatross_Ben_TN.jpg */,
+				B9B3801F19A176D500733646 /* AustralasianShoveler_digitaltrails_TN.jpg */,
+				B9B3802019A176D500733646 /* Fernbird_BrianRalphs_TN.jpg */,
+				B9B3802119A176D500733646 /* Kakapo_TN.jpg */,
+				B9B3802219A176D500733646 /* MaskedLapwing_JamesNiland_TN.jpg */,
+				B9B3801B19A171FD00733646 /* Whitehead_TN.jpg */,
+				B9B1438B199B624500908EFB /* BarTailedGodwit_TN.jpg */,
+				B9B1438C199B624500908EFB /* Black_billed_gull_TN.jpg */,
+				B9B1438D199B624500908EFB /* BullersShearwater_TN.jpg */,
+				B9B1438E199B624500908EFB /* CaspianTern_Steintil_TN.jpg */,
+				B9B1438F199B624500908EFB /* CattleEgret_TN.jpg */,
+				B9B14390199B624500908EFB /* CrestedGrebe_TN.jpg */,
+				B9B14391199B624500908EFB /* Fantail_TN.jpg */,
+				B9B14392199B624500908EFB /* GreatSpottedKiwi_J_Brew_TN.jpg */,
+				B9B14393199B624500908EFB /* GreyWarbler_TN.jpg */,
+				B9B14394199B624500908EFB /* Kaka_on_Branch_TN.jpg */,
+				B9B14395199B624500908EFB /* Mallard_TN.jpg */,
+				B9B14396199B624500908EFB /* NorthIsland_Robin_Duncan_TN.jpg */,
+				B9B14397199B624500908EFB /* NorthIsland_Tomtit_steintil_TN.jpg */,
+				B9B14398199B624500908EFB /* NZDotterel_TN.jpg */,
+				B9B14399199B624500908EFB /* NZFalcon_TN.jpg */,
+				B9B1439A199B624500908EFB /* NZPipit_TN.jpg */,
+				B9B1439B199B624500908EFB /* Red_necked_stint_TN.jpg */,
+				B9B1439C199B624500908EFB /* RedpollAndyMorffew_TN.jpg */,
+				B9B1439D199B624500908EFB /* RockPigeon_TN.jpg */,
+				B9B1439E199B624500908EFB /* RoyalSpoonbill_TN.jpg */,
+				B9B1439F199B624500908EFB /* Skylark_TN.jpg */,
+				B9B143A0199B624500908EFB /* WhiteFacedHeron_TN.jpg */,
+				B9B143A1199B624500908EFB /* WhiteFrontedTern_TN.jpg */,
+				B9B143A2199B624500908EFB /* WhiteHeron_TN.jpg */,
+				B9B143A3199B624500908EFB /* Wrybill_Ben_TN.jpg */,
 				B9ACFDE517C84AB0002CE932 /* Carduelis_chloris_TN.jpg */,
 				B9ACFDE617C84AB0002CE932 /* Chrysococcyx_lucidus_-Brisbane,_Queensland,_Australia_TN.jpg */,
 				B9ACFDE717C84AB0002CE932 /* Welcome_Swallow_TN.jpg */,
@@ -797,15 +1051,42 @@
 		B934A521178CEFE900D3F6F7 /* used */ = {
 			isa = PBXGroup;
 			children = (
+				B91684B717AE0512007C7161 /* Thumbnails */,
+				B9B85DDE19AC703800FC688C /* NorthernRoyalAlbatross_Ben.jpg */,
+				B9B3801D19A173DD00733646 /* Fernbird_BrianRalphs.jpg */,
+				B9B120C2199A147900CB8F80 /* MaskedLapwing_JamesNiland.jpg */,
+				B9B120BD199A103000CB8F80 /* AustralasianShoveler_digitaltrails.jpg */,
+				B9B14389199B5A0500908EFB /* NZPipit.jpg */,
+				B9B14387199B59F400908EFB /* NorthIsland_Robin_Duncan.jpg */,
+				B9B14385199B561C00908EFB /* BarTailedGodwit.jpg */,
+				B9B14383199B53F000908EFB /* BullersShearwater.jpg */,
+				B9B14381199B50E900908EFB /* Skylark.jpg */,
+				B9B1437F199B4E3000908EFB /* RockPigeon.jpg */,
+				B9B1437B199B4AC000908EFB /* NZDotterel.jpg */,
+				B9B120BB199A0E3400CB8F80 /* Mallard.jpg */,
+				B9B120B9199A0D4000CB8F80 /* GreatSpottedKiwi_J_Brew.jpg */,
+				B9B120B7199A0C8B00CB8F80 /* RoyalSpoonbill.jpg */,
+				B9B120A3199A037C00CB8F80 /* Black_billed_gull.jpg */,
+				B9B120A4199A037C00CB8F80 /* Red_necked_stint.jpg */,
+				B9B120A5199A037C00CB8F80 /* GreyWarbler.jpg */,
+				B9B120A2199A037C00CB8F80 /* Wrybill_Ben.jpg */,
+				B9B120A1199A037C00CB8F80 /* NZFalcon.jpg */,
+				B9B120A0199A037C00CB8F80 /* CattleEgret.jpg */,
+				B9B1209E199A037C00CB8F80 /* CrestedGrebe.jpg */,
+				B9B1209F199A037C00CB8F80 /* WhiteHeron.jpg */,
+				B9B1209D199A037C00CB8F80 /* WhiteFrontedTern.jpg */,
+				B9B1209C199A037C00CB8F80 /* NorthIsland_Tomtit_steintil.jpg */,
+				B9B1209B199A037C00CB8F80 /* CaspianTern_Steintil.jpg */,
+				B9B120B5199A048700CB8F80 /* WhiteFacedHeron.jpg */,
+				B9B1209A199A037C00CB8F80 /* Fantail.jpg */,
+				B9B3B0101998BECA0078BE75 /* RedpollAndyMorffew.jpg */,
+				B959C50519962BC60015FD31 /* Kaka_on_Branch.jpg */,
 				B9ACFDE817C84AB0002CE932 /* commonswikimedia.orgwikiFileWelcome_Swallowjpg800px-Welcome_Swallow.jpg */,
 				B9ACFDEA17C84AB0002CE932 /* Carduelis_chloris_AuthorOlivierFromFranceWikiCommons.jpg */,
 				B9ACFDEB17C84AB0002CE932 /* Chrysococcyx_lucidus_JamesNiland_Brisbane_Queensland_Australia.jpg */,
-				B91684B717AE0512007C7161 /* Thumbnails */,
 				B91683F617AE007F007C7161 /* 800px-Nestor_notabilis_-Fiordland_National_Park-8a.jpg */,
 				B909A9BA17AE45C800B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg */,
 				B91683F717AE007F007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02.jpg */,
-				B91683F817AE007F007C7161 /* Grey_Fantail.jpg */,
-				B91683F917AE007F007C7161 /* GreyWarbler_Gerygone1888.jpg */,
 				B91683FA17AE007F007C7161 /* MoreporkMaunga.jpg */,
 				B91683FB17AE007F007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg */,
 				B916837E17AE0006007C7161 /* 685px-Drozd_zpevny.jpg */,
@@ -828,9 +1109,9 @@
 				B916839217AE0006007C7161 /* Goldhammer_IMG_6809.jpg */,
 				B916839417AE0006007C7161 /* harrierHawk.jpg */,
 				B916839517AE0006007C7161 /* Hihi_Stitchbird1.jpg */,
+				B9B120971999FC5300CB8F80 /* Kakapo.jpg */,
 				B916839617AE0006007C7161 /* Kingfisher_IMG_6929.jpg */,
 				B916839717AE0006007C7161 /* Little_Penguin.jpg */,
-				B916839917AE0006007C7161 /* LittleSpottedKiwi_Apteryx_owenii.jpg */,
 				B916839A17AE0006007C7161 /* Magpie_Australian_IMG_6747.jpg */,
 				B916839B17AE0006007C7161 /* MoreporkMaunga.jpg */,
 				B916839C17AE0006007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg */,
@@ -847,8 +1128,7 @@
 				B91683AB17AE0006007C7161 /* Silvereye_DSC09462.jpg */,
 				B91683AC17AE0006007C7161 /* SilverEye.jpg */,
 				B91683AD17AE0006007C7161 /* Sparrow_IMG_6604.jpg */,
-				B91683AE17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.1001.JPG */,
-				B91683AF17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg */,
+				B91683AE17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg */,
 				B91683B017AE0006007C7161 /* Starling_IMG_6964.jpg */,
 				B91683B117AE0006007C7161 /* Starling1_IMG_6704_2.jpg */,
 				B91683B217AE0006007C7161 /* Takahe_Maunga.jpg */,
@@ -905,6 +1185,7 @@
 				B943EDC01738DC9E007DB011 /* silvereye-song-22sy.mp3 */,
 				B9B916FD1744D46600B9916D /* fantail.mp3 */,
 				B98227EA1773B38C00A97BD3 /* Hihi_Stitchbird.mp3 */,
+				B94622571742C67C007A8A20 /* kaka.mp3 */,
 			);
 			name = used;
 			sourceTree = "<group>";
@@ -926,6 +1207,83 @@
 				B9FEE0DD178A838900768240 /* 0090@2x.png */,
 			);
 			name = used;
+			sourceTree = "<group>";
+		};
+		B9AE1C99197236D10081E8CE /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		B9B12CC519B8CA1D007503E0 /* Acknowledgements */ = {
+			isa = PBXGroup;
+			children = (
+				B9B8236919B64DA30055A50A /* PerlScript_Acknowledgements.pl */,
+				B9B8236719B64D9B0055A50A /* CreativeCommonsSA.license */,
+				B9B12CC319B8CA09007503E0 /* Authors.license */,
+			);
+			name = Acknowledgements;
+			sourceTree = "<group>";
+		};
+		B9BC55DA19A89BAB0007A0B2 /* InAppSettingsKit */ = {
+			isa = PBXGroup;
+			children = (
+				B9BC55DB19A89BAB0007A0B2 /* Controllers */,
+				B9BC55E319A89BAB0007A0B2 /* Models */,
+				B9BC55EE19A89BAB0007A0B2 /* Views */,
+			);
+			path = InAppSettingsKit;
+			sourceTree = "<group>";
+		};
+		B9BC55DB19A89BAB0007A0B2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B9BC55DC19A89BAB0007A0B2 /* IASKAppSettingsViewController.h */,
+				B9BC55DD19A89BAB0007A0B2 /* IASKAppSettingsViewController.m */,
+				B9BC55DE19A89BAB0007A0B2 /* IASKAppSettingsWebViewController.h */,
+				B9BC55DF19A89BAB0007A0B2 /* IASKAppSettingsWebViewController.m */,
+				B9BC55E019A89BAB0007A0B2 /* IASKSpecifierValuesViewController.h */,
+				B9BC55E119A89BAB0007A0B2 /* IASKSpecifierValuesViewController.m */,
+				B9BC55E219A89BAB0007A0B2 /* IASKViewController.h */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B9BC55E319A89BAB0007A0B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9BC55E419A89BAB0007A0B2 /* IASKSettingsReader.h */,
+				B9BC55E519A89BAB0007A0B2 /* IASKSettingsReader.m */,
+				B9BC55E619A89BAB0007A0B2 /* IASKSettingsStore.h */,
+				B9BC55E719A89BAB0007A0B2 /* IASKSettingsStore.m */,
+				B9BC55E819A89BAB0007A0B2 /* IASKSettingsStoreFile.h */,
+				B9BC55E919A89BAB0007A0B2 /* IASKSettingsStoreFile.m */,
+				B9BC55EA19A89BAB0007A0B2 /* IASKSettingsStoreUserDefaults.h */,
+				B9BC55EB19A89BAB0007A0B2 /* IASKSettingsStoreUserDefaults.m */,
+				B9BC55EC19A89BAB0007A0B2 /* IASKSpecifier.h */,
+				B9BC55ED19A89BAB0007A0B2 /* IASKSpecifier.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B9BC55EE19A89BAB0007A0B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9BC55EF19A89BAB0007A0B2 /* IASKPSSliderSpecifierViewCell.h */,
+				B9BC55F019A89BAB0007A0B2 /* IASKPSSliderSpecifierViewCell.m */,
+				B9BC55F119A89BAB0007A0B2 /* IASKPSTextFieldSpecifierViewCell.h */,
+				B9BC55F219A89BAB0007A0B2 /* IASKPSTextFieldSpecifierViewCell.m */,
+				B9BC55F319A89BAB0007A0B2 /* IASKPSTitleValueSpecifierViewCell.h */,
+				B9BC55F419A89BAB0007A0B2 /* IASKPSTitleValueSpecifierViewCell.m */,
+				B9BC55F519A89BAB0007A0B2 /* IASKSlider.h */,
+				B9BC55F619A89BAB0007A0B2 /* IASKSlider.m */,
+				B9BC55F719A89BAB0007A0B2 /* IASKSwitch.h */,
+				B9BC55F819A89BAB0007A0B2 /* IASKSwitch.m */,
+				B9BC55F919A89BAB0007A0B2 /* IASKTextField.h */,
+				B9BC55FA19A89BAB0007A0B2 /* IASKTextField.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B9BE103017FB3E31005BA377 /* MKNetworkKit */ = {
@@ -1027,8 +1385,6 @@
 			children = (
 				B9BED11F1797D9E600E6FE0E /* SHAGPhalacrocorax atriceps atriceps a_Puerto de Comodoro Rivadavia_Chubut_23OCT2010 0843_Bernabe Lopez-Lanus.mp3 */,
 				B934A522178CEFF300D3F6F7 /* used */,
-				B9B916FF1744D46600B9916D /* kakapo.mp3 */,
-				B94622571742C67C007A8A20 /* kaka.mp3 */,
 			);
 			name = Soundfiles;
 			sourceTree = "<group>";
@@ -1036,6 +1392,23 @@
 		B9DF1E5B1776268900F5DA74 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B9A5865519F79C20000901A9 /* CaliforniaQuail_SidMosdell.jpg */,
+				B9B4B12619CA1C4A004E010D /* BlackShag_steintil.jpg */,
+				B9B4B12719CA1C4A004E010D /* HouseSparrow_steintil.jpg */,
+				B9B4B12819CA1C4A004E010D /* LittleBluePenguin_steintil.jpg */,
+				B9B4B12919CA1C4A004E010D /* PiedShag_steintil.jpg */,
+				B9B4B12A19CA1C4A004E010D /* PiedStilt_steintil.jpg */,
+				B9B4B12B19CA1C4A004E010D /* Saddleback_Duncan.jpg */,
+				B9B4B12419C98109004E010D /* LittleSpottedKiwi_Apteryx_owenii_REDUCEDSIZE.jpg */,
+				B9B4B12219C97F5D004E010D /* NorthIslandBrownKiwi_JamesStJohn_red.jpg */,
+				B9B4B12019C97F3F004E010D /* NorthIslandBrownKiwi_JamesStJohn_TN.jpg */,
+				B9B120BF199A147900CB8F80 /* White-fronted_Terns.jpg */,
+				B9B120C0199A147900CB8F80 /* BlackFrontedTern_JocelynKinghorn.html */,
+				B9B85DE019AC7C7B00FC688C /* NorthernRoyalAlbatross_Ben2_TN.jpg */,
+				B9B120C1199A147900CB8F80 /* WhiteFronted_Terns_BrianRalphs.html */,
+				B91683F917AE007F007C7161 /* GreyWarbler_Gerygone1888.jpg */,
+				B91683F817AE007F007C7161 /* Grey_Fantail.jpg */,
+				B9B120A6199A037C00CB8F80 /* Australasian_Harrier_Hawk.jpg */,
 				B934A521178CEFE900D3F6F7 /* used */,
 			);
 			name = Images;
@@ -1141,8 +1514,13 @@
 		B8E777D616C2F2F400949FEE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Acme;
+				TargetAttributes = {
+					B8E777DD16C2F2F400949FEE = {
+						DevelopmentTeam = ZXHS3LX8E6;
+					};
+				};
 			};
 			buildConfigurationList = B8E777D916C2F2F400949FEE /* Build configuration list for PBXProject "BirdBrowser" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1170,36 +1548,51 @@
 				B8E777F816C2F2F400949FEE /* Default-568h@2x.png in Resources */,
 				B8E777FB16C2F2F400949FEE /* MainStoryboard.storyboard in Resources */,
 				B943EDC11738DC9E007DB011 /* silvereye-song-22sy.mp3 in Resources */,
+				B9B4B12519C98109004E010D /* LittleSpottedKiwi_Apteryx_owenii_REDUCEDSIZE.jpg in Resources */,
 				B9A86A98173FB2C6006908C0 /* bellbird-56.mp3 in Resources */,
 				B9461D9017421910007A8A20 /* 0043.png in Resources */,
 				B9461D9117421910007A8A20 /* 0043@2x.png in Resources */,
 				B9461D9617421B12007A8A20 /* 0063.png in Resources */,
 				B9461D9717421B12007A8A20 /* 0063@2x.png in Resources */,
 				B9461D9817421B12007A8A20 /* 0300.png in Resources */,
+				B9B4B13119CA1C4A004E010D /* Saddleback_Duncan.jpg in Resources */,
 				B9461D9917421B12007A8A20 /* 0300@2x.png in Resources */,
 				B946225217421BBF007A8A20 /* 0209.png in Resources */,
+				B9B120C5199A147900CB8F80 /* WhiteFronted_Terns_BrianRalphs.html in Resources */,
+				B9B8236819B64D9B0055A50A /* CreativeCommonsSA.license in Resources */,
 				B946225317421BBF007A8A20 /* 0209@2x.png in Resources */,
+				B9B4B12C19CA1C4A004E010D /* BlackShag_steintil.jpg in Resources */,
 				B946225417421BBF007A8A20 /* 0269.png in Resources */,
 				B946225517421BBF007A8A20 /* 0269@2x.png in Resources */,
 				B94622661743221A007A8A20 /* 0266.png in Resources */,
 				B94622671743221A007A8A20 /* 0266@2x.png in Resources */,
+				B9B143AB199B624500908EFB /* GreatSpottedKiwi_J_Brew_TN.jpg in Resources */,
+				B9B120B4199A037C00CB8F80 /* Australasian_Harrier_Hawk.jpg in Resources */,
 				B94622681743221A007A8A20 /* 0280.png in Resources */,
 				B94622691743221A007A8A20 /* 0280@2x.png in Resources */,
+				B959C50619962BC60015FD31 /* Kaka_on_Branch.jpg in Resources */,
 				B9B917031744D46600B9916D /* fantail.mp3 in Resources */,
+				B9A5865619F79C20000901A9 /* CaliforniaQuail_SidMosdell.jpg in Resources */,
 				B9B917041744D46600B9916D /* is_kiwi.mp3 in Resources */,
 				B9B917061744D46600B9916D /* kakariki.mp3 in Resources */,
 				B9B917081744D46600B9916D /* morepork.mp3 in Resources */,
+				B9B120BE199A103000CB8F80 /* AustralasianShoveler_digitaltrails.jpg in Resources */,
+				B9B143B2199B624500908EFB /* NZFalcon_TN.jpg in Resources */,
 				B9D92E461748DEB0001B6D79 /* button_back.png in Resources */,
 				B9D92E471748DEB0001B6D79 /* button_normal.png in Resources */,
+				B9B14386199B561C00908EFB /* BarTailedGodwit.jpg in Resources */,
 				B9D92E481748DEB0001B6D79 /* cell_bottom.png in Resources */,
+				B9B4B12D19CA1C4A004E010D /* HouseSparrow_steintil.jpg in Resources */,
 				B9D92E491748DEB0001B6D79 /* cell_bottom@2x.png in Resources */,
 				B9D92E4A1748DEB0001B6D79 /* cell_middle.png in Resources */,
 				B9D92E4B1748DEB0001B6D79 /* cell_middle@2x.png in Resources */,
 				B9D92E4C1748DEB0001B6D79 /* cell_top_tile.png in Resources */,
 				B9D92E4D1748DEB0001B6D79 /* cell_top.png in Resources */,
+				B9B8236A19B64DA30055A50A /* PerlScript_Acknowledgements.pl in Resources */,
 				B9D92E4E1748DEB0001B6D79 /* cell_top@2x.png in Resources */,
 				B9D92E4F1748DEB0001B6D79 /* common_bg.png in Resources */,
 				B9D92E501748DEB0001B6D79 /* common_bg@2x.png in Resources */,
+				B9AE1C9B19723C500081E8CE /* MainStoryboard_iPad.storyboard in Resources */,
 				B9D92E511748DEB0001B6D79 /* navbar_bg.png in Resources */,
 				B9D92E521748DEB0001B6D79 /* navbar_bg@2x.png in Resources */,
 				B9D92E6C174CEEC0001B6D79 /* kereru.mp3 in Resources */,
@@ -1210,27 +1603,36 @@
 				B9D92E79174E5717001B6D79 /* 0263.png in Resources */,
 				B9D92E7A174E5717001B6D79 /* 0263@2x.png in Resources */,
 				B9D92E7B174E5717001B6D79 /* 0264.png in Resources */,
+				B9B3801E19A173DD00733646 /* Fernbird_BrianRalphs.jpg in Resources */,
 				B9D92E7C174E5717001B6D79 /* 0264@2x.png in Resources */,
+				B9B4B12319C97F5D004E010D /* NorthIslandBrownKiwi_JamesStJohn_red.jpg in Resources */,
 				B98227EB1773B38C00A97BD3 /* Hihi_Stitchbird.mp3 in Resources */,
+				B9B143A7199B624500908EFB /* CaspianTern_Steintil_TN.jpg in Resources */,
+				B9B120AA199A037C00CB8F80 /* NorthIsland_Tomtit_steintil.jpg in Resources */,
 				B98227EE1773B61000A97BD3 /* 0002.png in Resources */,
 				B98227EF1773B61000A97BD3 /* 0002@2x.png in Resources */,
 				B9DF1E4A1775AB8D00F5DA74 /* kea2.mp3 in Resources */,
+				B9B143AF199B624500908EFB /* NorthIsland_Robin_Duncan_TN.jpg in Resources */,
 				B9DF1E4B1775AB8D00F5DA74 /* tui2.mp3 in Resources */,
 				B9DF1E4D1775AD0000F5DA74 /* blackbird.mp3 in Resources */,
 				B9DF1E4F1775AEF900F5DA74 /* Rifleman.mp3 in Resources */,
 				B9DF1E57177619DA00F5DA74 /* Default@2x.png in Resources */,
+				B9B14388199B59F400908EFB /* NorthIsland_Robin_Duncan.jpg in Resources */,
 				B9BA7EDF177C3846003DA778 /* Australian-Magpie.mp3 in Resources */,
 				B9FEE0E0178A838A00768240 /* 0038.png in Resources */,
 				B9FEE0E1178A838A00768240 /* 0038@2x.png in Resources */,
 				B9FEE0E2178A838A00768240 /* 0065.png in Resources */,
+				B9B120AF199A037C00CB8F80 /* NZFalcon.jpg in Resources */,
 				B9FEE0E3178A838A00768240 /* 0065@2x.png in Resources */,
 				B9FEE0E4178A838A00768240 /* 0090.png in Resources */,
 				B9FEE0E5178A838A00768240 /* 0090@2x.png in Resources */,
+				B9B4B13D19CA1CB1004E010D /* Saddleback_Duncan_TN.jpg in Resources */,
 				B9FEE0E6178A838A00768240 /* 0207.png in Resources */,
 				B9FEE0E7178A838A00768240 /* 0207@2x.png in Resources */,
 				B934A5AD1795DD8000D3F6F7 /* Black_Swan_20110325_XC74379.mp3 in Resources */,
 				B934A5AE1795DD8000D3F6F7 /* Little-PenguineEudyptilaMinor_XC98203.mp3 in Resources */,
 				B934A5AF1795DD8000D3F6F7 /* Weka_Song.mp3 in Resources */,
+				B9B120B3199A037C00CB8F80 /* GreyWarbler.jpg in Resources */,
 				B934A5B01795DD8000D3F6F7 /* Purple_Swamphen_Tiritiri_Matangi_Island.mp3 in Resources */,
 				B934A5B11795DD8000D3F6F7 /* Sparrow_XC112666-Pasdom_Sohar_27dec2009.mp3 in Resources */,
 				B934A5B21795DD8000D3F6F7 /* Singdrossel_1753.mp3 in Resources */,
@@ -1238,6 +1640,7 @@
 				B9BED1231797D9E600E6FE0E /* greypeacockpheasantbarkingcallthaiFarrow.mp3 in Resources */,
 				B9BED1251797D9E600E6FE0E /* SHAG_Phalacrocorax_magellanicus.mp3 in Resources */,
 				B9BED1261797D9E600E6FE0E /* SHAGAuklandIs_FL Enderby26Nov2000.mp3 in Resources */,
+				B9B143A6199B624500908EFB /* BullersShearwater_TN.jpg in Resources */,
 				B9BED1271797D9E600E6FE0E /* rosellas.mp3 in Resources */,
 				B9BED1291797DE6D00E6FE0E /* PiedStilt_WhhSti-20090712_083000.mp3 in Resources */,
 				B9BED13E17993C4200E6FE0E /* home_selected.png in Resources */,
@@ -1247,16 +1650,21 @@
 				B9BED14217993C4200E6FE0E /* maps_selected.png in Resources */,
 				B9BED14317993C4200E6FE0E /* maps_selected@2x.png in Resources */,
 				B9BED14417993C4200E6FE0E /* maps.png in Resources */,
+				B9B3802619A176D500733646 /* MaskedLapwing_JamesNiland_TN.jpg in Resources */,
 				B9BED14517993C4200E6FE0E /* maps@2x.png in Resources */,
 				B9BED14817993C4200E6FE0E /* myplan.png in Resources */,
 				B9BED14917993C4200E6FE0E /* myplan@2x.png in Resources */,
 				B9BED14A17993C4200E6FE0E /* settings_selected.png in Resources */,
+				B9B143A4199B624500908EFB /* BarTailedGodwit_TN.jpg in Resources */,
 				B9BED14B17993C4200E6FE0E /* settings_selected@2x.png in Resources */,
+				B9B120BC199A0E3400CB8F80 /* Mallard.jpg in Resources */,
 				B9BED14C17993C4200E6FE0E /* settings.png in Resources */,
+				B9B120A9199A037C00CB8F80 /* CaspianTern_Steintil.jpg in Resources */,
 				B9BED14D17993C4200E6FE0E /* settings@2x.png in Resources */,
 				B9BED14E17993C4200E6FE0E /* tabbar_selected.png in Resources */,
 				B9BED14F17993C4200E6FE0E /* tabbar_selected@2x.png in Resources */,
 				B9BED15017993C4200E6FE0E /* tabbar.png in Resources */,
+				B9B120B0199A037C00CB8F80 /* Wrybill_Ben.jpg in Resources */,
 				B9BED15117993C4200E6FE0E /* tabbar@2x.png in Resources */,
 				B9CDE3A617A4F56200661AF9 /* 0088.png in Resources */,
 				B9CDE3A717A4F56200661AF9 /* 0088@2x.png in Resources */,
@@ -1267,8 +1675,13 @@
 				B91682F817A8CE99007C7161 /* tomtit.mp3 in Resources */,
 				B91682F917A8CE99007C7161 /* gannet.mp3 in Resources */,
 				B91682FA17A8CE99007C7161 /* oystercatcher.mp3 in Resources */,
+				B9B120AC199A037C00CB8F80 /* CrestedGrebe.jpg in Resources */,
 				B91682FB17A8CE99007C7161 /* blackbackedgull.mp3 in Resources */,
+				B9B14384199B53F000908EFB /* BullersShearwater.jpg in Resources */,
+				B9B4B13C19CA1CB1004E010D /* PiedStilt_steintil_TN.jpg in Resources */,
 				B91682FC17A8CE99007C7161 /* redbilledgull.mp3 in Resources */,
+				B9B120B1199A037C00CB8F80 /* Black_billed_gull.jpg in Resources */,
+				B9B143AC199B624500908EFB /* GreyWarbler_TN.jpg in Resources */,
 				B91682FD17A8CE99007C7161 /* SHOREPLOVER.mp3 in Resources */,
 				B916830717A99355007C7161 /* HawkSperber_Accnis.mp3 in Resources */,
 				B916830817A99355007C7161 /* goldammer.mp3 in Resources */,
@@ -1281,16 +1694,22 @@
 				B91683BB17AE0006007C7161 /* 800px-Charadrius_bicinctus_breeding_-_Ralphs_Bay.jpg in Resources */,
 				B91683BC17AE0006007C7161 /* 800px-Tui_10.jpg in Resources */,
 				B91683BD17AE0006007C7161 /* 823px-Dinornis1387.jpg in Resources */,
+				B9B143B3199B624500908EFB /* NZPipit_TN.jpg in Resources */,
+				B9B120B2199A037C00CB8F80 /* Red_necked_stint.jpg in Resources */,
 				B91683BE17AE0006007C7161 /* 1008px-G_tibicen_dorsalis_gnangarra.jpg in Resources */,
 				B91683C017AE0006007C7161 /* Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water.jpg in Resources */,
 				B91683C117AE0006007C7161 /* Anthornis_melanura_New_Zealand_8.jpg in Resources */,
 				B91683C217AE0006007C7161 /* Blackbird.jpg in Resources */,
 				B91683C317AE0006007C7161 /* BlackSwanCygnus_atratus.jpg in Resources */,
+				B9B120BA199A0D4000CB8F80 /* GreatSpottedKiwi_J_Brew.jpg in Resources */,
 				B91683C417AE0006007C7161 /* BlackWingGull_IMG_6659.jpg in Resources */,
+				B9B120A8199A037C00CB8F80 /* Fantail.jpg in Resources */,
 				B91683C517AE0006007C7161 /* Chaffinch_2.jpg in Resources */,
 				B91683C617AE0006007C7161 /* Charadrius_bicinctus_breeding_Ralphs_Bay.jpg in Resources */,
+				B9B4B12E19CA1C4A004E010D /* LittleBluePenguin_steintil.jpg in Resources */,
 				B91683C717AE0006007C7161 /* Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8.jpg in Resources */,
 				B91683C917AE0006007C7161 /* DSC09462.JPG in Resources */,
+				B9B4B12119C97F3F004E010D /* NorthIslandBrownKiwi_JamesStJohn_TN.jpg in Resources */,
 				B91683CA17AE0006007C7161 /* Dunnock_IMG_7140.jpg in Resources */,
 				B91683CB17AE0006007C7161 /* Gannet_IMG_6624.jpg in Resources */,
 				B91683CD17AE0006007C7161 /* Goldfinch_IMG_6721.jpg in Resources */,
@@ -1299,43 +1718,63 @@
 				B91683D117AE0006007C7161 /* Hihi_Stitchbird1.jpg in Resources */,
 				B91683D217AE0006007C7161 /* Kingfisher_IMG_6929.jpg in Resources */,
 				B91683D317AE0006007C7161 /* Little_Penguin.jpg in Resources */,
-				B91683D517AE0006007C7161 /* LittleSpottedKiwi_Apteryx_owenii.jpg in Resources */,
+				B9B143B0199B624500908EFB /* NorthIsland_Tomtit_steintil_TN.jpg in Resources */,
 				B91683D617AE0006007C7161 /* Magpie_Australian_IMG_6747.jpg in Resources */,
 				B91683D717AE0006007C7161 /* MoreporkMaunga.jpg in Resources */,
 				B91683D817AE0006007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg in Resources */,
 				B91683DA17AE0006007C7161 /* NZKingfisher_Kotare_IMG_6861.jpg in Resources */,
+				B9B143AA199B624500908EFB /* Fantail_TN.jpg in Resources */,
 				B91683DB17AE0006007C7161 /* ParadiseDuck.jpg in Resources */,
+				B9B85DE319AC7C7B00FC688C /* NorthernRoyalAlbatross_Ben_TN.jpg in Resources */,
+				B9B143B7199B624500908EFB /* RoyalSpoonbill_TN.jpg in Resources */,
+				B9B3802419A176D500733646 /* Fernbird_BrianRalphs_TN.jpg in Resources */,
 				B91683DD17AE0006007C7161 /* Peacock3.jpg in Resources */,
 				B91683DE17AE0006007C7161 /* Pheasant.jpg in Resources */,
 				B91683DF17AE0006007C7161 /* Pukeko_Porphyrio_porphyrio.jpg in Resources */,
 				B91683E017AE0006007C7161 /* RedBilledGull_IMG_6599.jpg in Resources */,
 				B91683E117AE0006007C7161 /* Rifleman_Acanthisitta_chloris.jpg in Resources */,
+				B9B143B8199B624500908EFB /* Skylark_TN.jpg in Resources */,
 				B91683E217AE0006007C7161 /* RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c.jpg in Resources */,
+				B9B1437D199B4AC000908EFB /* NZDotterel.jpg in Resources */,
 				B91683E417AE0006007C7161 /* Shag_IMG_7093.jpg in Resources */,
+				B9B143BA199B624500908EFB /* WhiteFrontedTern_TN.jpg in Resources */,
+				B9B120981999FC5300CB8F80 /* Kakapo.jpg in Resources */,
 				B91683E617AE0006007C7161 /* SI_Tomtit_male2.jpg in Resources */,
 				B91683E717AE0006007C7161 /* Silvereye_DSC09462.jpg in Resources */,
 				B91683E817AE0006007C7161 /* SilverEye.jpg in Resources */,
+				B9B143A8199B624500908EFB /* CattleEgret_TN.jpg in Resources */,
 				B91683E917AE0006007C7161 /* Sparrow_IMG_6604.jpg in Resources */,
-				B91683EA17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.1001.JPG in Resources */,
-				B91683EB17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg in Resources */,
+				B91683EA17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg in Resources */,
 				B91683EC17AE0006007C7161 /* Starling_IMG_6964.jpg in Resources */,
 				B91683EE17AE0006007C7161 /* Takahe_Maunga.jpg in Resources */,
 				B91683EF17AE0006007C7161 /* Thrush_song_06-03_SCOT.jpg in Resources */,
+				B9B4B12F19CA1C4A004E010D /* PiedShag_steintil.jpg in Resources */,
+				B9B143B5199B624500908EFB /* RedpollAndyMorffew_TN.jpg in Resources */,
+				B9B143B4199B624500908EFB /* Red_necked_stint_TN.jpg in Resources */,
+				B9B120C3199A147900CB8F80 /* White-fronted_Terns.jpg in Resources */,
 				B91683F017AE0006007C7161 /* Tomtit2.jpg in Resources */,
+				B9B143BC199B624500908EFB /* Wrybill_Ben_TN.jpg in Resources */,
 				B91683F217AE0006007C7161 /* Tui_on_flax.jpg in Resources */,
 				B91683F317AE0006007C7161 /* Watvogel_IMG_6674.jpg in Resources */,
 				B91683F417AE0006007C7161 /* WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch.jpg in Resources */,
 				B91683F517AE0006007C7161 /* Yellowhammer_IMG_7001.jpg in Resources */,
+				B9B143B6199B624500908EFB /* RockPigeon_TN.jpg in Resources */,
 				B91683FC17AE007F007C7161 /* 800px-Nestor_notabilis_-Fiordland_National_Park-8a.jpg in Resources */,
 				B91683FD17AE007F007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02.jpg in Resources */,
 				B91683FE17AE007F007C7161 /* Grey_Fantail.jpg in Resources */,
 				B91683FF17AE007F007C7161 /* GreyWarbler_Gerygone1888.jpg in Resources */,
-				B916840017AE007F007C7161 /* MoreporkMaunga.jpg in Resources */,
-				B916840117AE007F007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg in Resources */,
+				B9B12CC419B8CA09007503E0 /* Authors.license in Resources */,
+				B9B3802A19A17BD000733646 /* NZBirder_pre28Aug14.sqlite in Resources */,
+				B9B120B8199A0C8B00CB8F80 /* RoyalSpoonbill.jpg in Resources */,
 				B91684E517AE0512007C7161 /* 800px-Nestor_notabilis_-Fiordland_National_Park-8a_TN.jpg in Resources */,
+				B9B143BB199B624500908EFB /* WhiteHeron_TN.jpg in Resources */,
+				B9B143AD199B624500908EFB /* Kaka_on_Branch_TN.jpg in Resources */,
 				B91684E617AE0512007C7161 /* 800px-New_Zealand_Pigeon_Southstar_02_TN.jpg in Resources */,
 				B91684E717AE0512007C7161 /* 823px-Dinornis1387_TN.jpg in Resources */,
 				B91684E817AE0512007C7161 /* Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water_TN.jpg in Resources */,
+				B9B120AD199A037C00CB8F80 /* WhiteHeron.jpg in Resources */,
+				B9B14380199B4E3000908EFB /* RockPigeon.jpg in Resources */,
+				B9B143A5199B624500908EFB /* Black_billed_gull_TN.jpg in Resources */,
 				B91684E917AE0512007C7161 /* Anthornis_melanura_New_Zealand_8_TN.jpg in Resources */,
 				B91684EA17AE0512007C7161 /* Blackbird_TN.jpg in Resources */,
 				B91684EB17AE0512007C7161 /* BlackSwanCygnus_atratus_TN.jpg in Resources */,
@@ -1344,51 +1783,73 @@
 				B91684EE17AE0512007C7161 /* Charadrius_bicinctus_breeding_Ralphs_Bay_TN.jpg in Resources */,
 				B91684EF17AE0512007C7161 /* Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8_TN.jpg in Resources */,
 				B91684F017AE0512007C7161 /* Dunnock_IMG_7140_TN.jpg in Resources */,
+				B9B143A9199B624500908EFB /* CrestedGrebe_TN.jpg in Resources */,
 				B91684F117AE0512007C7161 /* Gannet_IMG_6624_TN.jpg in Resources */,
+				B9B85DE219AC7C7B00FC688C /* NorthernRoyalAlbatross_Ben2_TN.jpg in Resources */,
 				B91684F217AE0512007C7161 /* Goldfinch_IMG_6721_TN.jpg in Resources */,
+				B9B4B13919CA1CB1004E010D /* HouseSparrow_steintil_TN.jpg in Resources */,
 				B91684F317AE0512007C7161 /* Grey_Fantail_TN.jpg in Resources */,
 				B91684F417AE0512007C7161 /* GreyWarbler_Gerygone1888_TN.jpg in Resources */,
 				B91684F517AE0512007C7161 /* harrierHawk_TN.jpg in Resources */,
+				B9B143B9199B624500908EFB /* WhiteFacedHeron_TN.jpg in Resources */,
+				B9B3B0111998BECA0078BE75 /* RedpollAndyMorffew.jpg in Resources */,
 				B91684F617AE0512007C7161 /* Hihi_Stitchbird1_TN.jpg in Resources */,
+				B9B3802319A176D500733646 /* AustralasianShoveler_digitaltrails_TN.jpg in Resources */,
 				B91684F717AE0512007C7161 /* Kingfisher_IMG_6929_TN.jpg in Resources */,
 				B91684F817AE0512007C7161 /* Little_Penguin_TN.jpg in Resources */,
 				B91684F917AE0512007C7161 /* LittleSpottedKiwi_Apteryx_owenii_TN.jpg in Resources */,
 				B91684FA17AE0512007C7161 /* Magpie_Australian_IMG_6747_TN.jpg in Resources */,
+				B9B85DDF19AC703800FC688C /* NorthernRoyalAlbatross_Ben.jpg in Resources */,
 				B91684FB17AE0512007C7161 /* MoreporkMaunga_TN.jpg in Resources */,
 				B91684FC17AE0512007C7161 /* New_Zealand_Pigeon_Southstar_02_TN.jpg in Resources */,
 				B91684FD17AE0512007C7161 /* ParadiseDuck_TN.jpg in Resources */,
 				B91684FE17AE0512007C7161 /* Peacock3_TN.jpg in Resources */,
+				B9B120C4199A147900CB8F80 /* BlackFrontedTern_JocelynKinghorn.html in Resources */,
 				B91684FF17AE0512007C7161 /* Pheasant_TN.jpg in Resources */,
 				B916850017AE0512007C7161 /* Pukeko_Porphyrio_porphyrio_TN.jpg in Resources */,
+				B9B4B13A19CA1CB1004E010D /* LittleBluePenguin_steintil_TN.jpg in Resources */,
 				B916850117AE0512007C7161 /* RedBilledGull_IMG_6599_TN.jpg in Resources */,
 				B916850217AE0512007C7161 /* Rifleman_Acanthisitta_chloris_TN.jpg in Resources */,
 				B916850317AE0512007C7161 /* RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c_TN.jpg in Resources */,
 				B916850417AE0512007C7161 /* Shag_IMG_6849_TN.jpg in Resources */,
 				B916850517AE0512007C7161 /* Shag_IMG_7093_TN.jpg in Resources */,
+				B9B4B13B19CA1CB1004E010D /* PiedShag_steintil_TN.jpg in Resources */,
 				B916850617AE0512007C7161 /* SI_Tomtit_male2_TN.jpg in Resources */,
+				B9B120AE199A037C00CB8F80 /* CattleEgret.jpg in Resources */,
 				B916850717AE0512007C7161 /* Silvereye_DSC09462_TN.jpg in Resources */,
 				B916850817AE0512007C7161 /* Sparrow_IMG_6604_TN.jpg in Resources */,
 				B916850917AE0512007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo_TN.jpg in Resources */,
 				B916850B17AE0512007C7161 /* Starling_IMG_6964_TN.jpg in Resources */,
 				B916850C17AE0512007C7161 /* Takahe_Maunga_TN.jpg in Resources */,
+				B9B120B6199A048700CB8F80 /* WhiteFacedHeron.jpg in Resources */,
 				B916850D17AE0512007C7161 /* Thrush_song_06-03_SCOT_TN.jpg in Resources */,
+				B9B3801C19A171FD00733646 /* Whitehead_TN.jpg in Resources */,
 				B916850E17AE0512007C7161 /* Tui_on_flax_TN.jpg in Resources */,
+				B9B143AE199B624500908EFB /* Mallard_TN.jpg in Resources */,
+				B9B120AB199A037C00CB8F80 /* WhiteFrontedTern.jpg in Resources */,
 				B916850F17AE0512007C7161 /* Turkey_TN.jpg in Resources */,
+				B9B143B1199B624500908EFB /* NZDotterel_TN.jpg in Resources */,
 				B916851017AE0512007C7161 /* WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch_TN.jpg in Resources */,
+				B9B4B13819CA1CB1004E010D /* BlackShag_steintil_TN.jpg in Resources */,
 				B916851117AE0512007C7161 /* Yellowhammer_IMG_7001_TN.jpg in Resources */,
 				B909A9B917AE294F00B12655 /* Watvogel_IMG_6674_TN.jpg in Resources */,
 				B909A9BB17AE45C800B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg in Resources */,
 				B909A9BD17AE4B8600B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN.jpg in Resources */,
 				B961701917B4D53700A6167E /* 0236.png in Resources */,
+				B9B120C6199A147900CB8F80 /* MaskedLapwing_JamesNiland.jpg in Resources */,
 				B961701A17B4D53700A6167E /* 0236@2x.png in Resources */,
-				B9708E6517BC6F3A00B90254 /* NZBirder.sqlite in Resources */,
 				B95B943A17C06A6900EBC8E7 /* Default.png in Resources */,
 				B9ACFDEC17C84AB0002CE932 /* Shining_BronzeCuckoo.mp3 in Resources */,
+				B9B1438A199B5A0500908EFB /* NZPipit.jpg in Resources */,
 				B9ACFDED17C84AB0002CE932 /* Hirundotahitica.mp3 in Resources */,
+				B9B14382199B50E900908EFB /* Skylark.jpg in Resources */,
+				B9BC560C19A9D1990007A0B2 /* Settings.bundle in Resources */,
 				B9ACFDEE17C84AB0002CE932 /* Carduelis_chloris_TN.jpg in Resources */,
 				B9ACFDEF17C84AB0002CE932 /* Chrysococcyx_lucidus_-Brisbane,_Queensland,_Australia_TN.jpg in Resources */,
+				B9B4B13019CA1C4A004E010D /* PiedStilt_steintil.jpg in Resources */,
 				B9ACFDF017C84AB0002CE932 /* Welcome_Swallow_TN.jpg in Resources */,
 				B9ACFDF117C84AB0002CE932 /* commonswikimedia.orgwikiFileWelcome_Swallowjpg800px-Welcome_Swallow.jpg in Resources */,
+				B9B3802519A176D500733646 /* Kakapo_TN.jpg in Resources */,
 				B9ACFDF317C84AB0002CE932 /* Carduelis_chloris_AuthorOlivierFromFranceWikiCommons.jpg in Resources */,
 				B9ACFDF417C84AB0002CE932 /* Chrysococcyx_lucidus_JamesNiland_Brisbane_Queensland_Australia.jpg in Resources */,
 			);
@@ -1401,38 +1862,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9BC560219A89BAB0007A0B2 /* IASKSpecifier.m in Sources */,
+				B9BC560319A89BAB0007A0B2 /* IASKPSSliderSpecifierViewCell.m in Sources */,
 				B8E777EE16C2F2F400949FEE /* main.m in Sources */,
 				B9BE104D17FB3E31005BA377 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				B8E777F216C2F2F400949FEE /* AppDelegate.m in Sources */,
 				B8E7780916C2F43000949FEE /* BirdTableViewCell.m in Sources */,
 				B9BE104E17FB3E31005BA377 /* UIImageView+MKNetworkKitAdditions.m in Sources */,
 				B8E7780C16C2F6A700949FEE /* Bird.m in Sources */,
+				B9BC560419A89BAB0007A0B2 /* IASKPSTextFieldSpecifierViewCell.m in Sources */,
+				B9BC55FE19A89BAB0007A0B2 /* IASKSettingsReader.m in Sources */,
 				B946228A17439047007A8A20 /* BirdMapViewController.m in Sources */,
 				B968247A176234380093F493 /* BirdBrowser.xcdatamodeld in Sources */,
 				B98227C21772390700A97BD3 /* ModelController.m in Sources */,
 				B98227C517723FAA00A97BD3 /* MapViewController.m in Sources */,
+				B9BC560019A89BAB0007A0B2 /* IASKSettingsStoreFile.m in Sources */,
 				B98227D81772444100A97BD3 /* MapViewAnnotation.m in Sources */,
 				B98227D91772444100A97BD3 /* NSCoder+FavSpots.m in Sources */,
 				B98227DA1772444100A97BD3 /* NSCoder+RNMapKit.m in Sources */,
 				B98227E01772468000A97BD3 /* DetailViewController.m in Sources */,
 				B98227E6177257A800A97BD3 /* MasterViewController.m in Sources */,
+				B9BC55FD19A89BAB0007A0B2 /* IASKSpecifierValuesViewController.m in Sources */,
+				B9BC55FC19A89BAB0007A0B2 /* IASKAppSettingsWebViewController.m in Sources */,
 				B9BE104917FB3E31005BA377 /* NSData+MKBase64.m in Sources */,
 				B9BE104B17FB3E31005BA377 /* NSDictionary+RequestEncoding.m in Sources */,
 				B98227E917728C0700A97BD3 /* TextEditViewController.m in Sources */,
+				B9BC560519A89BAB0007A0B2 /* IASKPSTitleValueSpecifierViewCell.m in Sources */,
 				B9DF1E5F1776708300F5DA74 /* BirdMasterTableViewController_CD.m in Sources */,
+				B9BC560119A89BAB0007A0B2 /* IASKSettingsStoreUserDefaults.m in Sources */,
 				B9BE104C17FB3E31005BA377 /* NSString+MKNetworkKitAdditions.m in Sources */,
 				B9BA7EE51780B671003DA778 /* BirdDetailViewController_CD.m in Sources */,
 				B9FEE0B7178A2C2F00768240 /* Info.m in Sources */,
 				B9FEE0D7178A734900768240 /* Observation.m in Sources */,
+				B9BC55FB19A89BAB0007A0B2 /* IASKAppSettingsViewController.m in Sources */,
 				B934A52F178D4B2F00D3F6F7 /* ObservationTableViewController.m in Sources */,
 				B934A5841793E2C900D3F6F7 /* CHCSVParser.m in Sources */,
+				B9BC560719A89BAB0007A0B2 /* IASKSwitch.m in Sources */,
+				B9BC560819A89BAB0007A0B2 /* IASKTextField.m in Sources */,
 				B9BE105017FB3E31005BA377 /* MKNetworkOperation.m in Sources */,
+				B9BC55FF19A89BAB0007A0B2 /* IASKSettingsStore.m in Sources */,
 				B934A59D1794865D00D3F6F7 /* FMDatabase.m in Sources */,
 				B934A59E1794865D00D3F6F7 /* FMDatabaseAdditions.m in Sources */,
 				B9BE104F17FB3E31005BA377 /* MKNetworkEngine.m in Sources */,
 				B934A59F1794865D00D3F6F7 /* FMDatabasePool.m in Sources */,
 				B9BE105817FB49C1005BA377 /* FileUploadEngine.m in Sources */,
 				B9BE104A17FB3E31005BA377 /* NSDate+RFC1123.m in Sources */,
+				B9BC560619A89BAB0007A0B2 /* IASKSlider.m in Sources */,
 				B934A5A01794865D00D3F6F7 /* FMDatabaseQueue.m in Sources */,
 				B934A5A11794865D00D3F6F7 /* FMResultSet.m in Sources */,
 				B934A5CA17968A4B00D3F6F7 /* FullBirdImage.m in Sources */,
@@ -1492,10 +1967,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1517,10 +1993,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1528,11 +2005,13 @@
 		B8E7780216C2F2F400949FEE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarBrowser/BirdBrowser-Prefix.pch";
 				INFOPLIST_FILE = "CarBrowser/BirdBrowser-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = NZBirder;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1540,11 +2019,13 @@
 		B8E7780316C2F2F400949FEE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarBrowser/BirdBrowser-Prefix.pch";
 				INFOPLIST_FILE = "CarBrowser/BirdBrowser-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = NZBirder;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
