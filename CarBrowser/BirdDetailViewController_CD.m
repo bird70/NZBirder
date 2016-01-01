@@ -196,7 +196,7 @@
     if (array == nil)
     {
         // Deal with error...
-    //    NSLog(@"Can't retrieve currentSpot ID");
+        NSLog(@"Can't retrieve currentSpot ID");
     }
     else
     {
@@ -238,12 +238,12 @@
         //find ObjectID for the Spot with currentSpotname
         moID = [mySpot objectID];
        // NSLog(@"ObjectUD for mySpot: %@", moID);
-        NSString *newStr2 = mySpot.name;
+        //txs 12/15 NSString *newStr2 = mySpot.name;
         
         //NSLog(@"spot name/id: %@", newStr2);
         Spot *tempSpot ;
         tempSpot = [moc objectRegisteredForID:moID];
-        NSString *newStr3 = tempSpot.name;
+       //txs 12/15  NSString *newStr3 = tempSpot.name;
         
         //NSLog(@"tempSpot name/id: %@", newStr3);
         
@@ -360,12 +360,12 @@
         //[context save:NULL];
         //Spot *newSpot = [newManagedObject1 objectRegisteredForID:moID]
         
-        NSString *ObservationName = [newManagedObject1 valueForKeyPath:@"Observation_atSpot.name"];
+        //txs 12/15 NSString *ObservationName = [newManagedObject1 valueForKeyPath:@"Observation_atSpot.name"];
         //NSLog(@"ObservationNSpotpotname is: %@", ObservationName);
         
-        NSString *mySpotName = [mySpot valueForKeyPath:@"name"];
+        //txs 12/15 NSString *mySpotName = [mySpot valueForKeyPath:@"name"];
         //NSLog(@"mySpot name is: %@", mySpotName);
-        NSString *myCurrSpotName = [myCurrentSpot valueForKeyPath:@"name"];
+        //txs 12/15 NSString *myCurrSpotName = [myCurrentSpot valueForKeyPath:@"name"];
         
         //[context existingObjectWithID:moID];
         

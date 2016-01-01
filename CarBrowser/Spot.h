@@ -33,6 +33,8 @@
 @property (nonatomic, retain) Observation *observations;
 
 + (Spot *)insertNewSpotWithCoordinate:(CLLocationCoordinate2D)coordinate inManagedObjectContext:(NSManagedObjectContext *)context;
+//v2
++ (Spot *)insertNewDefaultSpot:spotname inManagedObjectContext:(NSManagedObjectContext *)context;
 
 + (Spot *)insertNewSpotWithCoordinateAndName:(CLLocationCoordinate2D)coordinate spotname:(NSString*)spotname inManagedObjectContext:(NSManagedObjectContext *)context;
 

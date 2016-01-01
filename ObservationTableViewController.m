@@ -60,7 +60,7 @@
 //    NSLog(@"ObjectID for %@, %@",spot.name, spot.objectID);
 //    NSLog(@"ObjectID moID %@", spotID);
     
-    NSString *spotName = self.spot.name;
+    //txs 12/15 NSString *spotName = self.spot.name;
 //    NSLog(@"spotName in ObservationTVController: %@",spotName);
     
 //	if (![spotName length] > 0) {

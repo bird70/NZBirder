@@ -40,6 +40,14 @@
 
     self.title = spot.name;
         
+    self.p_flightless = [[NSArray alloc] initWithObjects:
+                         @"FLY",@" ", @"flightless", nil];
+    
+    //self.p_big_or_small = [[NSArray alloc] initWithObjects:     @"S/M", "L/XL", nil];
+    
+    self.p_land_or_water = [[NSArray alloc] initWithObjects:
+                            @"land", @"water", nil];
+    
     self.p_colour = [[NSArray alloc] initWithObjects:
                    @"COL", @"brown", @"green", @"grey",
                    @"blue", @"red", @"yellow",  @"black", @"white", nil];
@@ -68,10 +76,7 @@
         //NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
         self.fetchedResultsController = self.pickFetchedResultsController;
         
-//        if (![context save:&error]) {
-//            NSLog(@"Core data error when fetching all results %@, %@", error, [error userInfo]);
-//            abort();
-//        }
+
         
         [self.fetchedResultsController performFetch:&error];
         NSLog(@"reloading");
@@ -81,13 +86,7 @@
         self.pickFetchedResultsController = nil;
         
         
-//        if(currentField == location){
-//            if(!completedOnce){
-//                [website becomeFirstResponder];
-//            }
-//        }else{
-//            completedOnce = YES;
-//        }
+
     }
 }
 
@@ -102,34 +101,33 @@
     NSUInteger selectedRow1 = [pickerView selectedRowInComponent:0];
     NSUInteger selectedRow2 = [pickerView selectedRowInComponent:1];
     NSUInteger selectedRow3 = [pickerView selectedRowInComponent:2];
-  //  NSUInteger selectedRow4 = [pickerView selectedRowInComponent:3];
+    NSUInteger selectedRow4 = [pickerView selectedRowInComponent:3];
    
     NSString * pick1comp = [[pickerView delegate] pickerView:pickerView titleForRow:selectedRow1 forComponent:0];
     NSString * pick2comp = [[pickerView delegate] pickerView:pickerView titleForRow:selectedRow2 forComponent:1];
     NSString * pick3comp = [[pickerView delegate] pickerView:pickerView titleForRow:selectedRow3 forComponent:2];
-   // NSString * pick4comp = [[pickerView delegate] pickerView:pickerView titleForRow:selectedRow4 forComponent:3];
+    NSString * pick4comp = [[pickerView delegate] pickerView:pickerView titleForRow:selectedRow4 forComponent:3];
         
-        
+        NSPredicate *predicateTemplate4 = [NSPredicate
+                                        predicateWithFormat:@"behaviour CONTAINS[c] %@", pick1comp];
         
         NSPredicate *predicateTemplate = [NSPredicate
-                                          predicateWithFormat:@"colour CONTAINS [c] %@", pick1comp];
+                                          predicateWithFormat:@"colour CONTAINS [c] %@", pick2comp];
         NSPredicate *predicateTemplate2 = [NSPredicate
-                                          predicateWithFormat:@"size_and_shape CONTAINS [c] %@", pick2comp];
+                                          predicateWithFormat:@"size_and_shape CONTAINS [c] %@", pick3comp];
 //    NSPredicate *predicateTemplate2 = [NSPredicate
 //                                       predicateWithFormat:@"leg_colour CONTAINS [c] %@", pick2comp];
     NSPredicate *predicateTemplate3 = [NSPredicate
-                                          predicateWithFormat:@"beak_length CONTAINS [c] %@", pick3comp];
+                                          predicateWithFormat:@"beak_length CONTAINS [c] %@", pick4comp];
 //        NSPredicate *predicateTemplate4 = [NSPredicate
 //                                          predicateWithFormat:@"beak_colour CONTAINS[c] %@", pick4comp];
 //        
 //        NSDictionary *substitutionDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
 //                                                @"Fiona", @"FIRST_NAME", @"Verde", @"LAST_NAME",
 //                                                [NSDate dateWithTimeIntervalSinceNow:-31356000], @"DATE", nil];
-//        NSFetchRequest *fetchRequest =
-//        [model fetchRequestFromTemplateWithName:@"PublicationsForAuthorSinceDate"
-//                          substitutionVariables:substitutionDictionary];
+
         
-    NSCompoundPredicate *comppredicate = [NSCompoundPredicate andPredicateWithSubpredicates:@[predicateTemplate,predicateTemplate2,predicateTemplate3]];//,predicateTemplate4]];
+    NSCompoundPredicate *comppredicate = [NSCompoundPredicate andPredicateWithSubpredicates:@[predicateTemplate4,predicateTemplate,predicateTemplate2,predicateTemplate3]];//,predicateTemplate4]];
                                               //,predicateTemplate2,predicateTemplate3,predicateTemplate4]];
                                          
         pickerPredicate = comppredicate;
@@ -707,11 +705,13 @@ default:
 {
     
     if (component == 0)
-        return [self.p_colour count];
+        return [self.p_flightless count];
     else if (component == 1)
+        return [self.p_colour count];
+    else if (component == 2)
         return [self.p_legs count];
     else
-        //(component == 2)
+        //(component == 3)
         return [self.p_beak count];
 //    else
 //        return [self.p_beak_colour count];
@@ -720,7 +720,7 @@ default:
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
-    return 3;
+    return 4;
 }
 
 
@@ -729,11 +729,13 @@ default:
             forComponent:(NSInteger)component
 {
     if (component == 0)
-        return [self.p_colour objectAtIndex:row];
+        return [self.p_flightless objectAtIndex:row];
     else if (component == 1)
+        return [self.p_colour objectAtIndex:row];
+    else if (component == 2)
         return [self.p_legs objectAtIndex:row];
     else
-        //if (component == 2)
+        //if (component == 3)
         return [self.p_beak objectAtIndex:row];
 //    else
 //        return [self.p_beak_colour objectAtIndex:row];

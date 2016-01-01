@@ -203,7 +203,7 @@ MFMailComposeViewController * controller;
       //[[segue destinationViewController] setNumber_heard:self.sliderHeard.value];
       //[[segue destinationViewController] setNumber_seen:self.sliderSeen.value];
   }
-       NSLog(self.spot.name);
+    // 11/15   NSLog(self.spot.name);
     
 }
 - (IBAction)addBird:(id)senderv{
@@ -223,7 +223,7 @@ MFMailComposeViewController * controller;
 - (IBAction)mailMe:(id)sender {
     
 //    Spot *spot = self.spot;
-    NSString *mySpot = self.spot.name;
+   // 11/15 NSString *mySpot = self.spot.name;
     //NSString *myLat = [NSString stringWithFormat:]spot.latitude;
     
     NSLog(@"ObjectID for %@, %@",self.spot.name, self.spot.objectID);

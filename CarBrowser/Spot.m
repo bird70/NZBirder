@@ -88,5 +88,33 @@
     
     return spot;
 }
+//v2
++ (Spot *)insertNewDefaultSpot:spotname inManagedObjectContext:(NSManagedObjectContext *)context
+{
+    Spot *spot = [NSEntityDescription insertNewObjectForEntityForName:@"Spot" inManagedObjectContext:context];
+    //    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    //    df.dateStyle = NSDateFormatterShortStyle;
+    //    df.timeStyle = NSDateFormatterShortStyle;
+    //    [NSString stringWithFormat:@"Spot (%@)", [df stringFromDate:[NSDate date]]];
+    NSDate *now = [[NSDate alloc] init];
+    //NSDateComponents *dateComps =[now components:NSHourCalendarUnit | NSMinuteCalendarUnit fromDate:now];
+    //NSDate *beginningOfDay = [now dateFromComponents:dateComps];
+    // NSDate *date = [NSDate dateWithTimeIntervalSince1970:result];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"HH:mm:ss"];
+    NSString *localizedString = [formatter stringFromDate:now];
+    //v2: changed default protocol to stationary
+    spot.date_last_changed = now;
+    spot.name = spotname;
+    spot.latitude = 38.3;
+    spot.longitude = -76.5;
+    spot.notes = @" weather, # of observers in party:";
+    spot.protocol = @"Stationary";
+    spot.allObs = @"Y";
+    spot.startTime = localizedString;
+    
+    return spot;
+}
+
 @end
 

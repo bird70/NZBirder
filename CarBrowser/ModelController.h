@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+@class Spot;
+@class CurrentSpot;
 
 @interface ModelController : NSObject
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;

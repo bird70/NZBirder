@@ -190,7 +190,7 @@ static NSString * const kUserTrackingKey = @"kUserTrackingKey";
             }
             
             [self.managedObjectContext save:nil];
-            NSManagedObjectID *newspotID = spot.objectID;
+           //txs 12/15 NSManagedObjectID *newspotID = spot.objectID;
              [self performSegueWithIdentifier:@"newSpot" sender:spot];
         }];
     }

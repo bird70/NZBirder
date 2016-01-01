@@ -18,6 +18,9 @@
 @property (strong, nonatomic)  NSArray *p_legs;
 @property (strong, nonatomic) NSArray *p_beak;
 @property (strong, nonatomic) NSArray *p_beak_colour;
+@property (strong, nonatomic) NSArray *p_flightless;
+@property (strong, nonatomic) NSArray *p_big_or_small;
+@property (strong, nonatomic) NSArray *p_land_or_water;
 @property (strong, nonatomic) NSString *BEAK_SELECTED;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
