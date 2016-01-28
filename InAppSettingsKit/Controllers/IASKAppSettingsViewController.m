@@ -127,7 +127,7 @@ CGRect IASKCGRectSwap(CGRect rect);
         return [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     }
     NSLog (@"%@ is now deprecated, we are moving away from nibs.", NSStringFromSelector(_cmd));
-    return [self initWithStyle:UITableViewStyleGrouped];
+    return [super initWithStyle:UITableViewStyleGrouped];
 }
 
 - (void)viewDidLoad {

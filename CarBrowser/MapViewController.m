@@ -31,6 +31,21 @@ static NSString * const kUserTrackingKey = @"kUserTrackingKey";
 
 @implementation MapViewController
 @synthesize spotname;
+@synthesize locationManager = _locationManager;
+//@synthesize status;
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary     *)launchOptions
+{
+    //Current position
+    //_locationManager = [[CLLocationManager alloc] init];
+    //need to get user permission to use location
+    //[self.locationManager requestWhenInUseAuthorization];
+    
+    
+    return YES;
+}
+//@end
 
 - (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
   [super encodeRestorableStateWithCoder:coder];
@@ -55,11 +70,16 @@ static NSString * const kUserTrackingKey = @"kUserTrackingKey";
 
 - (void)awakeFromNib {
   self.managedObjectContext = [[ModelController sharedController] managedObjectContext];
+    
 }
 
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+    _locationManager = [[CLLocationManager alloc] init];
+    //need to get user permission to use location
+   [self.locationManager requestWhenInUseAuthorization];
+    
   UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
                                         initWithTarget:self action:@selector(handleLongPress:)];
   lpgr.minimumPressDuration = 1.0;
@@ -71,6 +91,33 @@ static NSString * const kUserTrackingKey = @"kUserTrackingKey";
   
   MKUserTrackingBarButtonItem *buttonItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
   self.navigationItem.rightBarButtonItem = buttonItem;
+}
+
+// 01/16 TXS added folowing to check for permissions to use location services
+-(void)checkStatus{
+    
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    
+    if (status==kCLAuthorizationStatusNotDetermined) {
+        NSLog( @"Not Determined");
+    }
+    
+    if (status==kCLAuthorizationStatusDenied) {
+        NSLog(@"Denied");
+    }
+    
+    if (status==kCLAuthorizationStatusRestricted) {
+        NSLog( @"Restricted");
+    }
+    
+    if (status==kCLAuthorizationStatusAuthorizedAlways) {
+        NSLog(@"Always Allowed");
+    }
+    
+    if (status==kCLAuthorizationStatusAuthorizedWhenInUse) {
+        NSLog(@"When In Use Allowed");
+    }
+    
 }
 
 - (void)addAnnotationForSpot:(Spot *)spot
@@ -122,77 +169,89 @@ static NSString * const kUserTrackingKey = @"kUserTrackingKey";
   if (gestureRecognizer.state != UIGestureRecognizerStateBegan)
     return;
   
-  CGPoint touchPoint = [gestureRecognizer locationInView:self.mapView];
-  CLLocationCoordinate2D touchMapCoordinate =
-  [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
-  
-   //geocode the location pressed on the map
-    // and add a new spot for the location, (spot.name is composed of location and date)
-   NSString *when = [self getdate];
     
     {
-        CLGeocoder *geocoder = [[CLGeocoder alloc] init];
-        CLLocation *location = [[CLLocation alloc] initWithLatitude:touchMapCoordinate.latitude longitude:touchMapCoordinate.longitude];
-        
-        [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error)
+        //geocode the location pressed on the map
+        // and add a new spot for the location, (spot.name is composed of location and date)
+        NSString *when = [self getdate];
+       CGPoint touchPoint = [gestureRecognizer locationInView:self.mapView];
+         NSLog(@"i will try a geocode if permission to use the location has been given");
+        //txs 01/16
+        //if(status == kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusAuthorized || status == kCLAuthorizationStatusAuthorizedAlways)
         {
-            NSLog(@"reverseGeocodeLocation:completionHandler: Completion Handler called!");
-            if (error){
-                NSLog(@"Geocode failed with error: %@", error);
-                //[self displayError:error];
-                //NSString *placename = @"%@, %@", touchMapCoordinate.latitude, touchMapCoordinate.longitude;
-                self.spotname  =
-                [NSString stringWithFormat:@"%.3f, %.3f, %@", touchMapCoordinate.latitude, touchMapCoordinate.longitude, when];
-                
-                //return geocodedPlacename;
-            }
+            CLLocationCoordinate2D touchMapCoordinate =
+            [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
             
-            NSLog(@"Received placemarks: %@", placemarks);
-            //[self displayPlacemarks:placemarks];
-            CLPlacemark *myplacemark = [placemarks objectAtIndex:0];
-            //[self displayPlacemarks:placemarks];
-            //self.locationLabel.text =
-            NSString *geocodedPlacename = myplacemark.locality;
-            if (geocodedPlacename == nil) {
-                geocodedPlacename  =
-                [NSString stringWithFormat:@"%.3f, %.3f", touchMapCoordinate.latitude, touchMapCoordinate.longitude];
-                
-            }
-            self.spotname = [NSString stringWithFormat:@"%@ at %@",geocodedPlacename, when];
-            NSLog (@"self.spotname is: %@", self.spotname);
+            //need to get user permission to use location
+            [self.locationManager requestWhenInUseAuthorization];
             
-            Spot *spot = [Spot insertNewSpotWithCoordinateAndName:touchMapCoordinate spotname:self.spotname inManagedObjectContext:self.managedObjectContext];
-           
-           
+            CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+            CLLocation *location = [[CLLocation alloc] initWithLatitude:touchMapCoordinate.latitude longitude:touchMapCoordinate.longitude];
             
-            //NSManagedObjectContext *context2 = [[ModelController sharedController] managedObjectContext];
-            NSEntityDescription *entityDescription = [NSEntityDescription
-                                                      entityForName:@"CurrentSpot" inManagedObjectContext:self.managedObjectContext];
-            NSFetchRequest *request = [[NSFetchRequest alloc] init];
-            [request setEntity:entityDescription];
-            
-            
-            NSPredicate *predicate = nil;
-            [request setPredicate:predicate];
-            [request setSortDescriptors:nil];
-            
-            
-            //Retrieve the Current Spot
-            //make the newly added spot the new current spot
-            NSArray *mo = [self.managedObjectContext executeFetchRequest:request error:&error];
-            if (mo == nil)
-            {
-                // Deal with error...
-                NSLog(@"can't retrieve the only CurrentSpot entry");
-            }
-            else{
-                [mo[0] setValue:spot.name forKey:@"name"];
-            }
-            
-            [self.managedObjectContext save:nil];
-           //txs 12/15 NSManagedObjectID *newspotID = spot.objectID;
-             [self performSegueWithIdentifier:@"newSpot" sender:spot];
-        }];
+            [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error)
+             {
+                 NSLog(@"reverseGeocodeLocation:completionHandler: Completion Handler called!");
+                 if (error){
+                     NSLog(@"Geocode failed with error: %@", error);
+                     //[self displayError:error];
+                     //NSString *placename = @"%@, %@", touchMapCoordinate.latitude, touchMapCoordinate.longitude;
+                     self.spotname  =
+                     [NSString stringWithFormat:@"%.3f, %.3f, %@", touchMapCoordinate.latitude, touchMapCoordinate.longitude, when];
+                     
+                     //return geocodedPlacename;
+                 }
+                 
+                 NSLog(@"Received placemarks: %@", placemarks);
+                 //[self displayPlacemarks:placemarks];
+                 CLPlacemark *myplacemark = [placemarks objectAtIndex:0];
+                 //[self displayPlacemarks:placemarks];
+                 //self.locationLabel.text =
+                 NSString *geocodedPlacename = myplacemark.locality;
+                 if (geocodedPlacename == nil) {
+                     geocodedPlacename  =
+                     [NSString stringWithFormat:@"%.3f, %.3f", touchMapCoordinate.latitude, touchMapCoordinate.longitude];
+                     
+                 }
+                 self.spotname = [NSString stringWithFormat:@"%@ at %@",geocodedPlacename, when];
+                 NSLog (@"self.spotname is: %@", self.spotname);
+                 
+                 Spot *spot = [Spot insertNewSpotWithCoordinateAndName:touchMapCoordinate spotname:self.spotname inManagedObjectContext:self.managedObjectContext];
+                 
+                 
+                 
+                 //NSManagedObjectContext *context2 = [[ModelController sharedController] managedObjectContext];
+                 NSEntityDescription *entityDescription = [NSEntityDescription
+                                                           entityForName:@"CurrentSpot" inManagedObjectContext:self.managedObjectContext];
+                 NSFetchRequest *request = [[NSFetchRequest alloc] init];
+                 [request setEntity:entityDescription];
+                 
+                 
+                 NSPredicate *predicate = nil;
+                 [request setPredicate:predicate];
+                 [request setSortDescriptors:nil];
+                 
+                 
+                 //Retrieve the Current Spot
+                 //make the newly added spot the new current spot
+                 NSArray *mo = [self.managedObjectContext executeFetchRequest:request error:&error];
+                 if (mo == nil)
+                 {
+                     // Deal with error...
+                     NSLog(@"can't retrieve the only CurrentSpot entry");
+                 }
+                 else{
+                     [mo[0] setValue:spot.name forKey:@"name"];
+                 }
+                 
+                 [self.managedObjectContext save:nil];
+                 //txs 12/15 NSManagedObjectID *newspotID = spot.objectID;
+                 //txs 01/16
+                    [self performSegueWithIdentifier:@"newSpot" sender:spot];
+             }];
+        }
+        
+        
+        
     }
   
     

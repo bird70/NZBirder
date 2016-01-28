@@ -31,6 +31,7 @@ MFMailComposeViewController * controller;
 @implementation DetailViewController
 @synthesize birdnotes, birdObservationCell;
 @synthesize labelProtocol, labelAllObservations, labelDuration;
+@synthesize lblTitle; lblText;
 
 
 - (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
@@ -38,7 +39,9 @@ MFMailComposeViewController * controller;
 
   [coder RN_encodeSpot:self.spot forKey:kSpotKey];
   [coder RN_encodeMKCoordinateRegion:self.mapView.region forKey:kRegionKey];
-    [coder encodeObject:self.birdObservationCell.textLabel.text forKey:kNameKey];
+    //[coder encodeObject:self. forKey:kNameKey];
+//txs 01/16    [coder encodeObject:self.birdObservationCell.textLabel.text forKey:kNameKey];
+    [coder encodeObject:self.lblText.text forKey:kNameKey];//txs 01/16
 }
 
 - (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
@@ -49,7 +52,9 @@ MFMailComposeViewController * controller;
   if ([coder containsValueForKey:kRegionKey]) {
     _mapView.region = [coder RN_decodeMKCoordinateRegionForKey:kRegionKey];
   }
-    self.birdObservationCell.textLabel.text = [coder decodeObjectForKey:kNameKey];
+    self.lblText.text = [coder decodeObjectForKey:kNameKey];//txs 01/16
+
+   //txs 01/16 self.birdObservationCell.textLabel.text = [coder decodeObjectForKey:kNameKey];
  
   _restoring = YES;
 }
@@ -82,8 +87,10 @@ MFMailComposeViewController * controller;
     [self.view addGestureRecognizer:tap_cell];
     
     UIGestureRecognizer *g2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleCellTap:)];
-    [self.birdObservationCell addGestureRecognizer:g2];
-    
+    //txs 01/16[self.birdObservationCell addGestureRecognizer:g2];
+    //[self.labelAllObservations addGestureRecognizer:g2]; //txs 01/16
+    [self.lblText addGestureRecognizer:g2];//txs 01/16
+
 }
 
 
@@ -130,10 +137,14 @@ MFMailComposeViewController * controller;
     
     NSLog(@"Notes so far: %@", spot.notes);
     
-    if (! self.isRestoring || self.birdObservationCell.textLabel.text.length == 0) {
-        self.birdObservationCell.textLabel.text = spot.name;
-        ;
-  }
+    //txs 01/16if (! self.isRestoring || self.birdObservationCell.textLabel.text.length == 0) {
+    //txs 01/16    self.birdObservationCell.textLabel.text = spot.name;
+    //txs 01/16    ;
+  //txs 01/16}
+    if (! self.isRestoring || self.lblText.text.length == 0) {
+        self.lblText.text = spot.name;
+          ;
+    }//txs 01/16
 
   if (! self.isRestoring ||
       self.mapView.region.span.latitudeDelta == 0 ||
@@ -156,8 +167,10 @@ MFMailComposeViewController * controller;
     
     self.noteTextView.text = spot.notes;
     //self.noteTextView.text = self.birdnotes;
-    self.birdObservationCell.textLabel.text = spot.name;
-    self.birdObservationCell.detailTextLabel.text =  [NSString stringWithFormat:@"%.3f, %.3f", spot.latitude, spot.longitude];
+ //txs 01/16   self.birdObservationCell.textLabel.text = spot.name;
+    self.lblText.text = spot.name;   //txs 01/16
+ //txs 01/16   self.birdObservationCell.detailTextLabel.text =  [NSString stringWithFormat:@"%.3f, %.3f", spot.latitude, spot.longitude];
+    self.lblTitle.text =  [NSString stringWithFormat:@"%.3f, %.3f", spot.latitude, spot.longitude]; //txs 01/16
   //self.labelProtocol =
   [self.mapView removeAnnotations:self.mapView.annotations];
   [self.mapView addAnnotation:
@@ -182,13 +195,12 @@ MFMailComposeViewController * controller;
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-  self.spot.name = 
-    self.birdObservationCell.textLabel.text;
+    self.spot.name = self.lblText.text; //txs 01/16
+  //txs 01/16  self.birdObservationCell.textLabel.text;
     self.spot.duration = self.labelDuration.text;
     self.spot.allObs = self.labelAllObservations.text;
     self.spot.protocol = self.labelProtocol.text;
-    
-}
+    NSLog(@"Spotname before I disappear: %@", self.spot.name);}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   //[[segue destinationViewController] setSpot:self.spot];
@@ -203,7 +215,7 @@ MFMailComposeViewController * controller;
       //[[segue destinationViewController] setNumber_heard:self.sliderHeard.value];
       //[[segue destinationViewController] setNumber_seen:self.sliderSeen.value];
   }
-    // 11/15   NSLog(self.spot.name);
+     NSLog(@"Spotname: %@", self.spot.name);
     
 }
 - (IBAction)addBird:(id)senderv{

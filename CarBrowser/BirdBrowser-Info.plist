@@ -8,17 +8,6 @@
 	<string>NZBirder</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIcons</key>
-	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>kingfisher_square_57_2.png</string>
-				<string>kingfisher_square_114.png</string>
-			</array>
-		</dict>
-	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>de.kosmopol.NZBirder</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -37,6 +26,19 @@
 	<string>public.app-category.reference</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSLocationAlwaysUssageDescription</key>
+	<string>Application will find a name for your current location if you give permission to use your location</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Application will find an name for your current location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Application will find a name for your current location if you give permission to use your location</string>
+	<key>UIFileSharingEnabled</key>
+	<true/>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard</string>
 	<key>UIMainStoryboardFile~ipad</key>
@@ -45,8 +47,6 @@
 	<array>
 		<string>armv7</string>
 	</array>
-	<key>UIFileSharingEnabled</key>
-	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

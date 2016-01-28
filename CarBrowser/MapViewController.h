@@ -20,4 +20,7 @@
 //@property (weak, nonatomic) IBOutlet UITableViewCell *mapLocationCell;
 //@property (weak, nonatomic) CLPlacemark *myplacemark;
 @property (weak, nonatomic) NSString *spotname;
+
+//txs 01/16 added
+//@property (nonatomic) CLAuthorizationStatus *status;
 @end

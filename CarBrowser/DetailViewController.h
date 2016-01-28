@@ -21,8 +21,6 @@
 @property (strong, nonatomic) NSString *birdnotes;
 @property (strong, nonatomic) FileUploadEngine *flUploadEngine;
 
-- (IBAction)buttonUpload:(id)sender;
-
 
 @property (weak, nonatomic) IBOutlet UITextView *noteTextView;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -30,8 +28,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *labelAllObservations;
 @property (weak, nonatomic) IBOutlet UITextField *labelProtocol;
 @property (weak, nonatomic) IBOutlet UITextField *labelDuration;
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
+@property (weak, nonatomic) IBOutlet UILabel *lblText;
+
 
 - (IBAction)mailMe:(id)sender;
 - (IBAction)addBird:(id)sender;
+- (IBAction)buttonUpload:(id)sender;
 
 @end
