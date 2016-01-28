@@ -1514,7 +1514,7 @@
 		B8E777D616C2F2F400949FEE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Acme;
 				TargetAttributes = {
 					B8E777DD16C2F2F400949FEE = {
@@ -1956,6 +1956,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -2011,6 +2012,7 @@
 				GCC_PREFIX_HEADER = "CarBrowser/BirdBrowser-Prefix.pch";
 				INFOPLIST_FILE = "CarBrowser/BirdBrowser-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = de.kosmopol.NZBirder;
 				PRODUCT_NAME = NZBirder;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2027,6 +2029,7 @@
 				GCC_PREFIX_HEADER = "CarBrowser/BirdBrowser-Prefix.pch";
 				INFOPLIST_FILE = "CarBrowser/BirdBrowser-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = de.kosmopol.NZBirder;
 				PRODUCT_NAME = NZBirder;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

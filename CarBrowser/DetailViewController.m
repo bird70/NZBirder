@@ -31,7 +31,7 @@ MFMailComposeViewController * controller;
 @implementation DetailViewController
 @synthesize birdnotes, birdObservationCell;
 @synthesize labelProtocol, labelAllObservations, labelDuration;
-@synthesize lblTitle; lblText;
+@synthesize lblTitle, lblText;
 
 
 - (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
