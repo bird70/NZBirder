@@ -64,6 +64,26 @@
     self.p_legs = [[NSArray alloc] initWithObjects:
                  @"SIZE", @"sparrow", @"blackbird", @"pigeon", @"duck", @"goose", @"swan",@"albatross", @"ostrich", nil];
     
+    // Add the picker
+    
+    //UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,0,0,0)];
+   // UIPickerView *pickerView = [[UIPickerView alloc] init];
+    
+   // pickerView.delegate = self;
+   // pickerView.dataSource = self;
+    
+   // pickerView.showsSelectionIndicator = YES;    // note this is default to NO
+    //[self showPicker:]
+    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectZero];
+    
+    pickerView.delegate = self;
+    pickerView.dataSource = self;
+    
+    pickerView.showsSelectionIndicator = YES;    // note this is default to NO
+    [self.view addSubview:pickerView];
+    // [menu addSubview:pickerView];
+    // [menu showInView:self.view];
+    [pickerView setBounds:CGRectMake(0,0,320, 320)];
     
 }
 
@@ -678,23 +698,23 @@ default:
 //}
 
 - (void) showPicker:(id)sender {
-    UIActionSheet *menu = [[UIActionSheet alloc] initWithTitle:@"Pick Bird Attributes" //[currentData objectAtIndex:0]
-                                                      delegate:self
-                                             cancelButtonTitle:@"Find"
-                                        destructiveButtonTitle:@"Cancel"
-                                             otherButtonTitles:nil];
+   // UIActionSheet *menu = [[UIActionSheet alloc] initWithTitle:@"Pick Bird Attributes"
+        //                                              delegate:self
+          //                                   cancelButtonTitle:@"Find"
+                                        //destructiveButtonTitle:@"Cancel"
+                                          //   otherButtonTitles:nil];
     // Add the picker
-    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,185,0,0)];
+    //UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,185,0,0)];
+    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectZero];
     
     pickerView.delegate = self;
     pickerView.dataSource = self;
     
     pickerView.showsSelectionIndicator = YES;    // note this is default to NO
-    
-    [menu addSubview:pickerView];
-    //[menu showFromToolbar:self.toolbarItems[1]];
-    [menu showInView:self.view];
-    [menu setBounds:CGRectMake(0,0,320, 680)];
+    [self.view addSubview:pickerView];
+   // [menu addSubview:pickerView];
+   // [menu showInView:self.view];
+    [pickerView setBounds:CGRectMake(0,0,320, 320)];
     
 }
 #pragma mark -
@@ -744,6 +764,20 @@ default:
 
 
 - (IBAction)buttonPick:(id)sender {
-    [self showPicker:sender];
+   // [self showPicker:sender];
+    NSLog(@"Going off to find bird");
+    
+    NSError *error = nil;
+    //NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    self.fetchedResultsController = self.pickFetchedResultsController;
+    
+    
+    
+    [self.fetchedResultsController performFetch:&error];
+    NSLog(@"reloading");
+    [self.tableView reloadData];
+    
+    //self.fetchedResultsController = nil;
+    self.pickFetchedResultsController = nil;
 }
 @end
