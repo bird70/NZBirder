@@ -113,6 +113,7 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     selectedScrollIndex = &row;
+    
     // We want to use a search for the combined attributes selected using the PickerView
     
     //NSLog(@"%@",selectedScrollIndex);
@@ -176,6 +177,41 @@
     
     
 }
+
+//- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+//{
+//    UILabel* pickerLabel = (UILabel*)view;
+//    
+//    if (!pickerLabel)
+//    {
+//        pickerLabel = [[UILabel alloc] init];
+//        
+//        pickerLabel.font = [UIFont fontWithName:@"SourceSansPro-Semibold"                size:16];
+//        
+//        pickerLabel.textAlignment=NSTextAlignmentCenter;
+//    }
+//    [pickerLabel setText:[self.data objectAtIndex:row]];
+//    
+//    return pickerLabel;
+//}
+//
+//- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+//    UILabel* tView = (UILabel*)view;
+//    if (!tView){
+//        tView = [[UILabel alloc] init];
+//        // Setup label properties - frame, font, colors etc
+//        //...
+//        //adjustsFontSizeToFitWidth property to YES
+//        [tView setMinimumScaleFactor: 8.];
+//        tView.adjustsFontSizeToFitWidth = YES;
+//    }
+//    // Fill the label text here
+//   // ...
+//    [pickerLabel setText:[self.data objectAtIndex:row]];
+//
+//    return tView;
+//}
+
 
 - (void)viewWillLayoutSubviews
 {
