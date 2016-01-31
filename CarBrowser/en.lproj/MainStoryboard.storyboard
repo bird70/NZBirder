@@ -826,7 +826,7 @@
                                         <rect key="frame" x="0.0" y="66" width="320" height="454"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FGm-8l-al5" id="2vh-gm-t9p">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="453.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="454"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xms-oH-mLf">
@@ -902,7 +902,7 @@
                                         <rect key="frame" x="0.0" y="542" width="320" height="295"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VR1-I4-Ds5" id="Znp-1b-SQd">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="294.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="295"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s33-3n-yWz">
@@ -1026,7 +1026,7 @@ URL: http://www.TeAra.govt.nz/en/birdwatching</string>
                                         <rect key="frame" x="0.0" y="837" width="320" height="135"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sRF-3f-e4r" id="uxP-GH-lRH">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="134.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="135"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mhs-0w-YZk">
@@ -1116,7 +1116,7 @@ http://nzbirdsonline.org.nz</string>
                                         <rect key="frame" x="0.0" y="994" width="320" height="1570"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X8B-eu-x7J" id="byR-i5-Vf6">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="1569.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="1570"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TKv-fb-BrS">
@@ -4496,7 +4496,7 @@ Tomtit
                                         <rect key="frame" x="0.0" y="2564" width="320" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="awA-eU-LdN" id="df8-hI-eEp">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="159.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nug-G0-z7y">
