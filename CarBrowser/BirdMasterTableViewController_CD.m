@@ -41,22 +41,22 @@
     self.title = spot.name;
         
     self.p_flightless = [[NSArray alloc] initWithObjects:
-                         @"FLY",@" ", @"flightless", nil];
+                         @"FLY", @" ", @"flightless", nil];
     
     //self.p_big_or_small = [[NSArray alloc] initWithObjects:     @"S/M", "L/XL", nil];
     
-    self.p_land_or_water = [[NSArray alloc] initWithObjects:
-                            @"land", @"water", nil];
+    //self.p_land_or_water = [[NSArray alloc] initWithObjects:
+     //                       @"land", @"water", nil];
     
     self.p_colour = [[NSArray alloc] initWithObjects:
                    @"COL", @"brown", @"green", @"grey",
                    @"blue", @"red", @"yellow",  @"black", @"white", nil];
     
     self.p_beak_colour = [[NSArray alloc]
-                        initWithObjects:  @"BILL",@"brow",@"yell", @"grey", @"red", @"oran",@"black", nil];
+                        initWithObjects:  @"BILL", @"brow",@"yell", @"grey", @"red", @"oran",@"black", nil];
     
     self.p_beak = [[NSArray alloc] initWithObjects:
-                 @"BILL", @"short", @"medium", @"long", @"pointed", @"curved", @"duck", @"hook", nil];
+                 @"BILL",@"short", @"medium", @"long", @"pointed", @"curved", @"duck", @"hook", nil];
     
 //    self.p_legs = [[NSArray alloc] initWithObjects:
 //                 @"LEGS", @"red", @"yell", @"brow", @"oran", @"black", nil];
@@ -66,52 +66,55 @@
     
     // Add the picker
     
-    //UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,0,0,0)];
-   // UIPickerView *pickerView = [[UIPickerView alloc] init];
-    
-   // pickerView.delegate = self;
-   // pickerView.dataSource = self;
-    
-   // pickerView.showsSelectionIndicator = YES;    // note this is default to NO
-    //[self showPicker:]
-    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectZero];
-    
-    pickerView.delegate = self;
-    pickerView.dataSource = self;
-    
-    pickerView.showsSelectionIndicator = YES;    // note this is default to NO
-    [self.view addSubview:pickerView];
-    // [menu addSubview:pickerView];
-    // [menu showInView:self.view];
-    [pickerView setBounds:CGRectMake(0,0,320, 320)];
+//    //UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,0,0,0)];
+//   // UIPickerView *pickerView = [[UIPickerView alloc] init];
+//    
+//   // pickerView.delegate = self;
+//   // pickerView.dataSource = self;
+//    
+//   // pickerView.showsSelectionIndicator = YES;    // note this is default to NO
+//    //[self showPicker:]
+//    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectZero];
+//    
+//    pickerView.delegate = self;
+//    pickerView.dataSource = self;
+//    
+//    pickerView.showsSelectionIndicator = YES;    // note this is default to NO
+//    [self.view addSubview:pickerView];
+//    // [menu addSubview:pickerView];
+//    // [menu showInView:self.view];
+//    [pickerView setBounds:CGRectMake(0,0,320, 320)];
     
 }
 
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if(buttonIndex==1){
-        NSLog(@"Going off to find bird");
-        
-        NSError *error = nil;
-        //NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-        self.fetchedResultsController = self.pickFetchedResultsController;
-        
-
-        
-        [self.fetchedResultsController performFetch:&error];
-        NSLog(@"reloading");
-        [self.tableView reloadData];
-        
-        //self.fetchedResultsController = nil;
-        self.pickFetchedResultsController = nil;
-        
-        
-
-    }
-}
+//- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+//    if(buttonIndex==1){
+//        // None of the following should be required if using the PickerView inside the UITableView (instead of on Actionsheet)
+//        NSLog(@"Going off to find bird");
+//        
+//        NSError *error = nil;
+//        //NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+//        self.fetchedResultsController = self.pickFetchedResultsController;
+//        
+//
+//        
+//        [self.fetchedResultsController performFetch:&error];
+//        NSLog(@"reloading");
+//        [self.tableView reloadData];
+//        
+//        //self.fetchedResultsController = nil;
+//        self.pickFetchedResultsController = nil;
+//        
+//        
+//
+//    }
+//}
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     selectedScrollIndex = &row;
+    // We want to use a search for the combined attributes selected using the PickerView
+    
     //NSLog(@"%@",selectedScrollIndex);
 //    NSUInteger numComponents = [[pickerView dataSource] numberOfComponentsInPickerView:pickerView];
 //    
@@ -590,6 +593,7 @@ NSArray *sortedToDos = [projectTodoEntities sortedArrayUsingDescriptors:[NSArray
     [self.tableView endUpdates];
 }
 
+// configure what's shown using the Cell Template
 - (void)configureCell:(BirdTableViewCell *)cell withObject:(Bird_attributes *)bird
 {
     //NSManagedObject *selectedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
@@ -676,6 +680,7 @@ default:
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
+    // DO WE STILL NEED THIS?
 //    self.allFetchedResultsController = nil;
 //    self.bushFetchedResultsController = nil;
 //    self.gardenFetchedResultsController = nil;
@@ -684,7 +689,7 @@ default:
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    
+    // DO WE STILL NEED THIS?
     //self.navigationController.navigationBar.hidden = NO;
     
 }
@@ -698,23 +703,40 @@ default:
 //}
 
 - (void) showPicker:(id)sender {
-   // UIActionSheet *menu = [[UIActionSheet alloc] initWithTitle:@"Pick Bird Attributes"
-        //                                              delegate:self
-          //                                   cancelButtonTitle:@"Find"
-                                        //destructiveButtonTitle:@"Cancel"
-                                          //   otherButtonTitles:nil];
-    // Add the picker
-    //UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,185,0,0)];
-    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectZero];
+   // this is called when pressing the magnifying glass
+    NSLog(@"Going off to find bird");
     
-    pickerView.delegate = self;
-    pickerView.dataSource = self;
+    NSError *error = nil;
+    //NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    self.fetchedResultsController = self.pickFetchedResultsController;
     
-    pickerView.showsSelectionIndicator = YES;    // note this is default to NO
-    [self.view addSubview:pickerView];
-   // [menu addSubview:pickerView];
-   // [menu showInView:self.view];
-    [pickerView setBounds:CGRectMake(0,0,320, 320)];
+    
+    
+    [self.fetchedResultsController performFetch:&error];
+    NSLog(@"reloading");
+    [self.tableView reloadData];
+    
+    //self.fetchedResultsController = nil;
+    self.pickFetchedResultsController = nil;
+    
+    // DO WE STILL NEED THIS?
+//    // UIActionSheet *menu = [[UIActionSheet alloc] initWithTitle:@"Pick Bird Attributes"
+//        //                                              delegate:self
+//          //                                   cancelButtonTitle:@"Find"
+//                                        //destructiveButtonTitle:@"Cancel"
+//                                          //   otherButtonTitles:nil];
+//    // Add the picker
+//    //UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,185,0,0)];
+//    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectZero];
+//    
+//    pickerView.delegate = self;
+//    pickerView.dataSource = self;
+//    
+//    pickerView.showsSelectionIndicator = YES;    // note this is default to NO
+//    [self.view addSubview:pickerView];
+//   // [menu addSubview:pickerView];
+//   // [menu showInView:self.view];
+//    [pickerView setBounds:CGRectMake(0,0,320, 320)];
     
 }
 #pragma mark -
