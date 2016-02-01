@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CarBrowser/ModelController.m"
-            timestampString = "475917550.561079"
+            timestampString = "475919322.120954"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4481"
-            endingLineNumber = "4481"
+            startingLineNumber = "4423"
+            endingLineNumber = "4423"
             landmarkName = "-persistentStoreCoordinator"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CarBrowser/ModelController.m"
-            timestampString = "475917550.561079"
+            timestampString = "475919322.120954"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4478"
-            endingLineNumber = "4478"
+            startingLineNumber = "4420"
+            endingLineNumber = "4420"
             landmarkName = "-persistentStoreCoordinator"
             landmarkType = "5">
          </BreakpointContent>
