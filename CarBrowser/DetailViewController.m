@@ -41,7 +41,7 @@ MFMailComposeViewController * controller;
   [coder RN_encodeMKCoordinateRegion:self.mapView.region forKey:kRegionKey];
     //[coder encodeObject:self. forKey:kNameKey];
 //txs 01/16    [coder encodeObject:self.birdObservationCell.textLabel.text forKey:kNameKey];
-    [coder encodeObject:self.lblText.text forKey:kNameKey];//txs 01/16
+    [coder encodeObject:self.lblTitle.text forKey:kNameKey];//txs 01/16
 }
 
 - (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
@@ -52,7 +52,8 @@ MFMailComposeViewController * controller;
   if ([coder containsValueForKey:kRegionKey]) {
     _mapView.region = [coder RN_decodeMKCoordinateRegionForKey:kRegionKey];
   }
-    self.lblText.text = [coder decodeObjectForKey:kNameKey];//txs 01/16
+    self.lblTitle.text= [coder decodeObjectForKey:kNameKey];//txs 02/16
+   // self.lblText.text = [coder decodeObjectForKey:kNameKey];//txs 01/16 02/16
 
    //txs 01/16 self.birdObservationCell.textLabel.text = [coder decodeObjectForKey:kNameKey];
  
@@ -69,6 +70,7 @@ MFMailComposeViewController * controller;
     self.labelDuration.text = self.spot.duration;
     self.labelProtocol.text = self.spot.protocol;
     self.labelAllObservations.text = self.spot.allObs;
+    //self.lblText.text = self.spot.name;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                  initWithTarget:self
@@ -136,6 +138,7 @@ MFMailComposeViewController * controller;
     self.title = bird;
     
     NSLog(@"Notes so far: %@", spot.notes);
+    NSLog(@"Spotname in DetailVC: %@", spot.name);
     
     //txs 01/16if (! self.isRestoring || self.birdObservationCell.textLabel.text.length == 0) {
     //txs 01/16    self.birdObservationCell.textLabel.text = spot.name;
@@ -143,7 +146,8 @@ MFMailComposeViewController * controller;
   //txs 01/16}
     if (! self.isRestoring || self.lblText.text.length == 0) {
         self.lblText.text = spot.name;
-          ;
+    if (! self.isRestoring || self.lblTitle.text.length == 0) {
+            self.lblTitle.text = spot.name;
     }//txs 01/16
 
   if (! self.isRestoring ||
@@ -168,9 +172,11 @@ MFMailComposeViewController * controller;
     self.noteTextView.text = spot.notes;
     //self.noteTextView.text = self.birdnotes;
  //txs 01/16   self.birdObservationCell.textLabel.text = spot.name;
-    self.lblText.text = spot.name;   //txs 01/16
+   // self.lblTitle.text = spot.name;   //txs 01/16 02/16
+    
  //txs 01/16   self.birdObservationCell.detailTextLabel.text =  [NSString stringWithFormat:@"%.3f, %.3f", spot.latitude, spot.longitude];
-    self.lblTitle.text =  [NSString stringWithFormat:@"%.3f, %.3f", spot.latitude, spot.longitude]; //txs 01/16
+    //self.lblTitle.text =  [NSString stringWithFormat:@"%.3f, %.3f", spot.latitude, spot.longitude]; //txs 01/16 02/16
+    NSLog(@"Spotname in configureView: %@", spot.name);
   //self.labelProtocol =
   [self.mapView removeAnnotations:self.mapView.annotations];
   [self.mapView addAnnotation:
@@ -180,6 +186,7 @@ MFMailComposeViewController * controller;
   //  self.labelHeard.text = @"%@",self.sliderHeard.value;
     
   self.restoring = NO;
+}
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -196,6 +203,7 @@ MFMailComposeViewController * controller;
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.spot.name = self.lblText.text; //txs 01/16
+    //self.spot.name = self.lblTitle.text; //txs 02/16
   //txs 01/16  self.birdObservationCell.textLabel.text;
     self.spot.duration = self.labelDuration.text;
     self.spot.allObs = self.labelAllObservations.text;
@@ -210,23 +218,38 @@ MFMailComposeViewController * controller;
   else if ([[segue identifier] isEqualToString:@"showObservationsForSpot"]) {
         [[segue destinationViewController] setSpot:self.spot];
       }
-  else if ([[segue identifier] isEqualToString:@"addBird"]) {
-      [[segue destinationViewController] setSpot:self.spot];
-      //[[segue destinationViewController] setNumber_heard:self.sliderHeard.value];
-      //[[segue destinationViewController] setNumber_seen:self.sliderSeen.value];
-  }
-     NSLog(@"Spotname: %@", self.spot.name);
+  else
+//      if
+//      ([[segue identifier] isEqualToString:@"addBird"]) {
+//      [[segue destinationViewController] setSpot:self.spot];
+//      //[[segue destinationViewController] setNumber_heard:self.sliderHeard.value];
+//      //[[segue destinationViewController] setNumber_seen:self.sliderSeen.value];
+//      }
+      if ([[segue identifier] isEqualToString:@"addBird"]) {
+          BirdMasterTableViewController_CD *bmVC = [segue destinationViewController];
+          bmVC.spot = _spot;
+          NSLog(@"Spotname for addBird from ObsDetailVC segue: %@", bmVC.spot.name);
+      }
+    
     
 }
-- (IBAction)addBird:(id)senderv{
-//    Spot *spot = self.spot;
-    NSString *mySpot = self.spot.name;
-    NSLog(@"in addBirdSegue spotname: %@",mySpot);
-//    BirdMasterTableViewController_CD *masterVC = [segue destinationViewController];
-//    masterVC.spot = spot;
-    [self performSegueWithIdentifier:@"addBird" sender:self];
-    
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if ([[segue identifier] isEqualToString:@"newSpot"]) {
+//        BirdMasterTableViewController_CD *bmVC = [segue destinationViewController];
+//        bmVC.spot = sender;
+//    }
+//}//added 02/16
+
+//- (IBAction)addBird:(id)senderv{
+////    Spot *spot = self.spot;
+//    NSString *mySpot = self.spot.name;
+//    NSLog(@"in addBirdSegue spotname: %@",mySpot);
+////    BirdMasterTableViewController_CD *masterVC = [segue destinationViewController];
+////    masterVC.spot = spot;
+//    [self performSegueWithIdentifier:@"addBird" sender:self];
+//    
+//}
 
 //- (IBAction)dismissKeyboardfromLabel:(id)sender {
 //    [labelProtocol resignFirstResponder];

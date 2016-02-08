@@ -354,7 +354,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    //[[segue destinationViewController] setSpot:self.spot];
     
     if ([[segue identifier] isEqualToString:@"addBird"]) {
         
@@ -363,9 +362,21 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Spot *spot = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         
-        [[segue destinationViewController] setSpot:spot];
+        //[[segue destinationViewController] setSpot:spot];
+        DetailViewController *detailVC = [segue destinationViewController];
+       // detailVC.spot =spot ;
+        
+        [detailVC setSpot:spot];
         
     }
+
+    
+        //if ([[segue identifier] isEqualToString:@"addBird"]) {
+//            DetailViewController *detailVC = [segue destinationViewController];
+//            detailVC.spot =sender ;
+       // }
+
+
 }
 
 - (NSString *)modelIdentifierForElementAtIndexPath:(NSIndexPath *)idx

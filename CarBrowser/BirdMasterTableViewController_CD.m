@@ -287,6 +287,10 @@
         Bird_attributes *bird = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         
         [[segue destinationViewController] setSpot:spot];
+    
+            //BirdDetailViewController_CD *bdVC = [segue destinationViewController];
+            //bdVC.spot = sender;
+            NSLog(@"Spotname for segue from Birdmaster to Birddetail : %@", spot.name);
         
         [[segue destinationViewController] setBird:bird];
     }
@@ -826,6 +830,8 @@ default:
     NSLog(@"Going off to find bird");
     
     NSError *error = nil;
+    
+    
     //NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     self.fetchedResultsController = self.pickFetchedResultsController;
     
@@ -837,5 +843,6 @@ default:
     
     //self.fetchedResultsController = nil;
     self.pickFetchedResultsController = nil;
+     NSLog(@"Spotname in buttonPick_BMVC: %@", self.spot.name);
 }
 @end

@@ -10,7 +10,9 @@
 #import <MapKit/MapKit.h>
 #import "MapViewAnnotation.h"
 #import "Spot.h"
-#import "DetailViewController.h"
+//#import "DetailViewController.h"
+#import "MasterViewController.h"
+
 #import "ModelController.h"
 #import "NSCoder+RNMapKit.h"
 
@@ -260,10 +262,19 @@ static NSString * const kUserTrackingKey = @"kUserTrackingKey";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
   if ([[segue identifier] isEqualToString:@"newSpot"]) {
-    DetailViewController *detailVC = [segue destinationViewController];
-    detailVC.spot = sender;
+    MasterViewController *masterVC = [segue destinationViewController];
+    masterVC.obs = sender;
   }
 }
+
+//
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if ([[segue identifier] isEqualToString:@"newSpot"]) {
+//        DetailViewController *detailVC = [segue destinationViewController];
+//        detailVC.spot = sender;
+//    }
+//}
 
 - (NSFetchedResultsController *)fetchedResultsController
 {
