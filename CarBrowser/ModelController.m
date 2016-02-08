@@ -1299,11 +1299,11 @@
         [newManagedObject17 setValue:@"http://en.wikipedia.org/wiki/Black_Swan" forKey:@"link"];
         [newManagedObject17 setValue:@"red" forKey:@"beak_colour"];
         [newManagedObject17 setValue:@"duck" forKey:@"beak_length"];
-        [newManagedObject17 setValue:@"" forKey:@"behaviour"];
+        [newManagedObject17 setValue:@" " forKey:@"behaviour"];
         [newManagedObject17 setValue:@"1" forKey:@"category"];
         [newManagedObject17 setValue:@"black" forKey:@"colour"];
         [newManagedObject17 setValue:@"grey,black" forKey:@"leg_colour"];
-        [newManagedObject17 setValue:@"Notiomystis" forKey:@"family"];
+        [newManagedObject17 setValue:@"Anatidae" forKey:@"family"];
         [newManagedObject17 setValue:@"water,bush" forKey:@"habitat"];
         [newManagedObject17 setValue:@"Not threatened" forKey:@"threat_status"];
         [newManagedObject17 setValue:@"Black Swan" forKey:@"short_name"];
@@ -1351,7 +1351,7 @@
         [newManagedObject18 setValue:@"Silvereye"       forKey:@"name"];
         [newManagedObject18 setValue:@"Waxeye/ Tauhou" forKey:@"othername"];
         [newManagedObject18 setValue:@"A small olive green forest bird with white rings around its eyes.\nThese friendly birds were self introduced in the 1800s and now have a wide distribution throughout NZ.\nThe silvereye has a wide distribution throughout New Zealand. They can be found from sea level to above the tree line but they are not abundant in deep forest or open grassland.\nSlightly smaller than a sparrow, the silvereye is olive-green with a ring of white feathers around the eye. Males have slightly brighter plumage than females. They have a fine tapered bill and a brush tipped tongue like the tui and bellbird.\nSilvereye's mainly eat insects, fruit and nectar.\nThe silvereye was first recorded in New Zealand in 1832 and since there is no evidence that it was artificially introduced, it is classified as a native species. Its Māori name, tauhou, means stranger or more literally, new arrival." forKey:@"item_description"];
-        [newManagedObject18 setValue:@"http://en.wikipedia.org/wiki/Fantail" forKey:@"link"];
+        [newManagedObject18 setValue:@"http://nzbirdsonline.org.nz/?q=node/586" forKey:@"link"];
         [newManagedObject18 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject18 setValue:@"short" forKey:@"beak_length"];
         [newManagedObject18 setValue:@"odd and quirky" forKey:@"behaviour"];
@@ -2517,9 +2517,9 @@
         
         //Set Bird_attributes
         [newManagedObject39 setValue:@"Shag, spotted"       forKey:@"name"];
-        [newManagedObject39 setValue:@"Phalacrocorax punctatus" forKey:@"othername"];
-        [newManagedObject39 setValue:@"A rare bird, threatened" forKey:@"item_description"];
-        [newManagedObject39 setValue:@"http://en.wikipedia.org/wiki/Spotted_Shag" forKey:@"link"];
+        [newManagedObject39 setValue:@"Stictocarbo punctatus" forKey:@"othername"];
+        [newManagedObject39 setValue:@"The spotted shag or parekareka (Stictocarbo punctatus) is a species of cormorant endemic to New Zealand. Originally classified as Phalacrocorax punctatus, it is sufficiently different in appearance from typical members of that genus that to be for a time placed in a separate genus, Stictocarbo, along with another similar species, the Pitt shag.\n\nCompared with typical cormorants, the spotted shag is a light-coloured bird. Its back is brown. Its belly is pale blue-grey (often appearing white), and the white continues up the sides of the neck and face, but the throat and the top of the head are dark blue-green. In the mating season, it has an obvious double crest. There is little sexual dimorphism.\n\nSpotted shags feed at sea, often in substantial flocks, taking their prey from mid-water rather than the bottom. It is likely that pilchard and anchovy are important prey species.\n\nSpotted shags nest in colonies of 10-700 pairs, these colonies are generally found on the ledges of coastal cliffs  or on rocky islets.\n\nIn the South Island, they are particularly readily observed around Banks Peninsula; there is a large nesting colony immediately south of the city of Christchurch. In Wellington Harbour there is a large colony on a rocky outcrop known as 'Shag Rock' just off the south-west end of Matiu/Somes Island.\n\nIn the Hauraki Gulf there is a breeding colony on Tarahiki Island.\n\nThe spotted shag was featured on a 60-cent New Zealand postage stamp first issued in 1988, in a series devoted to native birds." forKey:@"item_description"];
+        [newManagedObject39 setValue:@"http://nzbirdsonline.org.nz/species/spotted-shag" forKey:@"link"];
         [newManagedObject39 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject39 setValue:@"long" forKey:@"beak_length"];
         [newManagedObject39 setValue:@"" forKey:@"behaviour"];
@@ -3892,7 +3892,7 @@
         [newManagedObject72 setValue:@"http://en.wikipedia.org/wiki/kakapo" forKey:@"link"];
         [newManagedObject72 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject72 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject72 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject72 setValue:@"flightless" forKey:@"behaviour"];
         [newManagedObject72 setValue:@"0" forKey:@"category"];
         [newManagedObject72 setValue:@"green" forKey:@"colour"];
         [newManagedObject72 setValue:@"black" forKey:@"leg_colour"];
