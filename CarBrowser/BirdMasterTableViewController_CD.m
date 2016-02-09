@@ -158,7 +158,7 @@
         NSLog(@"%@",pickerPredicate);
     
     
-    
+    [self buttonPick:pickerPredicate];  
     
 //        NSString * title = [[pickerView delegate] pickerView:pickerView titleForRow:selectedRow forComponent:i];
 //        [text appendFormat:@"Selected item \"%@\" in component %lu\n", title, (unsigned long)i];
