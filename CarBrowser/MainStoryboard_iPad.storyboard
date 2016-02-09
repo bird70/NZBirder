@@ -400,7 +400,7 @@
         <scene sceneID="tSf-89-F9g">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="PSJ-RJ-4rc" customClass="BirdMasterTableViewController_CD" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YM3-5U-K36">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="YM3-5U-K36">
                         <rect key="frame" x="0.0" y="64" width="768" height="916"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -414,23 +414,23 @@
                         </pickerView>
                         <prototypes>
                             <tableViewCell alpha="0.80000000000000004" contentMode="scaleToFill" restorationIdentifier="bird table view cell" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="birdTableCell" id="lRG-L3-7pe" customClass="BirdTableViewCell">
-                                <rect key="frame" x="0.0" y="186" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="186" width="768" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lRG-L3-7pe" id="qzx-De-jCC">
-                                    <rect key="frame" x="0.0" y="0.0" width="682" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="682" height="74.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pt3-wv-NLJ">
-                                            <rect key="frame" x="9" y="-9" width="65" height="52"/>
+                                            <rect key="frame" x="9" y="-1" width="88" height="70"/>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="nameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLD-dL-zJZ">
-                                            <rect key="frame" x="104" y="20" width="234" height="23"/>
+                                            <rect key="frame" x="118" y="20" width="234" height="23"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="otherNameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNK-MC-rgR">
-                                            <rect key="frame" x="104" y="5" width="234" height="25"/>
+                                            <rect key="frame" x="118" y="5" width="234" height="25"/>
                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -469,11 +469,6 @@
                                 <action selector="segmentControl:" destination="PSJ-RJ-4rc" eventType="valueChanged" id="Drk-BO-49V"/>
                             </connections>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="rAJ-mQ-MS0">
-                            <connections>
-                                <action selector="buttonPick:" destination="PSJ-RJ-4rc" id="cRn-yz-gSc"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="6gC-vj-9ux" id="fcp-h2-Sn7"/>
@@ -512,52 +507,45 @@
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9wh-xR-2sf">
-                                <rect key="frame" x="8" y="8" width="752" height="391"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9wh-xR-2sf">
+                                <rect key="frame" x="271" y="9" width="497" height="391"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="32" translatesAutoresizingMaskIntoConstraints="NO" id="yzn-3e-Pvn">
-                                <rect key="frame" x="512" y="531" width="118" height="28"/>
+                                <rect key="frame" x="64" y="100" width="118" height="28"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                 <color key="textColor" red="0.50588238240000005" green="0.35294118520000001" blue="0.086274512110000007" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sux-SG-ov6">
-                                <rect key="frame" x="513" y="463" width="159" height="28"/>
+                                <rect key="frame" x="65" y="32" width="159" height="28"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                 <color key="textColor" red="0.50588238240000005" green="0.35294118520000001" blue="0.086274512110000007" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.79999999999999993" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcd-A7-TCe">
-                                <rect key="frame" x="513" y="488" width="164" height="22"/>
+                                <rect key="frame" x="65" y="57" width="164" height="22"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                 <color key="textColor" red="0.50588238240000005" green="0.35294118520000001" blue="0.086274512110000007" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Bill:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8P5-kP-MFx">
-                                <rect key="frame" x="485" y="538" width="23" height="14"/>
+                                <rect key="frame" x="37" y="107" width="23" height="14"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.2369259648" blue="0.1722603201" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Leg:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEu-Yp-iA6">
-                                <rect key="frame" x="484" y="470" width="24" height="14"/>
+                                <rect key="frame" x="36" y="39" width="24" height="14"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.2369259648" blue="0.1722603201" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Status:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wum-Cr-oo9">
-                                <rect key="frame" x="467" y="492" width="41" height="14"/>
+                                <rect key="frame" x="19" y="61" width="41" height="14"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.2369259648" blue="0.1722603201" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="QD7-nU-mwr">
-                                <rect key="frame" x="549" y="407" width="147" height="31"/>
-                                <color key="thumbTintColor" red="0.4499123169" green="0.47425063779999999" blue="0.086495866729999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="sliderHeard:" destination="gR5-v0-bBQ" eventType="valueChanged" id="EnC-we-k8c"/>
-                                </connections>
-                            </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.70000000000000007" contentMode="left" fixedFrame="YES" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUr-Xf-FfP">
                                 <rect key="frame" x="513" y="408" width="25" height="27"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -572,25 +560,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Size:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxY-zB-qfs">
-                                <rect key="frame" x="476" y="506" width="32" height="29"/>
+                                <rect key="frame" x="28" y="75" width="32" height="29"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.2369259648" blue="0.1722603201" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Family:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oL-t7-EZr">
-                                <rect key="frame" x="465" y="448" width="43" height="14"/>
+                                <rect key="frame" x="17" y="17" width="43" height="14"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.2369259648" blue="0.1722603201" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.79999999999999993" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a0a-ip-KDt">
-                                <rect key="frame" x="513" y="440" width="164" height="29"/>
+                                <rect key="frame" x="65" y="9" width="164" height="29"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                 <color key="textColor" red="0.50588238240000005" green="0.35294118520000001" blue="0.086274512110000007" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.79999999999999993" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="saU-JH-0QC">
-                                <rect key="frame" x="512" y="512" width="170" height="18"/>
+                                <rect key="frame" x="64" y="81" width="170" height="18"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                 <color key="textColor" red="0.50588238240000005" green="0.35294118520000001" blue="0.086274512110000007" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
@@ -601,21 +589,28 @@
                                 <color key="textColor" red="0.50588238240000005" green="0.35294118520000001" blue="0.086274512110000007" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" verticalCompressionResistancePriority="250" fixedFrame="YES" pagingEnabled="YES" bouncesZoom="NO" keyboardDismissMode="interactive" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqR-U9-jRX">
-                                <rect key="frame" x="8" y="573" width="752" height="2100"/>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" verticalCompressionResistancePriority="1000" fixedFrame="YES" pagingEnabled="YES" bouncesZoom="NO" keyboardDismissMode="interactive" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqR-U9-jRX">
+                                <rect key="frame" x="16" y="442" width="752" height="2100"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.79999999999999993" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nwt-dX-q2I">
-                                <rect key="frame" x="638" y="524" width="73" height="41"/>
+                                <rect key="frame" x="190" y="93" width="73" height="41"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                 <color key="textColor" red="0.50588238240000005" green="0.35294118520000001" blue="0.086274512110000007" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="QD7-nU-mwr">
+                                <rect key="frame" x="615" y="407" width="147" height="31"/>
+                                <color key="thumbTintColor" red="0.4499123169" green="0.47425063779999999" blue="0.086495866729999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderHeard:" destination="gR5-v0-bBQ" eventType="valueChanged" id="EnC-we-k8c"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </scrollView>
@@ -669,7 +664,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5H-WM-HSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationItem id="Z3U-e1-UzB"/>
             </objects>
-            <point key="canvasLocation" x="7988" y="-5302"/>
+            <point key="canvasLocation" x="8162" y="-5276"/>
         </scene>
         <!--Info-->
         <scene sceneID="4kx-ZB-vuU">
@@ -4410,7 +4405,6 @@ Cg
                         <segue destination="ipT-Uz-Ikr" kind="relationship" relationship="viewControllers" id="GwB-zK-5ym"/>
                         <segue destination="GE5-RV-ZjM" kind="relationship" relationship="viewControllers" id="pHU-Tj-E3n"/>
                         <segue destination="U5e-XN-a7j" kind="relationship" relationship="viewControllers" id="l13-nP-grX"/>
-                        <segue destination="5NA-cD-WiG" kind="relationship" relationship="viewControllers" id="XVI-hX-rQd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPB-M8-2CE" userLabel="First Responder" sceneMemberID="firstResponder"/>

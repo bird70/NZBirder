@@ -192,6 +192,7 @@
 		B98227EB1773B38C00A97BD3 /* Hihi_Stitchbird.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B98227EA1773B38C00A97BD3 /* Hihi_Stitchbird.mp3 */; };
 		B98227EE1773B61000A97BD3 /* 0002.png in Resources */ = {isa = PBXBuildFile; fileRef = B98227EC1773B61000A97BD3 /* 0002.png */; };
 		B98227EF1773B61000A97BD3 /* 0002@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B98227ED1773B61000A97BD3 /* 0002@2x.png */; };
+		B996FEFC1C69E31900097071 /* CaliforniaQuail_SidMosdell_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B996FEFB1C69E31900097071 /* CaliforniaQuail_SidMosdell_TN.jpg */; };
 		B9A5865619F79C20000901A9 /* CaliforniaQuail_SidMosdell.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9A5865519F79C20000901A9 /* CaliforniaQuail_SidMosdell.jpg */; };
 		B9A86A98173FB2C6006908C0 /* bellbird-56.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9A86A97173FB2C6006908C0 /* bellbird-56.mp3 */; };
 		B9ACFDEC17C84AB0002CE932 /* Shining_BronzeCuckoo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9ACFDE317C84AB0002CE932 /* Shining_BronzeCuckoo.mp3 */; };
@@ -611,6 +612,7 @@
 		B98227EA1773B38C00A97BD3 /* Hihi_Stitchbird.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hihi_Stitchbird.mp3; sourceTree = "<group>"; };
 		B98227EC1773B61000A97BD3 /* 0002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0002.png; sourceTree = "<group>"; };
 		B98227ED1773B61000A97BD3 /* 0002@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0002@2x.png"; sourceTree = "<group>"; };
+		B996FEFB1C69E31900097071 /* CaliforniaQuail_SidMosdell_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CaliforniaQuail_SidMosdell_TN.jpg; sourceTree = "<group>"; };
 		B9A5865519F79C20000901A9 /* CaliforniaQuail_SidMosdell.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CaliforniaQuail_SidMosdell.jpg; sourceTree = "<group>"; };
 		B9A86A97173FB2C6006908C0 /* bellbird-56.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bellbird-56.mp3"; path = "assets/bellbird/bellbird-56.mp3"; sourceTree = SOURCE_ROOT; };
 		B9ACFDE317C84AB0002CE932 /* Shining_BronzeCuckoo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Shining_BronzeCuckoo.mp3; sourceTree = "<group>"; };
@@ -968,6 +970,7 @@
 		B91684B717AE0512007C7161 /* Thumbnails */ = {
 			isa = PBXGroup;
 			children = (
+				B996FEFB1C69E31900097071 /* CaliforniaQuail_SidMosdell_TN.jpg */,
 				B9B4B13219CA1CB1004E010D /* BlackShag_steintil_TN.jpg */,
 				B9B4B13319CA1CB1004E010D /* HouseSparrow_steintil_TN.jpg */,
 				B9B4B13419CA1CB1004E010D /* LittleBluePenguin_steintil_TN.jpg */,
@@ -1697,6 +1700,7 @@
 				B9B120AC199A037C00CB8F80 /* CrestedGrebe.jpg in Resources */,
 				B91682FB17A8CE99007C7161 /* blackbackedgull.mp3 in Resources */,
 				B9B14384199B53F000908EFB /* BullersShearwater.jpg in Resources */,
+				B996FEFC1C69E31900097071 /* CaliforniaQuail_SidMosdell_TN.jpg in Resources */,
 				B9B4B13C19CA1CB1004E010D /* PiedStilt_steintil_TN.jpg in Resources */,
 				B91682FC17A8CE99007C7161 /* redbilledgull.mp3 in Resources */,
 				B9B120B1199A037C00CB8F80 /* Black_billed_gull.jpg in Resources */,

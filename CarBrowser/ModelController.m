@@ -312,7 +312,7 @@
         [newManagedObject1 setValue:@"Morepork" forKey:@"name"];
         [newManagedObject1 setValue:@"grey" forKey:@"beak_colour"];
         [newManagedObject1 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject1 setValue:@"nocturnal, fly silently" forKey:@"behaviour"];
+        [newManagedObject1 setValue:@"nocturnal,can fly silently" forKey:@"behaviour"];
         [newManagedObject1 setValue:@"1" forKey:@"category"];
         [newManagedObject1 setValue:@"brown" forKey:@"colour"];
         [newManagedObject1 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -375,7 +375,7 @@
         [newManagedObject2 setValue:@"Fantail" forKey:@"name"];
         [newManagedObject2 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject2 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject2 setValue:@"restless" forKey:@"behaviour"];
+        [newManagedObject2 setValue:@"can fly, restless" forKey:@"behaviour"];
         [newManagedObject2 setValue:@"1" forKey:@"category"];
         [newManagedObject2 setValue:@"black,grey" forKey:@"colour"];
         [newManagedObject2 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -405,7 +405,7 @@
         [newManagedObject2 setValue:imageData2t forKey:@"thumbnail"];
         
         
-        [newManagedObject2 setValue:@"Known for its friendly ‘cheet cheet’ call and energetic flying antics, the aptly named fantail is one of the most common and widely distributed native birds on the New Zealand mainland.\n\nIt is easily recognized by its long tail which opens to a fan. It has a small head and bill and has two colour forms, pied and melanistic or black. The pied birds are grey-brown with white and black bands.\n\nThe fantail is widespread throughout New Zealand and its offshore islands, including the Chatham Islands and Snares Islands. It is common in most regions of the country, except in the dry, open country of inland Marlborough and Central Otago, where frosts and snow falls are too harsh for it. It also breeds widely in Australia and some Pacific Islands.\n\nThe fantail is one of the few native bird species in New Zealand that has been able to adapt to an environment greatly altered by humans. Originally a bird of open native forests and scrub, it is now also found in exotic plantation forests, in orchards and in gardens. Fantails stay in pairs all year but high mortality means that they seldom survive more than one season.\nThe success of the species is largely due to the fantail’s prolific and early breeding. Juvenile males can start breeding between 2–9 months old, and females can lay as many as 5 clutches in one season, with between 2–5 eggs per clutch.\n\nFantail populations fluctuate greatly from year to year, especially when winters are prolonged or severe storms hit in spring. However, since they are prolific breeders, they are able to spring back quickly after such events.\nBoth adults incubate eggs for about 14 days and the chicks fledge at about 13 days. Both adults will feed the young, but as soon as the female starts building the next nest the male takes over the role of feeding the previous brood. Young are fed about every 10 minutes – about 100 times per day!\n\nIn Māori mythology the fantail was responsible for the presence of death in the world. Maui, thinking he could eradicate death by successfully passing through the goddess of death, Hine-nui-te-po, tried to enter the goddess’s sleeping body through the pathway of birth. The fantail, warned by Maui to be quiet, began laughing and woke Hine-nuite- po, who was so angry that she promptly killed Maui.\n\nDid you know?\n\nFantails use three methods to catch insects. The first, called hawking, is used where vegetation is open and the birds can see for long distances. Fantails use a perch to spot swarms of insects and then fly at the prey, snapping several insects at a time.\nThe second method that fantails use in denser vegetation is called flushing. The fantail flies around to disturb insects, flushing them out before eating them.\nFeeding associations are the third way fantails find food. Every tramper is familiar with this method, where the fantail follows another bird or animal to capture insects disturbed by their movements. Fantails frequently follow feeding silvereyes, whiteheads, parakeets and saddlebacks, as well as people.\n " forKey:@"item_description"];
+        [newManagedObject2 setValue:@"Known for its friendly ‘cheet cheet’ call and energetic flying antics, the aptly named fantail is one of the most common and widely distributed native birds on the New Zealand mainland.\n\nIt is easily recognized by its long tail which opens to a fan. \n\nT It is common in most regions of the country, except in the dry, open country of inland Marlborough and Central Otago, where frosts and snow falls are too harsh for it. It also breeds widely in Australia and some Pacific Islands.\n\nThe fantail is one of the few native bird species in New Zealand that has been able to adapt to an environment greatly altered by humans. Originally a bird of open native forests and scrub, it is now also found in exotic plantation forests, in orchards and in gardens. Fantails stay in pairs all year but high mortality means that they seldom survive more than one season.\nThe success of the species is largely due to the fantail’s prolific and early breeding. Juvenile males can start breeding between 2–9 months old, and females can lay as many as 5 clutches in one season, with between 2–5 eggs per clutch.\n\nFantail populations fluctuate greatly from year to year, especially when winters are prolonged or severe storms hit in spring. However, since they are prolific breeders, they are able to spring back quickly after such events.\nBoth adults incubate eggs for about 14 days and the chicks fledge at about 13 days. Both adults will feed the young, but as soon as the female starts building the next nest the male takes over the role of feeding the previous brood. Young are fed about every 10 minutes – about 100 times per day!\n\nIn Māori mythology the fantail was responsible for the presence of death in the world. Maui, thinking he could eradicate death by successfully passing through the goddess of death, Hine-nui-te-po, tried to enter the goddess’s sleeping body through the pathway of birth. The fantail, warned by Maui to be quiet, began laughing and woke Hine-nuite- po, who was so angry that she promptly killed Maui.\n\nDid you know?\n\nFantails use three methods to catch insects. The first, called hawking, is used where vegetation is open and the birds can see for long distances. Fantails use a perch to spot swarms of insects and then fly at the prey, snapping several insects at a time.\nThe second method that fantails use in denser vegetation is called flushing. The fantail flies around to disturb insects, flushing them out before eating them.\nFeeding associations are the third way fantails find food. Every tramper is familiar with this method, where the fantail follows another bird or animal to capture insects disturbed by their movements. Fantails frequently follow feeding silvereyes, whiteheads, parakeets and saddlebacks, as well as people.\n " forKey:@"item_description"];
         [newManagedObject2 setValue:@"black" forKey:@"leg_colour"];
         [newManagedObject2 setValue:@"http://en.wikipedia.org/wiki/Fantail" forKey:@"link"];
         [newManagedObject2 setValue:@"Piwakawaka" forKey:@"othername"];
@@ -432,7 +432,7 @@
         [newManagedObject3 setValue:@"Tui" forKey:@"name"];
         [newManagedObject3 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject3 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject3 setValue:@"great imitator of other birds" forKey:@"behaviour"];
+        [newManagedObject3 setValue:@"can fly, great imitator of other birds" forKey:@"behaviour"];
         [newManagedObject3 setValue:@"1" forKey:@"category"];
         [newManagedObject3 setValue:@"black" forKey:@"colour"];
         [newManagedObject3 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -488,7 +488,7 @@
         [newManagedObject4 setValue:@"Stitchbird" forKey:@"name"];
         [newManagedObject4 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject4 setValue:@"short,pointed,curved" forKey:@"beak_length"];
-        [newManagedObject4 setValue:@"only bird to mate face to face" forKey:@"behaviour"];
+        [newManagedObject4 setValue:@"can fly, only bird to mate face to face" forKey:@"behaviour"];
         [newManagedObject4 setValue:@"1" forKey:@"category"];
         [newManagedObject4 setValue:@"brown" forKey:@"colour"];
         [newManagedObject4 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -517,7 +517,7 @@
         [newManagedObject4 setValue:imageData4t forKey:@"thumbnail"];
         
         
-        [newManagedObject4 setValue:@"The stitchbird/hihi (Notiomystis cincta) is one of New Zealand’s rarest birds.  A medium-sized forest species, hihi compete with tui and bellbirds for nectar, insects and small fruits.\nBut apart from diet, hihi share few qualities with tui and bellbird, which are members of the honeyeater family.  Recent DNA analysis has shown that hihi are in fact the sole representative of another bird family found only in New Zealand whose closest relatives may be the iconic wattlebirds that include kokako, saddleback and the extinct huia.\nHow to recognise hihi\n\nMale and female hihi look quite different.  He flaunts a flashy plumage of black head with white ‘ear’ tufts, bright yellow shoulder bars and breast bands and a white wing bar and has a mottled tan-grey-brown body.\nShe is more subdued with an olive-grey-brown body cover, white wing bars and small white ‘ear’ tufts.  They both have small cat-like whiskers around the beak and large bright eyes.\nHihi can be recognised by their posture of an upward tilted tail and strident call from which the name ‘stitchbird’ derives.  A 19th century ornithologist Sir Walter Buller described the call made by the male hihi as resembling the word ‘stitch’.  This call sounds a little like two stones being repeatedly stuck together.  Both males and females also have a range of warble-like calls and whistles.\n\nUnique characteristics\nUnlike most other birds, hihi build their nests in tree cavities.  The nest is complex with a stick base topped with a nest cup of finer twigs and lined with fern scales, lichen and spider web.\nHihi have a diverse and unusual mating system.  A female may breed with a single male or with several.  These arrangements can make determining the parentage of chicks a challenge.  Hihi are also the only birds known to sometimes mate face to face.\n\nHihi research\n    An active research programme with Massey and Auckland universities, as well as other institutes, has greatly increased our knowledge of hihi biology.\nHihi have been found to have a fascinating and complex mating system.  Males pair up with a female in their territory while also seeking to mate with other females in the neighbourhood.  To ensure the chicks are his, males need to produce large amounts of sperm to dilute that of other males.  And to avoid wasting this, the male has to assess exactly when a female is ready to breed.  In the days leading up to laying, when a female is weighed down with developing eggs, a number of males may chase her for hours at a time, all attempting to mate with her.\nResearch has also resulted in developing techniques for managing nesting behaviour, for example, managing nest mites, cross fostering and sexing of chicks and habitat suitability.\nManagement of the captive population at the Pukaha Mount Bruce National Wildlife Centre in eastern Wairarapa has also contributed to understanding the role of avian diseases in managing hihi populations.  Diseases such as Aspergillosis, a fungal infection of the respiratory tract, and Coccidiosis, an intestinal parasite, have been found to affect wild hihi survivial.\nCurrent research programmes include developing a technique to measure the size of the Little Barrier hihi population and assess its health and viability.  Another study, on Tiritiri Matangi, is looking at the effect of carotenoid availability on hihi health (carotenoids are used for the yellow colour in male hihi feathers and egg yolk, and are important for health).\n      \n\nWhere to find:  —Little Barrier, Tiritiri Matangi, Kapiti Islands, Kaori Wildlife Sanctuary (Zealandia)." forKey:@"item_description"];
+        [newManagedObject4 setValue:@"The stitchbird/hihi (Notiomystis cincta) is one of New Zealand’s rarest birds.  A medium-sized forest species, hihi compete with tui and bellbirds for nectar, insects and small fruits.\nBut apart from diet, hihi share few qualities with tui and bellbird, which are members of the honeyeater family.  Recent DNA analysis has shown that hihi are in fact the sole representative of another bird family found only in New Zealand whose closest relatives may be the iconic wattlebirds that include kokako, saddleback and the extinct huia.\nHow to recognise hihi\n\nMale and female hihi look quite different.  He flaunts a flashy plumage of black head with white ‘ear’ tufts, bright yellow shoulder bars and breast bands and a white wing bar and has a mottled tan-grey-brown body.\nShe is more subdued with an olive-grey-brown body cover, white wing bars and small white ‘ear’ tufts.  They both have small cat-like whiskers around the beak and large bright eyes.\nHihi can be recognised by their posture of an upward tilted tail and strident call from which the name ‘stitchbird’ derives.  A 19th century ornithologist Sir Walter Buller described the call made by the male hihi as resembling the word ‘stitch’.    Both males and females also have a range of warble-like calls and whistles.\n\nUnique characteristics\nUnlike most other birds, hihi build their nests in tree cavities.  The nest is complex with a stick base topped with a nest cup of finer twigs and lined with fern scales, lichen and spider web.\nHihi have a diverse and unusual mating system. \n\nHihi research\n    An active research programme with Massey and Auckland universities, as well as other institutes, has greatly increased our knowledge of hihi biology.\nHihi have been found to have a fascinating and complex mating system.  Males pair up with a female in their territory while also seeking to mate with other females in the neighbourhood.  To ensure the chicks are his, males need to produce large amounts of sperm to dilute that of other males.  And to avoid wasting this, the male has to assess exactly when a female is ready to breed.  In the days leading up to laying, when a female is weighed down with developing eggs, a number of males may chase her for hours at a time, all attempting to mate with her.\nResearch has also resulted in developing techniques for managing nesting behaviour, for example, managing nest mites, cross fostering and sexing of chicks and habitat suitability.\nManagement of the captive population at the Pukaha Mount Bruce National Wildlife Centre in eastern Wairarapa has also contributed to understanding the role of avian diseases in managing hihi populations.  \n\nWhere to find:  —Little Barrier, Tiritiri Matangi, Kapiti Islands, Kaori Wildlife Sanctuary (Zealandia)." forKey:@"item_description"];
         [newManagedObject4 setValue:@"brown" forKey:@"leg_colour"];
         [newManagedObject4 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/stitchbird/" forKey:@"link"];
         [newManagedObject4 setValue:@"Tauhou/Hihi" forKey:@"othername"];
@@ -608,7 +608,7 @@
         [newManagedObject6 setValue:@"Gull, Red billed " forKey:@"name"];
         [newManagedObject6 setValue:@"red" forKey:@"beak_colour"];
         [newManagedObject6 setValue:@"long, hooked" forKey:@"beak_length"];
-        [newManagedObject6 setValue:@"loud,gregarious,flocks" forKey:@"behaviour"];
+        [newManagedObject6 setValue:@"can fly, loud,gregarious,flocks" forKey:@"behaviour"];
         [newManagedObject6 setValue:@"1" forKey:@"category"];
         [newManagedObject6 setValue:@"white/black" forKey:@"colour"];
         [newManagedObject6 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -637,7 +637,7 @@
         [newManagedObject6 setValue:imageData6t forKey:@"thumbnail"];
         
         
-        [newManagedObject6 setValue:@"The red-billed gull is the commonest gull on the New Zealand coast. Except for a colony at Lake Rotorua, it rarely is found inland. It is commonly seen in coastal towns, garbage dumps and at fish processing facilities. Immature adults are often confused with the closely related black-billed gull. Recently the largest colonies in different parts of New Zealand have exhibited a marked decline in numbers (i.e. Kaikoura, Three Kings and Mokohinau Island). The bird tends to nest at the same locality from one season to the next, and offspring mostly return to their natal colony to breed.\n\nIdentification\n\nSexes are similar, but males are slightly larger with a longer and stouter bill. They are almost completely white but the mantle, back and wing coverts are pale grey. The main flight feathers are black with white tips. The iris is white and the bill, eyelids and feet are scarlet, especially in the breeding season, being more dull during the rest of the year. Immatures are similar to adults, except they have brown patches on the mantle and the primaries are brownish in colour rather than black. The iris, bill and legs of immatures are dark brown. Adult plumage is attained in the second year; birds of this age class can be recognised by the brownish-black tip to the bill, and the primary feathers have a brownish tinge instead of black in older individuals. The subantarctic race is stouter.\n\nVoice: a wide range of calls are used in different circumstances. The alarm call used during the breeding season is a strident \"kek\" call\n\nSimilar species: the red-billed gull is often confused with the similar-looking black-billed gull, especially as juveniles and immature birds of both species have an overlapping range of bill and leg colours. The black-billed gull is always a paler, more elegant bird, with a longer, more slender bill, and with less black on the outer wing. In the South Island, the black-billed gull is seen inland more frequently than the red-billed gull.\n\nDistribution and habitat\n\nRed-billed gulls are found in most coastal locations throughout New Zealand. They are also commonly found in towns, scavenging on human refuse and offal from fish and meat processing works. They are seldom found inland. On mainland New Zealand, breeding occurs in dense colonies, mainly restricted to the eastern coasts of the North and South Islands on stacks, cliffs, river mouths and sandy and rocky shores. On outlying islands they breed on the Chatham, Campbell, Snares and Auckland Islands. Here, their nests are concealed and located singly or in small groups.\n\nPopulation\n\nThe red-billed gull is a very abundant species that has recently suffered huge declines at its three main breeding colonies (Three Kings Islands, Mokohinau Islands and Kaikoura Peninsula). At Kaikoura the decline began in 1994, and between 1983 and 2005 the population declined by 51%. In contrast, with mammalian predator control at the Otago Peninsula, the population has seen a 6-10% increase in the 20 years since 1992." forKey:@"item_description"];
+        [newManagedObject6 setValue:@"The red-billed gull is the commonest gull on the New Zealand coast. Except for a colony at Lake Rotorua, it rarely is found inland. It is commonly seen in coastal towns, garbage dumps and at fish processing facilities. Immature adults are often confused with the closely related black-billed gull. Recently the largest colonies in different parts of New Zealand have exhibited a marked decline in numbers (i.e. Kaikoura, Three Kings and Mokohinau Island). The bird tends to nest at the same locality from one season to the next, and offspring mostly return to their natal colony to breed.\n\nIdentification\n\nSexes are similar, but males are slightly larger with a longer and stouter bill. They are almost completely white but the mantle, back and wing coverts are pale grey. The main flight feathers are black with white tips. The iris is white and the bill, eyelids and feet are scarlet, especially in the breeding season, being more dull during the rest of the year. Immatures are similar to adults, except they have brown patches on the mantle and the primaries are brownish in colour rather than black. The iris, bill and legs of immatures are dark brown. Adult plumage is attained in the second year; birds of this age class can be recognised by the brownish-black tip to the bill, and the primary feathers have a brownish tinge instead of black in older individuals. The subantarctic race is stouter.\n\nVoice:\n\n a wide range of calls are used in different circumstances. The alarm call used during the breeding season is a strident \"kek\" call\n\nSimilar species:\n\n the red-billed gull is often confused with the similar-looking black-billed gull, especially as juveniles and immature birds of both species have an overlapping range of bill and leg colours. The black-billed gull is always a paler, more elegant bird, with a longer, more slender bill, and with less black on the outer wing. In the South Island, the black-billed gull is seen inland more frequently than the red-billed gull.\n\nDistribution and habitat\n\nRed-billed gulls are found in most coastal locations throughout New Zealand. They are also commonly found in towns, scavenging on human refuse and offal from fish and meat processing works. They are seldom found inland. On mainland New Zealand, breeding occurs in dense colonies, mainly restricted to the eastern coasts of the North and South Islands on stacks, cliffs, river mouths and sandy and rocky shores. On outlying islands they breed on the Chatham, Campbell, Snares and Auckland Islands. Here, their nests are concealed and located singly or in small groups.\n\nPopulation\n\nThe red-billed gull is a very abundant species that has recently suffered huge declines at its three main breeding colonies (Three Kings Islands, Mokohinau Islands and Kaikoura Peninsula). At Kaikoura the decline began in 1994, and between 1983 and 2005 the population declined by 51%. In contrast, with mammalian predator control at the Otago Peninsula, the population has seen a 6-10% increase in the 20 years since 1992." forKey:@"item_description"];
         [newManagedObject6 setValue:@"orange" forKey:@"leg_colour"];
         [newManagedObject6 setValue:@"http://www.teara.govt.nz/en/gulls-terns-and-skuas/page-2" forKey:@"link"];
         [newManagedObject6 setValue:@"Tarapunga/ Larus novaehollandiae" forKey:@"othername"];
@@ -672,7 +672,7 @@
         [newManagedObject7 setValue:@"Gull, Black backed " forKey:@"name"];
         [newManagedObject7 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject7 setValue:@"medium,hooked" forKey:@"beak_length"];
-        [newManagedObject7 setValue:@"good glider" forKey:@"behaviour"];
+        [newManagedObject7 setValue:@"can fly, good glider" forKey:@"behaviour"];
         [newManagedObject7 setValue:@"1" forKey:@"category"];
         [newManagedObject7 setValue:@"white" forKey:@"colour"];
         [newManagedObject7 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -702,7 +702,7 @@
         
         
         
-        [newManagedObject7 setValue:@"The southern black-backed gull (or ‘black-back’) is one of the most abundant and familiar large birds in New Zealand, although many people do not realise that the mottled brown juveniles (mistakenly called “mollyhawks”) are the same species as the immaculate adults. Found on or over all non-forested habitats from coastal waters to high-country farms, this is the only large gull found in New Zealand. They are particularly abundant at landfills, around ports and at fish-processing plants.\n\nKnown widely as ‘kelp gull’ in other countries, the same species is also common in similar latitudes around the southern hemisphere, including southern Australia, South America, southern Africa, and most subantarctic and peri-Antarctic islands, and the Antarctic Peninsula.\n\nIdentification\n\nThe familiar large gull throughout New Zealand. Adults have white head and underparts with black back, yellow bill with red spot near tip of lower mandible, and pale green legs. Juveniles are dark mottled brown with black bill and legs; their plumage lightens with age until they moult into adult plumage at 3 years old.\n\nVoice: a long series of loud calls ‘ee-ah-ha-ha-ha’ etc, given in territorial and aggressive contexts.\n\nSimilar species: adults unmistakeable apart from possible vagrant Pacific gull from Australia (which has a more massive bill, and a black subterminal tip to tail). Juveniles may be confused with the more robust brown skua, which has broader wings with a pale flash at the base of the primaries." forKey:@"item_description"];
+        [newManagedObject7 setValue:@"The southern black-backed gull (or ‘black-back’) is one of the most abundant and familiar large birds in New Zealand, although many people do not realise that the mottled brown juveniles (mistakenly called “mollyhawks”) are the same species as the immaculate adults. Found on or over all non-forested habitats from coastal waters to high-country farms, this is the only large gull found in New Zealand. They are particularly abundant at landfills, around ports and at fish-processing plants.\n\nKnown widely as ‘kelp gull’ in other countries, the same species is also common in similar latitudes around the southern hemisphere, including southern Australia, South America, southern Africa, and most subantarctic and peri-Antarctic islands, and the Antarctic Peninsula.\n\nIdentification\n\nThe familiar large gull throughout New Zealand. Adults have white head and underparts with black back, yellow bill with red spot near tip of lower mandible, and pale green legs. Juveniles are dark mottled brown with black bill and legs; their plumage lightens with age until they moult into adult plumage at 3 years old.\n\nVoice:\n\n a long series of loud calls ‘ee-ah-ha-ha-ha’ etc, given in territorial and aggressive contexts.\n\nSimilar species: adults unmistakeable apart from possible vagrant Pacific gull from Australia (which has a more massive bill, and a black subterminal tip to tail). Juveniles may be confused with the more robust brown skua, which has broader wings with a pale flash at the base of the primaries." forKey:@"item_description"];
         [newManagedObject7 setValue:@"orange" forKey:@"leg_colour"];
         [newManagedObject7 setValue:@"http://www.teara.govt.nz/en/gulls-terns-and-skuas/page-1" forKey:@"link"];
         [newManagedObject7 setValue:@"Karoro/ Larus dominicanus" forKey:@"othername"];
@@ -734,7 +734,7 @@
         [newManagedObject8 setValue:@"Oystercatcher, variable" forKey:@"name"];
         [newManagedObject8 setValue:@"red/orange" forKey:@"beak_colour"];
         [newManagedObject8 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject8 setValue:@"very vocal" forKey:@"behaviour"];
+        [newManagedObject8 setValue:@"can fly, very vocal" forKey:@"behaviour"];
         [newManagedObject8 setValue:@"1" forKey:@"category"];
         [newManagedObject8 setValue:@"black" forKey:@"colour"];
         [newManagedObject8 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -761,7 +761,7 @@
         
         [newManagedObject8 setValue:imageData8t forKey:@"thumbnail"];
         
-        [newManagedObject8 setValue:@"The variable oystercatcher is a familiar stocky coastal bird with a long, bright orange bill, found around much of New Zealand. They are often seen in pairs probing busily for shellfish along beaches or in estuaries. Previously shot for food, variable oystercatchers probably reached low numbers before being protected in 1922, since when numbers have increased rapidly. They are long-lived, with some birds reaching 30+ years of age.\n\nThe existence of different colour morphs (black, intermediate or ‘smudgy’, and pied) caused early confusion, and they were variously thought to be different species, forms, or hybrids. This confusion was compounded by a cline in morphs, with the proportion of all-black birds increasing from north to south. The colour morphs inter-breed freely and are now all accepted as being a single species.\n\nIdentification\n\nThe variable oystercatcher is a large heavily-built shorebird. Adults have black upperparts, their underparts vary from all black, through a range of ‘smudgy’ intermediate states to white. They have a conspicuous long bright orange bill (longer in females), and stout coral-pink legs. The iris is red and eye-ring orange. Downy chicks have pale-mid grey upper parts with black markings and black bill. First-year birds have a dark tip to the bill, browner dorsal plumage, and grey legs.\n\nVoice: variable oystercatchers are very vocal; loud piping is used in territorial interactions and when alarmed, and they have a loud flight call similar to other oystercatchers. Chicks are warned of danger with a sharp, loud ‘chip’ or ‘click’.\n\nSimilar species: the black and smudgy morphs are distinctive. Pied morph birds can be confused with South Island pied oystercatcher. If seen together, adult variable oystercatchers are noticeably larger, but first-year birds may be confused. The demarcation between black and white on the breast is generally sharper on South Island pied, and they have more white showing forward of the wing when folded, and a broader white wingbar in flight. The pied morph is similar to Chatham Island oystercatcher, but their ranges are not thought to overlap.\n\nDistribution\n\nVariable oystercatchers occur around most of the coastline of North, South, and Stewart Islands and their offshore islands. Strongholds are in Northland, Auckland, Coromandel Peninsula, Bay of Plenty, Greater Wellington, Nelson/Marlborough, and probably Fiordland. They occur  at lower average densities on west coasts of the two main Islands, and have not been recorded from any outlying island groups.\n\nHabitat\n\nVariable oystercatchers breed most commonly on sandy beaches, sandspits, and in dunes, but will use a wide variety of coastal habitat types, including shell banks, rocky shorelines, and less often gravel beaches. They forage in all these areas and also on inter-tidal mud-flats in estuaries, and on rock platforms." forKey:@"item_description"];
+        [newManagedObject8 setValue:@"The variable oystercatcher is a familiar stocky coastal bird with a long, bright orange bill, found around much of New Zealand. They are often seen in pairs probing busily for shellfish along beaches or in estuaries. Previously shot for food, variable oystercatchers probably reached low numbers before being protected in 1922, since when numbers have increased rapidly. They are long-lived, with some birds reaching 30+ years of age.\n\nThe existence of different colour morphs (black, intermediate or ‘smudgy’, and pied) caused early confusion, and they were variously thought to be different species, forms, or hybrids. This confusion was compounded by a cline in morphs, with the proportion of all-black birds increasing from north to south. The colour morphs inter-breed freely and are now all accepted as being a single species.\n\nIdentification\n\nThe variable oystercatcher is a large heavily-built shorebird. Adults have black upperparts, their underparts vary from all black, through a range of ‘smudgy’ intermediate states to white. They have a conspicuous long bright orange bill (longer in females), and stout coral-pink legs. The iris is red and eye-ring orange. Downy chicks have pale-mid grey upper parts with black markings and black bill. First-year birds have a dark tip to the bill, browner dorsal plumage, and grey legs.\n\nVoice:\n\n variable oystercatchers are very vocal; loud piping is used in territorial interactions and when alarmed, and they have a loud flight call similar to other oystercatchers. Chicks are warned of danger with a sharp, loud ‘chip’ or ‘click’.\n\nSimilar species:\n\n the black and smudgy morphs are distinctive. Pied morph birds can be confused with South Island pied oystercatcher. If seen together, adult variable oystercatchers are noticeably larger, but first-year birds may be confused. The demarcation between black and white on the breast is generally sharper on South Island pied, and they have more white showing forward of the wing when folded, and a broader white wingbar in flight. The pied morph is similar to Chatham Island oystercatcher, but their ranges are not thought to overlap.\n\nDistribution\n\nVariable oystercatchers occur around most of the coastline of North, South, and Stewart Islands and their offshore islands. Strongholds are in Northland, Auckland, Coromandel Peninsula, Bay of Plenty, Greater Wellington, Nelson/Marlborough, and probably Fiordland. They occur  at lower average densities on west coasts of the two main Islands, and have not been recorded from any outlying island groups.\n\nHabitat\n\nVariable oystercatchers breed most commonly on sandy beaches, sandspits, and in dunes, but will use a wide variety of coastal habitat types, including shell banks, rocky shorelines, and less often gravel beaches. They forage in all these areas and also on inter-tidal mud-flats in estuaries, and on rock platforms." forKey:@"item_description"];
         [newManagedObject8 setValue:@"red" forKey:@"leg_colour"];
         [newManagedObject8 setValue:@"http://www.teara.govt.nz/en/wading-birds/page-2" forKey:@"link"];
         [newManagedObject8 setValue:@"black oystercatcher, tōrea pango" forKey:@"othername"];
@@ -793,7 +793,7 @@
         [newManagedObject9 setValue:@"Sparrow" forKey:@"name"];
         [newManagedObject9 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject9 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject9 setValue:@"gregarious, curious" forKey:@"behaviour"];
+        [newManagedObject9 setValue:@"can fly, gregarious, curious" forKey:@"behaviour"];
         [newManagedObject9 setValue:@"1" forKey:@"category"];
         [newManagedObject9 setValue:@"brown" forKey:@"colour"];
         [newManagedObject9 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -822,7 +822,7 @@
         [newManagedObject9 setValue:imageData9t forKey:@"thumbnail"];
         
         
-        [newManagedObject9 setValue:@"One of the world’s most successful introduced species, the house sparrow is found from sub-Arctic to sub-Tropical regions everywhere, except Western Australia and some small islands. It lives mostly in close association with man. This ubiquity has led to many studies of it as a pest and of its physiology, energetics, behaviour, genetics and evolution. There is even a scientific journal devoted to work on the house sparrow and other Passer species.\n\nHouse sparrows were introduced to New Zealand first in the mid 1860s. They soon became abundant and were said to be combating plagues of agricultural pests. By the 1880s, however, they were regarded as pests. Sparrows have made their own way to offshore islands, breeding on those with human habitation. They have evolved differences in morphology in response to local environments. The best source of information on sparrow biology is the monograph by Summers-Smith, although adjustment for the six-month difference in seasons is necessary.\n\nIdentification\n\nMales are smart chestnut-brown, white-and-grey with a distinctive black “bib”; they are difficult to confuse with any other species. Females and young lack the bib and are greyer, with lighter brown dorsal plumage than the male. Their underparts are plain grey, but their backs and wings are variegated several shades of brown and white. The robust conical bill is black in breeding males, otherwise pale pinkish-brown. The eyes are dark brown and legs dull pink.\n\nVoice: the familiar unmelodious chirp is the male’s song, and the same call is used by both sexes in roosts and other social gatherings. The alarm call is harsher.\n\nSimilar species: females and juveniles can be confused with dunnock, greenfinch or chaffinch. Dunnocks are smaller, with darker, more sombre plumage, and a slender dark bill. They usually stay close to cover, and are never in large flocks. Chaffinches differ in their distinctive double wing-bar and white outer tail. The young of greenfinches are greenish above their shorter tail. In comparison with finches, sparrow flight generally is more direct, almost laboured, and usually low.\n\nDistribution and habitat\n\nHouse sparrows are found everywhere except for high mountains and bush." forKey:@"item_description"];
+        [newManagedObject9 setValue:@"One of the world’s most successful introduced species, the house sparrow is found from sub-Arctic to sub-Tropical regions everywhere, except Western Australia and some small islands. It lives mostly in close association with man. This ubiquity has led to many studies of it as a pest and of its physiology, energetics, behaviour, genetics and evolution. There is even a scientific journal devoted to work on the house sparrow and other Passer species.\n\nHouse sparrows were introduced to New Zealand first in the mid 1860s. They soon became abundant and were said to be combating plagues of agricultural pests. By the 1880s, however, they were regarded as pests. Sparrows have made their own way to offshore islands, breeding on those with human habitation. They have evolved differences in morphology in response to local environments. The best source of information on sparrow biology is the monograph by Summers-Smith, although adjustment for the six-month difference in seasons is necessary.\n\nIdentification\n\nMales are smart chestnut-brown, white-and-grey with a distinctive black “bib”; they are difficult to confuse with any other species. Females and young lack the bib and are greyer, with lighter brown dorsal plumage than the male. Their underparts are plain grey, but their backs and wings are variegated several shades of brown and white. The robust conical bill is black in breeding males, otherwise pale pinkish-brown. The eyes are dark brown and legs dull pink.\n\nVoice: the familiar unmelodious chirp is the male’s song, and the same call is used by both sexes in roosts and other social gatherings. The alarm call is harsher.\n\nSimilar species:\n\n females and juveniles can be confused with dunnock, greenfinch or chaffinch. Dunnocks are smaller, with darker, more sombre plumage, and a slender dark bill. They usually stay close to cover, and are never in large flocks. Chaffinches differ in their distinctive double wing-bar and white outer tail. The young of greenfinches are greenish above their shorter tail. In comparison with finches, sparrow flight generally is more direct, almost laboured, and usually low.\n\nDistribution and habitat\n\nHouse sparrows are found everywhere except for high mountains and bush." forKey:@"item_description"];
         [newManagedObject9 setValue:@"yellow" forKey:@"leg_colour"];
         [newManagedObject9 setValue:@"http://en.wikipedia.org/wiki/Sparrow" forKey:@"link"];
         [newManagedObject9 setValue:@"House sparrow" forKey:@"othername"];
@@ -854,11 +854,11 @@
         //Set Bird_attributes 
         [newManagedObject10 setValue:@"Gannet"       forKey:@"name"];
         [newManagedObject10 setValue:@"Takapu (Morus serrator)" forKey:@"othername"];
-        [newManagedObject10 setValue:@"Adults are mostly white, with black flight feathers at the wingtips and lining the trailing edge of the wing. The central tail feathers are also black. The head is yellow, with a pale blue-grey bill edged in black, and blue-rimmed eyes. Their breeding habitat is on islands and the coast of New Zealand, Victoria and Tasmania, with 87% of the adult population in New Zealand. These birds are plunge divers and spectacular fishers, plunging into the ocean at high speed. They mainly eat squid and forage fish which school near the surface. It has the same colours and similar appearance to the Northern Gannet. They normally nest in large colonies on coastal islands. In New Zealand there are colonies of over 10,000 breeding pairs each at Three Kings Islands, Whakaari / White Island and Gannet Island. There is a large protected colony on the mainland at Cape Kidnappers (6,500 pairs). There are also mainland colonies at Muriwai and Farewell Spit, as well as numerous other island colonies. Gannet pairs may remain together over several seasons. They perform elaborate greeting rituals at the nest, stretching their bills and necks skywards and gently tapping bills together. The adults mainly stay close to colonies, whilst the younger birds disperse." forKey:@"item_description"];
+        [newManagedObject10 setValue:@"Up to 1.8m wingspan. Hunt by diving with up to 100km/h so they can catch fish deeper than most other fishing airborne bird species. An air sac under the skin in their face cushions the impact on the water. \n\nAdults are mostly white, with black flight feathers at the wingtips and lining the trailing edge of the wing. The central tail feathers are also black. The head is yellow, with a pale blue-grey bill edged in black, and blue-rimmed eyes. \n\nTheir breeding habitat is on islands and the coast of New Zealand, Victoria and Tasmania, with 87% of the adult population in New Zealand. These birds are plunge divers and spectacular fishers, plunging into the ocean at high speed. They mainly eat squid and forage fish which school near the surface. It has the same colours and similar appearance to the Northern Gannet. \n\nThey normally nest in large colonies on coastal islands. In New Zealand there are colonies of over 10,000 breeding pairs each at Three Kings Islands, Whakaari / White Island and Gannet Island. There is a large protected colony on the mainland at Cape Kidnappers (6,500 pairs). There are also mainland colonies at Muriwai and Farewell Spit, as well as numerous other island colonies. Gannet pairs may remain together over several seasons. They perform elaborate greeting rituals at the nest, stretching their bills and necks skywards and gently tapping bills together. The adults mainly stay close to colonies, whilst the younger birds disperse." forKey:@"item_description"];
         [newManagedObject10 setValue:@"http://www.teara.govt.nz/en/gannets-and-boobies/page-2" forKey:@"link"];
         [newManagedObject10 setValue:@"grey" forKey:@"beak_colour"];
         [newManagedObject10 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject10 setValue:@"Up to 1.8m wingspan. Hunt by diving with up to 100km/h so they can catch fish deeper than most other fishing airborne bird species. An air sac under the skin in their face cushions the impact on the water. " forKey:@"behaviour"];
+        [newManagedObject10 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject10 setValue:@"1" forKey:@"category"];
         [newManagedObject10 setValue:@"white" forKey:@"colour"];
         [newManagedObject10 setValue:@"black" forKey:@"leg_colour"];
@@ -916,7 +916,7 @@
         [newManagedObject11 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/tomtit-miromiro/" forKey:@"link"];
         [newManagedObject11 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject11 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject11 setValue:@"largely insectivore/fruit in winter" forKey:@"behaviour"];
+        [newManagedObject11 setValue:@"can fly, largely insectivore/fruit in winter" forKey:@"behaviour"];
         [newManagedObject11 setValue:@"1" forKey:@"category"];
         [newManagedObject11 setValue:@"black" forKey:@"colour"];
         [newManagedObject11 setValue:@"black" forKey:@"leg_colour"];
@@ -969,14 +969,12 @@
         //Set Bird_attributes
         [newManagedObject12 setValue:@"Starling"       forKey:@"name"];
         [newManagedObject12 setValue:@"Starling" forKey:@"othername"];
-        [newManagedObject12 setValue:@"Introduced to NZ, commonly seen around cities, gardens and the open country. Starlings are small to medium-sized passerine birds in the family Sturnidae. The name \"Sturnidae\" comes from the Latin word for starling, sturnus. Many Asian species, particularly the larger ones, are called mynas, and many African species are known as glossy starlings because of their iridescent plumage. Starlings are native to the Old World, from Europe, Asia and Africa, to northern Australia and the islands of the tropical Pacific. Several European and Asian species have been introduced to these areas as well as North America, Hawaii and New Zealand, where they generally compete for habitat with native birds and are considered to be invasive species. The starling species familiar to most people in Europe and North America is the common starling, and throughout much of Asia and the Pacific the common myna is indeed common.\
-         Starlings have strong feet, their flight is strong and direct, and they are very gregarious. Their preferred habitat is fairly open country, and they eat insects and fruit. Several species live around human habitation, and are effectively omnivores. Many species search for prey such as grubs by \"open-bill probing\", that is, forcefully opening the bill after inserting it into a crevice, thus expanding the hole and exposing the prey; this behavior is referred to by the German verb zirkeln (pronounced [ˈtsɪʁkəln]).\
-         Plumage of many species is typically dark with a metallic sheen. Most species nest in holes, laying blue or white eggs.\
+        [newManagedObject12 setValue:@"Introduced to NZ, commonly seen around cities, gardens and the open country. Starlings are small to medium-sized passerine birds in the family Sturnidae. The name \"Sturnidae\" comes from the Latin word for starling, sturnus. Many Asian species, particularly the larger ones, are called mynas, and many African species are known as glossy starlings because of their iridescent plumage.\n\n Starlings are native to the Old World, from Europe, Asia and Africa, to northern Australia and the islands of the tropical Pacific. Several European and Asian species have been introduced to these areas as well as North America, Hawaii and New Zealand, where they generally compete for habitat with native birds and are considered to be invasive species. The starling species familiar to most people in Europe and North America is the common starling, and throughout much of Asia and the Pacific the common myna is indeed common.\n\n         Starlings have strong feet, their flight is strong and direct, and they are very gregarious. Their preferred habitat is fairly open country, and they eat insects and fruit. Several species live around human habitation, and are effectively omnivores. Many species search for prey such as grubs by \"open-bill probing\", that is, forcefully opening the bill after inserting it into a crevice, thus expanding the hole and exposing the prey; this behavior is referred to by the German verb zirkeln (pronounced [ˈtsɪʁkəln]).\n\n         Plumage of many species is typically dark with a metallic sheen. Most species nest in holes, laying blue or white eggs.\
          Starlings have diverse and complex vocalizations, and have been known to embed sounds from their surroundings into their own calls, including car alarms and human speech patterns. The birds can recognize particular individuals by their calls, and are currently the subject of research into the evolution of human language." forKey:@"item_description"];
         [newManagedObject12 setValue:@"http://en.wikipedia.org/wiki/Starling" forKey:@"link"];
         [newManagedObject12 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject12 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject12 setValue:@"odd and quirky" forKey:@"behaviour"];
+        [newManagedObject12 setValue:@"can fly, odd and quirky" forKey:@"behaviour"];
         [newManagedObject12 setValue:@"1" forKey:@"category"];
         [newManagedObject12 setValue:@"black" forKey:@"colour"];
         [newManagedObject12 setValue:@"black" forKey:@"leg_colour"];
@@ -1030,25 +1028,11 @@
         [newManagedObject13 setValue:@"Goldfinch"       forKey:@"name"];
         [newManagedObject13 setValue:@"Carduelis carduelis" forKey:@"othername"];
         [newManagedObject13 setValue:@"Goldfinches are small finches with flashes of bright yellow and red, common in open country throughout New Zealand. Introduced from Britain 1862-1883, their tinkling calls contribute to the collective noun “a charm of goldfinches”. They are mainly seed-eaters, and often gather in flocks to feed on thistle seed. Goldfinches frequently stray to outlying island groups, and are resident on the Chatham Islands.\
-         \
-         Identification\
-         \
-         Goldfinches are smaller than a house sparrow, with a bright yellow wingbar visible both in flight and when perched. Wings and tail otherwise black (some white spots near tail tip), contrasting with the buff-brown back. Adults have diagnostic bright red, white and black facial feathering. The red is more extensive in the males, especially above and behind the eye. Juveniles have drab brown on the head. Often in flocks (small or large), goldfinches have a bouncy undulating flight accompanied by frequent liquid, tinkly calling.\
-         \
-         Similar species: The slightly larger greenfinch also has yellow at the base of the primaries, forming a diffuse patch on the outer wing. All finches have similar undulating flight, but can be distinguished by their calls (goldfinch has a shrill, clear pee-yu).\
-         \
-         Distribution and habitat\
-         \
-         Throughout the country from sea level up to about 500 m altitude, in farmland, orchards, coastal vegetation, riverbeds, plantations and urban areas – almost anywhere other than dense native forest. Goldfinches are locally common on the Chatham Islands, and occur as vagrants on the Kermadec, Snares, Antipodes, Auckland and Campbell Islands. They occur naturally throughout Europe, North Africa, the Middle East and western Asia, and were introduced to New Zealand, Australia, Argentina and Bermuda.\
-         \
-         Population\
-         \
-         Common and widespread since the 1920s, flocks in the non-breeding season may number several hundred birds.\
-         Commonly kept and bred in captivity around the world because of their distinctive appearance and pleasant song" forKey:@"item_description"];
+         \n\nIdentification\n\n         Goldfinches are smaller than a house sparrow, with a bright yellow wingbar visible both in flight and when perched. Wings and tail otherwise black (some white spots near tail tip), contrasting with the buff-brown back. Adults have diagnostic bright red, white and black facial feathering. The red is more extensive in the males, especially above and behind the eye. Juveniles have drab brown on the head. Often in flocks (small or large), goldfinches have a bouncy undulating flight accompanied by frequent liquid, tinkly calling.\n\n         Similar species: \n\nThe slightly larger greenfinch also has yellow at the base of the primaries, forming a diffuse patch on the outer wing. All finches have similar undulating flight, but can be distinguished by their calls (goldfinch has a shrill, clear pee-yu).\n\n         Distribution and habitat\n\n         Throughout the country from sea level up to about 500 m altitude, in farmland, orchards, coastal vegetation, riverbeds, plantations and urban areas – almost anywhere other than dense native forest. Goldfinches are locally common on the Chatham Islands, and occur as vagrants on the Kermadec, Snares, Antipodes, Auckland and Campbell Islands. They occur naturally throughout Europe, North Africa, the Middle East and western Asia, and were introduced to New Zealand, Australia, Argentina and Bermuda.\n\n         Population\n\n         Common and widespread since the 1920s, flocks in the non-breeding season may number several hundred birds.\n\nCommonly kept and bred in captivity around the world because of their distinctive appearance and pleasant song" forKey:@"item_description"];
         [newManagedObject13 setValue:@"http://www.nzbirds.com/birds/goldfinch.html" forKey:@"link"];
         [newManagedObject13 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject13 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject13 setValue:@"group together in winter" forKey:@"behaviour"];
+        [newManagedObject13 setValue:@"can fly, group together in winter" forKey:@"behaviour"];
         [newManagedObject13 setValue:@"1" forKey:@"category"];
         [newManagedObject13 setValue:@"brown/red/yellow" forKey:@"colour"];
         [newManagedObject13 setValue:@"red/brown" forKey:@"leg_colour"];
@@ -1098,35 +1082,11 @@
         //Set Bird_attributes
         [newManagedObject14 setValue:@"Magpie, australian"       forKey:@"name"];
         [newManagedObject14 setValue:@"Cracticus tibicen" forKey:@"othername"];
-        [newManagedObject14 setValue:@"he black-and-white Australian magpie is a common and conspicuous inhabitant of open country throughout much of New Zealand. It was introduced from Australia and Tasmania by Acclimatisation Societies between 1864 and 1874, mainly to control insect pests. There are three subspecies; the black-backed, and two white-backed forms, with white-backed birds predominating in most parts of New Zealand.\
-         \
-         Identification\
-         \
-         This familiar large songbird is similar in size to a crow or a New Zealand pigeon. The white-backed form tyrannica is the largest of the sub-species. The male has a white hind-neck, mantle, rump and shoulder patches. The upper two-thirds of the tail and under-tail coverts are also white. The rest of the plumage is black, with a blue iridescence. The female is similar, but the mantle is grey, and the black parts of the plumage are less iridescent. Both sexes have a blue-grey bill with a dark tip, and red eyes. The male takes several years to attain full adult plumage; after the second moult it resembles an adult female. Some white appears on the mantle after the third moult, and the remainder after the fourth moult. The juvenile is mottled grey on the under-surface. The black-backed magpie is similar to the white-backed forms, but with a black mantle. The female can be identified by the presence of some grey on the lower hind-neck. The two subspecies interbreed, resulting in offspring with a varying amount of black on the mantle, ranging from a few feathers to a narrow band.\
-         \
-         Both sexes have a distinctive carolling song; “quardle oodle ardle wardle doodle”.\
-         \
-         With its large size and strikingly pied plumage, the Australian magpie is not readily confused with any other species.\
-         \
-         Distribution and habitat\
-         \
-         The magpie is found throughout the North Island. In the South Island it is most common from Kaikoura to Southland. It is uncommon in Nelson and inland Marlborough, and is largely absent from Westland, except for the area between Harihari and Westport. The white-backed forms predominate except in Hawke’s Bay and North Canterbury, where black-backed birds make up around 95% of the population.\
-         \
-         The white-backed forms originate from south-eastern Australia and Tasmania, and the black-backed from northern Australia and southern New Guinea. Australian magpies were also introduced to Fiji.\
-         \
-         Magpies are most abundant on farmland with shelterbelts of pines, macrocarpas and gums. They inhabit both lowland and hill-country farming districts, and are frequently found in urban habitats such as parks and golf-courses.\
-         \
-         Population\
-         \
-         Australian magpies are common in much of the North Island and the east of the South Island south of Kaikoura. They have declined in some areas, e.g. Wellington, as a result of control programmes.\
-         \
-         Ecological and economic impacts\
-         \
-         The Australian magpie has been widely implicated in the predation of native birds and their nests, but much evidence is anecdotal. However, magpies do occasionally kill other birds, mostly smaller species. One was seen to pursue, capture and kill a juvenile goldfinch, and another took 3 newly-hatched banded dotterel chicks from a nest. Most attacks appear to be opportunistic, involving young or weak victims. Many of the attacks by magpies against larger birds are directed towards harriers, and generally cease when the target leaves the territory. This harassment of harriers may even have a protective effect on other species breeding in a magpie’s territory." forKey:@"item_description"];
+        [newManagedObject14 setValue:@"he black-and-white Australian magpie is a common and conspicuous inhabitant of open country throughout much of New Zealand. It was introduced from Australia and Tasmania by Acclimatisation Societies between 1864 and 1874, mainly to control insect pests. There are three subspecies; the black-backed, and two white-backed forms, with white-backed birds predominating in most parts of New Zealand.\n\n        Identification\n\n         This familiar large songbird is similar in size to a crow or a New Zealand pigeon. The white-backed form tyrannica is the largest of the sub-species. The male has a white hind-neck, mantle, rump and shoulder patches. The upper two-thirds of the tail and under-tail coverts are also white. The rest of the plumage is black, with a blue iridescence. The female is similar, but the mantle is grey, and the black parts of the plumage are less iridescent. Both sexes have a blue-grey bill with a dark tip, and red eyes. The male takes several years to attain full adult plumage; after the second moult it resembles an adult female. Some white appears on the mantle after the third moult, and the remainder after the fourth moult. The juvenile is mottled grey on the under-surface. The black-backed magpie is similar to the white-backed forms, but with a black mantle. The female can be identified by the presence of some grey on the lower hind-neck. The two subspecies interbreed, resulting in offspring with a varying amount of black on the mantle, ranging from a few feathers to a narrow band.\n\n         Both sexes have a distinctive carolling song; “quardle oodle ardle wardle doodle”.\n\n         With its large size and strikingly pied plumage, the Australian magpie is not readily confused with any other species.\n\n         Distribution and habitat\n\n        The magpie is found throughout the North Island. In the South Island it is most common from Kaikoura to Southland. It is uncommon in Nelson and inland Marlborough, and is largely absent from Westland, except for the area between Harihari and Westport. The white-backed forms predominate except in Hawke’s Bay and North Canterbury, where black-backed birds make up around 95% of the population.\n        \n        The white-backed forms originate from south-eastern Australia and Tasmania, and the black-backed from northern Australia and southern New Guinea. Australian magpies were also introduced to Fiji.\n         \n         Magpies are most abundant on farmland with shelterbelts of pines, macrocarpas and gums. They inhabit both lowland and hill-country farming districts, and are frequently found in urban habitats such as parks and golf-courses.\n\n      Population\n\n         Australian magpies are common in much of the North Island and the east of the South Island south of Kaikoura. They have declined in some areas, e.g. Wellington, as a result of control programmes.\n         \nEcological and economic impacts\n\n         The Australian magpie has been widely implicated in the predation of native birds and their nests, but much evidence is anecdotal. However, magpies do occasionally kill other birds, mostly smaller species. One was seen to pursue, capture and kill a juvenile goldfinch, and another took 3 newly-hatched banded dotterel chicks from a nest. Most attacks appear to be opportunistic, involving young or weak victims. Many of the attacks by magpies against larger birds are directed towards harriers, and generally cease when the target leaves the territory. This harassment of harriers may even have a protective effect on other species breeding in a magpie’s territory." forKey:@"item_description"];
         [newManagedObject14 setValue:@"http://nzbirdsonline.org.nz/species/australian-magpie" forKey:@"link"];
         [newManagedObject14 setValue:@"white/black" forKey:@"beak_colour"];
         [newManagedObject14 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject14 setValue:@"walks rather than waddles or hops" forKey:@"behaviour"];
+        [newManagedObject14 setValue:@"can fly, walks rather than waddles or hops" forKey:@"behaviour"];
         [newManagedObject14 setValue:@"1" forKey:@"category"];
         [newManagedObject14 setValue:@"black" forKey:@"colour"];
         [newManagedObject14 setValue:@"black" forKey:@"leg_colour"];
@@ -1182,7 +1142,7 @@
         [newManagedObject15 setValue:@"http://www.nzbirds.com/birds/yellowhammer.html" forKey:@"link"];
         [newManagedObject15 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject15 setValue:@"short,pointed" forKey:@"beak_length"];
-        [newManagedObject15 setValue:@"forms small flocks in winter" forKey:@"behaviour"];
+        [newManagedObject15 setValue:@"can fly, forms small flocks in winter" forKey:@"behaviour"];
         [newManagedObject15 setValue:@"1" forKey:@"category"];
         [newManagedObject15 setValue:@"yellow/brown" forKey:@"colour"];
         [newManagedObject15 setValue:@"red" forKey:@"leg_colour"];
@@ -1232,19 +1192,12 @@
         //Set Bird_attributes
         [newManagedObject16 setValue:@"Chaffinch"       forKey:@"name"];
         [newManagedObject16 setValue:@"Fringilla coelebs" forKey:@"othername"];
-        [newManagedObject16 setValue:@"Chaffinches are the commonest and most widespread of New Zealand’s introduced finches, and are found in a wide range of habitats from sea-level to 1400 m. They are self-introduced to many off-shore islands. Chaffinches frequently visit suburban gardens, especially in winter, and are often seen feeding with house sparrows and silvereyes around bird-tables, on lawns and in parks. The sexes may segregate into separate flocks in winter, especially males; hence the specific name of coelebs (bachelor).\
- \
-         Identification\
-         \
-         Male chaffinches are similar in size to a house sparrow, with the females being a little smaller. They are sexually dimorphic; males are brightly coloured in spring and summer with brick-red breasts and chestnut mantles. The crown and nape are greyish- blue and the wings are black with a prominent white wing-bar and shoulder patch. During winter, the colours are duller due to the presence of buff tips to the feathers which wear off by early spring. Females are dull brownish-grey, but with similar wing markings as the males. Both sexes have white in the outer tail-feathers which is conspicuous in flight.\
-         \
-                               Voice: the call is a familiar ‘chink chink’, uttered by both sexes throughout the year. The male has a short rattling song, frequently repeated, during the breeding season.\
-         \
+        [newManagedObject16 setValue:@"Chaffinches are the commonest and most widespread of New Zealand’s introduced finches, and are found in a wide range of habitats from sea-level to 1400 m. They are self-introduced to many off-shore islands. Chaffinches frequently visit suburban gardens, especially in winter, and are often seen feeding with house sparrows and silvereyes around bird-tables, on lawns and in parks. The sexes may segregate into separate flocks in winter, especially males; hence the specific name of coelebs (bachelor).\n\nIdentification\n\n         Male chaffinches are similar in size to a house sparrow, with the females being a little smaller. They are sexually dimorphic; males are brightly coloured in spring and summer with brick-red breasts and chestnut mantles. The crown and nape are greyish- blue and the wings are black with a prominent white wing-bar and shoulder patch. During winter, the colours are duller due to the presence of buff tips to the feathers which wear off by early spring. Females are dull brownish-grey, but with similar wing markings as the males. Both sexes have white in the outer tail-feathers which is conspicuous in flight.\n         \n                               Voice: the call is a familiar ‘chink chink’, uttered by both sexes throughout the year. The male has a short rattling song, frequently repeated, during the breeding season.\nn         \
          Similar species: males are not readily confused with any other species, but the female can be mistaken for a female house sparrow. However, the female chaffinch is slimmer, lacks dark streaks on the upper surface and has prominent white wing markings." forKey:@"item_description"];
         [newManagedObject16 setValue:@"http://en.wikipedia.org/wiki/Common_Chaffinch" forKey:@"link"];
         [newManagedObject16 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject16 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject16 setValue:@"odd and quirky" forKey:@"behaviour"];
+        [newManagedObject16 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject16 setValue:@"1" forKey:@"category"];
         [newManagedObject16 setValue:@"yellow/brown" forKey:@"colour"];
         [newManagedObject16 setValue:@"black" forKey:@"leg_colour"];
@@ -1295,11 +1248,11 @@
         //Set Bird_attributes
         [newManagedObject17 setValue:@"Black Swan"       forKey:@"name"];
         [newManagedObject17 setValue:@"Black Swan" forKey:@"othername"];
-        [newManagedObject17 setValue:@"A large waterbird, a species of swan, which breeds mainly in the southeast and southwest regions of Australia. The species was hunted to extinction in New Zealand, but later reintroduced. Within Australia they are nomadic, with erratic migration patterns dependent upon climatic conditions. Black Swans are large birds with mostly black plumage and red bills. They are monogamous breeders that share incubation duties and cygnet rearing between the sexes. Black Swans can be found singly, or in loose companies numbering into the hundreds or even thousands. Black Swans are popular birds in zoological gardens and bird collections, and escapees are sometimes seen outside their natural range." forKey:@"item_description"];
+        [newManagedObject17 setValue:@"A large waterbird, a species of swan, which breeds mainly in the southeast and southwest regions of Australia. The species was hunted to extinction in New Zealand, but later reintroduced. Within Australia they are nomadic, with erratic migration patterns dependent upon climatic conditions. \n\nBlack Swans are large birds with mostly black plumage and red bills. They are monogamous breeders that share incubation duties and cygnet rearing between the sexes. Black Swans can be found singly, or in loose companies numbering into the hundreds or even thousands.\n\n Black Swans are popular birds in zoological gardens and bird collections, and escapees are sometimes seen outside their natural range." forKey:@"item_description"];
         [newManagedObject17 setValue:@"http://en.wikipedia.org/wiki/Black_Swan" forKey:@"link"];
         [newManagedObject17 setValue:@"red" forKey:@"beak_colour"];
         [newManagedObject17 setValue:@"duck" forKey:@"beak_length"];
-        [newManagedObject17 setValue:@" " forKey:@"behaviour"];
+        [newManagedObject17 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject17 setValue:@"1" forKey:@"category"];
         [newManagedObject17 setValue:@"black" forKey:@"colour"];
         [newManagedObject17 setValue:@"grey,black" forKey:@"leg_colour"];
@@ -1350,11 +1303,11 @@
         //Set Bird_attributes
         [newManagedObject18 setValue:@"Silvereye"       forKey:@"name"];
         [newManagedObject18 setValue:@"Waxeye/ Tauhou" forKey:@"othername"];
-        [newManagedObject18 setValue:@"A small olive green forest bird with white rings around its eyes.\nThese friendly birds were self introduced in the 1800s and now have a wide distribution throughout NZ.\nThe silvereye has a wide distribution throughout New Zealand. They can be found from sea level to above the tree line but they are not abundant in deep forest or open grassland.\nSlightly smaller than a sparrow, the silvereye is olive-green with a ring of white feathers around the eye. Males have slightly brighter plumage than females. They have a fine tapered bill and a brush tipped tongue like the tui and bellbird.\nSilvereye's mainly eat insects, fruit and nectar.\nThe silvereye was first recorded in New Zealand in 1832 and since there is no evidence that it was artificially introduced, it is classified as a native species. Its Māori name, tauhou, means stranger or more literally, new arrival." forKey:@"item_description"];
+        [newManagedObject18 setValue:@"A small olive green forest bird with white rings around its eyes.\nThese friendly birds were self introduced in the 1800s and now have a wide distribution throughout NZ.\nThe silvereye has a wide distribution throughout New Zealand. They can be found from sea level to above the tree line but they are not abundant in deep forest or open grassland.\nSlightly smaller than a sparrow, the silvereye is olive-green with a ring of white feathers around the eye. Males have slightly brighter plumage than females. They have a fine tapered bill and a brush tipped tongue like the tui and bellbird.\nSilvereye's mainly eat insects, fruit and nectar.\n\nThe silvereye was first recorded in New Zealand in 1832 and since there is no evidence that it was artificially introduced, it is classified as a native species. Its Māori name, tauhou, means stranger or more literally, new arrival." forKey:@"item_description"];
         [newManagedObject18 setValue:@"http://nzbirdsonline.org.nz/?q=node/586" forKey:@"link"];
         [newManagedObject18 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject18 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject18 setValue:@"odd and quirky" forKey:@"behaviour"];
+        [newManagedObject18 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject18 setValue:@"1" forKey:@"category"];
         [newManagedObject18 setValue:@"yellow/brown/green" forKey:@"colour"];
         [newManagedObject18 setValue:@"black" forKey:@"leg_colour"];
@@ -1409,7 +1362,7 @@
         [newManagedObject19 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/bellbird-korimako/facts/" forKey:@"link"];
         [newManagedObject19 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject19 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject19 setValue:@"odd and quirky" forKey:@"behaviour"];
+        [newManagedObject19 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject19 setValue:@"1" forKey:@"category"];
         [newManagedObject19 setValue:@"brown/green" forKey:@"colour"];
         [newManagedObject19 setValue:@"black" forKey:@"leg_colour"];
@@ -1465,7 +1418,7 @@
         [newManagedObject20 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/kiwi/" forKey:@"link"];
         [newManagedObject20 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject20 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject20 setValue:@"flightless,nocturnal" forKey:@"behaviour"];
+        [newManagedObject20 setValue:@"can fly, flightless,nocturnal" forKey:@"behaviour"];
         [newManagedObject20 setValue:@"1" forKey:@"category"];
         [newManagedObject20 setValue:@"brown" forKey:@"colour"];
         [newManagedObject20 setValue:@"brown" forKey:@"leg_colour"];
@@ -1520,7 +1473,7 @@
         [newManagedObject21 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/kea/" forKey:@"link"];
         [newManagedObject21 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject21 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject21 setValue:@"only in southern alps" forKey:@"behaviour"];
+        [newManagedObject21 setValue:@"can fly, only in southern alps" forKey:@"behaviour"];
         [newManagedObject21 setValue:@"1" forKey:@"category"];
         [newManagedObject21 setValue:@"green" forKey:@"colour"];
         [newManagedObject21 setValue:@"brown" forKey:@"leg_colour"];
@@ -1576,7 +1529,7 @@
         [newManagedObject22 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/nz-pigeon-kereru/" forKey:@"link"];
         [newManagedObject22 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject22 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject22 setValue:@"odd and quirky" forKey:@"behaviour"];
+        [newManagedObject22 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject22 setValue:@"1" forKey:@"category"];
         [newManagedObject22 setValue:@"grey" forKey:@"colour"];
         [newManagedObject22 setValue:@"brown" forKey:@"leg_colour"];
@@ -1632,7 +1585,7 @@
         [newManagedObject23 setValue:@"http://en.wikipedia.org/wiki/Rifleman_(bird)" forKey:@"link"];
         [newManagedObject23 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject23 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject23 setValue:@"flies quick, hums" forKey:@"behaviour"];
+        [newManagedObject23 setValue:@"can fly, flies quick, hums" forKey:@"behaviour"];
         [newManagedObject23 setValue:@"1" forKey:@"category"];
         [newManagedObject23 setValue:@"grey" forKey:@"colour"];
         [newManagedObject23 setValue:@"brown" forKey:@"leg_colour"];
@@ -1687,7 +1640,7 @@
         [newManagedObject24 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/nz-parakeet-kakariki/nz-parakeet-kakariki/" forKey:@"link"];
         [newManagedObject24 setValue:@"black/white" forKey:@"beak_colour"];
         [newManagedObject24 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject24 setValue:@"odd and quirky" forKey:@"behaviour"];
+        [newManagedObject24 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject24 setValue:@"1" forKey:@"category"];
         [newManagedObject24 setValue:@"green" forKey:@"colour"];
         [newManagedObject24 setValue:@"brown" forKey:@"leg_colour"];
@@ -1740,11 +1693,11 @@
         //Set Bird_attributes
         [newManagedObject25 setValue:@"Grey warbler"       forKey:@"name"];
         [newManagedObject25 setValue:@"Riroriro (Gerygone igata)" forKey:@"othername"];
-        [newManagedObject25 setValue:@"The grey warbler is New Zealand’s most widely distributed endemic bird species, based on the number of 10 x 10 km grid squares it occupied over the whole country in a 1999-2004 survey. It vies with rifleman for the title of New Zealand’s smallest bird, with both weighing about 6 g. The title usually goes to rifleman, based on its shorter tail and therefore shorter body length.\n\nThe grey warbler is more often heard than seen, having a loud distinctive song, and tending to spend most of its time in dense vegetation. They are closely related to other members of the Gerygone genus, which are found throughout Australasia and South-East Asia, and include the other native warbler, the Chatham Island warbler.\n\nIdentification\n\nThe grey warbler is a tiny, slim grey songbird that usually stays among canopy foliage. It is olive-grey above, with a grey face and off-white underparts. The tail is darker grey, getting darker towards the tip, contrasting with white tips to the tail feathers, showing as a prominent white band in flight. The black bill is finely pointed, the eye is bright red, and the legs are black and very slender. Grey warblers often glean insects from the outside of the canopy while hovering, which no other New Zealand bird does, making them identifiable by behaviour from a long distance.\n\nVoice: a characteristic long trilled song. The song is louder than expected, given the bird’s size. Only males sing, although females do give short chirp calls, usually as a contact call near the male. Nestlings and fledglings have a high pitched begging call. Begging calls are mimicked by their brood parasite, the shining cuckoo, while in the nest and as a dependent fledgling.\n\nSimilar species: silvereyes are slightly larger, greener above, with buff flanks and (in adults) a characteristic white-eye-ring. In flight, silvereyes have a plain dark tail without a white tip.\n\nDistribution and habitat\n\nThe grey warbler is ubiquitous, occurring everywhere there are trees or shrubs on the three main islands, and on most offshore islands. It is one of the few native species to have maintained their distribution in almost all habitats following human colonisation, including rural and urban areas. They are typically found only in woody vegetation, in mid to high levels of the canopy, making them difficult to observe.\n\nThe grey warbler/riroriro (Gerygone igata) is a relatively inconspicuous grey bird that flits about the canopy of the forest but its call permeates the forest and takes the edge off a hard uphill slog for any attentive tramper.\nThese diminutive insectivorous birds busy themselves along branches seeking out small invertebrates.\nGrey warbler was the surprise recipient of the title of New Zealand's best-loved bird in 2007." forKey:@"item_description"];
+        [newManagedObject25 setValue:@"The grey warbler is New Zealand’s most widely distributed endemic bird species. It vies with rifleman for the title of New Zealand’s smallest bird, with both weighing about 6 g. The title usually goes to rifleman, based on its shorter tail and therefore shorter body length.\n\nThe grey warbler is more often heard than seen, having a loud distinctive song, and tending to spend most of its time in dense vegetation. \n\nIdentification\n\nThe grey warbler is a tiny, slim grey songbird that usually stays among canopy foliage. It is olive-grey above, with a grey face and off-white underparts. The tail is darker grey, getting darker towards the tip, contrasting with white tips to the tail feathers, showing as a prominent white band in flight. The black bill is finely pointed, the eye is bright red, and the legs are black and very slender. Grey warblers often glean insects from the outside of the canopy while hovering, which no other New Zealand bird does, making them identifiable by behaviour from a long distance.\n\nVoice:\n\n a characteristic long trilled song. The song is louder than expected, given the bird’s size. Only males sing, although females do give short chirp calls, usually as a contact call near the male. \n\nSimilar species:\n\n silvereyes are slightly larger, greener above, with buff flanks and (in adults) a characteristic white-eye-ring. In flight, silvereyes have a plain dark tail without a white tip.\n\nDistribution and habitat\n\nThe grey warbler is ubiquitous, occurring everywhere there are trees or shrubs on the three main islands, and on most offshore islands. It is one of the few native species to have maintained their distribution in almost all habitats following human colonisation, including rural and urban areas. They are typically found only in woody vegetation, in mid to high levels of the canopy, making them difficult to observe." forKey:@"item_description"];
         [newManagedObject25 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/grey-warbler-riroriro/" forKey:@"link"];
         [newManagedObject25 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject25 setValue:@"short,pointed" forKey:@"beak_length"];
-        [newManagedObject25 setValue:@"Very active. Absent from open country and alpine areas" forKey:@"behaviour"];
+        [newManagedObject25 setValue:@"can fly, Very active. Absent from open country and alpine areas" forKey:@"behaviour"];
         [newManagedObject25 setValue:@"1" forKey:@"category"];
         [newManagedObject25 setValue:@"grey" forKey:@"colour"];
         [newManagedObject25 setValue:@"black" forKey:@"leg_colour"];
@@ -1802,7 +1755,7 @@
         [newManagedObject26 setValue:@"http://en.wikipedia.org/wiki/Common_Blackbird" forKey:@"link"];
         [newManagedObject26 setValue:@"orange" forKey:@"beak_colour"];
         [newManagedObject26 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject26 setValue:@"Defends its breading territory" forKey:@"behaviour"];
+        [newManagedObject26 setValue:@"can fly, Defends its breading territory" forKey:@"behaviour"];
         [newManagedObject26 setValue:@"1" forKey:@"category"];
         [newManagedObject26 setValue:@"black" forKey:@"colour"];
         [newManagedObject26 setValue:@"brown" forKey:@"leg_colour"];
@@ -1853,11 +1806,11 @@
         //Set Bird_attributes
         [newManagedObject27 setValue:@"Song thrush"       forKey:@"name"];
         [newManagedObject27 setValue:@"Turdus philomelos" forKey:@"othername"];
-        [newManagedObject27 setValue:@"The song thrush is easily recognised by its speckled brown-on-cream breast. It is often heard before it is seen, as it is one of the main songsters of suburban New Zealand, with a very long singing season. Thrushes sing from a high branch, at the top of a tree or on power poles and lines. Their distinctive song comprising a wide range of notes, with each phrase typically repeated 2-3 times in succession. They are common throughout mainland New Zealand, Stewart Island, Chatham Islands and on many off-shore islands. Thrushes frequent a wide range of lowland and hilly habitats including suburban gardens, farmland, woodlands and some forests. They feed mostly on the ground on earthworms and snails, also insects and berries. Song thrushes were introduced from England, and were released widely in New Zealand from 1867.\n\nIdentification\n\nThe song thrush is smaller than a blackbird and is distinguished from the female blackbird by its pale cream underparts speckled with fawn-brown chevrons. The head, back and upper wings and tail are smooth grey-brown with indistinct streaking on the head.  In flight the upper wing is mostly uniform brown. The sexes are alike; juveniles have similar colouring but the speckling on the breast is less distinct.\n\nVoice: distinctive and attractive song comprising a wide range of notes, often repeated, from about May to November, but calling can occur throughout the year. Calling can commence before sunrise. Singing is thought to be by males advertising territorial ownership.\n\nSimilar species: Eurasian blackbirds are larger and darker. Female and juvenile blackbirds are often confused with song thrushes, but do not have the thrush’s cream-coloured underparts overlaid with brown speckles." forKey:@"item_description"];
+        [newManagedObject27 setValue:@"The song thrush is easily recognised by its speckled brown-on-cream breast. It is often heard before it is seen, as it is one of the main songsters of suburban New Zealand, with a very long singing season. Thrushes sing from a high branch, at the top of a tree or on power poles and lines. Their distinctive song comprising a wide range of notes, with each phrase typically repeated 2-3 times in succession.\n\nThe Song Thrush is not usually gregarious, although several birds may roost together in winter or be loosely associated in suitable feeding habitats, perhaps with other thrushes such as the Blackbird.\n\n They are common throughout mainland New Zealand, Stewart Island, Chatham Islands and on many off-shore islands. Thrushes frequent a wide range of lowland and hilly habitats including suburban gardens, farmland, woodlands and some forests. They feed mostly on the ground on earthworms and snails, also insects and berries. Song thrushes were introduced from England, and were released widely in New Zealand from 1867.\n\nIdentification\n\nThe song thrush is smaller than a blackbird and is distinguished from the female blackbird by its pale cream underparts speckled with fawn-brown chevrons. The head, back and upper wings and tail are smooth grey-brown with indistinct streaking on the head.  In flight the upper wing is mostly uniform brown. The sexes are alike; juveniles have similar colouring but the speckling on the breast is less distinct.\n\nVoice: distinctive and attractive song comprising a wide range of notes, often repeated, from about May to November, but calling can occur throughout the year. Calling can commence before sunrise. Singing is thought to be by males advertising territorial ownership.\n\nSimilar species: Eurasian blackbirds are larger and darker. Female and juvenile blackbirds are often confused with song thrushes, but do not have the thrush’s cream-coloured underparts overlaid with brown speckles." forKey:@"item_description"];
         [newManagedObject27 setValue:@"http://en.wikipedia.org/wiki/Song_Thrush" forKey:@"link"];
         [newManagedObject27 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject27 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject27 setValue:@"The Song Thrush is not usually gregarious, although several birds may roost together in winter or be loosely associated in suitable feeding habitats, perhaps with other thrushes such as the Blackbird." forKey:@"behaviour"];
+        [newManagedObject27 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject27 setValue:@"1" forKey:@"category"];
         [newManagedObject27 setValue:@"brown" forKey:@"colour"];
         [newManagedObject27 setValue:@"brown" forKey:@"leg_colour"];
@@ -1913,7 +1866,7 @@
         [newManagedObject28 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/paradise-duck-putakitaki/" forKey:@"link"];
         [newManagedObject28 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject28 setValue:@"duck" forKey:@"beak_length"];
-        [newManagedObject28 setValue:@"odd and quirky" forKey:@"behaviour"];
+        [newManagedObject28 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject28 setValue:@"1" forKey:@"category"];
         [newManagedObject28 setValue:@"brown/white" forKey:@"colour"];
         [newManagedObject28 setValue:@"brown" forKey:@"leg_colour"];
@@ -1970,7 +1923,7 @@
         [newManagedObject29 setValue:@"http://nzbirdsonline.org.nz/species/banded-dotterel" forKey:@"link"];
         [newManagedObject29 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject29 setValue:@"short,pointed" forKey:@"beak_length"];
-        [newManagedObject29 setValue:@"nest in burrows" forKey:@"behaviour"];
+        [newManagedObject29 setValue:@"can fly,nest in burrows" forKey:@"behaviour"];
         [newManagedObject29 setValue:@"1" forKey:@"category"];
         [newManagedObject29 setValue:@"brown" forKey:@"colour"];
         [newManagedObject29 setValue:@"brown" forKey:@"leg_colour"];
@@ -2139,7 +2092,7 @@
         [newManagedObject32 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/" forKey:@"link"];
         [newManagedObject32 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject32 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject32 setValue:@"" forKey:@"behaviour"];
+        [newManagedObject32 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject32 setValue:@"1" forKey:@"category"];
         [newManagedObject32 setValue:@"brown" forKey:@"colour"];
         [newManagedObject32 setValue:@"yellow" forKey:@"leg_colour"];
@@ -2194,7 +2147,7 @@
         [newManagedObject33 setValue:@"http://en.wikipedia.org/wiki/Black-winged_Stilt" forKey:@"link"];
         [newManagedObject33 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject33 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject33 setValue:@"forages in shallow water" forKey:@"behaviour"];
+        [newManagedObject33 setValue:@"can fly,forages in shallow water" forKey:@"behaviour"];
         [newManagedObject33 setValue:@"1" forKey:@"category"];
         [newManagedObject33 setValue:@"black/white" forKey:@"colour"];
         [newManagedObject33 setValue:@"red" forKey:@"leg_colour"];
@@ -2250,7 +2203,7 @@
         [newManagedObject34 setValue:@"en.wikipedia.org/wiki/Pheasant" forKey:@"link"];
         [newManagedObject34 setValue:@"white" forKey:@"beak_colour"];
         [newManagedObject34 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject34 setValue:@"odd and quirky" forKey:@"behaviour"];
+        [newManagedObject34 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject34 setValue:@"1" forKey:@"category"];
         [newManagedObject34 setValue:@"brown/green" forKey:@"colour"];
         [newManagedObject34 setValue:@"brown" forKey:@"leg_colour"];
@@ -2305,7 +2258,7 @@
         [newManagedObject35 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/" forKey:@"link"];
         [newManagedObject35 setValue:@"white" forKey:@"beak_colour"];
         [newManagedObject35 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject35 setValue:@"odd and quirky" forKey:@"behaviour"];
+        [newManagedObject35 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject35 setValue:@"1" forKey:@"category"];
         [newManagedObject35 setValue:@"green/blue" forKey:@"colour"];
         [newManagedObject35 setValue:@"grey" forKey:@"leg_colour"];
@@ -2414,7 +2367,7 @@
         [newManagedObject37 setValue:@"http://en.wikipedia.org/wiki/Eastern_Rosella" forKey:@"link"];
         [newManagedObject37 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject37 setValue:@"hooked" forKey:@"beak_length"];
-        [newManagedObject37 setValue:@"" forKey:@"behaviour"];
+        [newManagedObject37 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject37 setValue:@"1" forKey:@"category"];
         [newManagedObject37 setValue:@"red/green/blue/yellow" forKey:@"colour"];
         [newManagedObject37 setValue:@"brown" forKey:@"leg_colour"];
@@ -2522,7 +2475,7 @@
         [newManagedObject39 setValue:@"http://nzbirdsonline.org.nz/species/spotted-shag" forKey:@"link"];
         [newManagedObject39 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject39 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject39 setValue:@"" forKey:@"behaviour"];
+        [newManagedObject39 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject39 setValue:@"1" forKey:@"category"];
         [newManagedObject39 setValue:@"black/grey" forKey:@"colour"];
         [newManagedObject39 setValue:@"black" forKey:@"leg_colour"];
@@ -2573,11 +2526,11 @@
         //Set Bird_attributes
         [newManagedObject40 setValue:@"Shag, little"       forKey:@"name"];
         [newManagedObject40 setValue:@"Microcarbo melanoleucos" forKey:@"othername"];
-        [newManagedObject40 setValue:@"A coastal bird, also called cormorant or fregate bird. The bird family Phalacrocoracidae or the cormorants is represented by some 40 species of cormorants and shags. The species ranges across New Zealand, from Stewart Island to Northland, and across mainland Australia (although not in the arid interior of the west of the country) and Tasmania and Indonesia. Widespread and common, it lives near bodies of water such as swamps, lakes, lagoons, estuaries and the coastline.\n\nThe little shag is the most widely distributed shag species in New Zealand, found in both marine and freshwater habitats, on the coast as well as on inland lakes, ponds, rivers and streams. It also has the most variable plumage of any New Zealand shag. The face, throat, breast and belly plumage range from completely black through to white, with a range of partial combinations in between. These pose a challenge to identification, at least until the observer becomes familiar with the little shag’s diagnostic short-billed and long-tailed silhouette, along with its small size and stubby yellow bill. Shape alone is sufficient to identify a little shag.\n\nIdentification\n\nThe little shag is a small shag that exhibits bewildering plumage variation. Most adults are black with white cheeks and throat, a colour morph sometimes referred to as a ‘white-throated shag’. At the other extreme, 8-60% of adults (depending on location) have completely white underparts, from face to undertail, indistinguishable from the little pied shags/cormorants of Australia. ‘Intermediate morph’ or ‘smudgy’ are terms used for about 5% of birds that have white faces and throats and variegated patches of black and white on the breast and belly. All three morphs develop a crest during the breeding season. The bill is short, stout and yellow, dark on the ridge. The eye is brown, and facial skin yellow. Legs and feet are black. The pied morph of the little shag is more common in the north of New Zealand. In 1987, white-breasted birds made up 60% of the population in the Far North, 32% in Auckland, 15% in the rest of the North Island, but just 8% in the South Island, where the white-throated morph is predominant.\n\nThe first plumage of juveniles is either white-breasted or entirely black. Examples of each type can be present in the same nest where the adults are of different plumage forms. The all-black fledglings develop a white throat after becoming independent and until then can be confused with little black shags (but note differences in bill colour and shape). Further variation is added by birds with stained white feathers, appearing orange-breasted. This may be due to iron-staining and persists for an extended period, for example throughout the nesting period of a recognised individual.\n\nAll little shags have relatively longer tails than black, pied and little black shags. When flying or roosting with wings held out, their wings are also shorter and broader than these three other ‘black-footed’ shag species.\n\nVoice: silent except at nesting colonies, where males give characteristic bi- or tri-syllabic ‘cooing’ sounds during courtship displays. A greeting call, consisting of a series of notes, uh, uh, uh, uh, fading away, is used by both sexes when approaching the nest to change over or to bring food.\n\nSimilar species: black shag, pied shag, and little pied shag all have plumage that is similar to one of the patterns seen in adult or juvenile little shag colour morphs. In all ages and plumages, little shags can be distinguished from these three other species by their small size combined with a short, stout yellow bill and relatively long tail." forKey:@"item_description"];
+        [newManagedObject40 setValue:@"A coastal bird, also called cormorant or fregate bird. The bird family Phalacrocoracidae or the cormorants is represented by some 40 species of cormorants and shags. It lives near bodies of water such as swamps, lakes, lagoons, estuaries and the coastline.\n\nThe little shag is the most widely distributed shag species in New Zealand, found in both marine and freshwater habitats, on the coast as well as on inland lakes, ponds, rivers and streams. It also has the most variable plumage of any New Zealand shag. The face, throat, breast and belly plumage range from completely black through to white, with a range of partial combinations in between. These pose a challenge to identification, at least until the observer becomes familiar with the little shag’s diagnostic short-billed and long-tailed silhouette, along with its small size and stubby yellow bill. Shape alone is sufficient to identify a little shag.\n\nIdentification\n\nThe little shag is a small shag that exhibits bewildering plumage variation. Most adults are black with white cheeks and throat, a colour morph sometimes referred to as a ‘white-throated shag’. At the other extreme, 8-60% of adults (depending on location) have completely white underparts, from face to undertail, indistinguishable from the little pied shags/cormorants of Australia. ‘Intermediate morph’ or ‘smudgy’ are terms used for about 5% of birds that have white faces and throats and variegated patches of black and white on the breast and belly. All three morphs develop a crest during the breeding season. The bill is short, stout and yellow, dark on the ridge. The eye is brown, and facial skin yellow. Legs and feet are black. The pied morph of the little shag is more common in the north of New Zealand. In 1987, white-breasted birds made up 60% of the population in the Far North, 32% in Auckland, 15% in the rest of the North Island, but just 8% in the South Island, where the white-throated morph is predominant.\n\nThe first plumage of juveniles is either white-breasted or entirely black. Examples of each type can be present in the same nest where the adults are of different plumage forms. The all-black fledglings develop a white throat after becoming independent and until then can be confused with little black shags (but note differences in bill colour and shape). \n\nVoice: silent except at nesting colonies, where males give characteristic bi- or tri-syllabic ‘cooing’ sounds during courtship displays. A greeting call, consisting of a series of notes, uh, uh, uh, uh, fading away, is used by both sexes when approaching the nest to change over or to bring food.\n\nSimilar species: black shag, pied shag, and little pied shag all have plumage that is similar to one of the patterns seen in adult or juvenile little shag colour morphs. In all ages and plumages, little shags can be distinguished from these three other species by their small size combined with a short, stout yellow bill and relatively long tail." forKey:@"item_description"];
         [newManagedObject40 setValue:@"http://en.wikipedia.org/wiki/Cormorant" forKey:@"link"];
         [newManagedObject40 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject40 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject40 setValue:@"" forKey:@"behaviour"];
+        [newManagedObject40 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject40 setValue:@"1" forKey:@"category"];
         [newManagedObject40 setValue:@"black/white" forKey:@"colour"];
         [newManagedObject40 setValue:@"black" forKey:@"leg_colour"];
@@ -2632,7 +2585,7 @@
         [newManagedObject41 setValue:@"http://nzbirdsonline.org.nz/species/sacred-kingfisher" forKey:@"link"];
         [newManagedObject41 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject41 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject41 setValue:@"very shy, fast flier, preys on small animals" forKey:@"behaviour"];
+        [newManagedObject41 setValue:@"can fly,very shy, fast flier, preys on small animals" forKey:@"behaviour"];
         [newManagedObject41 setValue:@"1" forKey:@"category"];
         [newManagedObject41 setValue:@"green/blue" forKey:@"colour"];
         [newManagedObject41 setValue:@"brown" forKey:@"leg_colour"];
@@ -2685,7 +2638,7 @@
         [newManagedObject43 setValue:@"http://en.wikipedia.org/wiki/Myna" forKey:@"link"];
         [newManagedObject43 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject43 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject43 setValue:@"" forKey:@"behaviour"];
+        [newManagedObject43 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject43 setValue:@"1" forKey:@"category"];
         [newManagedObject43 setValue:@"grey/brown/white" forKey:@"colour"];
         [newManagedObject43 setValue:@"yellow" forKey:@"leg_colour"];
@@ -2741,7 +2694,7 @@
         [newManagedObject44 setValue:@"http://en.wikipedia.org/wiki/Dunnock" forKey:@"link"];
         [newManagedObject44 setValue:@"grey/black" forKey:@"beak_colour"];
         [newManagedObject44 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject44 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject44 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject44 setValue:@"0" forKey:@"category"];
         [newManagedObject44 setValue:@"brown" forKey:@"colour"];
         [newManagedObject44 setValue:@"orange/brown" forKey:@"leg_colour"];
@@ -2797,7 +2750,7 @@
         [newManagedObject45 setValue:@"http://en.wikipedia.org/wiki/European_Greenfinch" forKey:@"link"];
         [newManagedObject45 setValue:@"orange" forKey:@"beak_colour"];
         [newManagedObject45 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject45 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject45 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject45 setValue:@"0" forKey:@"category"];
         [newManagedObject45 setValue:@"green" forKey:@"colour"];
         [newManagedObject45 setValue:@"orange/red" forKey:@"leg_colour"];
@@ -2853,7 +2806,7 @@
         [newManagedObject46 setValue:@"http://en.wikipedia.org/wiki/Shining_Cuckoo" forKey:@"link"];
         [newManagedObject46 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject46 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject46 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject46 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject46 setValue:@"0" forKey:@"category"];
         [newManagedObject46 setValue:@"green" forKey:@"colour"];
         [newManagedObject46 setValue:@"black" forKey:@"leg_colour"];
@@ -2909,7 +2862,7 @@
         [newManagedObject47 setValue:@"http://en.wikipedia.org/wiki/Welcome_Swallow" forKey:@"link"];
         [newManagedObject47 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject47 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject47 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject47 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject47 setValue:@"0" forKey:@"category"];
         [newManagedObject47 setValue:@"blue/orange" forKey:@"colour"];
         [newManagedObject47 setValue:@"black" forKey:@"leg_colour"];
@@ -2964,7 +2917,7 @@
         [newManagedObject48 setValue:@"http://en.wikipedia.org/wiki/New_Zealand_kaka" forKey:@"link"];
         [newManagedObject48 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject48 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject48 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject48 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject48 setValue:@"0" forKey:@"category"];
         [newManagedObject48 setValue:@"brown/red" forKey:@"colour"];
         [newManagedObject48 setValue:@"black" forKey:@"leg_colour"];
@@ -3007,7 +2960,7 @@
         [newManagedObject49 setValue:@"http://en.wikipedia.org/wiki/Redpoll" forKey:@"link"];
         [newManagedObject49 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject49 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject49 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject49 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject49 setValue:@"0" forKey:@"category"];
         [newManagedObject49 setValue:@"brown/red" forKey:@"colour"];
         [newManagedObject49 setValue:@"black" forKey:@"leg_colour"];
@@ -3050,7 +3003,7 @@
         [newManagedObject50 setValue:@"http://birding.about.com/od/birdprofiles/p/rockpigeon.htm" forKey:@"link"];
         [newManagedObject50 setValue:@"grey" forKey:@"beak_colour"];
         [newManagedObject50 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject50 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject50 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject50 setValue:@"0" forKey:@"category"];
         [newManagedObject50 setValue:@"grey" forKey:@"colour"];
         [newManagedObject50 setValue:@"red" forKey:@"leg_colour"];
@@ -3093,7 +3046,7 @@
         [newManagedObject51 setValue:@"http://nzbirdsonline.org.nz/species/eurasian-skylark" forKey:@"link"];
         [newManagedObject51 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject51 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject51 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject51 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject51 setValue:@"0" forKey:@"category"];
         [newManagedObject51 setValue:@"brown" forKey:@"colour"];
         [newManagedObject51 setValue:@"brown" forKey:@"leg_colour"];
@@ -3132,11 +3085,11 @@
         //Set Bird_attributes
         [newManagedObject52 setValue:@"Albatross, Northern Royal"       forKey:@"name"];
         [newManagedObject52 setValue:@"toroa" forKey:@"othername"];
-        [newManagedObject52 setValue:@"The northern royal albatross is a huge white albatross with black upperwings. It usually mates for life and breeds only in New Zealand. Biennial breeding takes place primarily on The Sisters and The Forty-Fours Islands in the Chatham Islands. There is also a tiny colony at Taiaroa Head near Dunedin on the mainland of New Zealand, which is a major tourist attraction.\n\nNorthern royal albatross can be sighted throughout the Southern Ocean at any time of the year. Non-breeding and immature birds, including newly fledged birds, undertake a downwind circumnavigation in the Southern Ocean. The main wintering grounds are off the coasts of southern South America. They are generally solitary foragers and forage predominantly over continental shelves to shelf edges.\n\nIdentification\n\nThe northern royal albatross has a white body including the mantle, unlike smaller albatrosses referred to as mollymawks (which have dark backs). The head is white though a small number of females may show some black speckling on the crown. The wings are long and narrow with black upperwings and white underwings apart from a black leading edge between the carpal joint and wingtip. The white tail feathers are occasionally tipped in black. The heavily hooked bill is pale pink with a black cutting edge on the upper mandible. The legs and large webbed feet are a flesh colour. The bill and tarsus are darker pink when rearing chicks. Males are somewhat larger than females.\n\nVoice: northern royal albatrosses are usually silent at sea, but they may produce some croaking and gurgling sound when feeding around vessels.\n\nSimilar species: southern royal albatross adults have at least some white on the upperwings (if not predominantly so). Juvenile southern royal albatrosses have black upperwings, but differ from northern royal albatross in having a white leading edge to the upperwing, and the absence of black on the leading edge of the underwing between the carpal joint and wingtip. Wandering and Antipodean albatrosses lack the black cutting edge to the upper mandible, and rarely exhibit an all-white head, body, and tail in combination with completely dark upperwings.\n\nDistribution and habitat:\n\nWhen not breeding, northern royal albatrosses range widely throughout the Southern Ocean, though rarely into Antarctic waters. The breeding range is restricted to the Chatham Islands (Forty-Fours, Big and Little Sister Islands) and Taiaroa Head on the Otago Peninsula. Hybridisation with southern royal albatross on Enderby Island, Auckland Islands (and at Taiaroa Head) has been recorded. While breeding, they generally forage over the Chatham Rise, and are less common farther north than East Cape, North Island. The majority of the population spends their non-breeding period off both coasts of southern South America, especially over the continental shelf and slope off Chile, and the Patagonian shelf off Argentina.\n\nPopulation\n\nThe total breeding population in the Chatham Islands colonies (99% of the total) is estimated at c. 6,500-7,000 pairs, with c. 5,200-5,800 pairs breeding each year. This number roughly equates to a total population of 17,000 mature individuals. Nearly 30 pairs breed each year at Taiaroa Head which supports 1% of the population. Although the Taiaroa Head colony is increasing, the trend for the overall population remains unknown due to the lack of recent data from the Chatham Islands." forKey:@"item_description"];
+        [newManagedObject52 setValue:@"The northern royal albatross is a huge white albatross with black upperwings. It usually mates for life and breeds only in New Zealand. Biennial breeding takes place primarily on The Sisters and The Forty-Fours Islands in the Chatham Islands. There is also a tiny colony at Taiaroa Head near Dunedin on the mainland of New Zealand, which is a major tourist attraction.\n\nNorthern royal albatross can be sighted throughout the Southern Ocean at any time of the year. Non-breeding and immature birds, including newly fledged birds, undertake a downwind circumnavigation in the Southern Ocean. The main wintering grounds are off the coasts of southern South America. They are generally solitary foragers and forage predominantly over continental shelves to shelf edges.\n\nIdentification\n\nThe northern royal albatross has a white body including the mantle, unlike smaller albatrosses referred to as mollymawks (which have dark backs). The head is white though a small number of females may show some black speckling on the crown. The wings are long and narrow with black upperwings and white underwings apart from a black leading edge between the carpal joint and wingtip. The white tail feathers are occasionally tipped in black. The heavily hooked bill is pale pink with a black cutting edge on the upper mandible. The legs and large webbed feet are a flesh colour. The bill and tarsus are darker pink when rearing chicks. Males are somewhat larger than females.\n\nVoice: northern royal albatrosses are usually silent at sea, but they may produce some croaking and gurgling sound when feeding around vessels.\n\nSimilar species: southern royal albatross adults have at least some white on the upperwings (if not predominantly so). Juvenile southern royal albatrosses have black upperwings, but differ from northern royal albatross in having a white leading edge to the upperwing, and the absence of black on the leading edge of the underwing between the carpal joint and wingtip. \n\nDistribution and habitat:\n\nWhen not breeding, northern royal albatrosses range widely throughout the Southern Ocean, though rarely into Antarctic waters. The breeding range is restricted to the Chatham Islands (Forty-Fours, Big and Little Sister Islands) and Taiaroa Head on the Otago Peninsula.  While breeding, they generally forage over the Chatham Rise, and are less common farther north than East Cape, North Island. The majority of the population spends their non-breeding period off both coasts of southern South America, especially over the continental shelf and slope off Chile, and the Patagonian shelf off Argentina.\n\nPopulation\n\nThe total breeding population in the Chatham Islands colonies (99% of the total) is estimated at c. 6,500-7,000 pairs, with c. 5,200-5,800 pairs breeding each year. Nearly 30 pairs breed each year at Taiaroa Head which supports 1% of the population. Although the Taiaroa Head colony is increasing, the trend for the overall population remains unknown due to the lack of recent data from the Chatham Islands." forKey:@"item_description"];
         [newManagedObject52 setValue:@"http://nzbirdsonline.org.nz/species/northern-royal-albatross" forKey:@"link"];
         [newManagedObject52 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject52 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject52 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject52 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject52 setValue:@"0" forKey:@"category"];
         [newManagedObject52 setValue:@"white/black" forKey:@"colour"];
         [newManagedObject52 setValue:@"pale" forKey:@"leg_colour"];
@@ -3241,7 +3194,7 @@
         [newManagedObject54 setValue:@"http://nzbirdsonline.org.nz/species/bullers-shearwater" forKey:@"link"];
         [newManagedObject54 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject54 setValue:@"long,hooked" forKey:@"beak_length"];
-        [newManagedObject54 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject54 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject54 setValue:@"0" forKey:@"category"];
         [newManagedObject54 setValue:@"black,white" forKey:@"colour"];
         [newManagedObject54 setValue:@"brown" forKey:@"leg_colour"];
@@ -3284,7 +3237,7 @@
         [newManagedObject55 setValue:@"http://en.wikipedia.org/wiki/Caspian_tern" forKey:@"link"];
         [newManagedObject55 setValue:@"red" forKey:@"beak_colour"];
         [newManagedObject55 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject55 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject55 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject55 setValue:@"0" forKey:@"category"];
         [newManagedObject55 setValue:@"grey,white" forKey:@"colour"];
         [newManagedObject55 setValue:@"black" forKey:@"leg_colour"];
@@ -3327,7 +3280,7 @@
         [newManagedObject56 setValue:@"http://en.wikipedia.org/wiki/Black-billed_gull" forKey:@"link"];
         [newManagedObject56 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject56 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject56 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject56 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject56 setValue:@"0" forKey:@"category"];
         [newManagedObject56 setValue:@"white/grey" forKey:@"colour"];
         [newManagedObject56 setValue:@"black" forKey:@"leg_colour"];
@@ -3370,7 +3323,7 @@
         [newManagedObject57 setValue:@"http://en.wikipedia.org/wiki/Redpoll" forKey:@"link"];
         [newManagedObject57 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject57 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject57 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject57 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject57 setValue:@"0" forKey:@"category"];
         [newManagedObject57 setValue:@"grey/white" forKey:@"colour"];
         [newManagedObject57 setValue:@"orange" forKey:@"leg_colour"];
@@ -3415,7 +3368,7 @@
         [newManagedObject59 setValue:@"en.wikipedia.org/wiki/White-fronted_tern" forKey:@"link"];
         [newManagedObject59 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject59 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject59 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject59 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject59 setValue:@"0" forKey:@"category"];
         [newManagedObject59 setValue:@"white/grey/black" forKey:@"colour"];
         [newManagedObject59 setValue:@"black/red" forKey:@"leg_colour"];
@@ -3458,7 +3411,7 @@
         [newManagedObject60 setValue:@"http://nzbirdsonline.org.nz/?q=node/670" forKey:@"link"];
         [newManagedObject60 setValue:@"grey/red" forKey:@"beak_colour"];
         [newManagedObject60 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject60 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject60 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject60 setValue:@"0" forKey:@"category"];
         [newManagedObject60 setValue:@"brown" forKey:@"colour"];
         [newManagedObject60 setValue:@"black" forKey:@"leg_colour"];
@@ -3501,7 +3454,7 @@
         [newManagedObject61 setValue:@"http://nzbirdsonline.org.nz/species/new-zealand-dotterel" forKey:@"link"];
         [newManagedObject61 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject61 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject61 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject61 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject61 setValue:@"0" forKey:@"category"];
         [newManagedObject61 setValue:@"brown/red" forKey:@"colour"];
         [newManagedObject61 setValue:@"grey" forKey:@"leg_colour"];
@@ -3540,11 +3493,11 @@
         //Set Bird_attributes
         [newManagedObject62 setValue:@"Crested Grebe"       forKey:@"name"];
         [newManagedObject62 setValue:@"Crested Grebe" forKey:@"othername"];
-        [newManagedObject62 setValue:@"The Australasian crested grebe is majestic and distinctive diving bird that is usually seen on the southern lakes of New Zealand where it breeds. It has a slender neck, sharp black bill and head with a distinctive black double crest and bright chestnut and black cheek frills, which it uses in its complex and bizarre mating displays. It is unusual for the way it carries its young on its back when swimming. The crested grebe belongs to an ancient order of diving water birds found on every continent in the world. They are rarely seen on land except when they clamber onto their nests on the lake shore. The Australasian crested grebe occurs in New Zealand and Australia but it is threatened in both countries and the New Zealand population probably numbers fewer than 600 birds.\nIdentification\n\nCrested grebes are moderate sized water birds that may be mistaken for waterfowl or shags at a distance. Both sexes have a long, slender neck, fine black bill and head with a distinctive black double crest and bright chestnut and black cheek frills. The upper plumage is a dark chestnut-brown, the under parts silvery white, and the wings have a distinctive white patches that are only seen in flight. Unlike birds in Europe, they appear to retain full breeding plumage throughout the year and duller birds without crests are probably young of the year. The feet have a peculiar lobed structure and are set relatively far back on the body – a design to increase the efficiency and speed of diving. The head and neck of the young are striped black-and-white and the body plumage is grey.\nVoice: a range of loud growling, grunting and barking calls that travel far across water.\nSimilar species: the other New Zealand grebes (dabchick, Australasian little grebe and hoary-headed grebe) are all very small in comparison and lack the head crests and tippets. At a distance could be confused with black or little shags, which have a similar silhouette and diving behaviour." forKey:@"item_description"];
+        [newManagedObject62 setValue:@"The Australasian crested grebe is majestic and distinctive diving bird that is usually seen on the southern lakes of New Zealand where it breeds. It has a slender neck, sharp black bill and head with a distinctive black double crest and bright chestnut and black cheek frills, which it uses in its complex and bizarre mating displays. It is unusual for the way it carries its young on its back when swimming.\n\n The crested grebe belongs to an ancient order of diving water birds found on every continent in the world. They are rarely seen on land except when they clamber onto their nests on the lake shore. The Australasian crested grebe occurs in New Zealand and Australia but it is threatened in both countries and the New Zealand population probably numbers fewer than 600 birds.\n\nIdentification\n\nCrested grebes are moderate sized water birds that may be mistaken for waterfowl or shags at a distance. Both sexes have a long, slender neck, fine black bill and head with a distinctive black double crest and bright chestnut and black cheek frills. The upper plumage is a dark chestnut-brown, the under parts silvery white, and the wings have a distinctive white patches that are only seen in flight. Unlike birds in Europe, they appear to retain full breeding plumage throughout the year and duller birds without crests are probably young of the year. The feet have a peculiar lobed structure and are set relatively far back on the body – a design to increase the efficiency and speed of diving. The head and neck of the young are striped black-and-white and the body plumage is grey.\n\nVoice:\n\n a range of loud growling, grunting and barking calls that travel far across water.\n\nSimilar species:\n\n the other New Zealand grebes (dabchick, Australasian little grebe and hoary-headed grebe) are all very small in comparison and lack the head crests and tippets. At a distance could be confused with black or little shags, which have a similar silhouette and diving behaviour." forKey:@"item_description"];
         [newManagedObject62 setValue:@"http://nzbirdsonline.org.nz/species/australasian-crested-grebe" forKey:@"link"];
         [newManagedObject62 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject62 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject62 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject62 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject62 setValue:@"0" forKey:@"category"];
         [newManagedObject62 setValue:@"brown/red" forKey:@"colour"];
         [newManagedObject62 setValue:@"black" forKey:@"leg_colour"];
@@ -3589,7 +3542,7 @@
         [newManagedObject64 setValue:@"http://nzbirdsonline.org.nz/species/white-heron" forKey:@"link"];
         [newManagedObject64 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject64 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject64 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject64 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject64 setValue:@"0" forKey:@"category"];
         [newManagedObject64 setValue:@"white" forKey:@"colour"];
         [newManagedObject64 setValue:@"black" forKey:@"leg_colour"];
@@ -3632,7 +3585,7 @@
         [newManagedObject65 setValue:@"http://nzbirdsonline.org.nz/species/cattle-egret" forKey:@"link"];
         [newManagedObject65 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject65 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject65 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject65 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject65 setValue:@"0" forKey:@"category"];
         [newManagedObject65 setValue:@"white/orange" forKey:@"colour"];
         [newManagedObject65 setValue:@"black" forKey:@"leg_colour"];
@@ -3675,7 +3628,7 @@
         [newManagedObject66 setValue:@"http://nzbirdsonline.org.nz/species/royal-spoonbill" forKey:@"link"];
         [newManagedObject66 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject66 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject66 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject66 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject66 setValue:@"0" forKey:@"category"];
         [newManagedObject66 setValue:@"white" forKey:@"colour"];
         [newManagedObject66 setValue:@"black" forKey:@"leg_colour"];
@@ -3718,7 +3671,7 @@
         [newManagedObject67 setValue:@"http://nzbirdsonline.org.nz/species/spur-winged-plover" forKey:@"link"];
         [newManagedObject67 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject67 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject67 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject67 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject67 setValue:@"0" forKey:@"category"];
         [newManagedObject67 setValue:@"grey/white/black" forKey:@"colour"];
         [newManagedObject67 setValue:@"black" forKey:@"leg_colour"];
@@ -3804,7 +3757,7 @@
         [newManagedObject69 setValue:@"http://nzbirdsonline.org.nz/species/new-zealand-falcon" forKey:@"link"];
         [newManagedObject69 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject69 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject69 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject69 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject69 setValue:@"0" forKey:@"category"];
         [newManagedObject69 setValue:@"brown/red" forKey:@"colour"];
         [newManagedObject69 setValue:@"black" forKey:@"leg_colour"];
@@ -3847,7 +3800,7 @@
         [newManagedObject70 setValue:@"http://nzbirdsonline.org.nz/species/mallard" forKey:@"link"];
         [newManagedObject70 setValue:@"yellow/black" forKey:@"beak_colour"];
         [newManagedObject70 setValue:@"duck" forKey:@"beak_length"];
-        [newManagedObject70 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject70 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject70 setValue:@"0" forKey:@"category"];
         [newManagedObject70 setValue:@"brown/black/green" forKey:@"colour"];
         [newManagedObject70 setValue:@"orange" forKey:@"leg_colour"];
@@ -3935,7 +3888,7 @@
         [newManagedObject73 setValue:@"http://nzbirdsonline.org.nz/species/whitehead" forKey:@"link"];
         [newManagedObject73 setValue:@"grey" forKey:@"beak_colour"];
         [newManagedObject73 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject73 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject73 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject73 setValue:@"0" forKey:@"category"];
         [newManagedObject73 setValue:@"grey/white" forKey:@"colour"];
         [newManagedObject73 setValue:@"grey" forKey:@"leg_colour"];
@@ -3978,7 +3931,7 @@
         [newManagedObject74 setValue:@"http://nzbirdsonline.org.nz/species/fernbird" forKey:@"link"];
         [newManagedObject74 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject74 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject74 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject74 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject74 setValue:@"0" forKey:@"category"];
         [newManagedObject74 setValue:@"brown" forKey:@"colour"];
         [newManagedObject74 setValue:@"red" forKey:@"leg_colour"];
@@ -4022,7 +3975,7 @@
         [newManagedObject75 setValue:@"http://nzbirdsonline.org.nz/species/wrybill" forKey:@"link"];
         [newManagedObject75 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject75 setValue:@"curved" forKey:@"beak_length"];
-        [newManagedObject75 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject75 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject75 setValue:@"0" forKey:@"category"];
         [newManagedObject75 setValue:@"grey/white" forKey:@"colour"];
         [newManagedObject75 setValue:@"black" forKey:@"leg_colour"];
@@ -4066,7 +4019,7 @@
         [newManagedObject76 setValue:@"http://nzbirdsonline.org.nz/species/new-zealand-pipit" forKey:@"link"];
         [newManagedObject76 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject76 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject76 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject76 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject76 setValue:@"0" forKey:@"category"];
         [newManagedObject76 setValue:@"brown" forKey:@"colour"];
         [newManagedObject76 setValue:@"black" forKey:@"leg_colour"];
@@ -4105,11 +4058,11 @@
         //Set Bird_attributes
         [newManagedObject77 setValue:@"Red-necked stint"       forKey:@"name"];
         [newManagedObject77 setValue:@"rufous-necked stint" forKey:@"othername"];
-        [newManagedObject77 setValue:@"Stints are the smallest of the migratory waders – barely the size of a sparrow. The red-necked stint is the only stint species to regularly occur in New Zealand, with up to 200 spending the southern summer here each year. \n\nThey are most often seen at high-tide roosts associating with other small waders, especially wrybills, and other sandpipers. A tiny wader with dark legs and a short straight black bill, which in breeding plumage has a distinctive rufous ‘balaclava’ but otherwise is pale grey-brown above and off-white below throughout the year. The dorsal feathers have dark shafts and pale fringes, the flight feathers are dark and the rump is white with a dark centre." forKey:@"item_description"];
+        [newManagedObject77 setValue:@"Stints are the smallest of the migratory waders – barely the size of a sparrow.\n\n The red-necked stint is the only stint species to regularly occur in New Zealand, with up to 200 spending the southern summer here each year. \n\nThey are most often seen at high-tide roosts associating with other small waders, especially wrybills, and other sandpipers. A tiny wader with dark legs and a short straight black bill, which in breeding plumage has a distinctive rufous ‘balaclava’ but otherwise is pale grey-brown above and off-white below throughout the year. The dorsal feathers have dark shafts and pale fringes, the flight feathers are dark and the rump is white with a dark centre." forKey:@"item_description"];
         [newManagedObject77 setValue:@"http://nzbirdsonline.org.nz/species/red-necked-stint" forKey:@"link"];
         [newManagedObject77 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject77 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject77 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject77 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject77 setValue:@"0" forKey:@"category"];
         [newManagedObject77 setValue:@"grey/brown" forKey:@"colour"];
         [newManagedObject77 setValue:@"black" forKey:@"leg_colour"];
@@ -4153,9 +4106,9 @@
         [newManagedObject78 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/north-island-robin-toutouwai/" forKey:@"link"];
         [newManagedObject78 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject78 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject78 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject78 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject78 setValue:@"0" forKey:@"category"];
-        [newManagedObject78 setValue:@"brown/red" forKey:@"colour"];
+        [newManagedObject78 setValue:@"brown/grey/black" forKey:@"colour"];
         [newManagedObject78 setValue:@"black" forKey:@"leg_colour"];
         [newManagedObject78 setValue:@"Petroicidae" forKey:@"family"];
         [newManagedObject78 setValue:@"bush" forKey:@"habitat"];
@@ -4207,7 +4160,7 @@
         [newManagedObject81 setValue:@"http://nzbirdsonline.org.nz/species/australasian-shoveler" forKey:@"link"];
         [newManagedObject81 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject81 setValue:@"duck" forKey:@"beak_length"];
-        [newManagedObject81 setValue:@"unknown" forKey:@"behaviour"];
+        [newManagedObject81 setValue:@"can fly" forKey:@"behaviour"];
         [newManagedObject81 setValue:@"0" forKey:@"category"];
         [newManagedObject81 setValue:@"brown/red/black" forKey:@"colour"];
         [newManagedObject81 setValue:@"black" forKey:@"leg_colour"];
@@ -4290,7 +4243,7 @@
                 //Set Bird_attributes
                 [newManagedObject83 setValue:@"Shag, Pied"       forKey:@"name"];
                 [newManagedObject83 setValue:@"Pied Shag" forKey:@"othername"];
-        [newManagedObject83 setValue:@"This large black-and-white shag is often seen individually or in small groups roosting on rocky headlands, trees or artificial structures. In regions where it occurs it can usually be readily seen about harbours and estuaries associated with cities or towns. Unlike most other shag species, the pied shag is reasonably confiding, allowing close approach when roosting or nesting in trees. It generally forages alone, but occasionally in small groups when prey is abundant.\n\nIdentification\n\nPied shags mainly inhabit coastal habitats about much of New Zealand. Adults have the crown, back of the neck, mantle, rump, wings, thighs and tail black, although on close inspection the upper wing coverts are grey-black with a thin black border. The face, throat, sides of neck and underparts are white. The long, hooked beak is grey, the iris is green, and legs and feet black. On breeding adults, the skin in front of the eye is yellow, at the base of beak is pink or pink-red, and the eye-ring is blue. Non-breeding adults have paler skin colours than breeders. The upperparts of juveniles and immatures have dark and pale brown tones. Their underparts are white but with varying amounts of brown mottling, from almost entirely brown to little at all. The skin in front of eye is pale yellow, at the base of the beak is grey - pale pink, and eye-ring is grey.\n\nVoice: generally silent away from nesting colonies, but quite vocal at colonies during pair formation, nest building and when one of a pair returns to nest during incubation. Females give wheezy haa calls, while males give a variety of loud calls, that may be repeated several times, and that sound like aark, kerlick and whee-eh-eh-eh.\n\nSimilar species: the pied morph of the little shag is much smaller and has a short stubby yellow beak. Both the king shag and pied morph of the Stewart Island shag have black heads with white throats, patches of white feathers on the upper wings, and pink feet. Juveniles and immatures of black shag can be difficult to distinguish from the similar-sized juveniles and immatures of pied shag. Both can have underparts from nearly all brown to nearly all white. Juvenile black shags have dark heads and upper throat, and have extensive yellowish facial skin about base of the beak, whereas the yellow is only in front of the eye on the pied shag.\n\nDistribution and habitat\n\nThe pied shag has a mainly coastal breeding distribution, occurring in three separate areas of New Zealand. Northern North Island: colonies on the western and eastern coasts of Northland and Auckland, and extending down to East Cape. Central New Zealand: Wellington, Nelson, Marlborough and Canterbury as far south as Banks Peninsula. Southern South Island: Fiordland and Stewart Island. Pied shags mainly forage in coastal marine waters, harbours and estuaries, but occasionally also in freshwater lakes and ponds close to the coast.\n\nPopulation\n\nWhile counts of pied shags, along with other coastal species, have been undertaken in a few areas (Wellington Harbour, Marlborough Sounds), no attempt has been made to carry out a national count of the species or the number of pairs at all colonies. However, the population in 2012 was estimated to number 1000-5000 mature individuals. An examination of numbers of pairs at colonies during three periods (pre 1980, 1980-1999, post 1999), suggests that populations in the northern North Island and southern South Island are in decline, while those in central New Zealand are increasing." forKey:@"item_description"];
+        [newManagedObject83 setValue:@"This large black-and-white shag is often seen individually or in small groups roosting on rocky headlands, trees or artificial structures. In regions where it occurs it can usually be readily seen about harbours and estuaries associated with cities or towns. Unlike most other shag species, the pied shag is reasonably confiding, allowing close approach when roosting or nesting in trees. It generally forages alone, but occasionally in small groups when prey is abundant.\n\nIdentification\n\nPied shags mainly inhabit coastal habitats about much of New Zealand. Adults have the crown, back of the neck, mantle, rump, wings, thighs and tail black, although on close inspection the upper wing coverts are grey-black with a thin black border. The face, throat, sides of neck and underparts are white. The long, hooked beak is grey, the iris is green, and legs and feet black. On breeding adults, the skin in front of the eye is yellow, at the base of beak is pink or pink-red, and the eye-ring is blue. Non-breeding adults have paler skin colours than breeders. \n\nVoice:\n\n generally silent away from nesting colonies, but quite vocal at colonies during pair formation, nest building and when one of a pair returns to nest during incubation. \n\nSimilar species:\n\n the pied morph of the little shag is much smaller and has a short stubby yellow beak. Both the king shag and pied morph of the Stewart Island shag have black heads with white throats, patches of white feathers on the upper wings, and pink feet. Juveniles and immatures of black shag can be difficult to distinguish from the similar-sized juveniles and immatures of pied shag. Both can have underparts from nearly all brown to nearly all white. Juvenile black shags have dark heads and upper throat, and have extensive yellowish facial skin about base of the beak, whereas the yellow is only in front of the eye on the pied shag.\n\nDistribution and habitat\n\nThe pied shag has a mainly coastal breeding distribution, occurring in three separate areas of New Zealand. Northern North Island: colonies on the western and eastern coasts of Northland and Auckland, and extending down to East Cape. Central New Zealand: Wellington, Nelson, Marlborough and Canterbury as far south as Banks Peninsula. Southern South Island: Fiordland and Stewart Island. Pied shags mainly forage in coastal marine waters, harbours and estuaries, but occasionally also in freshwater lakes and ponds close to the coast. An examination of numbers of pairs at colonies during three periods (pre 1980, 1980-1999, post 1999), suggests that populations in the northern North Island and southern South Island are in decline, while those in central New Zealand are increasing." forKey:@"item_description"];
                 [newManagedObject83 setValue:@"http://nzbirdsonline.org.nz/species/pied-shag" forKey:@"link"];
                 [newManagedObject83 setValue:@"red,pale" forKey:@"beak_colour"];
                 [newManagedObject83 setValue:@"long" forKey:@"beak_length"];
@@ -4334,11 +4287,11 @@
                 //Set Bird_attributes
                 [newManagedObject84 setValue:@"Saddleback"       forKey:@"name"];
                 [newManagedObject84 setValue:@"North Island saddleback" forKey:@"othername"];
-        [newManagedObject84 setValue:@"North Island saddlebacks are conspicuous and easily observed in regenerating scrub, forests and coastal forests. They call frequently, particularly in response to disturbance, and are very active, noisy foragers. They are about the size of a European blackbird. Saddlebacks were widespread at European contact, but rapidly declined on the mainland following the introduction of predatory mammals, especially ship rats and stoats. By the early 1900s, North Island saddlebacks were confined to a single population on Hen Island (Taranga) off the northeast coast of the North Island. A series of successful translocations was initiated by the New Zealand Wildlife Service in the 1960s, and there are now 15 island populations and five at predator-fenced mainland sites.\n\nIdentification\n\nNorth Island saddlebacks have striking black plumage, a rufous chestnut saddle across their back, bright red wattles (that get larger with age) and a thin gold band on the leading edge of the saddle. Sexes are alike, although males usually have larger wattles than females of the same age. Juveniles are similar but their plumage lacks the sheen of adults, with dusty brown tips on black body feathers, the gold band is absent, and they have small wattles.\n\nVoice: a loud chattering call cheet te-te-te-te is uttered throughout the day. Territorial male birds sing male rhythmical song which is characterised by 2-4 introductory chips followed by a series of highly stereotyped and repeated phrases. Over 200 different types of male rhythmical song have been recorded. Male and female birds also give sexually dimorphic quiet calls which are very soft and flute like.\n\nSimilar species: the closely related South Island saddleback now confined to small islands and one fenced sanctuary, all south of Cook Strait.\n\nDistribution\n\nThe single remaining natural population of around 500 birds is on Hen Island. There are translocated populations on Whatupuke (established in 1964), Red Mercury (1966), Cuvier (1968), Lady Alice (1971), Stanley (1977), Little Barrier (1984-1988), Tiritiri Matangi (1984), Kapiti (1987-1989), Mokoia (1992), Moutuhora (1999), Motuihe (2005), and Rangitoto and Motutapu Islands (2011-2012). Coppermine Island was naturally colonised from Whatupuke Island in the 1970s. There are mainland populations at five fenced sanctuaries, Karori Sanctuary (2002), Bushy Park (2006),Tawharanui Regional Park (2012), Cape Sanctuary, Hawke’s Bay (2013) and Maungatautari (2013).\n\nHabitat\n\nNorth Island saddlebacks frequent coastal and inland forests, particularly scrubby regenerating areas, ranging from sea level to more than 600 m above sea level.\n\nPopulation\n\nNorth Island saddlebacks can be very abundant in suitable habitat free of introduced mammals. Recent population estimates suggest there are more than 7000 birds across all populations. However, many of the island estimates are not based on formal counts and the actual number is likely to be much higher.\n" forKey:@"item_description"];
+        [newManagedObject84 setValue:@"North Island saddlebacks are conspicuous and easily observed in regenerating scrub, forests and coastal forests. They call frequently, particularly in response to disturbance, and are very active, noisy foragers. They are about the size of a European blackbird. Saddlebacks were widespread at European contact, but rapidly declined on the mainland following the introduction of predatory mammals, especially ship rats and stoats. By the early 1900s, North Island saddlebacks were confined to a single population on Hen Island (Taranga) off the northeast coast of the North Island. A series of successful translocations was initiated by the New Zealand Wildlife Service in the 1960s, and there are now 15 island populations and five at predator-fenced mainland sites.\n\nIdentification\n\nNorth Island saddlebacks have striking black plumage, a rufous chestnut saddle across their back, bright red wattles (that get larger with age) and a thin gold band on the leading edge of the saddle. Sexes are alike, although males usually have larger wattles than females of the same age. Juveniles are similar but their plumage lacks the sheen of adults, with dusty brown tips on black body feathers, the gold band is absent, and they have small wattles.\n\nVoice: a loud chattering call cheet te-te-te-te is uttered throughout the day. Territorial male birds sing male rhythmical song which is characterised by 2-4 introductory chips followed by a series of highly stereotyped and repeated phrases. Over 200 different types of male rhythmical song have been recorded. Male and female birds also give sexually dimorphic quiet calls which are very soft and flute like.\n\nSimilar species: the closely related South Island saddleback now confined to small islands and one fenced sanctuary, all south of Cook Strait.\n\nDistribution\n\nThe single remaining natural population of around 500 birds is on Hen Island.  There are mainland populations at five fenced sanctuaries, Karori Sanctuary (2002), Bushy Park (2006),Tawharanui Regional Park (2012), Cape Sanctuary, Hawke’s Bay (2013) and Maungatautari (2013).\n\nHabitat\n\nNorth Island saddlebacks frequent coastal and inland forests, particularly scrubby regenerating areas, ranging from sea level to more than 600 m above sea level.\n\nPopulation\n\nNorth Island saddlebacks can be very abundant in suitable habitat free of introduced mammals. Recent population estimates suggest there are more than 7000 birds across all populations. However, many of the island estimates are not based on formal counts and the actual number is likely to be much higher.\n" forKey:@"item_description"];
                 [newManagedObject84 setValue:@"http://nzbirdsonline.org.nz/species/north-island-saddleback" forKey:@"link"];
                 [newManagedObject84 setValue:@"black" forKey:@"beak_colour"];
                 [newManagedObject84 setValue:@"short" forKey:@"beak_length"];
-                [newManagedObject84 setValue:@"shy" forKey:@"behaviour"];
+                [newManagedObject84 setValue:@"can fly,shy" forKey:@"behaviour"];
                 [newManagedObject84 setValue:@"0" forKey:@"category"];
                 [newManagedObject84 setValue:@"black/brown" forKey:@"colour"];
                 [newManagedObject84 setValue:@"black" forKey:@"leg_colour"];
@@ -4382,7 +4335,7 @@
         [newManagedObject85 setValue:@"http://nzbirdsonline.org.nz/species/california-quail" forKey:@"link"];
         [newManagedObject85 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject85 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject85 setValue:@"shy" forKey:@"behaviour"];
+        [newManagedObject85 setValue:@"can fly,shy" forKey:@"behaviour"];
         [newManagedObject85 setValue:@"0" forKey:@"category"];
         [newManagedObject85 setValue:@"grey/brown" forKey:@"colour"];
         [newManagedObject85 setValue:@"brown" forKey:@"leg_colour"];
@@ -4396,7 +4349,7 @@
         [newManagedObject85 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
         
         NSURL *url85t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                                pathForResource:@"Saddleback_Duncan_TN"
+                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
                                                 ofType:@"jpg"]];
         NSData *data85t = [[NSData alloc] initWithContentsOfURL:url85t];
         UIImage *imageSave85t=[[UIImage alloc]initWithData:data85t];

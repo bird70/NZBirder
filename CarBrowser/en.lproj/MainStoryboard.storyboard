@@ -492,7 +492,7 @@
                     <navigationItem key="navigationItem" id="nKw-Zn-bBj">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" restorationIdentifier="segmentControl" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" id="BCs-Ot-YPd">
-                            <rect key="frame" x="15" y="6.5" width="254" height="31"/>
+                            <rect key="frame" x="33" y="6.5" width="254" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="All">
@@ -507,11 +507,6 @@
                                 <action selector="segmentControl:" destination="PSJ-RJ-4rc" eventType="valueChanged" id="Drk-BO-49V"/>
                             </connections>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="QIb-nA-Syh">
-                            <connections>
-                                <action selector="buttonPick:" destination="PSJ-RJ-4rc" id="4fT-qf-YFZ"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="6gC-vj-9ux" id="fcp-h2-Sn7"/>
@@ -890,7 +885,7 @@
                                         <rect key="frame" x="0.0" y="542" width="320" height="295"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VR1-I4-Ds5" id="Znp-1b-SQd">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="295"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="294.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s33-3n-yWz">
