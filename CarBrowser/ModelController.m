@@ -944,7 +944,7 @@
         [newManagedObject11 setValue:imageData11t         forKey:@"thumbnail"];
         
         
-        //[newManagedObject11 setValue:@"tomtit" forKey:@"sound"];
+        [newManagedObject11 setValue:@"north-island-tomtit-song-18ni_DOC" forKey:@"sound"];
         
         [newManagedObject11 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject11 setValue:NO forKey:@"extra"];
@@ -1503,7 +1503,7 @@
         
         
         
-        [newManagedObject21 setValue:@"kea2" forKey:@"sound"];
+        [newManagedObject21 setValue:@"kea-song_DOC" forKey:@"sound"];
         
         [newManagedObject21 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject21 setValue:NO forKey:@"extra"];
@@ -1727,7 +1727,7 @@
         
         
         
-        //[newManagedObject25 setValue:@"kakariki" forKey:@"sound"];
+        [newManagedObject25 setValue:@"grey-warbler-song" forKey:@"sound"];
         
         [newManagedObject25 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject25 setValue:NO forKey:@"extra"];
@@ -2009,7 +2009,7 @@
         [newManagedObject30 setValue:imageData30t         forKey:@"thumbnail"];
         
         
-        //[newManagedObject30 setValue:@"cockatiel" forKey:@"sound"];
+        [newManagedObject30 setValue:@"takahe-song-10_DOC" forKey:@"sound"];
         
         [newManagedObject30 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject30 setValue:NO forKey:@"extra"];
@@ -2939,7 +2939,7 @@
         [newManagedObject48 setValue:imageData48t         forKey:@"thumbnail"];
         
         
-        //[newManagedObject48 setValue:@"kaka" forKey:@"sound"];
+        [newManagedObject48 setValue:@"south-island-kaka_DOC" forKey:@"sound"];
         
         [newManagedObject48 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject48 setValue:NO forKey:@"extra"];
@@ -3476,7 +3476,7 @@
         [newManagedObject61 setValue:imageData61t         forKey:@"thumbnail"];
         
         
-        //[newManagedObject61 setValue:@"" forKey:@"sound"];
+        [newManagedObject61 setValue:@"nz-dotterel-song_DOC" forKey:@"sound"];
         
         [newManagedObject61 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject61 setValue:NO forKey:@"extra"];
@@ -3564,7 +3564,7 @@
         [newManagedObject64 setValue:imageData64t         forKey:@"thumbnail"];
         
         
-        //[newManagedObject64 setValue:@"" forKey:@"sound"];
+        [newManagedObject64 setValue:@"white-heron-song_DOC" forKey:@"sound"];
         
         [newManagedObject64 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject64 setValue:NO forKey:@"extra"];
@@ -3779,7 +3779,7 @@
         [newManagedObject69 setValue:imageData69t         forKey:@"thumbnail"];
         
         
-        //[newManagedObject69 setValue:@"" forKey:@"sound"];
+        [newManagedObject69 setValue:@"nz-falcon-song-12_female_DOC" forKey:@"sound"];
         
         [newManagedObject69 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject69 setValue:NO forKey:@"extra"];
@@ -3867,7 +3867,7 @@
         [newManagedObject72 setValue:imageData72t         forKey:@"thumbnail"];
 //
 //        
-//        [newManagedObject72 setValue:@"kakapo" forKey:@"sound"];
+        [newManagedObject72 setValue:@"kakapo-male-song_DOC_18" forKey:@"sound"];
         
         [newManagedObject72 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject72 setValue:NO forKey:@"extra"];
@@ -3910,7 +3910,7 @@
         [newManagedObject73 setValue:imageData73t         forKey:@"thumbnail"];
         
         
-        //[newManagedObject73 setValue:@"" forKey:@"sound"];
+        [newManagedObject73 setValue:@"whitehead-song-56_DOC" forKey:@"sound"];
         
         [newManagedObject73 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject73 setValue:NO forKey:@"extra"];
@@ -4128,7 +4128,7 @@
         [newManagedObject78 setValue:imageData78t         forKey:@"thumbnail"];
         
         
-        //[newManagedObject78 setValue:@"" forKey:@"sound"];
+        [newManagedObject78 setValue:@"north-island-robin-song_DOC" forKey:@"sound"];
         
         [newManagedObject78 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject78 setValue:NO forKey:@"extra"];
@@ -4313,7 +4313,7 @@
                 [newManagedObject84 setValue:imageData84t         forKey:@"thumbnail"];
         
         
-                //[newManagedObject84 setValue:@"Kiwi" forKey:@"sound"];
+                [newManagedObject84 setValue:@"north-island-saddleback-song_DOC" forKey:@"sound"];
         
                 [newManagedObject84 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
                 [newManagedObject84 setValue:NO forKey:@"extra"];

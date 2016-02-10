@@ -379,6 +379,32 @@
 		B9DF1E4F1775AEF900F5DA74 /* Rifleman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9DF1E4E1775AEF900F5DA74 /* Rifleman.mp3 */; };
 		B9DF1E57177619DA00F5DA74 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DF1E56177619DA00F5DA74 /* Default@2x.png */; };
 		B9DF1E5F1776708300F5DA74 /* BirdMasterTableViewController_CD.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DF1E5E1776708200F5DA74 /* BirdMasterTableViewController_CD.m */; };
+		B9E55D721C6AE96100DBF64A /* australasian-bittern_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D581C6AE96100DBF64A /* australasian-bittern_DOC.mp3 */; };
+		B9E55D731C6AE96100DBF64A /* blue-duck_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D591C6AE96100DBF64A /* blue-duck_DOC.mp3 */; };
+		B9E55D741C6AE96100DBF64A /* grey-warbler-song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D5A1C6AE96100DBF64A /* grey-warbler-song.mp3 */; };
+		B9E55D751C6AE96100DBF64A /* huttons-shearwater_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D5B1C6AE96100DBF64A /* huttons-shearwater_DOC.mp3 */; };
+		B9E55D761C6AE96100DBF64A /* kakapo-male-song_DOC_18.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D5C1C6AE96100DBF64A /* kakapo-male-song_DOC_18.mp3 */; };
+		B9E55D771C6AE96100DBF64A /* kea-song_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D5D1C6AE96100DBF64A /* kea-song_DOC.mp3 */; };
+		B9E55D781C6AE96100DBF64A /* kokako-song_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D5E1C6AE96100DBF64A /* kokako-song_DOC.mp3 */; };
+		B9E55D791C6AE96100DBF64A /* male-ni-brown-kiwi_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D5F1C6AE96100DBF64A /* male-ni-brown-kiwi_DOC.mp3 */; };
+		B9E55D7A1C6AE96100DBF64A /* north-island-robin-song_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D601C6AE96100DBF64A /* north-island-robin-song_DOC.mp3 */; };
+		B9E55D7B1C6AE96100DBF64A /* north-island-saddleback-song_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D611C6AE96100DBF64A /* north-island-saddleback-song_DOC.mp3 */; };
+		B9E55D7C1C6AE96100DBF64A /* north-island-tomtit-song-18ni_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D621C6AE96100DBF64A /* north-island-tomtit-song-18ni_DOC.mp3 */; };
+		B9E55D7D1C6AE96100DBF64A /* nz-dotterel-song_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D631C6AE96100DBF64A /* nz-dotterel-song_DOC.mp3 */; };
+		B9E55D7E1C6AE96100DBF64A /* nz-falcon-song-10_juvenileFemale_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D641C6AE96100DBF64A /* nz-falcon-song-10_juvenileFemale_DOC.mp3 */; };
+		B9E55D7F1C6AE96100DBF64A /* nz-falcon-song-12_female_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D651C6AE96100DBF64A /* nz-falcon-song-12_female_DOC.mp3 */; };
+		B9E55D801C6AE96100DBF64A /* nz-pigeon-song_kereru_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D661C6AE96100DBF64A /* nz-pigeon-song_kereru_DOC.mp3 */; };
+		B9E55D811C6AE96100DBF64A /* paradise-duck-song_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D671C6AE96100DBF64A /* paradise-duck-song_DOC.mp3 */; };
+		B9E55D821C6AE96100DBF64A /* red-crowned-parakeet-song-4_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D681C6AE96100DBF64A /* red-crowned-parakeet-song-4_DOC.mp3 */; };
+		B9E55D831C6AE96100DBF64A /* rock-wren-chicks-begging_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D691C6AE96100DBF64A /* rock-wren-chicks-begging_DOC.mp3 */; };
+		B9E55D841C6AE96100DBF64A /* silvereye-song-22sy_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D6A1C6AE96100DBF64A /* silvereye-song-22sy_DOC.mp3 */; };
+		B9E55D851C6AE96100DBF64A /* south-island-kaka_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D6B1C6AE96100DBF64A /* south-island-kaka_DOC.mp3 */; };
+		B9E55D861C6AE96100DBF64A /* south-island-robin-song-48_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D6C1C6AE96100DBF64A /* south-island-robin-song-48_DOC.mp3 */; };
+		B9E55D871C6AE96100DBF64A /* takahe-song-10_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D6D1C6AE96100DBF64A /* takahe-song-10_DOC.mp3 */; };
+		B9E55D881C6AE96100DBF64A /* western-weka-song_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D6E1C6AE96100DBF64A /* western-weka-song_DOC.mp3 */; };
+		B9E55D891C6AE96100DBF64A /* white-heron-song_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D6F1C6AE96100DBF64A /* white-heron-song_DOC.mp3 */; };
+		B9E55D8A1C6AE96100DBF64A /* whitehead-song-56_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D701C6AE96100DBF64A /* whitehead-song-56_DOC.mp3 */; };
+		B9E55D8B1C6AE96100DBF64A /* yellow-eyed-penguin_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D711C6AE96100DBF64A /* yellow-eyed-penguin_DOC.mp3 */; };
 		B9FEE0B7178A2C2F00768240 /* Info.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FEE0B6178A2C2F00768240 /* Info.m */; };
 		B9FEE0D7178A734900768240 /* Observation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FEE0D6178A734800768240 /* Observation.m */; };
 		B9FEE0E0178A838A00768240 /* 0038.png in Resources */ = {isa = PBXBuildFile; fileRef = B9FEE0D8178A838800768240 /* 0038.png */; };
@@ -832,6 +858,32 @@
 		B9DF1E56177619DA00F5DA74 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B9DF1E5D1776708200F5DA74 /* BirdMasterTableViewController_CD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdMasterTableViewController_CD.h; sourceTree = "<group>"; };
 		B9DF1E5E1776708200F5DA74 /* BirdMasterTableViewController_CD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdMasterTableViewController_CD.m; sourceTree = "<group>"; };
+		B9E55D581C6AE96100DBF64A /* australasian-bittern_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "australasian-bittern_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D591C6AE96100DBF64A /* blue-duck_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "blue-duck_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D5A1C6AE96100DBF64A /* grey-warbler-song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "grey-warbler-song.mp3"; sourceTree = "<group>"; };
+		B9E55D5B1C6AE96100DBF64A /* huttons-shearwater_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "huttons-shearwater_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D5C1C6AE96100DBF64A /* kakapo-male-song_DOC_18.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "kakapo-male-song_DOC_18.mp3"; sourceTree = "<group>"; };
+		B9E55D5D1C6AE96100DBF64A /* kea-song_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "kea-song_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D5E1C6AE96100DBF64A /* kokako-song_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "kokako-song_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D5F1C6AE96100DBF64A /* male-ni-brown-kiwi_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "male-ni-brown-kiwi_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D601C6AE96100DBF64A /* north-island-robin-song_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "north-island-robin-song_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D611C6AE96100DBF64A /* north-island-saddleback-song_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "north-island-saddleback-song_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D621C6AE96100DBF64A /* north-island-tomtit-song-18ni_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "north-island-tomtit-song-18ni_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D631C6AE96100DBF64A /* nz-dotterel-song_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "nz-dotterel-song_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D641C6AE96100DBF64A /* nz-falcon-song-10_juvenileFemale_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "nz-falcon-song-10_juvenileFemale_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D651C6AE96100DBF64A /* nz-falcon-song-12_female_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "nz-falcon-song-12_female_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D661C6AE96100DBF64A /* nz-pigeon-song_kereru_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "nz-pigeon-song_kereru_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D671C6AE96100DBF64A /* paradise-duck-song_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "paradise-duck-song_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D681C6AE96100DBF64A /* red-crowned-parakeet-song-4_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "red-crowned-parakeet-song-4_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D691C6AE96100DBF64A /* rock-wren-chicks-begging_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rock-wren-chicks-begging_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D6A1C6AE96100DBF64A /* silvereye-song-22sy_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "silvereye-song-22sy_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D6B1C6AE96100DBF64A /* south-island-kaka_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "south-island-kaka_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D6C1C6AE96100DBF64A /* south-island-robin-song-48_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "south-island-robin-song-48_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D6D1C6AE96100DBF64A /* takahe-song-10_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "takahe-song-10_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D6E1C6AE96100DBF64A /* western-weka-song_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "western-weka-song_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D6F1C6AE96100DBF64A /* white-heron-song_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "white-heron-song_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D701C6AE96100DBF64A /* whitehead-song-56_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "whitehead-song-56_DOC.mp3"; sourceTree = "<group>"; };
+		B9E55D711C6AE96100DBF64A /* yellow-eyed-penguin_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "yellow-eyed-penguin_DOC.mp3"; sourceTree = "<group>"; };
 		B9FEE0B5178A2C2F00768240 /* Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Info.h; sourceTree = "<group>"; };
 		B9FEE0B6178A2C2F00768240 /* Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Info.m; sourceTree = "<group>"; };
 		B9FEE0D5178A734800768240 /* Observation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observation.h; sourceTree = "<group>"; };
@@ -1160,6 +1212,20 @@
 		B934A522178CEFF300D3F6F7 /* used */ = {
 			isa = PBXGroup;
 			children = (
+				B9E55D5A1C6AE96100DBF64A /* grey-warbler-song.mp3 */,
+				B9E55D5C1C6AE96100DBF64A /* kakapo-male-song_DOC_18.mp3 */,
+				B9E55D5D1C6AE96100DBF64A /* kea-song_DOC.mp3 */,
+				B9E55D5F1C6AE96100DBF64A /* male-ni-brown-kiwi_DOC.mp3 */,
+				B9E55D601C6AE96100DBF64A /* north-island-robin-song_DOC.mp3 */,
+				B9E55D611C6AE96100DBF64A /* north-island-saddleback-song_DOC.mp3 */,
+				B9E55D621C6AE96100DBF64A /* north-island-tomtit-song-18ni_DOC.mp3 */,
+				B9E55D631C6AE96100DBF64A /* nz-dotterel-song_DOC.mp3 */,
+				B9E55D651C6AE96100DBF64A /* nz-falcon-song-12_female_DOC.mp3 */,
+				B9E55D6B1C6AE96100DBF64A /* south-island-kaka_DOC.mp3 */,
+				B9E55D6C1C6AE96100DBF64A /* south-island-robin-song-48_DOC.mp3 */,
+				B9E55D6D1C6AE96100DBF64A /* takahe-song-10_DOC.mp3 */,
+				B9E55D6F1C6AE96100DBF64A /* white-heron-song_DOC.mp3 */,
+				B9E55D701C6AE96100DBF64A /* whitehead-song-56_DOC.mp3 */,
 				B9ACFDE317C84AB0002CE932 /* Shining_BronzeCuckoo.mp3 */,
 				B9ACFDE417C84AB0002CE932 /* Hirundotahitica.mp3 */,
 				B916830617A99355007C7161 /* chaffinch.mp3 */,
@@ -1192,7 +1258,6 @@
 				B9DF1E4E1775AEF900F5DA74 /* Rifleman.mp3 */,
 				B9D92E6B174CEEBF001B6D79 /* kereru.mp3 */,
 				B9B917021744D46600B9916D /* morepork.mp3 */,
-				B9DF1E481775AB8D00F5DA74 /* kea2.mp3 */,
 				B9B916FE1744D46600B9916D /* is_kiwi.mp3 */,
 				B9A86A97173FB2C6006908C0 /* bellbird-56.mp3 */,
 				B9DF1E491775AB8D00F5DA74 /* tui2.mp3 */,
@@ -1401,7 +1466,20 @@
 		B9DF1E5A1776263200F5DA74 /* Soundfiles */ = {
 			isa = PBXGroup;
 			children = (
+				B9DF1E481775AB8D00F5DA74 /* kea2.mp3 */,
+				B9E55D581C6AE96100DBF64A /* australasian-bittern_DOC.mp3 */,
+				B9E55D591C6AE96100DBF64A /* blue-duck_DOC.mp3 */,
+				B9E55D5B1C6AE96100DBF64A /* huttons-shearwater_DOC.mp3 */,
+				B9E55D661C6AE96100DBF64A /* nz-pigeon-song_kereru_DOC.mp3 */,
+				B9E55D641C6AE96100DBF64A /* nz-falcon-song-10_juvenileFemale_DOC.mp3 */,
+				B9E55D671C6AE96100DBF64A /* paradise-duck-song_DOC.mp3 */,
+				B9E55D681C6AE96100DBF64A /* red-crowned-parakeet-song-4_DOC.mp3 */,
+				B9E55D5E1C6AE96100DBF64A /* kokako-song_DOC.mp3 */,
+				B9E55D6A1C6AE96100DBF64A /* silvereye-song-22sy_DOC.mp3 */,
+				B9E55D691C6AE96100DBF64A /* rock-wren-chicks-begging_DOC.mp3 */,
+				B9E55D6E1C6AE96100DBF64A /* western-weka-song_DOC.mp3 */,
 				B9BED11F1797D9E600E6FE0E /* SHAGPhalacrocorax atriceps atriceps a_Puerto de Comodoro Rivadavia_Chubut_23OCT2010 0843_Bernabe Lopez-Lanus.mp3 */,
+				B9E55D711C6AE96100DBF64A /* yellow-eyed-penguin_DOC.mp3 */,
 				B934A522178CEFF300D3F6F7 /* used */,
 			);
 			name = Soundfiles;
@@ -1565,14 +1643,17 @@
 				B8E777EC16C2F2F400949FEE /* InfoPlist.strings in Resources */,
 				B8E777F816C2F2F400949FEE /* Default-568h@2x.png in Resources */,
 				B8E777FB16C2F2F400949FEE /* MainStoryboard.storyboard in Resources */,
+				B9E55D7A1C6AE96100DBF64A /* north-island-robin-song_DOC.mp3 in Resources */,
 				B943EDC11738DC9E007DB011 /* silvereye-song-22sy.mp3 in Resources */,
 				B9B4B12519C98109004E010D /* LittleSpottedKiwi_Apteryx_owenii_REDUCEDSIZE.jpg in Resources */,
 				B9A86A98173FB2C6006908C0 /* bellbird-56.mp3 in Resources */,
 				B9461D9017421910007A8A20 /* 0043.png in Resources */,
 				B9461D9117421910007A8A20 /* 0043@2x.png in Resources */,
+				B9E55D781C6AE96100DBF64A /* kokako-song_DOC.mp3 in Resources */,
 				B9461D9617421B12007A8A20 /* 0063.png in Resources */,
 				B9461D9717421B12007A8A20 /* 0063@2x.png in Resources */,
 				B9461D9817421B12007A8A20 /* 0300.png in Resources */,
+				B9E55D8B1C6AE96100DBF64A /* yellow-eyed-penguin_DOC.mp3 in Resources */,
 				B9B4B13119CA1C4A004E010D /* Saddleback_Duncan.jpg in Resources */,
 				B9461D9917421B12007A8A20 /* 0300@2x.png in Resources */,
 				B946225217421BBF007A8A20 /* 0209.png in Resources */,
@@ -1587,9 +1668,11 @@
 				B94622671743221A007A8A20 /* 0266@2x.png in Resources */,
 				B9B143AB199B624500908EFB /* GreatSpottedKiwi_J_Brew_TN.jpg in Resources */,
 				B9B120B4199A037C00CB8F80 /* Australasian_Harrier_Hawk.jpg in Resources */,
+				B9E55D841C6AE96100DBF64A /* silvereye-song-22sy_DOC.mp3 in Resources */,
 				B94622681743221A007A8A20 /* 0280.png in Resources */,
 				B94622691743221A007A8A20 /* 0280@2x.png in Resources */,
 				B9192C0F1C5AF6A400302321 /* Images.xcassets in Resources */,
+				B9E55D801C6AE96100DBF64A /* nz-pigeon-song_kereru_DOC.mp3 in Resources */,
 				B959C50619962BC60015FD31 /* Kaka_on_Branch.jpg in Resources */,
 				B9B917031744D46600B9916D /* fantail.mp3 in Resources */,
 				B9A5865619F79C20000901A9 /* CaliforniaQuail_SidMosdell.jpg in Resources */,
@@ -1600,9 +1683,11 @@
 				B9B143B2199B624500908EFB /* NZFalcon_TN.jpg in Resources */,
 				B9D92E461748DEB0001B6D79 /* button_back.png in Resources */,
 				B9D92E471748DEB0001B6D79 /* button_normal.png in Resources */,
+				B9E55D7E1C6AE96100DBF64A /* nz-falcon-song-10_juvenileFemale_DOC.mp3 in Resources */,
 				B9B14386199B561C00908EFB /* BarTailedGodwit.jpg in Resources */,
 				B9D92E481748DEB0001B6D79 /* cell_bottom.png in Resources */,
 				B9B4B12D19CA1C4A004E010D /* HouseSparrow_steintil.jpg in Resources */,
+				B9E55D8A1C6AE96100DBF64A /* whitehead-song-56_DOC.mp3 in Resources */,
 				B9D92E491748DEB0001B6D79 /* cell_bottom@2x.png in Resources */,
 				B9D92E4A1748DEB0001B6D79 /* cell_middle.png in Resources */,
 				B9D92E4B1748DEB0001B6D79 /* cell_middle@2x.png in Resources */,
@@ -1650,6 +1735,7 @@
 				B9B4B13D19CA1CB1004E010D /* Saddleback_Duncan_TN.jpg in Resources */,
 				B9FEE0E6178A838A00768240 /* 0207.png in Resources */,
 				B9FEE0E7178A838A00768240 /* 0207@2x.png in Resources */,
+				B9E55D771C6AE96100DBF64A /* kea-song_DOC.mp3 in Resources */,
 				B934A5AD1795DD8000D3F6F7 /* Black_Swan_20110325_XC74379.mp3 in Resources */,
 				B934A5AE1795DD8000D3F6F7 /* Little-PenguineEudyptilaMinor_XC98203.mp3 in Resources */,
 				B934A5AF1795DD8000D3F6F7 /* Weka_Song.mp3 in Resources */,
@@ -1661,6 +1747,7 @@
 				B9192C0C1C5AF67D00302321 /* Icon-76@2x.png in Resources */,
 				B9BED1231797D9E600E6FE0E /* greypeacockpheasantbarkingcallthaiFarrow.mp3 in Resources */,
 				B9BED1251797D9E600E6FE0E /* SHAG_Phalacrocorax_magellanicus.mp3 in Resources */,
+				B9E55D721C6AE96100DBF64A /* australasian-bittern_DOC.mp3 in Resources */,
 				B9BED1261797D9E600E6FE0E /* SHAGAuklandIs_FL Enderby26Nov2000.mp3 in Resources */,
 				B9B143A6199B624500908EFB /* BullersShearwater_TN.jpg in Resources */,
 				B9BED1271797D9E600E6FE0E /* rosellas.mp3 in Resources */,
@@ -1669,10 +1756,12 @@
 				B9BED13F17993C4200E6FE0E /* home_selected@2x.png in Resources */,
 				B9BED14017993C4200E6FE0E /* home.png in Resources */,
 				B9BED14117993C4200E6FE0E /* home@2x.png in Resources */,
+				B9E55D741C6AE96100DBF64A /* grey-warbler-song.mp3 in Resources */,
 				B9BED14217993C4200E6FE0E /* maps_selected.png in Resources */,
 				B9BED14317993C4200E6FE0E /* maps_selected@2x.png in Resources */,
 				B9BED14417993C4200E6FE0E /* maps.png in Resources */,
 				B9B3802619A176D500733646 /* MaskedLapwing_JamesNiland_TN.jpg in Resources */,
+				B9E55D881C6AE96100DBF64A /* western-weka-song_DOC.mp3 in Resources */,
 				B9BED14517993C4200E6FE0E /* maps@2x.png in Resources */,
 				B9BED14817993C4200E6FE0E /* myplan.png in Resources */,
 				B9BED14917993C4200E6FE0E /* myplan@2x.png in Resources */,
@@ -1687,7 +1776,9 @@
 				B9BED14F17993C4200E6FE0E /* tabbar_selected@2x.png in Resources */,
 				B9BED15017993C4200E6FE0E /* tabbar.png in Resources */,
 				B9B120B0199A037C00CB8F80 /* Wrybill_Ben.jpg in Resources */,
+				B9E55D821C6AE96100DBF64A /* red-crowned-parakeet-song-4_DOC.mp3 in Resources */,
 				B9BED15117993C4200E6FE0E /* tabbar@2x.png in Resources */,
+				B9E55D861C6AE96100DBF64A /* south-island-robin-song-48_DOC.mp3 in Resources */,
 				B9CDE3A617A4F56200661AF9 /* 0088.png in Resources */,
 				B9CDE3A717A4F56200661AF9 /* 0088@2x.png in Resources */,
 				B9CDE3A817A4F56200661AF9 /* 0239.png in Resources */,
@@ -1712,6 +1803,7 @@
 				B916831D17AC418B007C7161 /* kingfisher_square_114.png in Resources */,
 				B916831E17AC418B007C7161 /* kingfisher_square_57_2.png in Resources */,
 				B916832117AC41AF007C7161 /* kingfisher_square_57_2.png in Resources */,
+				B9E55D761C6AE96100DBF64A /* kakapo-male-song_DOC_18.mp3 in Resources */,
 				B916832317AC41BB007C7161 /* kingfisher_square_114.png in Resources */,
 				B91683BA17AE0006007C7161 /* 685px-Drozd_zpevny.jpg in Resources */,
 				B91683BB17AE0006007C7161 /* 800px-Charadrius_bicinctus_breeding_-_Ralphs_Bay.jpg in Resources */,
@@ -1722,6 +1814,7 @@
 				B91683BE17AE0006007C7161 /* 1008px-G_tibicen_dorsalis_gnangarra.jpg in Resources */,
 				B91683C017AE0006007C7161 /* Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water.jpg in Resources */,
 				B91683C117AE0006007C7161 /* Anthornis_melanura_New_Zealand_8.jpg in Resources */,
+				B9E55D7C1C6AE96100DBF64A /* north-island-tomtit-song-18ni_DOC.mp3 in Resources */,
 				B91683C217AE0006007C7161 /* Blackbird.jpg in Resources */,
 				B91683C317AE0006007C7161 /* BlackSwanCygnus_atratus.jpg in Resources */,
 				B9B120BA199A0D4000CB8F80 /* GreatSpottedKiwi_J_Brew.jpg in Resources */,
@@ -1739,6 +1832,7 @@
 				B91683CE17AE0006007C7161 /* Goldhammer_IMG_6809.jpg in Resources */,
 				B91683D017AE0006007C7161 /* harrierHawk.jpg in Resources */,
 				B91683D117AE0006007C7161 /* Hihi_Stitchbird1.jpg in Resources */,
+				B9E55D791C6AE96100DBF64A /* male-ni-brown-kiwi_DOC.mp3 in Resources */,
 				B91683D217AE0006007C7161 /* Kingfisher_IMG_6929.jpg in Resources */,
 				B91683D317AE0006007C7161 /* Little_Penguin.jpg in Resources */,
 				B9B143B0199B624500908EFB /* NorthIsland_Tomtit_steintil_TN.jpg in Resources */,
@@ -1747,6 +1841,7 @@
 				B91683D817AE0006007C7161 /* New_Zealand_Pigeon_Southstar_02.jpg in Resources */,
 				B91683DA17AE0006007C7161 /* NZKingfisher_Kotare_IMG_6861.jpg in Resources */,
 				B9B143AA199B624500908EFB /* Fantail_TN.jpg in Resources */,
+				B9E55D751C6AE96100DBF64A /* huttons-shearwater_DOC.mp3 in Resources */,
 				B91683DB17AE0006007C7161 /* ParadiseDuck.jpg in Resources */,
 				B9B85DE319AC7C7B00FC688C /* NorthernRoyalAlbatross_Ben_TN.jpg in Resources */,
 				B9B143B7199B624500908EFB /* RoyalSpoonbill_TN.jpg in Resources */,
@@ -1760,13 +1855,17 @@
 				B91683E217AE0006007C7161 /* RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c.jpg in Resources */,
 				B9B1437D199B4AC000908EFB /* NZDotterel.jpg in Resources */,
 				B91683E417AE0006007C7161 /* Shag_IMG_7093.jpg in Resources */,
+				B9E55D7D1C6AE96100DBF64A /* nz-dotterel-song_DOC.mp3 in Resources */,
+				B9E55D811C6AE96100DBF64A /* paradise-duck-song_DOC.mp3 in Resources */,
 				B9B143BA199B624500908EFB /* WhiteFrontedTern_TN.jpg in Resources */,
 				B9B120981999FC5300CB8F80 /* Kakapo.jpg in Resources */,
+				B9E55D831C6AE96100DBF64A /* rock-wren-chicks-begging_DOC.mp3 in Resources */,
 				B91683E617AE0006007C7161 /* SI_Tomtit_male2.jpg in Resources */,
 				B91683E717AE0006007C7161 /* Silvereye_DSC09462.jpg in Resources */,
 				B9192C0A1C5AF67D00302321 /* Icon-76.png in Resources */,
 				B91683E817AE0006007C7161 /* SilverEye.jpg in Resources */,
 				B9B143A8199B624500908EFB /* CattleEgret_TN.jpg in Resources */,
+				B9E55D7F1C6AE96100DBF64A /* nz-falcon-song-12_female_DOC.mp3 in Resources */,
 				B91683E917AE0006007C7161 /* Sparrow_IMG_6604.jpg in Resources */,
 				B91683EA17AE0006007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo.jpg in Resources */,
 				B91683EC17AE0006007C7161 /* Starling_IMG_6964.jpg in Resources */,
@@ -1801,6 +1900,7 @@
 				B9B143A5199B624500908EFB /* Black_billed_gull_TN.jpg in Resources */,
 				B91684E917AE0512007C7161 /* Anthornis_melanura_New_Zealand_8_TN.jpg in Resources */,
 				B91684EA17AE0512007C7161 /* Blackbird_TN.jpg in Resources */,
+				B9E55D731C6AE96100DBF64A /* blue-duck_DOC.mp3 in Resources */,
 				B91684EB17AE0512007C7161 /* BlackSwanCygnus_atratus_TN.jpg in Resources */,
 				B91684EC17AE0512007C7161 /* BlackWingGull_IMG_6659_TN.jpg in Resources */,
 				B91684ED17AE0512007C7161 /* Chaffinch_2_TN.jpg in Resources */,
@@ -1810,6 +1910,7 @@
 				B9B143A9199B624500908EFB /* CrestedGrebe_TN.jpg in Resources */,
 				B91684F117AE0512007C7161 /* Gannet_IMG_6624_TN.jpg in Resources */,
 				B9B85DE219AC7C7B00FC688C /* NorthernRoyalAlbatross_Ben2_TN.jpg in Resources */,
+				B9E55D851C6AE96100DBF64A /* south-island-kaka_DOC.mp3 in Resources */,
 				B91684F217AE0512007C7161 /* Goldfinch_IMG_6721_TN.jpg in Resources */,
 				B9B4B13919CA1CB1004E010D /* HouseSparrow_steintil_TN.jpg in Resources */,
 				B91684F317AE0512007C7161 /* Grey_Fantail_TN.jpg in Resources */,
@@ -1823,6 +1924,7 @@
 				B91684F817AE0512007C7161 /* Little_Penguin_TN.jpg in Resources */,
 				B91684F917AE0512007C7161 /* LittleSpottedKiwi_Apteryx_owenii_TN.jpg in Resources */,
 				B91684FA17AE0512007C7161 /* Magpie_Australian_IMG_6747_TN.jpg in Resources */,
+				B9E55D871C6AE96100DBF64A /* takahe-song-10_DOC.mp3 in Resources */,
 				B9B85DDF19AC703800FC688C /* NorthernRoyalAlbatross_Ben.jpg in Resources */,
 				B91684FB17AE0512007C7161 /* MoreporkMaunga_TN.jpg in Resources */,
 				B91684FC17AE0512007C7161 /* New_Zealand_Pigeon_Southstar_02_TN.jpg in Resources */,
@@ -1830,6 +1932,7 @@
 				B91684FE17AE0512007C7161 /* Peacock3_TN.jpg in Resources */,
 				B9B120C4199A147900CB8F80 /* BlackFrontedTern_JocelynKinghorn.html in Resources */,
 				B91684FF17AE0512007C7161 /* Pheasant_TN.jpg in Resources */,
+				B9E55D7B1C6AE96100DBF64A /* north-island-saddleback-song_DOC.mp3 in Resources */,
 				B916850017AE0512007C7161 /* Pukeko_Porphyrio_porphyrio_TN.jpg in Resources */,
 				B9B4B13A19CA1CB1004E010D /* LittleBluePenguin_steintil_TN.jpg in Resources */,
 				B916850117AE0512007C7161 /* RedBilledGull_IMG_6599_TN.jpg in Resources */,
@@ -1846,6 +1949,7 @@
 				B916850B17AE0512007C7161 /* Starling_IMG_6964_TN.jpg in Resources */,
 				B916850C17AE0512007C7161 /* Takahe_Maunga_TN.jpg in Resources */,
 				B9B120B6199A048700CB8F80 /* WhiteFacedHeron.jpg in Resources */,
+				B9E55D891C6AE96100DBF64A /* white-heron-song_DOC.mp3 in Resources */,
 				B916850D17AE0512007C7161 /* Thrush_song_06-03_SCOT_TN.jpg in Resources */,
 				B9B3801C19A171FD00733646 /* Whitehead_TN.jpg in Resources */,
 				B916850E17AE0512007C7161 /* Tui_on_flax_TN.jpg in Resources */,
