@@ -292,6 +292,12 @@
                 <key>Type</key>
                 <string>PSGroupSpecifier</string>
                 <key>FooterText</key>
+                <string>Authors48</string>
+        </dict>
+        <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>FooterText</key>
                 <string>CreativeCommonsSA</string>
         </dict>
         <dict>

@@ -754,11 +754,11 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Links" id="rjH-h1-TFM">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="295" id="VR1-I4-Ds5">
-                                        <rect key="frame" x="0.0" y="603" width="768" height="295"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="170" id="VR1-I4-Ds5">
+                                        <rect key="frame" x="0.0" y="603" width="768" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VR1-I4-Ds5" id="eWm-Fq-uEM">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="294.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="169.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s33-3n-yWz">
@@ -773,12 +773,6 @@ URL: http://www.TeAra.govt.nz/en/birdwatching</string>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                                 </textView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Birding NZ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMB-iY-Qiu">
-                                                    <rect key="frame" x="20" y="2" width="292" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ixd-4D-cj3">
                                                     <rect key="frame" x="238" y="17" width="292" height="100"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -851,11 +845,11 @@ URL: http://www.TeAra.govt.nz/en/birdwatching</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="135" id="sRF-3f-e4r">
-                                        <rect key="frame" x="0.0" y="898" width="768" height="135"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="260" id="sRF-3f-e4r">
+                                        <rect key="frame" x="0.0" y="773" width="768" height="260"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sRF-3f-e4r" id="zTe-9Y-LXQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="134.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="259.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mhs-0w-YZk">
