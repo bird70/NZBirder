@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="HGY-xn-who">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="HGY-xn-who">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -59,7 +59,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ioy-Rb-qxo">
-                                <rect key="frame" x="20" y="324" width="728" height="459"/>
+                                <rect key="frame" x="20" y="324" width="728" height="656"/>
                             </mapView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Notes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXc-5K-TK0">
                                 <rect key="frame" x="20" y="88" width="57" height="21"/>
@@ -315,7 +315,7 @@
                         <viewControllerLayoutGuide type="bottom" id="CcA-MV-aoV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ffv-xt-3h6">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="916"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Kd-2f-zMO">
@@ -328,6 +328,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="Zc7-nb-FXh"/>
                     <connections>
                         <outlet property="textView" destination="8Kd-2f-zMO" id="AW9-1r-mOa"/>
@@ -758,23 +759,11 @@
                                         <rect key="frame" x="0.0" y="603" width="768" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VR1-I4-Ds5" id="eWm-Fq-uEM">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="169.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s33-3n-yWz">
-                                                    <rect key="frame" x="238" y="42" width="292" height="136"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <string key="text">http://en.wikipedia.org/wiki/Category:Birds_of_New_Zealand
-collection of links on Ornith Society of NZ
-http://osnz.org.nz/book/export/html/14 collection of links on Ornith Society of NZ
-Gordon Ell. 'Birdwatching', Te Ara - the Encyclopedia of New Zealand, updated 30-Jan-13
-URL: http://www.TeAra.govt.nz/en/birdwatching</string>
-                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                                                </textView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ixd-4D-cj3">
-                                                    <rect key="frame" x="238" y="17" width="292" height="100"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ixd-4D-cj3">
+                                                    <rect key="frame" x="22" y="30" width="292" height="100"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <attributedString key="attributedText">
                                                         <fragment>
@@ -788,9 +777,13 @@ URL: http://www.TeAra.govt.nz/en/birdwatching</string>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                                 </textView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ui8-8u-jCa">
-                                                    <rect key="frame" x="238" y="11" width="292" height="32"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ui8-8u-jCa">
+                                                    <rect key="frame" x="22" y="11" width="292" height="32"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="0La-Km-xP7"/>
+                                                        <constraint firstAttribute="width" constant="292" id="GPi-lv-HDI"/>
+                                                    </constraints>
                                                     <attributedString key="attributedText">
                                                         <fragment content="http://ebird.org/content/newzealand/">
                                                             <attributes>
@@ -842,7 +835,31 @@ URL: http://www.TeAra.govt.nz/en/birdwatching</string>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                                 </textView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s33-3n-yWz">
+                                                    <rect key="frame" x="409" y="11" width="292" height="136"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <string key="text">http://en.wikipedia.org/wiki/Category:Birds_of_New_Zealand
+collection of links on Ornith Society of NZ
+http://osnz.org.nz/book/export/html/14 collection of links on Ornith Society of NZ
+Gordon Ell. 'Birdwatching', Te Ara - the Encyclopedia of New Zealand, updated 30-Jan-13
+URL: http://www.TeAra.govt.nz/en/birdwatching</string>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                </textView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ixd-4D-cj3" firstAttribute="trailing" secondItem="s33-3n-yWz" secondAttribute="trailing" id="Ama-yG-NGI"/>
+                                                <constraint firstItem="Ui8-8u-jCa" firstAttribute="top" secondItem="eWm-Fq-uEM" secondAttribute="topMargin" constant="3" id="Drg-Bj-k7c"/>
+                                                <constraint firstItem="s33-3n-yWz" firstAttribute="top" secondItem="Ui8-8u-jCa" secondAttribute="top" id="Vws-Hb-NGg"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ixd-4D-cj3" secondAttribute="bottom" constant="44.5" id="Y6u-Y2-bz2"/>
+                                                <constraint firstItem="Ui8-8u-jCa" firstAttribute="centerX" secondItem="eWm-Fq-uEM" secondAttribute="centerX" id="ZKh-XD-80d"/>
+                                                <constraint firstItem="ixd-4D-cj3" firstAttribute="top" secondItem="eWm-Fq-uEM" secondAttribute="topMargin" constant="9" id="hwh-EQ-XxM"/>
+                                                <constraint firstItem="ixd-4D-cj3" firstAttribute="leading" secondItem="Ui8-8u-jCa" secondAttribute="leading" id="joi-Mu-ODG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="s33-3n-yWz" secondAttribute="bottom" constant="14.5" id="lpI-GF-xUY"/>
+                                                <constraint firstItem="ixd-4D-cj3" firstAttribute="trailing" secondItem="Ui8-8u-jCa" secondAttribute="trailing" id="pJY-Dz-0CN"/>
+                                                <constraint firstItem="ixd-4D-cj3" firstAttribute="leading" secondItem="s33-3n-yWz" secondAttribute="leading" id="pov-F8-VlA"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="260" id="sRF-3f-e4r">
@@ -851,75 +868,6 @@ URL: http://www.TeAra.govt.nz/en/birdwatching</string>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sRF-3f-e4r" id="zTe-9Y-LXQ">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="259.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mhs-0w-YZk">
-                                                    <rect key="frame" x="20" y="34" width="292" height="100"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="http://www.birdingnz.net/">
-                                                            <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                                <url key="NSLink" string="http://www.birdingnz.net/"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment>
-                                                            <string key="content" base64-UTF8="YES">
-IAo
-</string>
-                                                            <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="http://commons.wikimedia.org/wiki/A_History_of_the_Birds_of_New_Zealand">
-                                                            <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                                <url key="NSLink" string="http://commons.wikimedia.org/wiki/A_History_of_the_Birds_of_New_Zealand"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment>
-                                                            <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                            <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="http://en.wikipedia.org/wiki/Category:Important_Bird_Areas_of_New_Zealand">
-                                                            <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                                <url key="NSLink" string="http://en.wikipedia.org/wiki/Category:Important_Bird_Areas_of_New_Zealand"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment>
-                                                            <string key="content">
-http://nzbirdsonline.org.nz</string>
-                                                            <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                                                </textView>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -934,7 +882,7 @@ http://nzbirdsonline.org.nz</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TKv-fb-BrS">
-                                                    <rect key="frame" x="20" y="0.0" width="292" height="1767"/>
+                                                    <rect key="frame" x="20" y="8" width="732" height="1759"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <attributedString key="attributedText">
                                                         <fragment>

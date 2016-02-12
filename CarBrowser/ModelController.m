@@ -4366,7 +4366,145 @@
         [context save:NULL];
         newManagedObject85= nil;
       
+        //        ///++++  ***********************************
+        NSManagedObject *newManagedObject92 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
+        
+        //NSLog(@"Blue Duck/Whio");
+        
+        //Set Bird_attributes: Blue Duck
+        [newManagedObject92 setValue:@"Blue duck" forKey:@"name"];
+        [newManagedObject92 setValue:@"black" forKey:@"beak_colour"];
+        [newManagedObject92 setValue:@"duck" forKey:@"beak_length"];
+        [newManagedObject92 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject92 setValue:@"1" forKey:@"category"];
+        [newManagedObject92 setValue:@"black,grey" forKey:@"colour"];
+        [newManagedObject92 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        [newManagedObject92 setValue:@"Anatidae" forKey:@"family"];
+        [newManagedObject92 setValue:@"water,bush" forKey:@"habitat"];
+        
+        
+        [newManagedObject92 setValue:@"BlueDuck_Whio_JulienCarnot_Flickr" forKey:@"image"];
+        
+        NSURL *url92t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                pathForResource:@"BlueDuck_Whio_JulienCarnot_Flickr_TN"
+                                                ofType:@"jpg"]];
+        
+        NSData *data92t = [[NSData alloc] initWithContentsOfURL:url92t];
+        UIImage *imageSave92t=[[UIImage alloc]initWithData:data92t];
+        NSData *imageData92t = UIImagePNGRepresentation(imageSave92t);
+        
+        [newManagedObject92 setValue:imageData92t forKey:@"thumbnail"];
+        
+        
+        [newManagedObject92 setValue:@"The blue duck is one of a handful of torrent duck species worldwide. It is a river specialist which inhabits clean, fast flowing streams in the forested upper catchments of New Zealand rivers. Nesting along the riverbanks, they are at high risk of attack from stoats and rats.\n\n   Their Maori name is whio whio, and they are found nowhere else in the world.\n       They are believed to have appeared at a very early stage in evolutionary history. Their blue duck's isolation in New Zealand has meant that it has a number of unique anatomical and behavioural features. The whio features on our $10 note, and are rarer than some species of kiwi.\n\nUnique features\n\nIt is one of only three species amongst the world’s other 159 waterfowl that live year round on fast-flowing rivers. The others are found in South America and New Guinea. In contrast to other waterfowl, blue ducks obtain all their food (consisting almost exclusively of aquatic insect larvae) and even rear their young, in the fast moving rapids and riffles of their home territories.\n\nPhysical features\n\nBlue ducks have unique features such as streamlined head and large webbed feet to enable them to feed in fast moving water. The upper bill has a thick semicircular, fleshy ‘lip’ that overlaps the lower bill allowing them to scrape off insect larvae that cling to rocks, without wear and tear. The male makes a distinctive high-pitched aspirate sound – “whio”, contrasting with the guttural and rattle-like call of the female.\n  Adult length: 530mm; males 1000g; females 800g\n   Blue ducks moult between December and May.\n\nBehaviour\nThey are mainly active during early morning and late evening periods, hiding during the day in log-jams, caves and other such places – some populations have adopted an almost nocturnal existence. Blue ducks vigorously defend their river territories all the year round. The size of each pair’s territory can vary (average is about 1.5km) depending on the quality of the habitat and food available.\n\nNesting\n     Blue ducks nest between August and October, laying 4-9 creamy white eggs. The female incubates the eggs for 35 days and chicks can fly when about 70 days old. Nesting and egg incubation of four to seven eggs is undertaken by the female while the male stands guard. Nests are shallow, twig, grass and down-lined scrapes in caves, under river-side vegetation or in log-jams, and are therefore very prone to spring floods. For this, and other reasons, their breeding success is extremely variable from one year to the next\n\nHabitat\n    Blue duck require bouldery rivers and streams within forested catchments which provide high water quality, low sediment loadings, stable banks and abundant and diverse invertebrate communities.         With such habitat requirements, blue duck are key indicators of river system health. The higher the number of breeding pairs of blue duck on a given stretch of river, the greater the life supporting capacity of that river." forKey:@"item_description"];
+        [newManagedObject92 setValue:@"black" forKey:@"leg_colour"];
+        [newManagedObject92 setValue:@"http://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/blue-duck-whio/" forKey:@"link"];
+        [newManagedObject92 setValue:@"Whio" forKey:@"othername"];
+        [newManagedObject92 setValue:@"Blue Duck" forKey:@"short_name"];
+        [newManagedObject92 setValue:@"duck" forKey:@"size_and_shape"];
+        [newManagedObject92 setValue:@"blue-duck_DOC" forKey:@"sound"];
+        [newManagedObject92 setValue:@"nationally vulnerable" forKey:@"threat_status"];
+        [newManagedObject92 setValue:false forKey:@"extra"];
+        [newManagedObject92 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+        [context save:NULL];
+        newManagedObject92 = nil;
+        
+        
+        //        ///++++  ***********************************
+        NSManagedObject *newManagedObject93 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+        
+        //NSLog(@"Yellow Eyed Penguin");
+        
+        //Set Bird_attributes: Yellow-eyed penguin
+        [newManagedObject93 setValue:@"Yellow-eyed penguin" forKey:@"name"];
+        [newManagedObject93 setValue:@"black" forKey:@"beak_colour"];
+        [newManagedObject93 setValue:@"medium" forKey:@"beak_length"];
+        [newManagedObject93 setValue:@"flightless" forKey:@"behaviour"];
+        [newManagedObject93 setValue:@"1" forKey:@"category"];
+        [newManagedObject93 setValue:@"black,yellow,white,red" forKey:@"colour"];
+        [newManagedObject93 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        [newManagedObject93 setValue:@"Spheniscidae" forKey:@"family"];
+        [newManagedObject93 setValue:@"water" forKey:@"habitat"];
+        
+        
+        [newManagedObject93 setValue:@"Yellow_Eyed_Penguin_HaraldSelke_Flickr" forKey:@"image"];
+        
+        NSURL *url93t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                pathForResource:@"Yellow_Eyed_Penguin_HaraldSelke_Flickr_TN"
+                                                ofType:@"jpg"]];
+        
+        NSData *data93t = [[NSData alloc] initWithContentsOfURL:url93t];
+        UIImage *imageSave93t=[[UIImage alloc]initWithData:data93t];
+        NSData *imageData93t = UIImagePNGRepresentation(imageSave93t);
+        
+        [newManagedObject93 setValue:imageData93t forKey:@"thumbnail"];
+        
+        
+        [newManagedObject93 setValue:@"Unique to New Zealand, the hōiho, or yellow-eyed penguin, is thought to be one of the world's rarest penguin species.\n         Yellow-eyed penguins/hōiho are found along the south-east South Island and on Banks Peninsula, on Stewart Island/Rakiura and its outliers, Codfish Island/Whenua Hou, the Auckland Islands and Campbell Island.\n\nFacts\n   The yellow-eyed penguin/hōiho (Megadyptes antipodes) is named because of its yellow iris and distinctive yellow head band. Adults are slate grey in colour, with a white belly and flesh-coloured feet that become bright pink during exercise. Hōiho chicks are covered in thick, brown fluffy down, which begins to shed once their juvenile plumage develops at around 70 days. Hōiho chicks fledge between 98 to 120 days. Their juvenile plumage is different to adults and can be distinguished by their grey iris, grey head band and dull head plumage. Adults (2 to 25 years) have a yellow iris and yellow band on their crown. Once a juvenile bird undergoes its first moult in the year after fledging, it acquires the yellow band and eye colouring of an adult. The Māori name hōiho means 'noise shouter'. This refers to their shrill call, often heard when they encounter their mate or others at their breeding site.\n\nDiet\nTheir diet is made of small to medium sized fish such as sprat, red cod, blue cod, ahuru, opalfish, silversides and squid. Hōiho are very selective and dive to the sea floor to gather their prey.\n\nLifespan\nThe average lifespan is 8 years, but several birds have reached over 25 years of age.\n\nSize\nAdults reach up to 65 cm in height and weigh around 5 to 5.5 kg. Before moulting adults and juveniles can weigh up to 9 kg. During the moult hōiho must sit ashore for 25 days and grow new feathers, and they are unable to go to sea.\n\nBehaviour\nUnlike other penguin species, hōiho are not typically colonial, and their breeding areas cannot be called 'colonies'. Hōiho seek out private nesting areas with a solid back and a roof for egg laying. Two eggs are laid in a shallow bowl lined with delicately gathered sticks, ferns and fronds.  Hōiho are philopatric, which means they usually come back to the area they were born to breed. Juveniles may wander in their first year, with female hōiho beginning breeding between 2-3 years, and male hōiho starting breeding between 3-6 years of age. Adults stay near their breeding area for life, and do not migrate elsewhere during the non-breeding part of the year. Yellow-eyed penguins are wild, and do not become habituated to human disturbance. As a result they are not suitable for holding in permanent captivity.\n\nHabitat\nThreats include habitat destruction, predation, disease and human interference.         The yellow-eyed penguin is equally dependant on marine and land habitats, which include forest and coastal scrubland. A great deal of community effort has been put into providing nesting sites and shelter on grazed pasturelands on the Otago Peninsula and North Otago. These habitats provide nesting opportunities, as well as social areas and loafing space, and a space to take refuge during the 25-day moult each year. The yellow-eyed penguin's marine habitat is equally important because it provides food, and allows for dispersal and movement between land habitats.\n" forKey:@"item_description"];
+        [newManagedObject93 setValue:@"black" forKey:@"leg_colour"];
+        [newManagedObject93 setValue:@"http://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/penguins/yellow-eyed-penguin-hoiho/" forKey:@"link"];
+        [newManagedObject93 setValue:@"Hoiho" forKey:@"othername"];
+        [newManagedObject93 setValue:@"Yellow eyed penguin" forKey:@"short_name"];
+        [newManagedObject93 setValue:@"duck" forKey:@"size_and_shape"];
+        [newManagedObject93 setValue:@"yellow-eyed-penguin_DOC" forKey:@"sound"];
+        [newManagedObject93 setValue:@"nationally vulnerable" forKey:@"threat_status"];
+        [newManagedObject93 setValue:false forKey:@"extra"];
+        [newManagedObject93 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+        [context save:NULL];
+        newManagedObject93 = nil;
+        
+        
+        //        ///++++  ***********************************
+        NSManagedObject *newManagedObject94 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+        
+        //NSLog(@"Bittern");
+        
+        //Set Bird_attributes: Australasian Bittern
+        [newManagedObject94 setValue:@"Bittern" forKey:@"name"];
+        [newManagedObject94 setValue:@"yellow" forKey:@"beak_colour"];
+        [newManagedObject94 setValue:@"medium" forKey:@"beak_length"];
+        [newManagedObject94 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject94 setValue:@"1" forKey:@"category"];
+        [newManagedObject94 setValue:@"brown" forKey:@"colour"];
+        [newManagedObject94 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        [newManagedObject94 setValue:@"Ardeidae" forKey:@"family"];
+        [newManagedObject94 setValue:@"water,bush" forKey:@"habitat"];
+        
+        
+        [newManagedObject94 setValue:@"Australasian_Bittern_FrankZed_Flickr" forKey:@"image"];
+        
+        NSURL *url94t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                pathForResource:@"Australasian_Bittern_FrankZed_Flickr_TN"
+                                                ofType:@"jpg"]];
+        
+        NSData *data94t = [[NSData alloc] initWithContentsOfURL:url94t];
+        UIImage *imageSave94t=[[UIImage alloc]initWithData:data94t];
+        NSData *imageData94t = UIImagePNGRepresentation(imageSave94t);
+        
+        [newManagedObject94 setValue:imageData94t forKey:@"thumbnail"];
+        
+        
+        [newManagedObject94 setValue:@"The Australasian bittern (Botaurus poiciloptilus), or matuku as it is known to Māori, is a large, heron-sized bird. They are rarely seen because of their secretive behaviour and excellent camouflage. They are most active at dawn, dusk and through the night.\n\n         They live in wetlands throughout New Zealand, although there are fewer than 1,000. When Europeans arrived they were abundant, but now it is rare to see more than one at a time. Australasian bittern are also found in Australia and New Caledonia, but populations there have declined dramatically and they are now classed globally as endangered.\n\n         In New Zealand, they are mainly found in wetlands of Northland, Waikato, East Coast of the North Island, and the West Coast of the South Island. The most important site nationally for bittern is Whangamarino Wetland in the Waikato.\n\n         Matuku breed deep in wetlands. The distinctive booming calls of male matuku can be heard at the beginning of the breeding season and are often the only sign that they are present in a wetland. The breeding season is long (spread over 10 months) although most eggs are laid in November and December. Birds lays up to 6 eggs.\n       Matuku feed, mostly at night, on fish, eels, frogs, freshwater crayfish and aquatic insects.\n Matuku are important to Māori. They appear in language as part of legends, stories, early pictures and metaphor and there are numerous place names referring to them. They were important for food and their feathers were used for ceremonial decoration.\nThey are a potential indicator of wetland health because they are dependent on the presence of high quality and ecologically diverse habitats and rich food supplies.\n " forKey:@"item_description"];
+        [newManagedObject94 setValue:@"black" forKey:@"leg_colour"];
+        [newManagedObject94 setValue:@"http://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/australasian-bittern-matuku/" forKey:@"link"];
+        [newManagedObject94 setValue:@"Matuku" forKey:@"othername"];
+        [newManagedObject94 setValue:@"Australasian bittern" forKey:@"short_name"];
+        [newManagedObject94 setValue:@"swan" forKey:@"size_and_shape"];
+        [newManagedObject94 setValue:@"australasian-bittern_DOC" forKey:@"sound"];
+        [newManagedObject94 setValue:@"endangered" forKey:@"threat_status"];
+        [newManagedObject94 setValue:false forKey:@"extra"];
+        [newManagedObject94 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+        [context save:NULL];
+        newManagedObject94 = nil;
+        
+        
+
         
         //*******************************************************
         //This one is required for MAsterViewController.m where CurrentSpot value is updated

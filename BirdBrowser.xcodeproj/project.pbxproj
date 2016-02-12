@@ -181,6 +181,9 @@
 		B9682477176233640093F493 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9682476176233640093F493 /* CoreData.framework */; };
 		B968247A176234380093F493 /* BirdBrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9682478176234380093F493 /* BirdBrowser.xcdatamodeld */; };
 		B9708E5F17BACBAA00B90254 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9708E5E17BACBAA00B90254 /* BrowserViewController.m */; };
+		B97BAEE11C6D2C4C0080AE66 /* Australasian_Bittern_FrankZed_Flickr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B97BAEDE1C6D2C4C0080AE66 /* Australasian_Bittern_FrankZed_Flickr.jpg */; };
+		B97BAEE21C6D2C4C0080AE66 /* BlueDuck_Whio_JulienCarnot_Flickr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B97BAEDF1C6D2C4C0080AE66 /* BlueDuck_Whio_JulienCarnot_Flickr.jpg */; };
+		B97BAEE31C6D2C4C0080AE66 /* Yellow_Eyed_Penguin_HaraldSelke_Flickr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B97BAEE01C6D2C4C0080AE66 /* Yellow_Eyed_Penguin_HaraldSelke_Flickr.jpg */; };
 		B98227C21772390700A97BD3 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98227C11772390700A97BD3 /* ModelController.m */; };
 		B98227C517723FAA00A97BD3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98227C417723FAA00A97BD3 /* MapViewController.m */; };
 		B98227D81772444100A97BD3 /* MapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = B98227D31772444100A97BD3 /* MapViewAnnotation.m */; };
@@ -346,6 +349,9 @@
 		B9BED15117993C4200E6FE0E /* tabbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BED13D17993C4200E6FE0E /* tabbar@2x.png */; };
 		B9BED1541799402000E6FE0E /* Spot.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BED1531799402000E6FE0E /* Spot.m */; };
 		B9BED157179A0F5E00E6FE0E /* CurrentSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BED156179A0F5D00E6FE0E /* CurrentSpot.m */; };
+		B9CDB2841C6D6B5700DC6A90 /* Australasian_Bittern_FrankZed_Flickr_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9CDB2831C6D6B5700DC6A90 /* Australasian_Bittern_FrankZed_Flickr_TN.jpg */; };
+		B9CDB2871C6D6B6900DC6A90 /* BlueDuck_Whio_JulienCarnot_Flickr_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9CDB2851C6D6B6900DC6A90 /* BlueDuck_Whio_JulienCarnot_Flickr_TN.jpg */; };
+		B9CDB2881C6D6B6900DC6A90 /* Yellow_Eyed_Penguin_HaraldSelke_Flickr_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9CDB2861C6D6B6900DC6A90 /* Yellow_Eyed_Penguin_HaraldSelke_Flickr_TN.jpg */; };
 		B9CDE3A617A4F56200661AF9 /* 0088.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE3A217A4F56100661AF9 /* 0088.png */; };
 		B9CDE3A717A4F56200661AF9 /* 0088@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE3A317A4F56100661AF9 /* 0088@2x.png */; };
 		B9CDE3A817A4F56200661AF9 /* 0239.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE3A417A4F56100661AF9 /* 0239.png */; };
@@ -619,6 +625,9 @@
 		B9682479176234380093F493 /* BirdBrowser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BirdBrowser.xcdatamodel; sourceTree = "<group>"; };
 		B9708E5D17BACBAA00B90254 /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
 		B9708E5E17BACBAA00B90254 /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
+		B97BAEDE1C6D2C4C0080AE66 /* Australasian_Bittern_FrankZed_Flickr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Australasian_Bittern_FrankZed_Flickr.jpg; path = ../Australasian_Bittern_FrankZed_Flickr.jpg; sourceTree = "<group>"; };
+		B97BAEDF1C6D2C4C0080AE66 /* BlueDuck_Whio_JulienCarnot_Flickr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlueDuck_Whio_JulienCarnot_Flickr.jpg; sourceTree = "<group>"; };
+		B97BAEE01C6D2C4C0080AE66 /* Yellow_Eyed_Penguin_HaraldSelke_Flickr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Yellow_Eyed_Penguin_HaraldSelke_Flickr.jpg; sourceTree = "<group>"; };
 		B98227C01772390700A97BD3 /* ModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
 		B98227C11772390700A97BD3 /* ModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
 		B98227C317723FAA00A97BD3 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -823,6 +832,9 @@
 		B9BED1531799402000E6FE0E /* Spot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spot.m; sourceTree = "<group>"; };
 		B9BED155179A0F5D00E6FE0E /* CurrentSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrentSpot.h; path = ../CurrentSpot.h; sourceTree = "<group>"; };
 		B9BED156179A0F5D00E6FE0E /* CurrentSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrentSpot.m; path = ../CurrentSpot.m; sourceTree = "<group>"; };
+		B9CDB2831C6D6B5700DC6A90 /* Australasian_Bittern_FrankZed_Flickr_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Australasian_Bittern_FrankZed_Flickr_TN.jpg; sourceTree = "<group>"; };
+		B9CDB2851C6D6B6900DC6A90 /* BlueDuck_Whio_JulienCarnot_Flickr_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlueDuck_Whio_JulienCarnot_Flickr_TN.jpg; sourceTree = "<group>"; };
+		B9CDB2861C6D6B6900DC6A90 /* Yellow_Eyed_Penguin_HaraldSelke_Flickr_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Yellow_Eyed_Penguin_HaraldSelke_Flickr_TN.jpg; sourceTree = "<group>"; };
 		B9CDE3A217A4F56100661AF9 /* 0088.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0088.png; sourceTree = "<group>"; };
 		B9CDE3A317A4F56100661AF9 /* 0088@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0088@2x.png"; sourceTree = "<group>"; };
 		B9CDE3A417A4F56100661AF9 /* 0239.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0239.png; sourceTree = "<group>"; };
@@ -1022,6 +1034,10 @@
 		B91684B717AE0512007C7161 /* Thumbnails */ = {
 			isa = PBXGroup;
 			children = (
+				B97BAEDE1C6D2C4C0080AE66 /* Australasian_Bittern_FrankZed_Flickr.jpg */,
+				B9CDB2851C6D6B6900DC6A90 /* BlueDuck_Whio_JulienCarnot_Flickr_TN.jpg */,
+				B9CDB2861C6D6B6900DC6A90 /* Yellow_Eyed_Penguin_HaraldSelke_Flickr_TN.jpg */,
+				B9CDB2831C6D6B5700DC6A90 /* Australasian_Bittern_FrankZed_Flickr_TN.jpg */,
 				B996FEFB1C69E31900097071 /* CaliforniaQuail_SidMosdell_TN.jpg */,
 				B9B4B13219CA1CB1004E010D /* BlackShag_steintil_TN.jpg */,
 				B9B4B13319CA1CB1004E010D /* HouseSparrow_steintil_TN.jpg */,
@@ -1212,6 +1228,9 @@
 		B934A522178CEFF300D3F6F7 /* used */ = {
 			isa = PBXGroup;
 			children = (
+				B9E55D711C6AE96100DBF64A /* yellow-eyed-penguin_DOC.mp3 */,
+				B9E55D591C6AE96100DBF64A /* blue-duck_DOC.mp3 */,
+				B9E55D581C6AE96100DBF64A /* australasian-bittern_DOC.mp3 */,
 				B9E55D5A1C6AE96100DBF64A /* grey-warbler-song.mp3 */,
 				B9E55D5C1C6AE96100DBF64A /* kakapo-male-song_DOC_18.mp3 */,
 				B9E55D5D1C6AE96100DBF64A /* kea-song_DOC.mp3 */,
@@ -1467,8 +1486,6 @@
 			isa = PBXGroup;
 			children = (
 				B9DF1E481775AB8D00F5DA74 /* kea2.mp3 */,
-				B9E55D581C6AE96100DBF64A /* australasian-bittern_DOC.mp3 */,
-				B9E55D591C6AE96100DBF64A /* blue-duck_DOC.mp3 */,
 				B9E55D5B1C6AE96100DBF64A /* huttons-shearwater_DOC.mp3 */,
 				B9E55D661C6AE96100DBF64A /* nz-pigeon-song_kereru_DOC.mp3 */,
 				B9E55D641C6AE96100DBF64A /* nz-falcon-song-10_juvenileFemale_DOC.mp3 */,
@@ -1479,7 +1496,6 @@
 				B9E55D691C6AE96100DBF64A /* rock-wren-chicks-begging_DOC.mp3 */,
 				B9E55D6E1C6AE96100DBF64A /* western-weka-song_DOC.mp3 */,
 				B9BED11F1797D9E600E6FE0E /* SHAGPhalacrocorax atriceps atriceps a_Puerto de Comodoro Rivadavia_Chubut_23OCT2010 0843_Bernabe Lopez-Lanus.mp3 */,
-				B9E55D711C6AE96100DBF64A /* yellow-eyed-penguin_DOC.mp3 */,
 				B934A522178CEFF300D3F6F7 /* used */,
 			);
 			name = Soundfiles;
@@ -1488,6 +1504,8 @@
 		B9DF1E5B1776268900F5DA74 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B97BAEDF1C6D2C4C0080AE66 /* BlueDuck_Whio_JulienCarnot_Flickr.jpg */,
+				B97BAEE01C6D2C4C0080AE66 /* Yellow_Eyed_Penguin_HaraldSelke_Flickr.jpg */,
 				B9A5865519F79C20000901A9 /* CaliforniaQuail_SidMosdell.jpg */,
 				B9B4B12619CA1C4A004E010D /* BlackShag_steintil.jpg */,
 				B9B4B12719CA1C4A004E010D /* HouseSparrow_steintil.jpg */,
@@ -1691,6 +1709,7 @@
 				B9D92E491748DEB0001B6D79 /* cell_bottom@2x.png in Resources */,
 				B9D92E4A1748DEB0001B6D79 /* cell_middle.png in Resources */,
 				B9D92E4B1748DEB0001B6D79 /* cell_middle@2x.png in Resources */,
+				B97BAEE31C6D2C4C0080AE66 /* Yellow_Eyed_Penguin_HaraldSelke_Flickr.jpg in Resources */,
 				B9D92E4C1748DEB0001B6D79 /* cell_top_tile.png in Resources */,
 				B9D92E4D1748DEB0001B6D79 /* cell_top.png in Resources */,
 				B9B8236A19B64DA30055A50A /* PerlScript_Acknowledgements.pl in Resources */,
@@ -1704,6 +1723,7 @@
 				B9192C0B1C5AF67D00302321 /* Icon-60@2x.png in Resources */,
 				B9D92E71174E5651001B6D79 /* 0283.png in Resources */,
 				B9D92E72174E5651001B6D79 /* 0283@2x.png in Resources */,
+				B9CDB2881C6D6B6900DC6A90 /* Yellow_Eyed_Penguin_HaraldSelke_Flickr_TN.jpg in Resources */,
 				B9D92E73174E5651001B6D79 /* 0284.png in Resources */,
 				B9D92E74174E5651001B6D79 /* 0284@2x.png in Resources */,
 				B9D92E79174E5717001B6D79 /* 0263.png in Resources */,
@@ -1719,7 +1739,9 @@
 				B98227EF1773B61000A97BD3 /* 0002@2x.png in Resources */,
 				B9DF1E4A1775AB8D00F5DA74 /* kea2.mp3 in Resources */,
 				B9B143AF199B624500908EFB /* NorthIsland_Robin_Duncan_TN.jpg in Resources */,
+				B9CDB2841C6D6B5700DC6A90 /* Australasian_Bittern_FrankZed_Flickr_TN.jpg in Resources */,
 				B9DF1E4B1775AB8D00F5DA74 /* tui2.mp3 in Resources */,
+				B97BAEE21C6D2C4C0080AE66 /* BlueDuck_Whio_JulienCarnot_Flickr.jpg in Resources */,
 				B9DF1E4D1775AD0000F5DA74 /* blackbird.mp3 in Resources */,
 				B9DF1E4F1775AEF900F5DA74 /* Rifleman.mp3 in Resources */,
 				B9DF1E57177619DA00F5DA74 /* Default@2x.png in Resources */,
@@ -1952,6 +1974,7 @@
 				B9E55D891C6AE96100DBF64A /* white-heron-song_DOC.mp3 in Resources */,
 				B916850D17AE0512007C7161 /* Thrush_song_06-03_SCOT_TN.jpg in Resources */,
 				B9B3801C19A171FD00733646 /* Whitehead_TN.jpg in Resources */,
+				B97BAEE11C6D2C4C0080AE66 /* Australasian_Bittern_FrankZed_Flickr.jpg in Resources */,
 				B916850E17AE0512007C7161 /* Tui_on_flax_TN.jpg in Resources */,
 				B9B143AE199B624500908EFB /* Mallard_TN.jpg in Resources */,
 				B9B120AB199A037C00CB8F80 /* WhiteFrontedTern.jpg in Resources */,
@@ -1963,6 +1986,7 @@
 				B909A9B917AE294F00B12655 /* Watvogel_IMG_6674_TN.jpg in Resources */,
 				B909A9BB17AE45C800B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg in Resources */,
 				B909A9BD17AE4B8600B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN.jpg in Resources */,
+				B9CDB2871C6D6B6900DC6A90 /* BlueDuck_Whio_JulienCarnot_Flickr_TN.jpg in Resources */,
 				B961701917B4D53700A6167E /* 0236.png in Resources */,
 				B9B120C6199A147900CB8F80 /* MaskedLapwing_JamesNiland.jpg in Resources */,
 				B961701A17B4D53700A6167E /* 0236@2x.png in Resources */,
