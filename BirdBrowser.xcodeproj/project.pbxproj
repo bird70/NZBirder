@@ -195,6 +195,7 @@
 		B98227EB1773B38C00A97BD3 /* Hihi_Stitchbird.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B98227EA1773B38C00A97BD3 /* Hihi_Stitchbird.mp3 */; };
 		B98227EE1773B61000A97BD3 /* 0002.png in Resources */ = {isa = PBXBuildFile; fileRef = B98227EC1773B61000A97BD3 /* 0002.png */; };
 		B98227EF1773B61000A97BD3 /* 0002@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B98227ED1773B61000A97BD3 /* 0002@2x.png */; };
+		B98D7CA51C6D8CFA008AD0A0 /* Kingfisher_square_167x167.png in Resources */ = {isa = PBXBuildFile; fileRef = B98D7CA41C6D8CFA008AD0A0 /* Kingfisher_square_167x167.png */; };
 		B996FEFC1C69E31900097071 /* CaliforniaQuail_SidMosdell_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B996FEFB1C69E31900097071 /* CaliforniaQuail_SidMosdell_TN.jpg */; };
 		B9A5865619F79C20000901A9 /* CaliforniaQuail_SidMosdell.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9A5865519F79C20000901A9 /* CaliforniaQuail_SidMosdell.jpg */; };
 		B9A86A98173FB2C6006908C0 /* bellbird-56.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9A86A97173FB2C6006908C0 /* bellbird-56.mp3 */; };
@@ -647,6 +648,7 @@
 		B98227EA1773B38C00A97BD3 /* Hihi_Stitchbird.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hihi_Stitchbird.mp3; sourceTree = "<group>"; };
 		B98227EC1773B61000A97BD3 /* 0002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0002.png; sourceTree = "<group>"; };
 		B98227ED1773B61000A97BD3 /* 0002@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0002@2x.png"; sourceTree = "<group>"; };
+		B98D7CA41C6D8CFA008AD0A0 /* Kingfisher_square_167x167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Kingfisher_square_167x167.png; path = Thumbnails/Kingfisher_square_167x167.png; sourceTree = "<group>"; };
 		B996FEFB1C69E31900097071 /* CaliforniaQuail_SidMosdell_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CaliforniaQuail_SidMosdell_TN.jpg; sourceTree = "<group>"; };
 		B9A5865519F79C20000901A9 /* CaliforniaQuail_SidMosdell.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CaliforniaQuail_SidMosdell.jpg; sourceTree = "<group>"; };
 		B9A86A97173FB2C6006908C0 /* bellbird-56.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bellbird-56.mp3"; path = "assets/bellbird/bellbird-56.mp3"; sourceTree = SOURCE_ROOT; };
@@ -1531,6 +1533,7 @@
 		B9DF1E5C177626BA00F5DA74 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				B98D7CA41C6D8CFA008AD0A0 /* Kingfisher_square_167x167.png */,
 				B95B943917C06A6900EBC8E7 /* Default.png */,
 				B916832217AC41BB007C7161 /* kingfisher_square_114.png */,
 				B916832017AC41AF007C7161 /* kingfisher_square_57_2.png */,
@@ -1661,6 +1664,7 @@
 				B8E777EC16C2F2F400949FEE /* InfoPlist.strings in Resources */,
 				B8E777F816C2F2F400949FEE /* Default-568h@2x.png in Resources */,
 				B8E777FB16C2F2F400949FEE /* MainStoryboard.storyboard in Resources */,
+				B98D7CA51C6D8CFA008AD0A0 /* Kingfisher_square_167x167.png in Resources */,
 				B9E55D7A1C6AE96100DBF64A /* north-island-robin-song_DOC.mp3 in Resources */,
 				B943EDC11738DC9E007DB011 /* silvereye-song-22sy.mp3 in Resources */,
 				B9B4B12519C98109004E010D /* LittleSpottedKiwi_Apteryx_owenii_REDUCEDSIZE.jpg in Resources */,
