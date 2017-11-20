@@ -12,14 +12,14 @@
 #import "Spot.h"
 #import "FMDatabase.h"
 #import "Observation.h"
-#import "FileUploadEngine.h"
+// 2017 #import "FileUploadEngine.h"
 
 
 @interface DetailViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) Spot *spot;
 @property (strong, nonatomic) NSString *birdname;
 @property (strong, nonatomic) NSString *birdnotes;
-@property (strong, nonatomic) FileUploadEngine *flUploadEngine;
+// 2017 @property (strong, nonatomic) FileUploadEngine *flUploadEngine;
 
 
 @property (weak, nonatomic) IBOutlet UITextView *noteTextView;

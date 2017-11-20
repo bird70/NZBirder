@@ -597,6 +597,7 @@ MFMailComposeViewController * controller;
 - (IBAction)buttonUpload:(id)sender {
     //NSURL *myURL = [NSURL URLWithString:@"http://ebird.org/ebird/import/upload.form?file=CSVfile.csv&fileType=sabini"];
     //[[UIApplication sharedApplication] openURL:myURL];
-    self.flUploadEngine = [[FileUploadEngine alloc] initWithHostName:@"http://ebird.org/ebird/import/upload.form" customHeaderFields:nil];
+    
+    // 2017 self.flUploadEngine = [[FileUploadEngine alloc] initWithHostName:@"http://ebird.org/ebird/import/upload.form" customHeaderFields:nil];
 }
 @end
