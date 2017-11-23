@@ -135,6 +135,7 @@
 		B9192C0C1C5AF67D00302321 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9192C081C5AF67D00302321 /* Icon-76@2x.png */; };
 		B9192C0D1C5AF67D00302321 /* Icon-Small-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9192C091C5AF67D00302321 /* Icon-Small-40@3x.png */; };
 		B9192C0F1C5AF6A400302321 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9192C0E1C5AF6A400302321 /* Images.xcassets */; };
+		B9339F821FC5ED330008393A /* LaunchScreenSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9339F811FC5ED330008393A /* LaunchScreenSB.storyboard */; };
 		B934A52F178D4B2F00D3F6F7 /* ObservationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B934A52E178D4B2E00D3F6F7 /* ObservationTableViewController.m */; };
 		B934A5841793E2C900D3F6F7 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B934A5831793E2C700D3F6F7 /* CHCSVParser.m */; };
 		B934A590179485B000D3F6F7 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B934A58F179485AF00D3F6F7 /* libsqlite3.0.dylib */; };
@@ -565,6 +566,7 @@
 		B9192C081C5AF67D00302321 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
 		B9192C091C5AF67D00302321 /* Icon-Small-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@3x.png"; sourceTree = "<group>"; };
 		B9192C0E1C5AF6A400302321 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = NZBirder/Images.xcassets; sourceTree = "<group>"; };
+		B9339F811FC5ED330008393A /* LaunchScreenSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenSB.storyboard; sourceTree = "<group>"; };
 		B934A52D178D4B2E00D3F6F7 /* ObservationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObservationTableViewController.h; path = ../ObservationTableViewController.h; sourceTree = "<group>"; };
 		B934A52E178D4B2E00D3F6F7 /* ObservationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObservationTableViewController.m; path = ../ObservationTableViewController.m; sourceTree = "<group>"; };
 		B934A5821793E2C500D3F6F7 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
@@ -995,6 +997,7 @@
 				B8E7780816C2F43000949FEE /* BirdTableViewCell.m */,
 				B9BC560B19A9D1990007A0B2 /* Settings.bundle */,
 				B9AE1C9A19723C500081E8CE /* MainStoryboard_iPad.storyboard */,
+				B9339F811FC5ED330008393A /* LaunchScreenSB.storyboard */,
 				B9B8550A1FC35BD300732C59 /* MainStoryboard.storyboard */,
 				B8E777E816C2F2F400949FEE /* Supporting Files */,
 			);
@@ -1922,6 +1925,7 @@
 				B91684EE17AE0512007C7161 /* Charadrius_bicinctus_breeding_Ralphs_Bay_TN.jpg in Resources */,
 				B91684EF17AE0512007C7161 /* Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8_TN.jpg in Resources */,
 				B91684F017AE0512007C7161 /* Dunnock_IMG_7140_TN.jpg in Resources */,
+				B9339F821FC5ED330008393A /* LaunchScreenSB.storyboard in Resources */,
 				B9B143A9199B624500908EFB /* CrestedGrebe_TN.jpg in Resources */,
 				B91684F117AE0512007C7161 /* Gannet_IMG_6624_TN.jpg in Resources */,
 				B9B85DE219AC7C7B00FC688C /* NorthernRoyalAlbatross_Ben2_TN.jpg in Resources */,
@@ -2168,7 +2172,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarBrowser/BirdBrowser-Prefix.pch";
 				INFOPLIST_FILE = "CarBrowser/BirdBrowser-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.kosmopol.NZBirder;
 				PRODUCT_NAME = NZBirder;
 				PROVISIONING_PROFILE = "";
@@ -2186,7 +2190,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarBrowser/BirdBrowser-Prefix.pch";
 				INFOPLIST_FILE = "CarBrowser/BirdBrowser-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.kosmopol.NZBirder;
 				PRODUCT_NAME = NZBirder;
 				PROVISIONING_PROFILE = "";

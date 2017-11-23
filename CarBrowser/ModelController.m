@@ -4,7 +4,11 @@
 //
 //  Created by Tilmann Steinmetz on 21/06/13.
 //  Copyright (c) 2013 Tilmann Steinmetz. All rights reserved.
+//  later additions for version 1.2.4
 //
+//  This is used both during deployment and runtime
+//  If it finds that a local data store doesn't exist a new one is created
+//  To populate a sqlite DB with the contents of the script below a number of lines (114-194) must be commented and others uncommented 
 
 #import "ModelController.h"
 #import "Spot.h"
@@ -4503,7 +4507,60 @@
         [context save:NULL];
         newManagedObject94 = nil;
         
+        // new additions:
+        // Coot (blesshuhn)
+        // brown teal
+        // scaup
+        // canada goose
+        // nz crate
+        // guinea fowl
+        // brown creeper
         
+        
+//        // +++++++++++ California quail +++++++++++++
+//        /*  85
+//         */
+//        NSManagedObject *newManagedObject85 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+//
+//        //Set Bird_attributes
+//        [newManagedObject85 setValue:@"California Quail"       forKey:@"name"];
+//        [newManagedObject85 setValue:@"California Quail" forKey:@"othername"];
+//        [newManagedObject85 setValue:@"California quail are stocky, predominantly grey and brown, with a diagnostic forward-curling black plume rising erect from the top of their heads. Males have a black chin and cheeks edged with white, and separate white ‘eyebrows’ join on the forehead. The breast is blue-grey and the lower belly cream to rust brown with distinctive black scalloping, which merges into strong, pale streaks on the dark brown flanks. \n\nThe female is slightly smaller, duller and browner, with some streaking on the neck and a more subdued scalloping on the belly, but with equally bold streaking on the flanks. Immature birds are similar to the female but a lighter brown. The female’s crest plume is much smaller than the male’s. Both sexes have fine speckling on the nape, which is bolder in the male. \n\nThere is no seasonal change in plumage. California quail have short, rounded wings and a relatively long tail. Their legs and bill are black and sturdy, with the bill being slightly hooked.\n\nForaging quail pace sedately, but when disturbed they run at speed, their feet a blur of movement, or burst into flight with noisy, rapid wingbeats.\
+//         " forKey:@"item_description"];
+//        [newManagedObject85 setValue:@"http://nzbirdsonline.org.nz/species/california-quail" forKey:@"link"];
+//        [newManagedObject85 setValue:@"black" forKey:@"beak_colour"];
+//        [newManagedObject85 setValue:@"short" forKey:@"beak_length"];
+//        [newManagedObject85 setValue:@"can fly,shy" forKey:@"behaviour"];
+//        [newManagedObject85 setValue:@"0" forKey:@"category"];
+//        [newManagedObject85 setValue:@"grey/brown" forKey:@"colour"];
+//        [newManagedObject85 setValue:@"brown" forKey:@"leg_colour"];
+//        [newManagedObject85 setValue:@"Phasianidae" forKey:@"family"];
+//        [newManagedObject85 setValue:@"bush" forKey:@"habitat"];
+//        [newManagedObject85 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+//        [newManagedObject85 setValue:@"plumed quail" forKey:@"short_name"];
+//        [newManagedObject85 setValue:@"blackbird" forKey:@"size_and_shape"];
+//
+//
+//        [newManagedObject85 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+//
+//        NSURL *url85t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+//                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+//                                                ofType:@"jpg"]];
+//        NSData *data85t = [[NSData alloc] initWithContentsOfURL:url85t];
+//        UIImage *imageSave85t=[[UIImage alloc]initWithData:data85t];
+//        NSData *imageData85t = UIImagePNGRepresentation(imageSave85t);
+//        [newManagedObject85 setValue:imageData85t         forKey:@"thumbnail"];
+//
+//
+//        //[newManagedObject85 setValue:@"Kiwi" forKey:@"sound"];
+//
+//        [newManagedObject85 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+//        [newManagedObject85 setValue:NO forKey:@"extra"];
+//        [newManagedObject85 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+//
+//        [context save:NULL];
+//        newManagedObject85= nil;
+//
 
         
         //*******************************************************
