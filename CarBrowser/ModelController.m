@@ -4,10 +4,10 @@
 //
 //  Created by Tilmann Steinmetz on 21/06/13.
 //  Copyright (c) 2013 Tilmann Steinmetz. All rights reserved.
-//  later additions for version 1.2.4
+//  later additions for version 1.3, 2.3
 //
 //  This is used both during deployment and runtime
-//  If it finds that a local data store doesn't exist a new one is created
+//  If it finds that a local data store doesn't exist, a new one is created
 //  To populate a sqlite DB with the contents of the script below a number of lines (114-194) must be commented and others uncommented 
 
 #import "ModelController.h"
@@ -57,10 +57,16 @@
     if (_managedObjectContext != nil) {
         return _managedObjectContext;
     }
-    
+//    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+//    if (coordinator != nil) {
+//        _managedObjectContext = [[NSManagedObjectContext alloc] init];
+//        [_managedObjectContext setPersistentStoreCoordinator:coordinator];
+//    }
+
+    // new after deprection warning ios9:
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator != nil) {
-        _managedObjectContext = [[NSManagedObjectContext alloc] init];
+        _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
     return _managedObjectContext;
@@ -4507,17 +4513,9 @@
         [context save:NULL];
         newManagedObject94 = nil;
         
-        // new additions:
-        // Coot (blesshuhn)
-        // brown teal
-        // scaup
-        // canada goose
-        // nz crate
-        // guinea fowl
-        // brown creeper
         
         
-//        // +++++++++++ California quail +++++++++++++
+//        // +++++++++++ Template  +++++++++++++
 //        /*  85
 //         */
 //        NSManagedObject *newManagedObject85 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
@@ -4560,8 +4558,528 @@
 //
 //        [context save:NULL];
 //        newManagedObject85= nil;
-//
+        
+        
+        ////      Suggestions:
+        
+        
+        
+//        //Kokako ?
+//        Fiordland crested penguin ?
+//        South Island robin?
+//        Stewart island kiwi?
+        
+        
+        //        // +++++++++++ Coot  +++++++++++++
+        // new additions:
+        // Coot, Australian -http://www.nzbirdsonline.org.nz/species/australian-coot
+        // brown teal -http://www.nzbirdsonline.org.nz/species/brown-teal
+        // scaup - http://www.nzbirdsonline.org.nz/species/new-zealand-scaup
+        // canada goose - http://www.nzbirdsonline.org.nz/species/canada-goose
+        // nz crate - ??
+        // guinea fowl - http://www.nzbirdsonline.org.nz/species/helmeted-guineafowl
+        // brown creeper - http://www.nzbirdsonline.org.nz/species/brown-creeper
+        // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
+        //        /*  95
+        //         */
+        //        NSManagedObject *newManagedObject95 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        //
+        //        //Set Bird_attributes
+        //        [newManagedObject95 setValue:@"Australian Coot"       forKey:@"name"];
+        //        [newManagedObject95 setValue:@"Coot" forKey:@"othername"];
+        //        [newManagedObject95 setValue:@"Coot.\
+        //         " forKey:@"item_description"];
+        //        [newManagedObject95 setValue:@"http://www.nzbirdsonline.org.nz/species/australian-coot" forKey:@"link"];
+        //        [newManagedObject95 setValue:@"black" forKey:@"beak_colour"];
+        //        [newManagedObject95 setValue:@"short" forKey:@"beak_length"];
+        //        [newManagedObject95 setValue:@"can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject95 setValue:@"0" forKey:@"category"];
+        //        [newManagedObject95 setValue:@"grey/brown" forKey:@"colour"];
+        //        [newManagedObject95 setValue:@"brown" forKey:@"leg_colour"];
+        //        [newManagedObject95 setValue:@"Phasianidae" forKey:@"family"];
+        //        [newManagedObject95 setValue:@"bush" forKey:@"habitat"];
+        //        [newManagedObject95 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+        //        [newManagedObject95 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject95 setValue:@"blackbird" forKey:@"size_and_shape"];
+        //
+        //
+        //        [newManagedObject95 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //
+        //        NSURL *url95t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                ofType:@"jpg"]];
+        //        NSData *data95t = [[NSData alloc] initWithContentsOfURL:url95t];
+        //        UIImage *imageSave95t=[[UIImage alloc]initWithData:data95t];
+        //        NSData *imageData95t = UIImagePNGRepresentation(imageSave95t);
+        //        [newManagedObject95 setValue:imageData95t         forKey:@"thumbnail"];
+        //
+        //
+        //        //[newManagedObject95 setValue:@"Coot" forKey:@"sound"];
+        //
+        //        [newManagedObject95 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        //        [newManagedObject95 setValue:NO forKey:@"extra"];
+        //        [newManagedObject95 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        //
+        //        [context save:NULL];
+        //        newManagedObject95= nil;
+        //
 
+        
+        //        // +++++++++++ Brown Teal  +++++++++++++
+        // new additions:
+        // Coot, Australian -http://www.nzbirdsonline.org.nz/species/australian-coot
+        // brown teal -http://www.nzbirdsonline.org.nz/species/brown-teal
+        // scaup - http://www.nzbirdsonline.org.nz/species/new-zealand-scaup
+        // canada goose - http://www.nzbirdsonline.org.nz/species/canada-goose
+        // nz crate - ??
+        // guinea fowl - http://www.nzbirdsonline.org.nz/species/helmeted-guineafowl
+        // brown creeper - http://www.nzbirdsonline.org.nz/species/brown-creeper
+        // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
+        //        /*  96
+        //         */
+        //        NSManagedObject *newManagedObject96 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        //
+        //        //Set Bird_attributes
+        //        [newManagedObject96 setValue:@"Brown Teal"       forKey:@"name"];
+        //        [newManagedObject96 setValue:@"Brown Teal" forKey:@"othername"];
+        //        [newManagedObject96 setValue:@"Brown Teal.\
+        //         " forKey:@"item_description"];
+        //        [newManagedObject96 setValue:@"http://www.nzbirdsonline.org.nz/species/brown-teal" forKey:@"link"];
+        //        [newManagedObject96 setValue:@"black" forKey:@"beak_colour"];
+        //        [newManagedObject96 setValue:@"short" forKey:@"beak_length"];
+        //        [newManagedObject96 setValue:@"can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject96 setValue:@"0" forKey:@"category"];
+        //        [newManagedObject96 setValue:@"grey/brown" forKey:@"colour"];
+        //        [newManagedObject96 setValue:@"brown" forKey:@"leg_colour"];
+        //        [newManagedObject96 setValue:@"Phasianidae" forKey:@"family"];
+        //        [newManagedObject96 setValue:@"bush" forKey:@"habitat"];
+        //        [newManagedObject96 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+        //        [newManagedObject96 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject96 setValue:@"blackbird" forKey:@"size_and_shape"];
+        //
+        //
+        //        [newManagedObject96 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //
+        //        NSURL *url96t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                ofType:@"jpg"]];
+        //        NSData *data96t = [[NSData alloc] initWithContentsOfURL:url96t];
+        //        UIImage *imageSave96t=[[UIImage alloc]initWithData:data96t];
+        //        NSData *imageData96t = UIImagePNGRepresentation(imageSave96t);
+        //        [newManagedObject96 setValue:imageData95t         forKey:@"thumbnail"];
+        //
+        //
+        //        //[newManagedObject96 setValue:@"BrownTeal" forKey:@"sound"];
+        //
+        //        [newManagedObject96 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        //        [newManagedObject96 setValue:NO forKey:@"extra"];
+        //        [newManagedObject96 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        //
+        //        [context save:NULL];
+        //        newManagedObject96= nil;
+        //
+
+        
+        //        // +++++++++++ Scaup  +++++++++++++
+        // new additions:
+        // Coot, Australian -http://www.nzbirdsonline.org.nz/species/australian-coot
+        // brown teal -http://www.nzbirdsonline.org.nz/species/brown-teal
+        // scaup - http://www.nzbirdsonline.org.nz/species/new-zealand-scaup
+        // canada goose - http://www.nzbirdsonline.org.nz/species/canada-goose
+        // nz crate - ??
+        // guinea fowl - http://www.nzbirdsonline.org.nz/species/helmeted-guineafowl
+        // brown creeper - http://www.nzbirdsonline.org.nz/species/brown-creeper
+        // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
+        //        /*  97
+        //         */
+        //        NSManagedObject *newManagedObject97 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        //
+        //        //Set Bird_attributes
+        //        [newManagedObject97 setValue:@"Scaup"       forKey:@"name"];
+        //        [newManagedObject97 setValue:@"New Zealand Scaup" forKey:@"othername"];
+        //        [newManagedObject97 setValue:@"New Zealand Scaup.\
+        //         " forKey:@"item_description"];
+        //        [newManagedObject97 setValue:@"http://www.nzbirdsonline.org.nz/species/new-zealand-scaup" forKey:@"link"];
+        //        [newManagedObject97 setValue:@"black" forKey:@"beak_colour"];
+        //        [newManagedObject97 setValue:@"short" forKey:@"beak_length"];
+        //        [newManagedObject97 setValue:@"can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject97 setValue:@"0" forKey:@"category"];
+        //        [newManagedObject97 setValue:@"grey/brown" forKey:@"colour"];
+        //        [newManagedObject97 setValue:@"brown" forKey:@"leg_colour"];
+        //        [newManagedObject97 setValue:@"Phasianidae" forKey:@"family"];
+        //        [newManagedObject97 setValue:@"bush" forKey:@"habitat"];
+        //        [newManagedObject97 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+        //        [newManagedObject97 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject97 setValue:@"blackbird" forKey:@"size_and_shape"];
+        //
+        //
+        //        [newManagedObject97 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //
+        //        NSURL *url97t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                ofType:@"jpg"]];
+        //        NSData *data97t = [[NSData alloc] initWithContentsOfURL:url97t];
+        //        UIImage *imageSave97t=[[UIImage alloc]initWithData:data97t];
+        //        NSData *imageData97t = UIImagePNGRepresentation(imageSave97t);
+        //        [newManagedObject97 setValue:imageData97t         forKey:@"thumbnail"];
+        //
+        //
+        //        //[newManagedObject97 setValue:@"NewZealandScaup" forKey:@"sound"];
+        //
+        //        [newManagedObject97 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        //        [newManagedObject97 setValue:NO forKey:@"extra"];
+        //        [newManagedObject97 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        //
+        //        [context save:NULL];
+        //        newManagedObject97= nil;
+        //
+
+        //        // +++++++++++ Canada Goose  +++++++++++++
+        // new additions:
+        // Coot, Australian -http://www.nzbirdsonline.org.nz/species/australian-coot
+        // brown teal -http://www.nzbirdsonline.org.nz/species/brown-teal
+        // scaup - http://www.nzbirdsonline.org.nz/species/new-zealand-scaup
+        // canada goose - http://www.nzbirdsonline.org.nz/species/canada-goose
+        // nz crate - ??
+        // guinea fowl - http://www.nzbirdsonline.org.nz/species/helmeted-guineafowl
+        // brown creeper - http://www.nzbirdsonline.org.nz/species/brown-creeper
+        // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
+        //        /*  98
+        //         */
+        //        NSManagedObject *newManagedObject98 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        //
+        //        //Set Bird_attributes
+        //        [newManagedObject98 setValue:@"Canada Goose"       forKey:@"name"];
+        //        [newManagedObject98 setValue:@"Canada Goose" forKey:@"othername"];
+        //        [newManagedObject98 setValue:@"Canada Goose.\
+        //         " forKey:@"item_description"];
+        //        [newManagedObject98 setValue:@"http://www.nzbirdsonline.org.nz/species/canada-goose" forKey:@"link"];
+        //        [newManagedObject98 setValue:@"black" forKey:@"beak_colour"];
+        //        [newManagedObject98 setValue:@"short" forKey:@"beak_length"];
+        //        [newManagedObject98 setValue:@"can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject98 setValue:@"0" forKey:@"category"];
+        //        [newManagedObject98 setValue:@"grey/brown" forKey:@"colour"];
+        //        [newManagedObject98 setValue:@"brown" forKey:@"leg_colour"];
+        //        [newManagedObject98 setValue:@"Phasianidae" forKey:@"family"];
+        //        [newManagedObject98 setValue:@"bush" forKey:@"habitat"];
+        //        [newManagedObject98 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+        //        [newManagedObject98 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject98 setValue:@"blackbird" forKey:@"size_and_shape"];
+        //
+        //
+        //        [newManagedObject98 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //
+        //        NSURL *url98t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                ofType:@"jpg"]];
+        //        NSData *data98t = [[NSData alloc] initWithContentsOfURL:url98t];
+        //        UIImage *imageSave98t=[[UIImage alloc]initWithData:data98t];
+        //        NSData *imageData98t = UIImagePNGRepresentation(imageSave98t);
+        //        [newManagedObject98 setValue:imageData98t         forKey:@"thumbnail"];
+        //
+        //
+        //        //[newManagedObject98 setValue:@"CanadaGoose" forKey:@"sound"];
+        //
+        //        [newManagedObject98 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        //        [newManagedObject98 setValue:NO forKey:@"extra"];
+        //        [newManagedObject98 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        //
+        //        [context save:NULL];
+        //        newManagedObject98= nil;
+        //
+
+        //        // +++++++++++ Guinea Fowl  +++++++++++++
+        // new additions:
+        // Coot, Australian -http://www.nzbirdsonline.org.nz/species/australian-coot
+        // brown teal -http://www.nzbirdsonline.org.nz/species/brown-teal
+        // scaup - http://www.nzbirdsonline.org.nz/species/new-zealand-scaup
+        // canada goose - http://www.nzbirdsonline.org.nz/species/canada-goose
+        // nz crate - ??
+        // guinea fowl - http://www.nzbirdsonline.org.nz/species/helmeted-guineafowl
+        // brown creeper - http://www.nzbirdsonline.org.nz/species/brown-creeper
+        // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
+        //        /*  99
+        //         */
+        //        NSManagedObject *newManagedObject99 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        //
+        //        //Set Bird_attributes
+        //        [newManagedObject99 setValue:@"Guinea Fowl"       forKey:@"name"];
+        //        [newManagedObject99 setValue:@"Guinea Fowl" forKey:@"othername"];
+        //        [newManagedObject99 setValue:@"Guinea Fowl.\
+        //         " forKey:@"item_description"];
+        //        [newManagedObject99 setValue:@"http://www.nzbirdsonline.org.nz/species/helmeted-guineafowl" forKey:@"link"];
+        //        [newManagedObject99 setValue:@"black" forKey:@"beak_colour"];
+        //        [newManagedObject99 setValue:@"short" forKey:@"beak_length"];
+        //        [newManagedObject99 setValue:@"can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject99 setValue:@"0" forKey:@"category"];
+        //        [newManagedObject99 setValue:@"grey/brown" forKey:@"colour"];
+        //        [newManagedObject99 setValue:@"brown" forKey:@"leg_colour"];
+        //        [newManagedObject99 setValue:@"Phasianidae" forKey:@"family"];
+        //        [newManagedObject99 setValue:@"bush" forKey:@"habitat"];
+        //        [newManagedObject99 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+        //        [newManagedObject99 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject99 setValue:@"blackbird" forKey:@"size_and_shape"];
+        //
+        //
+        //        [newManagedObject99 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //
+        //        NSURL *url99t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                ofType:@"jpg"]];
+        //        NSData *data99t = [[NSData alloc] initWithContentsOfURL:url99t];
+        //        UIImage *imageSave99t=[[UIImage alloc]initWithData:data99t];
+        //        NSData *imageData99t = UIImagePNGRepresentation(imageSave99t);
+        //        [newManagedObject99 setValue:imageData99t         forKey:@"thumbnail"];
+        //
+        //
+        //        //[newManagedObject99 setValue:@"GuineaFowl" forKey:@"sound"];
+        //
+        //        [newManagedObject99 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        //        [newManagedObject99 setValue:NO forKey:@"extra"];
+        //        [newManagedObject99 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        //
+        //        [context save:NULL];
+        //        newManagedObject99= nil;
+        //
+        //        // +++++++++++ Brown Creeper  +++++++++++++
+        // new additions:
+        // Coot, Australian -http://www.nzbirdsonline.org.nz/species/australian-coot
+        // brown teal -http://www.nzbirdsonline.org.nz/species/brown-teal
+        // scaup - http://www.nzbirdsonline.org.nz/species/new-zealand-scaup
+        // canada goose - http://www.nzbirdsonline.org.nz/species/canada-goose
+        // nz crate - ??
+        // guinea fowl - http://www.nzbirdsonline.org.nz/species/helmeted-guineafowl
+        // brown creeper - http://www.nzbirdsonline.org.nz/species/brown-creeper
+        // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
+        //        /*  100
+        //         */
+        //        NSManagedObject *newManagedObject100 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        //
+        //        //Set Bird_attributes
+        //        [newManagedObject100 setValue:@"Brown Creeper"       forKey:@"name"];
+        //        [newManagedObject100 setValue:@"Brown Creeper" forKey:@"othername"];
+        //        [newManagedObject100 setValue:@"Brown Creeper.\
+        //         " forKey:@"item_description"];
+        //        [newManagedObject100 setValue:@"http://www.nzbirdsonline.org.nz/species/brown-creeper" forKey:@"link"];
+        //        [newManagedObject100 setValue:@"black" forKey:@"beak_colour"];
+        //        [newManagedObject100 setValue:@"short" forKey:@"beak_length"];
+        //        [newManagedObject100 setValue:@"can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject100 setValue:@"0" forKey:@"category"];
+        //        [newManagedObject100 setValue:@"grey/brown" forKey:@"colour"];
+        //        [newManagedObject100 setValue:@"brown" forKey:@"leg_colour"];
+        //        [newManagedObject100 setValue:@"Phasianidae" forKey:@"family"];
+        //        [newManagedObject100 setValue:@"bush" forKey:@"habitat"];
+        //        [newManagedObject100 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+        //        [newManagedObject100 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject100 setValue:@"blackbird" forKey:@"size_and_shape"];
+        //
+        //
+        //        [newManagedObject100 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //
+        //        NSURL *url100t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                ofType:@"jpg"]];
+        //        NSData *data100t = [[NSData alloc] initWithContentsOfURL:url100t];
+        //        UIImage *imageSave100t=[[UIImage alloc]initWithData:data100t];
+        //        NSData *imageData100t = UIImagePNGRepresentation(imageSave100t);
+        //        [newManagedObject100 setValue:imageData100t         forKey:@"thumbnail"];
+        //
+        //
+        //        //[newManagedObject100 setValue:@"Kiwi" forKey:@"sound"];
+        //
+        //        [newManagedObject100 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        //        [newManagedObject100 setValue:NO forKey:@"extra"];
+        //        [newManagedObject100 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        //
+        //        [context save:NULL];
+        //        newManagedObject100= nil;
+        //
+        //        // +++++++++++ Kokako  +++++++++++++
+        // new additions:
+        // Coot, Australian -http://www.nzbirdsonline.org.nz/species/australian-coot
+        // brown teal -http://www.nzbirdsonline.org.nz/species/brown-teal
+        // scaup - http://www.nzbirdsonline.org.nz/species/new-zealand-scaup
+        // canada goose - http://www.nzbirdsonline.org.nz/species/canada-goose
+        // nz crate - ??
+        // guinea fowl - http://www.nzbirdsonline.org.nz/species/helmeted-guineafowl
+        // brown creeper - http://www.nzbirdsonline.org.nz/species/brown-creeper
+        // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
+        //        /*  101
+        //         */
+        //        NSManagedObject *newManagedObject101 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        //
+        //        //Set Bird_attributes
+        //        [newManagedObject101 setValue:@"Kokako"       forKey:@"name"];
+        //        [newManagedObject101 setValue:@"Kokako" forKey:@"othername"];
+        //        [newManagedObject101 setValue:@"Kokako.\
+        //         " forKey:@"item_description"];
+        //        [newManagedObject101 setValue:@"http://www.nzbirdsonline.org.nz/species/north-island-kokako" forKey:@"link"];
+        //        [newManagedObject101 setValue:@"black" forKey:@"beak_colour"];
+        //        [newManagedObject101 setValue:@"short" forKey:@"beak_length"];
+        //        [newManagedObject101 setValue:@"can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject101 setValue:@"0" forKey:@"category"];
+        //        [newManagedObject101 setValue:@"grey/brown" forKey:@"colour"];
+        //        [newManagedObject101 setValue:@"brown" forKey:@"leg_colour"];
+        //        [newManagedObject101 setValue:@"Phasianidae" forKey:@"family"];
+        //        [newManagedObject101 setValue:@"bush" forKey:@"habitat"];
+        //        [newManagedObject101 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+        //        [newManagedObject101 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject101 setValue:@"blackbird" forKey:@"size_and_shape"];
+        //
+        //
+        //        [newManagedObject101 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //
+        //        NSURL *url101t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                ofType:@"jpg"]];
+        //        NSData *data101t = [[NSData alloc] initWithContentsOfURL:url101t];
+        //        UIImage *imageSave101t=[[UIImage alloc]initWithData:data101t];
+        //        NSData *imageData101t = UIImagePNGRepresentation(imageSave101t);
+        //        [newManagedObject101 setValue:imageData101t         forKey:@"thumbnail"];
+        //
+        //
+        //        [newManagedObject101 setValue:@"kokako-song_DOC" forKey:@"sound"];
+        //
+        //        [newManagedObject101 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        //        [newManagedObject101 setValue:NO forKey:@"extra"];
+        //        [newManagedObject101 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        //
+        //        [context save:NULL];
+        //        newManagedObject101= nil;
+        //
+
+        //        /*  102 Fjordland Crested Penguin
+        //         */
+        //        NSManagedObject *newManagedObject102 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        //
+        //        //Set Bird_attributes
+        //        [newManagedObject102 setValue:@"California Quail"       forKey:@"name"];
+        //        [newManagedObject102 setValue:@"California Quail" forKey:@"othername"];
+        //        [newManagedObject102 setValue:@"California quail are stocky, predominantly grey and brown, with a diagnostic forward-curling black plume rising erect from the top of their heads. Males have a black chin and cheeks edged with white, and separate white ‘eyebrows’ join on the forehead. The breast is blue-grey and the lower belly cream to rust brown with distinctive black scalloping, which merges into strong, pale streaks on the dark brown flanks. \n\nThe female is slightly smaller, duller and browner, with some streaking on the neck and a more subdued scalloping on the belly, but with equally bold streaking on the flanks. Immature birds are similar to the female but a lighter brown. The female’s crest plume is much smaller than the male’s. Both sexes have fine speckling on the nape, which is bolder in the male. \n\nThere is no seasonal change in plumage. California quail have short, rounded wings and a relatively long tail. Their legs and bill are black and sturdy, with the bill being slightly hooked.\n\nForaging quail pace sedately, but when disturbed they run at speed, their feet a blur of movement, or burst into flight with noisy, rapid wingbeats.\
+        //         " forKey:@"item_description"];
+        //        [newManagedObject102 setValue:@"http://nzbirdsonline.org.nz/species/california-quail" forKey:@"link"];
+        //        [newManagedObject102 setValue:@"black" forKey:@"beak_colour"];
+        //        [newManagedObject102 setValue:@"short" forKey:@"beak_length"];
+        //        [newManagedObject102 setValue:@"can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject102 setValue:@"0" forKey:@"category"];
+        //        [newManagedObject102 setValue:@"grey/brown" forKey:@"colour"];
+        //        [newManagedObject102 setValue:@"brown" forKey:@"leg_colour"];
+        //        [newManagedObject102 setValue:@"Phasianidae" forKey:@"family"];
+        //        [newManagedObject102 setValue:@"bush" forKey:@"habitat"];
+        //        [newManagedObject102 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+        //        [newManagedObject102 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject102 setValue:@"blackbird" forKey:@"size_and_shape"];
+        //
+        //
+        //        [newManagedObject102 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //
+        //        NSURL *url102t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                ofType:@"jpg"]];
+        //        NSData *data102t = [[NSData alloc] initWithContentsOfURL:url102t];
+        //        UIImage *imageSave102t=[[UIImage alloc]initWithData:data102t];
+        //        NSData *imageData102t = UIImagePNGRepresentation(imageSave102t);
+        //        [newManagedObject102 setValue:imageData102t         forKey:@"thumbnail"];
+        //
+        //
+        //        //[newManagedObject102 setValue:@"FjordlandCrestedPenguin" forKey:@"sound"];
+        //
+        //        [newManagedObject102 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        //        [newManagedObject102 setValue:NO forKey:@"extra"];
+        //        [newManagedObject102 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        //
+        //        [context save:NULL];
+        //        newManagedObject102= nil;
+        
+        //        /*  103 South Island Robin
+        //         */
+        //        NSManagedObject *newManagedObject103 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        //
+        //        //Set Bird_attributes
+        //        [newManagedObject103 setValue:@"California Quail"       forKey:@"name"];
+        //        [newManagedObject103 setValue:@"California Quail" forKey:@"othername"];
+        //        [newManagedObject103 setValue:@"California quail are stocky, predominantly grey and brown, with a diagnostic forward-curling black plume rising erect from the top of their heads. Males have a black chin and cheeks edged with white, and separate white ‘eyebrows’ join on the forehead. The breast is blue-grey and the lower belly cream to rust brown with distinctive black scalloping, which merges into strong, pale streaks on the dark brown flanks. \n\nThe female is slightly smaller, duller and browner, with some streaking on the neck and a more subdued scalloping on the belly, but with equally bold streaking on the flanks. Immature birds are similar to the female but a lighter brown. The female’s crest plume is much smaller than the male’s. Both sexes have fine speckling on the nape, which is bolder in the male. \n\nThere is no seasonal change in plumage. California quail have short, rounded wings and a relatively long tail. Their legs and bill are black and sturdy, with the bill being slightly hooked.\n\nForaging quail pace sedately, but when disturbed they run at speed, their feet a blur of movement, or burst into flight with noisy, rapid wingbeats.\
+        //         " forKey:@"item_description"];
+        //        [newManagedObject103 setValue:@"http://nzbirdsonline.org.nz/species/california-quail" forKey:@"link"];
+        //        [newManagedObject103 setValue:@"black" forKey:@"beak_colour"];
+        //        [newManagedObject103 setValue:@"short" forKey:@"beak_length"];
+        //        [newManagedObject103 setValue:@"can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject103 setValue:@"0" forKey:@"category"];
+        //        [newManagedObject103 setValue:@"grey/brown" forKey:@"colour"];
+        //        [newManagedObject103 setValue:@"brown" forKey:@"leg_colour"];
+        //        [newManagedObject103 setValue:@"Phasianidae" forKey:@"family"];
+        //        [newManagedObject103 setValue:@"bush" forKey:@"habitat"];
+        //        [newManagedObject103 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+        //        [newManagedObject103 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject103 setValue:@"blackbird" forKey:@"size_and_shape"];
+        //
+        //
+        //        [newManagedObject103 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //
+        //        NSURL *url103t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                ofType:@"jpg"]];
+        //        NSData *data103t = [[NSData alloc] initWithContentsOfURL:url103t];
+        //        UIImage *imageSave103t=[[UIImage alloc]initWithData:data103t];
+        //        NSData *imageData103t = UIImagePNGRepresentation(imageSave103t);
+        //        [newManagedObject103 setValue:imageData103t         forKey:@"thumbnail"];
+        //
+        //
+        //        //[newManagedObject103 setValue:@"South Island Robin" forKey:@"sound"];
+        //
+        //        [newManagedObject103 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        //        [newManagedObject103 setValue:NO forKey:@"extra"];
+        //        [newManagedObject103 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        //
+        //        [context save:NULL];
+        //        newManagedObject103= nil;
+        
+        //        /*  104 Stewart Island Kiwi
+        //         */
+        //        NSManagedObject *newManagedObject104 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        //
+        //        //Set Bird_attributes
+        //        [newManagedObject104 setValue:@"California Quail"       forKey:@"name"];
+        //        [newManagedObject104 setValue:@"California Quail" forKey:@"othername"];
+        //        [newManagedObject104 setValue:@"California quail are stocky, predominantly grey and brown, with a diagnostic forward-curling black plume rising erect from the top of their heads. Males have a black chin and cheeks edged with white, and separate white ‘eyebrows’ join on the forehead. The breast is blue-grey and the lower belly cream to rust brown with distinctive black scalloping, which merges into strong, pale streaks on the dark brown flanks. \n\nThe female is slightly smaller, duller and browner, with some streaking on the neck and a more subdued scalloping on the belly, but with equally bold streaking on the flanks. Immature birds are similar to the female but a lighter brown. The female’s crest plume is much smaller than the male’s. Both sexes have fine speckling on the nape, which is bolder in the male. \n\nThere is no seasonal change in plumage. California quail have short, rounded wings and a relatively long tail. Their legs and bill are black and sturdy, with the bill being slightly hooked.\n\nForaging quail pace sedately, but when disturbed they run at speed, their feet a blur of movement, or burst into flight with noisy, rapid wingbeats.\
+        //         " forKey:@"item_description"];
+        //        [newManagedObject104 setValue:@"http://nzbirdsonline.org.nz/species/california-quail" forKey:@"link"];
+        //        [newManagedObject104 setValue:@"black" forKey:@"beak_colour"];
+        //        [newManagedObject104 setValue:@"short" forKey:@"beak_length"];
+        //        [newManagedObject104 setValue:@"can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject104 setValue:@"0" forKey:@"category"];
+        //        [newManagedObject104 setValue:@"grey/brown" forKey:@"colour"];
+        //        [newManagedObject104 setValue:@"brown" forKey:@"leg_colour"];
+        //        [newManagedObject104 setValue:@"Phasianidae" forKey:@"family"];
+        //        [newManagedObject104 setValue:@"bush" forKey:@"habitat"];
+        //        [newManagedObject104 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+        //        [newManagedObject104 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject104 setValue:@"blackbird" forKey:@"size_and_shape"];
+        //
+        //
+        //        [newManagedObject104 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //
+        //        NSURL *url104t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                ofType:@"jpg"]];
+        //        NSData *data104t = [[NSData alloc] initWithContentsOfURL:url104t];
+        //        UIImage *imageSave104t=[[UIImage alloc]initWithData:data104t];
+        //        NSData *imageData104t = UIImagePNGRepresentation(imageSave104t);
+        //        [newManagedObject104 setValue:imageData104t         forKey:@"thumbnail"];
+        //
+        //
+        //        //[newManagedObject104 setValue:@"StewartIslandKiwi" forKey:@"sound"];
+        //
+        //        [newManagedObject104 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        //        [newManagedObject104 setValue:NO forKey:@"extra"];
+        //        [newManagedObject104 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        //
+        //        [context save:NULL];
+        //        newManagedObject104= nil;
+        
+        
+        //**************
+        
         
         //*******************************************************
         //This one is required for MAsterViewController.m where CurrentSpot value is updated
@@ -4601,7 +5119,7 @@
     [calendar setTimeZone:timeZone];
     
     // Selectively convert the date components (year, month, day) of the input date
-    NSDateComponents *dateComps = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:inputDate];
+    NSDateComponents *dateComps = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:inputDate];
     // Set the time components manually
 //    [dateComps setHour:0];
 //    [dateComps setMinute:0];
