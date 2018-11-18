@@ -33,8 +33,6 @@
 		B916830917A99355007C7161 /* chaffinch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B916830617A99355007C7161 /* chaffinch.mp3 */; };
 		B916831D17AC418B007C7161 /* kingfisher_square_114.png in Resources */ = {isa = PBXBuildFile; fileRef = B916831917AC418B007C7161 /* kingfisher_square_114.png */; };
 		B916831E17AC418B007C7161 /* kingfisher_square_57_2.png in Resources */ = {isa = PBXBuildFile; fileRef = B916831A17AC418B007C7161 /* kingfisher_square_57_2.png */; };
-		B916832117AC41AF007C7161 /* kingfisher_square_57_2.png in Resources */ = {isa = PBXBuildFile; fileRef = B916832017AC41AF007C7161 /* kingfisher_square_57_2.png */; };
-		B916832317AC41BB007C7161 /* kingfisher_square_114.png in Resources */ = {isa = PBXBuildFile; fileRef = B916832217AC41BB007C7161 /* kingfisher_square_114.png */; };
 		B91683BA17AE0006007C7161 /* 685px-Drozd_zpevny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916837E17AE0006007C7161 /* 685px-Drozd_zpevny.jpg */; };
 		B91683BB17AE0006007C7161 /* 800px-Charadrius_bicinctus_breeding_-_Ralphs_Bay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916837F17AE0006007C7161 /* 800px-Charadrius_bicinctus_breeding_-_Ralphs_Bay.jpg */; };
 		B91683BC17AE0006007C7161 /* 800px-Tui_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B916838017AE0006007C7161 /* 800px-Tui_10.jpg */; };
@@ -456,8 +454,6 @@
 		B916830617A99355007C7161 /* chaffinch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chaffinch.mp3; sourceTree = "<group>"; };
 		B916831917AC418B007C7161 /* kingfisher_square_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kingfisher_square_114.png; sourceTree = "<group>"; };
 		B916831A17AC418B007C7161 /* kingfisher_square_57_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kingfisher_square_57_2.png; sourceTree = "<group>"; };
-		B916832017AC41AF007C7161 /* kingfisher_square_57_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kingfisher_square_57_2.png; path = ../kingfisher_square_57_2.png; sourceTree = "<group>"; };
-		B916832217AC41BB007C7161 /* kingfisher_square_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kingfisher_square_114.png; path = ../kingfisher_square_114.png; sourceTree = "<group>"; };
 		B916837E17AE0006007C7161 /* 685px-Drozd_zpevny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "685px-Drozd_zpevny.jpg"; sourceTree = "<group>"; };
 		B916837F17AE0006007C7161 /* 800px-Charadrius_bicinctus_breeding_-_Ralphs_Bay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "800px-Charadrius_bicinctus_breeding_-_Ralphs_Bay.jpg"; sourceTree = "<group>"; };
 		B916838017AE0006007C7161 /* 800px-Tui_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "800px-Tui_10.jpg"; sourceTree = "<group>"; };
@@ -1521,8 +1517,6 @@
 			children = (
 				B98D7CA41C6D8CFA008AD0A0 /* Kingfisher_square_167x167.png */,
 				B95B943917C06A6900EBC8E7 /* Default.png */,
-				B916832217AC41BB007C7161 /* kingfisher_square_114.png */,
-				B916832017AC41AF007C7161 /* kingfisher_square_57_2.png */,
 				B9CDE3A217A4F56100661AF9 /* 0088.png */,
 				B9CDE3A317A4F56100661AF9 /* 0088@2x.png */,
 				B9CDE3A417A4F56100661AF9 /* 0239.png */,
@@ -1617,7 +1611,7 @@
 		B8E777D616C2F2F400949FEE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Acme;
 				TargetAttributes = {
 					B8E777DD16C2F2F400949FEE = {
@@ -1629,6 +1623,9 @@
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
 			mainGroup = B8E777D516C2F2F400949FEE;
 			productRefGroup = B8E777DF16C2F2F400949FEE /* Products */;
 			projectDirPath = "";
@@ -1807,9 +1804,7 @@
 				B916830917A99355007C7161 /* chaffinch.mp3 in Resources */,
 				B916831D17AC418B007C7161 /* kingfisher_square_114.png in Resources */,
 				B916831E17AC418B007C7161 /* kingfisher_square_57_2.png in Resources */,
-				B916832117AC41AF007C7161 /* kingfisher_square_57_2.png in Resources */,
 				B9E55D761C6AE96100DBF64A /* kakapo-male-song_DOC_18.mp3 in Resources */,
-				B916832317AC41BB007C7161 /* kingfisher_square_114.png in Resources */,
 				B91683BA17AE0006007C7161 /* 685px-Drozd_zpevny.jpg in Resources */,
 				B91683BB17AE0006007C7161 /* 800px-Charadrius_bicinctus_breeding_-_Ralphs_Bay.jpg in Resources */,
 				B91683BC17AE0006007C7161 /* 800px-Tui_10.jpg in Resources */,
@@ -2069,11 +2064,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -2118,11 +2115,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
