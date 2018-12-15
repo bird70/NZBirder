@@ -3851,7 +3851,7 @@
         //Set Bird_attributes
         [newManagedObject72 setValue:@"Kakapo"       forKey:@"name"];
         [newManagedObject72 setValue:@"Owl-Parrot,Night parrot" forKey:@"othername"];
-       [newManagedObject72 setValue:@"A total of 125 birds was known in September 2012. All carry radio transmitters and are intensively monitored and managed. It is possible there are a few birds remaining on Stewart Island, and perhaps even a few in Fiordland.\n\n Once found throughout New Zealand, kakapo started declining in range and abundance after the arrival of Maori. They disappeared from the North Island by about 1930, but persisted longer in the wetter parts of the South Island. The last birds died out in Fiordland in the late 1980s. A population of less than two hundred birds was discovered on Stewart Island in 1977, but this population was also declining due to cat predation. During the 1980s and 1990s the entire known population was transferred to Codfish Island off the coast of Stewart Island, Maud Island in the Marlborough Sounds and Little Barrier Island in the Hauraki Gulf. Since then birds have been moved between Codfish, Maud and Little Barrier Islands as well as to and from newly predator-free Chalky and Anchor Islands in Fiordland. \n\nKakapo now occur only on forested islands, though they previously appeared to have inhabited a wide range of vegetation types." forKey:@"item_description"];
+       [newManagedObject72 setValue:@"The kakapo is critically endangered; as of August 2018, the total known adult population was 148 living animals. All carry radio transmitters and are intensively monitored and managed. Because of the introduction of predators such as cats, rats, ferrets, and stoats during European colonisation, the kakapo was almost wiped out. Conservation efforts began in the 1890s, but they were not very successful until the implementation of the Kakapo Recovery Programme in 1995.\nIt is possible there are a few birds remaining on Stewart Island, and perhaps even a few in Fiordland.\n\n Once found throughout New Zealand, kakapo started declining in range and abundance after the arrival of Maori. They disappeared from the North Island by about 1930, but persisted longer in the wetter parts of the South Island. The last birds died out in Fiordland in the late 1980s. A population of less than two hundred birds was discovered on Stewart Island in 1977, but this population was also declining due to cat predation. During the 1980s and 1990s the entire known population was transferred to Codfish Island off the coast of Stewart Island, Maud Island in the Marlborough Sounds and Little Barrier Island in the Hauraki Gulf. Since then birds have been moved between Codfish, Maud and Little Barrier Islands as well as to and from newly predator-free Chalky and Anchor Islands in Fiordland. \n\nKakapo now occur only on forested islands, though they previously appeared to have inhabited a wide range of vegetation types." forKey:@"item_description"];
         [newManagedObject72 setValue:@"http://en.wikipedia.org/wiki/kakapo" forKey:@"link"];
         [newManagedObject72 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject72 setValue:@"hook" forKey:@"beak_length"];
@@ -4257,7 +4257,7 @@
                 [newManagedObject83 setValue:@"http://nzbirdsonline.org.nz/species/pied-shag" forKey:@"link"];
                 [newManagedObject83 setValue:@"red,pale" forKey:@"beak_colour"];
                 [newManagedObject83 setValue:@"long" forKey:@"beak_length"];
-                [newManagedObject83 setValue:@"" forKey:@"behaviour"];
+                [newManagedObject83 setValue:@"can fly, shy" forKey:@"behaviour"];
                 [newManagedObject83 setValue:@"0" forKey:@"category"];
                 [newManagedObject83 setValue:@"black,white" forKey:@"colour"];
                 [newManagedObject83 setValue:@"black" forKey:@"leg_colour"];
@@ -4503,7 +4503,7 @@
         [newManagedObject94 setValue:@"black" forKey:@"leg_colour"];
         [newManagedObject94 setValue:@"http://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/australasian-bittern-matuku/" forKey:@"link"];
         [newManagedObject94 setValue:@"Matuku" forKey:@"othername"];
-        [newManagedObject94 setValue:@"Australasian bittern" forKey:@"short_name"];
+        [newManagedObject94 setValue:@"Botaurus poiciloptilus" forKey:@"short_name"];
         [newManagedObject94 setValue:@"swan" forKey:@"size_and_shape"];
         [newManagedObject94 setValue:@"australasian-bittern_DOC" forKey:@"sound"];
         [newManagedObject94 setValue:@"endangered" forKey:@"threat_status"];
@@ -4559,12 +4559,10 @@
 //        [context save:NULL];
 //        newManagedObject85= nil;
         
+
         
-        ////      Suggestions:
+////      SUGGESTIONS:
         
-        
-        
-//        //Kokako ?
 //        Fiordland crested penguin ?
 //        South Island robin?
 //        Stewart island kiwi?
@@ -4586,27 +4584,42 @@
         //
         //        //Set Bird_attributes
         //        [newManagedObject95 setValue:@"Australian Coot"       forKey:@"name"];
-        //        [newManagedObject95 setValue:@"Coot" forKey:@"othername"];
-        //        [newManagedObject95 setValue:@"Coot.\
-        //         " forKey:@"item_description"];
+        //        [newManagedObject95 setValue:@"Fulica atra australis" forKey:@"othername"];
+        //        [newManagedObject95 setValue:@"The Australian coot is a smart, dark-grey, duck-like waterbird, instantly recognisable from its bright white bill and frontal shield. Coots are related to gallinules – the branch of the rail family that includes pukeko and takahe. Out of the water, a coot’s stance is more like a small pukeko than a duck. But instead of the pukeko’s long thin toes, coots have broad fleshy lobes on their short toes, used to give propulsion when swimming. The Australian coot is a recent arrival in New Zealand, first recorded breeding here in 1958. Their colonisation partially fills the niche left vacant by the extinction of the New Zealand coot, which was widespread before the arrival of Maori.\Identification\
+        Adult Australian coots are entirely slate-grey with a white bill and frontal shield. They have red eyes and large grey feet with lobed toes. Sexes are alike. Juvenile and immature birds have duller and paler colouring, with some pale grey on the chin and throat. They have brown eyes and smaller frontal shields. Coots are rarely seen in flight, where they differ from scaup in that their legs trail behind their tails in flight.\
+    Voice: a loud discordant krark.\
+        Similar species: New Zealand scaup have similar body size, shape, colouration and diving behaviour, but differ in having a blue-grey bill and no frontal shield, plus males have a yellow eye, and females often have white around the bill base (cf. blackish facial feathers in coots).\
+        Distribution and habitat:\
+        Australian coots are found throughout mainland New Zealand other than Northland, but there are few parts of the country where they are abundant. Coots are entirely aquatic, and there are large parts of the country that do not have their preferred freshwater lakes and ponds with submerged vegetation and reedy, grassy islands or edges.\
+            Single coots, possibly the same bird, have occurred as vagrants on Stewart Island (December 2012) and the Snares Islands (April 2013). Coots have reached Macquarie Island Island at least twice, with at least 7 birds in May-October 1957, and one in June-October 1975.\
+            \
+        Population:\
+            \
+            The Australian coot is a subspecies of the Eurasian coot that self-introduced into New Zealand from Australia in the 20th century, and was first recorded breeding in New Zealand on Lake Hayes, Otago in 1958. There were about 2,000 coots estimated to be present in New Zealand in 2005.\
+            \
+            Coots reached New Zealand on many occasions before they established, with at least 9 records from the South Island between 1875 (Lovells Flat, Otago) and 1957 (Heathcote River, Christchurch), before the first eggs and chicks were seen at Lake Hayes in November 1958. The first North Island record was at Lake Tutira, Hawkes Bay in 1954. There was an influx of coots in or before 1957, and they rapidly established as a breeding species.\
+            \
+        Threats and conservation :\
+            \
+            As a self-introduced species, Australian coots are automatically covered by the Wildlife Act, and are fully protected. They are well-established in New Zealand, with no recognised threats.   .\" forKey:@"item_description"];
         //        [newManagedObject95 setValue:@"http://www.nzbirdsonline.org.nz/species/australian-coot" forKey:@"link"];
-        //        [newManagedObject95 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject95 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject95 setValue:@"can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject95 setValue:@"white" forKey:@"beak_colour"];
+        //        [newManagedObject95 setValue:@"short,pointed" forKey:@"beak_length"];
+        //        [newManagedObject95 setValue:@"can fly" forKey:@"behaviour"];
         //        [newManagedObject95 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject95 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject95 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject95 setValue:@"Phasianidae" forKey:@"family"];
-        //        [newManagedObject95 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject95 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject95 setValue:@"plumed quail" forKey:@"short_name"];
-        //        [newManagedObject95 setValue:@"blackbird" forKey:@"size_and_shape"];
+        //        [newManagedObject95 setValue:@"black" forKey:@"colour"];
+        //        [newManagedObject95 setValue:@"grey" forKey:@"leg_colour"];
+        //        [newManagedObject95 setValue:@"Rallidae" forKey:@"family"];
+        //        [newManagedObject95 setValue:@"water" forKey:@"habitat"];
+        //        [newManagedObject95 setValue:@"Native/ Naturally uncommon" forKey:@"threat_status"];
+        //        [newManagedObject95 setValue:@"Coot" forKey:@"short_name"];
+        //        [newManagedObject95 setValue:@"duck" forKey:@"size_and_shape"];
         //
         //
-        //        [newManagedObject95 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //        [newManagedObject95 setValue:@"AustralianCoot"         forKey:@"image"];
         //
         //        NSURL *url95t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                pathForResource:@"AustralianCoot_TN"
         //                                                ofType:@"jpg"]];
         //        NSData *data95t = [[NSData alloc] initWithContentsOfURL:url95t];
         //        UIImage *imageSave95t=[[UIImage alloc]initWithData:data95t];
@@ -4654,14 +4667,14 @@
         //        [newManagedObject96 setValue:@"Phasianidae" forKey:@"family"];
         //        [newManagedObject96 setValue:@"bush" forKey:@"habitat"];
         //        [newManagedObject96 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject96 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject96 setValue:@"brown teal" forKey:@"short_name"];
         //        [newManagedObject96 setValue:@"blackbird" forKey:@"size_and_shape"];
         //
         //
-        //        [newManagedObject96 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //        [newManagedObject96 setValue:@"BrownTeal"         forKey:@"image"];
         //
         //        NSURL *url96t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                pathForResource:@"BrownTeal_TN"
         //                                                ofType:@"jpg"]];
         //        NSData *data96t = [[NSData alloc] initWithContentsOfURL:url96t];
         //        UIImage *imageSave96t=[[UIImage alloc]initWithData:data96t];
@@ -4713,10 +4726,10 @@
         //        [newManagedObject97 setValue:@"blackbird" forKey:@"size_and_shape"];
         //
         //
-        //        [newManagedObject97 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //        [newManagedObject97 setValue:@"Scaup"         forKey:@"image"];
         //
         //        NSURL *url97t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                pathForResource:@"Scaup_TN"
         //                                                ofType:@"jpg"]];
         //        NSData *data97t = [[NSData alloc] initWithContentsOfURL:url97t];
         //        UIImage *imageSave97t=[[UIImage alloc]initWithData:data97t];
@@ -4767,10 +4780,10 @@
         //        [newManagedObject98 setValue:@"blackbird" forKey:@"size_and_shape"];
         //
         //
-        //        [newManagedObject98 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //        [newManagedObject98 setValue:@"CanadaGoose"         forKey:@"image"];
         //
         //        NSURL *url98t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                pathForResource:@"CanadaGoose_TN"
         //                                                ofType:@"jpg"]];
         //        NSData *data98t = [[NSData alloc] initWithContentsOfURL:url98t];
         //        UIImage *imageSave98t=[[UIImage alloc]initWithData:data98t];
@@ -4817,14 +4830,14 @@
         //        [newManagedObject99 setValue:@"Phasianidae" forKey:@"family"];
         //        [newManagedObject99 setValue:@"bush" forKey:@"habitat"];
         //        [newManagedObject99 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject99 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject99 setValue:@"Canada Goose" forKey:@"short_name"];
         //        [newManagedObject99 setValue:@"blackbird" forKey:@"size_and_shape"];
         //
         //
-        //        [newManagedObject99 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //        [newManagedObject99 setValue:@"GuineaFowl"         forKey:@"image"];
         //
         //        NSURL *url99t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                pathForResource:@"CanadaGoose_TN"
         //                                                ofType:@"jpg"]];
         //        NSData *data99t = [[NSData alloc] initWithContentsOfURL:url99t];
         //        UIImage *imageSave99t=[[UIImage alloc]initWithData:data99t];
@@ -4870,14 +4883,14 @@
         //        [newManagedObject100 setValue:@"Phasianidae" forKey:@"family"];
         //        [newManagedObject100 setValue:@"bush" forKey:@"habitat"];
         //        [newManagedObject100 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject100 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject100 setValue:@"Brown Creeper" forKey:@"short_name"];
         //        [newManagedObject100 setValue:@"blackbird" forKey:@"size_and_shape"];
         //
         //
-        //        [newManagedObject100 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //        [newManagedObject100 setValue:@"Brown Creeper"         forKey:@"image"];
         //
         //        NSURL *url100t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                pathForResource:@"Brown Creeper_TN"
         //                                                ofType:@"jpg"]];
         //        NSData *data100t = [[NSData alloc] initWithContentsOfURL:url100t];
         //        UIImage *imageSave100t=[[UIImage alloc]initWithData:data100t];
@@ -4885,7 +4898,7 @@
         //        [newManagedObject100 setValue:imageData100t         forKey:@"thumbnail"];
         //
         //
-        //        //[newManagedObject100 setValue:@"Kiwi" forKey:@"sound"];
+        //        //[newManagedObject100 setValue:@"BrownCreeper" forKey:@"sound"];
         //
         //        [newManagedObject100 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         //        [newManagedObject100 setValue:NO forKey:@"extra"];
@@ -4894,7 +4907,7 @@
         //        [context save:NULL];
         //        newManagedObject100= nil;
         //
-        //        // +++++++++++ Kokako  +++++++++++++
+        //        // +++++++++++ North-Island Kokako  +++++++++++++
         // new additions:
         // Coot, Australian -http://www.nzbirdsonline.org.nz/species/australian-coot
         // brown teal -http://www.nzbirdsonline.org.nz/species/brown-teal
@@ -4923,14 +4936,14 @@
         //        [newManagedObject101 setValue:@"Phasianidae" forKey:@"family"];
         //        [newManagedObject101 setValue:@"bush" forKey:@"habitat"];
         //        [newManagedObject101 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject101 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject101 setValue:@"Kokako (NI)" forKey:@"short_name"];
         //        [newManagedObject101 setValue:@"blackbird" forKey:@"size_and_shape"];
         //
         //
-        //        [newManagedObject101 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //        [newManagedObject101 setValue:@"Kokako"         forKey:@"image"];
         //
         //        NSURL *url101t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                pathForResource:@"Kokako_TN"
         //                                                ofType:@"jpg"]];
         //        NSData *data101t = [[NSData alloc] initWithContentsOfURL:url101t];
         //        UIImage *imageSave101t=[[UIImage alloc]initWithData:data101t];
@@ -4947,34 +4960,40 @@
         //        [context save:NULL];
         //        newManagedObject101= nil;
         //
+        
+////      SUGGESTIONS:
+
+//        Fiordland crested penguin 102
+//        South Island robin 103
+//        Stewart island kiwi 104
+
 
         //        /*  102 Fjordland Crested Penguin
         //         */
         //        NSManagedObject *newManagedObject102 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         //
         //        //Set Bird_attributes
-        //        [newManagedObject102 setValue:@"California Quail"       forKey:@"name"];
-        //        [newManagedObject102 setValue:@"California Quail" forKey:@"othername"];
-        //        [newManagedObject102 setValue:@"California quail are stocky, predominantly grey and brown, with a diagnostic forward-curling black plume rising erect from the top of their heads. Males have a black chin and cheeks edged with white, and separate white ‘eyebrows’ join on the forehead. The breast is blue-grey and the lower belly cream to rust brown with distinctive black scalloping, which merges into strong, pale streaks on the dark brown flanks. \n\nThe female is slightly smaller, duller and browner, with some streaking on the neck and a more subdued scalloping on the belly, but with equally bold streaking on the flanks. Immature birds are similar to the female but a lighter brown. The female’s crest plume is much smaller than the male’s. Both sexes have fine speckling on the nape, which is bolder in the male. \n\nThere is no seasonal change in plumage. California quail have short, rounded wings and a relatively long tail. Their legs and bill are black and sturdy, with the bill being slightly hooked.\n\nForaging quail pace sedately, but when disturbed they run at speed, their feet a blur of movement, or burst into flight with noisy, rapid wingbeats.\
-        //         " forKey:@"item_description"];
-        //        [newManagedObject102 setValue:@"http://nzbirdsonline.org.nz/species/california-quail" forKey:@"link"];
-        //        [newManagedObject102 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject102 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject102 setValue:@"can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject102 setValue:@"Fjordland Crested Penguin"       forKey:@"name"];
+        //        [newManagedObject102 setValue:@"Fjordland Crested Penguin" forKey:@"othername"];
+        //        [newManagedObject102 setValue:@"Fiordland crested penguins are endemic to New Zealand, breeding in small colonies on inaccessible headlands and islets along the shores of south-western South Island and Stewart Island. They can be seen and heard on landing beaches during July – December. Populations have declined considerably in range and numbers since human arrival. Immediate threats include fisheries bycatch, introduced predators, and human disturbance. Identification: Adult Fiordland crested penguins have dark blue-grey/black upperparts (which turn brown when approaching moult), often darker on the head. A broad yellow eyebrow stripe (crest) starts at the nostril and extends well past the eye, drooping down the neck; 3-6 whitish stripes on the cheeks are displayed when agitated. The underparts are silky white. The moderately large orange bill has a thin strip of black skin at the base (cf. broader bare pink skin on Snares crested penguin). Females have smaller bills (bill depth < 24 mm) than males (bill depth >24 mm). The eyes are brownish-red, and feet and legs pinkish-white above and blackish-brown behind and on the soles. Juveniles have short, thin pale-yellow eyebrow stripes and mottled whitish chin and throat. The dorsal plumage of newly-fledged chicks is distinctly bluish, fading to black with wear, then to mid-brown before moulting. Voice: calls include loud braying or trumpeting, high pitched contact calls, and low-pitched hissing and growling. Calls are similar to those of Snares crested penguins. Similar species: Fiordland crested penguins are most similar to Snares crested penguin, which (as adults) have dark cheeks, a larger bill with prominent pink skin at the base, and narrower eye-brow stripes. All other crested penguins are also similar, especially when immature, but note broad eye-brow stripes, throat and cheeks greyish white, and absence of bare skin at bill base in immature Fiordland crested penguins. Recently fledged young (which are smaller than adults and bluish dorsally) may be confused with little penguins when swimming, but are twice as large and have at least some yellow above the eye" forKey:@"item_description"];
+        //        [newManagedObject102 setValue:@"http://nzbirdsonline.org.nz/species/fiordland-crested-penguin" forKey:@"link"];
+        //        [newManagedObject102 setValue:@"" forKey:@"beak_colour"];
+        //        [newManagedObject102 setValue:@"" forKey:@"beak_length"];
+        //        [newManagedObject102 setValue:@"" forKey:@"behaviour"];
         //        [newManagedObject102 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject102 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject102 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject102 setValue:@"Phasianidae" forKey:@"family"];
-        //        [newManagedObject102 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject102 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject102 setValue:@"plumed quail" forKey:@"short_name"];
-        //        [newManagedObject102 setValue:@"blackbird" forKey:@"size_and_shape"];
+        //        [newManagedObject102 setValue:@"" forKey:@"colour"];
+        //        [newManagedObject102 setValue:@"" forKey:@"leg_colour"];
+        //        [newManagedObject102 setValue:@"" forKey:@"family"];
+        //        [newManagedObject102 setValue:@"" forKey:@"habitat"];
+        //        [newManagedObject102 setValue:@"" forKey:@"threat_status"];
+        //        [newManagedObject102 setValue:@"Fjordland Crested Penguin" forKey:@"short_name"];
+        //        [newManagedObject102 setValue:@"" forKey:@"size_and_shape"];
         //
         //
-        //        [newManagedObject102 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //        [newManagedObject102 setValue:@"FjordlandCrestedPenguin"         forKey:@"image"];
         //
         //        NSURL *url102t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                pathForResource:@"FjordlandCrestedPenguin_TN"
         //                                                ofType:@"jpg"]];
         //        NSData *data102t = [[NSData alloc] initWithContentsOfURL:url102t];
         //        UIImage *imageSave102t=[[UIImage alloc]initWithData:data102t];
@@ -4996,11 +5015,10 @@
         //        NSManagedObject *newManagedObject103 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         //
         //        //Set Bird_attributes
-        //        [newManagedObject103 setValue:@"California Quail"       forKey:@"name"];
-        //        [newManagedObject103 setValue:@"California Quail" forKey:@"othername"];
-        //        [newManagedObject103 setValue:@"California quail are stocky, predominantly grey and brown, with a diagnostic forward-curling black plume rising erect from the top of their heads. Males have a black chin and cheeks edged with white, and separate white ‘eyebrows’ join on the forehead. The breast is blue-grey and the lower belly cream to rust brown with distinctive black scalloping, which merges into strong, pale streaks on the dark brown flanks. \n\nThe female is slightly smaller, duller and browner, with some streaking on the neck and a more subdued scalloping on the belly, but with equally bold streaking on the flanks. Immature birds are similar to the female but a lighter brown. The female’s crest plume is much smaller than the male’s. Both sexes have fine speckling on the nape, which is bolder in the male. \n\nThere is no seasonal change in plumage. California quail have short, rounded wings and a relatively long tail. Their legs and bill are black and sturdy, with the bill being slightly hooked.\n\nForaging quail pace sedately, but when disturbed they run at speed, their feet a blur of movement, or burst into flight with noisy, rapid wingbeats.\
-        //         " forKey:@"item_description"];
-        //        [newManagedObject103 setValue:@"http://nzbirdsonline.org.nz/species/california-quail" forKey:@"link"];
+        //        [newManagedObject103 setValue:@"South Island Robin"       forKey:@"name"];
+        //        [newManagedObject103 setValue:@"South Island Robin" forKey:@"othername"];
+        //        [newManagedObject103 setValue:@"The South Island robin is a familiar bird to those who venture into the South Island back-country. It occurs in forest and scrub habitats, where it spends much time foraging on the ground, and can be recognised by its erect stance and relatively long legs. It is a territorial species, males in particular inhabiting the same patch of forest throughout their lives. Males are great songsters, particularly bachelors, singing loudly and often for many minutes at a time. Where robins are regularly exposed to people, such as along public walking tracks, they become quite confiding, often approaching to within a metre of a person sitting quietly. Juveniles will sometimes stand on a person’s boot. Identification: The adult male South Island robin is dark grey-black over the head, neck, mantle and upper chest; the flight feathers and tail are brownish-black, and the lower chest and belly white to yellowish white with a sharp demarcation between black and white on chest. Adult females are light to dark grey over the upper body. They further differ from males in the  white chest-belly area being smaller and not having such a distinct demarcation between grey and white feathering. Juveniles are similar to females, but often with a smaller or no white patch on the underparts. Adults of both sexes are able to expose a small white spot of feathers above the base of the beak during intraspecific and interspecific interactions. Voice: South Island robins have four recognisable vocalisations. Fullsong is a series of phrases given loudly by males only, generally from a high perch. Robins can be heard giving fullsong year round, but particularly during the breeding season. It is used to indicate territorial occupancy and to attract a mate – bachelors spend much more time singing than paired males. Subsong is similar to fullsong but given at much less volume, is given by both sexes, and most frequently during the moult. The downscale is a series of very loud ‘chuck’ calls, descending in tone, and which start in rapid succession and finish slowly. The call lasts 3-4 seconds, is given by both sexes, and is most frequently heard during the non-breeding season (January-June). The fourth vocalisation type is the ‘chuck’, which is given as single notes (contact calls) or in rapid succession and loudly (as an alarm call) when a predator is nearby. Similar species:there are no species that are similar to the robin in the South Island or Stewart Island. Robins are much larger and lack the white wing-bars of tomtits. Distribution: The South Island robin has a disjunct distribution through both the South and Stewart Islands. Its strongholds in the South Island are Marlborough, Nelson, West Coast as far south as about Harihari, and through Fiordland, with outliers at Jackson Bay and Dunedin. A comparison of the Ornithological Society of New Zealand’s atlas scheme results of 1969-79 and 1999-2004 suggest that the South Island robin’s distribution has changed little during the 20 year interval. Several populations, particularly on islands, have been established by translocations. Habitat: Robins occur in mature forest, scrub, and exotic plantations, particularly those that are fairly mature with an open understorey. They seem to favour moist areas where there is an open understorey under a closed canopy on fertile soils. Habitats that tend to be shunned are those with widely scattered trees and where the ground is covered by grasses or sparse vegetation on stony, droughty soils. Population: South Island robin is patchily distributed through its range, and is absent from some seemingly suitable areas while common in others. Pairs have territories of 1-5 ha on the mainland, although populations on pest-free islands can occur at much greater densities (0.2-0.6 ha / pair). \" forKey:@"item_description"];
+        //        [newManagedObject103 setValue:@"http://nzbirdsonline.org.nz/species/south-island-robin" forKey:@"link"];
         //        [newManagedObject103 setValue:@"black" forKey:@"beak_colour"];
         //        [newManagedObject103 setValue:@"short" forKey:@"beak_length"];
         //        [newManagedObject103 setValue:@"can fly,shy" forKey:@"behaviour"];
@@ -5010,14 +5028,14 @@
         //        [newManagedObject103 setValue:@"Phasianidae" forKey:@"family"];
         //        [newManagedObject103 setValue:@"bush" forKey:@"habitat"];
         //        [newManagedObject103 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject103 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject103 setValue:@"South Island Robin" forKey:@"short_name"];
         //        [newManagedObject103 setValue:@"blackbird" forKey:@"size_and_shape"];
         //
         //
-        //        [newManagedObject103 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //        [newManagedObject103 setValue:@"SouthIslandRobin"         forKey:@"image"];
         //
         //        NSURL *url103t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                pathForResource:@"SouthIslandRobin_TN"
         //                                                ofType:@"jpg"]];
         //        NSData *data103t = [[NSData alloc] initWithContentsOfURL:url103t];
         //        UIImage *imageSave103t=[[UIImage alloc]initWithData:data103t];
@@ -5025,7 +5043,7 @@
         //        [newManagedObject103 setValue:imageData103t         forKey:@"thumbnail"];
         //
         //
-        //        //[newManagedObject103 setValue:@"South Island Robin" forKey:@"sound"];
+        //        //[newManagedObject103 setValue:@"SouthIslandRobin" forKey:@"sound"];
         //
         //        [newManagedObject103 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         //        [newManagedObject103 setValue:NO forKey:@"extra"];
@@ -5039,28 +5057,27 @@
         //        NSManagedObject *newManagedObject104 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         //
         //        //Set Bird_attributes
-        //        [newManagedObject104 setValue:@"California Quail"       forKey:@"name"];
-        //        [newManagedObject104 setValue:@"California Quail" forKey:@"othername"];
-        //        [newManagedObject104 setValue:@"California quail are stocky, predominantly grey and brown, with a diagnostic forward-curling black plume rising erect from the top of their heads. Males have a black chin and cheeks edged with white, and separate white ‘eyebrows’ join on the forehead. The breast is blue-grey and the lower belly cream to rust brown with distinctive black scalloping, which merges into strong, pale streaks on the dark brown flanks. \n\nThe female is slightly smaller, duller and browner, with some streaking on the neck and a more subdued scalloping on the belly, but with equally bold streaking on the flanks. Immature birds are similar to the female but a lighter brown. The female’s crest plume is much smaller than the male’s. Both sexes have fine speckling on the nape, which is bolder in the male. \n\nThere is no seasonal change in plumage. California quail have short, rounded wings and a relatively long tail. Their legs and bill are black and sturdy, with the bill being slightly hooked.\n\nForaging quail pace sedately, but when disturbed they run at speed, their feet a blur of movement, or burst into flight with noisy, rapid wingbeats.\
-        //         " forKey:@"item_description"];
-        //        [newManagedObject104 setValue:@"http://nzbirdsonline.org.nz/species/california-quail" forKey:@"link"];
-        //        [newManagedObject104 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject104 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject104 setValue:@"can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject104 setValue:@"Stewart Island Kiwi"       forKey:@"name"];
+        //        [newManagedObject104 setValue:@"Stewart Island Kiwi" forKey:@"othername"];
+        //        [newManagedObject104 setValue:@"The Stewart Island tokoeka is the largest of the kiwi. Fiordland tokoeka are also very large, but Haast birds are smaller. Widespread in forest, scrub, tussock grasslands and subalpine zones of the south-western South Island and on Stewart Island. Flightless, with tiny vestigial wings and no tail. Generally nocturnal, therefore more often heard than seen, except on Stewart Island where birds often forage during the day. Male gives a repeated high-pitched ascending whistle, female gives a deeper throaty cry. A range of colours from rufous brown in Haast, to brown and dark brown elsewhere, streaked lengthways with reddish brown and black. Feather tips feel soft. Long pale bill, short legs and toes. Identification: Large brown kiwi. Rufous to dark brown soft feathers streaked with brown and black; long pale bill, short pale legs and toes. Voice:  Male gives a high-pitched ascending whistle repeated 15-25 times, female gives a slower and lower pitched hoarse guttural call repeated 10-20 times. Similar species: rowi are smaller and greyer. The calls of weka are similar to the call of the male tokoeka, but weka have two-syllable calls, and usually have fewer repetitions. Distribution [and habitat: ]Sparse to locally common in native forests, scrub, tussock grassland and subalpine zones in parts of the Haast Range and Arawhata Valley; Fiordland, from Milford Sound to Preservation Inlet and east to Lake Te Anau, including many of the larger islands such as Secretary and Resolution Islands; Stewart Island and Ulva Island. Fiordland tokoeka were introduced to Kapiti Island in 1908, where they have hybridised with North Island brown kiwi. Recently, Haast tokoeka have been introduced to Coal and Rarotoka Islands, and to the Orokonui Ecosanctuary, Dunedin, and small islands in Lakes Te Anau and Manapouri are used as crèche sites for this taxon. Before human settlement of New Zealand tokoeka were widespread throughout the southern and eastern part of the South Island as far north as North Canterbury. Population: About 30,000 birds in 2012; Haast tokoeka, c. 350 birds; Fiordland tokoeka, c. 15,000 birds; Stewart Island tokoeka, c. 15,000 birds.\" forKey:@"item_description"];
+        //        [newManagedObject104 setValue:@"http://nzbirdsonline.org.nz/species/southern-brown-kiwi" forKey:@"link"];
+        //        [newManagedObject104 setValue:@"brown" forKey:@"beak_colour"];
+        //        [newManagedObject104 setValue:@"long" forKey:@"beak_length"];
+        //        [newManagedObject104 setValue:@"flightless" forKey:@"behaviour"];
         //        [newManagedObject104 setValue:@"0" forKey:@"category"];
         //        [newManagedObject104 setValue:@"grey/brown" forKey:@"colour"];
         //        [newManagedObject104 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject104 setValue:@"Phasianidae" forKey:@"family"];
+        //        [newManagedObject104 setValue:@"Apterygidae" forKey:@"family"];
         //        [newManagedObject104 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject104 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject104 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject104 setValue:@"Nationally Endangered" forKey:@"threat_status"];
+        //        [newManagedObject104 setValue:@"Southern Brown Kiwi" forKey:@"short_name"];
         //        [newManagedObject104 setValue:@"blackbird" forKey:@"size_and_shape"];
         //
         //
-        //        [newManagedObject104 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //        [newManagedObject104 setValue:@"StewartIslandKiwi"         forKey:@"image"];
         //
         //        NSURL *url104t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                pathForResource:@"StewartIslandKiwi_TN"
         //                                                ofType:@"jpg"]];
         //        NSData *data104t = [[NSData alloc] initWithContentsOfURL:url104t];
         //        UIImage *imageSave104t=[[UIImage alloc]initWithData:data104t];
