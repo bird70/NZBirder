@@ -1,0 +1,30 @@
+﻿Name,Tilmann Steinmetz
+Address,"6 Stirling Street, Berhampore, Wellington 6023, New Zealand"
+Account Number,000114376948
+Service,Service 1
+
+TYPE,START DATE,END DATE,USAGE,UNITS,COST,NOTES
+Electricity billing,2015-08-13,2015-09-09,368.00,kWh,$98.71,
+Electricity billing,2015-09-10,2015-10-11,318.00,kWh,$86.04,
+Electricity billing,2015-10-12,2015-11-10,239.00,kWh,$66.67,
+Electricity billing,2015-11-11,2015-12-09,210.00,kWh,$59.48,
+Electricity billing,2015-12-10,2016-01-13,138.00,kWh,$44.47,
+Electricity billing,2016-01-14,2016-02-14,225.00,kWh,$64.04,
+Electricity billing,2016-02-15,2016-03-06,147.00,kWh,$41.87,
+Electricity billing,2016-03-07,2016-04-06,268.00,kWh,$73.87,
+Electricity billing,2016-04-07,2016-05-05,281.00,kWh,$76.28,
+Electricity billing,2016-05-06,2016-06-06,414.00,kWh,$108.75,
+Electricity billing,2016-06-07,2016-07-05,422.00,kWh,$109.63,
+Electricity billing,2016-07-06,2016-08-03,427.00,kWh,$110.82,
+Electricity billing,2016-08-04,2016-09-04,428.00,kWh,$112.06,
+Electricity billing,2016-09-05,2016-10-03,323.00,kWh,$86.20,
+Electricity billing,2016-10-04,2016-11-02,256.00,kWh,$70.69,
+Electricity billing,2016-11-03,2016-12-01,231.00,kWh,$64.44,
+Electricity billing,2016-12-02,2017-01-05,270.00,kWh,$75.70,
+Electricity billing,2017-01-06,2017-02-06,197.00,kWh,$57.41,
+Electricity billing,2017-02-07,2017-03-06,225.00,kWh,$62.68,
+Electricity billing,2017-03-07,2017-04-04,267.00,kWh,$74.00,
+Electricity billing,2017-04-05,2017-05-07,338.00,kWh,$100.55,
+Electricity billing,2017-05-08,2017-06-06,303.00,kWh,$90.27,
+Electricity billing,2017-06-07,2017-07-05,347.00,kWh,$101.59,
+Electricity billing,2017-07-06,2017-08-03,455.00,kWh,$130.14,

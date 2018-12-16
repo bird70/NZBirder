@@ -71,11 +71,34 @@
     
     
             if (spot == NULL){
-                UIAlertView *alert = [[UIAlertView alloc]
-                                      initWithTitle:@"You need to create or select an observation spot on the map first (long tap on map or tap on existing spot)" message:nil delegate:nil
-                                      cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-                [alert show];
-    
+
+                //Previous version (Dec 2018)
+                //                UIAlertView *alert = [[UIAlertView alloc]
+//                                      initWithTitle:@"You need to create or select an observation spot on the map first (long tap on map or tap on existing spot)" message:nil delegate:nil
+//                                      cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                
+                //[alert show];
+                
+                
+                UIAlertController * alert = [UIAlertController
+                                             alertControllerWithTitle:@"You need to create or select an observation spot on the map first (long tap on map or tap on existing spot)"
+                                             message:@" - Use Map tab or Observations tab - "
+                                              preferredStyle:UIAlertControllerStyleAlert];
+                
+                
+                
+                UIAlertAction* yesButton = [UIAlertAction
+                                            actionWithTitle:@"Okay. Got it."
+                                            style:UIAlertActionStyleDefault
+                                            handler:^(UIAlertAction * action) {
+                                                //Handle your yes please button action here
+                                            }];
+                [alert addAction:yesButton];
+                //[alert addAction:noButton];
+                
+                [self presentViewController:alert animated:YES completion:nil];
+                
+                
                 return;
                 
             }

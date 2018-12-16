@@ -48,6 +48,27 @@
 
 
 - (void) showPicker:(id)sender {
+    // NEW Dec. 2018
+//    UIAlertController * menu = [UIAlertController
+//                                 alertControllerWithTitle:@"Pick Bird Attributes to find candidates"
+//                                 message:@"This device is not configured for sending Email. Please configure the Mail settings in the Settings app."
+//                                 preferredStyle:UIAlertControllerStyleActionSheet];
+//
+//
+//
+//    UIAlertAction* yesButton = [UIAlertAction
+//                                actionWithTitle:@"Okay."
+//                                style:UIAlertActionStyleDefault
+//                                handler:^(UIAlertAction * action) {
+//                                    //Handle your yes please button action here
+//                                }];
+//    [menu addAction:yesButton];
+//    //[alert addAction:noButton];
+//
+//    [self presentViewController:menu animated:YES completion:nil];
+//
+//
+    // OLD prior to Dec 2018
     UIActionSheet *menu = [[UIActionSheet alloc] initWithTitle:@"Pick Bird Attributes to find candidates" //[currentData objectAtIndex:0]
                                                       delegate:self
                                              cancelButtonTitle:@"Find"

@@ -298,6 +298,30 @@
                 <key>Type</key>
                 <string>PSGroupSpecifier</string>
                 <key>FooterText</key>
+                <string>Authors49</string>
+        </dict>
+        <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>FooterText</key>
+                <string>Authors50</string>
+        </dict>
+        <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>FooterText</key>
+                <string>Authors51</string>
+        </dict>
+        <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>FooterText</key>
+                <string>Authors52</string>
+        </dict>
+        <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>FooterText</key>
                 <string>CreativeCommonsSA</string>
         </dict>
         <dict>
@@ -425,6 +449,42 @@
                 <string>PSGroupSpecifier</string>
                 <key>FooterText</key>
                 <string>CreativeCommonsSA22</string>
+        </dict>
+        <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>FooterText</key>
+                <string>CreativeCommonsSA23</string>
+        </dict>
+        <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>FooterText</key>
+                <string>MITRamotion</string>
+        </dict>
+        <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>FooterText</key>
+                <string>MITRamotion2</string>
+        </dict>
+        <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>FooterText</key>
+                <string>MITRamotion3</string>
+        </dict>
+        <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>FooterText</key>
+                <string>MITRamotion4</string>
+        </dict>
+        <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>FooterText</key>
+                <string>MITRamotion5</string>
         </dict>
     </array>
 </dict>

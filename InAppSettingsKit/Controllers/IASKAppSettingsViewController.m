@@ -761,6 +761,8 @@ CGRect IASKCGRectSwap(CGRect rect);
             }];
 			
         } else {
+            // OLD prior to Dec 2018:
+            
             UIAlertView *alert = [[UIAlertView alloc]
                                   initWithTitle:NSLocalizedString(@"Mail not configured", @"InAppSettingsKit")
                                   message:NSLocalizedString(@"This device is not configured for sending Email. Please configure the Mail settings in the Settings app.", @"InAppSettingsKit")
@@ -768,6 +770,24 @@ CGRect IASKCGRectSwap(CGRect rect);
                                   cancelButtonTitle:NSLocalizedString(@"OK", @"InAppSettingsKit")
                                   otherButtonTitles:nil];
             [alert show];
+            
+//            UIAlertController * alert = [UIAlertController
+//                                         alertControllerWithTitle:@"Mail not configured"
+//                                         message:@"This device is not configured for sending Email. Please configure the Mail settings in the Settings app."
+//                                         preferredStyle:UIAlertControllerStyleAlert];
+//
+//
+//
+//            UIAlertAction* yesButton = [UIAlertAction
+//                                        actionWithTitle:@"Okay. Got it, I will set up Mail."
+//                                        style:UIAlertActionStyleDefault
+//                                        handler:^(UIAlertAction * action) {
+//                                            //Handle your yes please button action here
+//                                        }];
+//            [alert addAction:yesButton];
+//            //[alert addAction:noButton];
+//
+//            [self presentViewController:alert animated:YES completion:nil];
         }
         
     } else if ([[specifier type] isEqualToString:kIASKCustomViewSpecifier] && [self.delegate respondsToSelector:@selector(settingsViewController:tableView:didSelectCustomViewSpecifier:)]) {

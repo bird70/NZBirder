@@ -203,8 +203,9 @@
 	 If this is the first run, populate a new store with events whose timestamps are spaced every 7 days throughout 2013.
 	 */
 	if (firstRun) {
-		NSManagedObjectContext *context = [[NSManagedObjectContext alloc] init];
-		[context setPersistentStoreCoordinator:self.persistentStoreCoordinator];
+		NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+        
+        [context setPersistentStoreCoordinator:self.persistentStoreCoordinator];
 		
 		NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
 		[dateComponents setYear:2013];
@@ -5164,7 +5165,7 @@
 
 - (NSManagedObjectContext *)newScratchManagedObjectContext {
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    NSManagedObjectContext *context = [[NSManagedObjectContext alloc] init];
+    NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     [context setPersistentStoreCoordinator:coordinator];
     return context;
 }

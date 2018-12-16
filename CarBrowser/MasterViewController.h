@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 #import <CoreData/CoreData.h>
+//#import "/Users/txs/Documents/iOS_Dev/NZB_Version123clone/PaperOnboarding.framework/Headers/PaperOnboarding.h"
+//#import "PaperOnboarding.h"
 #import "BirdTableViewCell.h"
 #import "FMDatabase.h"
 #import "Spot.h"
