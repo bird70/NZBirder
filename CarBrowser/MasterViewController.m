@@ -11,6 +11,10 @@
 #import "DetailViewController.h"
 #import "ModelController.h"
 #import "CurrentSpot.h"
+//#import "NZBirder-Bridging-Header.h"
+//#import "NZBirder-Swift.h"
+//#import "PaperOnboarding.h"
+
 //#import "FMDatabase.h"
 
 //FMDatabase *db  ;

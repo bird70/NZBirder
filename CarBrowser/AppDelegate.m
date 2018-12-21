@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import <AVFoundation/AVAudioSession.h>
+#import <AVFoundation/AVFoundation.h>
+//#import <AVFoundation/AVAudioSession.h>
 #import "ModelController.h"
 #import "MasterViewController.h"
 

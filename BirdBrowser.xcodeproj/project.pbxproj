@@ -133,6 +133,7 @@
 		B9192C0C1C5AF67D00302321 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9192C081C5AF67D00302321 /* Icon-76@2x.png */; };
 		B9192C0D1C5AF67D00302321 /* Icon-Small-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9192C091C5AF67D00302321 /* Icon-Small-40@3x.png */; };
 		B9192C0F1C5AF6A400302321 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9192C0E1C5AF6A400302321 /* Images.xcassets */; };
+		B91A400621C790A600B901B1 /* ViewControllerFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91A400521C790A600B901B1 /* ViewControllerFile.swift */; };
 		B9339F821FC5ED330008393A /* LaunchScreenSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9339F811FC5ED330008393A /* LaunchScreenSB.storyboard */; };
 		B934A52F178D4B2F00D3F6F7 /* ObservationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B934A52E178D4B2E00D3F6F7 /* ObservationTableViewController.m */; };
 		B934A5841793E2C900D3F6F7 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B934A5831793E2C700D3F6F7 /* CHCSVParser.m */; };
@@ -387,6 +388,9 @@
 		B9DF1E4F1775AEF900F5DA74 /* Rifleman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9DF1E4E1775AEF900F5DA74 /* Rifleman.mp3 */; };
 		B9DF1E57177619DA00F5DA74 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DF1E56177619DA00F5DA74 /* Default@2x.png */; };
 		B9DF1E5F1776708300F5DA74 /* BirdMasterTableViewController_CD.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DF1E5E1776708200F5DA74 /* BirdMasterTableViewController_CD.m */; };
+		B9E4E8F521CCAAF000AC6553 /* EARestrictedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E4E8F021CCAAEF00AC6553 /* EARestrictedScrollView.m */; };
+		B9E4E8F621CCAAF000AC6553 /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E4E8F321CCAAF000AC6553 /* EAIntroPage.m */; };
+		B9E4E8F721CCAAF000AC6553 /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E4E8F421CCAAF000AC6553 /* EAIntroView.m */; };
 		B9E55D721C6AE96100DBF64A /* australasian-bittern_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D581C6AE96100DBF64A /* australasian-bittern_DOC.mp3 */; };
 		B9E55D731C6AE96100DBF64A /* blue-duck_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D591C6AE96100DBF64A /* blue-duck_DOC.mp3 */; };
 		B9E55D741C6AE96100DBF64A /* grey-warbler-song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D5A1C6AE96100DBF64A /* grey-warbler-song.mp3 */; };
@@ -422,6 +426,19 @@
 		B9FEE0E6178A838A00768240 /* 0207.png in Resources */ = {isa = PBXBuildFile; fileRef = B9FEE0DE178A838A00768240 /* 0207.png */; };
 		B9FEE0E7178A838A00768240 /* 0207@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9FEE0DF178A838A00768240 /* 0207@2x.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B91A400B21C7942B00B901B1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B8E777DE16C2F2F400949FEE /* NZBirder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NZBirder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -564,6 +581,8 @@
 		B9192C081C5AF67D00302321 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
 		B9192C091C5AF67D00302321 /* Icon-Small-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@3x.png"; sourceTree = "<group>"; };
 		B9192C0E1C5AF6A400302321 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = NZBirder/Images.xcassets; sourceTree = "<group>"; };
+		B91A400421C790A600B901B1 /* NZBirder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NZBirder-Bridging-Header.h"; sourceTree = "<group>"; };
+		B91A400521C790A600B901B1 /* ViewControllerFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFile.swift; sourceTree = "<group>"; };
 		B9339F811FC5ED330008393A /* LaunchScreenSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenSB.storyboard; sourceTree = "<group>"; };
 		B934A52D178D4B2E00D3F6F7 /* ObservationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObservationTableViewController.h; path = ../ObservationTableViewController.h; sourceTree = "<group>"; };
 		B934A52E178D4B2E00D3F6F7 /* ObservationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObservationTableViewController.m; path = ../ObservationTableViewController.m; sourceTree = "<group>"; };
@@ -871,6 +890,12 @@
 		B9DF1E56177619DA00F5DA74 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B9DF1E5D1776708200F5DA74 /* BirdMasterTableViewController_CD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdMasterTableViewController_CD.h; sourceTree = "<group>"; };
 		B9DF1E5E1776708200F5DA74 /* BirdMasterTableViewController_CD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdMasterTableViewController_CD.m; sourceTree = "<group>"; };
+		B9E4E8EF21CCAAEE00AC6553 /* EARestrictedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EARestrictedScrollView.h; sourceTree = "<group>"; };
+		B9E4E8F021CCAAEF00AC6553 /* EARestrictedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EARestrictedScrollView.m; sourceTree = "<group>"; };
+		B9E4E8F121CCAAEF00AC6553 /* EAIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroView.h; sourceTree = "<group>"; };
+		B9E4E8F221CCAAEF00AC6553 /* EAIntroPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroPage.h; sourceTree = "<group>"; };
+		B9E4E8F321CCAAF000AC6553 /* EAIntroPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroPage.m; sourceTree = "<group>"; };
+		B9E4E8F421CCAAF000AC6553 /* EAIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroView.m; sourceTree = "<group>"; };
 		B9E55D581C6AE96100DBF64A /* australasian-bittern_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "australasian-bittern_DOC.mp3"; sourceTree = "<group>"; };
 		B9E55D591C6AE96100DBF64A /* blue-duck_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "blue-duck_DOC.mp3"; sourceTree = "<group>"; };
 		B9E55D5A1C6AE96100DBF64A /* grey-warbler-song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "grey-warbler-song.mp3"; sourceTree = "<group>"; };
@@ -894,7 +919,6 @@
 		B9E55D6F1C6AE96100DBF64A /* white-heron-song_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "white-heron-song_DOC.mp3"; sourceTree = "<group>"; };
 		B9E55D701C6AE96100DBF64A /* whitehead-song-56_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "whitehead-song-56_DOC.mp3"; sourceTree = "<group>"; };
 		B9E55D711C6AE96100DBF64A /* yellow-eyed-penguin_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "yellow-eyed-penguin_DOC.mp3"; sourceTree = "<group>"; };
-		B9EE5F4121C63A8F0048084A /* PaperOnboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PaperOnboarding.framework; sourceTree = "<group>"; };
 		B9EE5F4A21C648A70048084A /* MITRamotion.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MITRamotion.license; path = CarBrowser/License/MITRamotion.license; sourceTree = "<group>"; };
 		B9FEE0B5178A2C2F00768240 /* Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Info.h; sourceTree = "<group>"; };
 		B9FEE0B6178A2C2F00768240 /* Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Info.m; sourceTree = "<group>"; };
@@ -960,7 +984,6 @@
 		B8E777E016C2F2F400949FEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B9EE5F4121C63A8F0048084A /* PaperOnboarding.framework */,
 				B9BC55DA19A89BAB0007A0B2 /* InAppSettingsKit */,
 				B9BE105417FB402F005BA377 /* SystemConfiguration.framework */,
 				B9BE105217FB4020005BA377 /* Security.framework */,
@@ -1009,6 +1032,10 @@
 		B8E777E816C2F2F400949FEE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B9E4E8F221CCAAEF00AC6553 /* EAIntroPage.h */,
+				B9E4E8F321CCAAF000AC6553 /* EAIntroPage.m */,
+				B9E4E8F121CCAAEF00AC6553 /* EAIntroView.h */,
+				B9E4E8F421CCAAF000AC6553 /* EAIntroView.m */,
 				B934A5931794864800D3F6F7 /* FMDatabase.h */,
 				B934A5941794864A00D3F6F7 /* FMDatabase.m */,
 				B934A5951794864D00D3F6F7 /* FMDatabaseAdditions.h */,
@@ -1436,6 +1463,7 @@
 		B9DF1E581776259C00F5DA74 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B91A400521C790A600B901B1 /* ViewControllerFile.swift */,
 				B9708E5D17BACBAA00B90254 /* BrowserViewController.h */,
 				B9708E5E17BACBAA00B90254 /* BrowserViewController.m */,
 				B909A9BE17AEDD3400B12655 /* PickViewController.h */,
@@ -1456,6 +1484,9 @@
 				B9DF1E5E1776708200F5DA74 /* BirdMasterTableViewController_CD.m */,
 				B9BA7EE31780B671003DA778 /* BirdDetailViewController_CD.h */,
 				B9BA7EE41780B671003DA778 /* BirdDetailViewController_CD.m */,
+				B91A400421C790A600B901B1 /* NZBirder-Bridging-Header.h */,
+				B9E4E8EF21CCAAEE00AC6553 /* EARestrictedScrollView.h */,
+				B9E4E8F021CCAAEF00AC6553 /* EARestrictedScrollView.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -1613,6 +1644,7 @@
 				B8E777DA16C2F2F400949FEE /* Sources */,
 				B8E777DB16C2F2F400949FEE /* Frameworks */,
 				B8E777DC16C2F2F400949FEE /* Resources */,
+				B91A400B21C7942B00B901B1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1634,6 +1666,7 @@
 				TargetAttributes = {
 					B8E777DD16C2F2F400949FEE = {
 						DevelopmentTeam = ZXHS3LX8E6;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -2063,6 +2096,8 @@
 				B9BC560519A89BAB0007A0B2 /* IASKPSTitleValueSpecifierViewCell.m in Sources */,
 				B9DF1E5F1776708300F5DA74 /* BirdMasterTableViewController_CD.m in Sources */,
 				B9BC560119A89BAB0007A0B2 /* IASKSettingsStoreUserDefaults.m in Sources */,
+				B9E4E8F721CCAAF000AC6553 /* EAIntroView.m in Sources */,
+				B9E4E8F521CCAAF000AC6553 /* EARestrictedScrollView.m in Sources */,
 				B9BE104C17FB3E31005BA377 /* NSString+MKNetworkKitAdditions.m in Sources */,
 				B9BA7EE51780B671003DA778 /* BirdDetailViewController_CD.m in Sources */,
 				B9FEE0B7178A2C2F00768240 /* Info.m in Sources */,
@@ -2072,6 +2107,8 @@
 				B934A5841793E2C900D3F6F7 /* CHCSVParser.m in Sources */,
 				B9BC560719A89BAB0007A0B2 /* IASKSwitch.m in Sources */,
 				B9BC560819A89BAB0007A0B2 /* IASKTextField.m in Sources */,
+				B91A400621C790A600B901B1 /* ViewControllerFile.swift in Sources */,
+				B9E4E8F621CCAAF000AC6553 /* EAIntroPage.m in Sources */,
 				B9BE105017FB3E31005BA377 /* MKNetworkOperation.m in Sources */,
 				B9BC55FF19A89BAB0007A0B2 /* IASKSettingsStore.m in Sources */,
 				B934A59D1794865D00D3F6F7 /* FMDatabase.m in Sources */,
@@ -2196,11 +2233,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CarBrowser",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarBrowser/BirdBrowser-Prefix.pch";
@@ -2210,6 +2250,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.kosmopol.NZBirder;
 				PRODUCT_NAME = NZBirder;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CarBrowser/NZBirder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2220,11 +2263,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CarBrowser",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarBrowser/BirdBrowser-Prefix.pch";
@@ -2234,6 +2280,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.kosmopol.NZBirder;
 				PRODUCT_NAME = NZBirder;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CarBrowser/NZBirder-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

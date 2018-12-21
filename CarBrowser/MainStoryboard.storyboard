@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="HGY-xn-who">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="HGY-xn-who">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AmericanTypewriter.ttc">
-            <string>AmericanTypewriter</string>
-        </array>
-        <array key="Helvetica.ttc">
-            <string>Helvetica</string>
-            <string>Helvetica-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Map View Controller-->
         <scene sceneID="CH2-Ub-5Ne">
@@ -55,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPJ-O4-ErE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2203.5" y="-560.5"/>
+            <point key="canvasLocation" x="3525.5999999999999" y="-504.19790104947532"/>
         </scene>
         <!--Detail-->
         <scene sceneID="ymu-4u-I8v">
@@ -205,7 +193,7 @@
                     <navigationItem key="navigationItem" id="TKT-kX-6EE">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AIc-Yi-KQb">
-                            <rect key="frame" x="202.5" y="4.5" width="59" height="35"/>
+                            <rect key="frame" x="158" y="4.5" width="59" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" image="0239.png">
@@ -236,7 +224,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AG7-w5-qiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="kGU-Ng-G22"/>
             </objects>
-            <point key="canvasLocation" x="2709.5" y="-1146.5"/>
+            <point key="canvasLocation" x="4335.1999999999998" y="-1031.3343328335832"/>
         </scene>
         <!--Observation Table View Controller-->
         <scene sceneID="1sM-v4-P5N">
@@ -286,7 +274,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fku-XT-ZZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3714" y="-1146"/>
+            <point key="canvasLocation" x="5942.3999999999996" y="-1030.8845577211396"/>
         </scene>
         <!--Browser View Controller-->
         <scene sceneID="kmh-nD-nZe">
@@ -336,7 +324,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v84-pT-s4Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="w5b-E9-mAi"/>
             </objects>
-            <point key="canvasLocation" x="3928" y="-2209"/>
+            <point key="canvasLocation" x="6284.8000000000002" y="-1987.1064467766118"/>
         </scene>
         <!--Text Edit View Controller-->
         <scene sceneID="7uV-qH-sCw">
@@ -382,7 +370,7 @@
                 <navigationItem id="rul-cN-CEV"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cBa-8Z-Ine" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3226" y="-983"/>
+            <point key="canvasLocation" x="5161.6000000000004" y="-884.25787106446785"/>
         </scene>
         <!--My Observation Spots-->
         <scene sceneID="uk9-z5-P8m">
@@ -438,7 +426,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                 </navigationBar>
             </objects>
-            <point key="canvasLocation" x="2204" y="-1184"/>
+            <point key="canvasLocation" x="3526.4000000000001" y="-1065.0674662668666"/>
         </scene>
         <!--Bird Master Table View ControllerCD-->
         <scene sceneID="tSf-89-F9g">
@@ -518,7 +506,7 @@
                     <navigationItem key="navigationItem" id="nKw-Zn-bBj">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" restorationIdentifier="segmentControl" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" id="BCs-Ot-YPd">
-                            <rect key="frame" x="77" y="6.5" width="254" height="31"/>
+                            <rect key="frame" x="60.5" y="6.5" width="254" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="All">
@@ -557,7 +545,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2710" y="-1853"/>
+            <point key="canvasLocation" x="4336" y="-1666.8665667166417"/>
         </scene>
         <!--Bird Detail View ControllerCD-->
         <scene sceneID="asv-UR-ocS">
@@ -572,7 +560,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="65" translatesAutoresizingMaskIntoConstraints="NO" id="yzn-3e-Pvn">
-                                <rect key="frame" x="141" y="42" width="32" height="28"/>
+                                <rect key="frame" x="141" y="42" width="31.5" height="28"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                 <color key="textColor" red="0.42768266797065735" green="0.28303709626197815" blue="0.070862382650375366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -664,13 +652,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a0a-ip-KDt">
-                                <rect key="frame" x="74" y="100" width="99" height="14"/>
+                                <rect key="frame" x="74" y="100" width="98.5" height="14"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                 <color key="textColor" red="0.42768266797065735" green="0.28303709626197815" blue="0.070862382650375366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saU-JH-0QC">
-                                <rect key="frame" x="74" y="60" width="99" height="27"/>
+                                <rect key="frame" x="74" y="60" width="98.5" height="27"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                 <color key="textColor" red="0.42768266797065735" green="0.28303709626197815" blue="0.070862382650375366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -831,7 +819,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5H-WM-HSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationItem id="Z3U-e1-UzB"/>
             </objects>
-            <point key="canvasLocation" x="3286" y="-2232"/>
+            <point key="canvasLocation" x="5257.6000000000004" y="-2007.7961019490256"/>
         </scene>
         <!--Info-->
         <scene sceneID="4kx-ZB-vuU">
@@ -4619,7 +4607,25 @@ Cg
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lrh-wa-bQu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="991" y="-552"/>
+            <point key="canvasLocation" x="1585.5999999999999" y="-496.55172413793105"/>
+        </scene>
+        <!--Intro View Controller-->
+        <scene sceneID="5gT-hn-4h9">
+            <objects>
+                <viewController id="ynI-fm-MtJ" customClass="EAIntroViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rk9-Hq-0Wd"/>
+                        <viewControllerLayoutGuide type="bottom" id="hTi-w1-JAd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ncG-4H-Rhq" customClass="EAIntroView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h9y-ga-6BB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1503.2" y="-1447.8260869565217"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="y1h-PC-N6z">
@@ -4641,7 +4647,7 @@ Cg
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPB-M8-2CE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="410" y="-1343"/>
+            <point key="canvasLocation" x="656" y="-1208.095952023988"/>
         </scene>
         <!--Map-->
         <scene sceneID="C4j-Zg-ixz">
@@ -4650,6 +4656,7 @@ Cg
                     <tabBarItem key="tabBarItem" title="Map" image="0063.png" id="NK3-0N-lsw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hOb-Zz-h08">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4659,7 +4666,7 @@ Cg
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mIT-Zh-F5l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1792" y="-540"/>
+            <point key="canvasLocation" x="2867.1999999999998" y="-485.75712143928041"/>
         </scene>
         <!--Bird Master Table View ControllerCD-->
         <scene sceneID="dgy-zy-gaL">
@@ -4746,7 +4753,7 @@ Cg
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLj-gU-HE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2700" y="-2554"/>
+            <point key="canvasLocation" x="4320" y="-2297.4512743628188"/>
         </scene>
         <!--Spots-->
         <scene sceneID="6c5-3M-k4d">
@@ -4755,6 +4762,7 @@ Cg
                     <tabBarItem key="tabBarItem" title="Spots" image="0002.png" id="fdy-LW-rtI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bpq-3N-hnl">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4764,7 +4772,7 @@ Cg
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p7H-Zh-OhW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="-1208"/>
+            <point key="canvasLocation" x="2844.8000000000002" y="-1086.656671664168"/>
         </scene>
         <!--Birds-->
         <scene sceneID="A3x-II-MMb">
@@ -4837,7 +4845,7 @@ Cg
                     </tableViewCellContentView>
                 </tableViewCell>
             </objects>
-            <point key="canvasLocation" x="1778" y="-1884"/>
+            <point key="canvasLocation" x="2844.8000000000002" y="-1694.7526236881561"/>
         </scene>
         <!--identify-->
         <scene sceneID="vWE-p5-Kjq">
@@ -4856,7 +4864,7 @@ Cg
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LDO-2j-EoN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="-2554"/>
+            <point key="canvasLocation" x="2844.8000000000002" y="-2297.4512743628188"/>
         </scene>
     </scenes>
     <resources>
