@@ -4609,23 +4609,24 @@ Cg
             </objects>
             <point key="canvasLocation" x="1585.5999999999999" y="-496.55172413793105"/>
         </scene>
-        <!--Intro View Controller-->
-        <scene sceneID="5gT-hn-4h9">
+        <!--Item-->
+        <scene sceneID="Rrf-cr-4VS">
             <objects>
-                <viewController id="ynI-fm-MtJ" customClass="EAIntroViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="PaperOnboardingVC" storyboardIdentifier="PaperOnboardingVC" id="k8o-xr-FsS" customClass="ViewController" customModule="NZBirder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rk9-Hq-0Wd"/>
-                        <viewControllerLayoutGuide type="bottom" id="hTi-w1-JAd"/>
+                        <viewControllerLayoutGuide type="top" id="kuH-it-eAa"/>
+                        <viewControllerLayoutGuide type="bottom" id="o4A-tX-Ii0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ncG-4H-Rhq" customClass="EAIntroView">
+                    <view key="view" contentMode="scaleToFill" id="nAq-lR-rVS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="cXS-5N-myN"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h9y-ga-6BB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZED-my-jcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1503.2" y="-1447.8260869565217"/>
+            <point key="canvasLocation" x="-36" y="-1583"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="y1h-PC-N6z">

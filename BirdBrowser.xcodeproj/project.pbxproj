@@ -133,7 +133,6 @@
 		B9192C0C1C5AF67D00302321 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9192C081C5AF67D00302321 /* Icon-76@2x.png */; };
 		B9192C0D1C5AF67D00302321 /* Icon-Small-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9192C091C5AF67D00302321 /* Icon-Small-40@3x.png */; };
 		B9192C0F1C5AF6A400302321 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9192C0E1C5AF6A400302321 /* Images.xcassets */; };
-		B91A400621C790A600B901B1 /* ViewControllerFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91A400521C790A600B901B1 /* ViewControllerFile.swift */; };
 		B9339F821FC5ED330008393A /* LaunchScreenSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9339F811FC5ED330008393A /* LaunchScreenSB.storyboard */; };
 		B934A52F178D4B2F00D3F6F7 /* ObservationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B934A52E178D4B2E00D3F6F7 /* ObservationTableViewController.m */; };
 		B934A5841793E2C900D3F6F7 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B934A5831793E2C700D3F6F7 /* CHCSVParser.m */; };
@@ -388,9 +387,13 @@
 		B9DF1E4F1775AEF900F5DA74 /* Rifleman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9DF1E4E1775AEF900F5DA74 /* Rifleman.mp3 */; };
 		B9DF1E57177619DA00F5DA74 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DF1E56177619DA00F5DA74 /* Default@2x.png */; };
 		B9DF1E5F1776708300F5DA74 /* BirdMasterTableViewController_CD.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DF1E5E1776708200F5DA74 /* BirdMasterTableViewController_CD.m */; };
-		B9E4E8F521CCAAF000AC6553 /* EARestrictedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E4E8F021CCAAEF00AC6553 /* EARestrictedScrollView.m */; };
-		B9E4E8F621CCAAF000AC6553 /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E4E8F321CCAAF000AC6553 /* EAIntroPage.m */; };
-		B9E4E8F721CCAAF000AC6553 /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E4E8F421CCAAF000AC6553 /* EAIntroView.m */; };
+		B9E4E8FC21CE1F7500AC6553 /* PaperOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E4E8FB21CE1F7500AC6553 /* PaperOnboarding.framework */; };
+		B9E4E90621CE385100AC6553 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E4E90521CE385000AC6553 /* ViewController.swift */; };
+		B9E4E90821CE387B00AC6553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E4E90721CE387A00AC6553 /* Assets.xcassets */; };
+		B9E4E90E21CE38AE00AC6553 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9E4E90A21CE38AE00AC6553 /* Nunito-Light.ttf */; };
+		B9E4E90F21CE38AE00AC6553 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9E4E90B21CE38AE00AC6553 /* Nunito-Regular.ttf */; };
+		B9E4E91021CE38AE00AC6553 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9E4E90C21CE38AE00AC6553 /* Nunito-Bold.ttf */; };
+		B9E4E91121CE38AE00AC6553 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9E4E90D21CE38AE00AC6553 /* OpenSans-Regular.ttf */; };
 		B9E55D721C6AE96100DBF64A /* australasian-bittern_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D581C6AE96100DBF64A /* australasian-bittern_DOC.mp3 */; };
 		B9E55D731C6AE96100DBF64A /* blue-duck_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D591C6AE96100DBF64A /* blue-duck_DOC.mp3 */; };
 		B9E55D741C6AE96100DBF64A /* grey-warbler-song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D5A1C6AE96100DBF64A /* grey-warbler-song.mp3 */; };
@@ -582,7 +585,6 @@
 		B9192C091C5AF67D00302321 /* Icon-Small-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@3x.png"; sourceTree = "<group>"; };
 		B9192C0E1C5AF6A400302321 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = NZBirder/Images.xcassets; sourceTree = "<group>"; };
 		B91A400421C790A600B901B1 /* NZBirder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NZBirder-Bridging-Header.h"; sourceTree = "<group>"; };
-		B91A400521C790A600B901B1 /* ViewControllerFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFile.swift; sourceTree = "<group>"; };
 		B9339F811FC5ED330008393A /* LaunchScreenSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenSB.storyboard; sourceTree = "<group>"; };
 		B934A52D178D4B2E00D3F6F7 /* ObservationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObservationTableViewController.h; path = ../ObservationTableViewController.h; sourceTree = "<group>"; };
 		B934A52E178D4B2E00D3F6F7 /* ObservationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObservationTableViewController.m; path = ../ObservationTableViewController.m; sourceTree = "<group>"; };
@@ -890,12 +892,13 @@
 		B9DF1E56177619DA00F5DA74 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B9DF1E5D1776708200F5DA74 /* BirdMasterTableViewController_CD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdMasterTableViewController_CD.h; sourceTree = "<group>"; };
 		B9DF1E5E1776708200F5DA74 /* BirdMasterTableViewController_CD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdMasterTableViewController_CD.m; sourceTree = "<group>"; };
-		B9E4E8EF21CCAAEE00AC6553 /* EARestrictedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EARestrictedScrollView.h; sourceTree = "<group>"; };
-		B9E4E8F021CCAAEF00AC6553 /* EARestrictedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EARestrictedScrollView.m; sourceTree = "<group>"; };
-		B9E4E8F121CCAAEF00AC6553 /* EAIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroView.h; sourceTree = "<group>"; };
-		B9E4E8F221CCAAEF00AC6553 /* EAIntroPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroPage.h; sourceTree = "<group>"; };
-		B9E4E8F321CCAAF000AC6553 /* EAIntroPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroPage.m; sourceTree = "<group>"; };
-		B9E4E8F421CCAAF000AC6553 /* EAIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroView.m; sourceTree = "<group>"; };
+		B9E4E8FB21CE1F7500AC6553 /* PaperOnboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PaperOnboarding.framework; path = Carthage/Build/iOS/PaperOnboarding.framework; sourceTree = "<group>"; };
+		B9E4E90521CE385000AC6553 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B9E4E90721CE387A00AC6553 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9E4E90A21CE38AE00AC6553 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		B9E4E90B21CE38AE00AC6553 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		B9E4E90C21CE38AE00AC6553 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		B9E4E90D21CE38AE00AC6553 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		B9E55D581C6AE96100DBF64A /* australasian-bittern_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "australasian-bittern_DOC.mp3"; sourceTree = "<group>"; };
 		B9E55D591C6AE96100DBF64A /* blue-duck_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "blue-duck_DOC.mp3"; sourceTree = "<group>"; };
 		B9E55D5A1C6AE96100DBF64A /* grey-warbler-song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "grey-warbler-song.mp3"; sourceTree = "<group>"; };
@@ -948,6 +951,7 @@
 				B9682477176233640093F493 /* CoreData.framework in Frameworks */,
 				B946226D174387DE007A8A20 /* MapKit.framework in Frameworks */,
 				B946226B174387D1007A8A20 /* CoreLocation.framework in Frameworks */,
+				B9E4E8FC21CE1F7500AC6553 /* PaperOnboarding.framework in Frameworks */,
 				B943EDF7173A4790007DB011 /* AVFoundation.framework in Frameworks */,
 				B8E777E216C2F2F400949FEE /* UIKit.framework in Frameworks */,
 				B8E777E416C2F2F400949FEE /* Foundation.framework in Frameworks */,
@@ -984,6 +988,7 @@
 		B8E777E016C2F2F400949FEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9E4E8FB21CE1F7500AC6553 /* PaperOnboarding.framework */,
 				B9BC55DA19A89BAB0007A0B2 /* InAppSettingsKit */,
 				B9BE105417FB402F005BA377 /* SystemConfiguration.framework */,
 				B9BE105217FB4020005BA377 /* Security.framework */,
@@ -1032,10 +1037,6 @@
 		B8E777E816C2F2F400949FEE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B9E4E8F221CCAAEF00AC6553 /* EAIntroPage.h */,
-				B9E4E8F321CCAAF000AC6553 /* EAIntroPage.m */,
-				B9E4E8F121CCAAEF00AC6553 /* EAIntroView.h */,
-				B9E4E8F421CCAAF000AC6553 /* EAIntroView.m */,
 				B934A5931794864800D3F6F7 /* FMDatabase.h */,
 				B934A5941794864A00D3F6F7 /* FMDatabase.m */,
 				B934A5951794864D00D3F6F7 /* FMDatabaseAdditions.h */,
@@ -1463,7 +1464,9 @@
 		B9DF1E581776259C00F5DA74 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B91A400521C790A600B901B1 /* ViewControllerFile.swift */,
+				B9E4E90921CE38AE00AC6553 /* Fonts */,
+				B9E4E90721CE387A00AC6553 /* Assets.xcassets */,
+				B9E4E90521CE385000AC6553 /* ViewController.swift */,
 				B9708E5D17BACBAA00B90254 /* BrowserViewController.h */,
 				B9708E5E17BACBAA00B90254 /* BrowserViewController.m */,
 				B909A9BE17AEDD3400B12655 /* PickViewController.h */,
@@ -1485,8 +1488,6 @@
 				B9BA7EE31780B671003DA778 /* BirdDetailViewController_CD.h */,
 				B9BA7EE41780B671003DA778 /* BirdDetailViewController_CD.m */,
 				B91A400421C790A600B901B1 /* NZBirder-Bridging-Header.h */,
-				B9E4E8EF21CCAAEE00AC6553 /* EARestrictedScrollView.h */,
-				B9E4E8F021CCAAEF00AC6553 /* EARestrictedScrollView.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -1633,6 +1634,17 @@
 			name = Icons;
 			sourceTree = "<group>";
 		};
+		B9E4E90921CE38AE00AC6553 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B9E4E90A21CE38AE00AC6553 /* Nunito-Light.ttf */,
+				B9E4E90B21CE38AE00AC6553 /* Nunito-Regular.ttf */,
+				B9E4E90C21CE38AE00AC6553 /* Nunito-Bold.ttf */,
+				B9E4E90D21CE38AE00AC6553 /* OpenSans-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1645,6 +1657,7 @@
 				B8E777DB16C2F2F400949FEE /* Frameworks */,
 				B8E777DC16C2F2F400949FEE /* Resources */,
 				B91A400B21C7942B00B901B1 /* Embed Frameworks */,
+				B9E4E8FD21CE1FB100AC6553 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1694,6 +1707,7 @@
 			files = (
 				B9B8550B1FC35BD400732C59 /* MainStoryboard.storyboard in Resources */,
 				B8E777F816C2F2F400949FEE /* Default-568h@2x.png in Resources */,
+				B9E4E90E21CE38AE00AC6553 /* Nunito-Light.ttf in Resources */,
 				B98D7CA51C6D8CFA008AD0A0 /* Kingfisher_square_167x167.png in Resources */,
 				B9E55D7A1C6AE96100DBF64A /* north-island-robin-song_DOC.mp3 in Resources */,
 				B943EDC11738DC9E007DB011 /* silvereye-song-22sy.mp3 in Resources */,
@@ -1705,6 +1719,7 @@
 				B9461D9617421B12007A8A20 /* 0063.png in Resources */,
 				B9461D9717421B12007A8A20 /* 0063@2x.png in Resources */,
 				B9461D9817421B12007A8A20 /* 0300.png in Resources */,
+				B9E4E90F21CE38AE00AC6553 /* Nunito-Regular.ttf in Resources */,
 				B9E55D8B1C6AE96100DBF64A /* yellow-eyed-penguin_DOC.mp3 in Resources */,
 				B9B4B13119CA1C4A004E010D /* Saddleback_Duncan.jpg in Resources */,
 				B9461D9917421B12007A8A20 /* 0300@2x.png in Resources */,
@@ -1746,6 +1761,7 @@
 				B9B8236A19B64DA30055A50A /* PerlScript_Acknowledgements.pl in Resources */,
 				B9D92E4E1748DEB0001B6D79 /* cell_top@2x.png in Resources */,
 				B9D92E4F1748DEB0001B6D79 /* common_bg.png in Resources */,
+				B9E4E91021CE38AE00AC6553 /* Nunito-Bold.ttf in Resources */,
 				B9D92E501748DEB0001B6D79 /* common_bg@2x.png in Resources */,
 				B9AE1C9B19723C500081E8CE /* MainStoryboard_iPad.storyboard in Resources */,
 				B9D92E511748DEB0001B6D79 /* navbar_bg.png in Resources */,
@@ -1804,6 +1820,7 @@
 				B9BED1261797D9E600E6FE0E /* SHAGAuklandIs_FL Enderby26Nov2000.mp3 in Resources */,
 				B9B143A6199B624500908EFB /* BullersShearwater_TN.jpg in Resources */,
 				B9BED1271797D9E600E6FE0E /* rosellas.mp3 in Resources */,
+				B9E4E91121CE38AE00AC6553 /* OpenSans-Regular.ttf in Resources */,
 				B9BED1291797DE6D00E6FE0E /* PiedStilt_WhhSti-20090712_083000.mp3 in Resources */,
 				B9BED13E17993C4200E6FE0E /* home_selected.png in Resources */,
 				B9BED13F17993C4200E6FE0E /* home_selected@2x.png in Resources */,
@@ -1960,6 +1977,7 @@
 				B91684ED17AE0512007C7161 /* Chaffinch_2_TN.jpg in Resources */,
 				B91684EE17AE0512007C7161 /* Charadrius_bicinctus_breeding_Ralphs_Bay_TN.jpg in Resources */,
 				B91684EF17AE0512007C7161 /* Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8_TN.jpg in Resources */,
+				B9E4E90821CE387B00AC6553 /* Assets.xcassets in Resources */,
 				B91684F017AE0512007C7161 /* Dunnock_IMG_7140_TN.jpg in Resources */,
 				B9339F821FC5ED330008393A /* LaunchScreenSB.storyboard in Resources */,
 				B9B143A9199B624500908EFB /* CrestedGrebe_TN.jpg in Resources */,
@@ -2044,6 +2062,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B9E4E8FD21CE1FB100AC6553 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/PaperOnboarding.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its \n/usr/local/bin/carthage copy-frameworks\n";
+		};
 		B9EE5F4921C644420048084A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2096,8 +2132,6 @@
 				B9BC560519A89BAB0007A0B2 /* IASKPSTitleValueSpecifierViewCell.m in Sources */,
 				B9DF1E5F1776708300F5DA74 /* BirdMasterTableViewController_CD.m in Sources */,
 				B9BC560119A89BAB0007A0B2 /* IASKSettingsStoreUserDefaults.m in Sources */,
-				B9E4E8F721CCAAF000AC6553 /* EAIntroView.m in Sources */,
-				B9E4E8F521CCAAF000AC6553 /* EARestrictedScrollView.m in Sources */,
 				B9BE104C17FB3E31005BA377 /* NSString+MKNetworkKitAdditions.m in Sources */,
 				B9BA7EE51780B671003DA778 /* BirdDetailViewController_CD.m in Sources */,
 				B9FEE0B7178A2C2F00768240 /* Info.m in Sources */,
@@ -2106,9 +2140,8 @@
 				B934A52F178D4B2F00D3F6F7 /* ObservationTableViewController.m in Sources */,
 				B934A5841793E2C900D3F6F7 /* CHCSVParser.m in Sources */,
 				B9BC560719A89BAB0007A0B2 /* IASKSwitch.m in Sources */,
+				B9E4E90621CE385100AC6553 /* ViewController.swift in Sources */,
 				B9BC560819A89BAB0007A0B2 /* IASKTextField.m in Sources */,
-				B91A400621C790A600B901B1 /* ViewControllerFile.swift in Sources */,
-				B9E4E8F621CCAAF000AC6553 /* EAIntroPage.m in Sources */,
 				B9BE105017FB3E31005BA377 /* MKNetworkOperation.m in Sources */,
 				B9BC55FF19A89BAB0007A0B2 /* IASKSettingsStore.m in Sources */,
 				B934A59D1794865D00D3F6F7 /* FMDatabase.m in Sources */,
@@ -2231,6 +2264,7 @@
 		B8E7780216C2F2F400949FEE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
@@ -2241,6 +2275,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/CarBrowser",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarBrowser/BirdBrowser-Prefix.pch";
@@ -2261,6 +2296,7 @@
 		B8E7780316C2F2F400949FEE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
@@ -2271,6 +2307,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/CarBrowser",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarBrowser/BirdBrowser-Prefix.pch";
