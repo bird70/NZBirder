@@ -11,26 +11,26 @@ import PaperOnboarding
 
 class ViewController: UIViewController {
 
-//    @IBOutlet var skipButton: UIButton!
+    @IBOutlet var skipButton: UIButton!
 
     fileprivate let items = [
         OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "685px-Drozd_zpevny.jpg"),
-                           title: "Hotels",
-                           description: "All hotels and hostels are sorted by hospitality rating",
+                           title: "Explore",
+                           description: "Explore and discover new birds",
                            pageIcon:  #imageLiteral(resourceName: "685px-Drozd_zpevny.jpg"),
                            color: UIColor(red: 0.40, green: 0.56, blue: 0.71, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
         OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "685px-Drozd_zpevny.jpg"),
-                           title: "Banks",
-                           description: "We carefully verify all banks before add them into the app",
+                           title: "Record",
+                           description: "Store the observations you've made using a location on map",
                            pageIcon:  #imageLiteral(resourceName: "685px-Drozd_zpevny.jpg"),
                            color: UIColor(red: 0.40, green: 0.69, blue: 0.71, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
         OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "685px-Drozd_zpevny.jpg"),
-                           title: "Stores",
-                           description: "All local stores are categorized for your convenience",
+                           title: "Upload",
+                           description: "Send a copy of your lists to yourself for upload at eBird.org",
                            pageIcon: #imageLiteral(resourceName: "685px-Drozd_zpevny.jpg"),
                            color: UIColor(red: 0.61, green: 0.56, blue: 0.74, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
@@ -39,11 +39,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //skipButton.isHidden = true
+        skipButton.isHidden = true
 
         setupPaperOnboardingView()
 
-        //view.bringSubviewToFront(skipButton)
+        view.bringSubviewToFront(skipButton)
     }
 
     private func setupPaperOnboardingView() {
@@ -71,9 +71,9 @@ class ViewController: UIViewController {
 
 extension ViewController {
 
-    //@IBAction func skipButtonTapped(_: UIButton) {
-    //    print(#function)
-    //}
+    @IBAction func skipButtonTapped(_: UIButton) {
+        print(#function)
+    }
 }
 
 // MARK: PaperOnboardingDelegate
@@ -81,7 +81,7 @@ extension ViewController {
 extension ViewController: PaperOnboardingDelegate {
 
     func onboardingWillTransitonToIndex(_ index: Int) {
-        //skipButton.isHidden = index == 2 ? false : true
+        skipButton.isHidden = index == 2 ? false : true
     }
 
     func onboardingDidTransitonToIndex(_: Int) {

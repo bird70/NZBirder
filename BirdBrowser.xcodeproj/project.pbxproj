@@ -358,6 +358,8 @@
 		B9CDE3A717A4F56200661AF9 /* 0088@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE3A317A4F56100661AF9 /* 0088@2x.png */; };
 		B9CDE3A817A4F56200661AF9 /* 0239.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE3A417A4F56100661AF9 /* 0239.png */; };
 		B9CDE3A917A4F56200661AF9 /* 0239@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE3A517A4F56100661AF9 /* 0239@2x.png */; };
+		B9CF3BF421CF0208001642B2 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CF3BF321CF0208001642B2 /* TabBarController.m */; };
+		B9CF3BF621CF59A8001642B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF3BF521CF59A8001642B2 /* AppDelegate.swift */; };
 		B9D92E461748DEB0001B6D79 /* button_back.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E391748DEB0001B6D79 /* button_back.png */; };
 		B9D92E471748DEB0001B6D79 /* button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E3A1748DEB0001B6D79 /* button_normal.png */; };
 		B9D92E481748DEB0001B6D79 /* cell_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E3B1748DEB0001B6D79 /* cell_bottom.png */; };
@@ -861,6 +863,9 @@
 		B9CDE3A317A4F56100661AF9 /* 0088@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0088@2x.png"; sourceTree = "<group>"; };
 		B9CDE3A417A4F56100661AF9 /* 0239.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0239.png; sourceTree = "<group>"; };
 		B9CDE3A517A4F56100661AF9 /* 0239@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0239@2x.png"; sourceTree = "<group>"; };
+		B9CF3BF221CF01F0001642B2 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		B9CF3BF321CF0208001642B2 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		B9CF3BF521CF59A8001642B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9D92E391748DEB0001B6D79 /* button_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_back.png; sourceTree = "<group>"; };
 		B9D92E3A1748DEB0001B6D79 /* button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_normal.png; sourceTree = "<group>"; };
 		B9D92E3B1748DEB0001B6D79 /* cell_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_bottom.png; sourceTree = "<group>"; };
@@ -965,6 +970,7 @@
 		B8E777D516C2F2F400949FEE = {
 			isa = PBXGroup;
 			children = (
+				B9CF3BF521CF59A8001642B2 /* AppDelegate.swift */,
 				B9192C0E1C5AF6A400302321 /* Images.xcassets */,
 				B9B12CC519B8CA1D007503E0 /* Acknowledgements */,
 				B9AE4E1D19FE1F4B008D6F09 /* NZBirder_12.sqlite */,
@@ -1488,6 +1494,8 @@
 				B9BA7EE31780B671003DA778 /* BirdDetailViewController_CD.h */,
 				B9BA7EE41780B671003DA778 /* BirdDetailViewController_CD.m */,
 				B91A400421C790A600B901B1 /* NZBirder-Bridging-Header.h */,
+				B9CF3BF221CF01F0001642B2 /* TabBarController.h */,
+				B9CF3BF321CF0208001642B2 /* TabBarController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -2107,6 +2115,8 @@
 				B9BC560219A89BAB0007A0B2 /* IASKSpecifier.m in Sources */,
 				B9BC560319A89BAB0007A0B2 /* IASKPSSliderSpecifierViewCell.m in Sources */,
 				B8E777EE16C2F2F400949FEE /* main.m in Sources */,
+				B9CF3BF421CF0208001642B2 /* TabBarController.m in Sources */,
+				B9CF3BF621CF59A8001642B2 /* AppDelegate.swift in Sources */,
 				B9BE104D17FB3E31005BA377 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				B8E777F216C2F2F400949FEE /* AppDelegate.m in Sources */,
 				B8E7780916C2F43000949FEE /* BirdTableViewCell.m in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="HGY-xn-who">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="k8o-xr-FsS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -4612,7 +4612,7 @@ Cg
         <!--Item-->
         <scene sceneID="Rrf-cr-4VS">
             <objects>
-                <viewController restorationIdentifier="PaperOnboardingVC" storyboardIdentifier="PaperOnboardingVC" id="k8o-xr-FsS" customClass="ViewController" customModule="NZBirder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="introVC" storyboardIdentifier="introVC" id="k8o-xr-FsS" customClass="ViewController" customModule="NZBirder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kuH-it-eAa"/>
                         <viewControllerLayoutGuide type="bottom" id="o4A-tX-Ii0"/>
@@ -4620,19 +4620,37 @@ Cg
                     <view key="view" contentMode="scaleToFill" id="nAq-lR-rVS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lm9-HK-ZUi" userLabel="skipButton">
+                                <rect key="frame" x="180" y="514" width="127" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipButtonTapped:" destination="k8o-xr-FsS" eventType="touchUpInside" id="qiz-zc-uVy"/>
+                                    <segue destination="HGY-xn-who" kind="modal" id="mHV-se-HVq"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="cXS-5N-myN"/>
+                    <connections>
+                        <outlet property="skipButton" destination="Lm9-HK-ZUi" id="loW-cS-GCW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZED-my-jcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-36" y="-1583"/>
+            <point key="canvasLocation" x="-354.39999999999998" y="-1397.4512743628186"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="y1h-PC-N6z">
             <objects>
-                <tabBarController id="HGY-xn-who" sceneMemberID="viewController">
+                <tabBarController restorationIdentifier="tabBarControl" storyboardIdentifier="tabBarControl" id="HGY-xn-who" customClass="TabBarController" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="8DS-ga-1RS"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="bBm-0n-qNe">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
