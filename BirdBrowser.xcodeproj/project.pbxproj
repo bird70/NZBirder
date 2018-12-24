@@ -360,6 +360,7 @@
 		B9CDE3A917A4F56200661AF9 /* 0239@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE3A517A4F56100661AF9 /* 0239@2x.png */; };
 		B9CF3BF421CF0208001642B2 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CF3BF321CF0208001642B2 /* TabBarController.m */; };
 		B9CF3BF621CF59A8001642B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF3BF521CF59A8001642B2 /* AppDelegate.swift */; };
+		B9CF3BF821D0170F001642B2 /* PaperOnboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9CF3BF721D0170F001642B2 /* PaperOnboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9D92E461748DEB0001B6D79 /* button_back.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E391748DEB0001B6D79 /* button_back.png */; };
 		B9D92E471748DEB0001B6D79 /* button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E3A1748DEB0001B6D79 /* button_normal.png */; };
 		B9D92E481748DEB0001B6D79 /* cell_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E3B1748DEB0001B6D79 /* cell_bottom.png */; };
@@ -389,7 +390,6 @@
 		B9DF1E4F1775AEF900F5DA74 /* Rifleman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9DF1E4E1775AEF900F5DA74 /* Rifleman.mp3 */; };
 		B9DF1E57177619DA00F5DA74 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DF1E56177619DA00F5DA74 /* Default@2x.png */; };
 		B9DF1E5F1776708300F5DA74 /* BirdMasterTableViewController_CD.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DF1E5E1776708200F5DA74 /* BirdMasterTableViewController_CD.m */; };
-		B9E4E8FC21CE1F7500AC6553 /* PaperOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E4E8FB21CE1F7500AC6553 /* PaperOnboarding.framework */; };
 		B9E4E90621CE385100AC6553 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E4E90521CE385000AC6553 /* ViewController.swift */; };
 		B9E4E90821CE387B00AC6553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E4E90721CE387A00AC6553 /* Assets.xcassets */; };
 		B9E4E90E21CE38AE00AC6553 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9E4E90A21CE38AE00AC6553 /* Nunito-Light.ttf */; };
@@ -420,6 +420,7 @@
 		B9E55D8A1C6AE96100DBF64A /* whitehead-song-56_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D701C6AE96100DBF64A /* whitehead-song-56_DOC.mp3 */; };
 		B9E55D8B1C6AE96100DBF64A /* yellow-eyed-penguin_DOC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E55D711C6AE96100DBF64A /* yellow-eyed-penguin_DOC.mp3 */; };
 		B9EE5F4B21C648A80048084A /* MITRamotion.license in Resources */ = {isa = PBXBuildFile; fileRef = B9EE5F4A21C648A70048084A /* MITRamotion.license */; };
+		B9F5BDF521D037760053D46D /* PaperOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F5BDF421D037760053D46D /* PaperOnboarding.framework */; };
 		B9FEE0B7178A2C2F00768240 /* Info.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FEE0B6178A2C2F00768240 /* Info.m */; };
 		B9FEE0D7178A734900768240 /* Observation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FEE0D6178A734800768240 /* Observation.m */; };
 		B9FEE0E0178A838A00768240 /* 0038.png in Resources */ = {isa = PBXBuildFile; fileRef = B9FEE0D8178A838800768240 /* 0038.png */; };
@@ -439,6 +440,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B9CF3BF821D0170F001642B2 /* PaperOnboarding.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -866,6 +868,7 @@
 		B9CF3BF221CF01F0001642B2 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		B9CF3BF321CF0208001642B2 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		B9CF3BF521CF59A8001642B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B9CF3BF721D0170F001642B2 /* PaperOnboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PaperOnboarding.framework; path = Carthage/Build/iOS/PaperOnboarding.framework; sourceTree = "<group>"; };
 		B9D92E391748DEB0001B6D79 /* button_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_back.png; sourceTree = "<group>"; };
 		B9D92E3A1748DEB0001B6D79 /* button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_normal.png; sourceTree = "<group>"; };
 		B9D92E3B1748DEB0001B6D79 /* cell_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_bottom.png; sourceTree = "<group>"; };
@@ -897,7 +900,6 @@
 		B9DF1E56177619DA00F5DA74 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B9DF1E5D1776708200F5DA74 /* BirdMasterTableViewController_CD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdMasterTableViewController_CD.h; sourceTree = "<group>"; };
 		B9DF1E5E1776708200F5DA74 /* BirdMasterTableViewController_CD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdMasterTableViewController_CD.m; sourceTree = "<group>"; };
-		B9E4E8FB21CE1F7500AC6553 /* PaperOnboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PaperOnboarding.framework; path = Carthage/Build/iOS/PaperOnboarding.framework; sourceTree = "<group>"; };
 		B9E4E90521CE385000AC6553 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B9E4E90721CE387A00AC6553 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9E4E90A21CE38AE00AC6553 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
@@ -928,6 +930,7 @@
 		B9E55D701C6AE96100DBF64A /* whitehead-song-56_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "whitehead-song-56_DOC.mp3"; sourceTree = "<group>"; };
 		B9E55D711C6AE96100DBF64A /* yellow-eyed-penguin_DOC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "yellow-eyed-penguin_DOC.mp3"; sourceTree = "<group>"; };
 		B9EE5F4A21C648A70048084A /* MITRamotion.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MITRamotion.license; path = CarBrowser/License/MITRamotion.license; sourceTree = "<group>"; };
+		B9F5BDF421D037760053D46D /* PaperOnboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PaperOnboarding.framework; sourceTree = "<group>"; };
 		B9FEE0B5178A2C2F00768240 /* Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Info.h; sourceTree = "<group>"; };
 		B9FEE0B6178A2C2F00768240 /* Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Info.m; sourceTree = "<group>"; };
 		B9FEE0D5178A734800768240 /* Observation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observation.h; sourceTree = "<group>"; };
@@ -949,6 +952,7 @@
 			files = (
 				B9BE105517FB402F005BA377 /* SystemConfiguration.framework in Frameworks */,
 				B9BE105317FB4020005BA377 /* Security.framework in Frameworks */,
+				B9F5BDF521D037760053D46D /* PaperOnboarding.framework in Frameworks */,
 				B934A5A317950A0500D3F6F7 /* MessageUI.framework in Frameworks */,
 				B934A592179485CF00D3F6F7 /* libsqlite3.dylib in Frameworks */,
 				B934A590179485B000D3F6F7 /* libsqlite3.0.dylib in Frameworks */,
@@ -956,7 +960,6 @@
 				B9682477176233640093F493 /* CoreData.framework in Frameworks */,
 				B946226D174387DE007A8A20 /* MapKit.framework in Frameworks */,
 				B946226B174387D1007A8A20 /* CoreLocation.framework in Frameworks */,
-				B9E4E8FC21CE1F7500AC6553 /* PaperOnboarding.framework in Frameworks */,
 				B943EDF7173A4790007DB011 /* AVFoundation.framework in Frameworks */,
 				B8E777E216C2F2F400949FEE /* UIKit.framework in Frameworks */,
 				B8E777E416C2F2F400949FEE /* Foundation.framework in Frameworks */,
@@ -994,7 +997,8 @@
 		B8E777E016C2F2F400949FEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B9E4E8FB21CE1F7500AC6553 /* PaperOnboarding.framework */,
+				B9F5BDF421D037760053D46D /* PaperOnboarding.framework */,
+				B9CF3BF721D0170F001642B2 /* PaperOnboarding.framework */,
 				B9BC55DA19A89BAB0007A0B2 /* InAppSettingsKit */,
 				B9BE105417FB402F005BA377 /* SystemConfiguration.framework */,
 				B9BE105217FB4020005BA377 /* Security.framework */,
@@ -2292,6 +2296,7 @@
 				INFOPLIST_FILE = "CarBrowser/BirdBrowser-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = de.kosmopol.NZBirder;
 				PRODUCT_NAME = NZBirder;
 				PROVISIONING_PROFILE = "";
@@ -2299,6 +2304,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2324,12 +2330,14 @@
 				INFOPLIST_FILE = "CarBrowser/BirdBrowser-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = de.kosmopol.NZBirder;
 				PRODUCT_NAME = NZBirder;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CarBrowser/NZBirder-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

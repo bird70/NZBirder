@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var skipButton: UIButton!
 
     fileprivate let items = [
-        OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "685px-Drozd_zpevny.jpg"),
+        OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "Key"),
                            title: "Explore",
                            description: "Explore and discover new birds",
                            pageIcon:  #imageLiteral(resourceName: "685px-Drozd_zpevny.jpg"),
