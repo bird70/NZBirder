@@ -64,64 +64,18 @@
     self.p_legs = [[NSArray alloc] initWithObjects:
                  @"SIZE", @"sparrow", @"blackbird", @"pigeon", @"duck", @"goose", @"swan",@"albatross", @"ostrich", nil];
     
-    // Add the picker
-    
-//    //UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,0,0,0)];
-//   // UIPickerView *pickerView = [[UIPickerView alloc] init];
-//    
-//   // pickerView.delegate = self;
-//   // pickerView.dataSource = self;
-//    
-//   // pickerView.showsSelectionIndicator = YES;    // note this is default to NO
-//    //[self showPicker:]
-//    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectZero];
-//    
-//    pickerView.delegate = self;
-//    pickerView.dataSource = self;
-//    
-//    pickerView.showsSelectionIndicator = YES;    // note this is default to NO
-//    [self.view addSubview:pickerView];
-//    // [menu addSubview:pickerView];
-//    // [menu showInView:self.view];
-//    [pickerView setBounds:CGRectMake(0,0,320, 320)];
+ 
     
 }
 
 
-//- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
-//    if(buttonIndex==1){
-//        // None of the following should be required if using the PickerView inside the UITableView (instead of on Actionsheet)
-//        NSLog(@"Going off to find bird");
-//        
-//        NSError *error = nil;
-//        //NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-//        self.fetchedResultsController = self.pickFetchedResultsController;
-//        
-//
-//        
-//        [self.fetchedResultsController performFetch:&error];
-//        NSLog(@"reloading");
-//        [self.tableView reloadData];
-//        
-//        //self.fetchedResultsController = nil;
-//        self.pickFetchedResultsController = nil;
-//        
-//        
-//
-//    }
-//}
+
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     selectedScrollIndex = &row;
     
     // We want to use a search for the combined attributes selected using the PickerView
     
-    //NSLog(@"%@",selectedScrollIndex);
-//    NSUInteger numComponents = [[pickerView dataSource] numberOfComponentsInPickerView:pickerView];
-//    
-//    NSMutableString * text = [NSMutableString string];
-//    //for(NSUInteger i = 0; i < numComponents; ++i) {
-//    //    NSUInteger selectedRow = [pickerView selectedRowInComponent:i];
     NSUInteger selectedRow1 = [pickerView selectedRowInComponent:0];
     NSUInteger selectedRow2 = [pickerView selectedRowInComponent:1];
     NSUInteger selectedRow3 = [pickerView selectedRowInComponent:2];
@@ -143,12 +97,7 @@
 //                                       predicateWithFormat:@"leg_colour CONTAINS [c] %@", pick2comp];
     NSPredicate *predicateTemplate3 = [NSPredicate
                                           predicateWithFormat:@"beak_length CONTAINS [c] %@", pick4comp];
-//        NSPredicate *predicateTemplate4 = [NSPredicate
-//                                          predicateWithFormat:@"beak_colour CONTAINS[c] %@", pick4comp];
-//        
-//        NSDictionary *substitutionDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-//                                                @"Fiona", @"FIRST_NAME", @"Verde", @"LAST_NAME",
-//                                                [NSDate dateWithTimeIntervalSinceNow:-31356000], @"DATE", nil];
+
 
         
     NSCompoundPredicate *comppredicate = [NSCompoundPredicate andPredicateWithSubpredicates:@[predicateTemplate4,predicateTemplate,predicateTemplate2,predicateTemplate3]];//,predicateTemplate4]];
@@ -160,57 +109,10 @@
     
     [self buttonPick:pickerPredicate];  
     
-//        NSString * title = [[pickerView delegate] pickerView:pickerView titleForRow:selectedRow forComponent:i];
-//        [text appendFormat:@"Selected item \"%@\" in component %lu\n", title, (unsigned long)i];
-//        
-//        pick1comp = nil;
-//        pick2comp = nil;
-//        pick3comp = nil;
-//        pick4comp = nil;
-        //title = nil;
-        //text = nil;
-        
-       
-    //}
-    
-    //NSLog(@"%@", text);
-    
+
     
 }
 
-//- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
-//{
-//    UILabel* pickerLabel = (UILabel*)view;
-//    
-//    if (!pickerLabel)
-//    {
-//        pickerLabel = [[UILabel alloc] init];
-//        
-//        pickerLabel.font = [UIFont fontWithName:@"SourceSansPro-Semibold"                size:16];
-//        
-//        pickerLabel.textAlignment=NSTextAlignmentCenter;
-//    }
-//    [pickerLabel setText:[self.data objectAtIndex:row]];
-//    
-//    return pickerLabel;
-//}
-//
-//- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
-//    UILabel* tView = (UILabel*)view;
-//    if (!tView){
-//        tView = [[UILabel alloc] init];
-//        // Setup label properties - frame, font, colors etc
-//        //...
-//        //adjustsFontSizeToFitWidth property to YES
-//        [tView setMinimumScaleFactor: 8.];
-//        tView.adjustsFontSizeToFitWidth = YES;
-//    }
-//    // Fill the label text here
-//   // ...
-//    [pickerLabel setText:[self.data objectAtIndex:row]];
-//
-//    return tView;
-//}
 
 
 - (void)viewWillLayoutSubviews

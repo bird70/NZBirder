@@ -1268,7 +1268,7 @@
         [newManagedObject17 setValue:@"black" forKey:@"colour"];
         [newManagedObject17 setValue:@"grey,black" forKey:@"leg_colour"];
         [newManagedObject17 setValue:@"Anatidae" forKey:@"family"];
-        [newManagedObject17 setValue:@"water,bush" forKey:@"habitat"];
+        [newManagedObject17 setValue:@"coast,water,bush" forKey:@"habitat"];
         [newManagedObject17 setValue:@"Not threatened" forKey:@"threat_status"];
         [newManagedObject17 setValue:@"Black Swan" forKey:@"short_name"];
         [newManagedObject17 setValue:@"swan" forKey:@"size_and_shape"];
@@ -1429,7 +1429,7 @@
         [newManagedObject20 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/kiwi/" forKey:@"link"];
         [newManagedObject20 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject20 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject20 setValue:@"can fly, flightless,nocturnal" forKey:@"behaviour"];
+        [newManagedObject20 setValue:@"flightless,nocturnal" forKey:@"behaviour"];
         [newManagedObject20 setValue:@"1" forKey:@"category"];
         [newManagedObject20 setValue:@"brown" forKey:@"colour"];
         [newManagedObject20 setValue:@"brown" forKey:@"leg_colour"];
@@ -1990,7 +1990,7 @@
         [newManagedObject30 setValue:@"Rare, large stocky bird that was thought to be extinct until it was re-discovered near Lake Te Anau (South Island) in 1948. \n\nClose relative to the Pukeko (which is smaller and lighter). \n\nThe South Island takahē is a rare relict of the flightless, vegetarian bird fauna which once ranged New Zealand. Four specimens were collected from Fiordland between 1849 and 1898, after which takahē were considered to be extinct until famously rediscovered in the Murchison Mountains, west of Lake Te Anau, in 1948. Until the 1980s, takahē were confined in the wild to the Murchison Mountains. They have since been translocated to seven islands and several mainland sites, making them more accessible to many New Zealanders. Conservation work by the Department Of Conservation and community groups aims to prevent extinction and restore takahē to sites throughout their original range. \n\nThe success of DOC’s Takahē Recovery Programme relies heavily on a partnership with Mitre 10 who through Mitre 10 Takahē Rescue is helping to ensure the long-term survival of this treasured species.\n\nIdentification:\n\n The South Island takahē is the largest living rail in the world. An enormous gallinule, it has deep blue on the head, neck and underparts, olive green on the wings and back, and a white undertail, The huge conical bill is bright red, paler towards the tip, and extends on to the forehead as a red frontal shield. The stout legs are red, with orange underneath. Juveniles are duller with a blackish-orange beak and dull pink-brown legs.\n\nVoice:\n\n the main calls of takahē are a loud shriek, a quiet hooting contact call, and a muted boom indicating alarm.\n\nSimilar species: the extinct North Island takahē was taller and more slender. Pukeko can fly, and are smaller and more slender, with relatively longer legs, and black on the wings and back." forKey:@"item_description"];
         [newManagedObject30 setValue:@"http://nzbirdsonline.org.nz/species/south-island-takahe" forKey:@"link"];
         [newManagedObject30 setValue:@"black" forKey:@"beak_colour"];
-        [newManagedObject30 setValue:@"long" forKey:@"beak_length"];
+        [newManagedObject30 setValue:@"medium" forKey:@"beak_length"];
         [newManagedObject30 setValue:@"flightless, sedentary" forKey:@"behaviour"];
         [newManagedObject30 setValue:@"1" forKey:@"category"];
         [newManagedObject30 setValue:@"blue" forKey:@"colour"];
@@ -2601,7 +2601,7 @@
         [newManagedObject41 setValue:@"green/blue" forKey:@"colour"];
         [newManagedObject41 setValue:@"brown" forKey:@"leg_colour"];
         [newManagedObject41 setValue:@"Alcedinidae" forKey:@"family"];
-        [newManagedObject41 setValue:@"coast" forKey:@"habitat"];
+        [newManagedObject41 setValue:@"coast,garden,bush" forKey:@"habitat"];
         [newManagedObject41 setValue:@"Not Threatened" forKey:@"threat_status"];
         [newManagedObject41 setValue:@"Sacred Kingfisher" forKey:@"short_name"];
         [newManagedObject41 setValue:@"blackbird" forKey:@"size_and_shape"];
@@ -3011,7 +3011,7 @@
         [newManagedObject50 setValue:@"Rock Pigeon"       forKey:@"name"];
         [newManagedObject50 setValue:@"Rock Pigeon" forKey:@"othername"];
         [newManagedObject50 setValue:@"Bill: Short and slightly curved with a white crop at the base\n\nSize: 13-14 inches long with 25-inch wingspan, stocky body and pointed wings\n\nColors: Blue gray, black, white, brown, iridescent\n\nMarkings: Pigeons have a wide range of color and marking variations due to escaped domestic birds and fancy stock breeding. Typical pigeons are a blue gray overall with an iridescent neck that reflects blue, green and purple. Birds may have thick black wing bars and most pigeons are light underneath the wings. Eyes and legs are orange or reddish. Additional color variations include white, brown, tan or mottled birds.\n\nThese birds thrive in human habitats and are most populous in large cities but can also be found in suburban and rural locations. Pigeons do not migrate.\n\nBecause pigeons are so used to humans, they often seem semi-tame and will readily approach passersby for food. Large flocks of pigeons are constantly foraging or birds will roost in close contact with one another. Pigeons are very agile fliers that can reach speeds up to 85 miles per hour with their tapered, falcon-like wings.\n\nWhen commuting between roosting and foraging sites, rock pigeons fly directly and quickly with steady-paced wing beats. They may travel several kilometres to reach foraging sites. Rock pigeons generally forage in pairs or as a loose flock, with almost all searching for food being carried out while walking about on the ground. Often during spring and summer, males at foraging sites will court females. This involves the male standing erect with head bowed, plumage puffed out and tail fanned, walking and running about the female while cooing loudly. Nest sites are vigorously defended, sometimes resulting in fights for occupancy." forKey:@"item_description"];
-        [newManagedObject50 setValue:@"http://birding.about.com/od/birdprofiles/p/rockpigeon.htm" forKey:@"link"];
+        [newManagedObject50 setValue:@"http://nzbirdsonline.org.nz/species/rock-pigeon" forKey:@"link"];
         [newManagedObject50 setValue:@"grey" forKey:@"beak_colour"];
         [newManagedObject50 setValue:@"short" forKey:@"beak_length"];
         [newManagedObject50 setValue:@"can fly" forKey:@"behaviour"];

@@ -14,32 +14,41 @@ class ViewController: UIViewController {
     @IBOutlet var skipButton: UIButton!
 
     fileprivate let items = [
-        OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "Key"),
+//        color: UIColor(red: 0.40, green: 0.56, blue: 0.71, alpha: 1.00),
+        
+        OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "823px-Dinornis1387.jpg"),
+                           title: "Discover",
+                           description: "Explore and discover new birds. Use the filtering options on the main screen to narrow down the results to make it easier to observe birds you haven't seen before.",
+                           pageIcon:  #imageLiteral(resourceName: "0043.png"),
+                           color: UIColor(red: 0.40, green: 0.6, blue: 0.4, alpha: 1.00),
+                           titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
+        
+        OnboardingItemInfo(informationImage:#imageLiteral(resourceName: "823px-Dinornis1387.jpg"),
                            title: "Explore",
-                           description: "Explore and discover new birds",
-                           pageIcon:  #imageLiteral(resourceName: "685px-Drozd_zpevny.jpg"),
+                           description: "To see more information about a particular species, swipe left to open up a detail page. Swipe right to go back.",
+                           pageIcon:  #imageLiteral(resourceName: "0043.png"),
                            color: UIColor(red: 0.40, green: 0.56, blue: 0.71, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
-        OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "685px-Drozd_zpevny.jpg"),
+        OnboardingItemInfo(informationImage:#imageLiteral(resourceName: "GreyWarbler_Gerygone1888.jpg"),
                            title: "Record",
-                           description: "Store the observations you've made using a location on map",
-                           pageIcon:  #imageLiteral(resourceName: "685px-Drozd_zpevny.jpg"),
+                           description: "Store your observations using a marker on map. Create locations and fill in information. Come back to these observations at any time. ",
+                           pageIcon:  #imageLiteral(resourceName: "0063@2x.png"),
                            color: UIColor(red: 0.40, green: 0.69, blue: 0.71, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
-        OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "685px-Drozd_zpevny.jpg"),
+        OnboardingItemInfo(informationImage:#imageLiteral(resourceName: "NorthernRoyalAlbatross_Ben.jpg"),
                            title: "Upload",
-                           description: "Send a copy of your lists to yourself for upload at eBird.org",
-                           pageIcon: #imageLiteral(resourceName: "685px-Drozd_zpevny.jpg"),
-                           color: UIColor(red: 0.61, green: 0.56, blue: 0.74, alpha: 1.00),
+                           description: "Send a copy of your lists to yourself for convenient upload at eBird.org crowdsourcing science portal.",
+                           pageIcon: #imageLiteral(resourceName: "0002.png"),
+                           color: UIColor(red: 0.40, green: 0.56, blue: 0.71, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
         ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        skipButton.isHidden = true
+        //skipButton.isHidden = true
 
         setupPaperOnboardingView()
 
@@ -81,7 +90,8 @@ extension ViewController {
 extension ViewController: PaperOnboardingDelegate {
 
     func onboardingWillTransitonToIndex(_ index: Int) {
-        skipButton.isHidden = index == 2 ? false : true
+        //if the button is hidden at start, it can be shown when index is reached
+        //skipButton.isHidden = index == 2 ? false : true
     }
 
     func onboardingDidTransitonToIndex(_: Int) {
@@ -103,7 +113,7 @@ extension ViewController: PaperOnboardingDataSource {
     }
 
     func onboardingItemsCount() -> Int {
-        return 3
+        return 4
     }
     
     //    func onboardinPageItemRadius() -> CGFloat {
