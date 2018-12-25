@@ -4620,7 +4620,7 @@
         //        [newManagedObject95 setValue:@"AustralianCoot"         forKey:@"image"];
         //
         //        NSURL *url95t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"AustralianCoot_TN"
+        //                                                pathForResource:@"AustralianCoot5929761570_1b9de7d162_o_TN"
         //                                                ofType:@"jpg"]];
         //        NSData *data95t = [[NSData alloc] initWithContentsOfURL:url95t];
         //        UIImage *imageSave95t=[[UIImage alloc]initWithData:data95t];
@@ -4888,10 +4888,10 @@
         //        [newManagedObject100 setValue:@"blackbird" forKey:@"size_and_shape"];
         //
         //
-        //        [newManagedObject100 setValue:@"Brown Creeper"         forKey:@"image"];
+        //        [newManagedObject100 setValue:@"BrownCreeper"         forKey:@"image"];
         //
         //        NSURL *url100t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"Brown Creeper_TN"
+        //                                                pathForResource:@"BrownCreeper_10741276845_4385999547_k_TN
         //                                                ofType:@"jpg"]];
         //        NSData *data100t = [[NSData alloc] initWithContentsOfURL:url100t];
         //        UIImage *imageSave100t=[[UIImage alloc]initWithData:data100t];
@@ -4944,7 +4944,7 @@
         //        [newManagedObject101 setValue:@"Kokako"         forKey:@"image"];
         //
         //        NSURL *url101t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"Kokako_TN"
+        //                                                pathForResource:@"Kokako5286526342_6811cdb98c_b_TN"
         //                                                ofType:@"jpg"]];
         //        NSData *data101t = [[NSData alloc] initWithContentsOfURL:url101t];
         //        UIImage *imageSave101t=[[UIImage alloc]initWithData:data101t];
@@ -4994,7 +4994,7 @@
         //        [newManagedObject102 setValue:@"FjordlandCrestedPenguin"         forKey:@"image"];
         //
         //        NSURL *url102t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"FjordlandCrestedPenguin_TN"
+        //                                                pathForResource:@"FjordlandCrestedPenguin2154751828_aca5bbb5da_o_TN"
         //                                                ofType:@"jpg"]];
         //        NSData *data102t = [[NSData alloc] initWithContentsOfURL:url102t];
         //        UIImage *imageSave102t=[[UIImage alloc]initWithData:data102t];
