@@ -3210,7 +3210,7 @@
         [newManagedObject54 setValue:@"black,white" forKey:@"colour"];
         [newManagedObject54 setValue:@"brown" forKey:@"leg_colour"];
         [newManagedObject54 setValue:@"Procellariidae" forKey:@"family"];
-        [newManagedObject54 setValue:@"water" forKey:@"habitat"];
+        [newManagedObject54 setValue:@"water,coast,ocean" forKey:@"habitat"];
         [newManagedObject54 setValue:@"naturally uncommon" forKey:@"threat_status"];
         [newManagedObject54 setValue:@"Buller's shearwater" forKey:@"short_name"];
         [newManagedObject54 setValue:@"goose" forKey:@"size_and_shape"];
@@ -4392,7 +4392,7 @@
         [newManagedObject92 setValue:@"black,grey" forKey:@"colour"];
         [newManagedObject92 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject92 setValue:@"Anatidae" forKey:@"family"];
-        [newManagedObject92 setValue:@"water,bush" forKey:@"habitat"];
+        [newManagedObject92 setValue:@"water,coast,ocean,bush" forKey:@"habitat"];
         
         
         [newManagedObject92 setValue:@"BlueDuck_Whio_JulienCarnot_Flickr" forKey:@"image"];
@@ -4438,7 +4438,7 @@
         [newManagedObject93 setValue:@"black,yellow,white,red" forKey:@"colour"];
         [newManagedObject93 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject93 setValue:@"Spheniscidae" forKey:@"family"];
-        [newManagedObject93 setValue:@"water" forKey:@"habitat"];
+        [newManagedObject93 setValue:@"water,coast,ocean" forKey:@"habitat"];
         
         
         [newManagedObject93 setValue:@"Yellow_Eyed_Penguin_HaraldSelke_Flickr" forKey:@"image"];
@@ -4484,7 +4484,7 @@
         [newManagedObject94 setValue:@"brown" forKey:@"colour"];
         [newManagedObject94 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject94 setValue:@"Ardeidae" forKey:@"family"];
-        [newManagedObject94 setValue:@"water,bush" forKey:@"habitat"];
+        [newManagedObject94 setValue:@"coast,bush" forKey:@"habitat"];
         
         
         [newManagedObject94 setValue:@"Australasian_Bittern_FrankZed_Flickr" forKey:@"image"];
@@ -4581,62 +4581,46 @@
         // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
         //        /*  95
         //         */
-        //        NSManagedObject *newManagedObject95 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject95 setValue:@"Australian Coot"       forKey:@"name"];
-        //        [newManagedObject95 setValue:@"Fulica atra australis" forKey:@"othername"];
-        //        [newManagedObject95 setValue:@"The Australian coot is a smart, dark-grey, duck-like waterbird, instantly recognisable from its bright white bill and frontal shield. Coots are related to gallinules – the branch of the rail family that includes pukeko and takahe. Out of the water, a coot’s stance is more like a small pukeko than a duck. But instead of the pukeko’s long thin toes, coots have broad fleshy lobes on their short toes, used to give propulsion when swimming. The Australian coot is a recent arrival in New Zealand, first recorded breeding here in 1958. Their colonisation partially fills the niche left vacant by the extinction of the New Zealand coot, which was widespread before the arrival of Maori.\Identification\
-        Adult Australian coots are entirely slate-grey with a white bill and frontal shield. They have red eyes and large grey feet with lobed toes. Sexes are alike. Juvenile and immature birds have duller and paler colouring, with some pale grey on the chin and throat. They have brown eyes and smaller frontal shields. Coots are rarely seen in flight, where they differ from scaup in that their legs trail behind their tails in flight.\
-    Voice: a loud discordant krark.\
-        Similar species: New Zealand scaup have similar body size, shape, colouration and diving behaviour, but differ in having a blue-grey bill and no frontal shield, plus males have a yellow eye, and females often have white around the bill base (cf. blackish facial feathers in coots).\
-        Distribution and habitat:\
-        Australian coots are found throughout mainland New Zealand other than Northland, but there are few parts of the country where they are abundant. Coots are entirely aquatic, and there are large parts of the country that do not have their preferred freshwater lakes and ponds with submerged vegetation and reedy, grassy islands or edges.\
-            Single coots, possibly the same bird, have occurred as vagrants on Stewart Island (December 2012) and the Snares Islands (April 2013). Coots have reached Macquarie Island Island at least twice, with at least 7 birds in May-October 1957, and one in June-October 1975.\
-            \
-        Population:\
-            \
-            The Australian coot is a subspecies of the Eurasian coot that self-introduced into New Zealand from Australia in the 20th century, and was first recorded breeding in New Zealand on Lake Hayes, Otago in 1958. There were about 2,000 coots estimated to be present in New Zealand in 2005.\
-            \
-            Coots reached New Zealand on many occasions before they established, with at least 9 records from the South Island between 1875 (Lovells Flat, Otago) and 1957 (Heathcote River, Christchurch), before the first eggs and chicks were seen at Lake Hayes in November 1958. The first North Island record was at Lake Tutira, Hawkes Bay in 1954. There was an influx of coots in or before 1957, and they rapidly established as a breeding species.\
-            \
-        Threats and conservation :\
-            \
-            As a self-introduced species, Australian coots are automatically covered by the Wildlife Act, and are fully protected. They are well-established in New Zealand, with no recognised threats.   .\" forKey:@"item_description"];
-        //        [newManagedObject95 setValue:@"http://www.nzbirdsonline.org.nz/species/australian-coot" forKey:@"link"];
-        //        [newManagedObject95 setValue:@"white" forKey:@"beak_colour"];
-        //        [newManagedObject95 setValue:@"short,pointed" forKey:@"beak_length"];
-        //        [newManagedObject95 setValue:@"can fly" forKey:@"behaviour"];
-        //        [newManagedObject95 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject95 setValue:@"black" forKey:@"colour"];
-        //        [newManagedObject95 setValue:@"grey" forKey:@"leg_colour"];
-        //        [newManagedObject95 setValue:@"Rallidae" forKey:@"family"];
-        //        [newManagedObject95 setValue:@"water" forKey:@"habitat"];
-        //        [newManagedObject95 setValue:@"Native/ Naturally uncommon" forKey:@"threat_status"];
-        //        [newManagedObject95 setValue:@"Coot" forKey:@"short_name"];
-        //        [newManagedObject95 setValue:@"duck" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject95 setValue:@"AustralianCoot"         forKey:@"image"];
-        //
-        //        NSURL *url95t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"AustralianCoot5929761570_1b9de7d162_o_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data95t = [[NSData alloc] initWithContentsOfURL:url95t];
-        //        UIImage *imageSave95t=[[UIImage alloc]initWithData:data95t];
-        //        NSData *imageData95t = UIImagePNGRepresentation(imageSave95t);
-        //        [newManagedObject95 setValue:imageData95t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject95 setValue:@"Coot" forKey:@"sound"];
-        //
-        //        [newManagedObject95 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject95 setValue:NO forKey:@"extra"];
-        //        [newManagedObject95 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject95= nil;
-        //
+                NSManagedObject *newManagedObject95 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+                //Set Bird_attributes
+                [newManagedObject95 setValue:@"Australian Coot"       forKey:@"name"];
+                [newManagedObject95 setValue:@"Fulica atra australis" forKey:@"othername"];
+                [newManagedObject95 setValue:@"The Australian coot is a smart, dark-grey, duck-like waterbird, instantly recognisable from its bright white bill and frontal shield. Coots are related to gallinules – the branch of the rail family that includes pukeko and takahe. Out of the water, a coot’s stance is more like a small pukeko than a duck. But instead of the pukeko’s long thin toes, coots have broad fleshy lobes on their short toes, used to give propulsion when swimming. The Australian coot is a recent arrival in New Zealand, first recorded breeding here in 1958. Their colonisation partially fills the niche left vacant by the extinction of the New Zealand coot, which was widespread before the arrival of Maori.\nIdentification\n        Adult Australian coots are entirely slate-grey with a white bill and frontal shield. They have red eyes and large grey feet with lobed toes. Sexes are alike. Juvenile and immature birds have duller and paler colouring, with some pale grey on the chin and throat. They have brown eyes and smaller frontal shields. Coots are rarely seen in flight, where they differ from scaup in that their legs trail behind their tails in flight.\n    Voice: a loud discordant krark.\n        Similar species: New Zealand scaup have similar body size, shape, colouration and diving behaviour, but differ in having a blue-grey bill and no frontal shield, plus males have a yellow eye, and females often have white around the bill base (cf. blackish facial feathers in coots).\n        Distribution and habitat:\n        Australian coots are found throughout mainland New Zealand other than Northland, but there are few parts of the country where they are abundant. Coots are entirely aquatic, and there are large parts of the country that do not have their preferred freshwater lakes and ponds with submerged vegetation and reedy, grassy islands or edges.\n            Single coots, possibly the same bird, have occurred as vagrants on Stewart Island (December 2012) and the Snares Islands (April 2013). Coots have reached Macquarie Island Island at least twice, with at least 7 birds in May-October 1957, and one in June-October 1975.\n            \n        Population:\n            \n            The Australian coot is a subspecies of the Eurasian coot that self-introduced into New Zealand from Australia in the 20th century, and was first recorded breeding in New Zealand on Lake Hayes, Otago in 1958. There were about 2,000 coots estimated to be present in New Zealand in 2005.\n            \n            Coots reached New Zealand on many occasions before they established, with at least 9 records from the South Island between 1875 (Lovells Flat, Otago) and 1957 (Heathcote River, Christchurch), before the first eggs and chicks were seen at Lake Hayes in November 1958. The first North Island record was at Lake Tutira, Hawkes Bay in 1954. There was an influx of coots in or before 1957, and they rapidly established as a breeding species.\n            \n        Threats and conservation :\n            \n            As a self-introduced species, Australian coots are automatically covered by the Wildlife Act, and are fully protected. They are well-established in New Zealand, with no recognised threats.   .\n" forKey:@"item_description"];
+                [newManagedObject95 setValue:@"http://www.nzbirdsonline.org.nz/species/australian-coot" forKey:@"link"];
+                [newManagedObject95 setValue:@"white" forKey:@"beak_colour"];
+                [newManagedObject95 setValue:@"short,pointed" forKey:@"beak_length"];
+                [newManagedObject95 setValue:@"can fly" forKey:@"behaviour"];
+                [newManagedObject95 setValue:@"0" forKey:@"category"];
+                [newManagedObject95 setValue:@"black" forKey:@"colour"];
+                [newManagedObject95 setValue:@"grey" forKey:@"leg_colour"];
+                [newManagedObject95 setValue:@"Rallidae" forKey:@"family"];
+                [newManagedObject95 setValue:@"water,coast,ocean" forKey:@"habitat"];
+                [newManagedObject95 setValue:@"Native/ Naturally uncommon" forKey:@"threat_status"];
+                [newManagedObject95 setValue:@"Coot" forKey:@"short_name"];
+                [newManagedObject95 setValue:@"duck" forKey:@"size_and_shape"];
+        
+        
+                [newManagedObject95 setValue:@"AustralianCoot"         forKey:@"image"];
+        
+                NSURL *url95t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                        pathForResource:@"AustralianCoot5929761570_1b9de7d162_o_TN"
+                                                        ofType:@"jpg"]];
+                NSData *data95t = [[NSData alloc] initWithContentsOfURL:url95t];
+                UIImage *imageSave95t=[[UIImage alloc]initWithData:data95t];
+                NSData *imageData95t = UIImagePNGRepresentation(imageSave95t);
+                [newManagedObject95 setValue:imageData95t         forKey:@"thumbnail"];
+        
+        
+                //[newManagedObject95 setValue:@"Coot" forKey:@"sound"];
+        
+                [newManagedObject95 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+                [newManagedObject95 setValue:NO forKey:@"extra"];
+                [newManagedObject95 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+                [context save:NULL];
+                newManagedObject95= nil;
+        
 
         
         //        // +++++++++++ Brown Teal  +++++++++++++
@@ -4651,47 +4635,46 @@
         // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
         //        /*  96
         //         */
-        //        NSManagedObject *newManagedObject96 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject96 setValue:@"Brown Teal"       forKey:@"name"];
-        //        [newManagedObject96 setValue:@"Brown Teal" forKey:@"othername"];
-        //        [newManagedObject96 setValue:@"Brown Teal.\
-        //         " forKey:@"item_description"];
-        //        [newManagedObject96 setValue:@"http://www.nzbirdsonline.org.nz/species/brown-teal" forKey:@"link"];
-        //        [newManagedObject96 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject96 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject96 setValue:@"can fly,shy" forKey:@"behaviour"];
-        //        [newManagedObject96 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject96 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject96 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject96 setValue:@"Phasianidae" forKey:@"family"];
-        //        [newManagedObject96 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject96 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject96 setValue:@"brown teal" forKey:@"short_name"];
-        //        [newManagedObject96 setValue:@"blackbird" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject96 setValue:@"BrownTeal"         forKey:@"image"];
-        //
-        //        NSURL *url96t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"BrownTeal_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data96t = [[NSData alloc] initWithContentsOfURL:url96t];
-        //        UIImage *imageSave96t=[[UIImage alloc]initWithData:data96t];
-        //        NSData *imageData96t = UIImagePNGRepresentation(imageSave96t);
-        //        [newManagedObject96 setValue:imageData95t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject96 setValue:@"BrownTeal" forKey:@"sound"];
-        //
-        //        [newManagedObject96 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject96 setValue:NO forKey:@"extra"];
-        //        [newManagedObject96 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject96= nil;
-        //
+                NSManagedObject *newManagedObject96 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+                //Set Bird_attributes
+                [newManagedObject96 setValue:@"Brown Teal"       forKey:@"name"];
+                [newManagedObject96 setValue:@"Brown Teal" forKey:@"othername"];
+                [newManagedObject96 setValue:@"The brown teal is the largest and only flighted member of the three brown-plumaged teals endemic to the New Zealand region. It is the progenitor of the flightless Auckland and Campbell Island teals but all are now recognised as separate species on account of their geographic isolation and their plumage, size and genetic distinctions. The brown teal was an abundant and widespread species 200 years ago, but became highly endangered due mainly to the impacts of introduced predators. It has responded well to management at a few locations, and can be locally common when protected from predators.\n\nIdentification\n\nBoth sexes of brown teal are darkish brown, but they are sexually dimorphic in plumage and size. Males in breeding plumage have an indistinct green iridescence on the head, occasionally a narrow white neck ring, dark chestnut breast, and conspicuously barred light and dark brown flank feathers with a whitish patch at the tail base. Females and juveniles are a uniformly dull but dark mottled brown. Both sexes have a conspicuous white eye ring, dark-grey bill, legs and feet, and dark brown eye. Their wings appear short, their upper and lower surfaces brown and the speculum on the secondary feathers is green.\n\nVoice: male calls are soft, usually described as trills or piping, given in alarm and in territorial defence. The female has a rasping growl and a high-pitched and rapid quack.\n\nSimilar species: the flightless Campbell Island teal on Campbell and Codfish (Whenua Hou) Islands and Auckland Island teal at Auckland Islands are both slightly smaller with very short wings, and do not become as brightly coloured as the breeding male brown teal. Grey teal and vagrant chestnut teal  both have obvious white patches on the upper-wing, whitish under-wings, and red eyes.\n\nDistribution and habitat\n\nBrown teal are endemic to New Zealand and, in pre-human times, may have been the most widespread and numerous of New Zealand’s waterfowl. They were also formerly on Chatham Island until about 1925, and Stewart Island until 1972. Brown teal are now mostly restricted to northern North Island (Northland, Great Barrier Island and Coromandel Peninsula) but have been recently re-introduced to Kapiti and Mana Islands and the Zealandia Sanctuary in Wellington, and to a private sanctuary in Hawkes Bay. A recent trial release in Fiordland has returned teal to an area in which a few wild birds lingered till the late 1990s.\n\nBrown teal formerly exploited a wide range of habitats including wet forests, extensive and occluded swamps, slow-flowing streams, lakes and estuaries. Their present day habitat lies mostly in agricultural environments wherein the birds use occluded stock ponds as breeding and feeding sites, and also margins of small streams that retain overhanging marginal vegetation. Some birds still feed in estuaries on Great Barrier Island.\n\nPopulation\n\nThe brown teal population was estimated at 1500-2500 birds in 2011. Population estimates for the three principal aggregations in Northland, Great Barrier Island and Coromandel are usually extrapolated from counts of birds at summer flock sites but there remains uncertainty about what proportion of each population assembles at these sites. Recently established populations elsewhere comprise approximately 100 birds.\n\nThreats and conservation\n\nThe brown teal is probably the least secure of New Zealand’s three brown-plumaged teals on account of its vulnerability to and exposure to mammalian predators, and to ongoing deterioration of agricultural habitats in which it is forced to reside. Recovery of teal populations on mainland sites requires permanent and assiduous predator control or predator exclusion. Although Great Barrier Island presently lacks mustelids and has limited pastoral farming, expanding human settlements and household pets threaten the population’s expansion there.\n\nBrown teal are extensively bred in captivity for reintroduction attempts, but enduring success of these attempts remains elusive.\n\n" forKey:@"item_description"];
+                [newManagedObject96 setValue:@"http://www.nzbirdsonline.org.nz/species/brown-teal" forKey:@"link"];
+                [newManagedObject96 setValue:@"black" forKey:@"beak_colour"];
+                [newManagedObject96 setValue:@"druck" forKey:@"beak_length"];
+                [newManagedObject96 setValue:@"can fly,shy" forKey:@"behaviour"];
+                [newManagedObject96 setValue:@"0" forKey:@"category"];
+                [newManagedObject96 setValue:@"grey,black,green,brown" forKey:@"colour"];
+                [newManagedObject96 setValue:@"brown" forKey:@"leg_colour"];
+                [newManagedObject96 setValue:@"Anatidae" forKey:@"family"];
+                [newManagedObject96 setValue:@"bush,ocean,water" forKey:@"habitat"];
+                [newManagedObject96 setValue:@"Recovering" forKey:@"threat_status"];
+                [newManagedObject96 setValue:@"brown teal" forKey:@"short_name"];
+                [newManagedObject96 setValue:@"duck" forKey:@"size_and_shape"];
+        
+        
+                [newManagedObject96 setValue:@"BrownTeal_BernardSpraggNZ"         forKey:@"image"];
+        
+                NSURL *url96t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                        pathForResource:@"BrownTeal_BernardSpraggNZ_TN"
+                                                        ofType:@"jpg"]];
+                NSData *data96t = [[NSData alloc] initWithContentsOfURL:url96t];
+                UIImage *imageSave96t=[[UIImage alloc]initWithData:data96t];
+                NSData *imageData96t = UIImagePNGRepresentation(imageSave96t);
+                [newManagedObject96 setValue:imageData95t         forKey:@"thumbnail"];
+        
+        
+                //[newManagedObject96 setValue:@"BrownTeal" forKey:@"sound"];
+        
+                [newManagedObject96 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+                [newManagedObject96 setValue:NO forKey:@"extra"];
+                [newManagedObject96 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+                [context save:NULL];
+                newManagedObject96= nil;
+        
 
         
         //        // +++++++++++ Scaup  +++++++++++++
@@ -4706,47 +4689,46 @@
         // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
         //        /*  97
         //         */
-        //        NSManagedObject *newManagedObject97 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject97 setValue:@"Scaup"       forKey:@"name"];
-        //        [newManagedObject97 setValue:@"New Zealand Scaup" forKey:@"othername"];
-        //        [newManagedObject97 setValue:@"New Zealand Scaup.\
-        //         " forKey:@"item_description"];
-        //        [newManagedObject97 setValue:@"http://www.nzbirdsonline.org.nz/species/new-zealand-scaup" forKey:@"link"];
-        //        [newManagedObject97 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject97 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject97 setValue:@"can fly,shy" forKey:@"behaviour"];
-        //        [newManagedObject97 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject97 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject97 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject97 setValue:@"Phasianidae" forKey:@"family"];
-        //        [newManagedObject97 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject97 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject97 setValue:@"plumed quail" forKey:@"short_name"];
-        //        [newManagedObject97 setValue:@"blackbird" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject97 setValue:@"Scaup"         forKey:@"image"];
-        //
-        //        NSURL *url97t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"Scaup_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data97t = [[NSData alloc] initWithContentsOfURL:url97t];
-        //        UIImage *imageSave97t=[[UIImage alloc]initWithData:data97t];
-        //        NSData *imageData97t = UIImagePNGRepresentation(imageSave97t);
-        //        [newManagedObject97 setValue:imageData97t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject97 setValue:@"NewZealandScaup" forKey:@"sound"];
-        //
-        //        [newManagedObject97 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject97 setValue:NO forKey:@"extra"];
-        //        [newManagedObject97 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject97= nil;
-        //
+                NSManagedObject *newManagedObject97 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+                //Set Bird_attributes
+                [newManagedObject97 setValue:@"New Zealand Scaup"       forKey:@"name"];
+                [newManagedObject97 setValue:@"Papango" forKey:@"othername"];
+                [newManagedObject97 setValue:@"New Zealand scaup are gregarious diving ducks common throughout New Zealand. Compact and blackish, they have the silhouette of a bath-toy duck. Large approachable flocks are a feature of the Rotorua and Queenstown lakeshores, and scaup are also common on the Avon River that flows through Christchurch.\n\nIdentification\n\nNew Zealand scaup are quite unlike any other resident duck species. Dark and squat with a rounded profile, they often occur in large flocks, floating with cork-like buoyancy. Scaup are diving ducks and spend a lot of time underwater, where they can travel considerable distances. Both sexes are dark-plumaged, but are easily distinguished. The male has dark black-brown plumage with iridescent blue-green head and wings, and lighter mottling on the chest and underparts. His iris is yellow and bill blue-grey. The female is a duller chocolate brown, paler on her underparts. Her iris is brown and bill grey, normally with a ring of white feathers at the base. Juvenile resemble females until 12 weeks-old when the male iris colour becomes yellow. In flight, all birds have a broad white upper-wing bar and pale white underwing. Scaup have a fast wing beat and often fly just above the water. They sometimes rest on land, but quickly retreat to water when disturbed.\n\nVoice: males have a high pitched whistle call weeee weo-weo weo-weo weo-weoooo. The female call is a low quiet wack wack.\n\nSimilar species: brown teal are a similar size but have a long, flat body. Vagrant Australian white-eyed ducks are larger and have white undertail coverts. Males also have white eyes and both sexes have a pale saddle on the upper mandible. Australian coots are similar in body size, shape, colouration and diving behaviour, but have a bright white bill and frontal shield.\n\nDistribution and habitat\n\nNew Zealand scaup are widely but patchily distributed throughout the North and South Islands. They are found on dune lakes in Northland and Manawatu, and on inland lakes in Waikato, Taupo, Rotorua and Hawke’s Bay. In the South lsland they are common on West Coast lakes, north Canterbury waterways (including Christchurch), and eastern and southern high country and hydroelectric lakes. They are common on large, deep, freshwater lakes, including hydro-electric lakes, and are becoming increasingly common on shallow lowland lakes, slow flowing rivers and salt water. They are not found on Stewart Island, and are no longer present on Chatham Islands.\n\nScaup often congregate in sheltered areas near willows or reed beds, moving as wind conditions change; although they have favoured locations. They are considered non-migratory despite being capable fliers. Their numbers can fluctuate greatly on otherwise preferred lakes, suggesting at least some localised seasonal movements. Movement is also driven by ice conditions during winter.\n\nPopulation\n\nThe New Zealand scaup population was estimated at 20,000 birds in the 1990s. This may have increased following the range and population expansion reported in Canterbury.\n\nThreats and conservation\n\nPopulations apparently declined during late 1800s and early 1900s due to land clearance, associated hydrological changes, predation and hunting. Adults and chicks are vulnerable to predation during nesting and chick-rearing which may result in low breeding success. Predator control and provision of suitable feeding and breeding habitat has led to population expansion at Bromley Oxidation Ponds and Te Huingi Manu Wildlife Refuge in Christchurch. The success of this one site has probably allowed the recolonisation of the wider Christchurch area.\n\nBreeding\n\nThe nest is well concealed on the ground close to the water. Nests may be partially open above, or covered, or have a tunnel leading to a concealed chamber. The nest is a tidy bowl consisting of the surrounding materials, and lined with a layer of down. Breeding mainly occurs between October and March. They nest solitary or in a loose colony. Only females incubate and care for young, but solitary males, or groups of males are often reported close to breeding sites. Chicks often form crèches.\n\nBehaviour and ecology\n\nThere have been few studies on the behaviour or ecology of scaup. They are social, and can form dense rafts especially in autumn and winter and are often associated with other species particularly coots, shoveler and crested grebes. A range of male courtship behaviours were documented by Stoke (1991) including “sneak” (neck extended), “head-flicks” (rapid upwards head and bill movement) and “kink-neck” (neck held at unusual angle). Aggressive displays occur between courting males. Several males attend females until a bond has established, the bonded male will defend the female and they separate themselves from the group. Pairs form at the breeding site and last only until the female begins nesting when the bond apparently breaks. Females have been recorded laying in the nests of other females at one well-studied population (Lake Clearwater, inland Canterbury)\n\nFood\n\nScaup obtain most of their food by diving. Prey items include snails, chironomid larvae and caddisfly larvae. Plant material is probably taken also..\\n\n" forKey:@"item_description"];
+                [newManagedObject97 setValue:@"http://www.nzbirdsonline.org.nz/species/new-zealand-scaup" forKey:@"link"];
+                [newManagedObject97 setValue:@"black" forKey:@"beak_colour"];
+                [newManagedObject97 setValue:@"duck" forKey:@"beak_length"];
+                [newManagedObject97 setValue:@"can fly,shy" forKey:@"behaviour"];
+                [newManagedObject97 setValue:@"0" forKey:@"category"];
+                [newManagedObject97 setValue:@"black" forKey:@"colour"];
+                [newManagedObject97 setValue:@"brown" forKey:@"leg_colour"];
+                [newManagedObject97 setValue:@"Anatidae" forKey:@"family"];
+                [newManagedObject97 setValue:@"bush,ocean,water" forKey:@"habitat"];
+                [newManagedObject97 setValue:@"Not threatened" forKey:@"threat_status"];
+                [newManagedObject97 setValue:@"Scaup" forKey:@"short_name"];
+                [newManagedObject97 setValue:@"duck" forKey:@"size_and_shape"];
+        
+        
+                [newManagedObject97 setValue:@"Scaup NZ Bernard Spragg NZ"         forKey:@"image"];
+        
+                NSURL *url97t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                        pathForResource:@"Scaup NZ Bernard Spragg NZ_TN"
+                                                        ofType:@"jpg"]];
+                NSData *data97t = [[NSData alloc] initWithContentsOfURL:url97t];
+                UIImage *imageSave97t=[[UIImage alloc]initWithData:data97t];
+                NSData *imageData97t = UIImagePNGRepresentation(imageSave97t);
+                [newManagedObject97 setValue:imageData97t         forKey:@"thumbnail"];
+        
+        
+                //[newManagedObject97 setValue:@"NewZealandScaup" forKey:@"sound"];
+        
+                [newManagedObject97 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+                [newManagedObject97 setValue:NO forKey:@"extra"];
+                [newManagedObject97 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+                [context save:NULL];
+                newManagedObject97= nil;
+        
 
         //        // +++++++++++ Canada Goose  +++++++++++++
         // new additions:
@@ -4760,47 +4742,47 @@
         // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
         //        /*  98
         //         */
-        //        NSManagedObject *newManagedObject98 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject98 setValue:@"Canada Goose"       forKey:@"name"];
-        //        [newManagedObject98 setValue:@"Canada Goose" forKey:@"othername"];
-        //        [newManagedObject98 setValue:@"Canada Goose.\
-        //         " forKey:@"item_description"];
-        //        [newManagedObject98 setValue:@"http://www.nzbirdsonline.org.nz/species/canada-goose" forKey:@"link"];
-        //        [newManagedObject98 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject98 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject98 setValue:@"can fly,shy" forKey:@"behaviour"];
-        //        [newManagedObject98 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject98 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject98 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject98 setValue:@"Phasianidae" forKey:@"family"];
-        //        [newManagedObject98 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject98 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject98 setValue:@"plumed quail" forKey:@"short_name"];
-        //        [newManagedObject98 setValue:@"blackbird" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject98 setValue:@"CanadaGoose"         forKey:@"image"];
-        //
-        //        NSURL *url98t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"CanadaGoose_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data98t = [[NSData alloc] initWithContentsOfURL:url98t];
-        //        UIImage *imageSave98t=[[UIImage alloc]initWithData:data98t];
-        //        NSData *imageData98t = UIImagePNGRepresentation(imageSave98t);
-        //        [newManagedObject98 setValue:imageData98t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject98 setValue:@"CanadaGoose" forKey:@"sound"];
-        //
-        //        [newManagedObject98 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject98 setValue:NO forKey:@"extra"];
-        //        [newManagedObject98 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject98= nil;
-        //
+                NSManagedObject *newManagedObject98 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+                //Set Bird_attributes
+                [newManagedObject98 setValue:@"Canada Goose"       forKey:@"name"];
+                [newManagedObject98 setValue:@"Canada Goose" forKey:@"othername"];
+        [newManagedObject98 setValue:@"The distinctive and well-known Canada goose is a North American native that has been extensively introduced to UK, Scandinavia, and North Sea nations from Denmark to France, Russia and Ukraine, as well as New Zealand.\n\nIdentification\n        A large light-brown goose with black neck and head and a conspicuous white chinstrap. The breast and abdomen are barred white and light brown, and the abdomen and under-tail is white. Back and upper wing surface a darker brown. Bill, legs and feet black, eye dark brown-black. Sexes alike but females are noticeably smaller than males. Goslings have yellowish-grey down and the juveniles appear as dull versions of the adult.\n\nVoice: a distinctive and loud honk given when the birds are disturbed or surprised, or when flying.\nSimilar species: none. Other geese in New Zealand include the rare and vagrant Cape Barren goose and feral flocks of the domesticated greylag goose.\n\nDistribution and habitat\nCanada geese are widespread in the South Island and most numerous in pastoral areas of the eastern foothills of the Southern Alps from Marlborough to Central Otago, and around coastal lakes and lagoons. Their distribution is expanding in Fiordland and Southland. In the North Island, their distribution still reflects locations at which birds were released during the past 30 years, with the largest concentrations in Wairarapa, Hawkes Bay, Ruapehu-Taupo area, and Waikato.\n\nPastoral land adjacent to a lake or large pond provides preferred habitat, but geese may also be found in well-forested mountain valleys, especially in Fiordland, and around alpine tarns. Communal moult gatherings at secluded or very large lakes with grazing available at the immediate margins.         \n\nPopulation \n\nNumbers are controlled by annual culls to reduce damage to lakeside pastures in some areas. Total population of about 60,000, two-thirds of which are in the South Island, and have been maintained at this number for most of the past decade.\n\nEcological and economic impacts\n\nGrazing of high-country lakeside pasture, especially autumn-saved pasture, is considered an economic burden for sheep farmers. Widespread irrigation to promote dairy farming in formerly dry country has allowed geese to remain year round and graze highly nutritious grasses. This prompted farmer advocacy to declare the bird a pest, and in 2011 the Canada goose was declared an unprotected species.\
+                 " forKey:@"item_description"];
+                [newManagedObject98 setValue:@"http://www.nzbirdsonline.org.nz/species/canada-goose" forKey:@"link"];
+                [newManagedObject98 setValue:@"black" forKey:@"beak_colour"];
+                [newManagedObject98 setValue:@"short" forKey:@"beak_length"];
+                [newManagedObject98 setValue:@"can fly,shy" forKey:@"behaviour"];
+                [newManagedObject98 setValue:@"0" forKey:@"category"];
+                [newManagedObject98 setValue:@"grey,brown,white,black" forKey:@"colour"];
+                [newManagedObject98 setValue:@"brown" forKey:@"leg_colour"];
+                [newManagedObject98 setValue:@"Anatidae" forKey:@"family"];
+                [newManagedObject98 setValue:@"bush,ocean,water" forKey:@"habitat"];
+                [newManagedObject98 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+                [newManagedObject98 setValue:@"honker" forKey:@"short_name"];
+                [newManagedObject98 setValue:@"swan" forKey:@"size_and_shape"];
+        
+        
+                [newManagedObject98 setValue:@"Canada Geese Bernard Spragg NZ"         forKey:@"image"];
+        
+                NSURL *url98t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                        pathForResource:@"Canada Geese Bernard Spragg NZ_NZ"
+                                                        ofType:@"jpg"]];
+                NSData *data98t = [[NSData alloc] initWithContentsOfURL:url98t];
+                UIImage *imageSave98t=[[UIImage alloc]initWithData:data98t];
+                NSData *imageData98t = UIImagePNGRepresentation(imageSave98t);
+                [newManagedObject98 setValue:imageData98t         forKey:@"thumbnail"];
+        
+        
+                //[newManagedObject98 setValue:@"CanadaGoose" forKey:@"sound"];
+        
+                [newManagedObject98 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+                [newManagedObject98 setValue:NO forKey:@"extra"];
+                [newManagedObject98 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+                [context save:NULL];
+                newManagedObject98= nil;
+        
 
         //        // +++++++++++ Guinea Fowl  +++++++++++++
         // new additions:
@@ -4831,7 +4813,7 @@
         //        [newManagedObject99 setValue:@"Phasianidae" forKey:@"family"];
         //        [newManagedObject99 setValue:@"bush" forKey:@"habitat"];
         //        [newManagedObject99 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject99 setValue:@"Canada Goose" forKey:@"short_name"];
+        //        [newManagedObject99 setValue:@"Guinea Fowl" forKey:@"short_name"];
         //        [newManagedObject99 setValue:@"blackbird" forKey:@"size_and_shape"];
         //
         //
@@ -4867,47 +4849,46 @@
         // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
         //        /*  100
         //         */
-        //        NSManagedObject *newManagedObject100 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject100 setValue:@"Brown Creeper"       forKey:@"name"];
-        //        [newManagedObject100 setValue:@"Brown Creeper" forKey:@"othername"];
-        //        [newManagedObject100 setValue:@"Brown Creeper.\
-        //         " forKey:@"item_description"];
-        //        [newManagedObject100 setValue:@"http://www.nzbirdsonline.org.nz/species/brown-creeper" forKey:@"link"];
-        //        [newManagedObject100 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject100 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject100 setValue:@"can fly,shy" forKey:@"behaviour"];
-        //        [newManagedObject100 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject100 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject100 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject100 setValue:@"Phasianidae" forKey:@"family"];
-        //        [newManagedObject100 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject100 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject100 setValue:@"Brown Creeper" forKey:@"short_name"];
-        //        [newManagedObject100 setValue:@"blackbird" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject100 setValue:@"BrownCreeper"         forKey:@"image"];
-        //
-        //        NSURL *url100t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"BrownCreeper_10741276845_4385999547_k_TN
-        //                                                ofType:@"jpg"]];
-        //        NSData *data100t = [[NSData alloc] initWithContentsOfURL:url100t];
-        //        UIImage *imageSave100t=[[UIImage alloc]initWithData:data100t];
-        //        NSData *imageData100t = UIImagePNGRepresentation(imageSave100t);
-        //        [newManagedObject100 setValue:imageData100t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject100 setValue:@"BrownCreeper" forKey:@"sound"];
-        //
-        //        [newManagedObject100 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject100 setValue:NO forKey:@"extra"];
-        //        [newManagedObject100 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject100= nil;
-        //
+                NSManagedObject *newManagedObject100 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+                //Set Bird_attributes
+                [newManagedObject100 setValue:@"Brown Creeper"       forKey:@"name"];
+                [newManagedObject100 setValue:@"pīpipi" forKey:@"othername"];
+        [newManagedObject100 setValue:@"Brown creepers are found in a wide range of forested and shrubland habitats throughout the South Island and Stewart Island. Often the first sign is a large chattering flock high in the forest canopy. They can be attracted down by squeaking or pishing, but do not stay long as the flock moves on through the canopy. Once sighted the grey face and buff underparts are distinctive.\n         \n         Identification\n         \n         The brown creeper is a small, noisy flocking songbird found in forest and shrubland in the South Island and Stewart Island. It has ash- to dark-grey on the face, sharply demarcated from the light buff underparts. The crown, back, rump and tail are dark reddish brown, with a dark bar on the tip of the tail. The eye is reddish-brown and the bill, legs and feet are pinkish- or grey-brown. The sexes are alike and juveniles are similar.\n         \n                                Voice: harsh chattering contact calls, often by many birds in a flock, also canary-like song. Both the contact call and song can be confused with the related yellowhead where both species occur.\n\n         Similar species: dunnock is darker underneath and is more furtive, often close to or on the ground. Grey warbler is smaller, rarely occurs in groups larger than a pair, and does not have the sharp demarcation between grey on the face and pale underparts.\n         \n         Distribution and habitat\n         \n         Brown creepers occur throughout the South and Stewart Islands. It is present on some islands in the Marlborough Sounds (e.g. D’Urville, Arapawa and Maud Islands), Fiordland (including Secretary, Resolution and Chalky Islands) and a few islands off Stewart Island (Codfish, Ulva and north-east muttonbird islands). Isolated populations are present on Banks Peninsula, Mt Peel and the Hunters Hills, and they persist at other sites that appear isolated from main populations (e.g. Naseby, Central Otago, and coastal Otago centred on Dunedin).\n         \n         Brown creepers inhabit a wide range of forest types, from sea level to the tree-line, including tall beech and podocarp forests, manuka/kanuka and other scrub forests, muttonbird scrub, regrowing forest, mature pine forests, willow, gorse and broom.\n         \n         Population\n         \n         Brown creepers are common through most of their range. In the nonbreeding season they may form flocks of up to 60 individuals and associate with yellowheads and parakeets. They disappeared from large areas of the eastern South Island following forest clearance, but numbers and distribution now appear stable.\n         \n         Breeding\n         \n         Nesting can begin in September and extend through to early February, with egg-laying from late September to late January. Brown creeper can make up to four nesting attempts in a season but will only raise two broods. Laying peaks in early October, with a second peak in late November indicating renesting attempts. The female builds a compact deep cup of vegetative material including bark, twigs, moss and leaves. It is lined with dried grass, feathers and wool. Nests are found in dense patches of foliage in the forest canopy, sometimes in shrubs or low trees 1-10 m above the ground. Males closely attend females during nest building and the start of laying. The clutch is 2-4 (typically 3) eggs laid at 24 hour intervals. The female alone incubates for 17-21 days and broods the young, but both adults feed the chicks which fledge at 18-22 days. When renesting occurs the male takes over most feeding with some assistance from non-breeding birds.\n         \n         Brown creepers pairs are monogamous and exhibit high mate fidelity, with 64.7% staying together for two seasons and 29.4 % for three seasons; changes in pairs were precipitated by loss of the partner rather than divorce and mate swapping. In drought condition there have been reports of cooperative breeding with failed adults contributing food to a nest. The young of the year stay as a group once they become independent and often form larger groups through the autumn and winter. 63% of eggs hatch and 36% fledge. Predation accounted for 62% of eggs and 66% of nestlings lost, with an overall success rate of 1.6 fledglings/adult/year. Brown creepers can breed at one year old.\n\n         Brown creepers are the primary host for the long-tailed cuckoo in the South Island and Stewart Island.\n         \n         Behaviour and ecology\n         \n         Pairs defend territories during the breeding season and to a lesser extent during the rest of the year. Brown creepers are gregarious during autumn and winter, forming large flocks, often with other species (including silvereye, parakeet, grey warbler and fantail). At Kaikoura brown creeper formed the nucleus of mixed feeding flocks. They are non-migratory, but birds in high altitude forests will descend to lower altitudes in winter. Brown creepers mob long-tailed cuckoos when they are present in spring and summer.\n         \n         Brown creepers are vocal all day and all year except during the late summer moult. Males give territorial song which varies from bird to bird and is a phrase of slurs notes and whisltes. Females sing a rapid sequence of brief notes. Calls include a wide range of chatters, trills and ‘zicks’. In autumn and winter large flocks will call incessantly whereas small flocks will have periods of silence. They respond readily to “squeaking” and will closely investigate but then the flock will continue to move through the canopy.\n         \n         Food\n         \n         Brown creepers are insectivorous, but take some fruit. Their main prey are beetles, spiders, moths and caterpillars. They glean invertebrates from leaves and small branches in the canopy, and occasionally will glean from loose bark on main trunks and large branches, and will hang upside down to forage. Brown creepers rarely feed on the ground, with most foraging occurring from 2 m off the ground through to the canopy.\n           " forKey:@"item_description"];
+                [newManagedObject100 setValue:@"http://www.nzbirdsonline.org.nz/species/brown-creeper" forKey:@"link"];
+                [newManagedObject100 setValue:@"brown" forKey:@"beak_colour"];
+                [newManagedObject100 setValue:@"pointed" forKey:@"beak_length"];
+                [newManagedObject100 setValue:@"can fly,shy" forKey:@"behaviour"];
+                [newManagedObject100 setValue:@"0" forKey:@"category"];
+                [newManagedObject100 setValue:@"grey/brown" forKey:@"colour"];
+                [newManagedObject100 setValue:@"brown" forKey:@"leg_colour"];
+                [newManagedObject100 setValue:@"Pachycephalidae" forKey:@"family"];
+                [newManagedObject100 setValue:@"bush,garden" forKey:@"habitat"];
+                [newManagedObject100 setValue:@"Not Threatened" forKey:@"threat_status"];
+                [newManagedObject100 setValue:@"Brown Creeper" forKey:@"short_name"];
+                [newManagedObject100 setValue:@"blackbird" forKey:@"size_and_shape"];
+        
+        
+                [newManagedObject100 setValue:@"BrownCreeper"         forKey:@"image"];
+        
+                NSURL *url100t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                    pathForResource:@"BrownCreeper_10741276845_4385999547_k_TN"
+                                                        ofType:@"jpg"]];
+                NSData *data100t = [[NSData alloc] initWithContentsOfURL:url100t];
+                UIImage *imageSave100t=[[UIImage alloc]initWithData:data100t];
+                NSData *imageData100t = UIImagePNGRepresentation(imageSave100t);
+                [newManagedObject100 setValue:imageData100t         forKey:@"thumbnail"];
+        
+        
+                //[newManagedObject100 setValue:@"BrownCreeper" forKey:@"sound"];
+        
+                [newManagedObject100 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+                [newManagedObject100 setValue:NO forKey:@"extra"];
+                [newManagedObject100 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+                [context save:NULL];
+                newManagedObject100= nil;
+        
         //        // +++++++++++ North-Island Kokako  +++++++++++++
         // new additions:
         // Coot, Australian -http://www.nzbirdsonline.org.nz/species/australian-coot
@@ -4920,47 +4901,46 @@
         // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
         //        /*  101
         //         */
-        //        NSManagedObject *newManagedObject101 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject101 setValue:@"Kokako"       forKey:@"name"];
-        //        [newManagedObject101 setValue:@"Kokako" forKey:@"othername"];
-        //        [newManagedObject101 setValue:@"Kokako.\
-        //         " forKey:@"item_description"];
-        //        [newManagedObject101 setValue:@"http://www.nzbirdsonline.org.nz/species/north-island-kokako" forKey:@"link"];
-        //        [newManagedObject101 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject101 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject101 setValue:@"can fly,shy" forKey:@"behaviour"];
-        //        [newManagedObject101 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject101 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject101 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject101 setValue:@"Phasianidae" forKey:@"family"];
-        //        [newManagedObject101 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject101 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject101 setValue:@"Kokako (NI)" forKey:@"short_name"];
-        //        [newManagedObject101 setValue:@"blackbird" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject101 setValue:@"Kokako"         forKey:@"image"];
-        //
-        //        NSURL *url101t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"Kokako5286526342_6811cdb98c_b_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data101t = [[NSData alloc] initWithContentsOfURL:url101t];
-        //        UIImage *imageSave101t=[[UIImage alloc]initWithData:data101t];
-        //        NSData *imageData101t = UIImagePNGRepresentation(imageSave101t);
-        //        [newManagedObject101 setValue:imageData101t         forKey:@"thumbnail"];
-        //
-        //
-        //        [newManagedObject101 setValue:@"kokako-song_DOC" forKey:@"sound"];
-        //
-        //        [newManagedObject101 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject101 setValue:NO forKey:@"extra"];
-        //        [newManagedObject101 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject101= nil;
-        //
+                NSManagedObject *newManagedObject101 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+                //Set Bird_attributes
+                [newManagedObject101 setValue:@"Kokako"       forKey:@"name"];
+                [newManagedObject101 setValue:@"blue-wattled crow" forKey:@"othername"];
+        [newManagedObject101 setValue:@"With their extraordinary haunting song, and obscure evolutionary relationships to other birds, kokako evoke the forests of ancient New Zealand/Aotearoa perhaps more than any other species. More likely to be heard than seen, North Island kokako have persisted in small populations particularly in the central North Island from the King Country through to Te Urewera. They typically inhabit tall native forest dominated by tawa (Beilschmiedia tawa), singing from tree-tops but often feeding in understorey layers.\n\n All mainland North Island populations persist only with sustained control of key pest mammals (ship rats and brushtail possums). All unmanaged populations are extinct.\n     \n Identification\n\n The North Island kokako is a large songbird with a blue-grey body, a striking black mask and small, rich blue wattles that arise from the base of the bill and sit under the throat. Typically, when seen backlit in forest, kokako seem dark-plumaged and neither mask nor wattles are seen. They have long, strong legs and a long down-curved tail. Kokako characteristically bound and run among branches, interspersed with glides on short, rounded wings. They are usually located by listening for song and calls. The sexes are alike; juveniles have pink or lilac wattles. A few adults have orange wattles (cf. South Island kokako).\n         \n                                Voice: rich, sonorous, sustained, organ-like notes are sung by both male and female North Island kokako, frequently as duet, and typically from a high perch.  There is a frequent close contact call of 'took', repeated variably.\n \n  Similar species: tui have similar silhouette and song (especially when mimicking kokako where they coexist), but they are much smaller, darker and more adept fliers, with very different head and throat ornamentation. Vagrant black-faced cuckoo-shrike from Australia is half the size, paler grey, lacks wattles, and is a bird of open woodlands, parks and gardens rather than dense native forest.\n   \n    Distribution and habitat\n  \n   Natural remnant North Island kokako populations are confined to a few scattered forests in the northern half of the North Island, particularly in the Waikato, Bay of Plenty, Te Urewera, South Auckland and Northland. Since 1981, has been successfully translocated to Little Barrier, Kapiti and Tiritiri Matangi Islands, Mount Bruce Scenic Reserve (Wairarapa), Boundary Stream Mainland Island (Hawkes Bay), Ngapukeriki (East Cape), Ark in the Park (Waitakeres, west Auckland), Whirinaki and Otanewainuku (Bay of Plenty), Maungatautari (Waikato) and Puketi (Northland). They characteristically reside in tall, diverse native forest, usually with a canopy of tawa or taraire with emergent podocarps or kauri. Kokako have successfully bred in planted diverse shrub- and tree- hardwoods on Tiritiri Matangi Island.\n    \n   Population\n    \n  The North Island kokako population has increased from c.330 pairs in 1999 to c.1595 in 2017 due to pest control at key sites, and translocation. The largest populations, with more than 100 pairs each, are in Pureora Forest, Hauturu (Little Barrier Island ), Te Urewera, and Mapara (Waikato). Other large populations (> 50 prs) are at Mataraua/Waima (Northland), Hunua Ranges, Kaharoa-Onaia and Rotoehu near Rotorua, and there are 14 other smaller populations. Breeding pairs and unpaired singles defend 4-25 ha territories year-round by singing, which limits density.\n  \n  Threats and conservation\n  \n    Predation at nests by ship rats and possums is the primary cause of current declines of North Island kokako. Food reduction mainly by possums and predation by stoats are unhelpful secondary factors. All current populations must be continually managed against introduced mammal pests, either by repeated pest control on the mainland, or by vigilance against pest invasion on islands. Ship rats and possums are routinely targeted by trapping and poisoning so that their numbers are low for the duration of the breeding season (November to February). Food supply influences the number of breeding attempts that kokako make, but nest predators determine the outcomes of these attempts. Several key populations are being restored primarily by community groups. Maintenance of genetic health also influences management; e.g. new populations are established with individuals from two different source populations, totalling >40 founders. The conservation status of this species was moved from nationally vulnerable to 'at risk - recovering' in 2013.\n" forKey:@"item_description"];
+                [newManagedObject101 setValue:@"http://www.nzbirdsonline.org.nz/species/north-island-kokako" forKey:@"link"];
+                [newManagedObject101 setValue:@"black" forKey:@"beak_colour"];
+                [newManagedObject101 setValue:@"short" forKey:@"beak_length"];
+                [newManagedObject101 setValue:@"can fly,shy" forKey:@"behaviour"];
+                [newManagedObject101 setValue:@"0" forKey:@"category"];
+                [newManagedObject101 setValue:@"grey/blue" forKey:@"colour"];
+                [newManagedObject101 setValue:@"black" forKey:@"leg_colour"];
+                [newManagedObject101 setValue:@"Callaeidae" forKey:@"family"];
+                [newManagedObject101 setValue:@"bush" forKey:@"habitat"];
+                [newManagedObject101 setValue:@"Recovering" forKey:@"threat_status"];
+                [newManagedObject101 setValue:@"Kokako (NI)" forKey:@"short_name"];
+                [newManagedObject101 setValue:@"blackbird" forKey:@"size_and_shape"];
+        
+        
+                [newManagedObject101 setValue:@"Kokako"         forKey:@"image"];
+        
+                NSURL *url101t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                        pathForResource:@"Kokako5286526342_6811cdb98c_b_TN"
+                                                        ofType:@"jpg"]];
+                NSData *data101t = [[NSData alloc] initWithContentsOfURL:url101t];
+                UIImage *imageSave101t=[[UIImage alloc]initWithData:data101t];
+                NSData *imageData101t = UIImagePNGRepresentation(imageSave101t);
+                [newManagedObject101 setValue:imageData101t         forKey:@"thumbnail"];
+        
+        
+                [newManagedObject101 setValue:@"kokako-song_DOC" forKey:@"sound"];
+        
+                [newManagedObject101 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+                [newManagedObject101 setValue:NO forKey:@"extra"];
+                [newManagedObject101 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+                [context save:NULL];
+                newManagedObject101= nil;
+        
         
 ////      SUGGESTIONS:
 
@@ -4971,129 +4951,129 @@
 
         //        /*  102 Fjordland Crested Penguin
         //         */
-        //        NSManagedObject *newManagedObject102 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject102 setValue:@"Fjordland Crested Penguin"       forKey:@"name"];
-        //        [newManagedObject102 setValue:@"Fjordland Crested Penguin" forKey:@"othername"];
-        //        [newManagedObject102 setValue:@"Fiordland crested penguins are endemic to New Zealand, breeding in small colonies on inaccessible headlands and islets along the shores of south-western South Island and Stewart Island. They can be seen and heard on landing beaches during July – December. Populations have declined considerably in range and numbers since human arrival. Immediate threats include fisheries bycatch, introduced predators, and human disturbance. Identification: Adult Fiordland crested penguins have dark blue-grey/black upperparts (which turn brown when approaching moult), often darker on the head. A broad yellow eyebrow stripe (crest) starts at the nostril and extends well past the eye, drooping down the neck; 3-6 whitish stripes on the cheeks are displayed when agitated. The underparts are silky white. The moderately large orange bill has a thin strip of black skin at the base (cf. broader bare pink skin on Snares crested penguin). Females have smaller bills (bill depth < 24 mm) than males (bill depth >24 mm). The eyes are brownish-red, and feet and legs pinkish-white above and blackish-brown behind and on the soles. Juveniles have short, thin pale-yellow eyebrow stripes and mottled whitish chin and throat. The dorsal plumage of newly-fledged chicks is distinctly bluish, fading to black with wear, then to mid-brown before moulting. Voice: calls include loud braying or trumpeting, high pitched contact calls, and low-pitched hissing and growling. Calls are similar to those of Snares crested penguins. Similar species: Fiordland crested penguins are most similar to Snares crested penguin, which (as adults) have dark cheeks, a larger bill with prominent pink skin at the base, and narrower eye-brow stripes. All other crested penguins are also similar, especially when immature, but note broad eye-brow stripes, throat and cheeks greyish white, and absence of bare skin at bill base in immature Fiordland crested penguins. Recently fledged young (which are smaller than adults and bluish dorsally) may be confused with little penguins when swimming, but are twice as large and have at least some yellow above the eye" forKey:@"item_description"];
-        //        [newManagedObject102 setValue:@"http://nzbirdsonline.org.nz/species/fiordland-crested-penguin" forKey:@"link"];
-        //        [newManagedObject102 setValue:@"" forKey:@"beak_colour"];
-        //        [newManagedObject102 setValue:@"" forKey:@"beak_length"];
-        //        [newManagedObject102 setValue:@"" forKey:@"behaviour"];
-        //        [newManagedObject102 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject102 setValue:@"" forKey:@"colour"];
-        //        [newManagedObject102 setValue:@"" forKey:@"leg_colour"];
-        //        [newManagedObject102 setValue:@"" forKey:@"family"];
-        //        [newManagedObject102 setValue:@"" forKey:@"habitat"];
-        //        [newManagedObject102 setValue:@"" forKey:@"threat_status"];
-        //        [newManagedObject102 setValue:@"Fjordland Crested Penguin" forKey:@"short_name"];
-        //        [newManagedObject102 setValue:@"" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject102 setValue:@"FjordlandCrestedPenguin"         forKey:@"image"];
-        //
-        //        NSURL *url102t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"FjordlandCrestedPenguin2154751828_aca5bbb5da_o_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data102t = [[NSData alloc] initWithContentsOfURL:url102t];
-        //        UIImage *imageSave102t=[[UIImage alloc]initWithData:data102t];
-        //        NSData *imageData102t = UIImagePNGRepresentation(imageSave102t);
-        //        [newManagedObject102 setValue:imageData102t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject102 setValue:@"FjordlandCrestedPenguin" forKey:@"sound"];
-        //
-        //        [newManagedObject102 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject102 setValue:NO forKey:@"extra"];
-        //        [newManagedObject102 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject102= nil;
+                NSManagedObject *newManagedObject102 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+                //Set Bird_attributes
+                [newManagedObject102 setValue:@"Fjordland Crested Penguin"       forKey:@"name"];
+                [newManagedObject102 setValue:@"tawaki" forKey:@"othername"];
+                [newManagedObject102 setValue:@"Fiordland crested penguins are endemic to New Zealand, breeding in small colonies on inaccessible headlands and islets along the shores of south-western South Island and Stewart Island. They can be seen and heard on landing beaches during July – December. Populations have declined considerably in range and numbers since human arrival. Immediate threats include fisheries bycatch, introduced predators, and human disturbance. Identification: Adult Fiordland crested penguins have dark blue-grey/black upperparts (which turn brown when approaching moult), often darker on the head. A broad yellow eyebrow stripe (crest) starts at the nostril and extends well past the eye, drooping down the neck; 3-6 whitish stripes on the cheeks are displayed when agitated. The underparts are silky white. The moderately large orange bill has a thin strip of black skin at the base (cf. broader bare pink skin on Snares crested penguin). Females have smaller bills (bill depth < 24 mm) than males (bill depth >24 mm). The eyes are brownish-red, and feet and legs pinkish-white above and blackish-brown behind and on the soles. Juveniles have short, thin pale-yellow eyebrow stripes and mottled whitish chin and throat. The dorsal plumage of newly-fledged chicks is distinctly bluish, fading to black with wear, then to mid-brown before moulting. Voice: calls include loud braying or trumpeting, high pitched contact calls, and low-pitched hissing and growling. Calls are similar to those of Snares crested penguins. Similar species: Fiordland crested penguins are most similar to Snares crested penguin, which (as adults) have dark cheeks, a larger bill with prominent pink skin at the base, and narrower eye-brow stripes. All other crested penguins are also similar, especially when immature, but note broad eye-brow stripes, throat and cheeks greyish white, and absence of bare skin at bill base in immature Fiordland crested penguins. Recently fledged young (which are smaller than adults and bluish dorsally) may be confused with little penguins when swimming, but are twice as large and have at least some yellow above the eye" forKey:@"item_description"];
+                [newManagedObject102 setValue:@"http://nzbirdsonline.org.nz/species/fiordland-crested-penguin" forKey:@"link"];
+                [newManagedObject102 setValue:@"red" forKey:@"beak_colour"];
+                [newManagedObject102 setValue:@"medium" forKey:@"beak_length"];
+                [newManagedObject102 setValue:@"flightless" forKey:@"behaviour"];
+                [newManagedObject102 setValue:@"0" forKey:@"category"];
+                [newManagedObject102 setValue:@"black,white,yellow" forKey:@"colour"];
+                [newManagedObject102 setValue:@"red" forKey:@"leg_colour"];
+                [newManagedObject102 setValue:@"Spheniscidae" forKey:@"family"];
+                [newManagedObject102 setValue:@"coast" forKey:@"habitat"];
+                [newManagedObject102 setValue:@"Nationally vulnerable" forKey:@"threat_status"];
+                [newManagedObject102 setValue:@"Fjordland Crested Penguin" forKey:@"short_name"];
+                [newManagedObject102 setValue:@"duck" forKey:@"size_and_shape"];
+        
+        
+                [newManagedObject102 setValue:@"FjordlandCrestedPenguin"         forKey:@"image"];
+        
+                NSURL *url102t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                        pathForResource:@"FjordlandCrestedPenguin2154751828_aca5bbb5da_o_TN"
+                                                        ofType:@"jpg"]];
+                NSData *data102t = [[NSData alloc] initWithContentsOfURL:url102t];
+                UIImage *imageSave102t=[[UIImage alloc]initWithData:data102t];
+                NSData *imageData102t = UIImagePNGRepresentation(imageSave102t);
+                [newManagedObject102 setValue:imageData102t         forKey:@"thumbnail"];
+        
+        
+                //[newManagedObject102 setValue:@"FjordlandCrestedPenguin" forKey:@"sound"];
+        
+                [newManagedObject102 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+                [newManagedObject102 setValue:NO forKey:@"extra"];
+                [newManagedObject102 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+                [context save:NULL];
+                newManagedObject102= nil;
         
         //        /*  103 South Island Robin
         //         */
-        //        NSManagedObject *newManagedObject103 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject103 setValue:@"South Island Robin"       forKey:@"name"];
-        //        [newManagedObject103 setValue:@"South Island Robin" forKey:@"othername"];
-        //        [newManagedObject103 setValue:@"The South Island robin is a familiar bird to those who venture into the South Island back-country. It occurs in forest and scrub habitats, where it spends much time foraging on the ground, and can be recognised by its erect stance and relatively long legs. It is a territorial species, males in particular inhabiting the same patch of forest throughout their lives. Males are great songsters, particularly bachelors, singing loudly and often for many minutes at a time. Where robins are regularly exposed to people, such as along public walking tracks, they become quite confiding, often approaching to within a metre of a person sitting quietly. Juveniles will sometimes stand on a person’s boot. Identification: The adult male South Island robin is dark grey-black over the head, neck, mantle and upper chest; the flight feathers and tail are brownish-black, and the lower chest and belly white to yellowish white with a sharp demarcation between black and white on chest. Adult females are light to dark grey over the upper body. They further differ from males in the  white chest-belly area being smaller and not having such a distinct demarcation between grey and white feathering. Juveniles are similar to females, but often with a smaller or no white patch on the underparts. Adults of both sexes are able to expose a small white spot of feathers above the base of the beak during intraspecific and interspecific interactions. Voice: South Island robins have four recognisable vocalisations. Fullsong is a series of phrases given loudly by males only, generally from a high perch. Robins can be heard giving fullsong year round, but particularly during the breeding season. It is used to indicate territorial occupancy and to attract a mate – bachelors spend much more time singing than paired males. Subsong is similar to fullsong but given at much less volume, is given by both sexes, and most frequently during the moult. The downscale is a series of very loud ‘chuck’ calls, descending in tone, and which start in rapid succession and finish slowly. The call lasts 3-4 seconds, is given by both sexes, and is most frequently heard during the non-breeding season (January-June). The fourth vocalisation type is the ‘chuck’, which is given as single notes (contact calls) or in rapid succession and loudly (as an alarm call) when a predator is nearby. Similar species:there are no species that are similar to the robin in the South Island or Stewart Island. Robins are much larger and lack the white wing-bars of tomtits. Distribution: The South Island robin has a disjunct distribution through both the South and Stewart Islands. Its strongholds in the South Island are Marlborough, Nelson, West Coast as far south as about Harihari, and through Fiordland, with outliers at Jackson Bay and Dunedin. A comparison of the Ornithological Society of New Zealand’s atlas scheme results of 1969-79 and 1999-2004 suggest that the South Island robin’s distribution has changed little during the 20 year interval. Several populations, particularly on islands, have been established by translocations. Habitat: Robins occur in mature forest, scrub, and exotic plantations, particularly those that are fairly mature with an open understorey. They seem to favour moist areas where there is an open understorey under a closed canopy on fertile soils. Habitats that tend to be shunned are those with widely scattered trees and where the ground is covered by grasses or sparse vegetation on stony, droughty soils. Population: South Island robin is patchily distributed through its range, and is absent from some seemingly suitable areas while common in others. Pairs have territories of 1-5 ha on the mainland, although populations on pest-free islands can occur at much greater densities (0.2-0.6 ha / pair). \" forKey:@"item_description"];
-        //        [newManagedObject103 setValue:@"http://nzbirdsonline.org.nz/species/south-island-robin" forKey:@"link"];
-        //        [newManagedObject103 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject103 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject103 setValue:@"can fly,shy" forKey:@"behaviour"];
-        //        [newManagedObject103 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject103 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject103 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject103 setValue:@"Phasianidae" forKey:@"family"];
-        //        [newManagedObject103 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject103 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject103 setValue:@"South Island Robin" forKey:@"short_name"];
-        //        [newManagedObject103 setValue:@"blackbird" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject103 setValue:@"SouthIslandRobin"         forKey:@"image"];
-        //
-        //        NSURL *url103t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"SouthIslandRobin_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data103t = [[NSData alloc] initWithContentsOfURL:url103t];
-        //        UIImage *imageSave103t=[[UIImage alloc]initWithData:data103t];
-        //        NSData *imageData103t = UIImagePNGRepresentation(imageSave103t);
-        //        [newManagedObject103 setValue:imageData103t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject103 setValue:@"SouthIslandRobin" forKey:@"sound"];
-        //
-        //        [newManagedObject103 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject103 setValue:NO forKey:@"extra"];
-        //        [newManagedObject103 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject103= nil;
+                NSManagedObject *newManagedObject103 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+                //Set Bird_attributes
+                [newManagedObject103 setValue:@"South Island Robin"       forKey:@"name"];
+                [newManagedObject103 setValue:@"South Island Robin" forKey:@"othername"];
+                [newManagedObject103 setValue:@"The South Island robin is a familiar bird to those who venture into the South Island back-country. It occurs in forest and scrub habitats, where it spends much time foraging on the ground, and can be recognised by its erect stance and relatively long legs. It is a territorial species, males in particular inhabiting the same patch of forest throughout their lives. Males are great songsters, particularly bachelors, singing loudly and often for many minutes at a time. Where robins are regularly exposed to people, such as along public walking tracks, they become quite confiding, often approaching to within a metre of a person sitting quietly. Juveniles will sometimes stand on a person’s boot.\n\n Identification:\n The adult male South Island robin is dark grey-black over the head, neck, mantle and upper chest; the flight feathers and tail are brownish-black, and the lower chest and belly white to yellowish white with a sharp demarcation between black and white on chest. Adult females are light to dark grey over the upper body. They further differ from males in the  white chest-belly area being smaller and not having such a distinct demarcation between grey and white feathering. Juveniles are similar to females, but often with a smaller or no white patch on the underparts. Adults of both sexes are able to expose a small white spot of feathers above the base of the beak during intraspecific and interspecific interactions.\n\n Voice:\n South Island robins have four recognisable vocalisations. Fullsong is a series of phrases given loudly by males only, generally from a high perch. Robins can be heard giving fullsong year round, but particularly during the breeding season. It is used to indicate territorial occupancy and to attract a mate – bachelors spend much more time singing than paired males. Subsong is similar to fullsong but given at much less volume, is given by both sexes, and most frequently during the moult. The downscale is a series of very loud ‘chuck’ calls, descending in tone, and which start in rapid succession and finish slowly. The call lasts 3-4 seconds, is given by both sexes, and is most frequently heard during the non-breeding season (January-June). The fourth vocalisation type is the 'chuck', which is given as single notes (contact calls) or in rapid succession and loudly (as an alarm call) when a predator is nearby.\n\n Similar species:\nthere are no species that are similar to the robin in the South Island or Stewart Island. Robins are much larger and lack the white wing-bars of tomtits. Distribution: The South Island robin has a disjunct distribution through both the South and Stewart Islands. Its strongholds in the South Island are Marlborough, Nelson, West Coast as far south as about Harihari, and through Fiordland, with outliers at Jackson Bay and Dunedin. A comparison of the Ornithological Society of New Zealand’s atlas scheme results of 1969-79 and 1999-2004 suggest that the South Island robin’s distribution has changed little during the 20 year interval. Several populations, particularly on islands, have been established by translocations.\n\n Habitat:\n Robins occur in mature forest, scrub, and exotic plantations, particularly those that are fairly mature with an open understorey. They seem to favour moist areas where there is an open understorey under a closed canopy on fertile soils. Habitats that tend to be shunned are those with widely scattered trees and where the ground is covered by grasses or sparse vegetation on stony, droughty soils.\n\n Population:\n South Island robin is patchily distributed through its range, and is absent from some seemingly suitable areas while common in others. Pairs have territories of 1-5 ha on the mainland, although populations on pest-free islands can occur at much greater densities (0.2-0.6 ha / pair). \n" forKey:@"item_description"];
+                [newManagedObject103 setValue:@"http://nzbirdsonline.org.nz/species/south-island-robin" forKey:@"link"];
+                [newManagedObject103 setValue:@"black,grey" forKey:@"beak_colour"];
+                [newManagedObject103 setValue:@"short" forKey:@"beak_length"];
+                [newManagedObject103 setValue:@"can fly,shy" forKey:@"behaviour"];
+                [newManagedObject103 setValue:@"0" forKey:@"category"];
+                [newManagedObject103 setValue:@"grey/brown" forKey:@"colour"];
+                [newManagedObject103 setValue:@"black" forKey:@"leg_colour"];
+                [newManagedObject103 setValue:@"Petroicidae" forKey:@"family"];
+                [newManagedObject103 setValue:@"bush" forKey:@"habitat"];
+                [newManagedObject103 setValue:@"Decling" forKey:@"threat_status"];
+                [newManagedObject103 setValue:@"South Island Robin" forKey:@"short_name"];
+                [newManagedObject103 setValue:@"sparrow" forKey:@"size_and_shape"];
+        
+        
+                [newManagedObject103 setValue:@"South Island Robin Bernard Spragg NZ"         forKey:@"image"];
+        
+                NSURL *url103t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                        pathForResource:@"South Island Robin Bernard Spragg NZ_TN"
+                                                        ofType:@"jpg"]];
+                NSData *data103t = [[NSData alloc] initWithContentsOfURL:url103t];
+                UIImage *imageSave103t=[[UIImage alloc]initWithData:data103t];
+                NSData *imageData103t = UIImagePNGRepresentation(imageSave103t);
+                [newManagedObject103 setValue:imageData103t         forKey:@"thumbnail"];
+        
+        
+                //[newManagedObject103 setValue:@"SouthIslandRobin" forKey:@"sound"];
+        
+                [newManagedObject103 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+                [newManagedObject103 setValue:NO forKey:@"extra"];
+                [newManagedObject103 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+                [context save:NULL];
+                newManagedObject103= nil;
         
         //        /*  104 Stewart Island Kiwi
         //         */
-        //        NSManagedObject *newManagedObject104 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject104 setValue:@"Stewart Island Kiwi"       forKey:@"name"];
-        //        [newManagedObject104 setValue:@"Stewart Island Kiwi" forKey:@"othername"];
-        //        [newManagedObject104 setValue:@"The Stewart Island tokoeka is the largest of the kiwi. Fiordland tokoeka are also very large, but Haast birds are smaller. Widespread in forest, scrub, tussock grasslands and subalpine zones of the south-western South Island and on Stewart Island. Flightless, with tiny vestigial wings and no tail. Generally nocturnal, therefore more often heard than seen, except on Stewart Island where birds often forage during the day. Male gives a repeated high-pitched ascending whistle, female gives a deeper throaty cry. A range of colours from rufous brown in Haast, to brown and dark brown elsewhere, streaked lengthways with reddish brown and black. Feather tips feel soft. Long pale bill, short legs and toes. Identification: Large brown kiwi. Rufous to dark brown soft feathers streaked with brown and black; long pale bill, short pale legs and toes. Voice:  Male gives a high-pitched ascending whistle repeated 15-25 times, female gives a slower and lower pitched hoarse guttural call repeated 10-20 times. Similar species: rowi are smaller and greyer. The calls of weka are similar to the call of the male tokoeka, but weka have two-syllable calls, and usually have fewer repetitions. Distribution [and habitat: ]Sparse to locally common in native forests, scrub, tussock grassland and subalpine zones in parts of the Haast Range and Arawhata Valley; Fiordland, from Milford Sound to Preservation Inlet and east to Lake Te Anau, including many of the larger islands such as Secretary and Resolution Islands; Stewart Island and Ulva Island. Fiordland tokoeka were introduced to Kapiti Island in 1908, where they have hybridised with North Island brown kiwi. Recently, Haast tokoeka have been introduced to Coal and Rarotoka Islands, and to the Orokonui Ecosanctuary, Dunedin, and small islands in Lakes Te Anau and Manapouri are used as crèche sites for this taxon. Before human settlement of New Zealand tokoeka were widespread throughout the southern and eastern part of the South Island as far north as North Canterbury. Population: About 30,000 birds in 2012; Haast tokoeka, c. 350 birds; Fiordland tokoeka, c. 15,000 birds; Stewart Island tokoeka, c. 15,000 birds.\" forKey:@"item_description"];
-        //        [newManagedObject104 setValue:@"http://nzbirdsonline.org.nz/species/southern-brown-kiwi" forKey:@"link"];
-        //        [newManagedObject104 setValue:@"brown" forKey:@"beak_colour"];
-        //        [newManagedObject104 setValue:@"long" forKey:@"beak_length"];
-        //        [newManagedObject104 setValue:@"flightless" forKey:@"behaviour"];
-        //        [newManagedObject104 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject104 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject104 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject104 setValue:@"Apterygidae" forKey:@"family"];
-        //        [newManagedObject104 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject104 setValue:@"Nationally Endangered" forKey:@"threat_status"];
-        //        [newManagedObject104 setValue:@"Southern Brown Kiwi" forKey:@"short_name"];
-        //        [newManagedObject104 setValue:@"blackbird" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject104 setValue:@"StewartIslandKiwi"         forKey:@"image"];
-        //
-        //        NSURL *url104t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"StewartIslandKiwi_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data104t = [[NSData alloc] initWithContentsOfURL:url104t];
-        //        UIImage *imageSave104t=[[UIImage alloc]initWithData:data104t];
-        //        NSData *imageData104t = UIImagePNGRepresentation(imageSave104t);
-        //        [newManagedObject104 setValue:imageData104t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject104 setValue:@"StewartIslandKiwi" forKey:@"sound"];
-        //
-        //        [newManagedObject104 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject104 setValue:NO forKey:@"extra"];
-        //        [newManagedObject104 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject104= nil;
+                NSManagedObject *newManagedObject104 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+                //Set Bird_attributes
+                [newManagedObject104 setValue:@"Stewart Island Kiwi"       forKey:@"name"];
+                [newManagedObject104 setValue:@"tokoeka" forKey:@"othername"];
+                [newManagedObject104 setValue:@"The Stewart Island tokoeka is the largest of the kiwi. Fiordland tokoeka are also very large, but Haast birds are smaller. Widespread in forest, scrub, tussock grasslands and subalpine zones of the south-western South Island and on Stewart Island. Flightless, with tiny vestigial wings and no tail. Generally nocturnal, therefore more often heard than seen, except on Stewart Island where birds often forage during the day. Male gives a repeated high-pitched ascending whistle, female gives a deeper throaty cry. A range of colours from rufous brown in Haast, to brown and dark brown elsewhere, streaked lengthways with reddish brown and black. Feather tips feel soft. Long pale bill, short legs and toes. \n\nIdentification:\n Large brown kiwi. Rufous to dark brown soft feathers streaked with brown and black; long pale bill, short pale legs and toes. Voice:  Male gives a high-pitched ascending whistle repeated 15-25 times, female gives a slower and lower pitched hoarse guttural call repeated 10-20 times. Similar species: rowi are smaller and greyer. The calls of weka are similar to the call of the male tokoeka, but weka have two-syllable calls, and usually have fewer repetitions. \n\nDistribution and habitat:\nSparse to locally common in native forests, scrub, tussock grassland and subalpine zones in parts of the Haast Range and Arawhata Valley; Fiordland, from Milford Sound to Preservation Inlet and east to Lake Te Anau, including many of the larger islands such as Secretary and Resolution Islands; Stewart Island and Ulva Island. Fiordland tokoeka were introduced to Kapiti Island in 1908, where they have hybridised with North Island brown kiwi. Recently, Haast tokoeka have been introduced to Coal and Rarotoka Islands, and to the Orokonui Ecosanctuary, Dunedin, and small islands in Lakes Te Anau and Manapouri are used as crèche sites for this taxon. Before human settlement of New Zealand tokoeka were widespread throughout the southern and eastern part of the South Island as far north as North Canterbury. \n\nPopulation:\n About 30,000 birds in 2012; Haast tokoeka, c. 350 birds; Fiordland tokoeka, c. 15,000 birds; Stewart Island tokoeka, c. 15,000 birds.\n" forKey:@"item_description"];
+                [newManagedObject104 setValue:@"http://nzbirdsonline.org.nz/species/southern-brown-kiwi" forKey:@"link"];
+                [newManagedObject104 setValue:@"brown" forKey:@"beak_colour"];
+                [newManagedObject104 setValue:@"long" forKey:@"beak_length"];
+                [newManagedObject104 setValue:@"flightless" forKey:@"behaviour"];
+                [newManagedObject104 setValue:@"0" forKey:@"category"];
+                [newManagedObject104 setValue:@"grey/brown" forKey:@"colour"];
+                [newManagedObject104 setValue:@"brown" forKey:@"leg_colour"];
+                [newManagedObject104 setValue:@"Apterygidae" forKey:@"family"];
+                [newManagedObject104 setValue:@"bush" forKey:@"habitat"];
+                [newManagedObject104 setValue:@"Nationally Endangered" forKey:@"threat_status"];
+                [newManagedObject104 setValue:@"Southern Brown Kiwi" forKey:@"short_name"];
+                [newManagedObject104 setValue:@"duck" forKey:@"size_and_shape"];
+        
+        
+                [newManagedObject104 setValue:@"StewartIslandKiwi"         forKey:@"image"];
+        
+                NSURL *url104t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                        pathForResource:@"South_Island_Brown_KiwiCanterbury_Museum_TN"
+                                                        ofType:@"jpg"]];
+                NSData *data104t = [[NSData alloc] initWithContentsOfURL:url104t];
+                UIImage *imageSave104t=[[UIImage alloc]initWithData:data104t];
+                NSData *imageData104t = UIImagePNGRepresentation(imageSave104t);
+                [newManagedObject104 setValue:imageData104t         forKey:@"thumbnail"];
+        
+        
+                //[newManagedObject104 setValue:@"StewartIslandKiwi" forKey:@"sound"];
+        
+                [newManagedObject104 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+                [newManagedObject104 setValue:NO forKey:@"extra"];
+                [newManagedObject104 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+                [context save:NULL];
+                newManagedObject104= nil;
         
         
         //**************

@@ -188,6 +188,22 @@
 		B96D007A21D1BFAD00DC96DA /* Kokako.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D007521D1BFAD00DC96DA /* Kokako.jpg */; };
 		B96D007B21D1BFAD00DC96DA /* FjordlandCrestedPenguin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D007621D1BFAD00DC96DA /* FjordlandCrestedPenguin.jpg */; };
 		B96D007C21D1BFAD00DC96DA /* AustralianCoot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D007721D1BFAD00DC96DA /* AustralianCoot.jpg */; };
+		B96D008C21D1F43700DC96DA /* South Island Robin Bernard Spragg NZ_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D008421D1F43600DC96DA /* South Island Robin Bernard Spragg NZ_TN.jpg */; };
+		B96D008D21D1F43700DC96DA /* South_Island_Brown_KiwiCanterbury_Museum_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D008521D1F43600DC96DA /* South_Island_Brown_KiwiCanterbury_Museum_TN.jpg */; };
+		B96D008E21D1F43700DC96DA /* Crested Grebe Australasian_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D008621D1F43600DC96DA /* Crested Grebe Australasian_TN.jpg */; };
+		B96D008F21D1F43700DC96DA /* BrownTeal_BernardSpraggNZ_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D008721D1F43600DC96DA /* BrownTeal_BernardSpraggNZ_TN.jpg */; };
+		B96D009021D1F43700DC96DA /* Pacific Golden Plover Bernard Spragg NZ_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D008821D1F43700DC96DA /* Pacific Golden Plover Bernard Spragg NZ_TN.jpg */; };
+		B96D009121D1F43700DC96DA /* Scaup NZ Bernard Spragg NZ_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D008921D1F43700DC96DA /* Scaup NZ Bernard Spragg NZ_TN.jpg */; };
+		B96D009221D1F43700DC96DA /* Weka Bernard Spragg NZ_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D008A21D1F43700DC96DA /* Weka Bernard Spragg NZ_TN.jpg */; };
+		B96D009321D1F43700DC96DA /* Canada Geese Bernard Spragg NZ_NZ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D008B21D1F43700DC96DA /* Canada Geese Bernard Spragg NZ_NZ.jpg */; };
+		B96D009521D1F48000DC96DA /* South_Island_Brown_Kiwi_Canterbury_Museum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D009421D1F48000DC96DA /* South_Island_Brown_Kiwi_Canterbury_Museum.jpg */; };
+		B96D009721D1F49100DC96DA /* Weka Bernard Spragg NZ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D009621D1F49100DC96DA /* Weka Bernard Spragg NZ.jpg */; };
+		B96D009921D1F4AD00DC96DA /* South Island Robin Bernard Spragg NZ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D009821D1F4AD00DC96DA /* South Island Robin Bernard Spragg NZ.jpg */; };
+		B96D009B21D1F4B600DC96DA /* Scaup NZ Bernard Spragg NZ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D009A21D1F4B600DC96DA /* Scaup NZ Bernard Spragg NZ.jpg */; };
+		B96D009D21D1F4C000DC96DA /* Pacific Golden Plover Bernard Spragg NZ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D009C21D1F4C000DC96DA /* Pacific Golden Plover Bernard Spragg NZ.jpg */; };
+		B96D00A121D1F4DA00DC96DA /* BrownTeal_BernardSpraggNZ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D009E21D1F4D900DC96DA /* BrownTeal_BernardSpraggNZ.jpg */; };
+		B96D00A221D1F4DA00DC96DA /* Canada Geese Bernard Spragg NZ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D009F21D1F4DA00DC96DA /* Canada Geese Bernard Spragg NZ.jpg */; };
+		B96D00A321D1F4DA00DC96DA /* Crested Grebe Australasian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D00A021D1F4DA00DC96DA /* Crested Grebe Australasian.jpg */; };
 		B9708E5F17BACBAA00B90254 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9708E5E17BACBAA00B90254 /* BrowserViewController.m */; };
 		B973D18921D1716800DFB4EC /* MITRamotion.license in Resources */ = {isa = PBXBuildFile; fileRef = B973D18821D1716800DFB4EC /* MITRamotion.license */; };
 		B97BAEE11C6D2C4C0080AE66 /* Australasian_Bittern_FrankZed_Flickr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B97BAEDE1C6D2C4C0080AE66 /* Australasian_Bittern_FrankZed_Flickr.jpg */; };
@@ -662,6 +678,22 @@
 		B96D007521D1BFAD00DC96DA /* Kokako.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Kokako.jpg; path = "../../../NewBirdImages/Fotor Batch/Kokako.jpg"; sourceTree = "<group>"; };
 		B96D007621D1BFAD00DC96DA /* FjordlandCrestedPenguin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FjordlandCrestedPenguin.jpg; path = "../../../NewBirdImages/Fotor Batch/FjordlandCrestedPenguin.jpg"; sourceTree = "<group>"; };
 		B96D007721D1BFAD00DC96DA /* AustralianCoot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = AustralianCoot.jpg; path = "../../../NewBirdImages/Fotor Batch/AustralianCoot.jpg"; sourceTree = "<group>"; };
+		B96D008421D1F43600DC96DA /* South Island Robin Bernard Spragg NZ_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "South Island Robin Bernard Spragg NZ_TN.jpg"; sourceTree = "<group>"; };
+		B96D008521D1F43600DC96DA /* South_Island_Brown_KiwiCanterbury_Museum_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = South_Island_Brown_KiwiCanterbury_Museum_TN.jpg; sourceTree = "<group>"; };
+		B96D008621D1F43600DC96DA /* Crested Grebe Australasian_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Crested Grebe Australasian_TN.jpg"; sourceTree = "<group>"; };
+		B96D008721D1F43600DC96DA /* BrownTeal_BernardSpraggNZ_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BrownTeal_BernardSpraggNZ_TN.jpg; sourceTree = "<group>"; };
+		B96D008821D1F43700DC96DA /* Pacific Golden Plover Bernard Spragg NZ_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Pacific Golden Plover Bernard Spragg NZ_TN.jpg"; sourceTree = "<group>"; };
+		B96D008921D1F43700DC96DA /* Scaup NZ Bernard Spragg NZ_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Scaup NZ Bernard Spragg NZ_TN.jpg"; sourceTree = "<group>"; };
+		B96D008A21D1F43700DC96DA /* Weka Bernard Spragg NZ_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Weka Bernard Spragg NZ_TN.jpg"; sourceTree = "<group>"; };
+		B96D008B21D1F43700DC96DA /* Canada Geese Bernard Spragg NZ_NZ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Canada Geese Bernard Spragg NZ_NZ.jpg"; sourceTree = "<group>"; };
+		B96D009421D1F48000DC96DA /* South_Island_Brown_Kiwi_Canterbury_Museum.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = South_Island_Brown_Kiwi_Canterbury_Museum.jpg; sourceTree = "<group>"; };
+		B96D009621D1F49100DC96DA /* Weka Bernard Spragg NZ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Weka Bernard Spragg NZ.jpg"; sourceTree = "<group>"; };
+		B96D009821D1F4AD00DC96DA /* South Island Robin Bernard Spragg NZ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "South Island Robin Bernard Spragg NZ.jpg"; sourceTree = "<group>"; };
+		B96D009A21D1F4B600DC96DA /* Scaup NZ Bernard Spragg NZ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Scaup NZ Bernard Spragg NZ.jpg"; sourceTree = "<group>"; };
+		B96D009C21D1F4C000DC96DA /* Pacific Golden Plover Bernard Spragg NZ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Pacific Golden Plover Bernard Spragg NZ.jpg"; sourceTree = "<group>"; };
+		B96D009E21D1F4D900DC96DA /* BrownTeal_BernardSpraggNZ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BrownTeal_BernardSpraggNZ.jpg; sourceTree = "<group>"; };
+		B96D009F21D1F4DA00DC96DA /* Canada Geese Bernard Spragg NZ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Canada Geese Bernard Spragg NZ.jpg"; sourceTree = "<group>"; };
+		B96D00A021D1F4DA00DC96DA /* Crested Grebe Australasian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Crested Grebe Australasian.jpg"; sourceTree = "<group>"; };
 		B9708E5D17BACBAA00B90254 /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
 		B9708E5E17BACBAA00B90254 /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
 		B973D18821D1716800DFB4EC /* MITRamotion.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MITRamotion.license; path = CarBrowser/License/MITRamotion.license; sourceTree = "<group>"; };
@@ -1084,6 +1116,14 @@
 		B91684B717AE0512007C7161 /* Thumbnails */ = {
 			isa = PBXGroup;
 			children = (
+				B96D008721D1F43600DC96DA /* BrownTeal_BernardSpraggNZ_TN.jpg */,
+				B96D008B21D1F43700DC96DA /* Canada Geese Bernard Spragg NZ_NZ.jpg */,
+				B96D008621D1F43600DC96DA /* Crested Grebe Australasian_TN.jpg */,
+				B96D008821D1F43700DC96DA /* Pacific Golden Plover Bernard Spragg NZ_TN.jpg */,
+				B96D008921D1F43700DC96DA /* Scaup NZ Bernard Spragg NZ_TN.jpg */,
+				B96D008421D1F43600DC96DA /* South Island Robin Bernard Spragg NZ_TN.jpg */,
+				B96D008521D1F43600DC96DA /* South_Island_Brown_KiwiCanterbury_Museum_TN.jpg */,
+				B96D008A21D1F43700DC96DA /* Weka Bernard Spragg NZ_TN.jpg */,
 				B96D006921D1BF9900DC96DA /* Kokako5286526342_6811cdb98c_b_TN.jpg */,
 				B96D006D21D1BF9900DC96DA /* AustralianCoot5929761570_1b9de7d162_o_TN.jpg */,
 				B96D006A21D1BF9900DC96DA /* BrownCreeper_10741276845_4385999547_k_TN.jpg */,
@@ -1187,6 +1227,14 @@
 		B934A521178CEFE900D3F6F7 /* used */ = {
 			isa = PBXGroup;
 			children = (
+				B96D009E21D1F4D900DC96DA /* BrownTeal_BernardSpraggNZ.jpg */,
+				B96D009F21D1F4DA00DC96DA /* Canada Geese Bernard Spragg NZ.jpg */,
+				B96D00A021D1F4DA00DC96DA /* Crested Grebe Australasian.jpg */,
+				B96D009C21D1F4C000DC96DA /* Pacific Golden Plover Bernard Spragg NZ.jpg */,
+				B96D009A21D1F4B600DC96DA /* Scaup NZ Bernard Spragg NZ.jpg */,
+				B96D009821D1F4AD00DC96DA /* South Island Robin Bernard Spragg NZ.jpg */,
+				B96D009621D1F49100DC96DA /* Weka Bernard Spragg NZ.jpg */,
+				B96D009421D1F48000DC96DA /* South_Island_Brown_Kiwi_Canterbury_Museum.jpg */,
 				B91684B717AE0512007C7161 /* Thumbnails */,
 				B9B85DDE19AC703800FC688C /* NorthernRoyalAlbatross_Ben.jpg */,
 				B9B3801D19A173DD00733646 /* Fernbird_BrianRalphs.jpg */,
@@ -1745,6 +1793,7 @@
 				B9A86A98173FB2C6006908C0 /* bellbird-56.mp3 in Resources */,
 				B9461D9017421910007A8A20 /* 0043.png in Resources */,
 				B9461D9117421910007A8A20 /* 0043@2x.png in Resources */,
+				B96D009B21D1F4B600DC96DA /* Scaup NZ Bernard Spragg NZ.jpg in Resources */,
 				B9E55D781C6AE96100DBF64A /* kokako-song_DOC.mp3 in Resources */,
 				B9461D9617421B12007A8A20 /* 0063.png in Resources */,
 				B9461D9717421B12007A8A20 /* 0063@2x.png in Resources */,
@@ -1776,7 +1825,9 @@
 				B9B917081744D46600B9916D /* morepork.mp3 in Resources */,
 				B9B120BE199A103000CB8F80 /* AustralasianShoveler_digitaltrails.jpg in Resources */,
 				B9B143B2199B624500908EFB /* NZFalcon_TN.jpg in Resources */,
+				B96D009921D1F4AD00DC96DA /* South Island Robin Bernard Spragg NZ.jpg in Resources */,
 				B9D92E461748DEB0001B6D79 /* button_back.png in Resources */,
+				B96D009521D1F48000DC96DA /* South_Island_Brown_Kiwi_Canterbury_Museum.jpg in Resources */,
 				B9D92E471748DEB0001B6D79 /* button_normal.png in Resources */,
 				B9B14386199B561C00908EFB /* BarTailedGodwit.jpg in Resources */,
 				B9D92E481748DEB0001B6D79 /* cell_bottom.png in Resources */,
@@ -1792,6 +1843,7 @@
 				B9B8236A19B64DA30055A50A /* PerlScript_Acknowledgements.pl in Resources */,
 				B9D92E4E1748DEB0001B6D79 /* cell_top@2x.png in Resources */,
 				B973D18921D1716800DFB4EC /* MITRamotion.license in Resources */,
+				B96D009121D1F43700DC96DA /* Scaup NZ Bernard Spragg NZ_TN.jpg in Resources */,
 				B9D92E4F1748DEB0001B6D79 /* common_bg.png in Resources */,
 				B9E4E91021CE38AE00AC6553 /* Nunito-Bold.ttf in Resources */,
 				B9D92E501748DEB0001B6D79 /* common_bg@2x.png in Resources */,
@@ -1807,6 +1859,7 @@
 				B9D92E73174E5651001B6D79 /* 0284.png in Resources */,
 				B9D92E74174E5651001B6D79 /* 0284@2x.png in Resources */,
 				B9D92E79174E5717001B6D79 /* 0263.png in Resources */,
+				B96D00A121D1F4DA00DC96DA /* BrownTeal_BernardSpraggNZ.jpg in Resources */,
 				B9D92E7A174E5717001B6D79 /* 0263@2x.png in Resources */,
 				B9D92E7B174E5717001B6D79 /* 0264.png in Resources */,
 				B9B3801E19A173DD00733646 /* Fernbird_BrianRalphs.jpg in Resources */,
@@ -1867,10 +1920,12 @@
 				B9B3802619A176D500733646 /* MaskedLapwing_JamesNiland_TN.jpg in Resources */,
 				B9E55D881C6AE96100DBF64A /* western-weka-song_DOC.mp3 in Resources */,
 				B9BED14517993C4200E6FE0E /* maps@2x.png in Resources */,
+				B96D009D21D1F4C000DC96DA /* Pacific Golden Plover Bernard Spragg NZ.jpg in Resources */,
 				B9BED14817993C4200E6FE0E /* myplan.png in Resources */,
 				B9BED14917993C4200E6FE0E /* myplan@2x.png in Resources */,
 				B9BED14A17993C4200E6FE0E /* settings_selected.png in Resources */,
 				B9B143A4199B624500908EFB /* BarTailedGodwit_TN.jpg in Resources */,
+				B96D008D21D1F43700DC96DA /* South_Island_Brown_KiwiCanterbury_Museum_TN.jpg in Resources */,
 				B96D006F21D1BF9A00DC96DA /* BrownCreeper_10741276845_4385999547_k_TN.jpg in Resources */,
 				B9BED14B17993C4200E6FE0E /* settings_selected@2x.png in Resources */,
 				B9B120BC199A0E3400CB8F80 /* Mallard.jpg in Resources */,
@@ -1988,6 +2043,7 @@
 				B91683F217AE0006007C7161 /* Tui_on_flax.jpg in Resources */,
 				B91683F317AE0006007C7161 /* Watvogel_IMG_6674.jpg in Resources */,
 				B91683F417AE0006007C7161 /* WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch.jpg in Resources */,
+				B96D00A321D1F4DA00DC96DA /* Crested Grebe Australasian.jpg in Resources */,
 				B91683F517AE0006007C7161 /* Yellowhammer_IMG_7001.jpg in Resources */,
 				B9B143B6199B624500908EFB /* RockPigeon_TN.jpg in Resources */,
 				B91683FC17AE007F007C7161 /* 800px-Nestor_notabilis_-Fiordland_National_Park-8a.jpg in Resources */,
@@ -2006,9 +2062,11 @@
 				B9B14380199B4E3000908EFB /* RockPigeon.jpg in Resources */,
 				B9B143A5199B624500908EFB /* Black_billed_gull_TN.jpg in Resources */,
 				B91684E917AE0512007C7161 /* Anthornis_melanura_New_Zealand_8_TN.jpg in Resources */,
+				B96D009221D1F43700DC96DA /* Weka Bernard Spragg NZ_TN.jpg in Resources */,
 				B91684EA17AE0512007C7161 /* Blackbird_TN.jpg in Resources */,
 				B9E55D731C6AE96100DBF64A /* blue-duck_DOC.mp3 in Resources */,
 				B91684EB17AE0512007C7161 /* BlackSwanCygnus_atratus_TN.jpg in Resources */,
+				B96D008F21D1F43700DC96DA /* BrownTeal_BernardSpraggNZ_TN.jpg in Resources */,
 				B91684EC17AE0512007C7161 /* BlackWingGull_IMG_6659_TN.jpg in Resources */,
 				B91684ED17AE0512007C7161 /* Chaffinch_2_TN.jpg in Resources */,
 				B96D007B21D1BFAD00DC96DA /* FjordlandCrestedPenguin.jpg in Resources */,
@@ -2034,6 +2092,7 @@
 				B91684F817AE0512007C7161 /* Little_Penguin_TN.jpg in Resources */,
 				B91684F917AE0512007C7161 /* LittleSpottedKiwi_Apteryx_owenii_TN.jpg in Resources */,
 				B91684FA17AE0512007C7161 /* Magpie_Australian_IMG_6747_TN.jpg in Resources */,
+				B96D009321D1F43700DC96DA /* Canada Geese Bernard Spragg NZ_NZ.jpg in Resources */,
 				B9E55D871C6AE96100DBF64A /* takahe-song-10_DOC.mp3 in Resources */,
 				B9B85DDF19AC703800FC688C /* NorthernRoyalAlbatross_Ben.jpg in Resources */,
 				B91684FB17AE0512007C7161 /* MoreporkMaunga_TN.jpg in Resources */,
@@ -2058,15 +2117,18 @@
 				B916850917AE0512007C7161 /* SpottedShag_Phalacrocorax_punctatus_AucklandZoo_TN.jpg in Resources */,
 				B916850B17AE0512007C7161 /* Starling_IMG_6964_TN.jpg in Resources */,
 				B916850C17AE0512007C7161 /* Takahe_Maunga_TN.jpg in Resources */,
+				B96D009021D1F43700DC96DA /* Pacific Golden Plover Bernard Spragg NZ_TN.jpg in Resources */,
 				B9B120B6199A048700CB8F80 /* WhiteFacedHeron.jpg in Resources */,
 				B9E55D891C6AE96100DBF64A /* white-heron-song_DOC.mp3 in Resources */,
 				B916850D17AE0512007C7161 /* Thrush_song_06-03_SCOT_TN.jpg in Resources */,
 				B9B3801C19A171FD00733646 /* Whitehead_TN.jpg in Resources */,
+				B96D008E21D1F43700DC96DA /* Crested Grebe Australasian_TN.jpg in Resources */,
 				B97BAEE11C6D2C4C0080AE66 /* Australasian_Bittern_FrankZed_Flickr.jpg in Resources */,
 				B916850E17AE0512007C7161 /* Tui_on_flax_TN.jpg in Resources */,
 				B9B143AE199B624500908EFB /* Mallard_TN.jpg in Resources */,
 				B9B120AB199A037C00CB8F80 /* WhiteFrontedTern.jpg in Resources */,
 				B916850F17AE0512007C7161 /* Turkey_TN.jpg in Resources */,
+				B96D00A221D1F4DA00DC96DA /* Canada Geese Bernard Spragg NZ.jpg in Resources */,
 				B9B143B1199B624500908EFB /* NZDotterel_TN.jpg in Resources */,
 				B916851017AE0512007C7161 /* WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch_TN.jpg in Resources */,
 				B9B4B13819CA1CB1004E010D /* BlackShag_steintil_TN.jpg in Resources */,
@@ -2080,6 +2142,7 @@
 				B961701A17B4D53700A6167E /* 0236@2x.png in Resources */,
 				B95B943A17C06A6900EBC8E7 /* Default.png in Resources */,
 				B9ACFDEC17C84AB0002CE932 /* Shining_BronzeCuckoo.mp3 in Resources */,
+				B96D009721D1F49100DC96DA /* Weka Bernard Spragg NZ.jpg in Resources */,
 				B9B1438A199B5A0500908EFB /* NZPipit.jpg in Resources */,
 				B9ACFDED17C84AB0002CE932 /* Hirundotahitica.mp3 in Resources */,
 				B9B14382199B50E900908EFB /* Skylark.jpg in Resources */,
@@ -2092,6 +2155,7 @@
 				B9B3802519A176D500733646 /* Kakapo_TN.jpg in Resources */,
 				B9ACFDF317C84AB0002CE932 /* Carduelis_chloris_AuthorOlivierFromFranceWikiCommons.jpg in Resources */,
 				B9ACFDF417C84AB0002CE932 /* Chrysococcyx_lucidus_JamesNiland_Brisbane_Queensland_Australia.jpg in Resources */,
+				B96D008C21D1F43700DC96DA /* South Island Robin Bernard Spragg NZ_TN.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
