@@ -16,28 +16,28 @@ class ViewController: UIViewController {
     fileprivate let items = [
 //        color: UIColor(red: 0.40, green: 0.56, blue: 0.71, alpha: 1.00),
         
-        OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "823px-Dinornis1387.jpg"),
+        OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "NZB Screen Shot for Launch 2.jpg"),
                            title: "Discover",
                            description: "Explore and discover new birds. Use the filtering options on the main screen to narrow down the results to make it easier to observe birds you haven't seen before.",
                            pageIcon:  #imageLiteral(resourceName: "0043.png"),
                            color: UIColor(red: 0.40, green: 0.6, blue: 0.4, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
-        OnboardingItemInfo(informationImage:#imageLiteral(resourceName: "823px-Dinornis1387.jpg"),
+        OnboardingItemInfo(informationImage:#imageLiteral(resourceName: "NZB Screen Shot for Launch1.jpg"),
                            title: "Explore",
                            description: "To see more information about a particular species, swipe left to open up a detail page. Swipe right to go back.",
                            pageIcon:  #imageLiteral(resourceName: "0043.png"),
                            color: UIColor(red: 0.40, green: 0.56, blue: 0.71, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
-        OnboardingItemInfo(informationImage:#imageLiteral(resourceName: "GreyWarbler_Gerygone1888.jpg"),
+        OnboardingItemInfo(informationImage:#imageLiteral(resourceName: "Hotels"),
                            title: "Record",
                            description: "Store your observations using a marker on map. Create locations and fill in information. Come back to these observations at any time. ",
                            pageIcon:  #imageLiteral(resourceName: "0063@2x.png"),
                            color: UIColor(red: 0.40, green: 0.69, blue: 0.71, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
-        OnboardingItemInfo(informationImage:#imageLiteral(resourceName: "NorthernRoyalAlbatross_Ben.jpg"),
+        OnboardingItemInfo(informationImage:#imageLiteral(resourceName: "Banks"),
                            title: "Upload",
                            description: "Send a copy of your lists to yourself for convenient upload at eBird.org crowdsourcing science portal.",
                            pageIcon: #imageLiteral(resourceName: "0002.png"),

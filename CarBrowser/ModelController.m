@@ -4,11 +4,13 @@
 //
 //  Created by Tilmann Steinmetz on 21/06/13.
 //  Copyright (c) 2013 Tilmann Steinmetz. All rights reserved.
-//  later additions for version 1.3, 2.3
+//  later additions for version 1.2.5, 1.3, 2.3
 //
 //  This is used both during deployment and runtime
 //  If it finds that a local data store doesn't exist, a new one is created
-//  To populate a sqlite DB with the contents of the script below a number of lines (114-194) must be commented and others uncommented 
+//  To populate a sqlite DB with the contents of the script below a number of lines (114-194) must be commented and others uncommented
+//  Uncomment lines 122-136 to force deletion of existing DB and re-creation of it, then run and stop.
+//  In a second step, comment those lines again and run. The new DB should be used.
 
 #import "ModelController.h"
 #import "Spot.h"
@@ -93,7 +95,7 @@
     }
     
     BOOL firstRun=NO;
-    
+    //BOOL firstRun=YES;
     //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     //NSURL *documentsDirectory = [paths objectAtIndex:0];
 
@@ -103,11 +105,11 @@
     //NSURL *storeURL_12 = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"NZBirder12.sqlite"];
     //NSURL *preloadURL = [[self applicationDirectory] URLByAppendingPathComponent:@"NZBirder.sqlite"];
 //???this worked pre iOS and has stopped functioning starting with v8.0:    NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"NZBirder" ofType:@"sqlite"]];
-    //NSURL* preloadURL = [[NSBundle mainBundle] URLForResource:@"NZBirder_12" withExtension:@"sqlite"];
+    NSURL* preloadURL = [[NSBundle mainBundle] URLForResource:@"NZBirder125" withExtension:@"sqlite"];
     NSString* preloadURLString = [[NSBundle mainBundle] pathForResource:@"Kakapo" ofType:@"mp3"];
-    NSLog(@"preloadURLString"),preloadURLString;
+    NSLog(@"preloadURLString %@",preloadURLString);
     NSString *modelURLString = [[NSBundle mainBundle] pathForResource:@"BirdBrowser" ofType:@"momd"];
-    NSLog(@"modelURLString"),modelURLString;
+    NSLog(@"modelURLString %@",modelURLString);
   //  NSURL *preloadURLPath = [NSURL fileURLWithPath:preloadURLString];
     NSURL* preloadURLPATH = [NSURL fileURLWithPath:modelURLString];
     
@@ -118,7 +120,7 @@
 //    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"NZBirder.sqlite"];
 
     //UNCOMMENT ALTERNATIVELY:
-    
+//     // *****************************
 //    //THIS TO DELETE from the Application Documents directory before ReCreating the SQLLITE DB                                //1st option
 //    // must delete NZBirder.sqlite DB from the APPLICATION BUNDLE root FIRST! then put it back in after     //1st option
 //    //to delete a stale SQLLite DB after schema changes                         //1st option
@@ -128,43 +130,45 @@
 //    //[[NSFileManager defaultManager] removeItemAtURL:storeURL_shm error:nil];        //1st option
 //    //[[NSFileManager defaultManager] removeItemAtURL:storeURL_wal error:nil];        //1st option
 //    //[[NSFileManager defaultManager] removeItemAtURL:preloadURL error:nil];        //1st option
-//    
+//
 //    //[[NSFileManager defaultManager] removeItemAtURL:storeURL_12 error:nil];        //1st option
-//    
-//    NSLog(@"Deleting DB");                                                      //1st option
+//
+//    NSLog(@"Deleting NZBirder.sqlite DB");                                                      //1st option
 //     firstRun = YES;                                                          //1st option
+//
+//     // *****************************
     
     //OR THIS
     // For App Deployment (2nd option) this needs to be uncommented.
     // In order to re-generate the SQLLITE DB this needs to be commented! (3rd option)
     // firstRun = NO;                                                           //2nd option (leave in); 3rd option comment
 
-    //Easily check whether this is first run of app                         //2nd option (leave in); 3rd option comment
-    if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
-    //if (![[NSFileManager defaultManager] fileExistsAtPath:[preloadURL path]]) {
-        //NSString *preloadURL = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"NZBirder_orig.sqlite"];
-        //NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"NZBirder" ofType:@"sqlite"]];
-    // 11/15    NSError* err = nil;
-        
+//    //Easily check whether this is first run of app                         //2nd option (leave in); 3rd option comment
+//    if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
+//    if (![[NSFileManager defaultManager] fileExistsAtPath:[preloadURL path]]) {
+//        //NSString *preloadURL = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"NZBirder_orig.sqlite"];
+//        NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"NZBirder" ofType:@"sqlite"]];
+//        NSError* err = nil;
+//
 //        //3rd option uncomment following:
 //        firstRun = YES;
 //       // 3rd option comment the following expression (in curly brackets) to force it into "firstRun"
-//       
+//
 //        NSLog(@"Copying DB");
 //        if (![[NSFileManager defaultManager] copyItemAtURL:preloadURL toURL:storeURL error:&err]) {
 //       //if (![[NSFileManager defaultManager] copyItemAtPath:<#(NSString *)#> toPath:<#(NSString *)#> error:<#(NSError *__autoreleasing *)#>:preloadURL toURL:storeURL error:&err]) {
 //             firstRun = YES;
 //             NSLog(@"Oops, couldn't copy preloaded data");
 //        }                                                              //2nd option (leave in); 3rd option comment
-    }                                                                   //2nd option (leave in);
+//    }                                                                   //2nd option (leave in);; 3rd option comment
     
     // comment this completely out with the 2nd option
     //AND THEN PRETEND IT's OUR FIRST RUN so as to create the SQLLite DB        //2nd option
     if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]){ // isDirectory:NULL]) {
-		firstRun = YES;
+        firstRun = YES;
         NSLog(@"this is my first run");
-	}                                                                           //2nd option
-    
+    }                                                                           //2nd option
+
    // comment this completely out with the 2nd option
     //v2 needs new options to switch back from write-ahead-logging mode in SQLLITe which is now the default in order to have only the sqlite DB file:
     NSDictionary *options = @{NSSQLitePragmasOption:@{@"journal_mode":@"DELETE"}, NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES};
@@ -173,31 +177,31 @@
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options           error:&error]) {
         /*
          Replace this implementation with code to handle the error appropriately.
-         
+
          abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-         
+
          Typical reasons for an error here include:
          * The persistent store is not accessible;
          * The schema for the persistent store is incompatible with current managed object model.
          Check the error message to determine what the actual problem was.
-         
-         
+
+
          If the persistent store is not accessible, there is typically something wrong with the file path. Often, a file URL is pointing into the application's resources directory instead of a writeable directory.
-         
+
          If you encounter schema incompatibility errors during development, you can reduce their frequency by:
          * Simply deleting the existing store:
          [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil]
-         
+
          * Performing automatic lightweight migration by passing the following dictionary as the options parameter:
          @{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES}
-         
+
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
-         
+
          */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }                                                                                                               // end of 2nd option
-    
+    // *****************************************************
     
     /*
 	 If this is the first run, populate a new store with events whose timestamps are spaced every 7 days throughout 2013.
@@ -357,7 +361,7 @@
         
         [newManagedObject1 setValue:@"The morepork is NZ’s only surviving native owl. Often heard in the forest at dusk and throughout the night, the morepork is known for its haunting, melancholic call. It was introduced to New Zealand between 1906 and 1910 to try to control smaller introduced birds.\n\nMorepork are commonly found in forests throughout mainland New Zealand and on offshore islands. They are less common within the drier open regions of Canterbury and Otago. They are classified as not threatened.\n\nPhysical description\n\nMorepork are speckled brown with yellow eyes set in a dark facial mask. They have a short tail.\nThe females are bigger than the males.\nHead to tail they measure around 29cm and the average weight is about 175g.\nThey have acute hearing and are sensitive to light.\nThey can turn their head through 280 degrees.\n\nNocturnal birds of prey\n\nMorepork are nocturnal, hunting at night for large invertebrates including beetles, weta, moths and spiders. They will also take small birds, rats and mice. They fly silently as they have soft fringes on the edge of the wing feathers. They catch prey using large sharp talons or beak. By day they roost in the cavities of trees or in thick vegetation. If they are visible during the day they can get mobbed by other birds and are forced to move.\n\nNesting and breeding\nMorepork nest in tree cavities, in clumps of epiphytes or among rocks and roots.\nThe female can lay up to three eggs, but generally two, usually between September and November.\nThe female alone incubates the eggs for about 20 to 32 days during which time the male brings in food for her.\nOnce the chicks hatch, the female stays mainly on the nest until the owlets are fully feathered.\nThey fledge around 37-42 days.\nDepending on food supply often only one chick survives and the other may be eaten.\n\nMaori tradition\nIn Maori tradition the morepork was seen as a watchful guardian. It belonged to the spirit world as it is a bird of the night. Although the more-pork or ruru call was thought to be a good sign, the high pitched, piercing, ‘yelp’ call was thought to be an ominous forewarning of bad news or events." forKey:@"item_description"];
         [newManagedObject1 setValue:@"yellow" forKey:@"leg_colour"];
-        [newManagedObject1 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/morepork-ruru/" forKey:@"link"];
+        [newManagedObject1 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/morepork-ruru/" forKey:@"link"];
         [newManagedObject1 setValue:@"Ruru" forKey:@"othername"];
         [newManagedObject1 setValue:@"Southern Boobook" forKey:@"short_name"];
         [newManagedObject1 setValue:@"Pigeon" forKey:@"size_and_shape"];
@@ -474,7 +478,7 @@
         
         [newManagedObject3 setValue:@"Tūī are common throughout New Zealand in forests, towns and on off-shore islands. They are adaptable and are found not only in native forests, bush reserves and bush remnants but also in suburban areas, particularly in winter if there is a flowering gum about.\n\nCan often be heard singing their beautiful melodies long before they are spotted. \n\nIf you are fortunate to glimpse one you will recognise them by their distinctive white tuft under their throat, which contrasts dramatically with the metallic blue-green sheen to their underlying black colour.\n\nTūī are unique (endemic) to New Zealand and belong to the honeyeater family, which means they feed mainly on nectar from flowers of native plants such as kōwhai, puriri, rewarewa, kahikatea, pohutukawa, rātā and flax. Occasionally they will eat insects too. Tūī are important pollinators of many native trees and will fly large distances, especially during winter for their favourite foods.\nTūī will live where there is a balance of ground cover, shrubs and trees. Tūī are quite aggressive, and will chase other tūī and other species (such as bellbird, silvereye and kereru) away from good food sources.\n\nAn ambassador for successful rejuvenation\n\nA good sign of a successful restoration programme, in areas of New Zealand, is the sound of the tūī warbling in surrounding shrubs. These clever birds are often confusing to the human ear as they mimic sounds such as the calls of the bellbird. They combine bell-like notes with harsh clicks, barks, cackles and wheezes.\n\nBreeding facts\n\nCourting takes place between September and October when they sing high up in the trees in the early morning and late afternoon. Display dives, where the bird will fly up in a sweeping arch and then dive at speed almost vertically, are also associated with breeding. Only females build nests, which are constructed from twigs, fine grasses and moss.\n\nWhere can tūī be found\nThe tūī can be found throughout the three main islands of New Zealand. The Chatham Islands have their own subspecies of tūī that differs from the mainland variety mostly in being larger." forKey:@"item_description"];
         [newManagedObject3 setValue:@"black" forKey:@"leg_colour"];
-        [newManagedObject3 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/tui/" forKey:@"link"];
+        [newManagedObject3 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/tui/" forKey:@"link"];
         [newManagedObject3 setValue:@"Prosthemadera novaeseelandiae" forKey:@"othername"];
         [newManagedObject3 setValue:@"Tui" forKey:@"short_name"];
         [newManagedObject3 setValue:@"blackbird" forKey:@"size_and_shape"];
@@ -530,7 +534,7 @@
         
         [newManagedObject4 setValue:@"The stitchbird/hihi (Notiomystis cincta) is one of New Zealand’s rarest birds.  A medium-sized forest species, hihi compete with tui and bellbirds for nectar, insects and small fruits.\nBut apart from diet, hihi share few qualities with tui and bellbird, which are members of the honeyeater family.  Recent DNA analysis has shown that hihi are in fact the sole representative of another bird family found only in New Zealand whose closest relatives may be the iconic wattlebirds that include kokako, saddleback and the extinct huia.\nHow to recognise hihi\n\nMale and female hihi look quite different.  He flaunts a flashy plumage of black head with white ‘ear’ tufts, bright yellow shoulder bars and breast bands and a white wing bar and has a mottled tan-grey-brown body.\nShe is more subdued with an olive-grey-brown body cover, white wing bars and small white ‘ear’ tufts.  They both have small cat-like whiskers around the beak and large bright eyes.\nHihi can be recognised by their posture of an upward tilted tail and strident call from which the name ‘stitchbird’ derives.  A 19th century ornithologist Sir Walter Buller described the call made by the male hihi as resembling the word ‘stitch’.    Both males and females also have a range of warble-like calls and whistles.\n\nUnique characteristics\nUnlike most other birds, hihi build their nests in tree cavities.  The nest is complex with a stick base topped with a nest cup of finer twigs and lined with fern scales, lichen and spider web.\nHihi have a diverse and unusual mating system. \n\nHihi research\n    An active research programme with Massey and Auckland universities, as well as other institutes, has greatly increased our knowledge of hihi biology.\nHihi have been found to have a fascinating and complex mating system.  Males pair up with a female in their territory while also seeking to mate with other females in the neighbourhood.  To ensure the chicks are his, males need to produce large amounts of sperm to dilute that of other males.  And to avoid wasting this, the male has to assess exactly when a female is ready to breed.  In the days leading up to laying, when a female is weighed down with developing eggs, a number of males may chase her for hours at a time, all attempting to mate with her.\nResearch has also resulted in developing techniques for managing nesting behaviour, for example, managing nest mites, cross fostering and sexing of chicks and habitat suitability.\nManagement of the captive population at the Pukaha Mount Bruce National Wildlife Centre in eastern Wairarapa has also contributed to understanding the role of avian diseases in managing hihi populations.  \n\nWhere to find:  —Little Barrier, Tiritiri Matangi, Kapiti Islands, Kaori Wildlife Sanctuary (Zealandia)." forKey:@"item_description"];
         [newManagedObject4 setValue:@"brown" forKey:@"leg_colour"];
-        [newManagedObject4 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/stitchbird/" forKey:@"link"];
+        [newManagedObject4 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/stitchbird/" forKey:@"link"];
         [newManagedObject4 setValue:@"Tauhou/Hihi" forKey:@"othername"];
         [newManagedObject4 setValue:@"Stitchbird" forKey:@"short_name"];
         [newManagedObject4 setValue:@"sparrow" forKey:@"size_and_shape"];
@@ -924,7 +928,7 @@
         [newManagedObject11 setValue:@"Tomtit (South Island)"       forKey:@"name"];
         [newManagedObject11 setValue:@"Ngirungiru (Miromiro)" forKey:@"othername"];
         [newManagedObject11 setValue:@"The New Zealand tomtit (Petroica macrocephala) looks similar to a robin. They are a small endemic bird with a large head, a short bill and tail, and live in forest and scrub.\nThe Māori name of the North Island Tomtit is miromiro, while the South Island Tomtit is known as ngirungiru.\nThere are five subspecies of tomtit/miromiro, each restricted to their own specific island or island group: North Island, South Island, the Snares Islands, the Chatham Islands and the Auckland Islands." forKey:@"item_description"];
-        [newManagedObject11 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/tomtit-miromiro/" forKey:@"link"];
+        [newManagedObject11 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/tomtit-miromiro/" forKey:@"link"];
         [newManagedObject11 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject11 setValue:@"short" forKey:@"beak_length"];
         [newManagedObject11 setValue:@"can fly, largely insectivore/fruit in winter" forKey:@"behaviour"];
@@ -1370,7 +1374,7 @@
         [newManagedObject19 setValue:@"Bellbird"       forKey:@"name"];
         [newManagedObject19 setValue:@"Korimako (Anthornis melanura)" forKey:@"othername"];
         [newManagedObject19 setValue:@"Most New Zealanders can easily recognise the bellbird by its melodious song, which Captain Cook described as sounding ‘like small bells exquisitely tuned’.\n\n      Well camouflaged, the bellbird is usually heard before it is seen.\n Females are dull olive-brown, with a slight blue sheen on the head and a pale yellow cheek stripe. Males are olive green, with a purplish head and black outer wing and tail feathers.\n\nBellbirds are unique to New Zealand, occurring on the three main islands, many offshore islands and also the Auckland Islands.\n\nWhen Europeans arrived in New Zealand, bellbirds were common throughout the North and South Islands. \nTheir numbers declined sharply during the 1860s in the North Island and 1880s in the South Island, about the time that ship rats and stoats arrived. For a time it was thought they might vanish from the mainland. Their numbers recovered somewhat from about 1940 onwards, but they are almost completely absent on the mainland north of Hamilton, and are still rare in parts of Wellington, Wairarapa and much of inland Canterbury and Otago.\n\n      Bellbirds live in native forest (including mixed podocarp-hardwood and beech forest) and regenerating forest, especially where there is diverse or dense vegetation. They can be found close to the coast or in vegetation up to about 1200 metres. In the South Island they have been found inhabiting plantations of eucalypts, pines or willows. They can be spotted in urban areas, especially if there is bush nearby.\n\nTypically they require forest and scrub habitats, reasonable cover and good local food sources during the breeding season, since they do not travel far from the nest. However, outside the breeding season they may travel many kilometres to feed, especially males. A pair can raise two broods in a season.\n\nBellbird song comprises three distinct sounds resembling the chiming of bells. They sing throughout the day, but more so in the early morning and late evening. The alarm call is a series of loud, rapidly repeated, harsh staccato notes.\n" forKey:@"item_description"];
-        [newManagedObject19 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/bellbird-korimako/facts/" forKey:@"link"];
+        [newManagedObject19 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/bellbird-korimako/facts/" forKey:@"link"];
         [newManagedObject19 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject19 setValue:@"short" forKey:@"beak_length"];
         [newManagedObject19 setValue:@"can fly" forKey:@"behaviour"];
@@ -1426,7 +1430,7 @@
         [newManagedObject20 setValue:@"Kiwi (North Island Brown) "       forKey:@"name"];
         [newManagedObject20 setValue:@"Roroa (Apteryx)" forKey:@"othername"];
         [newManagedObject20 setValue:@"The kiwi is the national icon of New Zealand and the unofficial national emblem.\nThe closest relatives to kiwi today are emus and cassowaries in Australia, but also the now-extinct moa of New Zealand. There are five species of kiwi:\n      Brown kiwi (Apteryx mantelli)\n      Rowi (Apteryx rowi)\n      Tokoeka (Apteryx australis)\n      Great spotted kiwi or roroa (Apteryx haastii)\n      Little spotted kiwi (Apteryx owenii)\nNew Zealanders have been called ""Kiwis"" since the nickname was bestowed by Australian soldiers in the First World War.\n\nThe kiwi is a curious bird: it cannot fly, has loose, hair-like feathers, strong legs and no tail. \n\nMostly nocturnal, they are most commonly forest dwellers, making daytime dens and nests in burrows, hollow logs or under dense vegetation. Kiwi are the only bird to have nostrils at the end of its very long bill which is used to probe in the ground, sniffing out invertebrates to eat, along with some fallen fruit. It also has one of the largest egg-to-body weight ratios of any bird - the egg averages 15 per cent of the female's body weight (compared to two per cent for the ostrich).\n\nAdult kiwi usually mate for life, and are strongly territorial. Females are larger than males (up to 3.3 kg and 45 cm). \n\nThe brown kiwi, great spotted kiwi, and the Fiordland and Stewart Island forms of tokoeka are “nationally vulnerable”, the third highest threat ranking in the New Zealand Threat Classification System; and the little spotted kiwi is classified as “at risk (recovering)”.\n\nread the long story here\nhttp://www.teara.govt.nz/en/kiwi/page-1" forKey:@"item_description"];
-        [newManagedObject20 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/kiwi/" forKey:@"link"];
+        [newManagedObject20 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kiwi/" forKey:@"link"];
         [newManagedObject20 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject20 setValue:@"long" forKey:@"beak_length"];
         [newManagedObject20 setValue:@"flightless,nocturnal" forKey:@"behaviour"];
@@ -1481,7 +1485,7 @@
         [newManagedObject21 setValue:@"Kea"       forKey:@"name"];
         [newManagedObject21 setValue:@"Nestor notabilis" forKey:@"othername"];
         [newManagedObject21 setValue:@"Rated as one of the most intelligent birds in the world.\nIf you are a frequent visitor to or live in an alpine environment you will know the kea well. Kea and Kaka belong to the NZ parrot superfamily. Raucous cries of ""keeaa"" often give away the presence of these highly social and inquisitive birds. However, their endearing and mischievous behaviour can cause conflict with people.\n\nKea (Nestor  notabilis) are an endemic parrot of the South Island's high country. Although kea are seen in reasonable numbers throughout the South Island, the size of the wild population is unknown - but is estimated at between 1,000 and 5,000 birds.\n\nTo survive in the harsh alpine environment kea have become inquisitive and nomadic social birds - characteristics which help kea to find and utilise new food sources. Their inquisitive natures often cause kea to congregate around novel objects and their strong beaks have enormous manipulative power.\nKea are a protected species.\n\nKea grow up to 50 cm long and although mostly vegetarian, also enjoy grubs and insects.\n\nThe kea is related to the forest kaka (Nestor meridionalis) and is thought to have developed its own special characteristics during the last great ice age by using its unusual powers of curiosity in its search for food in a harsh landscape.\nNests are usually found among boulders in high altitude forest where the birds lay between two and four eggs during the breeding season from July and January." forKey:@"item_description"];
-        [newManagedObject21 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/kea/" forKey:@"link"];
+        [newManagedObject21 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kea/" forKey:@"link"];
         [newManagedObject21 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject21 setValue:@"hook" forKey:@"beak_length"];
         [newManagedObject21 setValue:@"can fly, only in southern alps" forKey:@"behaviour"];
@@ -1537,7 +1541,7 @@
         [newManagedObject22 setValue:@"Kererū"       forKey:@"name"];
         [newManagedObject22 setValue:@"Hemiphaga novaeseelandiae/ Wood Pigeon" forKey:@"othername"];
         [newManagedObject22 setValue:@"New Zealand's native pigeon, also known as kererū, kūkū and kūkupa and wood pigeon, is the only disperser of large fruits, such as those of karaka and taraire, we have. The disappearance of the kererū would be a disaster for the regeneration of our native forests.\n\nThe kererū is a large bird with irridescent green and bronze feathers on its head and a smart white vest. The noisy beat of its wings is a distinctive sound in our forests. The pigeon is found in most lowland native forests of the North, South and Stewart/Rakiura islands and many of their neighbouring islands.There are two species of native pigeon, the New Zealand pigeon (Hemiphaga novaeseelandiae) known to the Maori as kererū, or in Northland as kūkū or kūkupa, and the Chatham Islands pigeon (Hemiphaga chathamensis) or parea.\n\nThe parea is found mainly in the south-west of Chatham Island. While there are only about 500 parea left, the species has made a remarkable recovery over the past 20 years,  due to habitat protection and predator control.\nTwo other kinds of native pigeon became extinct on Raoul Island and Norfolk Island last century, probably due to hunting and predation\nSince the extinction of the moa, the native pigeon is now the only seed disperser with a bill big enough to swallow large fruit, such as those of karaka, tawa and taraire.\nIt also eats leaves, buds and flowers, the relative amounts varying seasonally and regionally, e.g. in Northland the birds eat mostly fruit.\n\nKererū are large birds and can measure up to 51 cm from tail to beak, and weigh about 650g.\nLong-lived birds, they breed slowly. Key breeding signals are spectacular display flights performed mainly by territorial males. They nest mainly in spring/early summer producing only one egg per nest, which the parents take turns to look after during the 28-day incubation period.\nThe chick grows rapidly, leaving the nest when about 40 days old. It is fed pigeon milk, a protein-rich milky secretion from the walls of the parents' crops, mixed with fruit pulp.  When much fruit is available, some pairs of kererū will have a large chick in one nest and be incubating an egg in another nearby. Fledglings spend about two weeks with their parents before becoming fully independent, but have remained with their parents during autumn and winter in some cases." forKey:@"item_description"];
-        [newManagedObject22 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/nz-pigeon-kereru/" forKey:@"link"];
+        [newManagedObject22 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/nz-pigeon-kereru/" forKey:@"link"];
         [newManagedObject22 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject22 setValue:@"short" forKey:@"beak_length"];
         [newManagedObject22 setValue:@"can fly" forKey:@"behaviour"];
@@ -1648,7 +1652,7 @@
         [newManagedObject24 setValue:@"Kakariki (yellow-crowned parakeet)"       forKey:@"name"];
         [newManagedObject24 setValue:@"Cyanoramphus auriceps" forKey:@"othername"];
         [newManagedObject24 setValue:@"The three species of Kākāriki or New Zealand parakeets are the most common species of parakeet in the genus Cyanoramphus, family Psittacidae. The birds' Māori name, which is the most commonly used, means small parrot. The three species on mainland New Zealand are the Yellow-crowned Parakeet, Cyanoramphus auriceps, the Red-crowned Parakeet or Red-fronted Parakeet, C. novaezelandiae, and the critically endangered Malherbe's Parakeet (or Orange-fronted Parakeet), C. malherbi. Yellow-crowned parakeets are small, bright green, noisy parrots that spend most of their time high in the forest canopy. They were once extremely common throughout New Zealand, but today are rare or uncommon in most places on the mainland, though they are still common on some predator-free islands and in a few valleys in eastern Fiordland and west Otago.\n\n         The genus Cyanoramphus to which the yellow-crowned parakeet belongs includes five other similar-sized green parrots in the New Zealand region and one each on Norfolk Island and New Caledonia.\n\n        Identification\n\n The yellow-crowned parakeet is a small, forest-dwelling, long-tailed, predominantly green parrot with a yellow crown, a narrow crimson band between the crown and the cere, a red spot on each side of the rump and a blue leading edge to the outer wing. The bill is pale bluish-grey with a black tip and cutting edge; the legs and feet black-brown\n\n          Voice: a characteristic chatter made by both sexes when flying, and a variety of quieter and less distinctive calls.\n\nSimilar species: very similar in appearance to the orange-fronted parakeet, but the yellow-crowned parakeet is brighter green, has a crimson (not orange) band above the cere, and red (not orange) spots on the flanks. Also similar to the red-crowned parakeet which is larger and has a red crown, and a red patch behind the eye.\n\n         Distribution and habitat\n\n         Yellow-crowned parakeets were previously found in forests throughout the main islands of New Zealand and on many offshore islands including the Auckland Islands. It is still present in most large native forests in the three main islands, though it is absent from Mt Egmont, north Taranaki and Northland. It occurs on Little Barrier, the Hen and Chickens, the Chetwodes Islands and Titi Island (outer Pelorus sound), Codfish Island, several smaller islands off Stewart Island and Fiordland and on the Auckland Islands. Yellow-crowned parakeets have been successfully introduced to Mana Island, and to Long Island and Motuara Island in Queen Charlotte Sound. \n\nOn the mainland yellow-crowned parakeets are mostly confined to tall forests, but on islands they are also common in low scrub and even open grassland (Mana Island)." forKey:@"item_description"];
-        [newManagedObject24 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/nz-parakeet-kakariki/nz-parakeet-kakariki/" forKey:@"link"];
+        [newManagedObject24 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/nz-parakeet-kakariki/nz-parakeet-kakariki/" forKey:@"link"];
         [newManagedObject24 setValue:@"black/white" forKey:@"beak_colour"];
         [newManagedObject24 setValue:@"hook" forKey:@"beak_length"];
         [newManagedObject24 setValue:@"can fly" forKey:@"behaviour"];
@@ -1705,7 +1709,7 @@
         [newManagedObject25 setValue:@"Grey warbler"       forKey:@"name"];
         [newManagedObject25 setValue:@"Riroriro (Gerygone igata)" forKey:@"othername"];
         [newManagedObject25 setValue:@"The grey warbler is New Zealand’s most widely distributed endemic bird species. It vies with rifleman for the title of New Zealand’s smallest bird, with both weighing about 6 g. The title usually goes to rifleman, based on its shorter tail and therefore shorter body length.\n\nThe grey warbler is more often heard than seen, having a loud distinctive song, and tending to spend most of its time in dense vegetation. \n\nIdentification\n\nThe grey warbler is a tiny, slim grey songbird that usually stays among canopy foliage. It is olive-grey above, with a grey face and off-white underparts. The tail is darker grey, getting darker towards the tip, contrasting with white tips to the tail feathers, showing as a prominent white band in flight. The black bill is finely pointed, the eye is bright red, and the legs are black and very slender. Grey warblers often glean insects from the outside of the canopy while hovering, which no other New Zealand bird does, making them identifiable by behaviour from a long distance.\n\nVoice:\n\n a characteristic long trilled song. The song is louder than expected, given the bird’s size. Only males sing, although females do give short chirp calls, usually as a contact call near the male. \n\nSimilar species:\n\n silvereyes are slightly larger, greener above, with buff flanks and (in adults) a characteristic white-eye-ring. In flight, silvereyes have a plain dark tail without a white tip.\n\nDistribution and habitat\n\nThe grey warbler is ubiquitous, occurring everywhere there are trees or shrubs on the three main islands, and on most offshore islands. It is one of the few native species to have maintained their distribution in almost all habitats following human colonisation, including rural and urban areas. They are typically found only in woody vegetation, in mid to high levels of the canopy, making them difficult to observe." forKey:@"item_description"];
-        [newManagedObject25 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/grey-warbler-riroriro/" forKey:@"link"];
+        [newManagedObject25 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/grey-warbler-riroriro/" forKey:@"link"];
         [newManagedObject25 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject25 setValue:@"short,pointed" forKey:@"beak_length"];
         [newManagedObject25 setValue:@"can fly, Very active. Absent from open country and alpine areas" forKey:@"behaviour"];
@@ -1874,7 +1878,7 @@
         [newManagedObject28 setValue:@"Paradise Shelduck"       forKey:@"name"];
         [newManagedObject28 setValue:@"Tadorna variegata" forKey:@"othername"];
         [newManagedObject28 setValue:@"The paradise shelduck is a colourful, conspicuous and noisy waterfowl that could be mistaken for a small goose. It has undergone a remarkable increase in population and distribution since about 1990, including the colonisation of sports fields and other open grassed areas within urban environments. This expansion has occurred in the face of being a gamebird and hunted annually.\n\nIdentification\n\nThe paradise shelduck is a conspicuous and colourful species with contrasting male and female plumages. Between a large duck and a small goose in size, the male is uniformly dark grey or black while the female body is a dark or light chestnut (depending on age and state of moult). The male’s head is black with occasional green iridescence and the female’s head and upper neck is white. Both sexes have a chestnut undertail, black primary wing feathers, green secondary wing feathers and a conspicuously white upper wing surface. Variable amounts of white may occur on the heads of males during the eclipse moult (February-May) and newly-fledged juvenile females may retain an extensive black head with a white face patch until they complete their post-juvenal moult (by May).The bill, legs and feet are dark grey/black. Down-covered ducklings appear initially as “mint humbugs”, patterned brown-and-white. The first feathers are dark, and near-fledged ducklings of both sexes resemble the adult male.\n\nVoice: the male paradise shelduck gives a di-syllabic goose-like honk when alarmed, or in flight. The main female call is more shrill, and more rapid and persistent, particularly during flight. There are a variety of other calls associated with pair formation and maintenance, territory defence, and maintaining contact with flock birds.\n\nSimilar species: vagrant chestnut-breasted shelducks are very similar to male paradise shelducks. They differ in having a white neck ring, chestnut or buff breast, and black undertail.\n\nDistribution and habitat\n\nThe paradise shelduck is New Zealand’s most widely distributed waterfowl, when both geographic spread and habitat use are taken into account. It occurs on North, South and Stewart Islands, all large near-shore islands with grassland (e.g. Kapiti, Great Barrier, D’Urville) and has straggled to distant Raoul and Lord Howe Islands, and to the Chatham Islands from which an as-yet unnamed shelduck species was exterminated by the first Polynesian settlers." forKey:@"item_description"];
-        [newManagedObject28 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/paradise-duck-putakitaki/" forKey:@"link"];
+        [newManagedObject28 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/paradise-duck-putakitaki/" forKey:@"link"];
         [newManagedObject28 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject28 setValue:@"duck" forKey:@"beak_length"];
         [newManagedObject28 setValue:@"can fly" forKey:@"behaviour"];
@@ -2043,7 +2047,7 @@
         [newManagedObject31 setValue:@"Pukeko/ Purple Swamphen"       forKey:@"name"];
         [newManagedObject31 setValue:@"Porphyrio porphyrio" forKey:@"othername"];
         [newManagedObject31 setValue:@"Established in NZ ca. 1000 yrs ago they thrived in an environment in which they now face introduced predators like cats and rodents. Live in groups of 3-12; known to group together and shriek loudly to defend nests successfully during attacks by Australasian Harriers.The pukeko is a widespread and easily recognisable bird that has benefitted greatly by the clearing of land for agriculture. In addition to its brilliant red frontal shield and deep violet breast plumage, the pukeko is interesting for having a complex social life. In many areas, pukeko live in permanent social groups and defend a shared territory that is used for both feeding and breeding. Social groups can have multiple breeding males and females, but all eggs are laid in a single nest and the group offspring are raised by all group members.\n\nIdentification\n\nThe pukeko is a large, conspicious rail found throughout New Zealand. The head, breast and throat are deep blue/violet, the back and wings are black, and the under-tail coverts are conspicuously white. The conical bright red bill is connected to a similarly coloured ‘frontal shield’ ornament covering the forehead, the eyes are also red. The legs and feet are orange, with long, slim toes. Females are smaller than males, but similarly coloured. Juveniles are similar to adults but duller, with black eyes and black bill and shield that turn to red around 3 months of age.\n\nVoice: pukeko are very vocal with a variety of calls. Territorial ‘crowing’ is the loudest and most frequently heard call. A variety of contact calls including ‘’n’yip’, ‘hiccup’ and ‘squawk’ are used between adults, and between adults and chicks. The defence call is a loud, shrill screech used when a harrier is nearby. A similar, but deeper and hoarser, call is made during aggressive interactions between individuals. A soft nasal drone is performed during copulation runs.\n\nSimilar species: takahe are about twice the size (in weight) and flightless, with a green back and wing cover. Juveniles may be confused with the spotless crake which lacks a frontal shield and has a more slender bill. Rare vagrant dusky moorhen is more likely to be seen swimming, is not as upright as a pukeko, and is smaller and greyer with a yellow tip to the red bill, and a dark centre to the otherwise white undertail. The equally rare (in New Zealand) black-tailed native-hen is much smaller with a green-and-orange bill, white spots on the flanks and a longer tail that is black underneath. " forKey:@"item_description"];
-        [newManagedObject31 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/pukeko/" forKey:@"link"];
+        [newManagedObject31 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/pukeko/" forKey:@"link"];
         [newManagedObject31 setValue:@"red" forKey:@"beak_colour"];
         [newManagedObject31 setValue:@"medium" forKey:@"beak_length"];
         [newManagedObject31 setValue:@"flightless,sedentary" forKey:@"behaviour"];
@@ -2100,7 +2104,7 @@
         [newManagedObject32 setValue:@"Harrier Hawk"       forKey:@"name"];
         [newManagedObject32 setValue:@"Harrier Hawk" forKey:@"othername"];
         [newManagedObject32 setValue:@"The swamp harrier is a large, tawny-brown bird of prey that occurs throughout New Zealand. It is an opportunistic hunter that searches for food by slowly quartering the ground with its large wings held in a distinctive shallow V-shape. Adapted to hunt in open habitats, its numbers have benefitted from widespread forest clearance and the development of agriculture. Although carrion is a major component of the harrier’s diet, it also actively hunts live prey such as small birds, mammals and insects. Capable dispersers, birds from New Zealand visit islands as far north as the Kermadec Islands and as far south as Campbell Island. Known for their dramatic ‘sky-dancing’ courtship display the swamp harrier is the largest of the 16 species of harriers found worldwide.\n\nIdentification\n\nOften seen perching on fence posts at the side of the road, swamp harriers are a large, long-legged bird of prey with sizeable taloned feet, prominent facial disks and a strongly hooked bill. Fledglings and juveniles have dark chocolate brown plumage all over, a whitish patch on the nape, brown eyes and a pale yellow cere, eye ring and legs. Although plumage is highly variable, adults generally have a tawny-brown back, a pale cream streaked breast and yellow eyes. They become paler with successive moults. Females are slightly larger than males. Harriers most often search for food low to the ground in a gently rocking glide interspersed with lazy wing beats. When gliding or soaring, their wings are set in a shallow V-shape with upturned fingered wing tips and an outspread tail. The cream/white rump is obvious in flight. They can hover clumsily for short periods.\n\nVoice: harriers mainly vocalise as part of their courtship displays during the breeding season. Their call is a series of same note, high-pitched, short, sharp “kee-o kee-o.” At other times of the year they are generally silent.\n\nSimilar species: sometimes confused with the New Zealand falcon. Falcons very rarely feed on carrion, are smaller and are more often seen in active chasing flight rather than the slow quartering flight typical of the harrier. Also the falcon lacks the obvious cream/pale rump of the harrier and glides with its wings set flat. Juvenile black-backed gulls are a similar size to harriers. However, young gulls have a stout, straight bill and are a more mottled greyish/brown colour. Gulls also have narrower angular wings that unlike harriers they beat almost continually in traversing flight or set rigidly in a slightly downwards droop when soaring/gliding.\n\nDistribution and habitat\n\nSwamp harriers occupy a wider ecological niche in New Zealand than elsewhere in Australasia. Abundant throughout most of New Zealand including the coastal fringe, estuaries, wetlands, pine forest, farmland and high-country areas. Less abundant over large tracts of forest and in urban areas. They are resident on the Chatham Islands, and often reach offshore islands as distant as the Snares, Auckland, Campbell and Kermadec Islands. Harriers are particularly abundant where plentiful food sources are available. They breed in wetlands, areas of long grass and scrubby vegetation.\n\nPopulation\n\nWidespread and very common." forKey:@"item_description"];
-        [newManagedObject32 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/" forKey:@"link"];
+        [newManagedObject32 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/" forKey:@"link"];
         [newManagedObject32 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject32 setValue:@"hook" forKey:@"beak_length"];
         [newManagedObject32 setValue:@"can fly" forKey:@"behaviour"];
@@ -2266,7 +2270,7 @@
         [newManagedObject35 setValue:@"Peacock"       forKey:@"name"];
         [newManagedObject35 setValue:@"Peacock" forKey:@"othername"];
         [newManagedObject35 setValue:@"A large, well-known pheasant. Males have a characteristic display, raising their extravagantly long ornamental tail coverts, during the breeding season. Females move in groups between displaying males. Both sexes are generally tame in park situations but can be very wary in feral populations.\n\nIdentification\n\nA large crested pheasant. Males are deep blue on the breast, neck, head and fan crest, and metallic green on the back and rump. The over-developed upper tail coverts have a tan, lilac and purple-brown sheen and are up to 1.4 m long. In mature males, about 140-150 feathers have ‘eyes’ which are deep blue in the centre and have outer layers of metallic lighter blue, gold and metallic green. The coverts are held up by the rigid tail feathers in their characteristic display, during which the tail coverts are violently shaken. Females are slightly smaller than males and have a coppery brown head, lighter brown throat and the rest of the neck is dull metallic green. The rest of the feathers are speckled brown.\n\nVoice: a series of repeated crowing ka and shrill eow calls of varying frequency given up to 8 times in a row by males, primarily in the breeding season. Other distress and warning calls given throughout the year. Clucking calls are used by females with young and when pointing out food.\n\nDistribution and habitat\n\nPeafowl have been released into the wild many times, mainly through benign neglect of birds kept for display. Peafowl are held on many lifestyle properties, and have become feral in the upper North Island, especially Northland, Auckland, East Cape and mid Hawkes Bay. The largest feral populations are in wooded lowlands and coastal farmland including the upper Wanganui River catchment, northern Mahia Peninsula and pine forests of the South Head of Kaipara Harbour. They are also present in isolated locations in Nelson, Marlborough and Canterbury. Absent from Stewart Island." forKey:@"item_description"];
-        [newManagedObject35 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/" forKey:@"link"];
+        [newManagedObject35 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/" forKey:@"link"];
         [newManagedObject35 setValue:@"white" forKey:@"beak_colour"];
         [newManagedObject35 setValue:@"medium" forKey:@"beak_length"];
         [newManagedObject35 setValue:@"can fly" forKey:@"behaviour"];
@@ -2429,10 +2433,10 @@
         [newManagedObject38 setValue:@"Weka (woodhen)"       forKey:@"name"];
         [newManagedObject38 setValue:@"Gallirallus australis" forKey:@"othername"];
         [newManagedObject38 setValue:@"The weka is one of New Zealand’s iconic large flightless birds. Likely derived from a flighted ancestor, weka are 3-6 times larger than banded rails, which are considered their nearest flying relatives. Weka are charismatic birds that are often attracted to human activity. This makes an encounter with a weka a wildlife highlight for many people, as the curious bird searches for any food item that the intruder might bring. \n\nBut people who live alongside weka often have a less charitable opinion, as they have to live with ever-watchful weka snatching opportunities to raid vegetable gardens, pilfer poultry food and eggs, and even steal dog food from the bowl. Unfortunately weka are not as robust as they appear, and have become extinct over large tracts of the mainland. Causes of extinction are complex, and are likely to be due to interactions between climatic conditions (especially drought) and predator numbers (especially ferrets, stoats and dogs). Fortunately, weka still thrive at many accessible sites, including on Kawau, Mokoia, Kapiti, Ulva and Chatham Islands, the Marlborough Sounds, North Westland, and parts of the Abel Tasman, Heaphy and Milford Tracks.\n\nIdentification\n\nThe weka is a large flightless rail that can have extremely variable plumage. Most birds are predominantly mid-brown, those on the Chatham Islands are tawny, those from Stewart Island are chestnut, and a proportion in Fiordland and on some islands near Stewart Island are almost black. Most birds have their dorsal feathers streaked with black, and all have their longest wing and tail feathers boldly barred with black. As adults, all have red eyes, a strong pointed bill and strong legs. North Island birds are predominantly grey-breasted with grey bills and brown legs. Western, Stewart Island and buff weka (the latter on Chatham Islands) can vary from having a grey to brown-grey breast with a wide brown breast-band, and having grey to pink bills and brown to pink legs.\n\nVoice: spacing calls are generally given at dawn and in the half hour after sunset. They are a characteristic coo..eet given as a duet by members of a pair, with the male call lower and slower than the female. Other calls include booming, and soft clucking contact calls.\n\nSimilar species: the banded rail is much smaller and more boldly marked, including a rufous eye-stripe on an otherwise pale grey face, a broad orange breast band, and underparts boldly barred with black-and-white. Female common pheasants have smaller heads, shorter bills, much longer tails, and will fly if pressed.\n\nDistribution and habitat\n\nWeka strongholds include Russell Peninsula, Kawakawa Bay and Opotiki-Motu in the North Island, and the Marlborough Sounds, North-west Nelson, the West Coast north of Ross, and Fiordland in the South Island. Also on many islands." forKey:@"item_description"];
-        [newManagedObject38 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/weka/" forKey:@"link"];
+        [newManagedObject38 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/weka/" forKey:@"link"];
         [newManagedObject38 setValue:@"reddish" forKey:@"beak_colour"];
         [newManagedObject38 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject38 setValue:@"flightless,nocturnal" forKey:@"behaviour"];
+        [newManagedObject38 setValue:@"flightless" forKey:@"behaviour"];
         [newManagedObject38 setValue:@"1" forKey:@"category"];
         [newManagedObject38 setValue:@"brown" forKey:@"colour"];
         [newManagedObject38 setValue:@"red" forKey:@"leg_colour"];
@@ -2449,7 +2453,7 @@
 //        UIImage *imageSave38=[[UIImage alloc]initWithData:data38];
 //        NSData *imageData38 = UIImagePNGRepresentation(imageSave38);
 //        [newManagedObject38 setValue:imageData38         forKey:@"image"];
-        [newManagedObject38 setValue:@"WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch"         forKey:@"image"];
+        [newManagedObject38 setValue:@"Weka Bernard Spragg NZ"         forKey:@"image"];
         
         NSURL *url38t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                                pathForResource:@"WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch_TN"
@@ -3910,7 +3914,7 @@
         [newManagedObject73 setValue:@"sparrow" forKey:@"size_and_shape"];
         
         
-        [newManagedObject73 setValue:@"Whitehead_TN"         forKey:@"image"];
+        [newManagedObject73 setValue:@"Whitehead_ownPic2"         forKey:@"image"];
         
         NSURL *url73t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                                 pathForResource:@"Whitehead_TN"
@@ -4111,10 +4115,10 @@
         NSManagedObject *newManagedObject78 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
-        [newManagedObject78 setValue:@"North-Island Robin"       forKey:@"name"];
+        [newManagedObject78 setValue:@"Robin (North Island)"       forKey:@"name"];
         [newManagedObject78 setValue:@"Toutouwai" forKey:@"othername"];
         [newManagedObject78 setValue:@"The North Island robin occurs in forest and scrub habitats. It can be recognised by its erect stance and relatively long legs, and spends much time foraging on the ground. \n\nIt is a territorial species, males in particular inhabiting the same patch of mainland forest of 1-5 ha throughout their lives. Male are great songsters, particularly bachelors, singing loudly and often for many minutes at a time. \n\nWhere robins are regularly exposed to people, such as along public walking tracks, they become quite confiding, often approaching to within a metre of a person sitting quietly. Naïve juveniles will sometimes stand on a person’s boot." forKey:@"item_description"];
-        [newManagedObject78 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/north-island-robin-toutouwai/" forKey:@"link"];
+        [newManagedObject78 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/north-island-robin-toutouwai/" forKey:@"link"];
         [newManagedObject78 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject78 setValue:@"short" forKey:@"beak_length"];
         [newManagedObject78 setValue:@"can fly" forKey:@"behaviour"];
@@ -4457,7 +4461,7 @@
         [newManagedObject93 setValue:@"Unique to New Zealand, the hōiho, or yellow-eyed penguin, is thought to be one of the world's rarest penguin species.\n         Yellow-eyed penguins/hōiho are found along the south-east South Island and on Banks Peninsula, on Stewart Island/Rakiura and its outliers, Codfish Island/Whenua Hou, the Auckland Islands and Campbell Island.\n\nFacts\n   The yellow-eyed penguin/hōiho (Megadyptes antipodes) is named because of its yellow iris and distinctive yellow head band. Adults are slate grey in colour, with a white belly and flesh-coloured feet that become bright pink during exercise. Hōiho chicks are covered in thick, brown fluffy down, which begins to shed once their juvenile plumage develops at around 70 days. Hōiho chicks fledge between 98 to 120 days. Their juvenile plumage is different to adults and can be distinguished by their grey iris, grey head band and dull head plumage. Adults (2 to 25 years) have a yellow iris and yellow band on their crown. Once a juvenile bird undergoes its first moult in the year after fledging, it acquires the yellow band and eye colouring of an adult. The Māori name hōiho means 'noise shouter'. This refers to their shrill call, often heard when they encounter their mate or others at their breeding site.\n\nDiet\nTheir diet is made of small to medium sized fish such as sprat, red cod, blue cod, ahuru, opalfish, silversides and squid. Hōiho are very selective and dive to the sea floor to gather their prey.\n\nLifespan\nThe average lifespan is 8 years, but several birds have reached over 25 years of age.\n\nSize\nAdults reach up to 65 cm in height and weigh around 5 to 5.5 kg. Before moulting adults and juveniles can weigh up to 9 kg. During the moult hōiho must sit ashore for 25 days and grow new feathers, and they are unable to go to sea.\n\nBehaviour\nUnlike other penguin species, hōiho are not typically colonial, and their breeding areas cannot be called 'colonies'. Hōiho seek out private nesting areas with a solid back and a roof for egg laying. Two eggs are laid in a shallow bowl lined with delicately gathered sticks, ferns and fronds.  Hōiho are philopatric, which means they usually come back to the area they were born to breed. Juveniles may wander in their first year, with female hōiho beginning breeding between 2-3 years, and male hōiho starting breeding between 3-6 years of age. Adults stay near their breeding area for life, and do not migrate elsewhere during the non-breeding part of the year. Yellow-eyed penguins are wild, and do not become habituated to human disturbance. As a result they are not suitable for holding in permanent captivity.\n\nHabitat\nThreats include habitat destruction, predation, disease and human interference.         The yellow-eyed penguin is equally dependant on marine and land habitats, which include forest and coastal scrubland. A great deal of community effort has been put into providing nesting sites and shelter on grazed pasturelands on the Otago Peninsula and North Otago. These habitats provide nesting opportunities, as well as social areas and loafing space, and a space to take refuge during the 25-day moult each year. The yellow-eyed penguin's marine habitat is equally important because it provides food, and allows for dispersal and movement between land habitats.\n" forKey:@"item_description"];
         [newManagedObject93 setValue:@"black" forKey:@"leg_colour"];
         [newManagedObject93 setValue:@"http://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/penguins/yellow-eyed-penguin-hoiho/" forKey:@"link"];
-        [newManagedObject93 setValue:@"Hoiho" forKey:@"othername"];
+        [newManagedObject93 setValue:@"hōiho" forKey:@"othername"];
         [newManagedObject93 setValue:@"Yellow eyed penguin" forKey:@"short_name"];
         [newManagedObject93 setValue:@"duck" forKey:@"size_and_shape"];
         [newManagedObject93 setValue:@"yellow-eyed-penguin_DOC" forKey:@"sound"];
@@ -4649,7 +4653,7 @@
                 [newManagedObject96 setValue:@"grey,black,green,brown" forKey:@"colour"];
                 [newManagedObject96 setValue:@"brown" forKey:@"leg_colour"];
                 [newManagedObject96 setValue:@"Anatidae" forKey:@"family"];
-                [newManagedObject96 setValue:@"bush,ocean,water" forKey:@"habitat"];
+                [newManagedObject96 setValue:@"bush,ocean,water,coast" forKey:@"habitat"];
                 [newManagedObject96 setValue:@"Recovering" forKey:@"threat_status"];
                 [newManagedObject96 setValue:@"brown teal" forKey:@"short_name"];
                 [newManagedObject96 setValue:@"duck" forKey:@"size_and_shape"];
@@ -4703,7 +4707,7 @@
                 [newManagedObject97 setValue:@"black" forKey:@"colour"];
                 [newManagedObject97 setValue:@"brown" forKey:@"leg_colour"];
                 [newManagedObject97 setValue:@"Anatidae" forKey:@"family"];
-                [newManagedObject97 setValue:@"bush,ocean,water" forKey:@"habitat"];
+                [newManagedObject97 setValue:@"bush,ocean,water,coast" forKey:@"habitat"];
                 [newManagedObject97 setValue:@"Not threatened" forKey:@"threat_status"];
                 [newManagedObject97 setValue:@"Scaup" forKey:@"short_name"];
                 [newManagedObject97 setValue:@"duck" forKey:@"size_and_shape"];
@@ -4757,7 +4761,7 @@
                 [newManagedObject98 setValue:@"grey,brown,white,black" forKey:@"colour"];
                 [newManagedObject98 setValue:@"brown" forKey:@"leg_colour"];
                 [newManagedObject98 setValue:@"Anatidae" forKey:@"family"];
-                [newManagedObject98 setValue:@"bush,ocean,water" forKey:@"habitat"];
+                [newManagedObject98 setValue:@"bush,ocean,water,coast" forKey:@"habitat"];
                 [newManagedObject98 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
                 [newManagedObject98 setValue:@"honker" forKey:@"short_name"];
                 [newManagedObject98 setValue:@"swan" forKey:@"size_and_shape"];
@@ -4796,47 +4800,46 @@
         // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
         //        /*  99
         //         */
-        //        NSManagedObject *newManagedObject99 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject99 setValue:@"Guinea Fowl"       forKey:@"name"];
-        //        [newManagedObject99 setValue:@"Guinea Fowl" forKey:@"othername"];
-        //        [newManagedObject99 setValue:@"Guinea Fowl.\
-        //         " forKey:@"item_description"];
-        //        [newManagedObject99 setValue:@"http://www.nzbirdsonline.org.nz/species/helmeted-guineafowl" forKey:@"link"];
-        //        [newManagedObject99 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject99 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject99 setValue:@"can fly,shy" forKey:@"behaviour"];
-        //        [newManagedObject99 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject99 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject99 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject99 setValue:@"Phasianidae" forKey:@"family"];
-        //        [newManagedObject99 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject99 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject99 setValue:@"Guinea Fowl" forKey:@"short_name"];
-        //        [newManagedObject99 setValue:@"blackbird" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject99 setValue:@"GuineaFowl"         forKey:@"image"];
-        //
-        //        NSURL *url99t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"CanadaGoose_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data99t = [[NSData alloc] initWithContentsOfURL:url99t];
-        //        UIImage *imageSave99t=[[UIImage alloc]initWithData:data99t];
-        //        NSData *imageData99t = UIImagePNGRepresentation(imageSave99t);
-        //        [newManagedObject99 setValue:imageData99t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject99 setValue:@"GuineaFowl" forKey:@"sound"];
-        //
-        //        [newManagedObject99 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject99 setValue:NO forKey:@"extra"];
-        //        [newManagedObject99 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject99= nil;
-        //
+                NSManagedObject *newManagedObject99 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+                //Set Bird_attributes
+                [newManagedObject99 setValue:@"Guinea Fowl"       forKey:@"name"];
+                [newManagedObject99 setValue:@"Tufted Guinea Fowl" forKey:@"othername"];
+                [newManagedObject99 setValue:@"This distinctive African gamebird was first introduced to New Zealand in the 1860s; none of these early releases was successful. The scattered groups of birds found today probably all originated from birds that have wandered off from farmyards. The species has been domesticated for thousands of years, and probably all birds released locally come from domestic stock.\n\nIdentification\n\nThe helmeted guineafowl is a plump chicken-sized bird with a characteristic humped-back appearance. The slate grey plumage is speckled with numerous white spots, the neck is short and featherless, and the small bare head bears a scimitar-shaped bony casque. Skin on the lower face and upper neck is sky blue with red-tipped wattles and a darker blue throat flap. The cere, forehead and crown are red, the bill and casque are horn-coloured, and the iris brown. The lower neck is covered with brownish-grey down-like feathers that extend halfway up the back of the upper neck. Lower down these merge into normal slate-grey body feathers, each of which has a dozen or more uniformly spaced white spots, creating an overall speckled appearance. The flight feathers are similarly patterned, although the dots on the outer webs merge to form fine white stripes that align when the wing is closed, creating a barred appearance. Birds from domestic stock often have whitish facial skin, occasional white flight feathers, and irregular patches of white on the flanks and belly. The legs are dark grey in wild-type birds, and orange-brown in domestic birds; leg spurs absent. Females have shorter and narrower casques and smaller wattles, but are best distinguished by their distinctive, sex-specific call (see below).­­­ Young birds are similar to adults but have paler facial skin and less obvious white spots. Chicks are brownish-grey, with black fringes to the body and emerging flight feathers. Their head feathers are brown with longitudinal black stripes.\n\nVoice: males give a single, recurring chek note; females produce a distinctive, repetitive two-syllable call buck-wheat, the first note short, second one longer and rising. In both sexes, the rate of repetition of their calls increases when birds become agitated or excited. The alarm call is a repeated, harsh, rattling kek-kek-kek-kek-krrrrrrr.\n\nSimilar species: adult helmeted guineafowl may resemble adult female and immature wild turkeys and common pheasants but are distinguished by white-spotted grey plumage and a bony casque on the head.\n\nDistribution and habitat\n\nDuring the period 1999-2004, helmeted guineafowl were recorded from less than 1 per cent of the country, mostly around Auckland and farmland around Kaipara Harbour. Some earlier reported populations, such as around Aberfeldy, near Whanganui, no longer exist. Guineafowl do best in areas that have a mosaic of habitats. Populations tend to decline in areas of uniform grassland and pasture, especially where pesticides are commonly used.\n\nPopulation\n\nThe size of the current wild population is unknown but probably small. The history of failed introductions and small, short-lived populations suggest that this species cannot sustain itself naturally in New Zealand, at least under present conditions. There are a number of registered breeders in New Zealand, and an unknown number of owners of domestic guineafowl flocks, both of which can serve as sources of deliberate or inadvertent re-introductions.\n\nEcological and economic impacts\n\nGuineafowl can damage emerging seedlings of agricultural crops, but this is offset partly by the number of insects that they eat. Guineafowl are prime gamebirds in other parts of the world, but require careful management to prevent overharvesting.\n\n" forKey:@"item_description"];
+                [newManagedObject99 setValue:@"http://www.nzbirdsonline.org.nz/species/helmeted-guineafowl" forKey:@"link"];
+                [newManagedObject99 setValue:@"yellow,red" forKey:@"beak_colour"];
+                [newManagedObject99 setValue:@"short" forKey:@"beak_length"];
+                [newManagedObject99 setValue:@"can fly,shy" forKey:@"behaviour"];
+                [newManagedObject99 setValue:@"0" forKey:@"category"];
+                [newManagedObject99 setValue:@"black,white" forKey:@"colour"];
+                [newManagedObject99 setValue:@"red" forKey:@"leg_colour"];
+                [newManagedObject99 setValue:@"Phasianidae" forKey:@"family"];
+                [newManagedObject99 setValue:@"bush" forKey:@"habitat"];
+                [newManagedObject99 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+                [newManagedObject99 setValue:@"Guinea Fowl" forKey:@"short_name"];
+                [newManagedObject99 setValue:@"blackbird" forKey:@"size_and_shape"];
+        
+        
+                [newManagedObject99 setValue:@"GuineaFowl_DennisJarvisFlickr"         forKey:@"image"];
+        
+                NSURL *url99t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                        pathForResource:@"GuineaFowl_DennisJarvisFlickr_TN"
+                                                        ofType:@"jpg"]];
+                NSData *data99t = [[NSData alloc] initWithContentsOfURL:url99t];
+                UIImage *imageSave99t=[[UIImage alloc]initWithData:data99t];
+                NSData *imageData99t = UIImagePNGRepresentation(imageSave99t);
+                [newManagedObject99 setValue:imageData99t         forKey:@"thumbnail"];
+        
+        
+                //[newManagedObject99 setValue:@"GuineaFowl" forKey:@"sound"];
+        
+                [newManagedObject99 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+                [newManagedObject99 setValue:NO forKey:@"extra"];
+                [newManagedObject99 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+                [context save:NULL];
+                newManagedObject99= nil;
+        
         //        // +++++++++++ Brown Creeper  +++++++++++++
         // new additions:
         // Coot, Australian -http://www.nzbirdsonline.org.nz/species/australian-coot
@@ -4956,7 +4959,7 @@
                 //Set Bird_attributes
                 [newManagedObject102 setValue:@"Fjordland Crested Penguin"       forKey:@"name"];
                 [newManagedObject102 setValue:@"tawaki" forKey:@"othername"];
-                [newManagedObject102 setValue:@"Fiordland crested penguins are endemic to New Zealand, breeding in small colonies on inaccessible headlands and islets along the shores of south-western South Island and Stewart Island. They can be seen and heard on landing beaches during July – December. Populations have declined considerably in range and numbers since human arrival. Immediate threats include fisheries bycatch, introduced predators, and human disturbance. Identification: Adult Fiordland crested penguins have dark blue-grey/black upperparts (which turn brown when approaching moult), often darker on the head. A broad yellow eyebrow stripe (crest) starts at the nostril and extends well past the eye, drooping down the neck; 3-6 whitish stripes on the cheeks are displayed when agitated. The underparts are silky white. The moderately large orange bill has a thin strip of black skin at the base (cf. broader bare pink skin on Snares crested penguin). Females have smaller bills (bill depth < 24 mm) than males (bill depth >24 mm). The eyes are brownish-red, and feet and legs pinkish-white above and blackish-brown behind and on the soles. Juveniles have short, thin pale-yellow eyebrow stripes and mottled whitish chin and throat. The dorsal plumage of newly-fledged chicks is distinctly bluish, fading to black with wear, then to mid-brown before moulting. Voice: calls include loud braying or trumpeting, high pitched contact calls, and low-pitched hissing and growling. Calls are similar to those of Snares crested penguins. Similar species: Fiordland crested penguins are most similar to Snares crested penguin, which (as adults) have dark cheeks, a larger bill with prominent pink skin at the base, and narrower eye-brow stripes. All other crested penguins are also similar, especially when immature, but note broad eye-brow stripes, throat and cheeks greyish white, and absence of bare skin at bill base in immature Fiordland crested penguins. Recently fledged young (which are smaller than adults and bluish dorsally) may be confused with little penguins when swimming, but are twice as large and have at least some yellow above the eye" forKey:@"item_description"];
+                [newManagedObject102 setValue:@"Fiordland crested penguins are endemic to New Zealand, breeding in small colonies on inaccessible headlands and islets along the shores of south-western South Island and Stewart Island. They can be seen and heard on landing beaches during July – December. Populations have declined considerably in range and numbers since human arrival. Immediate threats include fisheries bycatch, introduced predators, and human disturbance.\n\n Identification:\n\n Adult Fiordland crested penguins have dark blue-grey/black upperparts (which turn brown when approaching moult), often darker on the head. A broad yellow eyebrow stripe (crest) starts at the nostril and extends well past the eye, drooping down the neck; 3-6 whitish stripes on the cheeks are displayed when agitated. The underparts are silky white. The moderately large orange bill has a thin strip of black skin at the base (cf. broader bare pink skin on Snares crested penguin). Females have smaller bills (bill depth < 24 mm) than males (bill depth >24 mm). The eyes are brownish-red, and feet and legs pinkish-white above and blackish-brown behind and on the soles. Juveniles have short, thin pale-yellow eyebrow stripes and mottled whitish chin and throat. The dorsal plumage of newly-fledged chicks is distinctly bluish, fading to black with wear, then to mid-brown before moulting. \n\nVoice:\n\n calls include loud braying or trumpeting, high pitched contact calls, and low-pitched hissing and growling. Calls are similar to those of Snares crested penguins. \n\nSimilar species:\n\n Fiordland crested penguins are most similar to Snares crested penguin, which (as adults) have dark cheeks, a larger bill with prominent pink skin at the base, and narrower eye-brow stripes. All other crested penguins are also similar, especially when immature, but note broad eye-brow stripes, throat and cheeks greyish white, and absence of bare skin at bill base in immature Fiordland crested penguins. Recently fledged young (which are smaller than adults and bluish dorsally) may be confused with little penguins when swimming, but are twice as large and have at least some yellow above the eye" forKey:@"item_description"];
                 [newManagedObject102 setValue:@"http://nzbirdsonline.org.nz/species/fiordland-crested-penguin" forKey:@"link"];
                 [newManagedObject102 setValue:@"red" forKey:@"beak_colour"];
                 [newManagedObject102 setValue:@"medium" forKey:@"beak_length"];
@@ -4996,7 +4999,7 @@
                 NSManagedObject *newManagedObject103 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
                 //Set Bird_attributes
-                [newManagedObject103 setValue:@"South Island Robin"       forKey:@"name"];
+                [newManagedObject103 setValue:@"Robin (South Island)"       forKey:@"name"];
                 [newManagedObject103 setValue:@"South Island Robin" forKey:@"othername"];
                 [newManagedObject103 setValue:@"The South Island robin is a familiar bird to those who venture into the South Island back-country. It occurs in forest and scrub habitats, where it spends much time foraging on the ground, and can be recognised by its erect stance and relatively long legs. It is a territorial species, males in particular inhabiting the same patch of forest throughout their lives. Males are great songsters, particularly bachelors, singing loudly and often for many minutes at a time. Where robins are regularly exposed to people, such as along public walking tracks, they become quite confiding, often approaching to within a metre of a person sitting quietly. Juveniles will sometimes stand on a person’s boot.\n\n Identification:\n The adult male South Island robin is dark grey-black over the head, neck, mantle and upper chest; the flight feathers and tail are brownish-black, and the lower chest and belly white to yellowish white with a sharp demarcation between black and white on chest. Adult females are light to dark grey over the upper body. They further differ from males in the  white chest-belly area being smaller and not having such a distinct demarcation between grey and white feathering. Juveniles are similar to females, but often with a smaller or no white patch on the underparts. Adults of both sexes are able to expose a small white spot of feathers above the base of the beak during intraspecific and interspecific interactions.\n\n Voice:\n South Island robins have four recognisable vocalisations. Fullsong is a series of phrases given loudly by males only, generally from a high perch. Robins can be heard giving fullsong year round, but particularly during the breeding season. It is used to indicate territorial occupancy and to attract a mate – bachelors spend much more time singing than paired males. Subsong is similar to fullsong but given at much less volume, is given by both sexes, and most frequently during the moult. The downscale is a series of very loud ‘chuck’ calls, descending in tone, and which start in rapid succession and finish slowly. The call lasts 3-4 seconds, is given by both sexes, and is most frequently heard during the non-breeding season (January-June). The fourth vocalisation type is the 'chuck', which is given as single notes (contact calls) or in rapid succession and loudly (as an alarm call) when a predator is nearby.\n\n Similar species:\nthere are no species that are similar to the robin in the South Island or Stewart Island. Robins are much larger and lack the white wing-bars of tomtits. Distribution: The South Island robin has a disjunct distribution through both the South and Stewart Islands. Its strongholds in the South Island are Marlborough, Nelson, West Coast as far south as about Harihari, and through Fiordland, with outliers at Jackson Bay and Dunedin. A comparison of the Ornithological Society of New Zealand’s atlas scheme results of 1969-79 and 1999-2004 suggest that the South Island robin’s distribution has changed little during the 20 year interval. Several populations, particularly on islands, have been established by translocations.\n\n Habitat:\n Robins occur in mature forest, scrub, and exotic plantations, particularly those that are fairly mature with an open understorey. They seem to favour moist areas where there is an open understorey under a closed canopy on fertile soils. Habitats that tend to be shunned are those with widely scattered trees and where the ground is covered by grasses or sparse vegetation on stony, droughty soils.\n\n Population:\n South Island robin is patchily distributed through its range, and is absent from some seemingly suitable areas while common in others. Pairs have territories of 1-5 ha on the mainland, although populations on pest-free islands can occur at much greater densities (0.2-0.6 ha / pair). \n" forKey:@"item_description"];
                 [newManagedObject103 setValue:@"http://nzbirdsonline.org.nz/species/south-island-robin" forKey:@"link"];
@@ -5038,7 +5041,7 @@
                 NSManagedObject *newManagedObject104 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
                 //Set Bird_attributes
-                [newManagedObject104 setValue:@"Stewart Island Kiwi"       forKey:@"name"];
+                [newManagedObject104 setValue:@"Kiwi (Stewart Island)"       forKey:@"name"];
                 [newManagedObject104 setValue:@"tokoeka" forKey:@"othername"];
                 [newManagedObject104 setValue:@"The Stewart Island tokoeka is the largest of the kiwi. Fiordland tokoeka are also very large, but Haast birds are smaller. Widespread in forest, scrub, tussock grasslands and subalpine zones of the south-western South Island and on Stewart Island. Flightless, with tiny vestigial wings and no tail. Generally nocturnal, therefore more often heard than seen, except on Stewart Island where birds often forage during the day. Male gives a repeated high-pitched ascending whistle, female gives a deeper throaty cry. A range of colours from rufous brown in Haast, to brown and dark brown elsewhere, streaked lengthways with reddish brown and black. Feather tips feel soft. Long pale bill, short legs and toes. \n\nIdentification:\n Large brown kiwi. Rufous to dark brown soft feathers streaked with brown and black; long pale bill, short pale legs and toes. Voice:  Male gives a high-pitched ascending whistle repeated 15-25 times, female gives a slower and lower pitched hoarse guttural call repeated 10-20 times. Similar species: rowi are smaller and greyer. The calls of weka are similar to the call of the male tokoeka, but weka have two-syllable calls, and usually have fewer repetitions. \n\nDistribution and habitat:\nSparse to locally common in native forests, scrub, tussock grassland and subalpine zones in parts of the Haast Range and Arawhata Valley; Fiordland, from Milford Sound to Preservation Inlet and east to Lake Te Anau, including many of the larger islands such as Secretary and Resolution Islands; Stewart Island and Ulva Island. Fiordland tokoeka were introduced to Kapiti Island in 1908, where they have hybridised with North Island brown kiwi. Recently, Haast tokoeka have been introduced to Coal and Rarotoka Islands, and to the Orokonui Ecosanctuary, Dunedin, and small islands in Lakes Te Anau and Manapouri are used as crèche sites for this taxon. Before human settlement of New Zealand tokoeka were widespread throughout the southern and eastern part of the South Island as far north as North Canterbury. \n\nPopulation:\n About 30,000 birds in 2012; Haast tokoeka, c. 350 birds; Fiordland tokoeka, c. 15,000 birds; Stewart Island tokoeka, c. 15,000 birds.\n" forKey:@"item_description"];
                 [newManagedObject104 setValue:@"http://nzbirdsonline.org.nz/species/southern-brown-kiwi" forKey:@"link"];
@@ -5046,7 +5049,7 @@
                 [newManagedObject104 setValue:@"long" forKey:@"beak_length"];
                 [newManagedObject104 setValue:@"flightless" forKey:@"behaviour"];
                 [newManagedObject104 setValue:@"0" forKey:@"category"];
-                [newManagedObject104 setValue:@"grey/brown" forKey:@"colour"];
+                [newManagedObject104 setValue:@"grey,brown" forKey:@"colour"];
                 [newManagedObject104 setValue:@"brown" forKey:@"leg_colour"];
                 [newManagedObject104 setValue:@"Apterygidae" forKey:@"family"];
                 [newManagedObject104 setValue:@"bush" forKey:@"habitat"];
@@ -5055,7 +5058,7 @@
                 [newManagedObject104 setValue:@"duck" forKey:@"size_and_shape"];
         
         
-                [newManagedObject104 setValue:@"StewartIslandKiwi"         forKey:@"image"];
+                [newManagedObject104 setValue:@"South_Island_Brown_Kiwi_Canterbury_Museum"         forKey:@"image"];
         
                 NSURL *url104t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                                         pathForResource:@"South_Island_Brown_KiwiCanterbury_Museum_TN"
@@ -5074,6 +5077,62 @@
         
                 [context save:NULL];
                 newManagedObject104= nil;
+        
+        
+        
+        
+        
+        //        // +++++++++++ Template  +++++++++++++
+        //        /*  85
+        //         */
+        //        NSManagedObject *newManagedObject85 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        //
+        //        //Set Bird_attributes
+        //        [newManagedObject85 setValue:@"California Quail"       forKey:@"name"];
+        //        [newManagedObject85 setValue:@"California Quail" forKey:@"othername"];
+        //        [newManagedObject85 setValue:@"California quail are stocky, predominantly grey and brown, with a diagnostic forward-curling black plume rising erect from the top of their heads. Males have a black chin and cheeks edged with white, and separate white ‘eyebrows’ join on the forehead. The breast is blue-grey and the lower belly cream to rust brown with distinctive black scalloping, which merges into strong, pale streaks on the dark brown flanks. \n\nThe female is slightly smaller, duller and browner, with some streaking on the neck and a more subdued scalloping on the belly, but with equally bold streaking on the flanks. Immature birds are similar to the female but a lighter brown. The female’s crest plume is much smaller than the male’s. Both sexes have fine speckling on the nape, which is bolder in the male. \n\nThere is no seasonal change in plumage. California quail have short, rounded wings and a relatively long tail. Their legs and bill are black and sturdy, with the bill being slightly hooked.\n\nForaging quail pace sedately, but when disturbed they run at speed, their feet a blur of movement, or burst into flight with noisy, rapid wingbeats.\
+        //         " forKey:@"item_description"];
+        //        [newManagedObject85 setValue:@"http://nzbirdsonline.org.nz/species/california-quail" forKey:@"link"];
+        //        [newManagedObject85 setValue:@"black" forKey:@"beak_colour"];
+        //        [newManagedObject85 setValue:@"short" forKey:@"beak_length"];
+        //        [newManagedObject85 setValue:@"can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject85 setValue:@"0" forKey:@"category"];
+        //        [newManagedObject85 setValue:@"grey/brown" forKey:@"colour"];
+        //        [newManagedObject85 setValue:@"brown" forKey:@"leg_colour"];
+        //        [newManagedObject85 setValue:@"Phasianidae" forKey:@"family"];
+        //        [newManagedObject85 setValue:@"bush" forKey:@"habitat"];
+        //        [newManagedObject85 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+        //        [newManagedObject85 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject85 setValue:@"blackbird" forKey:@"size_and_shape"];
+        //
+        //
+        //        [newManagedObject85 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //
+        //        NSURL *url85t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                ofType:@"jpg"]];
+        //        NSData *data85t = [[NSData alloc] initWithContentsOfURL:url85t];
+        //        UIImage *imageSave85t=[[UIImage alloc]initWithData:data85t];
+        //        NSData *imageData85t = UIImagePNGRepresentation(imageSave85t);
+        //        [newManagedObject85 setValue:imageData85t         forKey:@"thumbnail"];
+        //
+        //
+        //        //[newManagedObject85 setValue:@"Kiwi" forKey:@"sound"];
+        //
+        //        [newManagedObject85 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        //        [newManagedObject85 setValue:NO forKey:@"extra"];
+        //        [newManagedObject85 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        //
+        //        [context save:NULL];
+        //        newManagedObject85= nil;
+        
+        
+        
+        ////      SUGGESTIONS:
+        
+        //        Crested Grebe
+        //          Shearwaters & Albatrosses
+        //
         
         
         //**************
