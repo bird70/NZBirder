@@ -211,6 +211,10 @@
 		B96D00B321D3085300DC96DA /* GuineaFowl_DennisJarvisFlickr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D00B221D3085200DC96DA /* GuineaFowl_DennisJarvisFlickr.jpg */; };
 		B96D00B521D309AA00DC96DA /* GuineaFowl_DennisJarvisFlickr_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D00B421D309AA00DC96DA /* GuineaFowl_DennisJarvisFlickr_TN.jpg */; };
 		B96D00B721D30CFF00DC96DA /* NZBirder125.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B96D00B621D30CFF00DC96DA /* NZBirder125.sqlite */; };
+		B96D00BC21D31B3800DC96DA /* Launch Screen 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D00B821D31B3800DC96DA /* Launch Screen 1.jpg */; };
+		B96D00BD21D31B3800DC96DA /* Launch Screen 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D00B921D31B3800DC96DA /* Launch Screen 2.jpg */; };
+		B96D00BE21D31B3800DC96DA /* Launch Screen 3.PNG in Resources */ = {isa = PBXBuildFile; fileRef = B96D00BA21D31B3800DC96DA /* Launch Screen 3.PNG */; };
+		B96D00BF21D31B3800DC96DA /* Launch Screen 4.PNG in Resources */ = {isa = PBXBuildFile; fileRef = B96D00BB21D31B3800DC96DA /* Launch Screen 4.PNG */; };
 		B9708E5F17BACBAA00B90254 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9708E5E17BACBAA00B90254 /* BrowserViewController.m */; };
 		B973D18921D1716800DFB4EC /* MITRamotion.license in Resources */ = {isa = PBXBuildFile; fileRef = B973D18821D1716800DFB4EC /* MITRamotion.license */; };
 		B97BAEE11C6D2C4C0080AE66 /* Australasian_Bittern_FrankZed_Flickr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B97BAEDE1C6D2C4C0080AE66 /* Australasian_Bittern_FrankZed_Flickr.jpg */; };
@@ -707,6 +711,10 @@
 		B96D00B221D3085200DC96DA /* GuineaFowl_DennisJarvisFlickr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GuineaFowl_DennisJarvisFlickr.jpg; sourceTree = "<group>"; };
 		B96D00B421D309AA00DC96DA /* GuineaFowl_DennisJarvisFlickr_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = GuineaFowl_DennisJarvisFlickr_TN.jpg; path = CarBrowser/BirdMedia/TN/GuineaFowl_DennisJarvisFlickr_TN.jpg; sourceTree = SOURCE_ROOT; };
 		B96D00B621D30CFF00DC96DA /* NZBirder125.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = NZBirder125.sqlite; sourceTree = "<group>"; };
+		B96D00B821D31B3800DC96DA /* Launch Screen 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Launch Screen 1.jpg"; sourceTree = "<group>"; };
+		B96D00B921D31B3800DC96DA /* Launch Screen 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Launch Screen 2.jpg"; sourceTree = "<group>"; };
+		B96D00BA21D31B3800DC96DA /* Launch Screen 3.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Launch Screen 3.PNG"; sourceTree = "<group>"; };
+		B96D00BB21D31B3800DC96DA /* Launch Screen 4.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Launch Screen 4.PNG"; sourceTree = "<group>"; };
 		B9708E5D17BACBAA00B90254 /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
 		B9708E5E17BACBAA00B90254 /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
 		B973D18821D1716800DFB4EC /* MITRamotion.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MITRamotion.license; path = CarBrowser/License/MITRamotion.license; sourceTree = "<group>"; };
@@ -1431,6 +1439,10 @@
 		B96D00A421D2B42C00DC96DA /* LaunchScreens */ = {
 			isa = PBXGroup;
 			children = (
+				B96D00B821D31B3800DC96DA /* Launch Screen 1.jpg */,
+				B96D00B921D31B3800DC96DA /* Launch Screen 2.jpg */,
+				B96D00BA21D31B3800DC96DA /* Launch Screen 3.PNG */,
+				B96D00BB21D31B3800DC96DA /* Launch Screen 4.PNG */,
 				B96D00A521D2B42C00DC96DA /* NZB Screen Shot for Launch1.jpg */,
 				B96D00A621D2B42C00DC96DA /* NZB Screen Shot for Launch 2.jpg */,
 			);
@@ -1954,6 +1966,7 @@
 				B9BED14B17993C4200E6FE0E /* settings_selected@2x.png in Resources */,
 				B9B120BC199A0E3400CB8F80 /* Mallard.jpg in Resources */,
 				B9BED14C17993C4200E6FE0E /* settings.png in Resources */,
+				B96D00BF21D31B3800DC96DA /* Launch Screen 4.PNG in Resources */,
 				B9B120A9199A037C00CB8F80 /* CaspianTern_Steintil.jpg in Resources */,
 				B9BED14D17993C4200E6FE0E /* settings@2x.png in Resources */,
 				B9BED14E17993C4200E6FE0E /* tabbar_selected.png in Resources */,
@@ -1977,6 +1990,7 @@
 				B91682FA17A8CE99007C7161 /* oystercatcher.mp3 in Resources */,
 				B9B120AC199A037C00CB8F80 /* CrestedGrebe.jpg in Resources */,
 				B91682FB17A8CE99007C7161 /* blackbackedgull.mp3 in Resources */,
+				B96D00BC21D31B3800DC96DA /* Launch Screen 1.jpg in Resources */,
 				B9B14384199B53F000908EFB /* BullersShearwater.jpg in Resources */,
 				B996FEFC1C69E31900097071 /* CaliforniaQuail_SidMosdell_TN.jpg in Resources */,
 				B9161D0A1EFFC131000130BB /* kakariki.mp3 in Resources */,
@@ -2065,6 +2079,7 @@
 				B9B143B4199B624500908EFB /* Red_necked_stint_TN.jpg in Resources */,
 				B9B120C3199A147900CB8F80 /* White-fronted_Terns.jpg in Resources */,
 				B91683F017AE0006007C7161 /* Tomtit2.jpg in Resources */,
+				B96D00BD21D31B3800DC96DA /* Launch Screen 2.jpg in Resources */,
 				B9B143BC199B624500908EFB /* Wrybill_Ben_TN.jpg in Resources */,
 				B96D00B721D30CFF00DC96DA /* NZBirder125.sqlite in Resources */,
 				B91683F217AE0006007C7161 /* Tui_on_flax.jpg in Resources */,
@@ -2121,6 +2136,7 @@
 				B91684F917AE0512007C7161 /* LittleSpottedKiwi_Apteryx_owenii_TN.jpg in Resources */,
 				B91684FA17AE0512007C7161 /* Magpie_Australian_IMG_6747_TN.jpg in Resources */,
 				B96D009321D1F43700DC96DA /* Canada Geese Bernard Spragg NZ_NZ.jpg in Resources */,
+				B96D00BE21D31B3800DC96DA /* Launch Screen 3.PNG in Resources */,
 				B9E55D871C6AE96100DBF64A /* takahe-song-10_DOC.mp3 in Resources */,
 				B9B85DDF19AC703800FC688C /* NorthernRoyalAlbatross_Ben.jpg in Resources */,
 				B91684FB17AE0512007C7161 /* MoreporkMaunga_TN.jpg in Resources */,
