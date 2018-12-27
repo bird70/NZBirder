@@ -42,7 +42,7 @@
 
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     
-    //self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     /////////////////
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
@@ -51,7 +51,7 @@
     else{
         
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil];
-        //self.window.rootViewController = [storyboard instantiateInitialViewController];;
+        //self.window.rootViewController = [storyboard instantiateInitialViewController];
     }
     
     /////////////////
@@ -64,46 +64,59 @@
 
     
     
-    self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"introVC"];
-
+    //self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"introVC"];
+   
+   
     UIViewController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"tabBarControl"];
     
-    // Assign tab bar item with titles
-    UITabBarController *tabBarController = (UITabBarController *)navigationController;
     
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults] ;
+    if ([userDefaults boolForKey:@"SettingsShowTutorialOnLaunch"]){
+        //UIViewController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"introVC"];
+        navigationController = [storyboard instantiateViewControllerWithIdentifier:@"introVC"];
+        
+    }else{
+        //UIViewController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"tabBarControl"];
+        navigationController = [storyboard instantiateViewControllerWithIdentifier:@"tabBarControl"];
+        
+        // Assign tab bar item with titles
+        UITabBarController *tabBarController = (UITabBarController *)navigationController;
+        //Swift:
+        //window?.rootViewController = UINavigationController(rootViewController: YourTabBarController())
+        
+        //    UITabBarController *tabBarController2 = (UITabBarController *)TabBarController.ViewController;
+        //
+        ///<-- 23 Dec 18
+        UITabBar *tabBar = tabBarController.tabBar;
+        UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
+        UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
+        UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
+        
+        
+        //UITabBarItem *tabBarItem4 = [tabBar.items objectAtIndex:3];
+        //UITabBarItem *tabBarItem5 = [tabBar.items objectAtIndex:4];
+        
+        tabBarItem1.title = @"Birds";
+        tabBarItem2.title = @"Map";
+        tabBarItem3.title = @"Observations";
+        //tabBarItem4.title = @"Info";
+        //tabBarItem4.title = @"Identify";
+        
+        
+        //[tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"home_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"home.png"]];
+        // OLD prior to Dev. 2018
+        [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"maps_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"maps.png"]];
+        ///----->
+        
+        //[tabBarItem2 initWithTitle:@"maps_selected" image:"maps_selected.png" tag:1 ];
+        //[tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"myplan_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"myplan.png"]];
+        //[tabBarItem4 setFinishedSelectedImage:[UIImage imageNamed:@"settings_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"settings.png"]];
+        
+    }
     
-    //[self.window makeKeyAndVisible];
+    self.window.rootViewController = navigationController;
+     [self.window makeKeyAndVisible];
     
-    //Swift:   
-    //window?.rootViewController = UINavigationController(rootViewController: YourTabBarController())
-    
-//    UITabBarController *tabBarController2 = (UITabBarController *)TabBarController.ViewController;
-//
-    ///<-- 23 Dec 18
-    UITabBar *tabBar = tabBarController.tabBar;
-    UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
-    UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
-    UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
-
-
-    //UITabBarItem *tabBarItem4 = [tabBar.items objectAtIndex:3];
-    //UITabBarItem *tabBarItem5 = [tabBar.items objectAtIndex:4];
-
-    tabBarItem1.title = @"Birds";
-    tabBarItem2.title = @"Map";
-    tabBarItem3.title = @"Observations";
-    //tabBarItem4.title = @"Info";
-    //tabBarItem4.title = @"Identify";
-
-
-    //[tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"home_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"home.png"]];
-    // OLD prior to Dev. 2018
-    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"maps_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"maps.png"]];
-///----->
-    
-    //[tabBarItem2 initWithTitle:@"maps_selected" image:"maps_selected.png" tag:1 ];
-    //[tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"myplan_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"myplan.png"]];
-    //[tabBarItem4 setFinishedSelectedImage:[UIImage imageNamed:@"settings_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"settings.png"]];
     
     return YES;
     

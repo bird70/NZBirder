@@ -322,6 +322,36 @@
                 <key>Type</key>
                 <string>PSGroupSpecifier</string>
                 <key>FooterText</key>
+                <string>Authors53</string>
+        </dict>
+        <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>FooterText</key>
+                <string>Authors54</string>
+        </dict>
+        <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>FooterText</key>
+                <string>Authors55</string>
+        </dict>
+        <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>FooterText</key>
+                <string>Authors56</string>
+        </dict>
+        <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>FooterText</key>
+                <string>Authors57</string>
+        </dict>
+        <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>FooterText</key>
                 <string>CreativeCommonsSA</string>
         </dict>
         <dict>

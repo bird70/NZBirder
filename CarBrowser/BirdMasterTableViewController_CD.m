@@ -41,7 +41,7 @@
     self.title = spot.name;
         
     self.p_flightless = [[NSArray alloc] initWithObjects:
-                         @"FLY", @" ", @"flightless", nil];
+                         @"FLY", @"yes", @"no", nil];
     
     //self.p_big_or_small = [[NSArray alloc] initWithObjects:     @"S/M", "L/XL", nil];
     

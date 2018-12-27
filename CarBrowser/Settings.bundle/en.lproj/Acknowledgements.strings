@@ -1,4 +1,4 @@
-"Authors" = "Ramotion PaperOnboarding used under MIT License (Ramotion)";
+"Authors" = "Ramotion PaperOnboarding used under MIT License (Ramotion)In App Settings Kit used under BSD license";
 "Authors2" = "Audio Files:Courtesy of Dept. of Conservation (DOC) NZ, under CC Attribution License, unless otherwise stated.";
 "Authors3" = "Photographs made by the following persons under CC Attribution License, unless otherwise stated:";
 "Authors4" = "Albatross (Ben) - https://www.flickr.com/photos/seabirdnz/10373115543/in/photolist-gNCVRH-gNBUqF-bAk7gd-bAk7oS-jAnsaS-bPeKGk-hna8aL-hnawT6-hn97kk-hnarNV-hncYA2-diJeHk-diJbf8-7JiDYw-8Fo4uA-e7thMY-6FZVs3-e7nBzH-e7tfVo-e7tg1U-e7nBHT";
@@ -9,47 +9,52 @@
 "Authors9" = "Bellbird Wikimedia";
 "Authors10" = "Blackbird (CC-SA generic: Malene Thyssen, http://commons.wikimedia.org/wiki/User:Malene)";
 "Authors11" = "Black billed gull (https://www.flickr.com/photos/seabirdnz/5216875830/in/set-72157625228303867)";
-"Authors12" = "Brown Teal (https://www.flickr.com/photos/angrysunbird/1261649602/in/set-72157625282628159 (Duncan - angrysunbird Flickr)";
+"Authors12" = "Brown Teal BrownTeal_BernardSpraggNZ.jpg    Public Domain https://www.flickr.com/photos/volvob12b/10377584085/in/album-72157631715343568/";
 "Authors13" = "Brown Creeper (https://www.flickr.com/photos/birdbrian/10741276845/in/photolist-hnaRon CC BY 2.0)";
 "Authors14" = "Cattle Egret (https://www.flickr.com/photos/seabirdnz/10865633923/in/set-72157625228303867)";
-"Authors15" = "Chaffinch http://commons.wikimedia.org/wiki/File:Chaffinch_2.jpg (CC)";
-"Authors16" = "Coot Flickr ‘russelstreet’ CC BY-SA 2.0";
-"Authors17" = "Crested Grebe (https://www.flickr.com/photos/seabirdnz/8191735243/in/set-72157625228303867)";
-"Authors18" = "Fernbird (https://www.flickr.com/photos/birdbrian/10741051005/in/photolist-hnavRg-hnagzD-hnaVaQ-hnbK3d-hn9Gfz-hnaF8k-hn9QMU (Brian Ralphs)";
-"Authors19" = "Fantail http://www.flickr.com/photos/kiwinz/ (http://www.flickr.com/photos/kiwinz/3526699463/)";
-"Authors20" = "Grey Warbler (https://www.flickr.com/photos/seabirdnz/5216288933/in/set-72157625228303867)";
-"Authors21" = "Grey Warbler http://commons.wikimedia.org/wiki/File:Gerygone1888.jpg (CC, copyright expired, extract)";
-"Authors22" = "Kakapo (https://www.flickr.com/photos/whatscapes/3918356449/in/photolist-aCY4AL-aCUekg-aCUcP2-aCY5wh-aCY4kL-aCUeQP-aCUNwT-aCUdXT-aCUepB-aCUdxB-aCY56u-aCUd9H------npAAWF-npT9f4-nrDtsX-npB5sU-npTpZR-dvV5mu-ousaBW-9SpJ1D-avZe9w-4NQvgo-5MWgpP-4qfPxi-ap7LJg-5HHuLo-edXiK5-mYZirY-mYXkED-aDunJp-oqUMxJ-oqUP4Q-oqUMRE-op68Rd-o9Co15-op68Ju-o9Dq8t-o9Cnmj-op68kd-oeZqPu-6YjD5G-nw1X6h-nxLaN8-4ZE3Qn-6YfARP) (Mark Whatmough)";
-"Authors23" = "Kakariki http://commons.wikimedia.org/wiki/File:Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8.jpg";
-"Authors24" = "Kea Kea_(Nestor_notabilis)_-on_ground-8.JPG FROM http://commons.wikimedia.org/wiki/File:Kea_(Nestor_notabilis)_-on_ground-8.jpg (by Snowmanradio(talk))http://commons.wikimedia.org/wiki/User:Snowmanradio";
-"Authors25" = "Kereru http://commons.wikimedia.org/wiki/File:Kereru_maunga.jpg (Public Domain)";
-"Authors26" = "Kiwi https://www.flickr.com/photos/missrogue/2061238554/in/photolist-499opL-hNMEcd-rUrHJ-3JM8jp-6awd3q-4wLaL5-96TVbS-rUrH5-rXsve-v69k-e2R4ab-9qZ2kb-2r4boo-agzkBT-8RK9y6-dfE7oN-fahuQS-5SdnN-5Ugqp6-8bdFMi-8bdFQk-b9Jxoe-7juMm9-h5rNAh-7JpC3i-7KhgpR-7JpC6Z-7JpC2x-aNHkT8-79phoC-hRABjR-zMwZ2-7ydTYK-hRAkNG-9aNc8u-9aK3xM-8k5cyD-nJQwdg-hPDUwT-GXwvS-6H1eYZ-zfgWA-3irKvZ-b9KbvR-fsept6-3JRopm-xsHy-4eC6pS-7USRFv-7wSRW4";
-"Authors27" = "Kiwi, Great Spotted (https://www.flickr.com/photos/brewbooks/201855892/in/photolist-iQyJ1-bU5XBn-iQyQE-o2EFGs-nwecZ2-e2pP6L J Brew)";
-"Authors28" = "Masked Lapwing (https://www.flickr.com/photos/bareego/7282969228/in/set-72157629923731599 James Niland)";
-"Authors29" = "Mallard (https://www.flickr.com/photos/tonythemisfit/3175208180/in/photolist-5QzLLC-5Qm9gw-8D51op-eVnNjm-5QwMmN-gN7FXS-mfDMH9-4raFFG-fG1h2d-j81HtE-dbpAsj-f7Zoh1-fFHHrr-fG1g73-56zWbm-cjQgNo-cjQhAq-4sEbZW-Lhu4w-mygmHX-5KQFcp-iHK1XB-fgQMBG-eRGWLD-9qr4UX-ba4ie8-aGd8MR-ecvj5n-oeoixV-jmdZ7m-5AKxh5-fFHEBB-gi7t8Z-4pLUJy-6bxvDj-4yod4x-7ANJ2b-ofAYba-o5ASvb-ecvje4-fWd3Zv-4zGyiZ-56zWbC-4dg5UD-4sRpvn-j3UHQh-bEoghT-7SVKZb-9yjeof-6ap1P3 Tony Fischer)";
-"Authors30" = "Moa https://commons.wikimedia.org/wiki/File:Dinornis1387.jpg PublicDomain (copyright expired)";
-"Authors31" = "Morepork http://commons.wikimedia.org/wiki/File:MoreporkMaunga.jpg (Public Domain)";
-"Authors32" = "Myna https://en.wikipedia.org/wiki/File:Acridotheres_tristis_-Sydney,_Australia-8.jpg Richard Taylor from Australia (Flickr)";
-"Authors33" = "NZ Falcon (https://www.flickr.com/photos/seabirdnz/6191551344/in/set-72157625228303867)";
-"Authors34" = "NZ Kaka (http://tomassobekphotography.co.nz/gallery3/index.php/Trips/Stewart-Island-to-West-Coast-Dec-2013/Kaka_tree_branch(Tomas Sobek)";
-"Authors35" = "NZ Pipit (https://www.flickr.com/photos/seabirdnz/5459922151/in/set-72157625228303867)";
-"Authors36" = "Paradise Duck http://commons.wikimedia.org/wiki/File:History_of_the_birds_of_NZ_1st_ed_p240.jpg, originally from Walter Lawry Buller (1838-1906): A History of the Birds of New Zealand 1st edition. 1873, between pages 240,241. [1] Public Domain)";
-"Authors37" = "Red-necked stint (https://www.flickr.com/photos/seabirdnz/10050327045/in/set-72157625228303867)";
-"Authors38" = "Redpoll https://www.flickr.com/photos/andymorffew/8694656345/in/photolist-gQ2sfZ-dMBJEh-efjoq2-emisWx-dMqtGQ-dNabxF-dMBJWG-dFxc8v-7LFd35-dXqaKN-67KSCW-dZpkXK-nYBFrH-e6ZHts-dVqibv-aZqBJM-nMKyVp-dGcYkA-bkpeGK-dGeoQw-dFowvM-dFej1W-dFtZPQ-bBf7BV-6bQLds-5TtWNU-buXNd7-aTQRuR-bokdjS-7J4Uek-baBT1F-4pqxS4-7J4TRe-drFyRP-dGssna-63rJ41-nkw9mE-5TtWKu-aQQuR8-7L3abL-6bLAVD-9mSp6r-baBTuX-aTMemi-dCbD61-biHo6g-5TtWyJ-aFrNRT-63rzPd-5TtWDb";
-"Authors39" = "Rifleman http://commons.wikimedia.org/wiki/File:Reiflman_Acanthisitta_chloris_crop.jpg";
-"Authors40" = "Robin, North Island https://www.flickr.com/photos/angrysunbird/5501206978/ (Duncan)";
-"Authors41" = "Royal Spoonbill (https://www.flickr.com/photos/frankzed/6319843115/in/photolist-78rBd3-6bheFE-hn9zBz-7iTqNm-kMaFCT-9ZZVmG-b2uCyr-dnV84S-7Ccb6m-dkSciP-ckXXWb-cF3SDE-dnnQK9-dwyxnF-dKMgut-dKMgpe-emscB7-aKgg78-9GwUMM-diXYeT-2ZUzAA-bBsHG5-aCXcGN-6WdFXR-aCsRbk-8BsUws-cMQZP3-cMQZq5-cMQZeA-aKgezc-fn8Fvj-fmTuGp-b9VTY-b9VTX-b9VTW-4yZDP2-4tZs6f-bGtZB-4tVzgT-4tVx2p-b8jpF-eHMTWm-9dXc2s-b9Y6t-e7e35b-bGtZM-4tVEsc-4kcK1B-4z4Cp7-f1psas Wayne Butterworth)";
-"Authors42" = "Saddleback (https://www.flickr.com/photos/angrysunbird/1797458604/in/photolist-3JQrPA-a5inzr-bXGJVW-5cskef-5Hej9u-4DA1Yi-dikm9n-dikjgW-do1w97-5Kxf2R-6ErbT9-2iKEML-diJnPH-diJkbG-diJnwv-a2LA3v-hTpuHs-4hNEZz-4FSkhE-66YYv6-a1TjYw-5KwEgV-nVYBPo-6EmZeK-6ErbNW-6EmZYe-5KEEt7-66EX7L-5KBaK5-5KAUdU-3CWxpx-5KDwJJ-9R76A8-bMdX9M-5EWX3N-d93KiA-Gpg7x-wN56e-4DEhJC-azCddr-H3EFJ-g8pmSX-byfWXT-6LVUab-6KeB4-4FNahM-6XftkM-3D8dyL-3asxmJ-7yCq67 Duncan)";
-"Authors43" = "Silvereye http://en.wikipedia.org/wiki/File:Silvereye.jpg";
-"Authors44" = "Stitchbird/Hihi http://en.wikipedia.org/wiki/File:Hihi_(Stitchbird)-1.jpg; http://en.wikipedia.org/wiki/File:Male_stitchbird.JPG; http://en.wikipedia.org/wiki/Stitchbird  (600px-Hihi.PNG) by: http://commons.wikimedia.org/wiki/User:Tony_Wills";
-"Authors45" = "Thrush Commons.wikimedia: Public Domain (2 images)";
-"Authors46" = "Tomtit http://commons.wikimedia.org/wiki/File:A_Tomtit.jpg (CC)";
-"Authors47" = "Tui https://www.flickr.com/photos/mattbinns/2036385629/in/set-72157601685703937 (Matt Binns)";
-"Authors48" = "White fronted tern (https://www.flickr.com/photos/seabirdnz/5480572279/in/set-72157625228303867)";
-"Authors49" = "White heron (https://www.flickr.com/photos/seabirdnz/9370315084/in/set-72157625228303867)";
-"Authors50" = "Whitehead (https://www.flickr.com/photos/angrysunbird/2395251900/in/photolist-4DEhWy-qKzN6-n4XUZf-n4WePT-d5hAbU-ecVqu6-ecVqC2-n4XXXQ-n4W8hr-edreks-edkzFZ-edrebL-6rRJoD-n4XYdQ-n4W9i4-bCznie-crSweh-crSw4j-n4W8Be-crSvQC-6qKACt-9TR9N4-9TRavp-9TNfAc-9TR7Ct-d5hBcj-7do75H-7drYys-fhK9sY-qWbWk-byMf8Z-89AW37-avvHUJ-9TREzW-avvHV7-9TPN2h-8YkEq4-9Uv1mR-5nAx5r-5nEMXW-5nEMBq-5nAxpD-5nAwx4-ows8WL-owcPvV-oeHfen-oeETr7-oeFZkj-oeGjge-5nAxzF) (Duncan - angrysunbird Flickr)";
-"Authors51" = "Wrybill https://www.flickr.com/photos/seabirdnz/8168586847/in/set-72157625228303867";
-"Authors52" = "";
+"Authors15" = "Canada Goose, South Island Robin, Weka Bernard Spragg NZ   Public Domain https://www.flickr.com/photos/volvob12b/10377584085/in/album-72157631715343568/";
+"Authors16" = "Chaffinch http://commons.wikimedia.org/wiki/File:Chaffinch_2.jpg (CC)";
+"Authors17" = "Coot Flickr ‘russelstreet’ CC BY-SA 2.0";
+"Authors18" = "Crested Grebe (https://www.flickr.com/photos/seabirdnz/8191735243/in/set-72157625228303867)";
+"Authors19" = "Fernbird (https://www.flickr.com/photos/birdbrian/10741051005/in/photolist-hnavRg-hnagzD-hnaVaQ-hnbK3d-hn9Gfz-hnaF8k-hn9QMU (Brian Ralphs)";
+"Authors20" = "Fantail http://www.flickr.com/photos/kiwinz/ (http://www.flickr.com/photos/kiwinz/3526699463/)";
+"Authors21" = "Fjordland Crested Penguin   FjordlandCrestedPenguin2154751828_aca5bbb5da_o.jpg    No rights reserved (Flickr)";
+"Authors22" = "Grey Warbler (https://www.flickr.com/photos/seabirdnz/5216288933/in/set-72157625228303867)";
+"Authors23" = "Grey Warbler http://commons.wikimedia.org/wiki/File:Gerygone1888.jpg (CC, copyright expired, extract)";
+"Authors24" = "Guinea Fowl    Dennis Jarvis Flickr CC SA    https://www.flickr.com/photos/archer10/6179186808/in/photolist-aq2WXA-GwY8Mu-a6WjSV-frRCYC-7z78ee-nR3Cgh-p38S2Q-frBfoi-7zaU1C-HQc9NJ-GHr6Mz-frRuwS-frRswh-mCZAfB-dniC5w-3jkPcG-dNga8k-84PoRR-4rzmeS-3FY3jj-2KmR6-buM14s-4MtLVK-a2oQUU-53jsXY-du9wCT-6GfsNF-3jkGQm-7zMC99-a2C8m4-57XQqd-ceiBSo-4Ko1JT-MM6KY-29Vfemh-4FZ8j8-5Ni6C-AQYxj-53jtQU-23PJXz1-3jgrPH-57XPTb-dFCRGo-fgPWTu-EA9rkb-53fenv-53jrXd-7xk8wx-M9M5YY-fMRV7Z";
+"Authors25" = "Kakapo (https://www.flickr.com/photos/whatscapes/3918356449/in/photolist-aCY4AL-aCUekg-aCUcP2-aCY5wh-aCY4kL-aCUeQP-aCUNwT-aCUdXT-aCUepB-aCUdxB-aCY56u-aCUd9H------npAAWF-npT9f4-nrDtsX-npB5sU-npTpZR-dvV5mu-ousaBW-9SpJ1D-avZe9w-4NQvgo-5MWgpP-4qfPxi-ap7LJg-5HHuLo-edXiK5-mYZirY-mYXkED-aDunJp-oqUMxJ-oqUP4Q-oqUMRE-op68Rd-o9Co15-op68Ju-o9Dq8t-o9Cnmj-op68kd-oeZqPu-6YjD5G-nw1X6h-nxLaN8-4ZE3Qn-6YfARP) (Mark Whatmough)";
+"Authors26" = "Kakariki http://commons.wikimedia.org/wiki/File:Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8.jpg";
+"Authors27" = "Kea Kea_(Nestor_notabilis)_-on_ground-8.JPG FROM http://commons.wikimedia.org/wiki/File:Kea_(Nestor_notabilis)_-on_ground-8.jpg (by Snowmanradio(talk))http://commons.wikimedia.org/wiki/User:Snowmanradio";
+"Authors28" = "Kereru http://commons.wikimedia.org/wiki/File:Kereru_maunga.jpg (Public Domain)";
+"Authors29" = "Kiwi https://www.flickr.com/photos/missrogue/2061238554/in/photolist-499opL-hNMEcd-rUrHJ-3JM8jp-6awd3q-4wLaL5-96TVbS-rUrH5-rXsve-v69k-e2R4ab-9qZ2kb-2r4boo-agzkBT-8RK9y6-dfE7oN-fahuQS-5SdnN-5Ugqp6-8bdFMi-8bdFQk-b9Jxoe-7juMm9-h5rNAh-7JpC3i-7KhgpR-7JpC6Z-7JpC2x-aNHkT8-79phoC-hRABjR-zMwZ2-7ydTYK-hRAkNG-9aNc8u-9aK3xM-8k5cyD-nJQwdg-hPDUwT-GXwvS-6H1eYZ-zfgWA-3irKvZ-b9KbvR-fsept6-3JRopm-xsHy-4eC6pS-7USRFv-7wSRW4";
+"Authors30" = "Kiwi, Great Spotted (https://www.flickr.com/photos/brewbooks/201855892/in/photolist-iQyJ1-bU5XBn-iQyQE-o2EFGs-nwecZ2-e2pP6L J Brew)";
+"Authors31" = "Kiwi, South Island     South_Island_Brown_Kiwi,_Canterbury_Museum,_2016-01-27    Public Domain https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/South_Island_Brown_Kiwi%2C_Canterbury_Museum%2C_2016-01-27.jpg/963px-South_Island_Brown_Kiwi%2C_Canterbury_Museum%2C_2016-01-27.jpg";
+"Authors32" = "Kokako    Kokako5286526342_6811cdb98c_b    Flickr Duncan (angrysunbird) - https://www.flickr.com/photos/angrysunbird/5286526342/in/photolist-21xXaHn-fGAD3u-fJhe56-ZmExmr-YXMsQA-949Q6U-3Zs3bf-92VsQ4-4sE73b-qgDijD-dqbit2-21FCM1d-ecpPr5 CC BY-SA 2.0)";
+"Authors33" = "Masked Lapwing (https://www.flickr.com/photos/bareego/7282969228/in/set-72157629923731599 James Niland)";
+"Authors34" = "Mallard (https://www.flickr.com/photos/tonythemisfit/3175208180/in/photolist-5QzLLC-5Qm9gw-8D51op-eVnNjm-5QwMmN-gN7FXS-mfDMH9-4raFFG-fG1h2d-j81HtE-dbpAsj-f7Zoh1-fFHHrr-fG1g73-56zWbm-cjQgNo-cjQhAq-4sEbZW-Lhu4w-mygmHX-5KQFcp-iHK1XB-fgQMBG-eRGWLD-9qr4UX-ba4ie8-aGd8MR-ecvj5n-oeoixV-jmdZ7m-5AKxh5-fFHEBB-gi7t8Z-4pLUJy-6bxvDj-4yod4x-7ANJ2b-ofAYba-o5ASvb-ecvje4-fWd3Zv-4zGyiZ-56zWbC-4dg5UD-4sRpvn-j3UHQh-bEoghT-7SVKZb-9yjeof-6ap1P3 Tony Fischer)";
+"Authors35" = "Moa https://commons.wikimedia.org/wiki/File:Dinornis1387.jpg PublicDomain (copyright expired)";
+"Authors36" = "Morepork http://commons.wikimedia.org/wiki/File:MoreporkMaunga.jpg (Public Domain)";
+"Authors37" = "Myna https://en.wikipedia.org/wiki/File:Acridotheres_tristis_-Sydney,_Australia-8.jpg Richard Taylor from Australia (Flickr)";
+"Authors38" = "NZ Falcon (https://www.flickr.com/photos/seabirdnz/6191551344/in/set-72157625228303867)";
+"Authors39" = "NZ Kaka (http://tomassobekphotography.co.nz/gallery3/index.php/Trips/Stewart-Island-to-West-Coast-Dec-2013/Kaka_tree_branch(Tomas Sobek)";
+"Authors40" = "NZ Pipit (https://www.flickr.com/photos/seabirdnz/5459922151/in/set-72157625228303867)";
+"Authors41" = "Paradise Duck http://commons.wikimedia.org/wiki/File:History_of_the_birds_of_NZ_1st_ed_p240.jpg, originally from Walter Lawry Buller (1838-1906): A History of the Birds of New Zealand 1st edition. 1873, between pages 240,241. [1] Public Domain)";
+"Authors42" = "Red-necked stint (https://www.flickr.com/photos/seabirdnz/10050327045/in/set-72157625228303867)";
+"Authors43" = "Redpoll https://www.flickr.com/photos/andymorffew/8694656345/in/photolist-gQ2sfZ-dMBJEh-efjoq2-emisWx-dMqtGQ-dNabxF-dMBJWG-dFxc8v-7LFd35-dXqaKN-67KSCW-dZpkXK-nYBFrH-e6ZHts-dVqibv-aZqBJM-nMKyVp-dGcYkA-bkpeGK-dGeoQw-dFowvM-dFej1W-dFtZPQ-bBf7BV-6bQLds-5TtWNU-buXNd7-aTQRuR-bokdjS-7J4Uek-baBT1F-4pqxS4-7J4TRe-drFyRP-dGssna-63rJ41-nkw9mE-5TtWKu-aQQuR8-7L3abL-6bLAVD-9mSp6r-baBTuX-aTMemi-dCbD61-biHo6g-5TtWyJ-aFrNRT-63rzPd-5TtWDb";
+"Authors44" = "Rifleman http://commons.wikimedia.org/wiki/File:Reiflman_Acanthisitta_chloris_crop.jpg";
+"Authors45" = "Robin, North Island https://www.flickr.com/photos/angrysunbird/5501206978/ (Duncan)";
+"Authors46" = "Royal Spoonbill (https://www.flickr.com/photos/frankzed/6319843115/in/photolist-78rBd3-6bheFE-hn9zBz-7iTqNm-kMaFCT-9ZZVmG-b2uCyr-dnV84S-7Ccb6m-dkSciP-ckXXWb-cF3SDE-dnnQK9-dwyxnF-dKMgut-dKMgpe-emscB7-aKgg78-9GwUMM-diXYeT-2ZUzAA-bBsHG5-aCXcGN-6WdFXR-aCsRbk-8BsUws-cMQZP3-cMQZq5-cMQZeA-aKgezc-fn8Fvj-fmTuGp-b9VTY-b9VTX-b9VTW-4yZDP2-4tZs6f-bGtZB-4tVzgT-4tVx2p-b8jpF-eHMTWm-9dXc2s-b9Y6t-e7e35b-bGtZM-4tVEsc-4kcK1B-4z4Cp7-f1psas Wayne Butterworth)";
+"Authors47" = "Saddleback (https://www.flickr.com/photos/angrysunbird/1797458604/in/photolist-3JQrPA-a5inzr-bXGJVW-5cskef-5Hej9u-4DA1Yi-dikm9n-dikjgW-do1w97-5Kxf2R-6ErbT9-2iKEML-diJnPH-diJkbG-diJnwv-a2LA3v-hTpuHs-4hNEZz-4FSkhE-66YYv6-a1TjYw-5KwEgV-nVYBPo-6EmZeK-6ErbNW-6EmZYe-5KEEt7-66EX7L-5KBaK5-5KAUdU-3CWxpx-5KDwJJ-9R76A8-bMdX9M-5EWX3N-d93KiA-Gpg7x-wN56e-4DEhJC-azCddr-H3EFJ-g8pmSX-byfWXT-6LVUab-6KeB4-4FNahM-6XftkM-3D8dyL-3asxmJ-7yCq67 Duncan)";
+"Authors48" = "Silvereye http://en.wikipedia.org/wiki/File:Silvereye.jpg";
+"Authors49" = "Stitchbird/Hihi http://en.wikipedia.org/wiki/File:Hihi_(Stitchbird)-1.jpg; http://en.wikipedia.org/wiki/File:Male_stitchbird.JPG; http://en.wikipedia.org/wiki/Stitchbird  (600px-Hihi.PNG) by: http://commons.wikimedia.org/wiki/User:Tony_Wills";
+"Authors50" = "Thrush Commons.wikimedia: Public Domain (2 images)";
+"Authors51" = "Tomtit http://commons.wikimedia.org/wiki/File:A_Tomtit.jpg (CC)";
+"Authors52" = "Tui https://www.flickr.com/photos/mattbinns/2036385629/in/set-72157601685703937 (Matt Binns)";
+"Authors53" = "White fronted tern (https://www.flickr.com/photos/seabirdnz/5480572279/in/set-72157625228303867)";
+"Authors54" = "White heron (https://www.flickr.com/photos/seabirdnz/9370315084/in/set-72157625228303867)";
+"Authors55" = "Whitehead (https://www.flickr.com/photos/angrysunbird/2395251900/in/photolist-4DEhWy-qKzN6-n4XUZf-n4WePT-d5hAbU-ecVqu6-ecVqC2-n4XXXQ-n4W8hr-edreks-edkzFZ-edrebL-6rRJoD-n4XYdQ-n4W9i4-bCznie-crSweh-crSw4j-n4W8Be-crSvQC-6qKACt-9TR9N4-9TRavp-9TNfAc-9TR7Ct-d5hBcj-7do75H-7drYys-fhK9sY-qWbWk-byMf8Z-89AW37-avvHUJ-9TREzW-avvHV7-9TPN2h-8YkEq4-9Uv1mR-5nAx5r-5nEMXW-5nEMBq-5nAxpD-5nAwx4-ows8WL-owcPvV-oeHfen-oeETr7-oeFZkj-oeGjge-5nAxzF) (Duncan - angrysunbird Flickr)";
+"Authors56" = "Wrybill https://www.flickr.com/photos/seabirdnz/8168586847/in/set-72157625228303867";
+"Authors57" = "";
 "CreativeCommonsSA" = "Creative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible.";
 "CreativeCommonsSA2" = "Using Creative Commons Public Licenses";
 "CreativeCommonsSA3" = "Creative Commons public licenses provide a standard set of terms and conditions that creators and other rights holders may use to share original works of authorship and other material subject to copyright and certain other rights specified in the public license below. The following considerations are for informational purposes only, are not exhaustive, and do not form part of our licenses.";

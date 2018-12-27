@@ -15,6 +15,8 @@
 		B8E777F816C2F2F400949FEE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E777F716C2F2F400949FEE /* Default-568h@2x.png */; };
 		B8E7780916C2F43000949FEE /* BirdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E7780816C2F43000949FEE /* BirdTableViewCell.m */; };
 		B8E7780C16C2F6A700949FEE /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E7780B16C2F6A700949FEE /* Bird.m */; };
+		B90069A621D55778009EC97C /* PaperOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90069A521D55778009EC97C /* PaperOnboarding.framework */; };
+		B90069A721D55788009EC97C /* PaperOnboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B90069A521D55778009EC97C /* PaperOnboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B909A9B917AE294F00B12655 /* Watvogel_IMG_6674_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B909A9B817AE294F00B12655 /* Watvogel_IMG_6674_TN.jpg */; };
 		B909A9BB17AE45C800B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B909A9BA17AE45C800B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg */; };
 		B909A9BD17AE4B8600B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B909A9BC17AE4B8600B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN.jpg */; };
@@ -207,7 +209,6 @@
 		B96D00A721D2B42C00DC96DA /* NZB Screen Shot for Launch1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D00A521D2B42C00DC96DA /* NZB Screen Shot for Launch1.jpg */; };
 		B96D00A821D2B42C00DC96DA /* NZB Screen Shot for Launch 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D00A621D2B42C00DC96DA /* NZB Screen Shot for Launch 2.jpg */; };
 		B96D00AB21D2B9DF00DC96DA /* Whitehead_ownPic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D00A921D2B9DF00DC96DA /* Whitehead_ownPic2.jpg */; };
-		B96D00B121D2ED2D00DC96DA /* PaperOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D00B021D2ED2C00DC96DA /* PaperOnboarding.framework */; };
 		B96D00B321D3085300DC96DA /* GuineaFowl_DennisJarvisFlickr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D00B221D3085200DC96DA /* GuineaFowl_DennisJarvisFlickr.jpg */; };
 		B96D00B521D309AA00DC96DA /* GuineaFowl_DennisJarvisFlickr_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B96D00B421D309AA00DC96DA /* GuineaFowl_DennisJarvisFlickr_TN.jpg */; };
 		B96D00B721D30CFF00DC96DA /* NZBirder125.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B96D00B621D30CFF00DC96DA /* NZBirder125.sqlite */; };
@@ -394,7 +395,6 @@
 		B9CDE3A917A4F56200661AF9 /* 0239@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE3A517A4F56100661AF9 /* 0239@2x.png */; };
 		B9CF3BF421CF0208001642B2 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CF3BF321CF0208001642B2 /* TabBarController.m */; };
 		B9CF3BF621CF59A8001642B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF3BF521CF59A8001642B2 /* AppDelegate.swift */; };
-		B9CF3BF821D0170F001642B2 /* PaperOnboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9CF3BF721D0170F001642B2 /* PaperOnboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9D92E461748DEB0001B6D79 /* button_back.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E391748DEB0001B6D79 /* button_back.png */; };
 		B9D92E471748DEB0001B6D79 /* button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E3A1748DEB0001B6D79 /* button_normal.png */; };
 		B9D92E481748DEB0001B6D79 /* cell_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D92E3B1748DEB0001B6D79 /* cell_bottom.png */; };
@@ -472,7 +472,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B9CF3BF821D0170F001642B2 /* PaperOnboarding.framework in Embed Frameworks */,
+				B90069A721D55788009EC97C /* PaperOnboarding.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +496,7 @@
 		B8E7780816C2F43000949FEE /* BirdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdTableViewCell.m; sourceTree = "<group>"; };
 		B8E7780A16C2F6A700949FEE /* Bird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bird.h; sourceTree = "<group>"; };
 		B8E7780B16C2F6A700949FEE /* Bird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bird.m; sourceTree = "<group>"; };
+		B90069A521D55778009EC97C /* PaperOnboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PaperOnboarding.framework; path = Carthage/Build/iOS/PaperOnboarding.framework; sourceTree = "<group>"; };
 		B909A9B817AE294F00B12655 /* Watvogel_IMG_6674_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Watvogel_IMG_6674_TN.jpg; sourceTree = "<group>"; };
 		B909A9BA17AE45C800B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg"; sourceTree = "<group>"; };
 		B909A9BC17AE4B8600B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN.jpg"; sourceTree = "<group>"; };
@@ -933,7 +934,6 @@
 		B9CF3BF221CF01F0001642B2 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		B9CF3BF321CF0208001642B2 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		B9CF3BF521CF59A8001642B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B9CF3BF721D0170F001642B2 /* PaperOnboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PaperOnboarding.framework; path = Carthage/Build/iOS/PaperOnboarding.framework; sourceTree = "<group>"; };
 		B9D92E391748DEB0001B6D79 /* button_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_back.png; sourceTree = "<group>"; };
 		B9D92E3A1748DEB0001B6D79 /* button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_normal.png; sourceTree = "<group>"; };
 		B9D92E3B1748DEB0001B6D79 /* cell_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_bottom.png; sourceTree = "<group>"; };
@@ -1015,7 +1015,7 @@
 			files = (
 				B9BE105517FB402F005BA377 /* SystemConfiguration.framework in Frameworks */,
 				B9BE105317FB4020005BA377 /* Security.framework in Frameworks */,
-				B96D00B121D2ED2D00DC96DA /* PaperOnboarding.framework in Frameworks */,
+				B90069A621D55778009EC97C /* PaperOnboarding.framework in Frameworks */,
 				B934A5A317950A0500D3F6F7 /* MessageUI.framework in Frameworks */,
 				B934A592179485CF00D3F6F7 /* libsqlite3.dylib in Frameworks */,
 				B934A590179485B000D3F6F7 /* libsqlite3.0.dylib in Frameworks */,
@@ -1059,7 +1059,7 @@
 		B8E777E016C2F2F400949FEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B9CF3BF721D0170F001642B2 /* PaperOnboarding.framework */,
+				B90069A521D55778009EC97C /* PaperOnboarding.framework */,
 				B9BC55DA19A89BAB0007A0B2 /* InAppSettingsKit */,
 				B9BE105417FB402F005BA377 /* SystemConfiguration.framework */,
 				B9BE105217FB4020005BA377 /* Security.framework */,
@@ -2357,7 +2357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -2400,7 +2400,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -2419,6 +2419,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2430,7 +2431,8 @@
 				INFOPLIST_FILE = "CarBrowser/BirdBrowser-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = de.kosmopol.NZBirder;
 				PRODUCT_NAME = NZBirder;
 				PROVISIONING_PROFILE = "";
@@ -2453,6 +2455,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2465,6 +2468,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"-fembed-bitcode",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.kosmopol.NZBirder;
 				PRODUCT_NAME = NZBirder;
 				PROVISIONING_PROFILE = "";

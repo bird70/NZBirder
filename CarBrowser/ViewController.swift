@@ -12,7 +12,14 @@ import PaperOnboarding
 class ViewController: UIViewController {
 
     @IBOutlet var skipButton: UIButton!
-
+    @IBAction func gotStarted(_ sender: Any) {
+        let userDefaults = UserDefaults.standard
+        
+        userDefaults.set(false, forKey: "SettingsShowTutorialOnLaunch")
+        
+        userDefaults.synchronize()
+        
+    }
     fileprivate let items = [
 //        color: UIColor(red: 0.40, green: 0.56, blue: 0.71, alpha: 1.00),
         

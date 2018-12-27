@@ -82,7 +82,7 @@
                 
                 UIAlertController * alert = [UIAlertController
                                              alertControllerWithTitle:@"You need to create or select an observation spot on the map first (long tap on map or tap on existing spot)"
-                                             message:@" - Use Map tab or Observations tab - "
+                                             message:@" - Use 'Map' tab or 'Spots' tab  on Main Screen- "
                                               preferredStyle:UIAlertControllerStyleAlert];
                 
                 

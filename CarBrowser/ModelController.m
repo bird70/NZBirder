@@ -327,7 +327,7 @@
         [newManagedObject1 setValue:@"Morepork" forKey:@"name"];
         [newManagedObject1 setValue:@"grey" forKey:@"beak_colour"];
         [newManagedObject1 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject1 setValue:@"nocturnal,can fly silently" forKey:@"behaviour"];
+        [newManagedObject1 setValue:@"yes,nocturnal,can fly silently" forKey:@"behaviour"];
         [newManagedObject1 setValue:@"1" forKey:@"category"];
         [newManagedObject1 setValue:@"brown" forKey:@"colour"];
         [newManagedObject1 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -390,7 +390,7 @@
         [newManagedObject2 setValue:@"Fantail" forKey:@"name"];
         [newManagedObject2 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject2 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject2 setValue:@"can fly, restless" forKey:@"behaviour"];
+        [newManagedObject2 setValue:@"yes,can fly, restless" forKey:@"behaviour"];
         [newManagedObject2 setValue:@"1" forKey:@"category"];
         [newManagedObject2 setValue:@"black,grey" forKey:@"colour"];
         [newManagedObject2 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -447,7 +447,7 @@
         [newManagedObject3 setValue:@"Tui" forKey:@"name"];
         [newManagedObject3 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject3 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject3 setValue:@"can fly, great imitator of other birds" forKey:@"behaviour"];
+        [newManagedObject3 setValue:@"yes,can fly, great imitator of other birds" forKey:@"behaviour"];
         [newManagedObject3 setValue:@"1" forKey:@"category"];
         [newManagedObject3 setValue:@"black" forKey:@"colour"];
         [newManagedObject3 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -503,7 +503,7 @@
         [newManagedObject4 setValue:@"Stitchbird" forKey:@"name"];
         [newManagedObject4 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject4 setValue:@"short,pointed,curved" forKey:@"beak_length"];
-        [newManagedObject4 setValue:@"can fly, only bird to mate face to face" forKey:@"behaviour"];
+        [newManagedObject4 setValue:@"yes,can fly, only bird to mate face to face" forKey:@"behaviour"];
         [newManagedObject4 setValue:@"1" forKey:@"category"];
         [newManagedObject4 setValue:@"brown" forKey:@"colour"];
         [newManagedObject4 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -563,7 +563,7 @@
         [newManagedObject5 setValue:@"Moa" forKey:@"name"];
         [newManagedObject5 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject5 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject5 setValue:@"flightless" forKey:@"behaviour"];
+        [newManagedObject5 setValue:@"no,flightless" forKey:@"behaviour"];
         [newManagedObject5 setValue:@"1" forKey:@"category"];
         [newManagedObject5 setValue:@"brown" forKey:@"colour"];
         [newManagedObject5 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -623,7 +623,7 @@
         [newManagedObject6 setValue:@"Gull, Red billed " forKey:@"name"];
         [newManagedObject6 setValue:@"red" forKey:@"beak_colour"];
         [newManagedObject6 setValue:@"long, hooked" forKey:@"beak_length"];
-        [newManagedObject6 setValue:@"can fly, loud,gregarious,flocks" forKey:@"behaviour"];
+        [newManagedObject6 setValue:@"yes,can fly, loud,gregarious,flocks" forKey:@"behaviour"];
         [newManagedObject6 setValue:@"1" forKey:@"category"];
         [newManagedObject6 setValue:@"white/black" forKey:@"colour"];
         [newManagedObject6 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -687,7 +687,7 @@
         [newManagedObject7 setValue:@"Gull, Black backed " forKey:@"name"];
         [newManagedObject7 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject7 setValue:@"medium,hooked" forKey:@"beak_length"];
-        [newManagedObject7 setValue:@"can fly, good glider" forKey:@"behaviour"];
+        [newManagedObject7 setValue:@"yes,can fly, good glider" forKey:@"behaviour"];
         [newManagedObject7 setValue:@"1" forKey:@"category"];
         [newManagedObject7 setValue:@"white" forKey:@"colour"];
         [newManagedObject7 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -749,7 +749,7 @@
         [newManagedObject8 setValue:@"Oystercatcher, variable" forKey:@"name"];
         [newManagedObject8 setValue:@"red/orange" forKey:@"beak_colour"];
         [newManagedObject8 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject8 setValue:@"can fly, very vocal" forKey:@"behaviour"];
+        [newManagedObject8 setValue:@"yes,can fly, very vocal" forKey:@"behaviour"];
         [newManagedObject8 setValue:@"1" forKey:@"category"];
         [newManagedObject8 setValue:@"black" forKey:@"colour"];
         [newManagedObject8 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -808,7 +808,7 @@
         [newManagedObject9 setValue:@"Sparrow" forKey:@"name"];
         [newManagedObject9 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject9 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject9 setValue:@"can fly, gregarious, curious" forKey:@"behaviour"];
+        [newManagedObject9 setValue:@"yes,can fly, gregarious, curious" forKey:@"behaviour"];
         [newManagedObject9 setValue:@"1" forKey:@"category"];
         [newManagedObject9 setValue:@"brown" forKey:@"colour"];
         [newManagedObject9 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -873,7 +873,7 @@
         [newManagedObject10 setValue:@"http://www.teara.govt.nz/en/gannets-and-boobies/page-2" forKey:@"link"];
         [newManagedObject10 setValue:@"grey" forKey:@"beak_colour"];
         [newManagedObject10 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject10 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject10 setValue:@"yes,can fly" forKey:@"behaviour"];
         [newManagedObject10 setValue:@"1" forKey:@"category"];
         [newManagedObject10 setValue:@"white" forKey:@"colour"];
         [newManagedObject10 setValue:@"black" forKey:@"leg_colour"];
@@ -931,7 +931,7 @@
         [newManagedObject11 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/tomtit-miromiro/" forKey:@"link"];
         [newManagedObject11 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject11 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject11 setValue:@"can fly, largely insectivore/fruit in winter" forKey:@"behaviour"];
+        [newManagedObject11 setValue:@"yes,can fly, largely insectivore/fruit in winter" forKey:@"behaviour"];
         [newManagedObject11 setValue:@"1" forKey:@"category"];
         [newManagedObject11 setValue:@"black" forKey:@"colour"];
         [newManagedObject11 setValue:@"black" forKey:@"leg_colour"];
@@ -989,7 +989,7 @@
         [newManagedObject12 setValue:@"http://en.wikipedia.org/wiki/Starling" forKey:@"link"];
         [newManagedObject12 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject12 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject12 setValue:@"can fly, odd and quirky" forKey:@"behaviour"];
+        [newManagedObject12 setValue:@"yes,can fly" forKey:@"behaviour"];
         [newManagedObject12 setValue:@"1" forKey:@"category"];
         [newManagedObject12 setValue:@"black" forKey:@"colour"];
         [newManagedObject12 setValue:@"black" forKey:@"leg_colour"];
@@ -1047,7 +1047,7 @@
         [newManagedObject13 setValue:@"http://www.nzbirds.com/birds/goldfinch.html" forKey:@"link"];
         [newManagedObject13 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject13 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject13 setValue:@"can fly, group together in winter" forKey:@"behaviour"];
+        [newManagedObject13 setValue:@"yes,can fly, group together in winter" forKey:@"behaviour"];
         [newManagedObject13 setValue:@"1" forKey:@"category"];
         [newManagedObject13 setValue:@"brown/red/yellow" forKey:@"colour"];
         [newManagedObject13 setValue:@"red/brown" forKey:@"leg_colour"];
@@ -1097,11 +1097,11 @@
         //Set Bird_attributes
         [newManagedObject14 setValue:@"Magpie, australian"       forKey:@"name"];
         [newManagedObject14 setValue:@"Cracticus tibicen" forKey:@"othername"];
-        [newManagedObject14 setValue:@"he black-and-white Australian magpie is a common and conspicuous inhabitant of open country throughout much of New Zealand. It was introduced from Australia and Tasmania by Acclimatisation Societies between 1864 and 1874, mainly to control insect pests. There are three subspecies; the black-backed, and two white-backed forms, with white-backed birds predominating in most parts of New Zealand.\n\n        Identification\n\n         This familiar large songbird is similar in size to a crow or a New Zealand pigeon. The white-backed form tyrannica is the largest of the sub-species. The male has a white hind-neck, mantle, rump and shoulder patches. The upper two-thirds of the tail and under-tail coverts are also white. The rest of the plumage is black, with a blue iridescence. The female is similar, but the mantle is grey, and the black parts of the plumage are less iridescent. Both sexes have a blue-grey bill with a dark tip, and red eyes. The male takes several years to attain full adult plumage; after the second moult it resembles an adult female. Some white appears on the mantle after the third moult, and the remainder after the fourth moult. The juvenile is mottled grey on the under-surface. The black-backed magpie is similar to the white-backed forms, but with a black mantle. The female can be identified by the presence of some grey on the lower hind-neck. The two subspecies interbreed, resulting in offspring with a varying amount of black on the mantle, ranging from a few feathers to a narrow band.\n\n         Both sexes have a distinctive carolling song; “quardle oodle ardle wardle doodle”.\n\n         With its large size and strikingly pied plumage, the Australian magpie is not readily confused with any other species.\n\n         Distribution and habitat\n\n        The magpie is found throughout the North Island. In the South Island it is most common from Kaikoura to Southland. It is uncommon in Nelson and inland Marlborough, and is largely absent from Westland, except for the area between Harihari and Westport. The white-backed forms predominate except in Hawke’s Bay and North Canterbury, where black-backed birds make up around 95% of the population.\n        \n        The white-backed forms originate from south-eastern Australia and Tasmania, and the black-backed from northern Australia and southern New Guinea. Australian magpies were also introduced to Fiji.\n         \n         Magpies are most abundant on farmland with shelterbelts of pines, macrocarpas and gums. They inhabit both lowland and hill-country farming districts, and are frequently found in urban habitats such as parks and golf-courses.\n\n      Population\n\n         Australian magpies are common in much of the North Island and the east of the South Island south of Kaikoura. They have declined in some areas, e.g. Wellington, as a result of control programmes.\n         \nEcological and economic impacts\n\n         The Australian magpie has been widely implicated in the predation of native birds and their nests, but much evidence is anecdotal. However, magpies do occasionally kill other birds, mostly smaller species. One was seen to pursue, capture and kill a juvenile goldfinch, and another took 3 newly-hatched banded dotterel chicks from a nest. Most attacks appear to be opportunistic, involving young or weak victims. Many of the attacks by magpies against larger birds are directed towards harriers, and generally cease when the target leaves the territory. This harassment of harriers may even have a protective effect on other species breeding in a magpie’s territory." forKey:@"item_description"];
+        [newManagedObject14 setValue:@"The black-and-white Australian magpie is a common and conspicuous inhabitant of open country throughout much of New Zealand. It was introduced from Australia and Tasmania by Acclimatisation Societies between 1864 and 1874, mainly to control insect pests. There are three subspecies; the black-backed, and two white-backed forms, with white-backed birds predominating in most parts of New Zealand.\n\n        Identification\n\n         This familiar large songbird is similar in size to a crow or a New Zealand pigeon. The white-backed form tyrannica is the largest of the sub-species. The male has a white hind-neck, mantle, rump and shoulder patches. The upper two-thirds of the tail and under-tail coverts are also white. The rest of the plumage is black, with a blue iridescence. The female is similar, but the mantle is grey, and the black parts of the plumage are less iridescent. Both sexes have a blue-grey bill with a dark tip, and red eyes. The male takes several years to attain full adult plumage; after the second moult it resembles an adult female. Some white appears on the mantle after the third moult, and the remainder after the fourth moult. The juvenile is mottled grey on the under-surface. The black-backed magpie is similar to the white-backed forms, but with a black mantle. The female can be identified by the presence of some grey on the lower hind-neck. The two subspecies interbreed, resulting in offspring with a varying amount of black on the mantle, ranging from a few feathers to a narrow band.\n\n         Both sexes have a distinctive carolling song; “quardle oodle ardle wardle doodle”.\n\n         With its large size and strikingly pied plumage, the Australian magpie is not readily confused with any other species.\n\n         Distribution and habitat\n\n        The magpie is found throughout the North Island. In the South Island it is most common from Kaikoura to Southland. It is uncommon in Nelson and inland Marlborough, and is largely absent from Westland, except for the area between Harihari and Westport. The white-backed forms predominate except in Hawke’s Bay and North Canterbury, where black-backed birds make up around 95% of the population.\n        \n        The white-backed forms originate from south-eastern Australia and Tasmania, and the black-backed from northern Australia and southern New Guinea. Australian magpies were also introduced to Fiji.\n         \n         Magpies are most abundant on farmland with shelterbelts of pines, macrocarpas and gums. They inhabit both lowland and hill-country farming districts, and are frequently found in urban habitats such as parks and golf-courses.\n\n      Population\n\n         Australian magpies are common in much of the North Island and the east of the South Island south of Kaikoura. They have declined in some areas, e.g. Wellington, as a result of control programmes.\n         \nEcological and economic impacts\n\n         The Australian magpie has been widely implicated in the predation of native birds and their nests, but much evidence is anecdotal. However, magpies do occasionally kill other birds, mostly smaller species. One was seen to pursue, capture and kill a juvenile goldfinch, and another took 3 newly-hatched banded dotterel chicks from a nest. Most attacks appear to be opportunistic, involving young or weak victims. Many of the attacks by magpies against larger birds are directed towards harriers, and generally cease when the target leaves the territory. This harassment of harriers may even have a protective effect on other species breeding in a magpie’s territory." forKey:@"item_description"];
         [newManagedObject14 setValue:@"http://nzbirdsonline.org.nz/species/australian-magpie" forKey:@"link"];
         [newManagedObject14 setValue:@"white/black" forKey:@"beak_colour"];
         [newManagedObject14 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject14 setValue:@"can fly, walks rather than waddles or hops" forKey:@"behaviour"];
+        [newManagedObject14 setValue:@"yes,can fly, walks rather than waddles or hops" forKey:@"behaviour"];
         [newManagedObject14 setValue:@"1" forKey:@"category"];
         [newManagedObject14 setValue:@"black" forKey:@"colour"];
         [newManagedObject14 setValue:@"black" forKey:@"leg_colour"];
@@ -1157,7 +1157,7 @@
         [newManagedObject15 setValue:@"http://www.nzbirds.com/birds/yellowhammer.html" forKey:@"link"];
         [newManagedObject15 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject15 setValue:@"short,pointed" forKey:@"beak_length"];
-        [newManagedObject15 setValue:@"can fly, forms small flocks in winter" forKey:@"behaviour"];
+        [newManagedObject15 setValue:@"yes,can fly, forms small flocks in winter" forKey:@"behaviour"];
         [newManagedObject15 setValue:@"1" forKey:@"category"];
         [newManagedObject15 setValue:@"yellow/brown" forKey:@"colour"];
         [newManagedObject15 setValue:@"red" forKey:@"leg_colour"];
@@ -1212,7 +1212,7 @@
         [newManagedObject16 setValue:@"http://en.wikipedia.org/wiki/Common_Chaffinch" forKey:@"link"];
         [newManagedObject16 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject16 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject16 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject16 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject16 setValue:@"1" forKey:@"category"];
         [newManagedObject16 setValue:@"yellow/brown" forKey:@"colour"];
         [newManagedObject16 setValue:@"black" forKey:@"leg_colour"];
@@ -1267,7 +1267,7 @@
         [newManagedObject17 setValue:@"http://en.wikipedia.org/wiki/Black_Swan" forKey:@"link"];
         [newManagedObject17 setValue:@"red" forKey:@"beak_colour"];
         [newManagedObject17 setValue:@"duck" forKey:@"beak_length"];
-        [newManagedObject17 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject17 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject17 setValue:@"1" forKey:@"category"];
         [newManagedObject17 setValue:@"black" forKey:@"colour"];
         [newManagedObject17 setValue:@"grey,black" forKey:@"leg_colour"];
@@ -1322,7 +1322,7 @@
         [newManagedObject18 setValue:@"http://nzbirdsonline.org.nz/?q=node/586" forKey:@"link"];
         [newManagedObject18 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject18 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject18 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject18 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject18 setValue:@"1" forKey:@"category"];
         [newManagedObject18 setValue:@"yellow/brown/green" forKey:@"colour"];
         [newManagedObject18 setValue:@"black" forKey:@"leg_colour"];
@@ -1377,7 +1377,7 @@
         [newManagedObject19 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/bellbird-korimako/facts/" forKey:@"link"];
         [newManagedObject19 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject19 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject19 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject19 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject19 setValue:@"1" forKey:@"category"];
         [newManagedObject19 setValue:@"brown/green" forKey:@"colour"];
         [newManagedObject19 setValue:@"black" forKey:@"leg_colour"];
@@ -1433,7 +1433,7 @@
         [newManagedObject20 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kiwi/" forKey:@"link"];
         [newManagedObject20 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject20 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject20 setValue:@"flightless,nocturnal" forKey:@"behaviour"];
+        [newManagedObject20 setValue:@"no,flightless,nocturnal" forKey:@"behaviour"];
         [newManagedObject20 setValue:@"1" forKey:@"category"];
         [newManagedObject20 setValue:@"brown" forKey:@"colour"];
         [newManagedObject20 setValue:@"brown" forKey:@"leg_colour"];
@@ -1488,7 +1488,7 @@
         [newManagedObject21 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kea/" forKey:@"link"];
         [newManagedObject21 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject21 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject21 setValue:@"can fly, only in southern alps" forKey:@"behaviour"];
+        [newManagedObject21 setValue:@"yes,can fly, only in southern alps" forKey:@"behaviour"];
         [newManagedObject21 setValue:@"1" forKey:@"category"];
         [newManagedObject21 setValue:@"green" forKey:@"colour"];
         [newManagedObject21 setValue:@"brown" forKey:@"leg_colour"];
@@ -1544,7 +1544,7 @@
         [newManagedObject22 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/nz-pigeon-kereru/" forKey:@"link"];
         [newManagedObject22 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject22 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject22 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject22 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject22 setValue:@"1" forKey:@"category"];
         [newManagedObject22 setValue:@"grey" forKey:@"colour"];
         [newManagedObject22 setValue:@"brown" forKey:@"leg_colour"];
@@ -1600,7 +1600,7 @@
         [newManagedObject23 setValue:@"http://en.wikipedia.org/wiki/Rifleman_(bird)" forKey:@"link"];
         [newManagedObject23 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject23 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject23 setValue:@"can fly, flies quick, hums" forKey:@"behaviour"];
+        [newManagedObject23 setValue:@"yes,can fly, flies quick, hums" forKey:@"behaviour"];
         [newManagedObject23 setValue:@"1" forKey:@"category"];
         [newManagedObject23 setValue:@"grey" forKey:@"colour"];
         [newManagedObject23 setValue:@"brown" forKey:@"leg_colour"];
@@ -1655,7 +1655,7 @@
         [newManagedObject24 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/nz-parakeet-kakariki/nz-parakeet-kakariki/" forKey:@"link"];
         [newManagedObject24 setValue:@"black/white" forKey:@"beak_colour"];
         [newManagedObject24 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject24 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject24 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject24 setValue:@"1" forKey:@"category"];
         [newManagedObject24 setValue:@"green" forKey:@"colour"];
         [newManagedObject24 setValue:@"brown" forKey:@"leg_colour"];
@@ -1712,7 +1712,7 @@
         [newManagedObject25 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/grey-warbler-riroriro/" forKey:@"link"];
         [newManagedObject25 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject25 setValue:@"short,pointed" forKey:@"beak_length"];
-        [newManagedObject25 setValue:@"can fly, Very active. Absent from open country and alpine areas" forKey:@"behaviour"];
+        [newManagedObject25 setValue:@"yes,can fly, Very active. Absent from open country and alpine areas" forKey:@"behaviour"];
         [newManagedObject25 setValue:@"1" forKey:@"category"];
         [newManagedObject25 setValue:@"grey" forKey:@"colour"];
         [newManagedObject25 setValue:@"black" forKey:@"leg_colour"];
@@ -1770,7 +1770,7 @@
         [newManagedObject26 setValue:@"http://en.wikipedia.org/wiki/Common_Blackbird" forKey:@"link"];
         [newManagedObject26 setValue:@"orange" forKey:@"beak_colour"];
         [newManagedObject26 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject26 setValue:@"can fly, Defends its breading territory" forKey:@"behaviour"];
+        [newManagedObject26 setValue:@"yes,can fly, Defends its breading territory" forKey:@"behaviour"];
         [newManagedObject26 setValue:@"1" forKey:@"category"];
         [newManagedObject26 setValue:@"black" forKey:@"colour"];
         [newManagedObject26 setValue:@"brown" forKey:@"leg_colour"];
@@ -1825,7 +1825,7 @@
         [newManagedObject27 setValue:@"http://en.wikipedia.org/wiki/Song_Thrush" forKey:@"link"];
         [newManagedObject27 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject27 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject27 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject27 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject27 setValue:@"1" forKey:@"category"];
         [newManagedObject27 setValue:@"brown" forKey:@"colour"];
         [newManagedObject27 setValue:@"brown" forKey:@"leg_colour"];
@@ -1881,7 +1881,7 @@
         [newManagedObject28 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/paradise-duck-putakitaki/" forKey:@"link"];
         [newManagedObject28 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject28 setValue:@"duck" forKey:@"beak_length"];
-        [newManagedObject28 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject28 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject28 setValue:@"1" forKey:@"category"];
         [newManagedObject28 setValue:@"brown/white" forKey:@"colour"];
         [newManagedObject28 setValue:@"brown" forKey:@"leg_colour"];
@@ -1938,7 +1938,7 @@
         [newManagedObject29 setValue:@"http://nzbirdsonline.org.nz/species/banded-dotterel" forKey:@"link"];
         [newManagedObject29 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject29 setValue:@"short,pointed" forKey:@"beak_length"];
-        [newManagedObject29 setValue:@"can fly,nest in burrows" forKey:@"behaviour"];
+        [newManagedObject29 setValue:@"yes,can fly,nest in burrows" forKey:@"behaviour"];
         [newManagedObject29 setValue:@"1" forKey:@"category"];
         [newManagedObject29 setValue:@"brown" forKey:@"colour"];
         [newManagedObject29 setValue:@"brown" forKey:@"leg_colour"];
@@ -1995,7 +1995,7 @@
         [newManagedObject30 setValue:@"http://nzbirdsonline.org.nz/species/south-island-takahe" forKey:@"link"];
         [newManagedObject30 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject30 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject30 setValue:@"flightless, sedentary" forKey:@"behaviour"];
+        [newManagedObject30 setValue:@"no,flightless, sedentary" forKey:@"behaviour"];
         [newManagedObject30 setValue:@"1" forKey:@"category"];
         [newManagedObject30 setValue:@"blue" forKey:@"colour"];
         [newManagedObject30 setValue:@"red" forKey:@"leg_colour"];
@@ -2050,7 +2050,7 @@
         [newManagedObject31 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/pukeko/" forKey:@"link"];
         [newManagedObject31 setValue:@"red" forKey:@"beak_colour"];
         [newManagedObject31 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject31 setValue:@"flightless,sedentary" forKey:@"behaviour"];
+        [newManagedObject31 setValue:@"no,flightless,sedentary" forKey:@"behaviour"];
         [newManagedObject31 setValue:@"1" forKey:@"category"];
         [newManagedObject31 setValue:@"blue" forKey:@"colour"];
         [newManagedObject31 setValue:@"red" forKey:@"leg_colour"];
@@ -2107,7 +2107,7 @@
         [newManagedObject32 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/" forKey:@"link"];
         [newManagedObject32 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject32 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject32 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject32 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject32 setValue:@"1" forKey:@"category"];
         [newManagedObject32 setValue:@"brown" forKey:@"colour"];
         [newManagedObject32 setValue:@"yellow" forKey:@"leg_colour"];
@@ -2162,7 +2162,7 @@
         [newManagedObject33 setValue:@"http://en.wikipedia.org/wiki/Black-winged_Stilt" forKey:@"link"];
         [newManagedObject33 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject33 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject33 setValue:@"can fly,forages in shallow water" forKey:@"behaviour"];
+        [newManagedObject33 setValue:@"yes,can fly,forages in shallow water" forKey:@"behaviour"];
         [newManagedObject33 setValue:@"1" forKey:@"category"];
         [newManagedObject33 setValue:@"black/white" forKey:@"colour"];
         [newManagedObject33 setValue:@"red" forKey:@"leg_colour"];
@@ -2218,7 +2218,7 @@
         [newManagedObject34 setValue:@"en.wikipedia.org/wiki/Pheasant" forKey:@"link"];
         [newManagedObject34 setValue:@"white" forKey:@"beak_colour"];
         [newManagedObject34 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject34 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject34 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject34 setValue:@"1" forKey:@"category"];
         [newManagedObject34 setValue:@"brown/green" forKey:@"colour"];
         [newManagedObject34 setValue:@"brown" forKey:@"leg_colour"];
@@ -2273,7 +2273,7 @@
         [newManagedObject35 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/" forKey:@"link"];
         [newManagedObject35 setValue:@"white" forKey:@"beak_colour"];
         [newManagedObject35 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject35 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject35 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject35 setValue:@"1" forKey:@"category"];
         [newManagedObject35 setValue:@"green/blue" forKey:@"colour"];
         [newManagedObject35 setValue:@"grey" forKey:@"leg_colour"];
@@ -2327,7 +2327,7 @@
         [newManagedObject36 setValue:@"http://en.wikipedia.org/wiki/Little_Penguin" forKey:@"link"];
         [newManagedObject36 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject36 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject36 setValue:@"flightless,diurnal" forKey:@"behaviour"];
+        [newManagedObject36 setValue:@"no,flightless,diurnal" forKey:@"behaviour"];
         [newManagedObject36 setValue:@"1" forKey:@"category"];
         [newManagedObject36 setValue:@"grey/black" forKey:@"colour"];
         [newManagedObject36 setValue:@"brown" forKey:@"leg_colour"];
@@ -2382,7 +2382,7 @@
         [newManagedObject37 setValue:@"http://en.wikipedia.org/wiki/Eastern_Rosella" forKey:@"link"];
         [newManagedObject37 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject37 setValue:@"hooked" forKey:@"beak_length"];
-        [newManagedObject37 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject37 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject37 setValue:@"1" forKey:@"category"];
         [newManagedObject37 setValue:@"red/green/blue/yellow" forKey:@"colour"];
         [newManagedObject37 setValue:@"brown" forKey:@"leg_colour"];
@@ -2436,7 +2436,7 @@
         [newManagedObject38 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/weka/" forKey:@"link"];
         [newManagedObject38 setValue:@"reddish" forKey:@"beak_colour"];
         [newManagedObject38 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject38 setValue:@"flightless" forKey:@"behaviour"];
+        [newManagedObject38 setValue:@"no,flightless" forKey:@"behaviour"];
         [newManagedObject38 setValue:@"1" forKey:@"category"];
         [newManagedObject38 setValue:@"brown" forKey:@"colour"];
         [newManagedObject38 setValue:@"red" forKey:@"leg_colour"];
@@ -2490,7 +2490,7 @@
         [newManagedObject39 setValue:@"http://nzbirdsonline.org.nz/species/spotted-shag" forKey:@"link"];
         [newManagedObject39 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject39 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject39 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject39 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject39 setValue:@"1" forKey:@"category"];
         [newManagedObject39 setValue:@"black/grey" forKey:@"colour"];
         [newManagedObject39 setValue:@"black" forKey:@"leg_colour"];
@@ -2545,7 +2545,7 @@
         [newManagedObject40 setValue:@"http://en.wikipedia.org/wiki/Cormorant" forKey:@"link"];
         [newManagedObject40 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject40 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject40 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject40 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject40 setValue:@"1" forKey:@"category"];
         [newManagedObject40 setValue:@"black/white" forKey:@"colour"];
         [newManagedObject40 setValue:@"black" forKey:@"leg_colour"];
@@ -2600,7 +2600,7 @@
         [newManagedObject41 setValue:@"http://nzbirdsonline.org.nz/species/sacred-kingfisher" forKey:@"link"];
         [newManagedObject41 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject41 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject41 setValue:@"can fly,very shy, fast flier, preys on small animals" forKey:@"behaviour"];
+        [newManagedObject41 setValue:@"yes,can fly,very shy, fast flier, preys on small animals" forKey:@"behaviour"];
         [newManagedObject41 setValue:@"1" forKey:@"category"];
         [newManagedObject41 setValue:@"green/blue" forKey:@"colour"];
         [newManagedObject41 setValue:@"brown" forKey:@"leg_colour"];
@@ -2653,7 +2653,7 @@
         [newManagedObject43 setValue:@"http://en.wikipedia.org/wiki/Myna" forKey:@"link"];
         [newManagedObject43 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject43 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject43 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject43 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject43 setValue:@"1" forKey:@"category"];
         [newManagedObject43 setValue:@"grey/brown/white" forKey:@"colour"];
         [newManagedObject43 setValue:@"yellow" forKey:@"leg_colour"];
@@ -2709,7 +2709,7 @@
         [newManagedObject44 setValue:@"http://en.wikipedia.org/wiki/Dunnock" forKey:@"link"];
         [newManagedObject44 setValue:@"grey/black" forKey:@"beak_colour"];
         [newManagedObject44 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject44 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject44 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject44 setValue:@"0" forKey:@"category"];
         [newManagedObject44 setValue:@"brown" forKey:@"colour"];
         [newManagedObject44 setValue:@"orange/brown" forKey:@"leg_colour"];
@@ -2765,7 +2765,7 @@
         [newManagedObject45 setValue:@"http://en.wikipedia.org/wiki/European_Greenfinch" forKey:@"link"];
         [newManagedObject45 setValue:@"orange" forKey:@"beak_colour"];
         [newManagedObject45 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject45 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject45 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject45 setValue:@"0" forKey:@"category"];
         [newManagedObject45 setValue:@"green" forKey:@"colour"];
         [newManagedObject45 setValue:@"orange/red" forKey:@"leg_colour"];
@@ -2821,7 +2821,7 @@
         [newManagedObject46 setValue:@"http://en.wikipedia.org/wiki/Shining_Cuckoo" forKey:@"link"];
         [newManagedObject46 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject46 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject46 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject46 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject46 setValue:@"0" forKey:@"category"];
         [newManagedObject46 setValue:@"green" forKey:@"colour"];
         [newManagedObject46 setValue:@"black" forKey:@"leg_colour"];
@@ -2877,7 +2877,7 @@
         [newManagedObject47 setValue:@"http://en.wikipedia.org/wiki/Welcome_Swallow" forKey:@"link"];
         [newManagedObject47 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject47 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject47 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject47 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject47 setValue:@"0" forKey:@"category"];
         [newManagedObject47 setValue:@"blue/orange" forKey:@"colour"];
         [newManagedObject47 setValue:@"black" forKey:@"leg_colour"];
@@ -2932,7 +2932,7 @@
         [newManagedObject48 setValue:@"http://en.wikipedia.org/wiki/New_Zealand_kaka" forKey:@"link"];
         [newManagedObject48 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject48 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject48 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject48 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject48 setValue:@"0" forKey:@"category"];
         [newManagedObject48 setValue:@"brown/red" forKey:@"colour"];
         [newManagedObject48 setValue:@"black" forKey:@"leg_colour"];
@@ -2975,7 +2975,7 @@
         [newManagedObject49 setValue:@"http://en.wikipedia.org/wiki/Redpoll" forKey:@"link"];
         [newManagedObject49 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject49 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject49 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject49 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject49 setValue:@"0" forKey:@"category"];
         [newManagedObject49 setValue:@"brown/red" forKey:@"colour"];
         [newManagedObject49 setValue:@"black" forKey:@"leg_colour"];
@@ -3018,7 +3018,7 @@
         [newManagedObject50 setValue:@"http://nzbirdsonline.org.nz/species/rock-pigeon" forKey:@"link"];
         [newManagedObject50 setValue:@"grey" forKey:@"beak_colour"];
         [newManagedObject50 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject50 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject50 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject50 setValue:@"0" forKey:@"category"];
         [newManagedObject50 setValue:@"grey" forKey:@"colour"];
         [newManagedObject50 setValue:@"red" forKey:@"leg_colour"];
@@ -3061,7 +3061,7 @@
         [newManagedObject51 setValue:@"http://nzbirdsonline.org.nz/species/eurasian-skylark" forKey:@"link"];
         [newManagedObject51 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject51 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject51 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject51 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject51 setValue:@"0" forKey:@"category"];
         [newManagedObject51 setValue:@"brown" forKey:@"colour"];
         [newManagedObject51 setValue:@"brown" forKey:@"leg_colour"];
@@ -3104,7 +3104,7 @@
         [newManagedObject52 setValue:@"http://nzbirdsonline.org.nz/species/northern-royal-albatross" forKey:@"link"];
         [newManagedObject52 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject52 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject52 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject52 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject52 setValue:@"0" forKey:@"category"];
         [newManagedObject52 setValue:@"white/black" forKey:@"colour"];
         [newManagedObject52 setValue:@"pale" forKey:@"leg_colour"];
@@ -3165,7 +3165,7 @@
 //        [newManagedObject53 setValue:@"http://nzbirdsonline.org.nz/species/little-spotted-kiwi" forKey:@"link"];
 //        [newManagedObject53 setValue:@"brown" forKey:@"beak_colour"];
 //        [newManagedObject53 setValue:@"long" forKey:@"beak_length"];
-//        [newManagedObject53 setValue:@"flightless,nocturnal" forKey:@"behaviour"];
+//        [newManagedObject53 setValue:@"no,flightless,nocturnal" forKey:@"behaviour"];
 //        [newManagedObject53 setValue:@"0" forKey:@"category"];
 //        [newManagedObject53 setValue:@"brown" forKey:@"colour"];
 //        [newManagedObject53 setValue:@"brown" forKey:@"leg_colour"];
@@ -3209,7 +3209,7 @@
         [newManagedObject54 setValue:@"http://nzbirdsonline.org.nz/species/bullers-shearwater" forKey:@"link"];
         [newManagedObject54 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject54 setValue:@"long,hooked" forKey:@"beak_length"];
-        [newManagedObject54 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject54 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject54 setValue:@"0" forKey:@"category"];
         [newManagedObject54 setValue:@"black,white" forKey:@"colour"];
         [newManagedObject54 setValue:@"brown" forKey:@"leg_colour"];
@@ -3252,7 +3252,7 @@
         [newManagedObject55 setValue:@"http://en.wikipedia.org/wiki/Caspian_tern" forKey:@"link"];
         [newManagedObject55 setValue:@"red" forKey:@"beak_colour"];
         [newManagedObject55 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject55 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject55 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject55 setValue:@"0" forKey:@"category"];
         [newManagedObject55 setValue:@"grey,white" forKey:@"colour"];
         [newManagedObject55 setValue:@"black" forKey:@"leg_colour"];
@@ -3295,7 +3295,7 @@
         [newManagedObject56 setValue:@"http://en.wikipedia.org/wiki/Black-billed_gull" forKey:@"link"];
         [newManagedObject56 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject56 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject56 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject56 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject56 setValue:@"0" forKey:@"category"];
         [newManagedObject56 setValue:@"white/grey" forKey:@"colour"];
         [newManagedObject56 setValue:@"black" forKey:@"leg_colour"];
@@ -3338,7 +3338,7 @@
         [newManagedObject57 setValue:@"http://en.wikipedia.org/wiki/Redpoll" forKey:@"link"];
         [newManagedObject57 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject57 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject57 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject57 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject57 setValue:@"0" forKey:@"category"];
         [newManagedObject57 setValue:@"grey/white" forKey:@"colour"];
         [newManagedObject57 setValue:@"orange" forKey:@"leg_colour"];
@@ -3383,7 +3383,7 @@
         [newManagedObject59 setValue:@"en.wikipedia.org/wiki/White-fronted_tern" forKey:@"link"];
         [newManagedObject59 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject59 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject59 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject59 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject59 setValue:@"0" forKey:@"category"];
         [newManagedObject59 setValue:@"white/grey/black" forKey:@"colour"];
         [newManagedObject59 setValue:@"black/red" forKey:@"leg_colour"];
@@ -3426,7 +3426,7 @@
         [newManagedObject60 setValue:@"http://nzbirdsonline.org.nz/?q=node/670" forKey:@"link"];
         [newManagedObject60 setValue:@"grey/red" forKey:@"beak_colour"];
         [newManagedObject60 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject60 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject60 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject60 setValue:@"0" forKey:@"category"];
         [newManagedObject60 setValue:@"brown" forKey:@"colour"];
         [newManagedObject60 setValue:@"black" forKey:@"leg_colour"];
@@ -3469,7 +3469,7 @@
         [newManagedObject61 setValue:@"http://nzbirdsonline.org.nz/species/new-zealand-dotterel" forKey:@"link"];
         [newManagedObject61 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject61 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject61 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject61 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject61 setValue:@"0" forKey:@"category"];
         [newManagedObject61 setValue:@"brown/red" forKey:@"colour"];
         [newManagedObject61 setValue:@"grey" forKey:@"leg_colour"];
@@ -3512,7 +3512,7 @@
         [newManagedObject62 setValue:@"http://nzbirdsonline.org.nz/species/australasian-crested-grebe" forKey:@"link"];
         [newManagedObject62 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject62 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject62 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject62 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject62 setValue:@"0" forKey:@"category"];
         [newManagedObject62 setValue:@"brown/red" forKey:@"colour"];
         [newManagedObject62 setValue:@"black" forKey:@"leg_colour"];
@@ -3557,7 +3557,7 @@
         [newManagedObject64 setValue:@"http://nzbirdsonline.org.nz/species/white-heron" forKey:@"link"];
         [newManagedObject64 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject64 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject64 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject64 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject64 setValue:@"0" forKey:@"category"];
         [newManagedObject64 setValue:@"white" forKey:@"colour"];
         [newManagedObject64 setValue:@"black" forKey:@"leg_colour"];
@@ -3600,7 +3600,7 @@
         [newManagedObject65 setValue:@"http://nzbirdsonline.org.nz/species/cattle-egret" forKey:@"link"];
         [newManagedObject65 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject65 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject65 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject65 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject65 setValue:@"0" forKey:@"category"];
         [newManagedObject65 setValue:@"white/orange" forKey:@"colour"];
         [newManagedObject65 setValue:@"black" forKey:@"leg_colour"];
@@ -3643,7 +3643,7 @@
         [newManagedObject66 setValue:@"http://nzbirdsonline.org.nz/species/royal-spoonbill" forKey:@"link"];
         [newManagedObject66 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject66 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject66 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject66 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject66 setValue:@"0" forKey:@"category"];
         [newManagedObject66 setValue:@"white" forKey:@"colour"];
         [newManagedObject66 setValue:@"black" forKey:@"leg_colour"];
@@ -3686,7 +3686,7 @@
         [newManagedObject67 setValue:@"http://nzbirdsonline.org.nz/species/spur-winged-plover" forKey:@"link"];
         [newManagedObject67 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject67 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject67 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject67 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject67 setValue:@"0" forKey:@"category"];
         [newManagedObject67 setValue:@"grey/white/black" forKey:@"colour"];
         [newManagedObject67 setValue:@"black" forKey:@"leg_colour"];
@@ -3729,7 +3729,7 @@
         [newManagedObject68 setValue:@"http://nzbirdsonline.org.nz/species/great-spotted-kiwi" forKey:@"link"];
         [newManagedObject68 setValue:@"grey" forKey:@"beak_colour"];
         [newManagedObject68 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject68 setValue:@"flightless,nocturnal" forKey:@"behaviour"];
+        [newManagedObject68 setValue:@"no,flightless,nocturnal" forKey:@"behaviour"];
         [newManagedObject68 setValue:@"0" forKey:@"category"];
         [newManagedObject68 setValue:@"grey/brown" forKey:@"colour"];
         [newManagedObject68 setValue:@"black" forKey:@"leg_colour"];
@@ -3772,7 +3772,7 @@
         [newManagedObject69 setValue:@"http://nzbirdsonline.org.nz/species/new-zealand-falcon" forKey:@"link"];
         [newManagedObject69 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject69 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject69 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject69 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject69 setValue:@"0" forKey:@"category"];
         [newManagedObject69 setValue:@"brown/red" forKey:@"colour"];
         [newManagedObject69 setValue:@"black" forKey:@"leg_colour"];
@@ -3815,7 +3815,7 @@
         [newManagedObject70 setValue:@"http://nzbirdsonline.org.nz/species/mallard" forKey:@"link"];
         [newManagedObject70 setValue:@"yellow/black" forKey:@"beak_colour"];
         [newManagedObject70 setValue:@"duck" forKey:@"beak_length"];
-        [newManagedObject70 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject70 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject70 setValue:@"0" forKey:@"category"];
         [newManagedObject70 setValue:@"brown/black/green" forKey:@"colour"];
         [newManagedObject70 setValue:@"orange" forKey:@"leg_colour"];
@@ -3860,7 +3860,7 @@
         [newManagedObject72 setValue:@"http://en.wikipedia.org/wiki/kakapo" forKey:@"link"];
         [newManagedObject72 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject72 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject72 setValue:@"flightless" forKey:@"behaviour"];
+        [newManagedObject72 setValue:@"no,flightless" forKey:@"behaviour"];
         [newManagedObject72 setValue:@"0" forKey:@"category"];
         [newManagedObject72 setValue:@"green" forKey:@"colour"];
         [newManagedObject72 setValue:@"black" forKey:@"leg_colour"];
@@ -3903,7 +3903,7 @@
         [newManagedObject73 setValue:@"http://nzbirdsonline.org.nz/species/whitehead" forKey:@"link"];
         [newManagedObject73 setValue:@"grey" forKey:@"beak_colour"];
         [newManagedObject73 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject73 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject73 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject73 setValue:@"0" forKey:@"category"];
         [newManagedObject73 setValue:@"grey/white" forKey:@"colour"];
         [newManagedObject73 setValue:@"grey" forKey:@"leg_colour"];
@@ -3946,7 +3946,7 @@
         [newManagedObject74 setValue:@"http://nzbirdsonline.org.nz/species/fernbird" forKey:@"link"];
         [newManagedObject74 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject74 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject74 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject74 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject74 setValue:@"0" forKey:@"category"];
         [newManagedObject74 setValue:@"brown" forKey:@"colour"];
         [newManagedObject74 setValue:@"red" forKey:@"leg_colour"];
@@ -3990,7 +3990,7 @@
         [newManagedObject75 setValue:@"http://nzbirdsonline.org.nz/species/wrybill" forKey:@"link"];
         [newManagedObject75 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject75 setValue:@"curved" forKey:@"beak_length"];
-        [newManagedObject75 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject75 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject75 setValue:@"0" forKey:@"category"];
         [newManagedObject75 setValue:@"grey/white" forKey:@"colour"];
         [newManagedObject75 setValue:@"black" forKey:@"leg_colour"];
@@ -4034,7 +4034,7 @@
         [newManagedObject76 setValue:@"http://nzbirdsonline.org.nz/species/new-zealand-pipit" forKey:@"link"];
         [newManagedObject76 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject76 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject76 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject76 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject76 setValue:@"0" forKey:@"category"];
         [newManagedObject76 setValue:@"brown" forKey:@"colour"];
         [newManagedObject76 setValue:@"black" forKey:@"leg_colour"];
@@ -4077,7 +4077,7 @@
         [newManagedObject77 setValue:@"http://nzbirdsonline.org.nz/species/red-necked-stint" forKey:@"link"];
         [newManagedObject77 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject77 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject77 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject77 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject77 setValue:@"0" forKey:@"category"];
         [newManagedObject77 setValue:@"grey/brown" forKey:@"colour"];
         [newManagedObject77 setValue:@"black" forKey:@"leg_colour"];
@@ -4121,7 +4121,7 @@
         [newManagedObject78 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/north-island-robin-toutouwai/" forKey:@"link"];
         [newManagedObject78 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject78 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject78 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject78 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject78 setValue:@"0" forKey:@"category"];
         [newManagedObject78 setValue:@"brown/grey/black" forKey:@"colour"];
         [newManagedObject78 setValue:@"black" forKey:@"leg_colour"];
@@ -4175,7 +4175,7 @@
         [newManagedObject81 setValue:@"http://nzbirdsonline.org.nz/species/australasian-shoveler" forKey:@"link"];
         [newManagedObject81 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject81 setValue:@"duck" forKey:@"beak_length"];
-        [newManagedObject81 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject81 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject81 setValue:@"0" forKey:@"category"];
         [newManagedObject81 setValue:@"brown/red/black" forKey:@"colour"];
         [newManagedObject81 setValue:@"black" forKey:@"leg_colour"];
@@ -4218,7 +4218,7 @@
         [newManagedObject82 setValue:@"http://nzbirdsonline.org.nz/species/little-spotted-kiwi" forKey:@"link"];
         [newManagedObject82 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject82 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject82 setValue:@"flightless" forKey:@"behaviour"];
+        [newManagedObject82 setValue:@"no,flightless" forKey:@"behaviour"];
         [newManagedObject82 setValue:@"0" forKey:@"category"];
         [newManagedObject82 setValue:@"brown" forKey:@"colour"];
         [newManagedObject82 setValue:@"brown" forKey:@"leg_colour"];
@@ -4262,7 +4262,7 @@
                 [newManagedObject83 setValue:@"http://nzbirdsonline.org.nz/species/pied-shag" forKey:@"link"];
                 [newManagedObject83 setValue:@"red,pale" forKey:@"beak_colour"];
                 [newManagedObject83 setValue:@"long" forKey:@"beak_length"];
-                [newManagedObject83 setValue:@"can fly, shy" forKey:@"behaviour"];
+                [newManagedObject83 setValue:@"yes,can fly, shy" forKey:@"behaviour"];
                 [newManagedObject83 setValue:@"0" forKey:@"category"];
                 [newManagedObject83 setValue:@"black,white" forKey:@"colour"];
                 [newManagedObject83 setValue:@"black" forKey:@"leg_colour"];
@@ -4306,7 +4306,7 @@
                 [newManagedObject84 setValue:@"http://nzbirdsonline.org.nz/species/north-island-saddleback" forKey:@"link"];
                 [newManagedObject84 setValue:@"black" forKey:@"beak_colour"];
                 [newManagedObject84 setValue:@"short" forKey:@"beak_length"];
-                [newManagedObject84 setValue:@"can fly,shy" forKey:@"behaviour"];
+                [newManagedObject84 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
                 [newManagedObject84 setValue:@"0" forKey:@"category"];
                 [newManagedObject84 setValue:@"black/brown" forKey:@"colour"];
                 [newManagedObject84 setValue:@"black" forKey:@"leg_colour"];
@@ -4350,7 +4350,7 @@
         [newManagedObject85 setValue:@"http://nzbirdsonline.org.nz/species/california-quail" forKey:@"link"];
         [newManagedObject85 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject85 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject85 setValue:@"can fly,shy" forKey:@"behaviour"];
+        [newManagedObject85 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
         [newManagedObject85 setValue:@"0" forKey:@"category"];
         [newManagedObject85 setValue:@"grey/brown" forKey:@"colour"];
         [newManagedObject85 setValue:@"brown" forKey:@"leg_colour"];
@@ -4391,7 +4391,7 @@
         [newManagedObject92 setValue:@"Blue duck" forKey:@"name"];
         [newManagedObject92 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject92 setValue:@"duck" forKey:@"beak_length"];
-        [newManagedObject92 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject92 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject92 setValue:@"1" forKey:@"category"];
         [newManagedObject92 setValue:@"black,grey" forKey:@"colour"];
         [newManagedObject92 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -4434,10 +4434,10 @@
         //NSLog(@"Yellow Eyed Penguin");
         
         //Set Bird_attributes: Yellow-eyed penguin
-        [newManagedObject93 setValue:@"Yellow-eyed penguin" forKey:@"name"];
+        [newManagedObject93 setValue:@"Penguin, Yellow-eyed" forKey:@"name"];
         [newManagedObject93 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject93 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject93 setValue:@"flightless" forKey:@"behaviour"];
+        [newManagedObject93 setValue:@"no,flightless" forKey:@"behaviour"];
         [newManagedObject93 setValue:@"1" forKey:@"category"];
         [newManagedObject93 setValue:@"black,yellow,white,red" forKey:@"colour"];
         [newManagedObject93 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -4483,7 +4483,7 @@
         [newManagedObject94 setValue:@"Bittern" forKey:@"name"];
         [newManagedObject94 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject94 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject94 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject94 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject94 setValue:@"1" forKey:@"category"];
         [newManagedObject94 setValue:@"brown" forKey:@"colour"];
         [newManagedObject94 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -4533,7 +4533,7 @@
 //        [newManagedObject85 setValue:@"http://nzbirdsonline.org.nz/species/california-quail" forKey:@"link"];
 //        [newManagedObject85 setValue:@"black" forKey:@"beak_colour"];
 //        [newManagedObject85 setValue:@"short" forKey:@"beak_length"];
-//        [newManagedObject85 setValue:@"can fly,shy" forKey:@"behaviour"];
+//        [newManagedObject85 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
 //        [newManagedObject85 setValue:@"0" forKey:@"category"];
 //        [newManagedObject85 setValue:@"grey/brown" forKey:@"colour"];
 //        [newManagedObject85 setValue:@"brown" forKey:@"leg_colour"];
@@ -4594,7 +4594,7 @@
                 [newManagedObject95 setValue:@"http://www.nzbirdsonline.org.nz/species/australian-coot" forKey:@"link"];
                 [newManagedObject95 setValue:@"white" forKey:@"beak_colour"];
                 [newManagedObject95 setValue:@"short,pointed" forKey:@"beak_length"];
-                [newManagedObject95 setValue:@"can fly" forKey:@"behaviour"];
+                [newManagedObject95 setValue:@"yes, can fly" forKey:@"behaviour"];
                 [newManagedObject95 setValue:@"0" forKey:@"category"];
                 [newManagedObject95 setValue:@"black" forKey:@"colour"];
                 [newManagedObject95 setValue:@"grey" forKey:@"leg_colour"];
@@ -4648,7 +4648,7 @@
                 [newManagedObject96 setValue:@"http://www.nzbirdsonline.org.nz/species/brown-teal" forKey:@"link"];
                 [newManagedObject96 setValue:@"black" forKey:@"beak_colour"];
                 [newManagedObject96 setValue:@"druck" forKey:@"beak_length"];
-                [newManagedObject96 setValue:@"can fly,shy" forKey:@"behaviour"];
+                [newManagedObject96 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
                 [newManagedObject96 setValue:@"0" forKey:@"category"];
                 [newManagedObject96 setValue:@"grey,black,green,brown" forKey:@"colour"];
                 [newManagedObject96 setValue:@"brown" forKey:@"leg_colour"];
@@ -4667,7 +4667,7 @@
                 NSData *data96t = [[NSData alloc] initWithContentsOfURL:url96t];
                 UIImage *imageSave96t=[[UIImage alloc]initWithData:data96t];
                 NSData *imageData96t = UIImagePNGRepresentation(imageSave96t);
-                [newManagedObject96 setValue:imageData95t         forKey:@"thumbnail"];
+                [newManagedObject96 setValue:imageData96t         forKey:@"thumbnail"];
         
         
                 //[newManagedObject96 setValue:@"BrownTeal" forKey:@"sound"];
@@ -4702,7 +4702,7 @@
                 [newManagedObject97 setValue:@"http://www.nzbirdsonline.org.nz/species/new-zealand-scaup" forKey:@"link"];
                 [newManagedObject97 setValue:@"black" forKey:@"beak_colour"];
                 [newManagedObject97 setValue:@"duck" forKey:@"beak_length"];
-                [newManagedObject97 setValue:@"can fly,shy" forKey:@"behaviour"];
+                [newManagedObject97 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
                 [newManagedObject97 setValue:@"0" forKey:@"category"];
                 [newManagedObject97 setValue:@"black" forKey:@"colour"];
                 [newManagedObject97 setValue:@"brown" forKey:@"leg_colour"];
@@ -4756,7 +4756,7 @@
                 [newManagedObject98 setValue:@"http://www.nzbirdsonline.org.nz/species/canada-goose" forKey:@"link"];
                 [newManagedObject98 setValue:@"black" forKey:@"beak_colour"];
                 [newManagedObject98 setValue:@"short" forKey:@"beak_length"];
-                [newManagedObject98 setValue:@"can fly,shy" forKey:@"behaviour"];
+                [newManagedObject98 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
                 [newManagedObject98 setValue:@"0" forKey:@"category"];
                 [newManagedObject98 setValue:@"grey,brown,white,black" forKey:@"colour"];
                 [newManagedObject98 setValue:@"brown" forKey:@"leg_colour"];
@@ -4809,7 +4809,7 @@
                 [newManagedObject99 setValue:@"http://www.nzbirdsonline.org.nz/species/helmeted-guineafowl" forKey:@"link"];
                 [newManagedObject99 setValue:@"yellow,red" forKey:@"beak_colour"];
                 [newManagedObject99 setValue:@"short" forKey:@"beak_length"];
-                [newManagedObject99 setValue:@"can fly,shy" forKey:@"behaviour"];
+                [newManagedObject99 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
                 [newManagedObject99 setValue:@"0" forKey:@"category"];
                 [newManagedObject99 setValue:@"black,white" forKey:@"colour"];
                 [newManagedObject99 setValue:@"red" forKey:@"leg_colour"];
@@ -4861,7 +4861,7 @@
                 [newManagedObject100 setValue:@"http://www.nzbirdsonline.org.nz/species/brown-creeper" forKey:@"link"];
                 [newManagedObject100 setValue:@"brown" forKey:@"beak_colour"];
                 [newManagedObject100 setValue:@"pointed" forKey:@"beak_length"];
-                [newManagedObject100 setValue:@"can fly,shy" forKey:@"behaviour"];
+                [newManagedObject100 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
                 [newManagedObject100 setValue:@"0" forKey:@"category"];
                 [newManagedObject100 setValue:@"grey/brown" forKey:@"colour"];
                 [newManagedObject100 setValue:@"brown" forKey:@"leg_colour"];
@@ -4913,7 +4913,7 @@
                 [newManagedObject101 setValue:@"http://www.nzbirdsonline.org.nz/species/north-island-kokako" forKey:@"link"];
                 [newManagedObject101 setValue:@"black" forKey:@"beak_colour"];
                 [newManagedObject101 setValue:@"short" forKey:@"beak_length"];
-                [newManagedObject101 setValue:@"can fly,shy" forKey:@"behaviour"];
+                [newManagedObject101 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
                 [newManagedObject101 setValue:@"0" forKey:@"category"];
                 [newManagedObject101 setValue:@"grey/blue" forKey:@"colour"];
                 [newManagedObject101 setValue:@"black" forKey:@"leg_colour"];
@@ -4957,13 +4957,13 @@
                 NSManagedObject *newManagedObject102 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
                 //Set Bird_attributes
-                [newManagedObject102 setValue:@"Fjordland Crested Penguin"       forKey:@"name"];
+                [newManagedObject102 setValue:@"Penguin, Fjordland Crested"       forKey:@"name"];
                 [newManagedObject102 setValue:@"tawaki" forKey:@"othername"];
                 [newManagedObject102 setValue:@"Fiordland crested penguins are endemic to New Zealand, breeding in small colonies on inaccessible headlands and islets along the shores of south-western South Island and Stewart Island. They can be seen and heard on landing beaches during July – December. Populations have declined considerably in range and numbers since human arrival. Immediate threats include fisheries bycatch, introduced predators, and human disturbance.\n\n Identification:\n\n Adult Fiordland crested penguins have dark blue-grey/black upperparts (which turn brown when approaching moult), often darker on the head. A broad yellow eyebrow stripe (crest) starts at the nostril and extends well past the eye, drooping down the neck; 3-6 whitish stripes on the cheeks are displayed when agitated. The underparts are silky white. The moderately large orange bill has a thin strip of black skin at the base (cf. broader bare pink skin on Snares crested penguin). Females have smaller bills (bill depth < 24 mm) than males (bill depth >24 mm). The eyes are brownish-red, and feet and legs pinkish-white above and blackish-brown behind and on the soles. Juveniles have short, thin pale-yellow eyebrow stripes and mottled whitish chin and throat. The dorsal plumage of newly-fledged chicks is distinctly bluish, fading to black with wear, then to mid-brown before moulting. \n\nVoice:\n\n calls include loud braying or trumpeting, high pitched contact calls, and low-pitched hissing and growling. Calls are similar to those of Snares crested penguins. \n\nSimilar species:\n\n Fiordland crested penguins are most similar to Snares crested penguin, which (as adults) have dark cheeks, a larger bill with prominent pink skin at the base, and narrower eye-brow stripes. All other crested penguins are also similar, especially when immature, but note broad eye-brow stripes, throat and cheeks greyish white, and absence of bare skin at bill base in immature Fiordland crested penguins. Recently fledged young (which are smaller than adults and bluish dorsally) may be confused with little penguins when swimming, but are twice as large and have at least some yellow above the eye" forKey:@"item_description"];
                 [newManagedObject102 setValue:@"http://nzbirdsonline.org.nz/species/fiordland-crested-penguin" forKey:@"link"];
                 [newManagedObject102 setValue:@"red" forKey:@"beak_colour"];
                 [newManagedObject102 setValue:@"medium" forKey:@"beak_length"];
-                [newManagedObject102 setValue:@"flightless" forKey:@"behaviour"];
+                [newManagedObject102 setValue:@"no,flightless" forKey:@"behaviour"];
                 [newManagedObject102 setValue:@"0" forKey:@"category"];
                 [newManagedObject102 setValue:@"black,white,yellow" forKey:@"colour"];
                 [newManagedObject102 setValue:@"red" forKey:@"leg_colour"];
@@ -5005,7 +5005,7 @@
                 [newManagedObject103 setValue:@"http://nzbirdsonline.org.nz/species/south-island-robin" forKey:@"link"];
                 [newManagedObject103 setValue:@"black,grey" forKey:@"beak_colour"];
                 [newManagedObject103 setValue:@"short" forKey:@"beak_length"];
-                [newManagedObject103 setValue:@"can fly,shy" forKey:@"behaviour"];
+                [newManagedObject103 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
                 [newManagedObject103 setValue:@"0" forKey:@"category"];
                 [newManagedObject103 setValue:@"grey/brown" forKey:@"colour"];
                 [newManagedObject103 setValue:@"black" forKey:@"leg_colour"];
@@ -5047,7 +5047,7 @@
                 [newManagedObject104 setValue:@"http://nzbirdsonline.org.nz/species/southern-brown-kiwi" forKey:@"link"];
                 [newManagedObject104 setValue:@"brown" forKey:@"beak_colour"];
                 [newManagedObject104 setValue:@"long" forKey:@"beak_length"];
-                [newManagedObject104 setValue:@"flightless" forKey:@"behaviour"];
+                [newManagedObject104 setValue:@"no,flightless" forKey:@"behaviour"];
                 [newManagedObject104 setValue:@"0" forKey:@"category"];
                 [newManagedObject104 setValue:@"grey,brown" forKey:@"colour"];
                 [newManagedObject104 setValue:@"brown" forKey:@"leg_colour"];
@@ -5095,7 +5095,7 @@
         //        [newManagedObject85 setValue:@"http://nzbirdsonline.org.nz/species/california-quail" forKey:@"link"];
         //        [newManagedObject85 setValue:@"black" forKey:@"beak_colour"];
         //        [newManagedObject85 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject85 setValue:@"can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject85 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
         //        [newManagedObject85 setValue:@"0" forKey:@"category"];
         //        [newManagedObject85 setValue:@"grey/brown" forKey:@"colour"];
         //        [newManagedObject85 setValue:@"brown" forKey:@"leg_colour"];
