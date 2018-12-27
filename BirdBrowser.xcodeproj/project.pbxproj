@@ -17,6 +17,7 @@
 		B8E7780C16C2F6A700949FEE /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E7780B16C2F6A700949FEE /* Bird.m */; };
 		B90069A621D55778009EC97C /* PaperOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90069A521D55778009EC97C /* PaperOnboarding.framework */; };
 		B90069A721D55788009EC97C /* PaperOnboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B90069A521D55778009EC97C /* PaperOnboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B90069A921D58EEB009EC97C /* PrivacyPolicy.license in Resources */ = {isa = PBXBuildFile; fileRef = B90069A821D58EEB009EC97C /* PrivacyPolicy.license */; };
 		B909A9B917AE294F00B12655 /* Watvogel_IMG_6674_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B909A9B817AE294F00B12655 /* Watvogel_IMG_6674_TN.jpg */; };
 		B909A9BB17AE45C800B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B909A9BA17AE45C800B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg */; };
 		B909A9BD17AE4B8600B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B909A9BC17AE4B8600B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN.jpg */; };
@@ -497,6 +498,7 @@
 		B8E7780A16C2F6A700949FEE /* Bird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bird.h; sourceTree = "<group>"; };
 		B8E7780B16C2F6A700949FEE /* Bird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bird.m; sourceTree = "<group>"; };
 		B90069A521D55778009EC97C /* PaperOnboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PaperOnboarding.framework; path = Carthage/Build/iOS/PaperOnboarding.framework; sourceTree = "<group>"; };
+		B90069A821D58EEB009EC97C /* PrivacyPolicy.license */ = {isa = PBXFileReference; lastKnownFileType = text; name = PrivacyPolicy.license; path = CarBrowser/License/PrivacyPolicy.license; sourceTree = "<group>"; };
 		B909A9B817AE294F00B12655 /* Watvogel_IMG_6674_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Watvogel_IMG_6674_TN.jpg; sourceTree = "<group>"; };
 		B909A9BA17AE45C800B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8.jpg"; sourceTree = "<group>"; };
 		B909A9BC17AE4B8600B12655 /* Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN.jpg"; sourceTree = "<group>"; };
@@ -1459,6 +1461,7 @@
 		B9B12CC519B8CA1D007503E0 /* Acknowledgements */ = {
 			isa = PBXGroup;
 			children = (
+				B90069A821D58EEB009EC97C /* PrivacyPolicy.license */,
 				B9B8236919B64DA30055A50A /* PerlScript_Acknowledgements.pl */,
 				B9B8236719B64D9B0055A50A /* CreativeCommonsSA.license */,
 				B9B12CC319B8CA09007503E0 /* Authors.license */,
@@ -1767,11 +1770,11 @@
 			buildConfigurationList = B8E7780116C2F2F400949FEE /* Build configuration list for PBXNativeTarget "NZBirder" */;
 			buildPhases = (
 				B9EE5F4921C644420048084A /* ShellScript */,
+				B9E4E8FD21CE1FB100AC6553 /* ShellScript */,
 				B8E777DA16C2F2F400949FEE /* Sources */,
 				B8E777DB16C2F2F400949FEE /* Frameworks */,
-				B8E777DC16C2F2F400949FEE /* Resources */,
 				B91A400B21C7942B00B901B1 /* Embed Frameworks */,
-				B9E4E8FD21CE1FB100AC6553 /* ShellScript */,
+				B8E777DC16C2F2F400949FEE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1933,6 +1936,7 @@
 				B9B120B3199A037C00CB8F80 /* GreyWarbler.jpg in Resources */,
 				B934A5B01795DD8000D3F6F7 /* Purple_Swamphen_Tiritiri_Matangi_Island.mp3 in Resources */,
 				B934A5B11795DD8000D3F6F7 /* Sparrow_XC112666-Pasdom_Sohar_27dec2009.mp3 in Resources */,
+				B90069A921D58EEB009EC97C /* PrivacyPolicy.license in Resources */,
 				B934A5B21795DD8000D3F6F7 /* Singdrossel_1753.mp3 in Resources */,
 				B934A5B31795DD8000D3F6F7 /* Tadorna_variegata100309_16.mp3 in Resources */,
 				B9192C0C1C5AF67D00302321 /* Icon-76@2x.png in Resources */,

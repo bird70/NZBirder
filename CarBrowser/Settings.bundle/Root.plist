@@ -29,6 +29,10 @@
 		<dict>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
+			<key>Title2</key>
+			<string>Policy</string>
+			<key>Filename2</key>
+			<string>Policy</string>
 			<key>Title</key>
 			<string>Acknowledgements</string>
 			<key>File</key>
