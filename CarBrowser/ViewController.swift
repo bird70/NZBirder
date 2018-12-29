@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBAction func gotStarted(_ sender: Any) {
         let userDefaults = UserDefaults.standard
         
-        userDefaults.set(false, forKey: "SettingsShowTutorialOnLaunch")
+        userDefaults.set(true, forKey: "SettingsShowTutorialOnLaunch")
         
         userDefaults.synchronize()
         

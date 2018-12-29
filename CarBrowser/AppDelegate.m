@@ -67,11 +67,12 @@
     //self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"introVC"];
    
    
-    UIViewController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"tabBarControl"];
+    UIViewController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"introVC"];
     
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults] ;
-    if ([userDefaults boolForKey:@"SettingsShowTutorialOnLaunch"]){
+    
+    if (![userDefaults boolForKey:@"SettingsShowTutorialOnLaunch"]){
         //UIViewController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"introVC"];
         navigationController = [storyboard instantiateViewControllerWithIdentifier:@"introVC"];
         
