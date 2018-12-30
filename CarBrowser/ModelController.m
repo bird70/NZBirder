@@ -4,11 +4,13 @@
 //
 //  Created by Tilmann Steinmetz on 21/06/13.
 //  Copyright (c) 2013 Tilmann Steinmetz. All rights reserved.
-//  later additions for version 1.3, 2.3
+//  later additions for version 1.2.5, 1.3, 2.3
 //
 //  This is used both during deployment and runtime
 //  If it finds that a local data store doesn't exist, a new one is created
-//  To populate a sqlite DB with the contents of the script below a number of lines (114-194) must be commented and others uncommented 
+//  To populate a sqlite DB with the contents of the script below a number of lines (114-194) must be commented and others uncommented
+//  Uncomment lines 122-136 to force deletion of existing DB and re-creation of it, then run and stop.
+//  In a second step, comment those lines again and run. The new DB should be used.
 
 #import "ModelController.h"
 #import "Spot.h"
@@ -57,12 +59,12 @@
     if (_managedObjectContext != nil) {
         return _managedObjectContext;
     }
-//    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-//    if (coordinator != nil) {
-//        _managedObjectContext = [[NSManagedObjectContext alloc] init];
-//        [_managedObjectContext setPersistentStoreCoordinator:coordinator];
-//    }
-
+    //    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+    //    if (coordinator != nil) {
+    //        _managedObjectContext = [[NSManagedObjectContext alloc] init];
+    //        [_managedObjectContext setPersistentStoreCoordinator:coordinator];
+    //    }
+    
     // new after deprection warning ios9:
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator != nil) {
@@ -93,79 +95,81 @@
     }
     
     BOOL firstRun=NO;
-    
+    //BOOL firstRun=YES;
     //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     //NSURL *documentsDirectory = [paths objectAtIndex:0];
-
+    
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"NZBirder.sqlite"];
-//    NSURL *storeURL_shm = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"NZBirder.sqlite-shm"];
-//    NSURL *storeURL_wal = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"NZBirder.sqlite-wal"];
+    //    NSURL *storeURL_shm = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"NZBirder.sqlite-shm"];
+    //    NSURL *storeURL_wal = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"NZBirder.sqlite-wal"];
     //NSURL *storeURL_12 = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"NZBirder12.sqlite"];
     //NSURL *preloadURL = [[self applicationDirectory] URLByAppendingPathComponent:@"NZBirder.sqlite"];
-//???this worked pre iOS and has stopped functioning starting with v8.0:    NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"NZBirder" ofType:@"sqlite"]];
-    //NSURL* preloadURL = [[NSBundle mainBundle] URLForResource:@"NZBirder_12" withExtension:@"sqlite"];
+    //???this worked pre iOS and has stopped functioning starting with v8.0:    NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"NZBirder" ofType:@"sqlite"]];
+    NSURL* preloadURL = [[NSBundle mainBundle] URLForResource:@"NZBirder141" withExtension:@"sqlite"];
     NSString* preloadURLString = [[NSBundle mainBundle] pathForResource:@"Kakapo" ofType:@"mp3"];
-    NSLog(@"preloadURLString"),preloadURLString;
+    NSLog(@"preloadURLString %@",preloadURLString);
     NSString *modelURLString = [[NSBundle mainBundle] pathForResource:@"BirdBrowser" ofType:@"momd"];
-    NSLog(@"modelURLString"),modelURLString;
-  //  NSURL *preloadURLPath = [NSURL fileURLWithPath:preloadURLString];
+    NSLog(@"modelURLString %@",modelURLString);
+    //  NSURL *preloadURLPath = [NSURL fileURLWithPath:preloadURLString];
     NSURL* preloadURLPATH = [NSURL fileURLWithPath:modelURLString];
     
-//     NSURL *preloadURL_wal = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"NZBirder" ofType:@"sqlite-shm"]];
-//     NSURL *preloadURL_shm = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"NZBirder" ofType:@"sqlite-wal"]];
-    //NSURL *storeURL = [documentsDirectory URLByAppendingPat	hComponent:@"NZBirder.sqlite"];
+    //     NSURL *preloadURL_wal = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"NZBirder" ofType:@"sqlite-shm"]];
+    //     NSURL *preloadURL_shm = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"NZBirder" ofType:@"sqlite-wal"]];
+    //NSURL *storeURL = [documentsDirectory URLByAppendingPat    hComponent:@"NZBirder.sqlite"];
     
-//    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"NZBirder.sqlite"];
-
-    //UNCOMMENT ALTERNATIVELY:
+    //    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"NZBirder.sqlite"];
     
-//    //THIS TO DELETE from the Application Documents directory before ReCreating the SQLLITE DB                                //1st option
-//    // must delete NZBirder.sqlite DB from the APPLICATION BUNDLE root FIRST! then put it back in after     //1st option
-//    //to delete a stale SQLLite DB after schema changes                         //1st option
-//    //NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"NZBirder.sqlite"];
-//    [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];        //1st option
-//    //if using "new style" SQLLite store need to remove 3 files including _wal and _shm files
-//    //[[NSFileManager defaultManager] removeItemAtURL:storeURL_shm error:nil];        //1st option
-//    //[[NSFileManager defaultManager] removeItemAtURL:storeURL_wal error:nil];        //1st option
-//    //[[NSFileManager defaultManager] removeItemAtURL:preloadURL error:nil];        //1st option
+//        //UNCOMMENT ALTERNATIVELY (run this once, then comment again for final run to create DB):
+//         // *****************************
+//        //THIS TO DELETE from the Application Documents directory before ReCreating the SQLLITE DB                                //1st option
+//        // must delete NZBirder.sqlite DB from the APPLICATION BUNDLE root FIRST! then put it back in after     //1st option
+//        //to delete a stale SQLLite DB after schema changes                         //1st option
+//        //NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"NZBirder.sqlite"];
+//        [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];        //1st option
+//        //if using "new style" SQLLite store need to remove 3 files including _wal and _shm files
+//        //[[NSFileManager defaultManager] removeItemAtURL:storeURL_shm error:nil];        //1st option
+//        //[[NSFileManager defaultManager] removeItemAtURL:storeURL_wal error:nil];        //1st option
+//        //[[NSFileManager defaultManager] removeItemAtURL:preloadURL error:nil];        //1st option
 //    
-//    //[[NSFileManager defaultManager] removeItemAtURL:storeURL_12 error:nil];        //1st option
+//        //[[NSFileManager defaultManager] removeItemAtURL:storeURL_12 error:nil];        //1st option
 //    
-//    NSLog(@"Deleting DB");                                                      //1st option
-//     firstRun = YES;                                                          //1st option
-    
+//        NSLog(@"Deleting NZBirder.sqlite DB");                                                      //1st option
+//         firstRun = YES;                                                          //1st option
+//    
+//         // *****************************
+//    
     //OR THIS
     // For App Deployment (2nd option) this needs to be uncommented.
     // In order to re-generate the SQLLITE DB this needs to be commented! (3rd option)
     // firstRun = NO;                                                           //2nd option (leave in); 3rd option comment
-
-    //Easily check whether this is first run of app                         //2nd option (leave in); 3rd option comment
-    if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
-    //if (![[NSFileManager defaultManager] fileExistsAtPath:[preloadURL path]]) {
-        //NSString *preloadURL = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"NZBirder_orig.sqlite"];
-        //NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"NZBirder" ofType:@"sqlite"]];
-    // 11/15    NSError* err = nil;
-        
-//        //3rd option uncomment following:
-//        firstRun = YES;
-//       // 3rd option comment the following expression (in curly brackets) to force it into "firstRun"
-//       
-//        NSLog(@"Copying DB");
-//        if (![[NSFileManager defaultManager] copyItemAtURL:preloadURL toURL:storeURL error:&err]) {
-//       //if (![[NSFileManager defaultManager] copyItemAtPath:<#(NSString *)#> toPath:<#(NSString *)#> error:<#(NSError *__autoreleasing *)#>:preloadURL toURL:storeURL error:&err]) {
-//             firstRun = YES;
-//             NSLog(@"Oops, couldn't copy preloaded data");
-//        }                                                              //2nd option (leave in); 3rd option comment
-    }                                                                   //2nd option (leave in);
+    
+    //    //Easily check whether this is first run of app                         //2nd option (leave in); 3rd option comment
+    //    if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
+    //    if (![[NSFileManager defaultManager] fileExistsAtPath:[preloadURL path]]) {
+    //        //NSString *preloadURL = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"NZBirder_orig.sqlite"];
+    //        NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"NZBirder" ofType:@"sqlite"]];
+    //        NSError* err = nil;
+    //
+    //        //3rd option uncomment following:
+    //        firstRun = YES;
+    //       // 3rd option comment the following expression (in curly brackets) to force it into "firstRun"
+    //
+    //        NSLog(@"Copying DB");
+    //        if (![[NSFileManager defaultManager] copyItemAtURL:preloadURL toURL:storeURL error:&err]) {
+    //       //if (![[NSFileManager defaultManager] copyItemAtPath:<#(NSString *)#> toPath:<#(NSString *)#> error:<#(NSError *__autoreleasing *)#>:preloadURL toURL:storeURL error:&err]) {
+    //             firstRun = YES;
+    //             NSLog(@"Oops, couldn't copy preloaded data");
+    //        }                                                              //2nd option (leave in); 3rd option comment
+    //    }                                                                   //2nd option (leave in);; 3rd option comment
     
     // comment this completely out with the 2nd option
     //AND THEN PRETEND IT's OUR FIRST RUN so as to create the SQLLite DB        //2nd option
     if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]){ // isDirectory:NULL]) {
-		firstRun = YES;
+        firstRun = YES;
         NSLog(@"this is my first run");
-	}                                                                           //2nd option
+    }                                                                           //2nd option
     
-   // comment this completely out with the 2nd option
+    // comment this completely out with the 2nd option
     //v2 needs new options to switch back from write-ahead-logging mode in SQLLITe which is now the default in order to have only the sqlite DB file:
     NSDictionary *options = @{NSSQLitePragmasOption:@{@"journal_mode":@"DELETE"}, NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES};
     NSError *error = nil;                                                       //2nd option
@@ -197,37 +201,37 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }                                                                                                               // end of 2nd option
-    
+    // *****************************************************
     
     /*
-	 If this is the first run, populate a new store with events whose timestamps are spaced every 7 days throughout 2013.
-	 */
-	if (firstRun) {
-		NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+     If this is the first run, populate a new store with events whose timestamps are spaced every 7 days throughout 2013.
+     */
+    if (firstRun) {
+        NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         
         [context setPersistentStoreCoordinator:self.persistentStoreCoordinator];
-		
-		NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
-		[dateComponents setYear:2013];
-		
+        
+        NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+        [dateComponents setYear:2013];
+        
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
         [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
         
-		NSCalendar *calendar = [NSCalendar currentCalendar];
-		NSInteger day;
-		
-         day = 1;
-			[dateComponents setDay:day];
-			NSDate *date = [calendar dateFromComponents:dateComponents];
-            
-            NSDate *dateRepresentingThisDay = [self dateAtBeginningOfDayForDate:date];
-            
-
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        NSInteger day;
+        
+        day = 1;
+        [dateComponents setDay:day];
+        NSDate *date = [calendar dateFromComponents:dateComponents];
+        
+        NSDate *dateRepresentingThisDay = [self dateAtBeginningOfDayForDate:date];
+        
+        
         NSError *error;
         //[context save:&error];
-		//[context save:NULL];
-       
+        //[context save:NULL];
+        
         //Create 2 observation spots, make the second one the default location after install
         
         //Insert some Spot as an example
@@ -238,79 +242,79 @@
         //NSLog (@"self.spotname is: %@", self.spotname);
         
         //Spot *spot = [Spot insertNewDefaultSpot:_spotname inManagedObjectContext:context];//Insert some other Spot as an example
-//        NSManagedObject *newManagedSpotObject2  = [NSEntityDescription insertNewObjectForEntityForName:@"Spot" inManagedObjectContext:context];
-//        [newManagedSpotObject2 setValue:@"DefaultSpot" forKey:@"name"];
+        //        NSManagedObject *newManagedSpotObject2  = [NSEntityDescription insertNewObjectForEntityForName:@"Spot" inManagedObjectContext:context];
+        //        [newManagedSpotObject2 setValue:@"DefaultSpot" forKey:@"name"];
         
-//        [context save:&error];
+        //        [context save:&error];
         //    NSDateFormatter *df = [[NSDateFormatter alloc] init];
         //    df.dateStyle = NSDateFormatterShortStyle;
         //    df.timeStyle = NSDateFormatterShortStyle;
         //    [NSString stringWithFormat:@"Spot (%@)", [df stringFromDate:[NSDate date]]];
-//        NSDate *now = [[NSDate alloc] init];
-//        //NSDateComponents *dateComps =[now components:NSHourCalendarUnit | NSMinuteCalendarUnit fromDate:now];
-//        //NSDate *beginningOfDay = [now dateFromComponents:dateComps];
-//        // NSDate *date = [NSDate dateWithTimeIntervalSince1970:result];
-//        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//        [formatter setDateFormat:@"HH:mm:ss"];
-//        NSString *localizedString = [formatter stringFromDate:now];
-//        //v2: changed default protocol to stationary
-//        //spot.date_last_changed = now;
-//        //spot.name = @"DefaultSpot";
-//        spot.latitude = 38.89104461669922;
-//        spot.longitude = -76.81642150878906;
-//        spot.notes = @" weather, # of observers in party:";
-//        spot.protocol = @"Stationary";
-//        //NSNumber *myNumber = [NSNumber numberWithInt:1];
-//        //spot.isCurrent = myNumber;
-//        spot.allObs = @"Y";
-//        spot.startTime = localizedString;
-
-//       //CurrentSpot *currentspot =
+        //        NSDate *now = [[NSDate alloc] init];
+        //        //NSDateComponents *dateComps =[now components:NSHourCalendarUnit | NSMinuteCalendarUnit fromDate:now];
+        //        //NSDate *beginningOfDay = [now dateFromComponents:dateComps];
+        //        // NSDate *date = [NSDate dateWithTimeIntervalSince1970:result];
+        //        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        //        [formatter setDateFormat:@"HH:mm:ss"];
+        //        NSString *localizedString = [formatter stringFromDate:now];
+        //        //v2: changed default protocol to stationary
+        //        //spot.date_last_changed = now;
+        //        //spot.name = @"DefaultSpot";
+        //        spot.latitude = 38.89104461669922;
+        //        spot.longitude = -76.81642150878906;
+        //        spot.notes = @" weather, # of observers in party:";
+        //        spot.protocol = @"Stationary";
+        //        //NSNumber *myNumber = [NSNumber numberWithInt:1];
+        //        //spot.isCurrent = myNumber;
+        //        spot.allObs = @"Y";
+        //        spot.startTime = localizedString;
+        
+        //       //CurrentSpot *currentspot =
         NSManagedObject *newManagedSpotObject3 = [NSEntityDescription insertNewObjectForEntityForName:@"CurrentSpot" inManagedObjectContext:context];
         [newManagedSpotObject3 setValue:@"DefaultSpot" forKey:@"name"];
         
         [context save:&error];
-//        //    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-//        //    df.dateStyle = NSDateFormatterShortStyle;
-//        //    df.timeStyle = NSDateFormatterShortStyle;
-//        //    [NSString stringWithFormat:@"Spot (%@)", [df stringFromDate:[NSDate date]]];
-////        NSDate *now = [[NSDate alloc] init];
-////        //NSDateComponents *dateComps =[now components:NSHourCalendarUnit | NSMinuteCalendarUnit fromDate:now];
-////        //NSDate *beginningOfDay = [now dateFromComponents:dateComps];
-////        // NSDate *date = [NSDate dateWithTimeIntervalSince1970:result];
-////        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-////        [formatter setDateFormat:@"HH:mm:ss"];
-////        NSString *localizedString = [formatter stringFromDate:now];
-////        //v2: changed default protocol to stationary
-//        //currentspot.date_last_changed = now;
-//        currentspot.name = @"DefaultSpot";
-//        currentspot.latitude = 38.89104461669922;
-//        currentspot.longitude = -76.81642150878906;
-////        currentspot = @" weather, # of observers in party:";
-////        spot.protocol = @"Stationary";
-////        NSNumber *myNumber = [NSNumber numberWithInt:1];
-////        spot.isCurrent = myNumber;
-////        spot.allObs = @"Y";
-////        spot.startTime = localizedString;
-
+        //        //    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+        //        //    df.dateStyle = NSDateFormatterShortStyle;
+        //        //    df.timeStyle = NSDateFormatterShortStyle;
+        //        //    [NSString stringWithFormat:@"Spot (%@)", [df stringFromDate:[NSDate date]]];
+        ////        NSDate *now = [[NSDate alloc] init];
+        ////        //NSDateComponents *dateComps =[now components:NSHourCalendarUnit | NSMinuteCalendarUnit fromDate:now];
+        ////        //NSDate *beginningOfDay = [now dateFromComponents:dateComps];
+        ////        // NSDate *date = [NSDate dateWithTimeIntervalSince1970:result];
+        ////        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        ////        [formatter setDateFormat:@"HH:mm:ss"];
+        ////        NSString *localizedString = [formatter stringFromDate:now];
+        ////        //v2: changed default protocol to stationary
+        //        //currentspot.date_last_changed = now;
+        //        currentspot.name = @"DefaultSpot";
+        //        currentspot.latitude = 38.89104461669922;
+        //        currentspot.longitude = -76.81642150878906;
+        ////        currentspot = @" weather, # of observers in party:";
+        ////        spot.protocol = @"Stationary";
+        ////        NSNumber *myNumber = [NSNumber numberWithInt:1];
+        ////        spot.isCurrent = myNumber;
+        ////        spot.allObs = @"Y";
+        ////        spot.startTime = localizedString;
+        
         
         
         //NSManagedObject *newManagedSpotObject2  = [Spot insertNewDefaultSpot:self.spotname inManagedObjectContext:context];//Insert some other Spot as an example
         
-//        NSManagedObject *newManagedSpotObject2 = [NSEntityDescription insertNewObjectForEntityForName:@"Spot" inManagedObjectContext:context];
-//
-//        [newManagedSpotObject2 setValue:@"Kettering at 01 Sep, 2013 21:04" forKey:@"name"];
-//        
-//        [newManagedSpotObject2 setValue:@"38.8910" forKey:@"latitude"];
-//        [newManagedSpotObject2 setValue:@"-76.8164" forKey:@"longitude"];
-//        [newManagedSpotObject2 setValue:@"6" forKey:@"ent"];
-//        [newManagedSpotObject2 setValue:@"7" forKey:@"opt"];
-//        [newManagedSpotObject2 setValue:@"Y" forKey:@"allobs"];
-//        [newManagedSpotObject2 setValue:@"Y" forKey:@"iscurrent"];
-//        [newManagedSpotObject2 setValue:@"none" forKey:@"notes"];
+        //        NSManagedObject *newManagedSpotObject2 = [NSEntityDescription insertNewObjectForEntityForName:@"Spot" inManagedObjectContext:context];
+        //
+        //        [newManagedSpotObject2 setValue:@"Kettering at 01 Sep, 2013 21:04" forKey:@"name"];
+        //
+        //        [newManagedSpotObject2 setValue:@"38.8910" forKey:@"latitude"];
+        //        [newManagedSpotObject2 setValue:@"-76.8164" forKey:@"longitude"];
+        //        [newManagedSpotObject2 setValue:@"6" forKey:@"ent"];
+        //        [newManagedSpotObject2 setValue:@"7" forKey:@"opt"];
+        //        [newManagedSpotObject2 setValue:@"Y" forKey:@"allobs"];
+        //        [newManagedSpotObject2 setValue:@"Y" forKey:@"iscurrent"];
+        //        [newManagedSpotObject2 setValue:@"none" forKey:@"notes"];
         
         [context save:&error];
-		
+        
         
         //someBird
         NSManagedObject *newManagedObject1 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
@@ -323,7 +327,7 @@
         [newManagedObject1 setValue:@"Morepork" forKey:@"name"];
         [newManagedObject1 setValue:@"grey" forKey:@"beak_colour"];
         [newManagedObject1 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject1 setValue:@"nocturnal,can fly silently" forKey:@"behaviour"];
+        [newManagedObject1 setValue:@"yes,nocturnal,can fly silently" forKey:@"behaviour"];
         [newManagedObject1 setValue:@"1" forKey:@"category"];
         [newManagedObject1 setValue:@"brown" forKey:@"colour"];
         [newManagedObject1 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -331,21 +335,21 @@
         [newManagedObject1 setValue:@"bush" forKey:@"habitat"];
         
         
-//        NSURL *url1 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                             pathForResource:@"MoreporkMaunga"
-//                                             ofType:@"jpg"]];
-//        
-//        NSData *data1 = [[NSData alloc] initWithContentsOfURL:url1];
-//        UIImage *imageSave1=[[UIImage alloc]initWithData:data1];
-//        NSData *imageData1 = UIImagePNGRepresentation(imageSave1);
-//        
-//        [newManagedObject1 setValue:imageData1 forKey:@"image"];
-//        
+        //        NSURL *url1 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                             pathForResource:@"MoreporkMaunga"
+        //                                             ofType:@"jpg"]];
+        //
+        //        NSData *data1 = [[NSData alloc] initWithContentsOfURL:url1];
+        //        UIImage *imageSave1=[[UIImage alloc]initWithData:data1];
+        //        NSData *imageData1 = UIImagePNGRepresentation(imageSave1);
+        //
+        //        [newManagedObject1 setValue:imageData1 forKey:@"image"];
+        //
         [newManagedObject1 setValue:@"MoreporkMaunga" forKey:@"image"];
         
         NSURL *url1t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                              pathForResource:@"MoreporkMaunga_TN"
-                                              ofType:@"jpg"]];
+                                               pathForResource:@"MoreporkMaunga_TN"
+                                               ofType:@"jpg"]];
         
         NSData *data1t = [[NSData alloc] initWithContentsOfURL:url1t];
         UIImage *imageSave1t=[[UIImage alloc]initWithData:data1t];
@@ -357,7 +361,7 @@
         
         [newManagedObject1 setValue:@"The morepork is NZ’s only surviving native owl. Often heard in the forest at dusk and throughout the night, the morepork is known for its haunting, melancholic call. It was introduced to New Zealand between 1906 and 1910 to try to control smaller introduced birds.\n\nMorepork are commonly found in forests throughout mainland New Zealand and on offshore islands. They are less common within the drier open regions of Canterbury and Otago. They are classified as not threatened.\n\nPhysical description\n\nMorepork are speckled brown with yellow eyes set in a dark facial mask. They have a short tail.\nThe females are bigger than the males.\nHead to tail they measure around 29cm and the average weight is about 175g.\nThey have acute hearing and are sensitive to light.\nThey can turn their head through 280 degrees.\n\nNocturnal birds of prey\n\nMorepork are nocturnal, hunting at night for large invertebrates including beetles, weta, moths and spiders. They will also take small birds, rats and mice. They fly silently as they have soft fringes on the edge of the wing feathers. They catch prey using large sharp talons or beak. By day they roost in the cavities of trees or in thick vegetation. If they are visible during the day they can get mobbed by other birds and are forced to move.\n\nNesting and breeding\nMorepork nest in tree cavities, in clumps of epiphytes or among rocks and roots.\nThe female can lay up to three eggs, but generally two, usually between September and November.\nThe female alone incubates the eggs for about 20 to 32 days during which time the male brings in food for her.\nOnce the chicks hatch, the female stays mainly on the nest until the owlets are fully feathered.\nThey fledge around 37-42 days.\nDepending on food supply often only one chick survives and the other may be eaten.\n\nMaori tradition\nIn Maori tradition the morepork was seen as a watchful guardian. It belonged to the spirit world as it is a bird of the night. Although the more-pork or ruru call was thought to be a good sign, the high pitched, piercing, ‘yelp’ call was thought to be an ominous forewarning of bad news or events." forKey:@"item_description"];
         [newManagedObject1 setValue:@"yellow" forKey:@"leg_colour"];
-        [newManagedObject1 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/morepork-ruru/" forKey:@"link"];
+        [newManagedObject1 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/morepork-ruru/" forKey:@"link"];
         [newManagedObject1 setValue:@"Ruru" forKey:@"othername"];
         [newManagedObject1 setValue:@"Southern Boobook" forKey:@"short_name"];
         [newManagedObject1 setValue:@"Pigeon" forKey:@"size_and_shape"];
@@ -366,17 +370,17 @@
         [newManagedObject1 setValue:false forKey:@"extra"];
         [newManagedObject1 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
         
-		[context save:NULL];
+        [context save:NULL];
         newManagedObject1 = nil;
-//        data1 = nil;
-//        imageSave1 = nil;
-//        imageData1 = nil;
-//        url1 = nil;
+        //        data1 = nil;
+        //        imageSave1 = nil;
+        //        imageData1 = nil;
+        //        url1 = nil;
         
         //context = nil;
         
         
-//        ///++++
+        //        ///++++
         NSManagedObject *newManagedObject2 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         
@@ -386,7 +390,7 @@
         [newManagedObject2 setValue:@"Fantail" forKey:@"name"];
         [newManagedObject2 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject2 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject2 setValue:@"can fly, restless" forKey:@"behaviour"];
+        [newManagedObject2 setValue:@"yes,can fly, restless" forKey:@"behaviour"];
         [newManagedObject2 setValue:@"1" forKey:@"category"];
         [newManagedObject2 setValue:@"black,grey" forKey:@"colour"];
         [newManagedObject2 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -394,20 +398,20 @@
         [newManagedObject2 setValue:@"garden,bush" forKey:@"habitat"];
         
         
-//        NSURL *url2 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                             pathForResource:@"Grey_Fantail"
-//                                             ofType:@"jpg"]];
-//        
-//        NSData *data2 = [[NSData alloc] initWithContentsOfURL:url2];
-//        UIImage *imageSave2=[[UIImage alloc]initWithData:data2];
-//        NSData *imageData2 = UIImagePNGRepresentation(imageSave2);
-//        
-//        [newManagedObject2 setValue:imageData2 forKey:@"image"];
+        //        NSURL *url2 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                             pathForResource:@"Grey_Fantail"
+        //                                             ofType:@"jpg"]];
+        //
+        //        NSData *data2 = [[NSData alloc] initWithContentsOfURL:url2];
+        //        UIImage *imageSave2=[[UIImage alloc]initWithData:data2];
+        //        NSData *imageData2 = UIImagePNGRepresentation(imageSave2);
+        //
+        //        [newManagedObject2 setValue:imageData2 forKey:@"image"];
         [newManagedObject2 setValue:@"Fantail" forKey:@"image"];
         
         NSURL *url2t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                              pathForResource:@"Grey_Fantail_TN"
-                                              ofType:@"jpg"]];
+                                               pathForResource:@"Grey_Fantail_TN"
+                                               ofType:@"jpg"]];
         
         NSData *data2t = [[NSData alloc] initWithContentsOfURL:url2t];
         UIImage *imageSave2t=[[UIImage alloc]initWithData:data2t];
@@ -427,12 +431,12 @@
         [newManagedObject2 setValue:false forKey:@"extra"];
         [newManagedObject2 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
         
-		[context save:NULL];
+        [context save:NULL];
         newManagedObject2 = nil;
-//        data2 = nil;
-//        imageSave2 = nil;
-//        imageData2 = nil;
-//        url2 = nil;
+        //        data2 = nil;
+        //        imageSave2 = nil;
+        //        imageData2 = nil;
+        //        url2 = nil;
         
         //context = nil;
         
@@ -443,7 +447,7 @@
         [newManagedObject3 setValue:@"Tui" forKey:@"name"];
         [newManagedObject3 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject3 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject3 setValue:@"can fly, great imitator of other birds" forKey:@"behaviour"];
+        [newManagedObject3 setValue:@"yes,can fly, great imitator of other birds" forKey:@"behaviour"];
         [newManagedObject3 setValue:@"1" forKey:@"category"];
         [newManagedObject3 setValue:@"black" forKey:@"colour"];
         [newManagedObject3 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -451,20 +455,20 @@
         [newManagedObject3 setValue:@"bush,garden" forKey:@"habitat"];
         
         
-//        NSURL *url3 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                             pathForResource:@"Tui_on_flax"
-//                                             ofType:@"jpg"]];
-//        
-//        NSData *data3 = [[NSData alloc] initWithContentsOfURL:url3];
-//        UIImage *imageSave3=[[UIImage alloc]initWithData:data3];
-//        NSData *imageData3 = UIImagePNGRepresentation(imageSave3);
-//       
-//        [newManagedObject3 setValue:imageData3 forKey:@"image"];
+        //        NSURL *url3 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                             pathForResource:@"Tui_on_flax"
+        //                                             ofType:@"jpg"]];
+        //
+        //        NSData *data3 = [[NSData alloc] initWithContentsOfURL:url3];
+        //        UIImage *imageSave3=[[UIImage alloc]initWithData:data3];
+        //        NSData *imageData3 = UIImagePNGRepresentation(imageSave3);
+        //
+        //        [newManagedObject3 setValue:imageData3 forKey:@"image"];
         [newManagedObject3 setValue:@"Tui_on_flax" forKey:@"image"];
         
         NSURL *url3t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                              pathForResource:@"Tui_on_flax_TN"
-                                              ofType:@"jpg"]];
+                                               pathForResource:@"Tui_on_flax_TN"
+                                               ofType:@"jpg"]];
         
         NSData *data3t = [[NSData alloc] initWithContentsOfURL:url3t];
         UIImage *imageSave3t=[[UIImage alloc]initWithData:data3t];
@@ -474,7 +478,7 @@
         
         [newManagedObject3 setValue:@"Tūī are common throughout New Zealand in forests, towns and on off-shore islands. They are adaptable and are found not only in native forests, bush reserves and bush remnants but also in suburban areas, particularly in winter if there is a flowering gum about.\n\nCan often be heard singing their beautiful melodies long before they are spotted. \n\nIf you are fortunate to glimpse one you will recognise them by their distinctive white tuft under their throat, which contrasts dramatically with the metallic blue-green sheen to their underlying black colour.\n\nTūī are unique (endemic) to New Zealand and belong to the honeyeater family, which means they feed mainly on nectar from flowers of native plants such as kōwhai, puriri, rewarewa, kahikatea, pohutukawa, rātā and flax. Occasionally they will eat insects too. Tūī are important pollinators of many native trees and will fly large distances, especially during winter for their favourite foods.\nTūī will live where there is a balance of ground cover, shrubs and trees. Tūī are quite aggressive, and will chase other tūī and other species (such as bellbird, silvereye and kereru) away from good food sources.\n\nAn ambassador for successful rejuvenation\n\nA good sign of a successful restoration programme, in areas of New Zealand, is the sound of the tūī warbling in surrounding shrubs. These clever birds are often confusing to the human ear as they mimic sounds such as the calls of the bellbird. They combine bell-like notes with harsh clicks, barks, cackles and wheezes.\n\nBreeding facts\n\nCourting takes place between September and October when they sing high up in the trees in the early morning and late afternoon. Display dives, where the bird will fly up in a sweeping arch and then dive at speed almost vertically, are also associated with breeding. Only females build nests, which are constructed from twigs, fine grasses and moss.\n\nWhere can tūī be found\nThe tūī can be found throughout the three main islands of New Zealand. The Chatham Islands have their own subspecies of tūī that differs from the mainland variety mostly in being larger." forKey:@"item_description"];
         [newManagedObject3 setValue:@"black" forKey:@"leg_colour"];
-        [newManagedObject3 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/tui/" forKey:@"link"];
+        [newManagedObject3 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/tui/" forKey:@"link"];
         [newManagedObject3 setValue:@"Prosthemadera novaeseelandiae" forKey:@"othername"];
         [newManagedObject3 setValue:@"Tui" forKey:@"short_name"];
         [newManagedObject3 setValue:@"blackbird" forKey:@"size_and_shape"];
@@ -483,43 +487,43 @@
         [newManagedObject3 setValue:NO forKey:@"extra"];
         [newManagedObject3 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
         
-		[context save:NULL];
+        [context save:NULL];
         newManagedObject3 = nil;
-//        data3 = nil;
-//        imageSave3 = nil;
-//        imageData3 = nil;
-//        url3 = nil;
+        //        data3 = nil;
+        //        imageSave3 = nil;
+        //        imageData3 = nil;
+        //        url3 = nil;
         
         //context = nil;
         
         
-         NSManagedObject *newManagedObject4 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        NSManagedObject *newManagedObject4 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         NSLog(@"Hihi");
         //Set Bird_attributes Stitchbird
         [newManagedObject4 setValue:@"Stitchbird" forKey:@"name"];
         [newManagedObject4 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject4 setValue:@"short,pointed,curved" forKey:@"beak_length"];
-        [newManagedObject4 setValue:@"can fly, only bird to mate face to face" forKey:@"behaviour"];
+        [newManagedObject4 setValue:@"yes,can fly, only bird to mate face to face" forKey:@"behaviour"];
         [newManagedObject4 setValue:@"1" forKey:@"category"];
         [newManagedObject4 setValue:@"brown" forKey:@"colour"];
         [newManagedObject4 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject4 setValue:@"Notiomystis" forKey:@"family"];
         [newManagedObject4 setValue:@"bush" forKey:@"habitat"];
-      
-//        NSURL *url4 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                              pathForResource:@"Hihi_Stitchbird1"
-//                                              ofType:@"jpg"]];
-//        
-//        NSData *data4 = [[NSData alloc] initWithContentsOfURL:url4];
-//        UIImage *imageSave4=[[UIImage alloc]initWithData:data4];
-//        NSData *imageData4 = UIImagePNGRepresentation(imageSave4);
-//        
-//        [newManagedObject4 setValue:imageData4 forKey:@"image"];
+        
+        //        NSURL *url4 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                              pathForResource:@"Hihi_Stitchbird1"
+        //                                              ofType:@"jpg"]];
+        //
+        //        NSData *data4 = [[NSData alloc] initWithContentsOfURL:url4];
+        //        UIImage *imageSave4=[[UIImage alloc]initWithData:data4];
+        //        NSData *imageData4 = UIImagePNGRepresentation(imageSave4);
+        //
+        //        [newManagedObject4 setValue:imageData4 forKey:@"image"];
         [newManagedObject4 setValue:@"Hihi_Stitchbird1" forKey:@"image"];
         
         NSURL *url4t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                              pathForResource:@"Hihi_Stitchbird1_TN"
-                                              ofType:@"jpg"]];
+                                               pathForResource:@"Hihi_Stitchbird1_TN"
+                                               ofType:@"jpg"]];
         
         NSData *data4t = [[NSData alloc] initWithContentsOfURL:url4t];
         UIImage *imageSave4t=[[UIImage alloc]initWithData:data4t];
@@ -530,7 +534,7 @@
         
         [newManagedObject4 setValue:@"The stitchbird/hihi (Notiomystis cincta) is one of New Zealand’s rarest birds.  A medium-sized forest species, hihi compete with tui and bellbirds for nectar, insects and small fruits.\nBut apart from diet, hihi share few qualities with tui and bellbird, which are members of the honeyeater family.  Recent DNA analysis has shown that hihi are in fact the sole representative of another bird family found only in New Zealand whose closest relatives may be the iconic wattlebirds that include kokako, saddleback and the extinct huia.\nHow to recognise hihi\n\nMale and female hihi look quite different.  He flaunts a flashy plumage of black head with white ‘ear’ tufts, bright yellow shoulder bars and breast bands and a white wing bar and has a mottled tan-grey-brown body.\nShe is more subdued with an olive-grey-brown body cover, white wing bars and small white ‘ear’ tufts.  They both have small cat-like whiskers around the beak and large bright eyes.\nHihi can be recognised by their posture of an upward tilted tail and strident call from which the name ‘stitchbird’ derives.  A 19th century ornithologist Sir Walter Buller described the call made by the male hihi as resembling the word ‘stitch’.    Both males and females also have a range of warble-like calls and whistles.\n\nUnique characteristics\nUnlike most other birds, hihi build their nests in tree cavities.  The nest is complex with a stick base topped with a nest cup of finer twigs and lined with fern scales, lichen and spider web.\nHihi have a diverse and unusual mating system. \n\nHihi research\n    An active research programme with Massey and Auckland universities, as well as other institutes, has greatly increased our knowledge of hihi biology.\nHihi have been found to have a fascinating and complex mating system.  Males pair up with a female in their territory while also seeking to mate with other females in the neighbourhood.  To ensure the chicks are his, males need to produce large amounts of sperm to dilute that of other males.  And to avoid wasting this, the male has to assess exactly when a female is ready to breed.  In the days leading up to laying, when a female is weighed down with developing eggs, a number of males may chase her for hours at a time, all attempting to mate with her.\nResearch has also resulted in developing techniques for managing nesting behaviour, for example, managing nest mites, cross fostering and sexing of chicks and habitat suitability.\nManagement of the captive population at the Pukaha Mount Bruce National Wildlife Centre in eastern Wairarapa has also contributed to understanding the role of avian diseases in managing hihi populations.  \n\nWhere to find:  —Little Barrier, Tiritiri Matangi, Kapiti Islands, Kaori Wildlife Sanctuary (Zealandia)." forKey:@"item_description"];
         [newManagedObject4 setValue:@"brown" forKey:@"leg_colour"];
-        [newManagedObject4 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/stitchbird/" forKey:@"link"];
+        [newManagedObject4 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/stitchbird/" forKey:@"link"];
         [newManagedObject4 setValue:@"Tauhou/Hihi" forKey:@"othername"];
         [newManagedObject4 setValue:@"Stitchbird" forKey:@"short_name"];
         [newManagedObject4 setValue:@"sparrow" forKey:@"size_and_shape"];
@@ -538,47 +542,47 @@
         [newManagedObject4 setValue:@"Nationally Vulnerable" forKey:@"threat_status"];
         [newManagedObject4 setValue:NO forKey:@"extra"];
         [newManagedObject4 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-
-       //}
-		
+        
+        //}
+        
         [context save:NULL];
         newManagedObject4 = nil;
-//        data4 = nil;
-//        imageSave4 = nil;
-//        imageData4 = nil;
-//        url4 = nil;
+        //        data4 = nil;
+        //        imageSave4 = nil;
+        //        imageData4 = nil;
+        //        url4 = nil;
         
         //context = nil;
         
         
         // +++++++++++MOA +++++++++++++
-      
+        
         
         NSManagedObject *newManagedObject5 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         NSLog(@"Moa");
         [newManagedObject5 setValue:@"Moa" forKey:@"name"];
         [newManagedObject5 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject5 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject5 setValue:@"flightless" forKey:@"behaviour"];
+        [newManagedObject5 setValue:@"no,flightless" forKey:@"behaviour"];
         [newManagedObject5 setValue:@"1" forKey:@"category"];
         [newManagedObject5 setValue:@"brown" forKey:@"colour"];
         [newManagedObject5 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject5 setValue:@"Ratites" forKey:@"family"];
         [newManagedObject5 setValue:@"coast,bush" forKey:@"habitat"];
-//        NSURL *url5 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                              pathForResource:@"823px-Dinornis1387"
-//                                              ofType:@"jpg"]];
-//        
-//        NSData *data5 = [[NSData alloc] initWithContentsOfURL:url5];
-//        UIImage *imageSave5=[[UIImage alloc]initWithData:data5];
-//        NSData *imageData5 = UIImagePNGRepresentation(imageSave5);
-//        
-//        [newManagedObject5 setValue:imageData5 forKey:@"image"];
+        //        NSURL *url5 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                              pathForResource:@"823px-Dinornis1387"
+        //                                              ofType:@"jpg"]];
+        //
+        //        NSData *data5 = [[NSData alloc] initWithContentsOfURL:url5];
+        //        UIImage *imageSave5=[[UIImage alloc]initWithData:data5];
+        //        NSData *imageData5 = UIImagePNGRepresentation(imageSave5);
+        //
+        //        [newManagedObject5 setValue:imageData5 forKey:@"image"];
         [newManagedObject5 setValue:@"823px-Dinornis1387" forKey:@"image"];
         
         NSURL *url5t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                              pathForResource:@"823px-Dinornis1387_TN"
-                                              ofType:@"jpg"]];
+                                               pathForResource:@"823px-Dinornis1387_TN"
+                                               ofType:@"jpg"]];
         
         NSData *data5t = [[NSData alloc] initWithContentsOfURL:url5t];
         UIImage *imageSave5t=[[UIImage alloc]initWithData:data5t];
@@ -599,47 +603,47 @@
         [newManagedObject5 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
         
         //}
-		
+        
         [context save:NULL];
         newManagedObject5 = nil;
-//        data5 = nil;
-//        imageSave5 = nil;
-//        imageData5 = nil;
-//        url5 = nil;
+        //        data5 = nil;
+        //        imageSave5 = nil;
+        //        imageData5 = nil;
+        //        url5 = nil;
         
         //context = nil;
-       
+        
         // +++++++++++SEAGULL red billed +++++++++++++
         /*  6
          */
         
         NSManagedObject *newManagedObject6 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         NSLog(@"Seagull, red" );
-       
+        
         [newManagedObject6 setValue:@"Gull, Red billed " forKey:@"name"];
         [newManagedObject6 setValue:@"red" forKey:@"beak_colour"];
         [newManagedObject6 setValue:@"long, hooked" forKey:@"beak_length"];
-        [newManagedObject6 setValue:@"can fly, loud,gregarious,flocks" forKey:@"behaviour"];
+        [newManagedObject6 setValue:@"yes,can fly, loud,gregarious,flocks" forKey:@"behaviour"];
         [newManagedObject6 setValue:@"1" forKey:@"category"];
         [newManagedObject6 setValue:@"white/black" forKey:@"colour"];
         [newManagedObject6 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject6 setValue:@"Waders, Gulls and Terns, Auks" forKey:@"family"];
         [newManagedObject6 setValue:@"coast" forKey:@"habitat"];
-//        NSURL *url6 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                              pathForResource:@"RedBilledGull_IMG_6599"
-//                                              ofType:@"jpg"]];
-//    
-//        NSData *data6 = [[NSData alloc] initWithContentsOfURL:url6];
-//        UIImage *imageSave6=[[UIImage alloc]initWithData:data6];
-//        NSData *imageData6 = UIImagePNGRepresentation(imageSave6);
-//        
-//        [newManagedObject6 setValue:imageData6 forKey:@"image"];
+        //        NSURL *url6 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                              pathForResource:@"RedBilledGull_IMG_6599"
+        //                                              ofType:@"jpg"]];
+        //
+        //        NSData *data6 = [[NSData alloc] initWithContentsOfURL:url6];
+        //        UIImage *imageSave6=[[UIImage alloc]initWithData:data6];
+        //        NSData *imageData6 = UIImagePNGRepresentation(imageSave6);
+        //
+        //        [newManagedObject6 setValue:imageData6 forKey:@"image"];
         [newManagedObject6 setValue:@"RedBilledGull_IMG_6599" forKey:@"image"];
         
-       
+        
         NSURL *url6t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                              pathForResource:@"RedBilledGull_IMG_6599_TN"
-                                              ofType:@"jpg"]];
+                                               pathForResource:@"RedBilledGull_IMG_6599_TN"
+                                               ofType:@"jpg"]];
         
         NSData *data6t = [[NSData alloc] initWithContentsOfURL:url6t];
         UIImage *imageSave6t=[[UIImage alloc]initWithData:data6t];
@@ -660,18 +664,18 @@
         [newManagedObject6 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
         
         //}
-		
+        
         [context save:NULL];
         newManagedObject6 = nil;
-//        data6 = nil;
-//        imageSave6 = nil;
-//        imageData6 = nil;
-//        url6t = nil;
-//        data6t = nil;
-//        imageSave6b = nil;
-//        imageData6b = nil;
-//        url6b = nil;
-//        
+        //        data6 = nil;
+        //        imageSave6 = nil;
+        //        imageData6 = nil;
+        //        url6t = nil;
+        //        data6t = nil;
+        //        imageSave6b = nil;
+        //        imageData6b = nil;
+        //        url6b = nil;
+        //
         //context = nil;
         
         // +++++++++++SEAGULL black winged +++++++++++++
@@ -683,27 +687,27 @@
         [newManagedObject7 setValue:@"Gull, Black backed " forKey:@"name"];
         [newManagedObject7 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject7 setValue:@"medium,hooked" forKey:@"beak_length"];
-        [newManagedObject7 setValue:@"can fly, good glider" forKey:@"behaviour"];
+        [newManagedObject7 setValue:@"yes,can fly, good glider" forKey:@"behaviour"];
         [newManagedObject7 setValue:@"1" forKey:@"category"];
         [newManagedObject7 setValue:@"white" forKey:@"colour"];
         [newManagedObject7 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject7 setValue:@"Waders, Gulls and Terns, Auks" forKey:@"family"];
         [newManagedObject7 setValue:@"coast" forKey:@"habitat"];
-//        NSURL *url7 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                              pathForResource:@"BlackWingGull_IMG_6659"
-//                                              ofType:@"jpg"]];
-//        
-//        NSData *data7 = [[NSData alloc] initWithContentsOfURL:url7];
-//        UIImage *imageSave7=[[UIImage alloc]initWithData:data7];
-//        NSData *imageData7 = UIImagePNGRepresentation(imageSave7);
-//        
-//        [newManagedObject7 setValue:imageData7 forKey:@"image"];
+        //        NSURL *url7 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                              pathForResource:@"BlackWingGull_IMG_6659"
+        //                                              ofType:@"jpg"]];
+        //
+        //        NSData *data7 = [[NSData alloc] initWithContentsOfURL:url7];
+        //        UIImage *imageSave7=[[UIImage alloc]initWithData:data7];
+        //        NSData *imageData7 = UIImagePNGRepresentation(imageSave7);
+        //
+        //        [newManagedObject7 setValue:imageData7 forKey:@"image"];
         [newManagedObject7 setValue:@"BlackWingGull_IMG_6659" forKey:@"image"];
         
-     
+        
         NSURL *url7t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                              pathForResource:@"BlackWingGull_IMG_6659_TN"
-                                              ofType:@"jpg"]];
+                                               pathForResource:@"BlackWingGull_IMG_6659_TN"
+                                               ofType:@"jpg"]];
         
         NSData *data7t = [[NSData alloc] initWithContentsOfURL:url7t];
         UIImage *imageSave7t=[[UIImage alloc]initWithData:data7t];
@@ -725,13 +729,13 @@
         [newManagedObject7 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
         
         //}
-		
+        
         [context save:NULL];
         newManagedObject7 = nil;
-//        data7 = nil;
-//        imageSave7 = nil;
-//        imageData7 = nil;
-//        url7 = nil;
+        //        data7 = nil;
+        //        imageSave7 = nil;
+        //        imageData7 = nil;
+        //        url7 = nil;
         
         //context = nil;
         
@@ -745,26 +749,26 @@
         [newManagedObject8 setValue:@"Oystercatcher, variable" forKey:@"name"];
         [newManagedObject8 setValue:@"red/orange" forKey:@"beak_colour"];
         [newManagedObject8 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject8 setValue:@"can fly, very vocal" forKey:@"behaviour"];
+        [newManagedObject8 setValue:@"yes,can fly, very vocal" forKey:@"behaviour"];
         [newManagedObject8 setValue:@"1" forKey:@"category"];
         [newManagedObject8 setValue:@"black" forKey:@"colour"];
         [newManagedObject8 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject8 setValue:@"Haematopodidae" forKey:@"family"];
         [newManagedObject8 setValue:@"coast" forKey:@"habitat"];
-//        NSURL *url8 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                              pathForResource:@"Watvogel_IMG_6674"
-//                                              ofType:@"jpg"]];
-//        
-//        NSData *data8 = [[NSData alloc] initWithContentsOfURL:url8];
-//        UIImage *imageSave8=[[UIImage alloc]initWithData:data8];
-//        NSData *imageData8 = UIImagePNGRepresentation(imageSave8);
-//        
-//        [newManagedObject8 setValue:imageData8 forKey:@"image"];
+        //        NSURL *url8 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                              pathForResource:@"Watvogel_IMG_6674"
+        //                                              ofType:@"jpg"]];
+        //
+        //        NSData *data8 = [[NSData alloc] initWithContentsOfURL:url8];
+        //        UIImage *imageSave8=[[UIImage alloc]initWithData:data8];
+        //        NSData *imageData8 = UIImagePNGRepresentation(imageSave8);
+        //
+        //        [newManagedObject8 setValue:imageData8 forKey:@"image"];
         [newManagedObject8 setValue:@"Watvogel_IMG_6674" forKey:@"image"];
-
+        
         NSURL *url8t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                              pathForResource:@"Watvogel_IMG_6674_TN"
-                                              ofType:@"jpg"]];
+                                               pathForResource:@"Watvogel_IMG_6674_TN"
+                                               ofType:@"jpg"]];
         
         NSData *data8t = [[NSData alloc] initWithContentsOfURL:url8t];
         UIImage *imageSave8t=[[UIImage alloc]initWithData:data8t];
@@ -784,14 +788,14 @@
         [newManagedObject8 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
         
         //}
-		
+        
         [context save:NULL];
         newManagedObject8 = nil;
-//        data8 = nil;
-//        imageSave8 = nil;
-//        imageData8 = nil;
-//        url8 = nil;
-//        
+        //        data8 = nil;
+        //        imageSave8 = nil;
+        //        imageData8 = nil;
+        //        url8 = nil;
+        //
         //context = nil;
         
         
@@ -804,27 +808,27 @@
         [newManagedObject9 setValue:@"Sparrow" forKey:@"name"];
         [newManagedObject9 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject9 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject9 setValue:@"can fly, gregarious, curious" forKey:@"behaviour"];
+        [newManagedObject9 setValue:@"yes,can fly, gregarious, curious" forKey:@"behaviour"];
         [newManagedObject9 setValue:@"1" forKey:@"category"];
         [newManagedObject9 setValue:@"brown" forKey:@"colour"];
         [newManagedObject9 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject9 setValue:@"Passeridae" forKey:@"family"];
         [newManagedObject9 setValue:@"garden" forKey:@"habitat"];
-//        NSURL *url9 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                              pathForResource:@"Sparrow_IMG_6604"
-//                                              ofType:@"jpg"]];
-//        
-//        NSData *data9 = [[NSData alloc] initWithContentsOfURL:url9];
-//        UIImage *imageSave9=[[UIImage alloc]initWithData:data9];
-//        NSData *imageData9 = UIImagePNGRepresentation(imageSave9);
-//        
-//        [newManagedObject9 setValue:imageData9 forKey:@"image"];
+        //        NSURL *url9 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                              pathForResource:@"Sparrow_IMG_6604"
+        //                                              ofType:@"jpg"]];
+        //
+        //        NSData *data9 = [[NSData alloc] initWithContentsOfURL:url9];
+        //        UIImage *imageSave9=[[UIImage alloc]initWithData:data9];
+        //        NSData *imageData9 = UIImagePNGRepresentation(imageSave9);
+        //
+        //        [newManagedObject9 setValue:imageData9 forKey:@"image"];
         [newManagedObject9 setValue:@"Sparrow_IMG_6604" forKey:@"image"];
         
         
         NSURL *url9t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                              pathForResource:@"Sparrow_IMG_6604_TN"
-                                              ofType:@"jpg"]];
+                                               pathForResource:@"Sparrow_IMG_6604_TN"
+                                               ofType:@"jpg"]];
         
         NSData *data9t = [[NSData alloc] initWithContentsOfURL:url9t];
         UIImage *imageSave9t=[[UIImage alloc]initWithData:data9t];
@@ -845,13 +849,13 @@
         [newManagedObject9 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
         
         //}
-		
+        
         [context save:NULL];
         newManagedObject9 = nil;
-//        data9 = nil;
-//        imageSave9 = nil;
-//        imageData9 = nil;
-//        url9 = nil;
+        //        data9 = nil;
+        //        imageSave9 = nil;
+        //        imageData9 = nil;
+        //        url9 = nil;
         
         //context = nil;
         
@@ -862,14 +866,14 @@
         
         NSManagedObject *newManagedObject10 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
-        //Set Bird_attributes 
+        //Set Bird_attributes
         [newManagedObject10 setValue:@"Gannet"       forKey:@"name"];
         [newManagedObject10 setValue:@"Takapu (Morus serrator)" forKey:@"othername"];
         [newManagedObject10 setValue:@"Up to 1.8m wingspan. Hunt by diving with up to 100km/h so they can catch fish deeper than most other fishing airborne bird species. An air sac under the skin in their face cushions the impact on the water. \n\nAdults are mostly white, with black flight feathers at the wingtips and lining the trailing edge of the wing. The central tail feathers are also black. The head is yellow, with a pale blue-grey bill edged in black, and blue-rimmed eyes. \n\nTheir breeding habitat is on islands and the coast of New Zealand, Victoria and Tasmania, with 87% of the adult population in New Zealand. These birds are plunge divers and spectacular fishers, plunging into the ocean at high speed. They mainly eat squid and forage fish which school near the surface. It has the same colours and similar appearance to the Northern Gannet. \n\nThey normally nest in large colonies on coastal islands. In New Zealand there are colonies of over 10,000 breeding pairs each at Three Kings Islands, Whakaari / White Island and Gannet Island. There is a large protected colony on the mainland at Cape Kidnappers (6,500 pairs). There are also mainland colonies at Muriwai and Farewell Spit, as well as numerous other island colonies. Gannet pairs may remain together over several seasons. They perform elaborate greeting rituals at the nest, stretching their bills and necks skywards and gently tapping bills together. The adults mainly stay close to colonies, whilst the younger birds disperse." forKey:@"item_description"];
         [newManagedObject10 setValue:@"http://www.teara.govt.nz/en/gannets-and-boobies/page-2" forKey:@"link"];
         [newManagedObject10 setValue:@"grey" forKey:@"beak_colour"];
         [newManagedObject10 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject10 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject10 setValue:@"yes,can fly" forKey:@"behaviour"];
         [newManagedObject10 setValue:@"1" forKey:@"category"];
         [newManagedObject10 setValue:@"white" forKey:@"colour"];
         [newManagedObject10 setValue:@"black" forKey:@"leg_colour"];
@@ -879,37 +883,37 @@
         [newManagedObject10 setValue:@"Australasian Gannet" forKey:@"short_name"];
         [newManagedObject10 setValue:@"albatross" forKey:@"size_and_shape"];
         
-//        NSURL *url10 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//              pathForResource:@"Gannet_IMG_6624"
-//              ofType:@"jpg"]];
-//        NSData *data10 = [[NSData alloc] initWithContentsOfURL:url10];
-//        UIImage *imageSave10=[[UIImage alloc]initWithData:data10];
-//        NSData *imageData10 = UIImagePNGRepresentation(imageSave10);
-//        [newManagedObject10 setValue:imageData10         forKey:@"image"];
-//        
+        //        NSURL *url10 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //              pathForResource:@"Gannet_IMG_6624"
+        //              ofType:@"jpg"]];
+        //        NSData *data10 = [[NSData alloc] initWithContentsOfURL:url10];
+        //        UIImage *imageSave10=[[UIImage alloc]initWithData:data10];
+        //        NSData *imageData10 = UIImagePNGRepresentation(imageSave10);
+        //        [newManagedObject10 setValue:imageData10         forKey:@"image"];
+        //
         [newManagedObject10 setValue:@"Gannet_IMG_6624"         forKey:@"image"];
         
         
         NSURL *url10t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Gannet_IMG_6624_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Gannet_IMG_6624_TN"
+                                                ofType:@"jpg"]];
         NSData *data10t = [[NSData alloc] initWithContentsOfURL:url10t];
         UIImage *imageSave10t=[[UIImage alloc]initWithData:data10t];
         NSData *imageData10t = UIImagePNGRepresentation(imageSave10t);
         [newManagedObject10 setValue:imageData10t         forKey:@"thumbnail"];
         
         [newManagedObject10 setValue:@"gannet" forKey:@"sound"];
-            
+        
         [newManagedObject10 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject10 setValue:NO forKey:@"extra"];
         [newManagedObject10 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
         
         [context save:NULL];
         newManagedObject10 = nil;
-//        data10 = nil;
-//        imageSave10 = nil;
-//        imageData10 = nil;
-//        url10 = nil;
+        //        data10 = nil;
+        //        imageSave10 = nil;
+        //        imageData10 = nil;
+        //        url10 = nil;
         
         //context = nil;
         //++++++++++++++++++++++
@@ -924,10 +928,10 @@
         [newManagedObject11 setValue:@"Tomtit (South Island)"       forKey:@"name"];
         [newManagedObject11 setValue:@"Ngirungiru (Miromiro)" forKey:@"othername"];
         [newManagedObject11 setValue:@"The New Zealand tomtit (Petroica macrocephala) looks similar to a robin. They are a small endemic bird with a large head, a short bill and tail, and live in forest and scrub.\nThe Māori name of the North Island Tomtit is miromiro, while the South Island Tomtit is known as ngirungiru.\nThere are five subspecies of tomtit/miromiro, each restricted to their own specific island or island group: North Island, South Island, the Snares Islands, the Chatham Islands and the Auckland Islands." forKey:@"item_description"];
-        [newManagedObject11 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/tomtit-miromiro/" forKey:@"link"];
+        [newManagedObject11 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/tomtit-miromiro/" forKey:@"link"];
         [newManagedObject11 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject11 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject11 setValue:@"can fly, largely insectivore/fruit in winter" forKey:@"behaviour"];
+        [newManagedObject11 setValue:@"yes,can fly, largely insectivore/fruit in winter" forKey:@"behaviour"];
         [newManagedObject11 setValue:@"1" forKey:@"category"];
         [newManagedObject11 setValue:@"black" forKey:@"colour"];
         [newManagedObject11 setValue:@"black" forKey:@"leg_colour"];
@@ -937,18 +941,18 @@
         [newManagedObject11 setValue:@"Tomtit" forKey:@"short_name"];
         [newManagedObject11 setValue:@"sparrow" forKey:@"size_and_shape"];
         
-//        NSURL *url11 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"SI_Tomtit_male2"
-//                                               ofType:@"jpg"]];
-//        NSData *data11 = [[NSData alloc] initWithContentsOfURL:url11];
-//        UIImage *imageSave11=[[UIImage alloc]initWithData:data11];
-//        NSData *imageData11 = UIImagePNGRepresentation(imageSave11);
-//        [newManagedObject11 setValue:imageData11         forKey:@"image"];
+        //        NSURL *url11 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"SI_Tomtit_male2"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data11 = [[NSData alloc] initWithContentsOfURL:url11];
+        //        UIImage *imageSave11=[[UIImage alloc]initWithData:data11];
+        //        NSData *imageData11 = UIImagePNGRepresentation(imageSave11);
+        //        [newManagedObject11 setValue:imageData11         forKey:@"image"];
         [newManagedObject11 setValue:@"NorthIsland_Tomtit_steintil"         forKey:@"image"];
         
         NSURL *url11t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"SI_Tomtit_male2_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"SI_Tomtit_male2_TN"
+                                                ofType:@"jpg"]];
         NSData *data11t = [[NSData alloc] initWithContentsOfURL:url11t];
         UIImage *imageSave11t=[[UIImage alloc]initWithData:data11t];
         NSData *imageData11t = UIImagePNGRepresentation(imageSave11t);
@@ -963,10 +967,10 @@
         
         [context save:NULL];
         newManagedObject11 = nil;
-//        data11 = nil;
-//        imageSave11 = nil;
-//        imageData11 = nil;
-//        url11 = nil;
+        //        data11 = nil;
+        //        imageSave11 = nil;
+        //        imageData11 = nil;
+        //        url11 = nil;
         
         //context = nil;
         //++++++++++++++++++++++
@@ -976,7 +980,7 @@
          */
         
         NSManagedObject *newManagedObject12 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-
+        
         //Set Bird_attributes
         [newManagedObject12 setValue:@"Starling"       forKey:@"name"];
         [newManagedObject12 setValue:@"Starling" forKey:@"othername"];
@@ -985,7 +989,7 @@
         [newManagedObject12 setValue:@"http://en.wikipedia.org/wiki/Starling" forKey:@"link"];
         [newManagedObject12 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject12 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject12 setValue:@"can fly, odd and quirky" forKey:@"behaviour"];
+        [newManagedObject12 setValue:@"yes,can fly" forKey:@"behaviour"];
         [newManagedObject12 setValue:@"1" forKey:@"category"];
         [newManagedObject12 setValue:@"black" forKey:@"colour"];
         [newManagedObject12 setValue:@"black" forKey:@"leg_colour"];
@@ -995,18 +999,18 @@
         [newManagedObject12 setValue:@"European Starling" forKey:@"short_name"];
         [newManagedObject12 setValue:@"blackbird" forKey:@"size_and_shape"];
         
-//        NSURL *url12 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Starling_IMG_6964"
-//                                               ofType:@"jpg"]];
-//        NSData *data12 = [[NSData alloc] initWithContentsOfURL:url12];
-//        UIImage *imageSave12=[[UIImage alloc]initWithData:data12];
-//        NSData *imageData12 = UIImagePNGRepresentation(imageSave12);
-//        [newManagedObject12 setValue:imageData12         forKey:@"image"];
+        //        NSURL *url12 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Starling_IMG_6964"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data12 = [[NSData alloc] initWithContentsOfURL:url12];
+        //        UIImage *imageSave12=[[UIImage alloc]initWithData:data12];
+        //        NSData *imageData12 = UIImagePNGRepresentation(imageSave12);
+        //        [newManagedObject12 setValue:imageData12         forKey:@"image"];
         [newManagedObject12 setValue:@"Starling_IMG_6964"         forKey:@"image"];
         
         NSURL *url12t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Starling_IMG_6964_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Starling_IMG_6964_TN"
+                                                ofType:@"jpg"]];
         NSData *data12t = [[NSData alloc] initWithContentsOfURL:url12t];
         UIImage *imageSave12t=[[UIImage alloc]initWithData:data12t];
         NSData *imageData12t = UIImagePNGRepresentation(imageSave12t);
@@ -1020,10 +1024,10 @@
         
         [context save:NULL];
         newManagedObject12 = nil;
-//        data12 = nil;
-//        imageSave12 = nil;
-//        imageData12 = nil;
-//        url12 = nil;
+        //        data12 = nil;
+        //        imageSave12 = nil;
+        //        imageData12 = nil;
+        //        url12 = nil;
         
         //context = nil;
         
@@ -1043,7 +1047,7 @@
         [newManagedObject13 setValue:@"http://www.nzbirds.com/birds/goldfinch.html" forKey:@"link"];
         [newManagedObject13 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject13 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject13 setValue:@"can fly, group together in winter" forKey:@"behaviour"];
+        [newManagedObject13 setValue:@"yes,can fly, group together in winter" forKey:@"behaviour"];
         [newManagedObject13 setValue:@"1" forKey:@"category"];
         [newManagedObject13 setValue:@"brown/red/yellow" forKey:@"colour"];
         [newManagedObject13 setValue:@"red/brown" forKey:@"leg_colour"];
@@ -1053,18 +1057,18 @@
         [newManagedObject13 setValue:@"European Goldfinch" forKey:@"short_name"];
         [newManagedObject13 setValue:@"sparrow" forKey:@"size_and_shape"];
         
-//        NSURL *url13 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Goldfinch_IMG_6721"
-//                                               ofType:@"jpg"]];
-//        NSData *data13 = [[NSData alloc] initWithContentsOfURL:url13];
-//        UIImage *imageSave13=[[UIImage alloc]initWithData:data13];
-//        NSData *imageData13 = UIImagePNGRepresentation(imageSave13);
-//        [newManagedObject13 setValue:imageData13         forKey:@"image"];
+        //        NSURL *url13 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Goldfinch_IMG_6721"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data13 = [[NSData alloc] initWithContentsOfURL:url13];
+        //        UIImage *imageSave13=[[UIImage alloc]initWithData:data13];
+        //        NSData *imageData13 = UIImagePNGRepresentation(imageSave13);
+        //        [newManagedObject13 setValue:imageData13         forKey:@"image"];
         [newManagedObject13 setValue:@"Goldfinch_IMG_6721"         forKey:@"image"];
         
         NSURL *url13t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Goldfinch_IMG_6721_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Goldfinch_IMG_6721_TN"
+                                                ofType:@"jpg"]];
         NSData *data13t = [[NSData alloc] initWithContentsOfURL:url13t];
         UIImage *imageSave13t=[[UIImage alloc]initWithData:data13t];
         NSData *imageData13t = UIImagePNGRepresentation(imageSave13t);
@@ -1079,10 +1083,10 @@
         
         [context save:NULL];
         newManagedObject13 = nil;
-//        data13 = nil;
-//        imageSave13 = nil;
-//        imageData13 = nil;
-//        url13 = nil;
+        //        data13 = nil;
+        //        imageSave13 = nil;
+        //        imageData13 = nil;
+        //        url13 = nil;
         
         // +++++++++++Magpie +++++++++++++
         /*  14
@@ -1093,11 +1097,11 @@
         //Set Bird_attributes
         [newManagedObject14 setValue:@"Magpie, australian"       forKey:@"name"];
         [newManagedObject14 setValue:@"Cracticus tibicen" forKey:@"othername"];
-        [newManagedObject14 setValue:@"he black-and-white Australian magpie is a common and conspicuous inhabitant of open country throughout much of New Zealand. It was introduced from Australia and Tasmania by Acclimatisation Societies between 1864 and 1874, mainly to control insect pests. There are three subspecies; the black-backed, and two white-backed forms, with white-backed birds predominating in most parts of New Zealand.\n\n        Identification\n\n         This familiar large songbird is similar in size to a crow or a New Zealand pigeon. The white-backed form tyrannica is the largest of the sub-species. The male has a white hind-neck, mantle, rump and shoulder patches. The upper two-thirds of the tail and under-tail coverts are also white. The rest of the plumage is black, with a blue iridescence. The female is similar, but the mantle is grey, and the black parts of the plumage are less iridescent. Both sexes have a blue-grey bill with a dark tip, and red eyes. The male takes several years to attain full adult plumage; after the second moult it resembles an adult female. Some white appears on the mantle after the third moult, and the remainder after the fourth moult. The juvenile is mottled grey on the under-surface. The black-backed magpie is similar to the white-backed forms, but with a black mantle. The female can be identified by the presence of some grey on the lower hind-neck. The two subspecies interbreed, resulting in offspring with a varying amount of black on the mantle, ranging from a few feathers to a narrow band.\n\n         Both sexes have a distinctive carolling song; “quardle oodle ardle wardle doodle”.\n\n         With its large size and strikingly pied plumage, the Australian magpie is not readily confused with any other species.\n\n         Distribution and habitat\n\n        The magpie is found throughout the North Island. In the South Island it is most common from Kaikoura to Southland. It is uncommon in Nelson and inland Marlborough, and is largely absent from Westland, except for the area between Harihari and Westport. The white-backed forms predominate except in Hawke’s Bay and North Canterbury, where black-backed birds make up around 95% of the population.\n        \n        The white-backed forms originate from south-eastern Australia and Tasmania, and the black-backed from northern Australia and southern New Guinea. Australian magpies were also introduced to Fiji.\n         \n         Magpies are most abundant on farmland with shelterbelts of pines, macrocarpas and gums. They inhabit both lowland and hill-country farming districts, and are frequently found in urban habitats such as parks and golf-courses.\n\n      Population\n\n         Australian magpies are common in much of the North Island and the east of the South Island south of Kaikoura. They have declined in some areas, e.g. Wellington, as a result of control programmes.\n         \nEcological and economic impacts\n\n         The Australian magpie has been widely implicated in the predation of native birds and their nests, but much evidence is anecdotal. However, magpies do occasionally kill other birds, mostly smaller species. One was seen to pursue, capture and kill a juvenile goldfinch, and another took 3 newly-hatched banded dotterel chicks from a nest. Most attacks appear to be opportunistic, involving young or weak victims. Many of the attacks by magpies against larger birds are directed towards harriers, and generally cease when the target leaves the territory. This harassment of harriers may even have a protective effect on other species breeding in a magpie’s territory." forKey:@"item_description"];
+        [newManagedObject14 setValue:@"The black-and-white Australian magpie is a common and conspicuous inhabitant of open country throughout much of New Zealand. It was introduced from Australia and Tasmania by Acclimatisation Societies between 1864 and 1874, mainly to control insect pests. There are three subspecies; the black-backed, and two white-backed forms, with white-backed birds predominating in most parts of New Zealand.\n\n        Identification\n\n         This familiar large songbird is similar in size to a crow or a New Zealand pigeon. The white-backed form tyrannica is the largest of the sub-species. The male has a white hind-neck, mantle, rump and shoulder patches. The upper two-thirds of the tail and under-tail coverts are also white. The rest of the plumage is black, with a blue iridescence. The female is similar, but the mantle is grey, and the black parts of the plumage are less iridescent. Both sexes have a blue-grey bill with a dark tip, and red eyes. The male takes several years to attain full adult plumage; after the second moult it resembles an adult female. Some white appears on the mantle after the third moult, and the remainder after the fourth moult. The juvenile is mottled grey on the under-surface. The black-backed magpie is similar to the white-backed forms, but with a black mantle. The female can be identified by the presence of some grey on the lower hind-neck. The two subspecies interbreed, resulting in offspring with a varying amount of black on the mantle, ranging from a few feathers to a narrow band.\n\n         Both sexes have a distinctive carolling song; “quardle oodle ardle wardle doodle”.\n\n         With its large size and strikingly pied plumage, the Australian magpie is not readily confused with any other species.\n\n         Distribution and habitat\n\n        The magpie is found throughout the North Island. In the South Island it is most common from Kaikoura to Southland. It is uncommon in Nelson and inland Marlborough, and is largely absent from Westland, except for the area between Harihari and Westport. The white-backed forms predominate except in Hawke’s Bay and North Canterbury, where black-backed birds make up around 95% of the population.\n        \n        The white-backed forms originate from south-eastern Australia and Tasmania, and the black-backed from northern Australia and southern New Guinea. Australian magpies were also introduced to Fiji.\n         \n         Magpies are most abundant on farmland with shelterbelts of pines, macrocarpas and gums. They inhabit both lowland and hill-country farming districts, and are frequently found in urban habitats such as parks and golf-courses.\n\n      Population\n\n         Australian magpies are common in much of the North Island and the east of the South Island south of Kaikoura. They have declined in some areas, e.g. Wellington, as a result of control programmes.\n         \nEcological and economic impacts\n\n         The Australian magpie has been widely implicated in the predation of native birds and their nests, but much evidence is anecdotal. However, magpies do occasionally kill other birds, mostly smaller species. One was seen to pursue, capture and kill a juvenile goldfinch, and another took 3 newly-hatched banded dotterel chicks from a nest. Most attacks appear to be opportunistic, involving young or weak victims. Many of the attacks by magpies against larger birds are directed towards harriers, and generally cease when the target leaves the territory. This harassment of harriers may even have a protective effect on other species breeding in a magpie’s territory." forKey:@"item_description"];
         [newManagedObject14 setValue:@"http://nzbirdsonline.org.nz/species/australian-magpie" forKey:@"link"];
         [newManagedObject14 setValue:@"white/black" forKey:@"beak_colour"];
         [newManagedObject14 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject14 setValue:@"can fly, walks rather than waddles or hops" forKey:@"behaviour"];
+        [newManagedObject14 setValue:@"yes,can fly, walks rather than waddles or hops" forKey:@"behaviour"];
         [newManagedObject14 setValue:@"1" forKey:@"category"];
         [newManagedObject14 setValue:@"black" forKey:@"colour"];
         [newManagedObject14 setValue:@"black" forKey:@"leg_colour"];
@@ -1107,18 +1111,18 @@
         [newManagedObject14 setValue:@"Australian Magpie" forKey:@"short_name"];
         [newManagedObject14 setValue:@"pigeon" forKey:@"size_and_shape"];
         
-//        NSURL *url14 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Magpie_Australian_IMG_6747"
-//                                               ofType:@"jpg"]];
-//        NSData *data14 = [[NSData alloc] initWithContentsOfURL:url14];
-//        UIImage *imageSave14=[[UIImage alloc]initWithData:data14];
-//        NSData *imageData14 = UIImagePNGRepresentation(imageSave14);
-//        [newManagedObject14 setValue:imageData14         forKey:@"image"];
+        //        NSURL *url14 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Magpie_Australian_IMG_6747"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data14 = [[NSData alloc] initWithContentsOfURL:url14];
+        //        UIImage *imageSave14=[[UIImage alloc]initWithData:data14];
+        //        NSData *imageData14 = UIImagePNGRepresentation(imageSave14);
+        //        [newManagedObject14 setValue:imageData14         forKey:@"image"];
         [newManagedObject14 setValue:@"Magpie_Australian_IMG_6747"         forKey:@"image"];
         
         NSURL *url14t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Magpie_Australian_IMG_6747_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Magpie_Australian_IMG_6747_TN"
+                                                ofType:@"jpg"]];
         NSData *data14t = [[NSData alloc] initWithContentsOfURL:url14t];
         UIImage *imageSave14t=[[UIImage alloc]initWithData:data14t];
         NSData *imageData14t = UIImagePNGRepresentation(imageSave14t);
@@ -1133,10 +1137,10 @@
         
         [context save:NULL];
         newManagedObject14 = nil;
-//        data14 = nil;
-//        imageSave14 = nil;
-//        imageData14 = nil;
-//        url14 = nil;
+        //        data14 = nil;
+        //        imageSave14 = nil;
+        //        imageData14 = nil;
+        //        url14 = nil;
         
         
         
@@ -1153,7 +1157,7 @@
         [newManagedObject15 setValue:@"http://www.nzbirds.com/birds/yellowhammer.html" forKey:@"link"];
         [newManagedObject15 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject15 setValue:@"short,pointed" forKey:@"beak_length"];
-        [newManagedObject15 setValue:@"can fly, forms small flocks in winter" forKey:@"behaviour"];
+        [newManagedObject15 setValue:@"yes,can fly, forms small flocks in winter" forKey:@"behaviour"];
         [newManagedObject15 setValue:@"1" forKey:@"category"];
         [newManagedObject15 setValue:@"yellow/brown" forKey:@"colour"];
         [newManagedObject15 setValue:@"red" forKey:@"leg_colour"];
@@ -1163,18 +1167,18 @@
         [newManagedObject15 setValue:@"Yellowhammer" forKey:@"short_name"];
         [newManagedObject15 setValue:@"sparrow" forKey:@"size_and_shape"];
         
-//        NSURL *url15 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Yellowhammer_IMG_7001"
-//                                               ofType:@"jpg"]];
-//        NSData *data15 = [[NSData alloc] initWithContentsOfURL:url15];
-//        UIImage *imageSave15=[[UIImage alloc]initWithData:data15];
-//        NSData *imageData15 = UIImagePNGRepresentation(imageSave15);
-//        [newManagedObject15 setValue:imageData15         forKey:@"image"];
+        //        NSURL *url15 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Yellowhammer_IMG_7001"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data15 = [[NSData alloc] initWithContentsOfURL:url15];
+        //        UIImage *imageSave15=[[UIImage alloc]initWithData:data15];
+        //        NSData *imageData15 = UIImagePNGRepresentation(imageSave15);
+        //        [newManagedObject15 setValue:imageData15         forKey:@"image"];
         [newManagedObject15 setValue:@"Yellowhammer_IMG_7001"         forKey:@"image"];
         
         NSURL *url15t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Yellowhammer_IMG_7001_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Yellowhammer_IMG_7001_TN"
+                                                ofType:@"jpg"]];
         NSData *data15t = [[NSData alloc] initWithContentsOfURL:url15t];
         UIImage *imageSave15t=[[UIImage alloc]initWithData:data15t];
         NSData *imageData15t = UIImagePNGRepresentation(imageSave15t);
@@ -1189,10 +1193,10 @@
         
         [context save:NULL];
         newManagedObject15 = nil;
-//        data15 = nil;
-//        imageSave15 = nil;
-//        imageData15 = nil;
-//        url15 = nil;
+        //        data15 = nil;
+        //        imageSave15 = nil;
+        //        imageData15 = nil;
+        //        url15 = nil;
         
         // +++++++++++Chaffinch +++++++++++++
         /*  16
@@ -1208,7 +1212,7 @@
         [newManagedObject16 setValue:@"http://en.wikipedia.org/wiki/Common_Chaffinch" forKey:@"link"];
         [newManagedObject16 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject16 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject16 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject16 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject16 setValue:@"1" forKey:@"category"];
         [newManagedObject16 setValue:@"yellow/brown" forKey:@"colour"];
         [newManagedObject16 setValue:@"black" forKey:@"leg_colour"];
@@ -1218,18 +1222,18 @@
         [newManagedObject16 setValue:@"Common Chaffinch" forKey:@"short_name"];
         [newManagedObject16 setValue:@"sparrow" forKey:@"size_and_shape"];
         
-//        NSURL *url16 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Chaffinch_2"
-//                                               ofType:@"jpg"]];
-//        NSData *data16 = [[NSData alloc] initWithContentsOfURL:url16];
-//        UIImage *imageSave16=[[UIImage alloc]initWithData:data16];
-//        NSData *imageData16 = UIImagePNGRepresentation(imageSave16);
-//        [newManagedObject16 setValue:imageData16         forKey:@"image"];
+        //        NSURL *url16 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Chaffinch_2"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data16 = [[NSData alloc] initWithContentsOfURL:url16];
+        //        UIImage *imageSave16=[[UIImage alloc]initWithData:data16];
+        //        NSData *imageData16 = UIImagePNGRepresentation(imageSave16);
+        //        [newManagedObject16 setValue:imageData16         forKey:@"image"];
         [newManagedObject16 setValue:@"Chaffinch_2"         forKey:@"image"];
         
         NSURL *url16t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Chaffinch_2_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Chaffinch_2_TN"
+                                                ofType:@"jpg"]];
         NSData *data16t = [[NSData alloc] initWithContentsOfURL:url16t];
         UIImage *imageSave16t=[[UIImage alloc]initWithData:data16t];
         NSData *imageData16t = UIImagePNGRepresentation(imageSave16t);
@@ -1244,16 +1248,16 @@
         
         [context save:NULL];
         newManagedObject16 = nil;
-//        data16 = nil;
-//        imageSave16 = nil;
-//        imageData16 = nil;
-//        url16 = nil;
+        //        data16 = nil;
+        //        imageSave16 = nil;
+        //        imageData16 = nil;
+        //        url16 = nil;
         
         
         // +++++++++++Black Swan +++++++++++++
         /*  17
          */
-   
+        
         NSManagedObject *newManagedObject17 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
@@ -1263,28 +1267,28 @@
         [newManagedObject17 setValue:@"http://en.wikipedia.org/wiki/Black_Swan" forKey:@"link"];
         [newManagedObject17 setValue:@"red" forKey:@"beak_colour"];
         [newManagedObject17 setValue:@"duck" forKey:@"beak_length"];
-        [newManagedObject17 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject17 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject17 setValue:@"1" forKey:@"category"];
         [newManagedObject17 setValue:@"black" forKey:@"colour"];
         [newManagedObject17 setValue:@"grey,black" forKey:@"leg_colour"];
         [newManagedObject17 setValue:@"Anatidae" forKey:@"family"];
-        [newManagedObject17 setValue:@"water,bush" forKey:@"habitat"];
+        [newManagedObject17 setValue:@"coast,water,bush" forKey:@"habitat"];
         [newManagedObject17 setValue:@"Not threatened" forKey:@"threat_status"];
         [newManagedObject17 setValue:@"Black Swan" forKey:@"short_name"];
         [newManagedObject17 setValue:@"swan" forKey:@"size_and_shape"];
         
-//        NSURL *url17 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"BlackSwanCygnus_atratus"
-//                                               ofType:@"jpg"]];
-//        NSData *data17 = [[NSData alloc] initWithContentsOfURL:url17];
-//        UIImage *imageSave17=[[UIImage alloc]initWithData:data17];
-//        NSData *imageData17 = UIImagePNGRepresentation(imageSave17);
-//        [newManagedObject17 setValue:imageData17         forKey:@"image"];
+        //        NSURL *url17 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"BlackSwanCygnus_atratus"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data17 = [[NSData alloc] initWithContentsOfURL:url17];
+        //        UIImage *imageSave17=[[UIImage alloc]initWithData:data17];
+        //        NSData *imageData17 = UIImagePNGRepresentation(imageSave17);
+        //        [newManagedObject17 setValue:imageData17         forKey:@"image"];
         [newManagedObject17 setValue:@"BlackSwanCygnus_atratus"         forKey:@"image"];
         
         NSURL *url17t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"BlackSwanCygnus_atratus_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"BlackSwanCygnus_atratus_TN"
+                                                ofType:@"jpg"]];
         NSData *data17t = [[NSData alloc] initWithContentsOfURL:url17t];
         UIImage *imageSave17t=[[UIImage alloc]initWithData:data17t];
         NSData *imageData17t = UIImagePNGRepresentation(imageSave17t);
@@ -1300,15 +1304,15 @@
         
         [context save:NULL];
         newManagedObject17 = nil;
-//        data17 = nil;
-//        imageSave17 = nil;
-//        imageData17 = nil;
-//        url17 = nil;
-      
+        //        data17 = nil;
+        //        imageSave17 = nil;
+        //        imageData17 = nil;
+        //        url17 = nil;
+        
         // +++++++++++Silvereye +++++++++++++
         /*  18
          */
-     
+        
         NSManagedObject *newManagedObject18 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
@@ -1318,7 +1322,7 @@
         [newManagedObject18 setValue:@"http://nzbirdsonline.org.nz/?q=node/586" forKey:@"link"];
         [newManagedObject18 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject18 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject18 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject18 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject18 setValue:@"1" forKey:@"category"];
         [newManagedObject18 setValue:@"yellow/brown/green" forKey:@"colour"];
         [newManagedObject18 setValue:@"black" forKey:@"leg_colour"];
@@ -1328,24 +1332,24 @@
         [newManagedObject18 setValue:@"Silver-eye" forKey:@"short_name"];
         [newManagedObject18 setValue:@"sparrow" forKey:@"size_and_shape"];
         
-//        NSURL *url18 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Silvereye_DSC09462"
-//                                               ofType:@"jpg"]];
-//        NSData *data18 = [[NSData alloc] initWithContentsOfURL:url18];
-//        UIImage *imageSave18=[[UIImage alloc]initWithData:data18];
-//        NSData *imageData18 = UIImagePNGRepresentation(imageSave18);
-//        [newManagedObject18 setValue:imageData18         forKey:@"image"];
+        //        NSURL *url18 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Silvereye_DSC09462"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data18 = [[NSData alloc] initWithContentsOfURL:url18];
+        //        UIImage *imageSave18=[[UIImage alloc]initWithData:data18];
+        //        NSData *imageData18 = UIImagePNGRepresentation(imageSave18);
+        //        [newManagedObject18 setValue:imageData18         forKey:@"image"];
         [newManagedObject18 setValue:@"Silvereye_DSC09462"         forKey:@"image"];
         
-      
+        
         NSURL *url18t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Silvereye_DSC09462_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Silvereye_DSC09462_TN"
+                                                ofType:@"jpg"]];
         NSData *data18t = [[NSData alloc] initWithContentsOfURL:url18t];
         UIImage *imageSave18t=[[UIImage alloc]initWithData:data18t];
         NSData *imageData18t = UIImagePNGRepresentation(imageSave18t);
         [newManagedObject18 setValue:imageData18t         forKey:@"thumbnail"];
-      
+        
         
         [newManagedObject18 setValue:@"silvereye-song-22sy" forKey:@"sound"];
         
@@ -1355,25 +1359,25 @@
         
         [context save:NULL];
         newManagedObject18 = nil;
-//        data18 = nil;
-//        imageSave18 = nil;
-//        imageData18 = nil;
-//        url18 = nil;
-  
+        //        data18 = nil;
+        //        imageSave18 = nil;
+        //        imageData18 = nil;
+        //        url18 = nil;
+        
         // +++++++++++Bellbird +++++++++++++
         /*  19
          */
-    
+        
         NSManagedObject *newManagedObject19 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
         [newManagedObject19 setValue:@"Bellbird"       forKey:@"name"];
         [newManagedObject19 setValue:@"Korimako (Anthornis melanura)" forKey:@"othername"];
         [newManagedObject19 setValue:@"Most New Zealanders can easily recognise the bellbird by its melodious song, which Captain Cook described as sounding ‘like small bells exquisitely tuned’.\n\n      Well camouflaged, the bellbird is usually heard before it is seen.\n Females are dull olive-brown, with a slight blue sheen on the head and a pale yellow cheek stripe. Males are olive green, with a purplish head and black outer wing and tail feathers.\n\nBellbirds are unique to New Zealand, occurring on the three main islands, many offshore islands and also the Auckland Islands.\n\nWhen Europeans arrived in New Zealand, bellbirds were common throughout the North and South Islands. \nTheir numbers declined sharply during the 1860s in the North Island and 1880s in the South Island, about the time that ship rats and stoats arrived. For a time it was thought they might vanish from the mainland. Their numbers recovered somewhat from about 1940 onwards, but they are almost completely absent on the mainland north of Hamilton, and are still rare in parts of Wellington, Wairarapa and much of inland Canterbury and Otago.\n\n      Bellbirds live in native forest (including mixed podocarp-hardwood and beech forest) and regenerating forest, especially where there is diverse or dense vegetation. They can be found close to the coast or in vegetation up to about 1200 metres. In the South Island they have been found inhabiting plantations of eucalypts, pines or willows. They can be spotted in urban areas, especially if there is bush nearby.\n\nTypically they require forest and scrub habitats, reasonable cover and good local food sources during the breeding season, since they do not travel far from the nest. However, outside the breeding season they may travel many kilometres to feed, especially males. A pair can raise two broods in a season.\n\nBellbird song comprises three distinct sounds resembling the chiming of bells. They sing throughout the day, but more so in the early morning and late evening. The alarm call is a series of loud, rapidly repeated, harsh staccato notes.\n" forKey:@"item_description"];
-        [newManagedObject19 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/bellbird-korimako/facts/" forKey:@"link"];
+        [newManagedObject19 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/bellbird-korimako/facts/" forKey:@"link"];
         [newManagedObject19 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject19 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject19 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject19 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject19 setValue:@"1" forKey:@"category"];
         [newManagedObject19 setValue:@"brown/green" forKey:@"colour"];
         [newManagedObject19 setValue:@"black" forKey:@"leg_colour"];
@@ -1383,18 +1387,18 @@
         [newManagedObject19 setValue:@"New Zealand Bellbird" forKey:@"short_name"];
         [newManagedObject19 setValue:@"blackbird" forKey:@"size_and_shape"];
         
-//        NSURL *url19 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Anthornis_melanura_New_Zealand_8"
-//                                               ofType:@"jpg"]];
-//        NSData *data19 = [[NSData alloc] initWithContentsOfURL:url19];
-//        UIImage *imageSave19=[[UIImage alloc]initWithData:data19];
-//        NSData *imageData19 = UIImagePNGRepresentation(imageSave19);
-//        [newManagedObject19 setValue:imageData19         forKey:@"image"];
+        //        NSURL *url19 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Anthornis_melanura_New_Zealand_8"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data19 = [[NSData alloc] initWithContentsOfURL:url19];
+        //        UIImage *imageSave19=[[UIImage alloc]initWithData:data19];
+        //        NSData *imageData19 = UIImagePNGRepresentation(imageSave19);
+        //        [newManagedObject19 setValue:imageData19         forKey:@"image"];
         [newManagedObject19 setValue:@"Anthornis_melanura_New_Zealand_8"         forKey:@"image"];
         
         NSURL *url19t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Anthornis_melanura_New_Zealand_8_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Anthornis_melanura_New_Zealand_8_TN"
+                                                ofType:@"jpg"]];
         NSData *data19t = [[NSData alloc] initWithContentsOfURL:url19t];
         UIImage *imageSave19t=[[UIImage alloc]initWithData:data19t];
         NSData *imageData19t = UIImagePNGRepresentation(imageSave19t);
@@ -1410,26 +1414,26 @@
         
         [context save:NULL];
         newManagedObject19 = nil;
-//        data19 = nil;
-//        imageSave19 = nil;
-//        imageData19 = nil;
-//        url19 = nil;
+        //        data19 = nil;
+        //        imageSave19 = nil;
+        //        imageData19 = nil;
+        //        url19 = nil;
         
         
         // +++++++++++Kiwi +++++++++++++
         /*  20
          */
-    
+        
         NSManagedObject *newManagedObject20 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
         [newManagedObject20 setValue:@"Kiwi (North Island Brown) "       forKey:@"name"];
         [newManagedObject20 setValue:@"Roroa (Apteryx)" forKey:@"othername"];
         [newManagedObject20 setValue:@"The kiwi is the national icon of New Zealand and the unofficial national emblem.\nThe closest relatives to kiwi today are emus and cassowaries in Australia, but also the now-extinct moa of New Zealand. There are five species of kiwi:\n      Brown kiwi (Apteryx mantelli)\n      Rowi (Apteryx rowi)\n      Tokoeka (Apteryx australis)\n      Great spotted kiwi or roroa (Apteryx haastii)\n      Little spotted kiwi (Apteryx owenii)\nNew Zealanders have been called ""Kiwis"" since the nickname was bestowed by Australian soldiers in the First World War.\n\nThe kiwi is a curious bird: it cannot fly, has loose, hair-like feathers, strong legs and no tail. \n\nMostly nocturnal, they are most commonly forest dwellers, making daytime dens and nests in burrows, hollow logs or under dense vegetation. Kiwi are the only bird to have nostrils at the end of its very long bill which is used to probe in the ground, sniffing out invertebrates to eat, along with some fallen fruit. It also has one of the largest egg-to-body weight ratios of any bird - the egg averages 15 per cent of the female's body weight (compared to two per cent for the ostrich).\n\nAdult kiwi usually mate for life, and are strongly territorial. Females are larger than males (up to 3.3 kg and 45 cm). \n\nThe brown kiwi, great spotted kiwi, and the Fiordland and Stewart Island forms of tokoeka are “nationally vulnerable”, the third highest threat ranking in the New Zealand Threat Classification System; and the little spotted kiwi is classified as “at risk (recovering)”.\n\nread the long story here\nhttp://www.teara.govt.nz/en/kiwi/page-1" forKey:@"item_description"];
-        [newManagedObject20 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/kiwi/" forKey:@"link"];
+        [newManagedObject20 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kiwi/" forKey:@"link"];
         [newManagedObject20 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject20 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject20 setValue:@"can fly, flightless,nocturnal" forKey:@"behaviour"];
+        [newManagedObject20 setValue:@"no,flightless,nocturnal" forKey:@"behaviour"];
         [newManagedObject20 setValue:@"1" forKey:@"category"];
         [newManagedObject20 setValue:@"brown" forKey:@"colour"];
         [newManagedObject20 setValue:@"brown" forKey:@"leg_colour"];
@@ -1439,18 +1443,18 @@
         [newManagedObject20 setValue:@"North Island Brown Kiwi" forKey:@"short_name"];
         [newManagedObject20 setValue:@"duck" forKey:@"size_and_shape"];
         
-//        NSURL *url20 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"LittleSpottedKiwi_Apteryx_owenii"
-//                                               ofType:@"jpg"]];
-//        NSData *data20 = [[NSData alloc] initWithContentsOfURL:url20];
-//        UIImage *imageSave20=[[UIImage alloc]initWithData:data20];
-//        NSData *imageData20 = UIImagePNGRepresentation(imageSave20);
-//        [newManagedObject20 setValue:imageData20         forKey:@"image"];
+        //        NSURL *url20 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"LittleSpottedKiwi_Apteryx_owenii"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data20 = [[NSData alloc] initWithContentsOfURL:url20];
+        //        UIImage *imageSave20=[[UIImage alloc]initWithData:data20];
+        //        NSData *imageData20 = UIImagePNGRepresentation(imageSave20);
+        //        [newManagedObject20 setValue:imageData20         forKey:@"image"];
         [newManagedObject20 setValue:@"NorthIslandBrownKiwi_JamesStJohn_red"         forKey:@"image"];
         
         NSURL *url20t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"NorthIslandBrownKiwi_JamesStJohn_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"NorthIslandBrownKiwi_JamesStJohn_TN"
+                                                ofType:@"jpg"]];
         NSData *data20t = [[NSData alloc] initWithContentsOfURL:url20t];
         UIImage *imageSave20t=[[UIImage alloc]initWithData:data20t];
         NSData *imageData20t = UIImagePNGRepresentation(imageSave20t);
@@ -1466,25 +1470,25 @@
         
         [context save:NULL];
         newManagedObject20 = nil;
-//        data20 = nil;
-//        imageSave20 = nil;
-//        imageData20 = nil;
-//        url20 = nil;
-       
+        //        data20 = nil;
+        //        imageSave20 = nil;
+        //        imageData20 = nil;
+        //        url20 = nil;
+        
         // +++++++++++Kea +++++++++++++
         /*  21
          */
-     
+        
         NSManagedObject *newManagedObject21 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
         [newManagedObject21 setValue:@"Kea"       forKey:@"name"];
         [newManagedObject21 setValue:@"Nestor notabilis" forKey:@"othername"];
         [newManagedObject21 setValue:@"Rated as one of the most intelligent birds in the world.\nIf you are a frequent visitor to or live in an alpine environment you will know the kea well. Kea and Kaka belong to the NZ parrot superfamily. Raucous cries of ""keeaa"" often give away the presence of these highly social and inquisitive birds. However, their endearing and mischievous behaviour can cause conflict with people.\n\nKea (Nestor  notabilis) are an endemic parrot of the South Island's high country. Although kea are seen in reasonable numbers throughout the South Island, the size of the wild population is unknown - but is estimated at between 1,000 and 5,000 birds.\n\nTo survive in the harsh alpine environment kea have become inquisitive and nomadic social birds - characteristics which help kea to find and utilise new food sources. Their inquisitive natures often cause kea to congregate around novel objects and their strong beaks have enormous manipulative power.\nKea are a protected species.\n\nKea grow up to 50 cm long and although mostly vegetarian, also enjoy grubs and insects.\n\nThe kea is related to the forest kaka (Nestor meridionalis) and is thought to have developed its own special characteristics during the last great ice age by using its unusual powers of curiosity in its search for food in a harsh landscape.\nNests are usually found among boulders in high altitude forest where the birds lay between two and four eggs during the breeding season from July and January." forKey:@"item_description"];
-        [newManagedObject21 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/kea/" forKey:@"link"];
+        [newManagedObject21 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kea/" forKey:@"link"];
         [newManagedObject21 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject21 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject21 setValue:@"can fly, only in southern alps" forKey:@"behaviour"];
+        [newManagedObject21 setValue:@"yes,can fly, only in southern alps" forKey:@"behaviour"];
         [newManagedObject21 setValue:@"1" forKey:@"category"];
         [newManagedObject21 setValue:@"green" forKey:@"colour"];
         [newManagedObject21 setValue:@"brown" forKey:@"leg_colour"];
@@ -1494,19 +1498,19 @@
         [newManagedObject21 setValue:@"New Zealand Kea" forKey:@"short_name"];
         [newManagedObject21 setValue:@"pigeon" forKey:@"size_and_shape"];
         
-//        NSURL *url21 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"800px-Nestor_notabilis_-Fiordland_National_Park-8a"
-//                                               ofType:@"jpg"]];
-//        NSData *data21 = [[NSData alloc] initWithContentsOfURL:url21];
-//        UIImage *imageSave21=[[UIImage alloc]initWithData:data21];
-//        NSData *imageData21 = UIImagePNGRepresentation(imageSave21);
-//        [newManagedObject21 setValue:imageData21         forKey:@"image"];
+        //        NSURL *url21 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"800px-Nestor_notabilis_-Fiordland_National_Park-8a"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data21 = [[NSData alloc] initWithContentsOfURL:url21];
+        //        UIImage *imageSave21=[[UIImage alloc]initWithData:data21];
+        //        NSData *imageData21 = UIImagePNGRepresentation(imageSave21);
+        //        [newManagedObject21 setValue:imageData21         forKey:@"image"];
         [newManagedObject21 setValue:@"800px-Nestor_notabilis_-Fiordland_National_Park-8a"         forKey:@"image"];
         
         
         NSURL *url21t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"800px-Nestor_notabilis_-Fiordland_National_Park-8a_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"800px-Nestor_notabilis_-Fiordland_National_Park-8a_TN"
+                                                ofType:@"jpg"]];
         NSData *data21t = [[NSData alloc] initWithContentsOfURL:url21t];
         UIImage *imageSave21t=[[UIImage alloc]initWithData:data21t];
         NSData *imageData21t = UIImagePNGRepresentation(imageSave21t);
@@ -1522,25 +1526,25 @@
         
         [context save:NULL];
         newManagedObject21 = nil;
-//        data21 = nil;
-//        imageSave21 = nil;
-//        imageData21 = nil;
-//        url21 = nil;
+        //        data21 = nil;
+        //        imageSave21 = nil;
+        //        imageData21 = nil;
+        //        url21 = nil;
         
         // +++++++++++Kereru +++++++++++++
         /*  22
          */
-     
+        
         NSManagedObject *newManagedObject22 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
         [newManagedObject22 setValue:@"Kererū"       forKey:@"name"];
         [newManagedObject22 setValue:@"Hemiphaga novaeseelandiae/ Wood Pigeon" forKey:@"othername"];
         [newManagedObject22 setValue:@"New Zealand's native pigeon, also known as kererū, kūkū and kūkupa and wood pigeon, is the only disperser of large fruits, such as those of karaka and taraire, we have. The disappearance of the kererū would be a disaster for the regeneration of our native forests.\n\nThe kererū is a large bird with irridescent green and bronze feathers on its head and a smart white vest. The noisy beat of its wings is a distinctive sound in our forests. The pigeon is found in most lowland native forests of the North, South and Stewart/Rakiura islands and many of their neighbouring islands.There are two species of native pigeon, the New Zealand pigeon (Hemiphaga novaeseelandiae) known to the Maori as kererū, or in Northland as kūkū or kūkupa, and the Chatham Islands pigeon (Hemiphaga chathamensis) or parea.\n\nThe parea is found mainly in the south-west of Chatham Island. While there are only about 500 parea left, the species has made a remarkable recovery over the past 20 years,  due to habitat protection and predator control.\nTwo other kinds of native pigeon became extinct on Raoul Island and Norfolk Island last century, probably due to hunting and predation\nSince the extinction of the moa, the native pigeon is now the only seed disperser with a bill big enough to swallow large fruit, such as those of karaka, tawa and taraire.\nIt also eats leaves, buds and flowers, the relative amounts varying seasonally and regionally, e.g. in Northland the birds eat mostly fruit.\n\nKererū are large birds and can measure up to 51 cm from tail to beak, and weigh about 650g.\nLong-lived birds, they breed slowly. Key breeding signals are spectacular display flights performed mainly by territorial males. They nest mainly in spring/early summer producing only one egg per nest, which the parents take turns to look after during the 28-day incubation period.\nThe chick grows rapidly, leaving the nest when about 40 days old. It is fed pigeon milk, a protein-rich milky secretion from the walls of the parents' crops, mixed with fruit pulp.  When much fruit is available, some pairs of kererū will have a large chick in one nest and be incubating an egg in another nearby. Fledglings spend about two weeks with their parents before becoming fully independent, but have remained with their parents during autumn and winter in some cases." forKey:@"item_description"];
-        [newManagedObject22 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/nz-pigeon-kereru/" forKey:@"link"];
+        [newManagedObject22 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/nz-pigeon-kereru/" forKey:@"link"];
         [newManagedObject22 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject22 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject22 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject22 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject22 setValue:@"1" forKey:@"category"];
         [newManagedObject22 setValue:@"grey" forKey:@"colour"];
         [newManagedObject22 setValue:@"brown" forKey:@"leg_colour"];
@@ -1550,18 +1554,18 @@
         [newManagedObject22 setValue:@"New Zealand Pigeon" forKey:@"short_name"];
         [newManagedObject22 setValue:@"pigeon" forKey:@"size_and_shape"];
         
-//        NSURL *url22 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"New_Zealand_Pigeon_Southstar_02"
-//                                               ofType:@"jpg"]];
-//        NSData *data22 = [[NSData alloc] initWithContentsOfURL:url22];
-//        UIImage *imageSave22=[[UIImage alloc]initWithData:data22];
-//        NSData *imageData22 = UIImagePNGRepresentation(imageSave22);
-//        [newManagedObject22 setValue:imageData22         forKey:@"image"];
+        //        NSURL *url22 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"New_Zealand_Pigeon_Southstar_02"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data22 = [[NSData alloc] initWithContentsOfURL:url22];
+        //        UIImage *imageSave22=[[UIImage alloc]initWithData:data22];
+        //        NSData *imageData22 = UIImagePNGRepresentation(imageSave22);
+        //        [newManagedObject22 setValue:imageData22         forKey:@"image"];
         [newManagedObject22 setValue:@"New_Zealand_Pigeon_Southstar_02"         forKey:@"image"];
         
         NSURL *url22t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"New_Zealand_Pigeon_Southstar_02_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"New_Zealand_Pigeon_Southstar_02_TN"
+                                                ofType:@"jpg"]];
         NSData *data22t = [[NSData alloc] initWithContentsOfURL:url22t];
         UIImage *imageSave22t=[[UIImage alloc]initWithData:data22t];
         NSData *imageData22t = UIImagePNGRepresentation(imageSave22t);
@@ -1576,12 +1580,12 @@
         
         [context save:NULL];
         newManagedObject22 = nil;
-//        data22 = nil;
-//        imageSave22 = nil;
-//        imageData22 = nil;
-//        url22 = nil;
+        //        data22 = nil;
+        //        imageSave22 = nil;
+        //        imageData22 = nil;
+        //        url22 = nil;
         
-       
+        
         
         // +++++++++++Rifleman +++++++++++++
         /*  23
@@ -1596,7 +1600,7 @@
         [newManagedObject23 setValue:@"http://en.wikipedia.org/wiki/Rifleman_(bird)" forKey:@"link"];
         [newManagedObject23 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject23 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject23 setValue:@"can fly, flies quick, hums" forKey:@"behaviour"];
+        [newManagedObject23 setValue:@"yes,can fly, flies quick, hums" forKey:@"behaviour"];
         [newManagedObject23 setValue:@"1" forKey:@"category"];
         [newManagedObject23 setValue:@"grey" forKey:@"colour"];
         [newManagedObject23 setValue:@"brown" forKey:@"leg_colour"];
@@ -1606,19 +1610,19 @@
         [newManagedObject23 setValue:@"Rifleman" forKey:@"short_name"];
         [newManagedObject23 setValue:@"sparrow" forKey:@"size_and_shape"];
         
-//        NSURL *url23 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Rifleman_Acanthisitta_chloris"
-//                                               ofType:@"jpg"]];
-//        NSData *data23 = [[NSData alloc] initWithContentsOfURL:url23];
-//        UIImage *imageSave23=[[UIImage alloc]initWithData:data23];
-//        NSData *imageData23 = UIImagePNGRepresentation(imageSave23);
-//        [newManagedObject23 setValue:imageData23         forKey:@"image"];
+        //        NSURL *url23 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Rifleman_Acanthisitta_chloris"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data23 = [[NSData alloc] initWithContentsOfURL:url23];
+        //        UIImage *imageSave23=[[UIImage alloc]initWithData:data23];
+        //        NSData *imageData23 = UIImagePNGRepresentation(imageSave23);
+        //        [newManagedObject23 setValue:imageData23         forKey:@"image"];
         [newManagedObject23 setValue:@"Rifleman_Acanthisitta_chloris"         forKey:@"image"];
         
         
         NSURL *url23t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Rifleman_Acanthisitta_chloris_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Rifleman_Acanthisitta_chloris_TN"
+                                                ofType:@"jpg"]];
         NSData *data23t = [[NSData alloc] initWithContentsOfURL:url23t];
         UIImage *imageSave23t=[[UIImage alloc]initWithData:data23t];
         NSData *imageData23t = UIImagePNGRepresentation(imageSave23t);
@@ -1633,25 +1637,25 @@
         
         [context save:NULL];
         newManagedObject23 = nil;
-//        data23 = nil;
-//        imageSave23 = nil;
-//        imageData23 = nil;
-//        url23 = nil;
-      
+        //        data23 = nil;
+        //        imageSave23 = nil;
+        //        imageData23 = nil;
+        //        url23 = nil;
+        
         // +++++++++++Kakariki +++++++++++++
         /*  24
          */
-       
+        
         NSManagedObject *newManagedObject24 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
         [newManagedObject24 setValue:@"Kakariki (yellow-crowned parakeet)"       forKey:@"name"];
         [newManagedObject24 setValue:@"Cyanoramphus auriceps" forKey:@"othername"];
         [newManagedObject24 setValue:@"The three species of Kākāriki or New Zealand parakeets are the most common species of parakeet in the genus Cyanoramphus, family Psittacidae. The birds' Māori name, which is the most commonly used, means small parrot. The three species on mainland New Zealand are the Yellow-crowned Parakeet, Cyanoramphus auriceps, the Red-crowned Parakeet or Red-fronted Parakeet, C. novaezelandiae, and the critically endangered Malherbe's Parakeet (or Orange-fronted Parakeet), C. malherbi. Yellow-crowned parakeets are small, bright green, noisy parrots that spend most of their time high in the forest canopy. They were once extremely common throughout New Zealand, but today are rare or uncommon in most places on the mainland, though they are still common on some predator-free islands and in a few valleys in eastern Fiordland and west Otago.\n\n         The genus Cyanoramphus to which the yellow-crowned parakeet belongs includes five other similar-sized green parrots in the New Zealand region and one each on Norfolk Island and New Caledonia.\n\n        Identification\n\n The yellow-crowned parakeet is a small, forest-dwelling, long-tailed, predominantly green parrot with a yellow crown, a narrow crimson band between the crown and the cere, a red spot on each side of the rump and a blue leading edge to the outer wing. The bill is pale bluish-grey with a black tip and cutting edge; the legs and feet black-brown\n\n          Voice: a characteristic chatter made by both sexes when flying, and a variety of quieter and less distinctive calls.\n\nSimilar species: very similar in appearance to the orange-fronted parakeet, but the yellow-crowned parakeet is brighter green, has a crimson (not orange) band above the cere, and red (not orange) spots on the flanks. Also similar to the red-crowned parakeet which is larger and has a red crown, and a red patch behind the eye.\n\n         Distribution and habitat\n\n         Yellow-crowned parakeets were previously found in forests throughout the main islands of New Zealand and on many offshore islands including the Auckland Islands. It is still present in most large native forests in the three main islands, though it is absent from Mt Egmont, north Taranaki and Northland. It occurs on Little Barrier, the Hen and Chickens, the Chetwodes Islands and Titi Island (outer Pelorus sound), Codfish Island, several smaller islands off Stewart Island and Fiordland and on the Auckland Islands. Yellow-crowned parakeets have been successfully introduced to Mana Island, and to Long Island and Motuara Island in Queen Charlotte Sound. \n\nOn the mainland yellow-crowned parakeets are mostly confined to tall forests, but on islands they are also common in low scrub and even open grassland (Mana Island)." forKey:@"item_description"];
-        [newManagedObject24 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/nz-parakeet-kakariki/nz-parakeet-kakariki/" forKey:@"link"];
+        [newManagedObject24 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/nz-parakeet-kakariki/nz-parakeet-kakariki/" forKey:@"link"];
         [newManagedObject24 setValue:@"black/white" forKey:@"beak_colour"];
         [newManagedObject24 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject24 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject24 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject24 setValue:@"1" forKey:@"category"];
         [newManagedObject24 setValue:@"green" forKey:@"colour"];
         [newManagedObject24 setValue:@"brown" forKey:@"leg_colour"];
@@ -1661,18 +1665,18 @@
         [newManagedObject24 setValue:@"Yellow-crowned Parakeet" forKey:@"short_name"];
         [newManagedObject24 setValue:@"pigeon" forKey:@"size_and_shape"];
         
-//        NSURL *url24 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8"
-//                                               ofType:@"jpg"]];
-//        NSData *data24 = [[NSData alloc] initWithContentsOfURL:url24];
-//        UIImage *imageSave24=[[UIImage alloc]initWithData:data24];
-//        NSData *imageData24 = UIImagePNGRepresentation(imageSave24);
-//        [newManagedObject24 setValue:imageData24         forKey:@"image"];
+        //        NSURL *url24 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data24 = [[NSData alloc] initWithContentsOfURL:url24];
+        //        UIImage *imageSave24=[[UIImage alloc]initWithData:data24];
+        //        NSData *imageData24 = UIImagePNGRepresentation(imageSave24);
+        //        [newManagedObject24 setValue:imageData24         forKey:@"image"];
         [newManagedObject24 setValue:@"Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8"         forKey:@"image"];
         
         NSURL *url24t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8_TN"
+                                                ofType:@"jpg"]];
         NSData *data24t = [[NSData alloc] initWithContentsOfURL:url24t];
         UIImage *imageSave24t=[[UIImage alloc]initWithData:data24t];
         NSData *imageData24t = UIImagePNGRepresentation(imageSave24t);
@@ -1688,27 +1692,27 @@
         
         [context save:NULL];
         newManagedObject24 = nil;
-//        data24 = nil;
-//        imageSave24 = nil;
-//        imageData24 = nil;
-//        url24 = nil;
+        //        data24 = nil;
+        //        imageSave24 = nil;
+        //        imageData24 = nil;
+        //        url24 = nil;
         
-      
+        
         
         // +++++++++++Grey warbler +++++++++++++
         /*  25
          */
-      
+        
         NSManagedObject *newManagedObject25 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
         [newManagedObject25 setValue:@"Grey warbler"       forKey:@"name"];
         [newManagedObject25 setValue:@"Riroriro (Gerygone igata)" forKey:@"othername"];
         [newManagedObject25 setValue:@"The grey warbler is New Zealand’s most widely distributed endemic bird species. It vies with rifleman for the title of New Zealand’s smallest bird, with both weighing about 6 g. The title usually goes to rifleman, based on its shorter tail and therefore shorter body length.\n\nThe grey warbler is more often heard than seen, having a loud distinctive song, and tending to spend most of its time in dense vegetation. \n\nIdentification\n\nThe grey warbler is a tiny, slim grey songbird that usually stays among canopy foliage. It is olive-grey above, with a grey face and off-white underparts. The tail is darker grey, getting darker towards the tip, contrasting with white tips to the tail feathers, showing as a prominent white band in flight. The black bill is finely pointed, the eye is bright red, and the legs are black and very slender. Grey warblers often glean insects from the outside of the canopy while hovering, which no other New Zealand bird does, making them identifiable by behaviour from a long distance.\n\nVoice:\n\n a characteristic long trilled song. The song is louder than expected, given the bird’s size. Only males sing, although females do give short chirp calls, usually as a contact call near the male. \n\nSimilar species:\n\n silvereyes are slightly larger, greener above, with buff flanks and (in adults) a characteristic white-eye-ring. In flight, silvereyes have a plain dark tail without a white tip.\n\nDistribution and habitat\n\nThe grey warbler is ubiquitous, occurring everywhere there are trees or shrubs on the three main islands, and on most offshore islands. It is one of the few native species to have maintained their distribution in almost all habitats following human colonisation, including rural and urban areas. They are typically found only in woody vegetation, in mid to high levels of the canopy, making them difficult to observe." forKey:@"item_description"];
-        [newManagedObject25 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/grey-warbler-riroriro/" forKey:@"link"];
+        [newManagedObject25 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/grey-warbler-riroriro/" forKey:@"link"];
         [newManagedObject25 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject25 setValue:@"short,pointed" forKey:@"beak_length"];
-        [newManagedObject25 setValue:@"can fly, Very active. Absent from open country and alpine areas" forKey:@"behaviour"];
+        [newManagedObject25 setValue:@"yes,can fly, Very active. Absent from open country and alpine areas" forKey:@"behaviour"];
         [newManagedObject25 setValue:@"1" forKey:@"category"];
         [newManagedObject25 setValue:@"grey" forKey:@"colour"];
         [newManagedObject25 setValue:@"black" forKey:@"leg_colour"];
@@ -1718,18 +1722,18 @@
         [newManagedObject25 setValue:@"Gray Gerygone" forKey:@"short_name"];
         [newManagedObject25 setValue:@"sparrow" forKey:@"size_and_shape"];
         
-//        NSURL *url25 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"GreyWarbler_Gerygone1888"
-//                                               ofType:@"jpg"]];
-//        NSData *data25 = [[NSData alloc] initWithContentsOfURL:url25];
-//        UIImage *imageSave25=[[UIImage alloc]initWithData:data25];
-//        NSData *imageData25 = UIImagePNGRepresentation(imageSave25);
-//        [newManagedObject25 setValue:imageData25         forKey:@"image"];
+        //        NSURL *url25 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"GreyWarbler_Gerygone1888"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data25 = [[NSData alloc] initWithContentsOfURL:url25];
+        //        UIImage *imageSave25=[[UIImage alloc]initWithData:data25];
+        //        NSData *imageData25 = UIImagePNGRepresentation(imageSave25);
+        //        [newManagedObject25 setValue:imageData25         forKey:@"image"];
         [newManagedObject25 setValue:@"GreyWarbler"         forKey:@"image"];
         
         NSURL *url25t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"GreyWarbler_Gerygone1888_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"GreyWarbler_Gerygone1888_TN"
+                                                ofType:@"jpg"]];
         NSData *data25t = [[NSData alloc] initWithContentsOfURL:url25t];
         UIImage *imageSave25t=[[UIImage alloc]initWithData:data25t];
         NSData *imageData25t = UIImagePNGRepresentation(imageSave25t);
@@ -1746,17 +1750,17 @@
         
         [context save:NULL];
         newManagedObject25 = nil;
-//        data25 = nil;
-//        imageSave25 = nil;
-//        imageData25 = nil;
-//        url25 = nil;
+        //        data25 = nil;
+        //        imageSave25 = nil;
+        //        imageData25 = nil;
+        //        url25 = nil;
         
         
         
         // +++++++++++Blackbird +++++++++++++
         /*  26
          */
-    
+        
         NSManagedObject *newManagedObject26 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
@@ -1766,7 +1770,7 @@
         [newManagedObject26 setValue:@"http://en.wikipedia.org/wiki/Common_Blackbird" forKey:@"link"];
         [newManagedObject26 setValue:@"orange" forKey:@"beak_colour"];
         [newManagedObject26 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject26 setValue:@"can fly, Defends its breading territory" forKey:@"behaviour"];
+        [newManagedObject26 setValue:@"yes,can fly, Defends its breading territory" forKey:@"behaviour"];
         [newManagedObject26 setValue:@"1" forKey:@"category"];
         [newManagedObject26 setValue:@"black" forKey:@"colour"];
         [newManagedObject26 setValue:@"brown" forKey:@"leg_colour"];
@@ -1776,18 +1780,18 @@
         [newManagedObject26 setValue:@"Eurasian Blackbird" forKey:@"short_name"];
         [newManagedObject26 setValue:@"blackbird" forKey:@"size_and_shape"];
         
-//        NSURL *url26 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Blackbird"
-//                                               ofType:@"jpg"]];
-//        NSData *data26 = [[NSData alloc] initWithContentsOfURL:url26];
-//        UIImage *imageSave26=[[UIImage alloc]initWithData:data26];
-//        NSData *imageData26 = UIImagePNGRepresentation(imageSave26);
-//        [newManagedObject26 setValue:imageData26         forKey:@"image"];
+        //        NSURL *url26 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Blackbird"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data26 = [[NSData alloc] initWithContentsOfURL:url26];
+        //        UIImage *imageSave26=[[UIImage alloc]initWithData:data26];
+        //        NSData *imageData26 = UIImagePNGRepresentation(imageSave26);
+        //        [newManagedObject26 setValue:imageData26         forKey:@"image"];
         [newManagedObject26 setValue:@"Blackbird"         forKey:@"image"];
         
         NSURL *url26t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Blackbird_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Blackbird_TN"
+                                                ofType:@"jpg"]];
         NSData *data26t = [[NSData alloc] initWithContentsOfURL:url26t];
         UIImage *imageSave26t=[[UIImage alloc]initWithData:data26t];
         NSData *imageData26t = UIImagePNGRepresentation(imageSave26t);
@@ -1802,16 +1806,16 @@
         
         [context save:NULL];
         newManagedObject26 = nil;
-//        data26 = nil;
-//        imageSave26 = nil;
-//        imageData26 = nil;
-//        url26 = nil;
+        //        data26 = nil;
+        //        imageSave26 = nil;
+        //        imageData26 = nil;
+        //        url26 = nil;
         
-     
+        
         // +++++++++++Song thrush +++++++++++++
         /*  27
          */
-    
+        
         NSManagedObject *newManagedObject27 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
@@ -1821,7 +1825,7 @@
         [newManagedObject27 setValue:@"http://en.wikipedia.org/wiki/Song_Thrush" forKey:@"link"];
         [newManagedObject27 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject27 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject27 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject27 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject27 setValue:@"1" forKey:@"category"];
         [newManagedObject27 setValue:@"brown" forKey:@"colour"];
         [newManagedObject27 setValue:@"brown" forKey:@"leg_colour"];
@@ -1831,18 +1835,18 @@
         [newManagedObject27 setValue:@"Song Thrush" forKey:@"short_name"];
         [newManagedObject27 setValue:@"blackbird" forKey:@"size_and_shape"];
         
-//        NSURL *url27 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Thrush_song_06-03_SCOT"
-//                                               ofType:@"jpg"]];
-//        NSData *data27 = [[NSData alloc] initWithContentsOfURL:url27];
-//        UIImage *imageSave27=[[UIImage alloc]initWithData:data27];
-//        NSData *imageData27 = UIImagePNGRepresentation(imageSave27);
-//        [newManagedObject27 setValue:imageData27         forKey:@"image"];
+        //        NSURL *url27 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Thrush_song_06-03_SCOT"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data27 = [[NSData alloc] initWithContentsOfURL:url27];
+        //        UIImage *imageSave27=[[UIImage alloc]initWithData:data27];
+        //        NSData *imageData27 = UIImagePNGRepresentation(imageSave27);
+        //        [newManagedObject27 setValue:imageData27         forKey:@"image"];
         [newManagedObject27 setValue:@"Thrush_song_06-03_SCOT"         forKey:@"image"];
         
         NSURL *url27t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Thrush_song_06-03_SCOT_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Thrush_song_06-03_SCOT_TN"
+                                                ofType:@"jpg"]];
         NSData *data27t = [[NSData alloc] initWithContentsOfURL:url27t];
         UIImage *imageSave27t=[[UIImage alloc]initWithData:data27t];
         NSData *imageData27t = UIImagePNGRepresentation(imageSave27t);
@@ -1858,26 +1862,26 @@
         
         [context save:NULL];
         newManagedObject27 = nil;
-//        data27 = nil;
-//        imageSave27 = nil;
-//        imageData27 = nil;
-//        url27 = nil;
+        //        data27 = nil;
+        //        imageSave27 = nil;
+        //        imageData27 = nil;
+        //        url27 = nil;
         
-      
+        
         // +++++++++++Paradise Duck +++++++++++++
         /*  28
          */
-      
+        
         NSManagedObject *newManagedObject28 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
         [newManagedObject28 setValue:@"Paradise Shelduck"       forKey:@"name"];
         [newManagedObject28 setValue:@"Tadorna variegata" forKey:@"othername"];
         [newManagedObject28 setValue:@"The paradise shelduck is a colourful, conspicuous and noisy waterfowl that could be mistaken for a small goose. It has undergone a remarkable increase in population and distribution since about 1990, including the colonisation of sports fields and other open grassed areas within urban environments. This expansion has occurred in the face of being a gamebird and hunted annually.\n\nIdentification\n\nThe paradise shelduck is a conspicuous and colourful species with contrasting male and female plumages. Between a large duck and a small goose in size, the male is uniformly dark grey or black while the female body is a dark or light chestnut (depending on age and state of moult). The male’s head is black with occasional green iridescence and the female’s head and upper neck is white. Both sexes have a chestnut undertail, black primary wing feathers, green secondary wing feathers and a conspicuously white upper wing surface. Variable amounts of white may occur on the heads of males during the eclipse moult (February-May) and newly-fledged juvenile females may retain an extensive black head with a white face patch until they complete their post-juvenal moult (by May).The bill, legs and feet are dark grey/black. Down-covered ducklings appear initially as “mint humbugs”, patterned brown-and-white. The first feathers are dark, and near-fledged ducklings of both sexes resemble the adult male.\n\nVoice: the male paradise shelduck gives a di-syllabic goose-like honk when alarmed, or in flight. The main female call is more shrill, and more rapid and persistent, particularly during flight. There are a variety of other calls associated with pair formation and maintenance, territory defence, and maintaining contact with flock birds.\n\nSimilar species: vagrant chestnut-breasted shelducks are very similar to male paradise shelducks. They differ in having a white neck ring, chestnut or buff breast, and black undertail.\n\nDistribution and habitat\n\nThe paradise shelduck is New Zealand’s most widely distributed waterfowl, when both geographic spread and habitat use are taken into account. It occurs on North, South and Stewart Islands, all large near-shore islands with grassland (e.g. Kapiti, Great Barrier, D’Urville) and has straggled to distant Raoul and Lord Howe Islands, and to the Chatham Islands from which an as-yet unnamed shelduck species was exterminated by the first Polynesian settlers." forKey:@"item_description"];
-        [newManagedObject28 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/paradise-duck-putakitaki/" forKey:@"link"];
+        [newManagedObject28 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/paradise-duck-putakitaki/" forKey:@"link"];
         [newManagedObject28 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject28 setValue:@"duck" forKey:@"beak_length"];
-        [newManagedObject28 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject28 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject28 setValue:@"1" forKey:@"category"];
         [newManagedObject28 setValue:@"brown/white" forKey:@"colour"];
         [newManagedObject28 setValue:@"brown" forKey:@"leg_colour"];
@@ -1887,19 +1891,19 @@
         [newManagedObject28 setValue:@"Paradise Shelduck" forKey:@"short_name"];
         [newManagedObject28 setValue:@"duck" forKey:@"size_and_shape"];
         
-//        NSURL *url28 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"ParadiseDuck"
-//                                               ofType:@"jpg"]];
-//        NSData *data28 = [[NSData alloc] initWithContentsOfURL:url28];
-//        UIImage *imageSave28=[[UIImage alloc]initWithData:data28];
-//        NSData *imageData28 = UIImagePNGRepresentation(imageSave28);
-//        [newManagedObject28 setValue:imageData28         forKey:@"image"];
+        //        NSURL *url28 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"ParadiseDuck"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data28 = [[NSData alloc] initWithContentsOfURL:url28];
+        //        UIImage *imageSave28=[[UIImage alloc]initWithData:data28];
+        //        NSData *imageData28 = UIImagePNGRepresentation(imageSave28);
+        //        [newManagedObject28 setValue:imageData28         forKey:@"image"];
         [newManagedObject28 setValue:@"ParadiseDuck"         forKey:@"image"];
         
         
         NSURL *url28t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"ParadiseDuck_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"ParadiseDuck_TN"
+                                                ofType:@"jpg"]];
         NSData *data28t = [[NSData alloc] initWithContentsOfURL:url28t];
         UIImage *imageSave28t=[[UIImage alloc]initWithData:data28t];
         NSData *imageData28t = UIImagePNGRepresentation(imageSave28t);
@@ -1914,17 +1918,17 @@
         
         [context save:NULL];
         newManagedObject28 = nil;
-//        data28 = nil;
-//        imageSave28 = nil;
-//        imageData28 = nil;
-//        url28 = nil;
+        //        data28 = nil;
+        //        imageSave28 = nil;
+        //        imageData28 = nil;
+        //        url28 = nil;
         
         
         
         // +++++++++++Banded dotterel +++++++++++++
         /*  29
          */
-    
+        
         NSManagedObject *newManagedObject29 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
@@ -1934,7 +1938,7 @@
         [newManagedObject29 setValue:@"http://nzbirdsonline.org.nz/species/banded-dotterel" forKey:@"link"];
         [newManagedObject29 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject29 setValue:@"short,pointed" forKey:@"beak_length"];
-        [newManagedObject29 setValue:@"can fly,nest in burrows" forKey:@"behaviour"];
+        [newManagedObject29 setValue:@"yes,can fly,nest in burrows" forKey:@"behaviour"];
         [newManagedObject29 setValue:@"1" forKey:@"category"];
         [newManagedObject29 setValue:@"brown" forKey:@"colour"];
         [newManagedObject29 setValue:@"brown" forKey:@"leg_colour"];
@@ -1944,19 +1948,19 @@
         [newManagedObject29 setValue:@"Red-breasted Dotterel" forKey:@"short_name"];
         [newManagedObject29 setValue:@"blackbird" forKey:@"size_and_shape"];
         
-//        NSURL *url29 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Charadrius_bicinctus_breeding_Ralphs_Bay"
-//                                               ofType:@"jpg"]];
-//        NSData *data29 = [[NSData alloc] initWithContentsOfURL:url29];
-//        UIImage *imageSave29=[[UIImage alloc]initWithData:data29];
-//        NSData *imageData29 = UIImagePNGRepresentation(imageSave29);
-//        [newManagedObject29 setValue:imageData29         forKey:@"image"];
+        //        NSURL *url29 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Charadrius_bicinctus_breeding_Ralphs_Bay"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data29 = [[NSData alloc] initWithContentsOfURL:url29];
+        //        UIImage *imageSave29=[[UIImage alloc]initWithData:data29];
+        //        NSData *imageData29 = UIImagePNGRepresentation(imageSave29);
+        //        [newManagedObject29 setValue:imageData29         forKey:@"image"];
         [newManagedObject29 setValue:@"Charadrius_bicinctus_breeding_Ralphs_Bay"         forKey:@"image"];
         
         
         NSURL *url29t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Charadrius_bicinctus_breeding_Ralphs_Bay_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Charadrius_bicinctus_breeding_Ralphs_Bay_TN"
+                                                ofType:@"jpg"]];
         NSData *data29t = [[NSData alloc] initWithContentsOfURL:url29t];
         UIImage *imageSave29t=[[UIImage alloc]initWithData:data29t];
         NSData *imageData29t = UIImagePNGRepresentation(imageSave29t);
@@ -1971,17 +1975,17 @@
         
         [context save:NULL];
         newManagedObject29 = nil;
-//        data29 = nil;
-//        imageSave29 = nil;
-//        imageData29 = nil;
-//        url29 = nil;
+        //        data29 = nil;
+        //        imageSave29 = nil;
+        //        imageData29 = nil;
+        //        url29 = nil;
         
         
         
         // +++++++++++Takahe +++++++++++++
         /*  30
          */
-      
+        
         NSManagedObject *newManagedObject30 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
@@ -1990,8 +1994,8 @@
         [newManagedObject30 setValue:@"Rare, large stocky bird that was thought to be extinct until it was re-discovered near Lake Te Anau (South Island) in 1948. \n\nClose relative to the Pukeko (which is smaller and lighter). \n\nThe South Island takahē is a rare relict of the flightless, vegetarian bird fauna which once ranged New Zealand. Four specimens were collected from Fiordland between 1849 and 1898, after which takahē were considered to be extinct until famously rediscovered in the Murchison Mountains, west of Lake Te Anau, in 1948. Until the 1980s, takahē were confined in the wild to the Murchison Mountains. They have since been translocated to seven islands and several mainland sites, making them more accessible to many New Zealanders. Conservation work by the Department Of Conservation and community groups aims to prevent extinction and restore takahē to sites throughout their original range. \n\nThe success of DOC’s Takahē Recovery Programme relies heavily on a partnership with Mitre 10 who through Mitre 10 Takahē Rescue is helping to ensure the long-term survival of this treasured species.\n\nIdentification:\n\n The South Island takahē is the largest living rail in the world. An enormous gallinule, it has deep blue on the head, neck and underparts, olive green on the wings and back, and a white undertail, The huge conical bill is bright red, paler towards the tip, and extends on to the forehead as a red frontal shield. The stout legs are red, with orange underneath. Juveniles are duller with a blackish-orange beak and dull pink-brown legs.\n\nVoice:\n\n the main calls of takahē are a loud shriek, a quiet hooting contact call, and a muted boom indicating alarm.\n\nSimilar species: the extinct North Island takahē was taller and more slender. Pukeko can fly, and are smaller and more slender, with relatively longer legs, and black on the wings and back." forKey:@"item_description"];
         [newManagedObject30 setValue:@"http://nzbirdsonline.org.nz/species/south-island-takahe" forKey:@"link"];
         [newManagedObject30 setValue:@"black" forKey:@"beak_colour"];
-        [newManagedObject30 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject30 setValue:@"flightless, sedentary" forKey:@"behaviour"];
+        [newManagedObject30 setValue:@"medium" forKey:@"beak_length"];
+        [newManagedObject30 setValue:@"no,flightless, sedentary" forKey:@"behaviour"];
         [newManagedObject30 setValue:@"1" forKey:@"category"];
         [newManagedObject30 setValue:@"blue" forKey:@"colour"];
         [newManagedObject30 setValue:@"red" forKey:@"leg_colour"];
@@ -2001,19 +2005,19 @@
         [newManagedObject30 setValue:@"Takahe" forKey:@"short_name"];
         [newManagedObject30 setValue:@"goose" forKey:@"size_and_shape"];
         
-//        NSURL *url30 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Takahe_Maunga"
-//                                               ofType:@"jpg"]];
-//        NSData *data30 = [[NSData alloc] initWithContentsOfURL:url30];
-//        UIImage *imageSave30=[[UIImage alloc]initWithData:data30];
-//        NSData *imageData30 = UIImagePNGRepresentation(imageSave30);
-//        [newManagedObject30 setValue:imageData30         forKey:@"image"];
+        //        NSURL *url30 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Takahe_Maunga"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data30 = [[NSData alloc] initWithContentsOfURL:url30];
+        //        UIImage *imageSave30=[[UIImage alloc]initWithData:data30];
+        //        NSData *imageData30 = UIImagePNGRepresentation(imageSave30);
+        //        [newManagedObject30 setValue:imageData30         forKey:@"image"];
         [newManagedObject30 setValue:@"Takahe_Maunga"         forKey:@"image"];
         
         
         NSURL *url30t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Takahe_Maunga_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Takahe_Maunga_TN"
+                                                ofType:@"jpg"]];
         NSData *data30t = [[NSData alloc] initWithContentsOfURL:url30t];
         UIImage *imageSave30t=[[UIImage alloc]initWithData:data30t];
         NSData *imageData30t = UIImagePNGRepresentation(imageSave30t);
@@ -2028,11 +2032,11 @@
         
         [context save:NULL];
         newManagedObject30 = nil;
-//        data30 = nil;
-//        imageSave30 = nil;
-//        imageData30 = nil;
-//        url30 = nil;
-       
+        //        data30 = nil;
+        //        imageSave30 = nil;
+        //        imageData30 = nil;
+        //        url30 = nil;
+        
         // +++++++++++Pukeko +++++++++++++
         /*  31
          */
@@ -2043,10 +2047,10 @@
         [newManagedObject31 setValue:@"Pukeko/ Purple Swamphen"       forKey:@"name"];
         [newManagedObject31 setValue:@"Porphyrio porphyrio" forKey:@"othername"];
         [newManagedObject31 setValue:@"Established in NZ ca. 1000 yrs ago they thrived in an environment in which they now face introduced predators like cats and rodents. Live in groups of 3-12; known to group together and shriek loudly to defend nests successfully during attacks by Australasian Harriers.The pukeko is a widespread and easily recognisable bird that has benefitted greatly by the clearing of land for agriculture. In addition to its brilliant red frontal shield and deep violet breast plumage, the pukeko is interesting for having a complex social life. In many areas, pukeko live in permanent social groups and defend a shared territory that is used for both feeding and breeding. Social groups can have multiple breeding males and females, but all eggs are laid in a single nest and the group offspring are raised by all group members.\n\nIdentification\n\nThe pukeko is a large, conspicious rail found throughout New Zealand. The head, breast and throat are deep blue/violet, the back and wings are black, and the under-tail coverts are conspicuously white. The conical bright red bill is connected to a similarly coloured ‘frontal shield’ ornament covering the forehead, the eyes are also red. The legs and feet are orange, with long, slim toes. Females are smaller than males, but similarly coloured. Juveniles are similar to adults but duller, with black eyes and black bill and shield that turn to red around 3 months of age.\n\nVoice: pukeko are very vocal with a variety of calls. Territorial ‘crowing’ is the loudest and most frequently heard call. A variety of contact calls including ‘’n’yip’, ‘hiccup’ and ‘squawk’ are used between adults, and between adults and chicks. The defence call is a loud, shrill screech used when a harrier is nearby. A similar, but deeper and hoarser, call is made during aggressive interactions between individuals. A soft nasal drone is performed during copulation runs.\n\nSimilar species: takahe are about twice the size (in weight) and flightless, with a green back and wing cover. Juveniles may be confused with the spotless crake which lacks a frontal shield and has a more slender bill. Rare vagrant dusky moorhen is more likely to be seen swimming, is not as upright as a pukeko, and is smaller and greyer with a yellow tip to the red bill, and a dark centre to the otherwise white undertail. The equally rare (in New Zealand) black-tailed native-hen is much smaller with a green-and-orange bill, white spots on the flanks and a longer tail that is black underneath. " forKey:@"item_description"];
-        [newManagedObject31 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/pukeko/" forKey:@"link"];
+        [newManagedObject31 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/pukeko/" forKey:@"link"];
         [newManagedObject31 setValue:@"red" forKey:@"beak_colour"];
         [newManagedObject31 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject31 setValue:@"flightless,sedentary" forKey:@"behaviour"];
+        [newManagedObject31 setValue:@"no,flightless,sedentary" forKey:@"behaviour"];
         [newManagedObject31 setValue:@"1" forKey:@"category"];
         [newManagedObject31 setValue:@"blue" forKey:@"colour"];
         [newManagedObject31 setValue:@"red" forKey:@"leg_colour"];
@@ -2056,18 +2060,18 @@
         [newManagedObject31 setValue:@"Pukeko/ Purple Swamphen" forKey:@"short_name"];
         [newManagedObject31 setValue:@"duck" forKey:@"size_and_shape"];
         
-//        NSURL *url31 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Pukeko_Porphyrio_porphyrio"
-//                                               ofType:@"jpg"]];
-//        NSData *data31 = [[NSData alloc] initWithContentsOfURL:url31];
-//        UIImage *imageSave31=[[UIImage alloc]initWithData:data31];
-//        NSData *imageData31 = UIImagePNGRepresentation(imageSave31);
-//        [newManagedObject31 setValue:imageData31         forKey:@"image"];
+        //        NSURL *url31 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Pukeko_Porphyrio_porphyrio"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data31 = [[NSData alloc] initWithContentsOfURL:url31];
+        //        UIImage *imageSave31=[[UIImage alloc]initWithData:data31];
+        //        NSData *imageData31 = UIImagePNGRepresentation(imageSave31);
+        //        [newManagedObject31 setValue:imageData31         forKey:@"image"];
         [newManagedObject31 setValue:@"Pukeko_Porphyrio_porphyrio"         forKey:@"image"];
         
         NSURL *url31t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Pukeko_Porphyrio_porphyrio_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Pukeko_Porphyrio_porphyrio_TN"
+                                                ofType:@"jpg"]];
         NSData *data31t = [[NSData alloc] initWithContentsOfURL:url31t];
         UIImage *imageSave31t=[[UIImage alloc]initWithData:data31t];
         NSData *imageData31t = UIImagePNGRepresentation(imageSave31t);
@@ -2085,25 +2089,25 @@
         
         [context save:NULL];
         newManagedObject31 = nil;
-//        data31 = nil;
-//        imageSave31 = nil;
-//        imageData31 = nil;
-//        url31 = nil;
-       
+        //        data31 = nil;
+        //        imageSave31 = nil;
+        //        imageData31 = nil;
+        //        url31 = nil;
+        
         // +++++++++++Harrier Hawk +++++++++++++
         /*  32
          */
-     
+        
         NSManagedObject *newManagedObject32 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
         [newManagedObject32 setValue:@"Harrier Hawk"       forKey:@"name"];
         [newManagedObject32 setValue:@"Harrier Hawk" forKey:@"othername"];
         [newManagedObject32 setValue:@"The swamp harrier is a large, tawny-brown bird of prey that occurs throughout New Zealand. It is an opportunistic hunter that searches for food by slowly quartering the ground with its large wings held in a distinctive shallow V-shape. Adapted to hunt in open habitats, its numbers have benefitted from widespread forest clearance and the development of agriculture. Although carrion is a major component of the harrier’s diet, it also actively hunts live prey such as small birds, mammals and insects. Capable dispersers, birds from New Zealand visit islands as far north as the Kermadec Islands and as far south as Campbell Island. Known for their dramatic ‘sky-dancing’ courtship display the swamp harrier is the largest of the 16 species of harriers found worldwide.\n\nIdentification\n\nOften seen perching on fence posts at the side of the road, swamp harriers are a large, long-legged bird of prey with sizeable taloned feet, prominent facial disks and a strongly hooked bill. Fledglings and juveniles have dark chocolate brown plumage all over, a whitish patch on the nape, brown eyes and a pale yellow cere, eye ring and legs. Although plumage is highly variable, adults generally have a tawny-brown back, a pale cream streaked breast and yellow eyes. They become paler with successive moults. Females are slightly larger than males. Harriers most often search for food low to the ground in a gently rocking glide interspersed with lazy wing beats. When gliding or soaring, their wings are set in a shallow V-shape with upturned fingered wing tips and an outspread tail. The cream/white rump is obvious in flight. They can hover clumsily for short periods.\n\nVoice: harriers mainly vocalise as part of their courtship displays during the breeding season. Their call is a series of same note, high-pitched, short, sharp “kee-o kee-o.” At other times of the year they are generally silent.\n\nSimilar species: sometimes confused with the New Zealand falcon. Falcons very rarely feed on carrion, are smaller and are more often seen in active chasing flight rather than the slow quartering flight typical of the harrier. Also the falcon lacks the obvious cream/pale rump of the harrier and glides with its wings set flat. Juvenile black-backed gulls are a similar size to harriers. However, young gulls have a stout, straight bill and are a more mottled greyish/brown colour. Gulls also have narrower angular wings that unlike harriers they beat almost continually in traversing flight or set rigidly in a slightly downwards droop when soaring/gliding.\n\nDistribution and habitat\n\nSwamp harriers occupy a wider ecological niche in New Zealand than elsewhere in Australasia. Abundant throughout most of New Zealand including the coastal fringe, estuaries, wetlands, pine forest, farmland and high-country areas. Less abundant over large tracts of forest and in urban areas. They are resident on the Chatham Islands, and often reach offshore islands as distant as the Snares, Auckland, Campbell and Kermadec Islands. Harriers are particularly abundant where plentiful food sources are available. They breed in wetlands, areas of long grass and scrubby vegetation.\n\nPopulation\n\nWidespread and very common." forKey:@"item_description"];
-        [newManagedObject32 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/" forKey:@"link"];
+        [newManagedObject32 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/" forKey:@"link"];
         [newManagedObject32 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject32 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject32 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject32 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject32 setValue:@"1" forKey:@"category"];
         [newManagedObject32 setValue:@"brown" forKey:@"colour"];
         [newManagedObject32 setValue:@"yellow" forKey:@"leg_colour"];
@@ -2113,18 +2117,18 @@
         [newManagedObject32 setValue:@"Swamp Harrier" forKey:@"short_name"];
         [newManagedObject32 setValue:@"pigeon" forKey:@"size_and_shape"];
         
-//        NSURL *url32 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"harrierHawk"
-//                                               ofType:@"jpg"]];
-//        NSData *data32 = [[NSData alloc] initWithContentsOfURL:url32];
-//        UIImage *imageSave32=[[UIImage alloc]initWithData:data32];
-//        NSData *imageData32 = UIImagePNGRepresentation(imageSave32);
-//        [newManagedObject32 setValue:imageData32         forKey:@"image"];
+        //        NSURL *url32 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"harrierHawk"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data32 = [[NSData alloc] initWithContentsOfURL:url32];
+        //        UIImage *imageSave32=[[UIImage alloc]initWithData:data32];
+        //        NSData *imageData32 = UIImagePNGRepresentation(imageSave32);
+        //        [newManagedObject32 setValue:imageData32         forKey:@"image"];
         [newManagedObject32 setValue:@"harrierHawk"         forKey:@"image"];
         
         NSURL *url32t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"harrierHawk_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"harrierHawk_TN"
+                                                ofType:@"jpg"]];
         NSData *data32t = [[NSData alloc] initWithContentsOfURL:url32t];
         UIImage *imageSave32t=[[UIImage alloc]initWithData:data32t];
         NSData *imageData32t = UIImagePNGRepresentation(imageSave32t);
@@ -2140,15 +2144,15 @@
         
         [context save:NULL];
         newManagedObject32 = nil;
-//        data32 = nil;
-//        imageSave32 = nil;
-//        imageData32 = nil;
-//        url32 = nil;
-       
+        //        data32 = nil;
+        //        imageSave32 = nil;
+        //        imageData32 = nil;
+        //        url32 = nil;
+        
         // +++++++++++Pied Stilt +++++++++++++
         /*  33
          */
- 
+        
         NSManagedObject *newManagedObject33 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
@@ -2158,7 +2162,7 @@
         [newManagedObject33 setValue:@"http://en.wikipedia.org/wiki/Black-winged_Stilt" forKey:@"link"];
         [newManagedObject33 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject33 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject33 setValue:@"can fly,forages in shallow water" forKey:@"behaviour"];
+        [newManagedObject33 setValue:@"yes,can fly,forages in shallow water" forKey:@"behaviour"];
         [newManagedObject33 setValue:@"1" forKey:@"category"];
         [newManagedObject33 setValue:@"black/white" forKey:@"colour"];
         [newManagedObject33 setValue:@"red" forKey:@"leg_colour"];
@@ -2168,18 +2172,18 @@
         [newManagedObject33 setValue:@"Australasian Pied Stilt" forKey:@"short_name"];
         [newManagedObject33 setValue:@"duck" forKey:@"size_and_shape"];
         
-//        NSURL *url33 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water"
-//                                               ofType:@"jpg"]];
-//        NSData *data33 = [[NSData alloc] initWithContentsOfURL:url33];
-//        UIImage *imageSave33=[[UIImage alloc]initWithData:data33];
-//        NSData *imageData33 = UIImagePNGRepresentation(imageSave33);
-//        [newManagedObject33 setValue:imageData33         forKey:@"image"];
+        //        NSURL *url33 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data33 = [[NSData alloc] initWithContentsOfURL:url33];
+        //        UIImage *imageSave33=[[UIImage alloc]initWithData:data33];
+        //        NSData *imageData33 = UIImagePNGRepresentation(imageSave33);
+        //        [newManagedObject33 setValue:imageData33         forKey:@"image"];
         [newManagedObject33 setValue:@"Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water"         forKey:@"image"];
         
         NSURL *url33t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Adult_and_immature_White-headed_Stilts_PiedStiltHimantopus_leucocephalus_in_the_water_TN"
+                                                ofType:@"jpg"]];
         NSData *data33t = [[NSData alloc] initWithContentsOfURL:url33t];
         UIImage *imageSave33t=[[UIImage alloc]initWithData:data33t];
         NSData *imageData33t = UIImagePNGRepresentation(imageSave33t);
@@ -2195,16 +2199,16 @@
         
         [context save:NULL];
         newManagedObject33 = nil;
-//        data33 = nil;
-//        imageSave33 = nil;
-//        imageData33 = nil;
-//        url33 = nil;
+        //        data33 = nil;
+        //        imageSave33 = nil;
+        //        imageData33 = nil;
+        //        url33 = nil;
         
         
         // +++++++++++Pheasant +++++++++++++
         /*  34
          */
-     
+        
         NSManagedObject *newManagedObject34 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
@@ -2214,7 +2218,7 @@
         [newManagedObject34 setValue:@"en.wikipedia.org/wiki/Pheasant" forKey:@"link"];
         [newManagedObject34 setValue:@"white" forKey:@"beak_colour"];
         [newManagedObject34 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject34 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject34 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject34 setValue:@"1" forKey:@"category"];
         [newManagedObject34 setValue:@"brown/green" forKey:@"colour"];
         [newManagedObject34 setValue:@"brown" forKey:@"leg_colour"];
@@ -2224,18 +2228,18 @@
         [newManagedObject34 setValue:@"Ring-necked Pheasant" forKey:@"short_name"];
         [newManagedObject34 setValue:@"goose" forKey:@"size_and_shape"];
         
-//        NSURL *url34 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Pheasant"
-//                                               ofType:@"jpg"]];
-//        NSData *data34 = [[NSData alloc] initWithContentsOfURL:url34];
-//        UIImage *imageSave34=[[UIImage alloc]initWithData:data34];
-//        NSData *imageData34 = UIImagePNGRepresentation(imageSave34);
-//        [newManagedObject34 setValue:imageData34         forKey:@"image"];
+        //        NSURL *url34 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Pheasant"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data34 = [[NSData alloc] initWithContentsOfURL:url34];
+        //        UIImage *imageSave34=[[UIImage alloc]initWithData:data34];
+        //        NSData *imageData34 = UIImagePNGRepresentation(imageSave34);
+        //        [newManagedObject34 setValue:imageData34         forKey:@"image"];
         [newManagedObject34 setValue:@"Pheasant"         forKey:@"image"];
         
         NSURL *url34t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Pheasant_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Pheasant_TN"
+                                                ofType:@"jpg"]];
         NSData *data34t = [[NSData alloc] initWithContentsOfURL:url34t];
         UIImage *imageSave34t=[[UIImage alloc]initWithData:data34t];
         NSData *imageData34t = UIImagePNGRepresentation(imageSave34t);
@@ -2250,26 +2254,26 @@
         
         [context save:NULL];
         newManagedObject34 = nil;
-//        data34 = nil;
-//        imageSave34 = nil;
-//        imageData34 = nil;
-//        url34 = nil;
+        //        data34 = nil;
+        //        imageSave34 = nil;
+        //        imageData34 = nil;
+        //        url34 = nil;
         
-       
+        
         // +++++++++++Peacock +++++++++++++
         /*  35
          */
-    
+        
         NSManagedObject *newManagedObject35 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
         [newManagedObject35 setValue:@"Peacock"       forKey:@"name"];
         [newManagedObject35 setValue:@"Peacock" forKey:@"othername"];
         [newManagedObject35 setValue:@"A large, well-known pheasant. Males have a characteristic display, raising their extravagantly long ornamental tail coverts, during the breeding season. Females move in groups between displaying males. Both sexes are generally tame in park situations but can be very wary in feral populations.\n\nIdentification\n\nA large crested pheasant. Males are deep blue on the breast, neck, head and fan crest, and metallic green on the back and rump. The over-developed upper tail coverts have a tan, lilac and purple-brown sheen and are up to 1.4 m long. In mature males, about 140-150 feathers have ‘eyes’ which are deep blue in the centre and have outer layers of metallic lighter blue, gold and metallic green. The coverts are held up by the rigid tail feathers in their characteristic display, during which the tail coverts are violently shaken. Females are slightly smaller than males and have a coppery brown head, lighter brown throat and the rest of the neck is dull metallic green. The rest of the feathers are speckled brown.\n\nVoice: a series of repeated crowing ka and shrill eow calls of varying frequency given up to 8 times in a row by males, primarily in the breeding season. Other distress and warning calls given throughout the year. Clucking calls are used by females with young and when pointing out food.\n\nDistribution and habitat\n\nPeafowl have been released into the wild many times, mainly through benign neglect of birds kept for display. Peafowl are held on many lifestyle properties, and have become feral in the upper North Island, especially Northland, Auckland, East Cape and mid Hawkes Bay. The largest feral populations are in wooded lowlands and coastal farmland including the upper Wanganui River catchment, northern Mahia Peninsula and pine forests of the South Head of Kaipara Harbour. They are also present in isolated locations in Nelson, Marlborough and Canterbury. Absent from Stewart Island." forKey:@"item_description"];
-        [newManagedObject35 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/" forKey:@"link"];
+        [newManagedObject35 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/" forKey:@"link"];
         [newManagedObject35 setValue:@"white" forKey:@"beak_colour"];
         [newManagedObject35 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject35 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject35 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject35 setValue:@"1" forKey:@"category"];
         [newManagedObject35 setValue:@"green/blue" forKey:@"colour"];
         [newManagedObject35 setValue:@"grey" forKey:@"leg_colour"];
@@ -2279,18 +2283,18 @@
         [newManagedObject35 setValue:@"Peacock" forKey:@"short_name"];
         [newManagedObject35 setValue:@"swan" forKey:@"size_and_shape"];
         
-//        NSURL *url35 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Peacock3"
-//                                               ofType:@"jpg"]];
-//        NSData *data35 = [[NSData alloc] initWithContentsOfURL:url35];
-//        UIImage *imageSave35=[[UIImage alloc]initWithData:data35];
-//        NSData *imageData35 = UIImagePNGRepresentation(imageSave35);
-//        [newManagedObject35 setValue:imageData35         forKey:@"image"];
+        //        NSURL *url35 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Peacock3"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data35 = [[NSData alloc] initWithContentsOfURL:url35];
+        //        UIImage *imageSave35=[[UIImage alloc]initWithData:data35];
+        //        NSData *imageData35 = UIImagePNGRepresentation(imageSave35);
+        //        [newManagedObject35 setValue:imageData35         forKey:@"image"];
         [newManagedObject35 setValue:@"Peacock3"         forKey:@"image"];
         
         NSURL *url35t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Peacock3_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Peacock3_TN"
+                                                ofType:@"jpg"]];
         NSData *data35t = [[NSData alloc] initWithContentsOfURL:url35t];
         UIImage *imageSave35t=[[UIImage alloc]initWithData:data35t];
         NSData *imageData35t = UIImagePNGRepresentation(imageSave35t);
@@ -2305,15 +2309,15 @@
         
         [context save:NULL];
         newManagedObject35 = nil;
-//        data35 = nil;
-//        imageSave35 = nil;
-//        imageData35 = nil;
-//        url35 = nil;
-       
+        //        data35 = nil;
+        //        imageSave35 = nil;
+        //        imageData35 = nil;
+        //        url35 = nil;
+        
         // +++++++++++Little Blue Penguin +++++++++++++
         /*  38
          */
-    
+        
         NSManagedObject *newManagedObject36 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
@@ -2323,7 +2327,7 @@
         [newManagedObject36 setValue:@"http://en.wikipedia.org/wiki/Little_Penguin" forKey:@"link"];
         [newManagedObject36 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject36 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject36 setValue:@"flightless,diurnal" forKey:@"behaviour"];
+        [newManagedObject36 setValue:@"no,flightless,diurnal" forKey:@"behaviour"];
         [newManagedObject36 setValue:@"1" forKey:@"category"];
         [newManagedObject36 setValue:@"grey/black" forKey:@"colour"];
         [newManagedObject36 setValue:@"brown" forKey:@"leg_colour"];
@@ -2333,19 +2337,19 @@
         [newManagedObject36 setValue:@"Little Penguin" forKey:@"short_name"];
         [newManagedObject36 setValue:@"pigeon" forKey:@"size_and_shape"];
         
-//        NSURL *url36 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Little_Penguin"
-//                                               ofType:@"jpg"]];
-//        NSData *data36 = [[NSData alloc] initWithContentsOfURL:url36];
-//        UIImage *imageSave36=[[UIImage alloc]initWithData:data36];
-//        NSData *imageData36 = UIImagePNGRepresentation(imageSave36);
-//        [newManagedObject36 setValue:imageData36         forKey:@"image"];
+        //        NSURL *url36 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Little_Penguin"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data36 = [[NSData alloc] initWithContentsOfURL:url36];
+        //        UIImage *imageSave36=[[UIImage alloc]initWithData:data36];
+        //        NSData *imageData36 = UIImagePNGRepresentation(imageSave36);
+        //        [newManagedObject36 setValue:imageData36         forKey:@"image"];
         [newManagedObject36 setValue:@"LittleBluePenguin_steintil"         forKey:@"image"];
         
         
         NSURL *url36t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"LittleBluePenguin_steintil_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"LittleBluePenguin_steintil_TN"
+                                                ofType:@"jpg"]];
         NSData *data36t = [[NSData alloc] initWithContentsOfURL:url36t];
         UIImage *imageSave36t=[[UIImage alloc]initWithData:data36t];
         NSData *imageData36t = UIImagePNGRepresentation(imageSave36t);
@@ -2360,11 +2364,11 @@
         
         [context save:NULL];
         newManagedObject36 = nil;
-//        data36 = nil;
-//        imageSave36 = nil;
-//        imageData36 = nil;
-//        url36 = nil;
-     
+        //        data36 = nil;
+        //        imageSave36 = nil;
+        //        imageData36 = nil;
+        //        url36 = nil;
+        
         // +++++++++++Rosella +++++++++++++
         /*  37
          */
@@ -2378,7 +2382,7 @@
         [newManagedObject37 setValue:@"http://en.wikipedia.org/wiki/Eastern_Rosella" forKey:@"link"];
         [newManagedObject37 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject37 setValue:@"hooked" forKey:@"beak_length"];
-        [newManagedObject37 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject37 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject37 setValue:@"1" forKey:@"category"];
         [newManagedObject37 setValue:@"red/green/blue/yellow" forKey:@"colour"];
         [newManagedObject37 setValue:@"brown" forKey:@"leg_colour"];
@@ -2388,18 +2392,18 @@
         [newManagedObject37 setValue:@"Eastern Rosella" forKey:@"short_name"];
         [newManagedObject37 setValue:@"pigeon" forKey:@"size_and_shape"];
         
-//        NSURL *url37 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c"
-//                                               ofType:@"jpg"]];
-//        NSData *data37 = [[NSData alloc] initWithContentsOfURL:url37];
-//        UIImage *imageSave37=[[UIImage alloc]initWithData:data37];
-//        NSData *imageData37 = UIImagePNGRepresentation(imageSave37);
-//        [newManagedObject37 setValue:imageData37         forKey:@"image"];
+        //        NSURL *url37 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data37 = [[NSData alloc] initWithContentsOfURL:url37];
+        //        UIImage *imageSave37=[[UIImage alloc]initWithData:data37];
+        //        NSData *imageData37 = UIImagePNGRepresentation(imageSave37);
+        //        [newManagedObject37 setValue:imageData37         forKey:@"image"];
         [newManagedObject37 setValue:@"RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c"         forKey:@"image"];
         
         NSURL *url37t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"RosellaEastern600px-Platycercus_eximius_-Buffalo_Zoo-8-3c_TN"
+                                                ofType:@"jpg"]];
         NSData *data37t = [[NSData alloc] initWithContentsOfURL:url37t];
         UIImage *imageSave37t=[[UIImage alloc]initWithData:data37t];
         NSData *imageData37t = UIImagePNGRepresentation(imageSave37t);
@@ -2414,11 +2418,11 @@
         
         [context save:NULL];
         newManagedObject37 = nil;
-//        data37 = nil;
-//        imageSave37 = nil;
-//        imageData37 = nil;
-//        url37 = nil;
-     
+        //        data37 = nil;
+        //        imageSave37 = nil;
+        //        imageData37 = nil;
+        //        url37 = nil;
+        
         // +++++++++++Weka +++++++++++++
         /*  38
          */
@@ -2429,10 +2433,10 @@
         [newManagedObject38 setValue:@"Weka (woodhen)"       forKey:@"name"];
         [newManagedObject38 setValue:@"Gallirallus australis" forKey:@"othername"];
         [newManagedObject38 setValue:@"The weka is one of New Zealand’s iconic large flightless birds. Likely derived from a flighted ancestor, weka are 3-6 times larger than banded rails, which are considered their nearest flying relatives. Weka are charismatic birds that are often attracted to human activity. This makes an encounter with a weka a wildlife highlight for many people, as the curious bird searches for any food item that the intruder might bring. \n\nBut people who live alongside weka often have a less charitable opinion, as they have to live with ever-watchful weka snatching opportunities to raid vegetable gardens, pilfer poultry food and eggs, and even steal dog food from the bowl. Unfortunately weka are not as robust as they appear, and have become extinct over large tracts of the mainland. Causes of extinction are complex, and are likely to be due to interactions between climatic conditions (especially drought) and predator numbers (especially ferrets, stoats and dogs). Fortunately, weka still thrive at many accessible sites, including on Kawau, Mokoia, Kapiti, Ulva and Chatham Islands, the Marlborough Sounds, North Westland, and parts of the Abel Tasman, Heaphy and Milford Tracks.\n\nIdentification\n\nThe weka is a large flightless rail that can have extremely variable plumage. Most birds are predominantly mid-brown, those on the Chatham Islands are tawny, those from Stewart Island are chestnut, and a proportion in Fiordland and on some islands near Stewart Island are almost black. Most birds have their dorsal feathers streaked with black, and all have their longest wing and tail feathers boldly barred with black. As adults, all have red eyes, a strong pointed bill and strong legs. North Island birds are predominantly grey-breasted with grey bills and brown legs. Western, Stewart Island and buff weka (the latter on Chatham Islands) can vary from having a grey to brown-grey breast with a wide brown breast-band, and having grey to pink bills and brown to pink legs.\n\nVoice: spacing calls are generally given at dawn and in the half hour after sunset. They are a characteristic coo..eet given as a duet by members of a pair, with the male call lower and slower than the female. Other calls include booming, and soft clucking contact calls.\n\nSimilar species: the banded rail is much smaller and more boldly marked, including a rufous eye-stripe on an otherwise pale grey face, a broad orange breast band, and underparts boldly barred with black-and-white. Female common pheasants have smaller heads, shorter bills, much longer tails, and will fly if pressed.\n\nDistribution and habitat\n\nWeka strongholds include Russell Peninsula, Kawakawa Bay and Opotiki-Motu in the North Island, and the Marlborough Sounds, North-west Nelson, the West Coast north of Ross, and Fiordland in the South Island. Also on many islands." forKey:@"item_description"];
-        [newManagedObject38 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/weka/" forKey:@"link"];
+        [newManagedObject38 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/weka/" forKey:@"link"];
         [newManagedObject38 setValue:@"reddish" forKey:@"beak_colour"];
         [newManagedObject38 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject38 setValue:@"flightless,nocturnal" forKey:@"behaviour"];
+        [newManagedObject38 setValue:@"no,flightless" forKey:@"behaviour"];
         [newManagedObject38 setValue:@"1" forKey:@"category"];
         [newManagedObject38 setValue:@"brown" forKey:@"colour"];
         [newManagedObject38 setValue:@"red" forKey:@"leg_colour"];
@@ -2442,18 +2446,18 @@
         [newManagedObject38 setValue:@"Weka" forKey:@"short_name"];
         [newManagedObject38 setValue:@"duck" forKey:@"size_and_shape"];
         
-//        NSURL *url38 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch"
-//                                               ofType:@"jpg"]];
-//        NSData *data38 = [[NSData alloc] initWithContentsOfURL:url38];
-//        UIImage *imageSave38=[[UIImage alloc]initWithData:data38];
-//        NSData *imageData38 = UIImagePNGRepresentation(imageSave38);
-//        [newManagedObject38 setValue:imageData38         forKey:@"image"];
-        [newManagedObject38 setValue:@"WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch"         forKey:@"image"];
+        //        NSURL *url38 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data38 = [[NSData alloc] initWithContentsOfURL:url38];
+        //        UIImage *imageSave38=[[UIImage alloc]initWithData:data38];
+        //        NSData *imageData38 = UIImagePNGRepresentation(imageSave38);
+        //        [newManagedObject38 setValue:imageData38         forKey:@"image"];
+        [newManagedObject38 setValue:@"Weka Bernard Spragg NZ"         forKey:@"image"];
         
         NSURL *url38t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"WekaGallirallus_australis_Willowbank_Wildlife_Reserve_Christchurch_TN"
+                                                ofType:@"jpg"]];
         NSData *data38t = [[NSData alloc] initWithContentsOfURL:url38t];
         UIImage *imageSave38t=[[UIImage alloc]initWithData:data38t];
         NSData *imageData38t = UIImagePNGRepresentation(imageSave38t);
@@ -2468,10 +2472,10 @@
         
         [context save:NULL];
         newManagedObject38 = nil;
-//        data38 = nil;
-//        imageSave38 = nil;
-//        imageData38 = nil;
-//        url38 = nil;
+        //        data38 = nil;
+        //        imageSave38 = nil;
+        //        imageData38 = nil;
+        //        url38 = nil;
         
         // +++++++++++Shag, spotted +++++++++++++
         /*  39
@@ -2486,7 +2490,7 @@
         [newManagedObject39 setValue:@"http://nzbirdsonline.org.nz/species/spotted-shag" forKey:@"link"];
         [newManagedObject39 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject39 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject39 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject39 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject39 setValue:@"1" forKey:@"category"];
         [newManagedObject39 setValue:@"black/grey" forKey:@"colour"];
         [newManagedObject39 setValue:@"black" forKey:@"leg_colour"];
@@ -2496,18 +2500,18 @@
         [newManagedObject39 setValue:@"Spotted Shag" forKey:@"short_name"];
         [newManagedObject39 setValue:@"goose" forKey:@"size_and_shape"];
         
-//        NSURL *url39 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"SpottedShag_Phalacrocorax_punctatus_AucklandZoo"
-//                                               ofType:@"jpg"]];
-//        NSData *data39 = [[NSData alloc] initWithContentsOfURL:url39];
-//        UIImage *imageSave39=[[UIImage alloc]initWithData:data39];
-//        NSData *imageData39 = UIImagePNGRepresentation(imageSave39);
-//        [newManagedObject39 setValue:imageData39         forKey:@"image"];
+        //        NSURL *url39 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"SpottedShag_Phalacrocorax_punctatus_AucklandZoo"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data39 = [[NSData alloc] initWithContentsOfURL:url39];
+        //        UIImage *imageSave39=[[UIImage alloc]initWithData:data39];
+        //        NSData *imageData39 = UIImagePNGRepresentation(imageSave39);
+        //        [newManagedObject39 setValue:imageData39         forKey:@"image"];
         [newManagedObject39 setValue:@"SpottedShag_Phalacrocorax_punctatus_AucklandZoo"         forKey:@"image"];
         
         NSURL *url39t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"SpottedShag_Phalacrocorax_punctatus_AucklandZoo_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"SpottedShag_Phalacrocorax_punctatus_AucklandZoo_TN"
+                                                ofType:@"jpg"]];
         NSData *data39t = [[NSData alloc] initWithContentsOfURL:url39t];
         UIImage *imageSave39t=[[UIImage alloc]initWithData:data39t];
         NSData *imageData39t = UIImagePNGRepresentation(imageSave39t);
@@ -2522,10 +2526,10 @@
         
         [context save:NULL];
         newManagedObject39 = nil;
-//        data39 = nil;
-//        imageSave39 = nil;
-//        imageData39 = nil;
-//        url39 = nil;
+        //        data39 = nil;
+        //        imageSave39 = nil;
+        //        imageData39 = nil;
+        //        url39 = nil;
         
         
         // +++++++++++Shag, little +++++++++++++
@@ -2541,7 +2545,7 @@
         [newManagedObject40 setValue:@"http://en.wikipedia.org/wiki/Cormorant" forKey:@"link"];
         [newManagedObject40 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject40 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject40 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject40 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject40 setValue:@"1" forKey:@"category"];
         [newManagedObject40 setValue:@"black/white" forKey:@"colour"];
         [newManagedObject40 setValue:@"black" forKey:@"leg_colour"];
@@ -2551,18 +2555,18 @@
         [newManagedObject40 setValue:@"Little Pied Cormorant" forKey:@"short_name"];
         [newManagedObject40 setValue:@"duck" forKey:@"size_and_shape"];
         
-//        NSURL *url40 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Shag_IMG_7093"
-//                                               ofType:@"jpg"]];
-//        NSData *data40 = [[NSData alloc] initWithContentsOfURL:url40];
-//        UIImage *imageSave40=[[UIImage alloc]initWithData:data40];
-//        NSData *imageData40 = UIImagePNGRepresentation(imageSave40);
-//        [newManagedObject40 setValue:imageData40         forKey:@"image"];
+        //        NSURL *url40 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Shag_IMG_7093"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data40 = [[NSData alloc] initWithContentsOfURL:url40];
+        //        UIImage *imageSave40=[[UIImage alloc]initWithData:data40];
+        //        NSData *imageData40 = UIImagePNGRepresentation(imageSave40);
+        //        [newManagedObject40 setValue:imageData40         forKey:@"image"];
         [newManagedObject40 setValue:@"Shag_IMG_7093"         forKey:@"image"];
         
         NSURL *url40t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Shag_IMG_7093_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Shag_IMG_7093_TN"
+                                                ofType:@"jpg"]];
         NSData *data40t = [[NSData alloc] initWithContentsOfURL:url40t];
         UIImage *imageSave40t=[[UIImage alloc]initWithData:data40t];
         NSData *imageData40t = UIImagePNGRepresentation(imageSave40t);
@@ -2578,10 +2582,10 @@
         
         [context save:NULL];
         newManagedObject40 = nil;
-//        data40 = nil;
-//        imageSave40 = nil;
-//        imageData40 = nil;
-//        url40 = nil;
+        //        data40 = nil;
+        //        imageSave40 = nil;
+        //        imageData40 = nil;
+        //        url40 = nil;
         
         // +++++++++++Kingfisher +++++++++++++
         /*  41
@@ -2596,28 +2600,28 @@
         [newManagedObject41 setValue:@"http://nzbirdsonline.org.nz/species/sacred-kingfisher" forKey:@"link"];
         [newManagedObject41 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject41 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject41 setValue:@"can fly,very shy, fast flier, preys on small animals" forKey:@"behaviour"];
+        [newManagedObject41 setValue:@"yes,can fly,very shy, fast flier, preys on small animals" forKey:@"behaviour"];
         [newManagedObject41 setValue:@"1" forKey:@"category"];
         [newManagedObject41 setValue:@"green/blue" forKey:@"colour"];
         [newManagedObject41 setValue:@"brown" forKey:@"leg_colour"];
         [newManagedObject41 setValue:@"Alcedinidae" forKey:@"family"];
-        [newManagedObject41 setValue:@"coast" forKey:@"habitat"];
+        [newManagedObject41 setValue:@"coast,garden,bush" forKey:@"habitat"];
         [newManagedObject41 setValue:@"Not Threatened" forKey:@"threat_status"];
         [newManagedObject41 setValue:@"Sacred Kingfisher" forKey:@"short_name"];
         [newManagedObject41 setValue:@"blackbird" forKey:@"size_and_shape"];
         
-//        NSURL *url41 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Kingfisher_IMG_6929"
-//                                               ofType:@"jpg"]];
-//        NSData *data41 = [[NSData alloc] initWithContentsOfURL:url41];
-//        UIImage *imageSave41=[[UIImage alloc]initWithData:data41];
-//        NSData *imageData41 = UIImagePNGRepresentation(imageSave41);
-//        [newManagedObject41 setValue:imageData41         forKey:@"image"];
+        //        NSURL *url41 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Kingfisher_IMG_6929"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data41 = [[NSData alloc] initWithContentsOfURL:url41];
+        //        UIImage *imageSave41=[[UIImage alloc]initWithData:data41];
+        //        NSData *imageData41 = UIImagePNGRepresentation(imageSave41);
+        //        [newManagedObject41 setValue:imageData41         forKey:@"image"];
         [newManagedObject41 setValue:@"Kingfisher_IMG_6929"         forKey:@"image"];
         
         NSURL *url41t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Kingfisher_IMG_6929_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Kingfisher_IMG_6929_TN"
+                                                ofType:@"jpg"]];
         NSData *data41t = [[NSData alloc] initWithContentsOfURL:url41t];
         UIImage *imageSave41t=[[UIImage alloc]initWithData:data41t];
         NSData *imageData41t = UIImagePNGRepresentation(imageSave41t);
@@ -2631,10 +2635,10 @@
         
         [context save:NULL];
         newManagedObject41 = nil;
-//        data41 = nil;
-//        imageSave41 = nil;
-//        imageData41 = nil;
-//        url41 = nil;
+        //        data41 = nil;
+        //        imageSave41 = nil;
+        //        imageData41 = nil;
+        //        url41 = nil;
         
         // +++++++++++Myna +++++++++++++
         /*  43
@@ -2649,7 +2653,7 @@
         [newManagedObject43 setValue:@"http://en.wikipedia.org/wiki/Myna" forKey:@"link"];
         [newManagedObject43 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject43 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject43 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject43 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject43 setValue:@"1" forKey:@"category"];
         [newManagedObject43 setValue:@"grey/brown/white" forKey:@"colour"];
         [newManagedObject43 setValue:@"yellow" forKey:@"leg_colour"];
@@ -2659,18 +2663,18 @@
         [newManagedObject43 setValue:@"Myna" forKey:@"short_name"];
         [newManagedObject43 setValue:@"blackbird" forKey:@"size_and_shape"];
         
-//        NSURL *url43 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8"
-//                                               ofType:@"jpg"]];
-//        NSData *data43 = [[NSData alloc] initWithContentsOfURL:url43];
-//        UIImage *imageSave43=[[UIImage alloc]initWithData:data43];
-//        NSData *imageData43 = UIImagePNGRepresentation(imageSave43);
-//        [newManagedObject43 setValue:imageData43         forKey:@"image"];
+        //        NSURL *url43 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data43 = [[NSData alloc] initWithContentsOfURL:url43];
+        //        UIImage *imageSave43=[[UIImage alloc]initWithData:data43];
+        //        NSData *imageData43 = UIImagePNGRepresentation(imageSave43);
+        //        [newManagedObject43 setValue:imageData43         forKey:@"image"];
         [newManagedObject43 setValue:@"Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8"         forKey:@"image"];
         
         NSURL *url43t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Myna_768px-Acridotheres_tristis_-Sydney,_Australia-8_TN"
+                                                ofType:@"jpg"]];
         NSData *data43t = [[NSData alloc] initWithContentsOfURL:url43t];
         UIImage *imageSave43t=[[UIImage alloc]initWithData:data43t];
         NSData *imageData43t = UIImagePNGRepresentation(imageSave43t);
@@ -2685,12 +2689,12 @@
         
         [context save:NULL];
         newManagedObject43 = nil;
-//        data43 = nil;
-//        imageSave43 = nil;
-//        imageData43 = nil;
-//        url43 = nil;
-       
- 
+        //        data43 = nil;
+        //        imageSave43 = nil;
+        //        imageData43 = nil;
+        //        url43 = nil;
+        
+        
         
         // +++++++++++Dunnock +++++++++++++
         /*  44
@@ -2705,7 +2709,7 @@
         [newManagedObject44 setValue:@"http://en.wikipedia.org/wiki/Dunnock" forKey:@"link"];
         [newManagedObject44 setValue:@"grey/black" forKey:@"beak_colour"];
         [newManagedObject44 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject44 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject44 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject44 setValue:@"0" forKey:@"category"];
         [newManagedObject44 setValue:@"brown" forKey:@"colour"];
         [newManagedObject44 setValue:@"orange/brown" forKey:@"leg_colour"];
@@ -2715,18 +2719,18 @@
         [newManagedObject44 setValue:@"Dunnock" forKey:@"short_name"];
         [newManagedObject44 setValue:@"sparrow" forKey:@"size_and_shape"];
         
-//        NSURL *url44 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                               pathForResource:@"Dunnock_IMG_7140"
-//                                               ofType:@"jpg"]];
-//        NSData *data44 = [[NSData alloc] initWithContentsOfURL:url44];
-//        UIImage *imageSave44=[[UIImage alloc]initWithData:data44];
-//        NSData *imageData44 = UIImagePNGRepresentation(imageSave44);
-//        [newManagedObject44 setValue:imageData44         forKey:@"image"];
+        //        NSURL *url44 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                               pathForResource:@"Dunnock_IMG_7140"
+        //                                               ofType:@"jpg"]];
+        //        NSData *data44 = [[NSData alloc] initWithContentsOfURL:url44];
+        //        UIImage *imageSave44=[[UIImage alloc]initWithData:data44];
+        //        NSData *imageData44 = UIImagePNGRepresentation(imageSave44);
+        //        [newManagedObject44 setValue:imageData44         forKey:@"image"];
         [newManagedObject44 setValue:@"Dunnock_IMG_7140"         forKey:@"image"];
         
         NSURL *url44t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                               pathForResource:@"Dunnock_IMG_7140_TN"
-                                               ofType:@"jpg"]];
+                                                pathForResource:@"Dunnock_IMG_7140_TN"
+                                                ofType:@"jpg"]];
         NSData *data44t = [[NSData alloc] initWithContentsOfURL:url44t];
         UIImage *imageSave44t=[[UIImage alloc]initWithData:data44t];
         NSData *imageData44t = UIImagePNGRepresentation(imageSave44t);
@@ -2741,10 +2745,10 @@
         
         [context save:NULL];
         newManagedObject44= nil;
-//        data44 = nil;
-//        imageSave44 = nil;
-//        imageData44 = nil;
-//        url44 = nil;
+        //        data44 = nil;
+        //        imageSave44 = nil;
+        //        imageData44 = nil;
+        //        url44 = nil;
         
         
         
@@ -2761,7 +2765,7 @@
         [newManagedObject45 setValue:@"http://en.wikipedia.org/wiki/European_Greenfinch" forKey:@"link"];
         [newManagedObject45 setValue:@"orange" forKey:@"beak_colour"];
         [newManagedObject45 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject45 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject45 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject45 setValue:@"0" forKey:@"category"];
         [newManagedObject45 setValue:@"green" forKey:@"colour"];
         [newManagedObject45 setValue:@"orange/red" forKey:@"leg_colour"];
@@ -2817,7 +2821,7 @@
         [newManagedObject46 setValue:@"http://en.wikipedia.org/wiki/Shining_Cuckoo" forKey:@"link"];
         [newManagedObject46 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject46 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject46 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject46 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject46 setValue:@"0" forKey:@"category"];
         [newManagedObject46 setValue:@"green" forKey:@"colour"];
         [newManagedObject46 setValue:@"black" forKey:@"leg_colour"];
@@ -2873,7 +2877,7 @@
         [newManagedObject47 setValue:@"http://en.wikipedia.org/wiki/Welcome_Swallow" forKey:@"link"];
         [newManagedObject47 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject47 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject47 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject47 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject47 setValue:@"0" forKey:@"category"];
         [newManagedObject47 setValue:@"blue/orange" forKey:@"colour"];
         [newManagedObject47 setValue:@"black" forKey:@"leg_colour"];
@@ -2914,7 +2918,7 @@
         //        imageData47 = nil;
         //        url47 = nil;
         
-// V2 starts here
+        // V2 starts here
         // +++++++++++ Kaka +++++++++++++
         /*  48 http://tomassobekphotography.co.nz/gallery3/index.php/Trips/Stewart-Island-to-West-Coast-Dec-2013/Kaka_tree_branch
          (Tomas Sobek)
@@ -2928,7 +2932,7 @@
         [newManagedObject48 setValue:@"http://en.wikipedia.org/wiki/New_Zealand_kaka" forKey:@"link"];
         [newManagedObject48 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject48 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject48 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject48 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject48 setValue:@"0" forKey:@"category"];
         [newManagedObject48 setValue:@"brown/red" forKey:@"colour"];
         [newManagedObject48 setValue:@"black" forKey:@"leg_colour"];
@@ -2938,7 +2942,7 @@
         [newManagedObject48 setValue:@"Kaka" forKey:@"short_name"];
         [newManagedObject48 setValue:@"duck" forKey:@"size_and_shape"];
         
-       
+        
         [newManagedObject48 setValue:@"Kaka_on_Branch"         forKey:@"image"];
         
         NSURL *url48t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
@@ -2958,7 +2962,7 @@
         
         [context save:NULL];
         newManagedObject48= nil;
-
+        
         // +++++++++++ Redpoll +++++++++++++
         /*  49
          */
@@ -2971,7 +2975,7 @@
         [newManagedObject49 setValue:@"http://en.wikipedia.org/wiki/Redpoll" forKey:@"link"];
         [newManagedObject49 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject49 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject49 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject49 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject49 setValue:@"0" forKey:@"category"];
         [newManagedObject49 setValue:@"brown/red" forKey:@"colour"];
         [newManagedObject49 setValue:@"black" forKey:@"leg_colour"];
@@ -3001,7 +3005,7 @@
         
         [context save:NULL];
         newManagedObject49= nil;
-
+        
         // +++++++++++ Rock Pigeon +++++++++++++
         /*  50 -https://www.flickr.com/photos/prasad-vibhu/5660933336/in/photolist-9fi5TB-9fi7bH-9fi4Mk-guU3em-9fmikj-9fibci-guVnB9-9fi6Ep-9fieBH-9fmq19-9fmk89-9kmMZz-4jXWSf-4TrAgv-dYeiUN-jNvKSq-9KAQbw-azFWWV-fUH3ZT-ebbBCD-6cZrBb-eNPGZh-5h92MZ-6vWQsa-8FCU4o-63MCiZ-8VPvcf-6aDFsb-e3e4Ry-7wPt4e-9CeLfU-4Gh9m6-2eiP6P-7vFqVW-7vBBQv-7vFr5L-823rH5-7vFr95-823rD9-7vBBUr-7vBBC4-7vBBSp-7vBBFV-7vFqMy-udj1n-aQn6Yx-5LvcTX-6qurK7-5LzrLJ-3RP78p/ Vibhu Prasad
          */
@@ -3011,10 +3015,10 @@
         [newManagedObject50 setValue:@"Rock Pigeon"       forKey:@"name"];
         [newManagedObject50 setValue:@"Rock Pigeon" forKey:@"othername"];
         [newManagedObject50 setValue:@"Bill: Short and slightly curved with a white crop at the base\n\nSize: 13-14 inches long with 25-inch wingspan, stocky body and pointed wings\n\nColors: Blue gray, black, white, brown, iridescent\n\nMarkings: Pigeons have a wide range of color and marking variations due to escaped domestic birds and fancy stock breeding. Typical pigeons are a blue gray overall with an iridescent neck that reflects blue, green and purple. Birds may have thick black wing bars and most pigeons are light underneath the wings. Eyes and legs are orange or reddish. Additional color variations include white, brown, tan or mottled birds.\n\nThese birds thrive in human habitats and are most populous in large cities but can also be found in suburban and rural locations. Pigeons do not migrate.\n\nBecause pigeons are so used to humans, they often seem semi-tame and will readily approach passersby for food. Large flocks of pigeons are constantly foraging or birds will roost in close contact with one another. Pigeons are very agile fliers that can reach speeds up to 85 miles per hour with their tapered, falcon-like wings.\n\nWhen commuting between roosting and foraging sites, rock pigeons fly directly and quickly with steady-paced wing beats. They may travel several kilometres to reach foraging sites. Rock pigeons generally forage in pairs or as a loose flock, with almost all searching for food being carried out while walking about on the ground. Often during spring and summer, males at foraging sites will court females. This involves the male standing erect with head bowed, plumage puffed out and tail fanned, walking and running about the female while cooing loudly. Nest sites are vigorously defended, sometimes resulting in fights for occupancy." forKey:@"item_description"];
-        [newManagedObject50 setValue:@"http://birding.about.com/od/birdprofiles/p/rockpigeon.htm" forKey:@"link"];
+        [newManagedObject50 setValue:@"http://nzbirdsonline.org.nz/species/rock-pigeon" forKey:@"link"];
         [newManagedObject50 setValue:@"grey" forKey:@"beak_colour"];
         [newManagedObject50 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject50 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject50 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject50 setValue:@"0" forKey:@"category"];
         [newManagedObject50 setValue:@"grey" forKey:@"colour"];
         [newManagedObject50 setValue:@"red" forKey:@"leg_colour"];
@@ -3024,7 +3028,7 @@
         [newManagedObject50 setValue:@"Rock Pigeon" forKey:@"short_name"];
         [newManagedObject50 setValue:@"pigeon" forKey:@"size_and_shape"];
         
-
+        
         [newManagedObject50 setValue:@"RockPigeon"         forKey:@"image"];
         
         NSURL *url50t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
@@ -3044,7 +3048,7 @@
         
         [context save:NULL];
         newManagedObject50= nil;
-
+        
         // +++++++++++ Skylark +++++++++++++
         /*  51 -https://www.flickr.com/photos/nottsexminer/6886717978/in/photolist-4Ykfd6-f4TwEC-sNWah-cRorW9-eLzR8d-6qqAuw-a2yLMk-7AWweg-buyfgw-b1JGqi-7AWw54-7fuXb3-buyejS-m9dxhb-7AWvTK-acto2d-a2BCYN-actnWq-oemuyL-a2yKdD-8jD8U5-ojGkqm-mTZXxB-6qqvkA-omUS7W-6q1iFo-dW3fDo-jQhHQJ-nYV8Pp-k7hw26-idJ1JE-8uNH6q-7koFa5-2K47ez-7B1kDY-e4PKfn-7kjMFB-5dXRuZ-bWCdsk-ouvEfk-ofMN5x-8uKDg6-gKkG4f-f1cWvB-dzzsvZ-7fr4Dg-8CQyhN-nCGnS-5F6FcX-nWPnh5 (Nottsexminer)
          */
@@ -3053,11 +3057,11 @@
         //Set Bird_attributes
         [newManagedObject51 setValue:@"Skylark"       forKey:@"name"];
         [newManagedObject51 setValue:@"Alauda arvensis" forKey:@"othername"];
-                [newManagedObject51 setValue:@"The skylark is a small brown bird, somewhat larger than a sparrow but smaller than a starling. It is streaky brown with a small crest, which can be raised when the bird is excited or alarmed, and a white-sided tail. The wings also have a white rear edge, visible in flight. It is renowned for its display flight, vertically up in the air. Its recent and dramatic population declines make it a Red List species.\n\nThese birds are 14–18 cm long and live in cultivation, heath, natural steppe and other open habitats. Their characteristic songs are delivered in flight.\n\nTheir diet consists of seeds, supplemented with insects in the breeding season. They nest on the ground in tufts of grass, with three to six eggs per clutch. They form flocks when not breeding." forKey:@"item_description"];
+        [newManagedObject51 setValue:@"The skylark is a small brown bird, somewhat larger than a sparrow but smaller than a starling. It is streaky brown with a small crest, which can be raised when the bird is excited or alarmed, and a white-sided tail. The wings also have a white rear edge, visible in flight. It is renowned for its display flight, vertically up in the air. Its recent and dramatic population declines make it a Red List species.\n\nThese birds are 14–18 cm long and live in cultivation, heath, natural steppe and other open habitats. Their characteristic songs are delivered in flight.\n\nTheir diet consists of seeds, supplemented with insects in the breeding season. They nest on the ground in tufts of grass, with three to six eggs per clutch. They form flocks when not breeding." forKey:@"item_description"];
         [newManagedObject51 setValue:@"http://nzbirdsonline.org.nz/species/eurasian-skylark" forKey:@"link"];
         [newManagedObject51 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject51 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject51 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject51 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject51 setValue:@"0" forKey:@"category"];
         [newManagedObject51 setValue:@"brown" forKey:@"colour"];
         [newManagedObject51 setValue:@"brown" forKey:@"leg_colour"];
@@ -3087,7 +3091,7 @@
         
         [context save:NULL];
         newManagedObject51= nil;
-
+        
         // +++++++++++ Albatross +++++++++++++
         /*  52
          */
@@ -3100,7 +3104,7 @@
         [newManagedObject52 setValue:@"http://nzbirdsonline.org.nz/species/northern-royal-albatross" forKey:@"link"];
         [newManagedObject52 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject52 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject52 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject52 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject52 setValue:@"0" forKey:@"category"];
         [newManagedObject52 setValue:@"white/black" forKey:@"colour"];
         [newManagedObject52 setValue:@"pale" forKey:@"leg_colour"];
@@ -3130,68 +3134,68 @@
         
         [context save:NULL];
         newManagedObject52= nil;
-
+        
         // +++++++++++ Kiwi(s)? +++++++++++++
         /*  53
          */
-//        NSManagedObject *newManagedObject53 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-//        
-//        //Set Bird_attributes
-//        [newManagedObject53 setValue:@"Kiwi, little spotted"       forKey:@"name"];
-//        [newManagedObject53 setValue:@"kiwi pukupuku" forKey:@"othername"];
-//        [newManagedObject53 setValue:@"Species Information\
-//        Breeding and ecology\
-//        The smallest of the five kiwi species. Formerly widespread on both main islands, but now confined to offshore islands and one mainland sanctuary. Flightless, with tiny vestigial wings and no tail. Nocturnal, therefore more often heard than seen. Male gives a repeated high-pitched ascending whistle, female gives a slower and lower pitched warbling whistle. Light brownish grey finely mottled or banded horizontally with white, long pale bill, short pale legs, toes and claws.\
-//        \
-//        Identification\
-//        \
-//        Small pale kiwi. Light brownish grey finely mottled or banded horizontally with white, long pale bill, short pale legs and toes.\
-//        \
-//    Voice:  Male gives a high-pitched ascending whistle, female gives a slower and lower pitched ascending trill; both sexes repeat calls 25-35 times per sequence.\
-//        \
-//        Similar species: juvenile great spotted kiwi pass through a stage when they are similar to little spotted kiwi, but great spotted kiwi have dark legs and toes, and darker plumage.\
-//        \
-//        Distribution and habitat\
-//        \
-//        Formerly widespread in forest and scrub on both the North and South Islands. By the time of European settlement they had virtually disappeared from the North Island, with only one specimen collected (Mt Hector, Tararua Range, 1875) and another reported from near Pirongia in 1882. Still common in Nelson, Westland and Fiordland through to the early 1900s, but gradually disappeared, leaving a small relict population on D’Urville Island. It is believed that five little spotted kiwi were introduced to Kapiti Island from the Jackson Bay area in 1912, and they flourished on the island. Since 1983, birds have been transferred from Kapiti to establish new populations on Hen, Tiritiri Matangi, Motuihe, Red Mercury, Long (Marlborough Sounds), and Chalky Islands, and to Zealandia/Karori Sanctuary (Wellington). Two D’Urville birds were transferred to Long Island (Marlborough Sounds).\
-//        \
-//        Population\
-//        \
-//        About 1650 birds in 2012. Kapiti Island is the stronghold for the species, with c.1200 birds; Zealandia 120; Tiritiri Matangi 80; Red Mercury 70; Hen Island 50; Long 50; Chalky 50; Motuihe 30." forKey:@"item_description"];
-//        [newManagedObject53 setValue:@"http://nzbirdsonline.org.nz/species/little-spotted-kiwi" forKey:@"link"];
-//        [newManagedObject53 setValue:@"brown" forKey:@"beak_colour"];
-//        [newManagedObject53 setValue:@"long" forKey:@"beak_length"];
-//        [newManagedObject53 setValue:@"flightless,nocturnal" forKey:@"behaviour"];
-//        [newManagedObject53 setValue:@"0" forKey:@"category"];
-//        [newManagedObject53 setValue:@"brown" forKey:@"colour"];
-//        [newManagedObject53 setValue:@"brown" forKey:@"leg_colour"];
-//        [newManagedObject53 setValue:@"Casuariiformes" forKey:@"family"];
-//        [newManagedObject53 setValue:@"bush" forKey:@"habitat"];
-//        [newManagedObject53 setValue:@"Recovering" forKey:@"threat_status"];
-//        [newManagedObject53 setValue:@"Little spotted kiwi" forKey:@"short_name"];
-//        [newManagedObject53 setValue:@"duck" forKey:@"size_and_shape"];
-//        
-//
-//        [newManagedObject53 setValue:@"LittleSpottedKiwi_Apteryx_owenii_TN"         forKey:@"image"];
-//        
-//        NSURL *url53t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                                pathForResource:@"LittleSpottedKiwi_Apteryx_owenii_TN"
-//                                                ofType:@"jpg"]];
-//        NSData *data53t = [[NSData alloc] initWithContentsOfURL:url53t];
-//        UIImage *imageSave53t=[[UIImage alloc]initWithData:data53t];
-//        NSData *imageData53t = UIImagePNGRepresentation(imageSave53t);
-//        [newManagedObject53 setValue:imageData53t         forKey:@"thumbnail"];
-//        
-//        
-//        [newManagedObject53 setValue:@"Kiwi" forKey:@"sound"];
-//        
-//        [newManagedObject53 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-//        [newManagedObject53 setValue:NO forKey:@"extra"];
-//        [newManagedObject53 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-//        
-//        [context save:NULL];
-//        newManagedObject53= nil;
-
+        //        NSManagedObject *newManagedObject53 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        //
+        //        //Set Bird_attributes
+        //        [newManagedObject53 setValue:@"Kiwi, little spotted"       forKey:@"name"];
+        //        [newManagedObject53 setValue:@"kiwi pukupuku" forKey:@"othername"];
+        //        [newManagedObject53 setValue:@"Species Information\
+        //        Breeding and ecology\
+        //        The smallest of the five kiwi species. Formerly widespread on both main islands, but now confined to offshore islands and one mainland sanctuary. Flightless, with tiny vestigial wings and no tail. Nocturnal, therefore more often heard than seen. Male gives a repeated high-pitched ascending whistle, female gives a slower and lower pitched warbling whistle. Light brownish grey finely mottled or banded horizontally with white, long pale bill, short pale legs, toes and claws.\
+        //        \
+        //        Identification\
+        //        \
+        //        Small pale kiwi. Light brownish grey finely mottled or banded horizontally with white, long pale bill, short pale legs and toes.\
+        //        \
+        //    Voice:  Male gives a high-pitched ascending whistle, female gives a slower and lower pitched ascending trill; both sexes repeat calls 25-35 times per sequence.\
+        //        \
+        //        Similar species: juvenile great spotted kiwi pass through a stage when they are similar to little spotted kiwi, but great spotted kiwi have dark legs and toes, and darker plumage.\
+        //        \
+        //        Distribution and habitat\
+        //        \
+        //        Formerly widespread in forest and scrub on both the North and South Islands. By the time of European settlement they had virtually disappeared from the North Island, with only one specimen collected (Mt Hector, Tararua Range, 1875) and another reported from near Pirongia in 1882. Still common in Nelson, Westland and Fiordland through to the early 1900s, but gradually disappeared, leaving a small relict population on D’Urville Island. It is believed that five little spotted kiwi were introduced to Kapiti Island from the Jackson Bay area in 1912, and they flourished on the island. Since 1983, birds have been transferred from Kapiti to establish new populations on Hen, Tiritiri Matangi, Motuihe, Red Mercury, Long (Marlborough Sounds), and Chalky Islands, and to Zealandia/Karori Sanctuary (Wellington). Two D’Urville birds were transferred to Long Island (Marlborough Sounds).\
+        //        \
+        //        Population\
+        //        \
+        //        About 1650 birds in 2012. Kapiti Island is the stronghold for the species, with c.1200 birds; Zealandia 120; Tiritiri Matangi 80; Red Mercury 70; Hen Island 50; Long 50; Chalky 50; Motuihe 30." forKey:@"item_description"];
+        //        [newManagedObject53 setValue:@"http://nzbirdsonline.org.nz/species/little-spotted-kiwi" forKey:@"link"];
+        //        [newManagedObject53 setValue:@"brown" forKey:@"beak_colour"];
+        //        [newManagedObject53 setValue:@"long" forKey:@"beak_length"];
+        //        [newManagedObject53 setValue:@"no,flightless,nocturnal" forKey:@"behaviour"];
+        //        [newManagedObject53 setValue:@"0" forKey:@"category"];
+        //        [newManagedObject53 setValue:@"brown" forKey:@"colour"];
+        //        [newManagedObject53 setValue:@"brown" forKey:@"leg_colour"];
+        //        [newManagedObject53 setValue:@"Casuariiformes" forKey:@"family"];
+        //        [newManagedObject53 setValue:@"bush" forKey:@"habitat"];
+        //        [newManagedObject53 setValue:@"Recovering" forKey:@"threat_status"];
+        //        [newManagedObject53 setValue:@"Little spotted kiwi" forKey:@"short_name"];
+        //        [newManagedObject53 setValue:@"duck" forKey:@"size_and_shape"];
+        //
+        //
+        //        [newManagedObject53 setValue:@"LittleSpottedKiwi_Apteryx_owenii_TN"         forKey:@"image"];
+        //
+        //        NSURL *url53t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                                pathForResource:@"LittleSpottedKiwi_Apteryx_owenii_TN"
+        //                                                ofType:@"jpg"]];
+        //        NSData *data53t = [[NSData alloc] initWithContentsOfURL:url53t];
+        //        UIImage *imageSave53t=[[UIImage alloc]initWithData:data53t];
+        //        NSData *imageData53t = UIImagePNGRepresentation(imageSave53t);
+        //        [newManagedObject53 setValue:imageData53t         forKey:@"thumbnail"];
+        //
+        //
+        //        [newManagedObject53 setValue:@"Kiwi" forKey:@"sound"];
+        //
+        //        [newManagedObject53 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        //        [newManagedObject53 setValue:NO forKey:@"extra"];
+        //        [newManagedObject53 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        //
+        //        [context save:NULL];
+        //        newManagedObject53= nil;
+        
         // +++++++++++ Buller's shearwater +++++++++++++
         /*  54 - https://www.flickr.com/photos/gregthebusker/6248646906/in/photolist-awaX2u-awaWW9-aw8fZB-6LCjtL-6LCjqG-Y6bta-Y6b4M-FYRi7-6Z1Tc-8g6kvm-5AnSGb-5G8QtG-d9hbv7-d9hboG-----8adCiq-eUqeN-eUqeP-eR5U9-j4zWTz-asoq7f-fUJYy8-8DAjDB-gacWv-d9hbfb-d9hbgE-8g6iVd-d9hbi5-d9hbwm-d9hbk5-8g34rz-4xXLYS-8g6iBQ-FYRcd-2XRheh-fUK9q3-7nMASV-7nRvsd-6fPKZP-6fPHvg-6fTU5A-7ayVfv-fFhYYq-LKuSr-fibri-7ayTR4-fF1p6v/ (Greg Schechter)
          */
@@ -3205,12 +3209,12 @@
         [newManagedObject54 setValue:@"http://nzbirdsonline.org.nz/species/bullers-shearwater" forKey:@"link"];
         [newManagedObject54 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject54 setValue:@"long,hooked" forKey:@"beak_length"];
-        [newManagedObject54 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject54 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject54 setValue:@"0" forKey:@"category"];
         [newManagedObject54 setValue:@"black,white" forKey:@"colour"];
         [newManagedObject54 setValue:@"brown" forKey:@"leg_colour"];
         [newManagedObject54 setValue:@"Procellariidae" forKey:@"family"];
-        [newManagedObject54 setValue:@"water" forKey:@"habitat"];
+        [newManagedObject54 setValue:@"water,coast,ocean" forKey:@"habitat"];
         [newManagedObject54 setValue:@"naturally uncommon" forKey:@"threat_status"];
         [newManagedObject54 setValue:@"Buller's shearwater" forKey:@"short_name"];
         [newManagedObject54 setValue:@"goose" forKey:@"size_and_shape"];
@@ -3235,7 +3239,7 @@
         
         [context save:NULL];
         newManagedObject54= nil;
-
+        
         // +++++++++++ Caspian Tern +++++++++++++
         /*  55
          */
@@ -3248,7 +3252,7 @@
         [newManagedObject55 setValue:@"http://en.wikipedia.org/wiki/Caspian_tern" forKey:@"link"];
         [newManagedObject55 setValue:@"red" forKey:@"beak_colour"];
         [newManagedObject55 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject55 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject55 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject55 setValue:@"0" forKey:@"category"];
         [newManagedObject55 setValue:@"grey,white" forKey:@"colour"];
         [newManagedObject55 setValue:@"black" forKey:@"leg_colour"];
@@ -3278,7 +3282,7 @@
         
         [context save:NULL];
         newManagedObject55= nil;
-
+        
         // +++++++++++ Black billed gull +++++++++++++
         /*  56  (https://www.flickr.com/photos/seabirdnz/5216875830/in/set-72157625228303867
          */
@@ -3291,7 +3295,7 @@
         [newManagedObject56 setValue:@"http://en.wikipedia.org/wiki/Black-billed_gull" forKey:@"link"];
         [newManagedObject56 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject56 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject56 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject56 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject56 setValue:@"0" forKey:@"category"];
         [newManagedObject56 setValue:@"white/grey" forKey:@"colour"];
         [newManagedObject56 setValue:@"black" forKey:@"leg_colour"];
@@ -3321,7 +3325,7 @@
         
         [context save:NULL];
         newManagedObject56= nil;
-
+        
         // +++++++++++ White Faced Heron +++++++++++++
         /*  57
          */
@@ -3334,7 +3338,7 @@
         [newManagedObject57 setValue:@"http://en.wikipedia.org/wiki/Redpoll" forKey:@"link"];
         [newManagedObject57 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject57 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject57 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject57 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject57 setValue:@"0" forKey:@"category"];
         [newManagedObject57 setValue:@"grey/white" forKey:@"colour"];
         [newManagedObject57 setValue:@"orange" forKey:@"leg_colour"];
@@ -3364,7 +3368,7 @@
         
         [context save:NULL];
         newManagedObject57= nil;
-
+        
         
         // +++++++++++ White fronted tern +++++++++++++
         /*  59 (https://www.flickr.com/photos/seabirdnz/5480572279/in/set-72157625228303867)
@@ -3379,7 +3383,7 @@
         [newManagedObject59 setValue:@"en.wikipedia.org/wiki/White-fronted_tern" forKey:@"link"];
         [newManagedObject59 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject59 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject59 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject59 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject59 setValue:@"0" forKey:@"category"];
         [newManagedObject59 setValue:@"white/grey/black" forKey:@"colour"];
         [newManagedObject59 setValue:@"black/red" forKey:@"leg_colour"];
@@ -3409,7 +3413,7 @@
         
         [context save:NULL];
         newManagedObject59= nil;
-
+        
         // +++++++++++ Bar-tailed godwit +++++++++++++
         /*  60
          */
@@ -3422,7 +3426,7 @@
         [newManagedObject60 setValue:@"http://nzbirdsonline.org.nz/?q=node/670" forKey:@"link"];
         [newManagedObject60 setValue:@"grey/red" forKey:@"beak_colour"];
         [newManagedObject60 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject60 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject60 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject60 setValue:@"0" forKey:@"category"];
         [newManagedObject60 setValue:@"brown" forKey:@"colour"];
         [newManagedObject60 setValue:@"black" forKey:@"leg_colour"];
@@ -3452,7 +3456,7 @@
         
         [context save:NULL];
         newManagedObject60= nil;
-
+        
         // +++++++++++ NZ dotterel +++++++++++++
         /*  61
          */
@@ -3465,7 +3469,7 @@
         [newManagedObject61 setValue:@"http://nzbirdsonline.org.nz/species/new-zealand-dotterel" forKey:@"link"];
         [newManagedObject61 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject61 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject61 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject61 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject61 setValue:@"0" forKey:@"category"];
         [newManagedObject61 setValue:@"brown/red" forKey:@"colour"];
         [newManagedObject61 setValue:@"grey" forKey:@"leg_colour"];
@@ -3495,7 +3499,7 @@
         
         [context save:NULL];
         newManagedObject61= nil;
-
+        
         // +++++++++++ Crested Grebe +++++++++++++
         /*  62 (https://www.flickr.com/photos/seabirdnz/8191735243/in/set-72157625228303867)
          */
@@ -3508,14 +3512,14 @@
         [newManagedObject62 setValue:@"http://nzbirdsonline.org.nz/species/australasian-crested-grebe" forKey:@"link"];
         [newManagedObject62 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject62 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject62 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject62 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject62 setValue:@"0" forKey:@"category"];
         [newManagedObject62 setValue:@"brown/red" forKey:@"colour"];
         [newManagedObject62 setValue:@"black" forKey:@"leg_colour"];
         [newManagedObject62 setValue:@"Podicipedidae" forKey:@"family"];
         [newManagedObject62 setValue:@"coast" forKey:@"habitat"];
         [newManagedObject62 setValue:@"Nationally vulnerable" forKey:@"threat_status"];
-        [newManagedObject62 setValue:@"Crested Grebe" forKey:@"short_name"];
+        [newManagedObject62 setValue:@"Great Crested Grebe" forKey:@"short_name"];
         [newManagedObject62 setValue:@"duck" forKey:@"size_and_shape"];
         
         
@@ -3538,9 +3542,9 @@
         
         [context save:NULL];
         newManagedObject62= nil;
-
-     
-
+        
+        
+        
         // +++++++++++ White heron +++++++++++++
         /*  64 (https://www.flickr.com/photos/seabirdnz/9370315084/in/set-72157625228303867
          */
@@ -3553,7 +3557,7 @@
         [newManagedObject64 setValue:@"http://nzbirdsonline.org.nz/species/white-heron" forKey:@"link"];
         [newManagedObject64 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject64 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject64 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject64 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject64 setValue:@"0" forKey:@"category"];
         [newManagedObject64 setValue:@"white" forKey:@"colour"];
         [newManagedObject64 setValue:@"black" forKey:@"leg_colour"];
@@ -3583,7 +3587,7 @@
         
         [context save:NULL];
         newManagedObject64= nil;
-
+        
         // +++++++++++ Cattle Egret +++++++++++++
         /*  65 (https://www.flickr.com/photos/seabirdnz/10865633923/in/set-72157625228303867)
          */
@@ -3596,7 +3600,7 @@
         [newManagedObject65 setValue:@"http://nzbirdsonline.org.nz/species/cattle-egret" forKey:@"link"];
         [newManagedObject65 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject65 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject65 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject65 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject65 setValue:@"0" forKey:@"category"];
         [newManagedObject65 setValue:@"white/orange" forKey:@"colour"];
         [newManagedObject65 setValue:@"black" forKey:@"leg_colour"];
@@ -3626,7 +3630,7 @@
         
         [context save:NULL];
         newManagedObject65= nil;
-
+        
         // +++++++++++ Royal Spoonbill +++++++++++++
         /*  66
          */
@@ -3639,7 +3643,7 @@
         [newManagedObject66 setValue:@"http://nzbirdsonline.org.nz/species/royal-spoonbill" forKey:@"link"];
         [newManagedObject66 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject66 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject66 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject66 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject66 setValue:@"0" forKey:@"category"];
         [newManagedObject66 setValue:@"white" forKey:@"colour"];
         [newManagedObject66 setValue:@"black" forKey:@"leg_colour"];
@@ -3669,7 +3673,7 @@
         
         [context save:NULL];
         newManagedObject66= nil;
-
+        
         // +++++++++++ Plover (spur-winged) +++++++++++++
         /*  67 - Masked Lapwing (https://www.flickr.com/photos/bareego/7282969228/in/set-72157629923731599 James Niland
          */
@@ -3682,7 +3686,7 @@
         [newManagedObject67 setValue:@"http://nzbirdsonline.org.nz/species/spur-winged-plover" forKey:@"link"];
         [newManagedObject67 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject67 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject67 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject67 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject67 setValue:@"0" forKey:@"category"];
         [newManagedObject67 setValue:@"grey/white/black" forKey:@"colour"];
         [newManagedObject67 setValue:@"black" forKey:@"leg_colour"];
@@ -3712,7 +3716,7 @@
         
         [context save:NULL];
         newManagedObject67= nil;
-
+        
         // +++++++++++ other Kiwis (Great Spotted) +++++++++++++
         /*  68
          */
@@ -3721,11 +3725,11 @@
         //Set Bird_attributes
         [newManagedObject68 setValue:@"Kiwi (Great Spotted)"       forKey:@"name"];
         [newManagedObject68 setValue:@"roa, roroa" forKey:@"othername"];
-                [newManagedObject68 setValue:@"The second largest of the five kiwi species. \n\nWidespread in forest, scrub, upland tussock grasslands and subalpine zones of the north-western South Island. Flightless, with tiny vestigial wings and no tail. Nocturnal, therefore more often heard than seen. Male gives a repeated high-pitched ascending whistle, female gives a slower and lower pitched ascending whistle. Plumage brownish grey finely mottled or banded horizontally with white, long pale bill, short dark legs and toes, often with dark or dark streaked claws. Large pale kiwi. Brownish grey finely mottled or banded horizontally with white, long pale bill, short dark legs and toes, often with dark or dark streaked claws.\n\nVoice:\n\n  Male gives a high-pitched ascending whistle repeated 10-20 times, female gives a slower and lower pitched ascending trill repeated 10-15 times.\n\nSimilar species: Juvenile great spotted kiwi pass through a stage when they are similar to little spotted kiwi, but little spotted kiwi have pale legs, toes and claws. Similar to hybrid rowi or little spotted kiwi, but great spotted kiwi have much more massive legs." forKey:@"item_description"];
+        [newManagedObject68 setValue:@"The second largest of the five kiwi species. \n\nWidespread in forest, scrub, upland tussock grasslands and subalpine zones of the north-western South Island. Flightless, with tiny vestigial wings and no tail. Nocturnal, therefore more often heard than seen. Male gives a repeated high-pitched ascending whistle, female gives a slower and lower pitched ascending whistle. Plumage brownish grey finely mottled or banded horizontally with white, long pale bill, short dark legs and toes, often with dark or dark streaked claws. Large pale kiwi. Brownish grey finely mottled or banded horizontally with white, long pale bill, short dark legs and toes, often with dark or dark streaked claws.\n\nVoice:\n\n  Male gives a high-pitched ascending whistle repeated 10-20 times, female gives a slower and lower pitched ascending trill repeated 10-15 times.\n\nSimilar species: Juvenile great spotted kiwi pass through a stage when they are similar to little spotted kiwi, but little spotted kiwi have pale legs, toes and claws. Similar to hybrid rowi or little spotted kiwi, but great spotted kiwi have much more massive legs." forKey:@"item_description"];
         [newManagedObject68 setValue:@"http://nzbirdsonline.org.nz/species/great-spotted-kiwi" forKey:@"link"];
         [newManagedObject68 setValue:@"grey" forKey:@"beak_colour"];
         [newManagedObject68 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject68 setValue:@"flightless,nocturnal" forKey:@"behaviour"];
+        [newManagedObject68 setValue:@"no,flightless,nocturnal" forKey:@"behaviour"];
         [newManagedObject68 setValue:@"0" forKey:@"category"];
         [newManagedObject68 setValue:@"grey/brown" forKey:@"colour"];
         [newManagedObject68 setValue:@"black" forKey:@"leg_colour"];
@@ -3755,7 +3759,7 @@
         
         [context save:NULL];
         newManagedObject68= nil;
-
+        
         // +++++++++++ NZ Falcon +++++++++++++
         /*  69 https://www.flickr.com/photos/seabirdnz/6191551344/in/set-72157625228303867
          */
@@ -3768,7 +3772,7 @@
         [newManagedObject69 setValue:@"http://nzbirdsonline.org.nz/species/new-zealand-falcon" forKey:@"link"];
         [newManagedObject69 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject69 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject69 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject69 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject69 setValue:@"0" forKey:@"category"];
         [newManagedObject69 setValue:@"brown/red" forKey:@"colour"];
         [newManagedObject69 setValue:@"black" forKey:@"leg_colour"];
@@ -3798,7 +3802,7 @@
         
         [context save:NULL];
         newManagedObject69= nil;
-
+        
         // +++++++++++ Mallard +++++++++++++
         /*  70
          */
@@ -3811,7 +3815,7 @@
         [newManagedObject70 setValue:@"http://nzbirdsonline.org.nz/species/mallard" forKey:@"link"];
         [newManagedObject70 setValue:@"yellow/black" forKey:@"beak_colour"];
         [newManagedObject70 setValue:@"duck" forKey:@"beak_length"];
-        [newManagedObject70 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject70 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject70 setValue:@"0" forKey:@"category"];
         [newManagedObject70 setValue:@"brown/black/green" forKey:@"colour"];
         [newManagedObject70 setValue:@"orange" forKey:@"leg_colour"];
@@ -3841,9 +3845,9 @@
         
         [context save:NULL];
         newManagedObject70= nil;
-
-       
-
+        
+        
+        
         // +++++++++++ Kakapo +++++++++++++
         /*  72 https://www.flickr.com/photos/whatscapes/3918356449/in/photolist-aCY4AL-aCUekg-aCUcP2-aCY5wh-aCY4kL-aCUeQP-aCUNwT-aCUdXT-aCUepB-aCUdxB-aCY56u-aCUd9H------npAAWF-npT9f4-nrDtsX-npB5sU-npTpZR-dvV5mu-ousaBW-9SpJ1D-avZe9w-4NQvgo-5MWgpP-4qfPxi-ap7LJg-5HHuLo-edXiK5-mYZirY-mYXkED-aDunJp-oqUMxJ-oqUP4Q-oqUMRE-op68Rd-o9Co15-op68Ju-o9Dq8t-o9Cnmj-op68kd-oeZqPu-6YjD5G-nw1X6h-nxLaN8-4ZE3Qn-6YfARP (Mark Whatmough)
          */
@@ -3852,11 +3856,11 @@
         //Set Bird_attributes
         [newManagedObject72 setValue:@"Kakapo"       forKey:@"name"];
         [newManagedObject72 setValue:@"Owl-Parrot,Night parrot" forKey:@"othername"];
-       [newManagedObject72 setValue:@"The kakapo is critically endangered; as of August 2018, the total known adult population was 148 living animals. All carry radio transmitters and are intensively monitored and managed. Because of the introduction of predators such as cats, rats, ferrets, and stoats during European colonisation, the kakapo was almost wiped out. Conservation efforts began in the 1890s, but they were not very successful until the implementation of the Kakapo Recovery Programme in 1995.\nIt is possible there are a few birds remaining on Stewart Island, and perhaps even a few in Fiordland.\n\n Once found throughout New Zealand, kakapo started declining in range and abundance after the arrival of Maori. They disappeared from the North Island by about 1930, but persisted longer in the wetter parts of the South Island. The last birds died out in Fiordland in the late 1980s. A population of less than two hundred birds was discovered on Stewart Island in 1977, but this population was also declining due to cat predation. During the 1980s and 1990s the entire known population was transferred to Codfish Island off the coast of Stewart Island, Maud Island in the Marlborough Sounds and Little Barrier Island in the Hauraki Gulf. Since then birds have been moved between Codfish, Maud and Little Barrier Islands as well as to and from newly predator-free Chalky and Anchor Islands in Fiordland. \n\nKakapo now occur only on forested islands, though they previously appeared to have inhabited a wide range of vegetation types." forKey:@"item_description"];
+        [newManagedObject72 setValue:@"The kakapo is critically endangered; as of August 2018, the total known adult population was 148 living animals. All carry radio transmitters and are intensively monitored and managed. Because of the introduction of predators such as cats, rats, ferrets, and stoats during European colonisation, the kakapo was almost wiped out. Conservation efforts began in the 1890s, but they were not very successful until the implementation of the Kakapo Recovery Programme in 1995.\nIt is possible there are a few birds remaining on Stewart Island, and perhaps even a few in Fiordland.\n\n Once found throughout New Zealand, kakapo started declining in range and abundance after the arrival of Maori. They disappeared from the North Island by about 1930, but persisted longer in the wetter parts of the South Island. The last birds died out in Fiordland in the late 1980s. A population of less than two hundred birds was discovered on Stewart Island in 1977, but this population was also declining due to cat predation. During the 1980s and 1990s the entire known population was transferred to Codfish Island off the coast of Stewart Island, Maud Island in the Marlborough Sounds and Little Barrier Island in the Hauraki Gulf. Since then birds have been moved between Codfish, Maud and Little Barrier Islands as well as to and from newly predator-free Chalky and Anchor Islands in Fiordland. \n\nKakapo now occur only on forested islands, though they previously appeared to have inhabited a wide range of vegetation types." forKey:@"item_description"];
         [newManagedObject72 setValue:@"http://en.wikipedia.org/wiki/kakapo" forKey:@"link"];
         [newManagedObject72 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject72 setValue:@"hook" forKey:@"beak_length"];
-        [newManagedObject72 setValue:@"flightless" forKey:@"behaviour"];
+        [newManagedObject72 setValue:@"no,flightless" forKey:@"behaviour"];
         [newManagedObject72 setValue:@"0" forKey:@"category"];
         [newManagedObject72 setValue:@"green" forKey:@"colour"];
         [newManagedObject72 setValue:@"black" forKey:@"leg_colour"];
@@ -3876,8 +3880,8 @@
         UIImage *imageSave72t=[[UIImage alloc]initWithData:data72t];
         NSData *imageData72t = UIImagePNGRepresentation(imageSave72t);
         [newManagedObject72 setValue:imageData72t         forKey:@"thumbnail"];
-//
-//        
+        //
+        //
         [newManagedObject72 setValue:@"kakapo-male-song_DOC_18" forKey:@"sound"];
         
         [newManagedObject72 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
@@ -3886,7 +3890,7 @@
         
         [context save:NULL];
         newManagedObject72= nil;
-
+        
         // +++++++++++ Whitehead +++++++++++++
         /*  73
          */
@@ -3899,7 +3903,7 @@
         [newManagedObject73 setValue:@"http://nzbirdsonline.org.nz/species/whitehead" forKey:@"link"];
         [newManagedObject73 setValue:@"grey" forKey:@"beak_colour"];
         [newManagedObject73 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject73 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject73 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject73 setValue:@"0" forKey:@"category"];
         [newManagedObject73 setValue:@"grey/white" forKey:@"colour"];
         [newManagedObject73 setValue:@"grey" forKey:@"leg_colour"];
@@ -3910,7 +3914,7 @@
         [newManagedObject73 setValue:@"sparrow" forKey:@"size_and_shape"];
         
         
-        [newManagedObject73 setValue:@"Whitehead_TN"         forKey:@"image"];
+        [newManagedObject73 setValue:@"Whitehead_ownPic2"         forKey:@"image"];
         
         NSURL *url73t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                                 pathForResource:@"Whitehead_TN"
@@ -3929,7 +3933,7 @@
         
         [context save:NULL];
         newManagedObject73= nil;
-
+        
         // +++++++++++ Fernbird +++++++++++++
         /*  74
          */
@@ -3942,7 +3946,7 @@
         [newManagedObject74 setValue:@"http://nzbirdsonline.org.nz/species/fernbird" forKey:@"link"];
         [newManagedObject74 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject74 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject74 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject74 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject74 setValue:@"0" forKey:@"category"];
         [newManagedObject74 setValue:@"brown" forKey:@"colour"];
         [newManagedObject74 setValue:@"red" forKey:@"leg_colour"];
@@ -3972,7 +3976,7 @@
         
         [context save:NULL];
         newManagedObject74= nil;
-
+        
         // +++++++++++ Wrybill +++++++++++++
         /*  75 https://www.flickr.com/photos/seabirdnz/8168586847/in/set-72157625228303867 or
          (https://www.flickr.com/photos/seabirdnz/5162801993/in/set-72157625228303867)
@@ -3986,7 +3990,7 @@
         [newManagedObject75 setValue:@"http://nzbirdsonline.org.nz/species/wrybill" forKey:@"link"];
         [newManagedObject75 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject75 setValue:@"curved" forKey:@"beak_length"];
-        [newManagedObject75 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject75 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject75 setValue:@"0" forKey:@"category"];
         [newManagedObject75 setValue:@"grey/white" forKey:@"colour"];
         [newManagedObject75 setValue:@"black" forKey:@"leg_colour"];
@@ -4016,7 +4020,7 @@
         
         [context save:NULL];
         newManagedObject75= nil;
-
+        
         // +++++++++++ NZ Pipit +++++++++++++
         /*  76 (https://www.flickr.com/photos/angrysunbird/4406421185/in/photolist-9jtwCP-GZxR7-7Ho4v4 (Duncan)
          )
@@ -4030,7 +4034,7 @@
         [newManagedObject76 setValue:@"http://nzbirdsonline.org.nz/species/new-zealand-pipit" forKey:@"link"];
         [newManagedObject76 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject76 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject76 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject76 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject76 setValue:@"0" forKey:@"category"];
         [newManagedObject76 setValue:@"brown" forKey:@"colour"];
         [newManagedObject76 setValue:@"black" forKey:@"leg_colour"];
@@ -4060,7 +4064,7 @@
         
         [context save:NULL];
         newManagedObject76= nil;
-
+        
         // +++++++++++ Red-necked stint +++++++++++++
         /*  77  Red-necked stint (https://www.flickr.com/photos/seabirdnz/10050327045/in/set-72157625228303867)
          */
@@ -4073,7 +4077,7 @@
         [newManagedObject77 setValue:@"http://nzbirdsonline.org.nz/species/red-necked-stint" forKey:@"link"];
         [newManagedObject77 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject77 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject77 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject77 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject77 setValue:@"0" forKey:@"category"];
         [newManagedObject77 setValue:@"grey/brown" forKey:@"colour"];
         [newManagedObject77 setValue:@"black" forKey:@"leg_colour"];
@@ -4103,7 +4107,7 @@
         
         [context save:NULL];
         newManagedObject77= nil;
-
+        
         
         // +++++++++++ North-Island Robin +++++++++++++
         /*  78  https://www.flickr.com/photos/angrysunbird/5501206978/ (Duncan)
@@ -4111,20 +4115,20 @@
         NSManagedObject *newManagedObject78 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
         //Set Bird_attributes
-        [newManagedObject78 setValue:@"North-Island Robin"       forKey:@"name"];
+        [newManagedObject78 setValue:@"Robin (North Island)"       forKey:@"name"];
         [newManagedObject78 setValue:@"Toutouwai" forKey:@"othername"];
         [newManagedObject78 setValue:@"The North Island robin occurs in forest and scrub habitats. It can be recognised by its erect stance and relatively long legs, and spends much time foraging on the ground. \n\nIt is a territorial species, males in particular inhabiting the same patch of mainland forest of 1-5 ha throughout their lives. Male are great songsters, particularly bachelors, singing loudly and often for many minutes at a time. \n\nWhere robins are regularly exposed to people, such as along public walking tracks, they become quite confiding, often approaching to within a metre of a person sitting quietly. Naïve juveniles will sometimes stand on a person’s boot." forKey:@"item_description"];
-        [newManagedObject78 setValue:@"http://www.doc.govt.nz/conservation/native-animals/birds/birds-a-z/north-island-robin-toutouwai/" forKey:@"link"];
+        [newManagedObject78 setValue:@"https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/north-island-robin-toutouwai/" forKey:@"link"];
         [newManagedObject78 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject78 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject78 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject78 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject78 setValue:@"0" forKey:@"category"];
         [newManagedObject78 setValue:@"brown/grey/black" forKey:@"colour"];
         [newManagedObject78 setValue:@"black" forKey:@"leg_colour"];
         [newManagedObject78 setValue:@"Petroicidae" forKey:@"family"];
         [newManagedObject78 setValue:@"bush" forKey:@"habitat"];
         [newManagedObject78 setValue:@"Not Threatened" forKey:@"threat_status"];
-        [newManagedObject78 setValue:@"North-Island Robin" forKey:@"short_name"];
+        [newManagedObject78 setValue:@"New Zealand Robin (North I.)" forKey:@"short_name"];
         [newManagedObject78 setValue:@"sparrow" forKey:@"size_and_shape"];
         
         
@@ -4153,9 +4157,9 @@
         /* 79
          */
         
-         // +++++++++++ Bittern +++++++++++++
-         /* 80
-          */
+        // +++++++++++ Bittern +++++++++++++
+        /* 80
+         */
         
         
         
@@ -4171,7 +4175,7 @@
         [newManagedObject81 setValue:@"http://nzbirdsonline.org.nz/species/australasian-shoveler" forKey:@"link"];
         [newManagedObject81 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject81 setValue:@"duck" forKey:@"beak_length"];
-        [newManagedObject81 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject81 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject81 setValue:@"0" forKey:@"category"];
         [newManagedObject81 setValue:@"brown/red/black" forKey:@"colour"];
         [newManagedObject81 setValue:@"black" forKey:@"leg_colour"];
@@ -4214,7 +4218,7 @@
         [newManagedObject82 setValue:@"http://nzbirdsonline.org.nz/species/little-spotted-kiwi" forKey:@"link"];
         [newManagedObject82 setValue:@"brown" forKey:@"beak_colour"];
         [newManagedObject82 setValue:@"long" forKey:@"beak_length"];
-        [newManagedObject82 setValue:@"flightless" forKey:@"behaviour"];
+        [newManagedObject82 setValue:@"no,flightless" forKey:@"behaviour"];
         [newManagedObject82 setValue:@"0" forKey:@"category"];
         [newManagedObject82 setValue:@"brown" forKey:@"colour"];
         [newManagedObject82 setValue:@"brown" forKey:@"leg_colour"];
@@ -4244,95 +4248,95 @@
         
         [context save:NULL];
         newManagedObject82= nil;
-  
+        
         
         // +++++++++++ Pied Shag +++++++++++++
         /*  83
          */
-                NSManagedObject *newManagedObject83 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        NSManagedObject *newManagedObject83 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
-                //Set Bird_attributes
-                [newManagedObject83 setValue:@"Shag, Pied"       forKey:@"name"];
-                [newManagedObject83 setValue:@"Pied Shag" forKey:@"othername"];
+        //Set Bird_attributes
+        [newManagedObject83 setValue:@"Shag, Pied"       forKey:@"name"];
+        [newManagedObject83 setValue:@"Pied Shag" forKey:@"othername"];
         [newManagedObject83 setValue:@"This large black-and-white shag is often seen individually or in small groups roosting on rocky headlands, trees or artificial structures. In regions where it occurs it can usually be readily seen about harbours and estuaries associated with cities or towns. Unlike most other shag species, the pied shag is reasonably confiding, allowing close approach when roosting or nesting in trees. It generally forages alone, but occasionally in small groups when prey is abundant.\n\nIdentification\n\nPied shags mainly inhabit coastal habitats about much of New Zealand. Adults have the crown, back of the neck, mantle, rump, wings, thighs and tail black, although on close inspection the upper wing coverts are grey-black with a thin black border. The face, throat, sides of neck and underparts are white. The long, hooked beak is grey, the iris is green, and legs and feet black. On breeding adults, the skin in front of the eye is yellow, at the base of beak is pink or pink-red, and the eye-ring is blue. Non-breeding adults have paler skin colours than breeders. \n\nVoice:\n\n generally silent away from nesting colonies, but quite vocal at colonies during pair formation, nest building and when one of a pair returns to nest during incubation. \n\nSimilar species:\n\n the pied morph of the little shag is much smaller and has a short stubby yellow beak. Both the king shag and pied morph of the Stewart Island shag have black heads with white throats, patches of white feathers on the upper wings, and pink feet. Juveniles and immatures of black shag can be difficult to distinguish from the similar-sized juveniles and immatures of pied shag. Both can have underparts from nearly all brown to nearly all white. Juvenile black shags have dark heads and upper throat, and have extensive yellowish facial skin about base of the beak, whereas the yellow is only in front of the eye on the pied shag.\n\nDistribution and habitat\n\nThe pied shag has a mainly coastal breeding distribution, occurring in three separate areas of New Zealand. Northern North Island: colonies on the western and eastern coasts of Northland and Auckland, and extending down to East Cape. Central New Zealand: Wellington, Nelson, Marlborough and Canterbury as far south as Banks Peninsula. Southern South Island: Fiordland and Stewart Island. Pied shags mainly forage in coastal marine waters, harbours and estuaries, but occasionally also in freshwater lakes and ponds close to the coast. An examination of numbers of pairs at colonies during three periods (pre 1980, 1980-1999, post 1999), suggests that populations in the northern North Island and southern South Island are in decline, while those in central New Zealand are increasing." forKey:@"item_description"];
-                [newManagedObject83 setValue:@"http://nzbirdsonline.org.nz/species/pied-shag" forKey:@"link"];
-                [newManagedObject83 setValue:@"red,pale" forKey:@"beak_colour"];
-                [newManagedObject83 setValue:@"long" forKey:@"beak_length"];
-                [newManagedObject83 setValue:@"can fly, shy" forKey:@"behaviour"];
-                [newManagedObject83 setValue:@"0" forKey:@"category"];
-                [newManagedObject83 setValue:@"black,white" forKey:@"colour"];
-                [newManagedObject83 setValue:@"black" forKey:@"leg_colour"];
-                [newManagedObject83 setValue:@"Phalacrocoracidae" forKey:@"family"];
-                [newManagedObject83 setValue:@"coast" forKey:@"habitat"];
-                [newManagedObject83 setValue:@"Nationally Vulnerable" forKey:@"threat_status"];
-                [newManagedObject83 setValue:@"pied cormorant" forKey:@"short_name"];
-                [newManagedObject83 setValue:@"duck" forKey:@"size_and_shape"];
+        [newManagedObject83 setValue:@"http://nzbirdsonline.org.nz/species/pied-shag" forKey:@"link"];
+        [newManagedObject83 setValue:@"red,pale" forKey:@"beak_colour"];
+        [newManagedObject83 setValue:@"long" forKey:@"beak_length"];
+        [newManagedObject83 setValue:@"yes,can fly, shy" forKey:@"behaviour"];
+        [newManagedObject83 setValue:@"0" forKey:@"category"];
+        [newManagedObject83 setValue:@"black,white" forKey:@"colour"];
+        [newManagedObject83 setValue:@"black" forKey:@"leg_colour"];
+        [newManagedObject83 setValue:@"Phalacrocoracidae" forKey:@"family"];
+        [newManagedObject83 setValue:@"coast" forKey:@"habitat"];
+        [newManagedObject83 setValue:@"Nationally Vulnerable" forKey:@"threat_status"];
+        [newManagedObject83 setValue:@"pied cormorant" forKey:@"short_name"];
+        [newManagedObject83 setValue:@"duck" forKey:@"size_and_shape"];
         
         
-                [newManagedObject83 setValue:@"PiedShag_steintil"         forKey:@"image"];
+        [newManagedObject83 setValue:@"PiedShag_steintil"         forKey:@"image"];
         
-                NSURL *url83t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                                        pathForResource:@"PiedShag_steintil_TN"
-                                                        ofType:@"jpg"]];
-                NSData *data83t = [[NSData alloc] initWithContentsOfURL:url83t];
-                UIImage *imageSave83t=[[UIImage alloc]initWithData:data83t];
-                NSData *imageData83t = UIImagePNGRepresentation(imageSave83t);
-                [newManagedObject83 setValue:imageData83t         forKey:@"thumbnail"];
+        NSURL *url83t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                pathForResource:@"PiedShag_steintil_TN"
+                                                ofType:@"jpg"]];
+        NSData *data83t = [[NSData alloc] initWithContentsOfURL:url83t];
+        UIImage *imageSave83t=[[UIImage alloc]initWithData:data83t];
+        NSData *imageData83t = UIImagePNGRepresentation(imageSave83t);
+        [newManagedObject83 setValue:imageData83t         forKey:@"thumbnail"];
         
         
-                //[newManagedObject83 setValue:@"Kiwi" forKey:@"sound"];
+        //[newManagedObject83 setValue:@"Kiwi" forKey:@"sound"];
         
-                [newManagedObject83 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-                [newManagedObject83 setValue:NO forKey:@"extra"];
-                [newManagedObject83 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        [newManagedObject83 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        [newManagedObject83 setValue:NO forKey:@"extra"];
+        [newManagedObject83 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
         
-                [context save:NULL];
-                newManagedObject83= nil;
+        [context save:NULL];
+        newManagedObject83= nil;
         
         
         // +++++++++++ Saddleback +++++++++++++
         /*  84
          */
-                NSManagedObject *newManagedObject84 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        NSManagedObject *newManagedObject84 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
-                //Set Bird_attributes
-                [newManagedObject84 setValue:@"Saddleback"       forKey:@"name"];
-                [newManagedObject84 setValue:@"North Island saddleback" forKey:@"othername"];
+        //Set Bird_attributes
+        [newManagedObject84 setValue:@"Saddleback"       forKey:@"name"];
+        [newManagedObject84 setValue:@"North Island saddleback" forKey:@"othername"];
         [newManagedObject84 setValue:@"North Island saddlebacks are conspicuous and easily observed in regenerating scrub, forests and coastal forests. They call frequently, particularly in response to disturbance, and are very active, noisy foragers. They are about the size of a European blackbird. Saddlebacks were widespread at European contact, but rapidly declined on the mainland following the introduction of predatory mammals, especially ship rats and stoats. By the early 1900s, North Island saddlebacks were confined to a single population on Hen Island (Taranga) off the northeast coast of the North Island. A series of successful translocations was initiated by the New Zealand Wildlife Service in the 1960s, and there are now 15 island populations and five at predator-fenced mainland sites.\n\nIdentification\n\nNorth Island saddlebacks have striking black plumage, a rufous chestnut saddle across their back, bright red wattles (that get larger with age) and a thin gold band on the leading edge of the saddle. Sexes are alike, although males usually have larger wattles than females of the same age. Juveniles are similar but their plumage lacks the sheen of adults, with dusty brown tips on black body feathers, the gold band is absent, and they have small wattles.\n\nVoice: a loud chattering call cheet te-te-te-te is uttered throughout the day. Territorial male birds sing male rhythmical song which is characterised by 2-4 introductory chips followed by a series of highly stereotyped and repeated phrases. Over 200 different types of male rhythmical song have been recorded. Male and female birds also give sexually dimorphic quiet calls which are very soft and flute like.\n\nSimilar species: the closely related South Island saddleback now confined to small islands and one fenced sanctuary, all south of Cook Strait.\n\nDistribution\n\nThe single remaining natural population of around 500 birds is on Hen Island.  There are mainland populations at five fenced sanctuaries, Karori Sanctuary (2002), Bushy Park (2006),Tawharanui Regional Park (2012), Cape Sanctuary, Hawke’s Bay (2013) and Maungatautari (2013).\n\nHabitat\n\nNorth Island saddlebacks frequent coastal and inland forests, particularly scrubby regenerating areas, ranging from sea level to more than 600 m above sea level.\n\nPopulation\n\nNorth Island saddlebacks can be very abundant in suitable habitat free of introduced mammals. Recent population estimates suggest there are more than 7000 birds across all populations. However, many of the island estimates are not based on formal counts and the actual number is likely to be much higher.\n" forKey:@"item_description"];
-                [newManagedObject84 setValue:@"http://nzbirdsonline.org.nz/species/north-island-saddleback" forKey:@"link"];
-                [newManagedObject84 setValue:@"black" forKey:@"beak_colour"];
-                [newManagedObject84 setValue:@"short" forKey:@"beak_length"];
-                [newManagedObject84 setValue:@"can fly,shy" forKey:@"behaviour"];
-                [newManagedObject84 setValue:@"0" forKey:@"category"];
-                [newManagedObject84 setValue:@"black/brown" forKey:@"colour"];
-                [newManagedObject84 setValue:@"black" forKey:@"leg_colour"];
-                [newManagedObject84 setValue:@"Callaeidae" forKey:@"family"];
-                [newManagedObject84 setValue:@"bush" forKey:@"habitat"];
-                [newManagedObject84 setValue:@"Recovering" forKey:@"threat_status"];
-                [newManagedObject84 setValue:@"Saddleback" forKey:@"short_name"];
-                [newManagedObject84 setValue:@"blackbird" forKey:@"size_and_shape"];
+        [newManagedObject84 setValue:@"http://nzbirdsonline.org.nz/species/north-island-saddleback" forKey:@"link"];
+        [newManagedObject84 setValue:@"black" forKey:@"beak_colour"];
+        [newManagedObject84 setValue:@"short" forKey:@"beak_length"];
+        [newManagedObject84 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
+        [newManagedObject84 setValue:@"0" forKey:@"category"];
+        [newManagedObject84 setValue:@"black/brown" forKey:@"colour"];
+        [newManagedObject84 setValue:@"black" forKey:@"leg_colour"];
+        [newManagedObject84 setValue:@"Callaeidae" forKey:@"family"];
+        [newManagedObject84 setValue:@"bush" forKey:@"habitat"];
+        [newManagedObject84 setValue:@"Recovering" forKey:@"threat_status"];
+        [newManagedObject84 setValue:@"Saddleback" forKey:@"short_name"];
+        [newManagedObject84 setValue:@"blackbird" forKey:@"size_and_shape"];
         
         
-                [newManagedObject84 setValue:@"Saddleback_Duncan"         forKey:@"image"];
+        [newManagedObject84 setValue:@"Saddleback_Duncan"         forKey:@"image"];
         
-                NSURL *url84t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                                        pathForResource:@"Saddleback_Duncan_TN"
-                                                        ofType:@"jpg"]];
-                NSData *data84t = [[NSData alloc] initWithContentsOfURL:url84t];
-                UIImage *imageSave84t=[[UIImage alloc]initWithData:data84t];
-                NSData *imageData84t = UIImagePNGRepresentation(imageSave84t);
-                [newManagedObject84 setValue:imageData84t         forKey:@"thumbnail"];
+        NSURL *url84t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                pathForResource:@"Saddleback_Duncan_TN"
+                                                ofType:@"jpg"]];
+        NSData *data84t = [[NSData alloc] initWithContentsOfURL:url84t];
+        UIImage *imageSave84t=[[UIImage alloc]initWithData:data84t];
+        NSData *imageData84t = UIImagePNGRepresentation(imageSave84t);
+        [newManagedObject84 setValue:imageData84t         forKey:@"thumbnail"];
         
         
-                [newManagedObject84 setValue:@"north-island-saddleback-song_DOC" forKey:@"sound"];
+        [newManagedObject84 setValue:@"north-island-saddleback-song_DOC" forKey:@"sound"];
         
-                [newManagedObject84 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-                [newManagedObject84 setValue:NO forKey:@"extra"];
-                [newManagedObject84 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        [newManagedObject84 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        [newManagedObject84 setValue:NO forKey:@"extra"];
+        [newManagedObject84 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
         
-                [context save:NULL];
-                newManagedObject84= nil;
-       
+        [context save:NULL];
+        newManagedObject84= nil;
+        
         // +++++++++++ California quail +++++++++++++
         /*  85
          */
@@ -4346,7 +4350,7 @@
         [newManagedObject85 setValue:@"http://nzbirdsonline.org.nz/species/california-quail" forKey:@"link"];
         [newManagedObject85 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject85 setValue:@"short" forKey:@"beak_length"];
-        [newManagedObject85 setValue:@"can fly,shy" forKey:@"behaviour"];
+        [newManagedObject85 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
         [newManagedObject85 setValue:@"0" forKey:@"category"];
         [newManagedObject85 setValue:@"grey/brown" forKey:@"colour"];
         [newManagedObject85 setValue:@"brown" forKey:@"leg_colour"];
@@ -4376,7 +4380,7 @@
         
         [context save:NULL];
         newManagedObject85= nil;
-      
+        
         //        ///++++  ***********************************
         NSManagedObject *newManagedObject92 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
@@ -4387,12 +4391,12 @@
         [newManagedObject92 setValue:@"Blue duck" forKey:@"name"];
         [newManagedObject92 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject92 setValue:@"duck" forKey:@"beak_length"];
-        [newManagedObject92 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject92 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject92 setValue:@"1" forKey:@"category"];
         [newManagedObject92 setValue:@"black,grey" forKey:@"colour"];
         [newManagedObject92 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject92 setValue:@"Anatidae" forKey:@"family"];
-        [newManagedObject92 setValue:@"water,bush" forKey:@"habitat"];
+        [newManagedObject92 setValue:@"water,coast,ocean,bush" forKey:@"habitat"];
         
         
         [newManagedObject92 setValue:@"BlueDuck_Whio_JulienCarnot_Flickr" forKey:@"image"];
@@ -4430,15 +4434,15 @@
         //NSLog(@"Yellow Eyed Penguin");
         
         //Set Bird_attributes: Yellow-eyed penguin
-        [newManagedObject93 setValue:@"Yellow-eyed penguin" forKey:@"name"];
+        [newManagedObject93 setValue:@"Penguin, Yellow-eyed" forKey:@"name"];
         [newManagedObject93 setValue:@"black" forKey:@"beak_colour"];
         [newManagedObject93 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject93 setValue:@"flightless" forKey:@"behaviour"];
+        [newManagedObject93 setValue:@"no,flightless" forKey:@"behaviour"];
         [newManagedObject93 setValue:@"1" forKey:@"category"];
         [newManagedObject93 setValue:@"black,yellow,white,red" forKey:@"colour"];
         [newManagedObject93 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject93 setValue:@"Spheniscidae" forKey:@"family"];
-        [newManagedObject93 setValue:@"water" forKey:@"habitat"];
+        [newManagedObject93 setValue:@"water,coast,ocean" forKey:@"habitat"];
         
         
         [newManagedObject93 setValue:@"Yellow_Eyed_Penguin_HaraldSelke_Flickr" forKey:@"image"];
@@ -4457,7 +4461,7 @@
         [newManagedObject93 setValue:@"Unique to New Zealand, the hōiho, or yellow-eyed penguin, is thought to be one of the world's rarest penguin species.\n         Yellow-eyed penguins/hōiho are found along the south-east South Island and on Banks Peninsula, on Stewart Island/Rakiura and its outliers, Codfish Island/Whenua Hou, the Auckland Islands and Campbell Island.\n\nFacts\n   The yellow-eyed penguin/hōiho (Megadyptes antipodes) is named because of its yellow iris and distinctive yellow head band. Adults are slate grey in colour, with a white belly and flesh-coloured feet that become bright pink during exercise. Hōiho chicks are covered in thick, brown fluffy down, which begins to shed once their juvenile plumage develops at around 70 days. Hōiho chicks fledge between 98 to 120 days. Their juvenile plumage is different to adults and can be distinguished by their grey iris, grey head band and dull head plumage. Adults (2 to 25 years) have a yellow iris and yellow band on their crown. Once a juvenile bird undergoes its first moult in the year after fledging, it acquires the yellow band and eye colouring of an adult. The Māori name hōiho means 'noise shouter'. This refers to their shrill call, often heard when they encounter their mate or others at their breeding site.\n\nDiet\nTheir diet is made of small to medium sized fish such as sprat, red cod, blue cod, ahuru, opalfish, silversides and squid. Hōiho are very selective and dive to the sea floor to gather their prey.\n\nLifespan\nThe average lifespan is 8 years, but several birds have reached over 25 years of age.\n\nSize\nAdults reach up to 65 cm in height and weigh around 5 to 5.5 kg. Before moulting adults and juveniles can weigh up to 9 kg. During the moult hōiho must sit ashore for 25 days and grow new feathers, and they are unable to go to sea.\n\nBehaviour\nUnlike other penguin species, hōiho are not typically colonial, and their breeding areas cannot be called 'colonies'. Hōiho seek out private nesting areas with a solid back and a roof for egg laying. Two eggs are laid in a shallow bowl lined with delicately gathered sticks, ferns and fronds.  Hōiho are philopatric, which means they usually come back to the area they were born to breed. Juveniles may wander in their first year, with female hōiho beginning breeding between 2-3 years, and male hōiho starting breeding between 3-6 years of age. Adults stay near their breeding area for life, and do not migrate elsewhere during the non-breeding part of the year. Yellow-eyed penguins are wild, and do not become habituated to human disturbance. As a result they are not suitable for holding in permanent captivity.\n\nHabitat\nThreats include habitat destruction, predation, disease and human interference.         The yellow-eyed penguin is equally dependant on marine and land habitats, which include forest and coastal scrubland. A great deal of community effort has been put into providing nesting sites and shelter on grazed pasturelands on the Otago Peninsula and North Otago. These habitats provide nesting opportunities, as well as social areas and loafing space, and a space to take refuge during the 25-day moult each year. The yellow-eyed penguin's marine habitat is equally important because it provides food, and allows for dispersal and movement between land habitats.\n" forKey:@"item_description"];
         [newManagedObject93 setValue:@"black" forKey:@"leg_colour"];
         [newManagedObject93 setValue:@"http://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/penguins/yellow-eyed-penguin-hoiho/" forKey:@"link"];
-        [newManagedObject93 setValue:@"Hoiho" forKey:@"othername"];
+        [newManagedObject93 setValue:@"hōiho" forKey:@"othername"];
         [newManagedObject93 setValue:@"Yellow eyed penguin" forKey:@"short_name"];
         [newManagedObject93 setValue:@"duck" forKey:@"size_and_shape"];
         [newManagedObject93 setValue:@"yellow-eyed-penguin_DOC" forKey:@"sound"];
@@ -4479,12 +4483,12 @@
         [newManagedObject94 setValue:@"Bittern" forKey:@"name"];
         [newManagedObject94 setValue:@"yellow" forKey:@"beak_colour"];
         [newManagedObject94 setValue:@"medium" forKey:@"beak_length"];
-        [newManagedObject94 setValue:@"can fly" forKey:@"behaviour"];
+        [newManagedObject94 setValue:@"yes, can fly" forKey:@"behaviour"];
         [newManagedObject94 setValue:@"1" forKey:@"category"];
         [newManagedObject94 setValue:@"brown" forKey:@"colour"];
         [newManagedObject94 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
         [newManagedObject94 setValue:@"Ardeidae" forKey:@"family"];
-        [newManagedObject94 setValue:@"water,bush" forKey:@"habitat"];
+        [newManagedObject94 setValue:@"coast,bush" forKey:@"habitat"];
         
         
         [newManagedObject94 setValue:@"Australasian_Bittern_FrankZed_Flickr" forKey:@"image"];
@@ -4516,57 +4520,57 @@
         
         
         
-//        // +++++++++++ Template  +++++++++++++
-//        /*  85
-//         */
-//        NSManagedObject *newManagedObject85 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-//
-//        //Set Bird_attributes
-//        [newManagedObject85 setValue:@"California Quail"       forKey:@"name"];
-//        [newManagedObject85 setValue:@"California Quail" forKey:@"othername"];
-//        [newManagedObject85 setValue:@"California quail are stocky, predominantly grey and brown, with a diagnostic forward-curling black plume rising erect from the top of their heads. Males have a black chin and cheeks edged with white, and separate white ‘eyebrows’ join on the forehead. The breast is blue-grey and the lower belly cream to rust brown with distinctive black scalloping, which merges into strong, pale streaks on the dark brown flanks. \n\nThe female is slightly smaller, duller and browner, with some streaking on the neck and a more subdued scalloping on the belly, but with equally bold streaking on the flanks. Immature birds are similar to the female but a lighter brown. The female’s crest plume is much smaller than the male’s. Both sexes have fine speckling on the nape, which is bolder in the male. \n\nThere is no seasonal change in plumage. California quail have short, rounded wings and a relatively long tail. Their legs and bill are black and sturdy, with the bill being slightly hooked.\n\nForaging quail pace sedately, but when disturbed they run at speed, their feet a blur of movement, or burst into flight with noisy, rapid wingbeats.\
-//         " forKey:@"item_description"];
-//        [newManagedObject85 setValue:@"http://nzbirdsonline.org.nz/species/california-quail" forKey:@"link"];
-//        [newManagedObject85 setValue:@"black" forKey:@"beak_colour"];
-//        [newManagedObject85 setValue:@"short" forKey:@"beak_length"];
-//        [newManagedObject85 setValue:@"can fly,shy" forKey:@"behaviour"];
-//        [newManagedObject85 setValue:@"0" forKey:@"category"];
-//        [newManagedObject85 setValue:@"grey/brown" forKey:@"colour"];
-//        [newManagedObject85 setValue:@"brown" forKey:@"leg_colour"];
-//        [newManagedObject85 setValue:@"Phasianidae" forKey:@"family"];
-//        [newManagedObject85 setValue:@"bush" forKey:@"habitat"];
-//        [newManagedObject85 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-//        [newManagedObject85 setValue:@"plumed quail" forKey:@"short_name"];
-//        [newManagedObject85 setValue:@"blackbird" forKey:@"size_and_shape"];
-//
-//
-//        [newManagedObject85 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
-//
-//        NSURL *url85t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-//                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
-//                                                ofType:@"jpg"]];
-//        NSData *data85t = [[NSData alloc] initWithContentsOfURL:url85t];
-//        UIImage *imageSave85t=[[UIImage alloc]initWithData:data85t];
-//        NSData *imageData85t = UIImagePNGRepresentation(imageSave85t);
-//        [newManagedObject85 setValue:imageData85t         forKey:@"thumbnail"];
-//
-//
-//        //[newManagedObject85 setValue:@"Kiwi" forKey:@"sound"];
-//
-//        [newManagedObject85 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-//        [newManagedObject85 setValue:NO forKey:@"extra"];
-//        [newManagedObject85 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-//
-//        [context save:NULL];
-//        newManagedObject85= nil;
+        //        // +++++++++++ Template  +++++++++++++
+        //        /*  85
+        //         */
+        //        NSManagedObject *newManagedObject85 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        //
+        //        //Set Bird_attributes
+        //        [newManagedObject85 setValue:@"California Quail"       forKey:@"name"];
+        //        [newManagedObject85 setValue:@"California Quail" forKey:@"othername"];
+        //        [newManagedObject85 setValue:@"California quail are stocky, predominantly grey and brown, with a diagnostic forward-curling black plume rising erect from the top of their heads. Males have a black chin and cheeks edged with white, and separate white ‘eyebrows’ join on the forehead. The breast is blue-grey and the lower belly cream to rust brown with distinctive black scalloping, which merges into strong, pale streaks on the dark brown flanks. \n\nThe female is slightly smaller, duller and browner, with some streaking on the neck and a more subdued scalloping on the belly, but with equally bold streaking on the flanks. Immature birds are similar to the female but a lighter brown. The female’s crest plume is much smaller than the male’s. Both sexes have fine speckling on the nape, which is bolder in the male. \n\nThere is no seasonal change in plumage. California quail have short, rounded wings and a relatively long tail. Their legs and bill are black and sturdy, with the bill being slightly hooked.\n\nForaging quail pace sedately, but when disturbed they run at speed, their feet a blur of movement, or burst into flight with noisy, rapid wingbeats.\
+        //         " forKey:@"item_description"];
+        //        [newManagedObject85 setValue:@"http://nzbirdsonline.org.nz/species/california-quail" forKey:@"link"];
+        //        [newManagedObject85 setValue:@"black" forKey:@"beak_colour"];
+        //        [newManagedObject85 setValue:@"short" forKey:@"beak_length"];
+        //        [newManagedObject85 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject85 setValue:@"0" forKey:@"category"];
+        //        [newManagedObject85 setValue:@"grey/brown" forKey:@"colour"];
+        //        [newManagedObject85 setValue:@"brown" forKey:@"leg_colour"];
+        //        [newManagedObject85 setValue:@"Phasianidae" forKey:@"family"];
+        //        [newManagedObject85 setValue:@"bush" forKey:@"habitat"];
+        //        [newManagedObject85 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+        //        [newManagedObject85 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject85 setValue:@"blackbird" forKey:@"size_and_shape"];
+        //
+        //
+        //        [newManagedObject85 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
+        //
+        //        NSURL *url85t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
+        //                                                ofType:@"jpg"]];
+        //        NSData *data85t = [[NSData alloc] initWithContentsOfURL:url85t];
+        //        UIImage *imageSave85t=[[UIImage alloc]initWithData:data85t];
+        //        NSData *imageData85t = UIImagePNGRepresentation(imageSave85t);
+        //        [newManagedObject85 setValue:imageData85t         forKey:@"thumbnail"];
+        //
+        //
+        //        //[newManagedObject85 setValue:@"Kiwi" forKey:@"sound"];
+        //
+        //        [newManagedObject85 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        //        [newManagedObject85 setValue:NO forKey:@"extra"];
+        //        [newManagedObject85 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        //
+        //        [context save:NULL];
+        //        newManagedObject85= nil;
         
-
         
-////      SUGGESTIONS:
         
-//        Fiordland crested penguin ?
-//        South Island robin?
-//        Stewart island kiwi?
+        ////      SUGGESTIONS:
+        
+        //        Fiordland crested penguin ?
+        //        South Island robin?
+        //        Stewart island kiwi?
         
         
         //        // +++++++++++ Coot  +++++++++++++
@@ -4581,63 +4585,47 @@
         // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
         //        /*  95
         //         */
-        //        NSManagedObject *newManagedObject95 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject95 setValue:@"Australian Coot"       forKey:@"name"];
-        //        [newManagedObject95 setValue:@"Fulica atra australis" forKey:@"othername"];
-        //        [newManagedObject95 setValue:@"The Australian coot is a smart, dark-grey, duck-like waterbird, instantly recognisable from its bright white bill and frontal shield. Coots are related to gallinules – the branch of the rail family that includes pukeko and takahe. Out of the water, a coot’s stance is more like a small pukeko than a duck. But instead of the pukeko’s long thin toes, coots have broad fleshy lobes on their short toes, used to give propulsion when swimming. The Australian coot is a recent arrival in New Zealand, first recorded breeding here in 1958. Their colonisation partially fills the niche left vacant by the extinction of the New Zealand coot, which was widespread before the arrival of Maori.\Identification\
-        Adult Australian coots are entirely slate-grey with a white bill and frontal shield. They have red eyes and large grey feet with lobed toes. Sexes are alike. Juvenile and immature birds have duller and paler colouring, with some pale grey on the chin and throat. They have brown eyes and smaller frontal shields. Coots are rarely seen in flight, where they differ from scaup in that their legs trail behind their tails in flight.\
-    Voice: a loud discordant krark.\
-        Similar species: New Zealand scaup have similar body size, shape, colouration and diving behaviour, but differ in having a blue-grey bill and no frontal shield, plus males have a yellow eye, and females often have white around the bill base (cf. blackish facial feathers in coots).\
-        Distribution and habitat:\
-        Australian coots are found throughout mainland New Zealand other than Northland, but there are few parts of the country where they are abundant. Coots are entirely aquatic, and there are large parts of the country that do not have their preferred freshwater lakes and ponds with submerged vegetation and reedy, grassy islands or edges.\
-            Single coots, possibly the same bird, have occurred as vagrants on Stewart Island (December 2012) and the Snares Islands (April 2013). Coots have reached Macquarie Island Island at least twice, with at least 7 birds in May-October 1957, and one in June-October 1975.\
-            \
-        Population:\
-            \
-            The Australian coot is a subspecies of the Eurasian coot that self-introduced into New Zealand from Australia in the 20th century, and was first recorded breeding in New Zealand on Lake Hayes, Otago in 1958. There were about 2,000 coots estimated to be present in New Zealand in 2005.\
-            \
-            Coots reached New Zealand on many occasions before they established, with at least 9 records from the South Island between 1875 (Lovells Flat, Otago) and 1957 (Heathcote River, Christchurch), before the first eggs and chicks were seen at Lake Hayes in November 1958. The first North Island record was at Lake Tutira, Hawkes Bay in 1954. There was an influx of coots in or before 1957, and they rapidly established as a breeding species.\
-            \
-        Threats and conservation :\
-            \
-            As a self-introduced species, Australian coots are automatically covered by the Wildlife Act, and are fully protected. They are well-established in New Zealand, with no recognised threats.   .\" forKey:@"item_description"];
-        //        [newManagedObject95 setValue:@"http://www.nzbirdsonline.org.nz/species/australian-coot" forKey:@"link"];
-        //        [newManagedObject95 setValue:@"white" forKey:@"beak_colour"];
-        //        [newManagedObject95 setValue:@"short,pointed" forKey:@"beak_length"];
-        //        [newManagedObject95 setValue:@"can fly" forKey:@"behaviour"];
-        //        [newManagedObject95 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject95 setValue:@"black" forKey:@"colour"];
-        //        [newManagedObject95 setValue:@"grey" forKey:@"leg_colour"];
-        //        [newManagedObject95 setValue:@"Rallidae" forKey:@"family"];
-        //        [newManagedObject95 setValue:@"water" forKey:@"habitat"];
-        //        [newManagedObject95 setValue:@"Native/ Naturally uncommon" forKey:@"threat_status"];
-        //        [newManagedObject95 setValue:@"Coot" forKey:@"short_name"];
-        //        [newManagedObject95 setValue:@"duck" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject95 setValue:@"AustralianCoot"         forKey:@"image"];
-        //
-        //        NSURL *url95t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"AustralianCoot_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data95t = [[NSData alloc] initWithContentsOfURL:url95t];
-        //        UIImage *imageSave95t=[[UIImage alloc]initWithData:data95t];
-        //        NSData *imageData95t = UIImagePNGRepresentation(imageSave95t);
-        //        [newManagedObject95 setValue:imageData95t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject95 setValue:@"Coot" forKey:@"sound"];
-        //
-        //        [newManagedObject95 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject95 setValue:NO forKey:@"extra"];
-        //        [newManagedObject95 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject95= nil;
-        //
-
+        NSManagedObject *newManagedObject95 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+        //Set Bird_attributes
+        [newManagedObject95 setValue:@"Australian Coot"       forKey:@"name"];
+        [newManagedObject95 setValue:@"Fulica atra australis" forKey:@"othername"];
+        [newManagedObject95 setValue:@"The Australian coot is a smart, dark-grey, duck-like waterbird, instantly recognisable from its bright white bill and frontal shield. Coots are related to gallinules – the branch of the rail family that includes pukeko and takahe. Out of the water, a coot’s stance is more like a small pukeko than a duck. But instead of the pukeko’s long thin toes, coots have broad fleshy lobes on their short toes, used to give propulsion when swimming. The Australian coot is a recent arrival in New Zealand, first recorded breeding here in 1958. Their colonisation partially fills the niche left vacant by the extinction of the New Zealand coot, which was widespread before the arrival of Maori.\nIdentification\n        Adult Australian coots are entirely slate-grey with a white bill and frontal shield. They have red eyes and large grey feet with lobed toes. Sexes are alike. Juvenile and immature birds have duller and paler colouring, with some pale grey on the chin and throat. They have brown eyes and smaller frontal shields. Coots are rarely seen in flight, where they differ from scaup in that their legs trail behind their tails in flight.\n    Voice: a loud discordant krark.\n        Similar species: New Zealand scaup have similar body size, shape, colouration and diving behaviour, but differ in having a blue-grey bill and no frontal shield, plus males have a yellow eye, and females often have white around the bill base (cf. blackish facial feathers in coots).\n        Distribution and habitat:\n        Australian coots are found throughout mainland New Zealand other than Northland, but there are few parts of the country where they are abundant. Coots are entirely aquatic, and there are large parts of the country that do not have their preferred freshwater lakes and ponds with submerged vegetation and reedy, grassy islands or edges.\n            Single coots, possibly the same bird, have occurred as vagrants on Stewart Island (December 2012) and the Snares Islands (April 2013). Coots have reached Macquarie Island Island at least twice, with at least 7 birds in May-October 1957, and one in June-October 1975.\n            \n        Population:\n            \n            The Australian coot is a subspecies of the Eurasian coot that self-introduced into New Zealand from Australia in the 20th century, and was first recorded breeding in New Zealand on Lake Hayes, Otago in 1958. There were about 2,000 coots estimated to be present in New Zealand in 2005.\n            \n            Coots reached New Zealand on many occasions before they established, with at least 9 records from the South Island between 1875 (Lovells Flat, Otago) and 1957 (Heathcote River, Christchurch), before the first eggs and chicks were seen at Lake Hayes in November 1958. The first North Island record was at Lake Tutira, Hawkes Bay in 1954. There was an influx of coots in or before 1957, and they rapidly established as a breeding species.\n            \n        Threats and conservation :\n            \n            As a self-introduced species, Australian coots are automatically covered by the Wildlife Act, and are fully protected. They are well-established in New Zealand, with no recognised threats.   .\n" forKey:@"item_description"];
+        [newManagedObject95 setValue:@"http://www.nzbirdsonline.org.nz/species/australian-coot" forKey:@"link"];
+        [newManagedObject95 setValue:@"white" forKey:@"beak_colour"];
+        [newManagedObject95 setValue:@"short,pointed" forKey:@"beak_length"];
+        [newManagedObject95 setValue:@"yes, can fly" forKey:@"behaviour"];
+        [newManagedObject95 setValue:@"0" forKey:@"category"];
+        [newManagedObject95 setValue:@"black" forKey:@"colour"];
+        [newManagedObject95 setValue:@"grey" forKey:@"leg_colour"];
+        [newManagedObject95 setValue:@"Rallidae" forKey:@"family"];
+        [newManagedObject95 setValue:@"water,coast,ocean" forKey:@"habitat"];
+        [newManagedObject95 setValue:@"Native/ Naturally uncommon" forKey:@"threat_status"];
+        [newManagedObject95 setValue:@"Eurasian Coot" forKey:@"short_name"];
+        [newManagedObject95 setValue:@"duck" forKey:@"size_and_shape"];
+        
+        
+        [newManagedObject95 setValue:@"AustralianCoot"         forKey:@"image"];
+        
+        NSURL *url95t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                pathForResource:@"AustralianCoot5929761570_1b9de7d162_o_TN"
+                                                ofType:@"jpg"]];
+        NSData *data95t = [[NSData alloc] initWithContentsOfURL:url95t];
+        UIImage *imageSave95t=[[UIImage alloc]initWithData:data95t];
+        NSData *imageData95t = UIImagePNGRepresentation(imageSave95t);
+        [newManagedObject95 setValue:imageData95t         forKey:@"thumbnail"];
+        
+        
+        //[newManagedObject95 setValue:@"Coot" forKey:@"sound"];
+        
+        [newManagedObject95 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        [newManagedObject95 setValue:NO forKey:@"extra"];
+        [newManagedObject95 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+        [context save:NULL];
+        newManagedObject95= nil;
+        
+        
         
         //        // +++++++++++ Brown Teal  +++++++++++++
         // new additions:
@@ -4651,48 +4639,47 @@
         // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
         //        /*  96
         //         */
-        //        NSManagedObject *newManagedObject96 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject96 setValue:@"Brown Teal"       forKey:@"name"];
-        //        [newManagedObject96 setValue:@"Brown Teal" forKey:@"othername"];
-        //        [newManagedObject96 setValue:@"Brown Teal.\
-        //         " forKey:@"item_description"];
-        //        [newManagedObject96 setValue:@"http://www.nzbirdsonline.org.nz/species/brown-teal" forKey:@"link"];
-        //        [newManagedObject96 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject96 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject96 setValue:@"can fly,shy" forKey:@"behaviour"];
-        //        [newManagedObject96 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject96 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject96 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject96 setValue:@"Phasianidae" forKey:@"family"];
-        //        [newManagedObject96 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject96 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject96 setValue:@"brown teal" forKey:@"short_name"];
-        //        [newManagedObject96 setValue:@"blackbird" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject96 setValue:@"BrownTeal"         forKey:@"image"];
-        //
-        //        NSURL *url96t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"BrownTeal_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data96t = [[NSData alloc] initWithContentsOfURL:url96t];
-        //        UIImage *imageSave96t=[[UIImage alloc]initWithData:data96t];
-        //        NSData *imageData96t = UIImagePNGRepresentation(imageSave96t);
-        //        [newManagedObject96 setValue:imageData95t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject96 setValue:@"BrownTeal" forKey:@"sound"];
-        //
-        //        [newManagedObject96 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject96 setValue:NO forKey:@"extra"];
-        //        [newManagedObject96 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject96= nil;
-        //
-
+        NSManagedObject *newManagedObject96 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+        //Set Bird_attributes
+        [newManagedObject96 setValue:@"Brown Teal"       forKey:@"name"];
+        [newManagedObject96 setValue:@"Brown Teal" forKey:@"othername"];
+        [newManagedObject96 setValue:@"The brown teal is the largest and only flighted member of the three brown-plumaged teals endemic to the New Zealand region. It is the progenitor of the flightless Auckland and Campbell Island teals but all are now recognised as separate species on account of their geographic isolation and their plumage, size and genetic distinctions. The brown teal was an abundant and widespread species 200 years ago, but became highly endangered due mainly to the impacts of introduced predators. It has responded well to management at a few locations, and can be locally common when protected from predators.\n\nIdentification\n\nBoth sexes of brown teal are darkish brown, but they are sexually dimorphic in plumage and size. Males in breeding plumage have an indistinct green iridescence on the head, occasionally a narrow white neck ring, dark chestnut breast, and conspicuously barred light and dark brown flank feathers with a whitish patch at the tail base. Females and juveniles are a uniformly dull but dark mottled brown. Both sexes have a conspicuous white eye ring, dark-grey bill, legs and feet, and dark brown eye. Their wings appear short, their upper and lower surfaces brown and the speculum on the secondary feathers is green.\n\nVoice: male calls are soft, usually described as trills or piping, given in alarm and in territorial defence. The female has a rasping growl and a high-pitched and rapid quack.\n\nSimilar species: the flightless Campbell Island teal on Campbell and Codfish (Whenua Hou) Islands and Auckland Island teal at Auckland Islands are both slightly smaller with very short wings, and do not become as brightly coloured as the breeding male brown teal. Grey teal and vagrant chestnut teal  both have obvious white patches on the upper-wing, whitish under-wings, and red eyes.\n\nDistribution and habitat\n\nBrown teal are endemic to New Zealand and, in pre-human times, may have been the most widespread and numerous of New Zealand’s waterfowl. They were also formerly on Chatham Island until about 1925, and Stewart Island until 1972. Brown teal are now mostly restricted to northern North Island (Northland, Great Barrier Island and Coromandel Peninsula) but have been recently re-introduced to Kapiti and Mana Islands and the Zealandia Sanctuary in Wellington, and to a private sanctuary in Hawkes Bay. A recent trial release in Fiordland has returned teal to an area in which a few wild birds lingered till the late 1990s.\n\nBrown teal formerly exploited a wide range of habitats including wet forests, extensive and occluded swamps, slow-flowing streams, lakes and estuaries. Their present day habitat lies mostly in agricultural environments wherein the birds use occluded stock ponds as breeding and feeding sites, and also margins of small streams that retain overhanging marginal vegetation. Some birds still feed in estuaries on Great Barrier Island.\n\nPopulation\n\nThe brown teal population was estimated at 1500-2500 birds in 2011. Population estimates for the three principal aggregations in Northland, Great Barrier Island and Coromandel are usually extrapolated from counts of birds at summer flock sites but there remains uncertainty about what proportion of each population assembles at these sites. Recently established populations elsewhere comprise approximately 100 birds.\n\nThreats and conservation\n\nThe brown teal is probably the least secure of New Zealand’s three brown-plumaged teals on account of its vulnerability to and exposure to mammalian predators, and to ongoing deterioration of agricultural habitats in which it is forced to reside. Recovery of teal populations on mainland sites requires permanent and assiduous predator control or predator exclusion. Although Great Barrier Island presently lacks mustelids and has limited pastoral farming, expanding human settlements and household pets threaten the population’s expansion there.\n\nBrown teal are extensively bred in captivity for reintroduction attempts, but enduring success of these attempts remains elusive.\n\n" forKey:@"item_description"];
+        [newManagedObject96 setValue:@"http://www.nzbirdsonline.org.nz/species/brown-teal" forKey:@"link"];
+        [newManagedObject96 setValue:@"black" forKey:@"beak_colour"];
+        [newManagedObject96 setValue:@"druck" forKey:@"beak_length"];
+        [newManagedObject96 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
+        [newManagedObject96 setValue:@"0" forKey:@"category"];
+        [newManagedObject96 setValue:@"grey,black,green,brown" forKey:@"colour"];
+        [newManagedObject96 setValue:@"brown" forKey:@"leg_colour"];
+        [newManagedObject96 setValue:@"Anatidae" forKey:@"family"];
+        [newManagedObject96 setValue:@"bush,ocean,water,coast" forKey:@"habitat"];
+        [newManagedObject96 setValue:@"Recovering" forKey:@"threat_status"];
+        [newManagedObject96 setValue:@"brown teal" forKey:@"short_name"];
+        [newManagedObject96 setValue:@"duck" forKey:@"size_and_shape"];
+        
+        
+        [newManagedObject96 setValue:@"BrownTeal_BernardSpraggNZ"         forKey:@"image"];
+        
+        NSURL *url96t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                pathForResource:@"BrownTeal_BernardSpraggNZ_TN"
+                                                ofType:@"jpg"]];
+        NSData *data96t = [[NSData alloc] initWithContentsOfURL:url96t];
+        UIImage *imageSave96t=[[UIImage alloc]initWithData:data96t];
+        NSData *imageData96t = UIImagePNGRepresentation(imageSave96t);
+        [newManagedObject96 setValue:imageData96t         forKey:@"thumbnail"];
+        
+        
+        //[newManagedObject96 setValue:@"BrownTeal" forKey:@"sound"];
+        
+        [newManagedObject96 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        [newManagedObject96 setValue:NO forKey:@"extra"];
+        [newManagedObject96 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+        [context save:NULL];
+        newManagedObject96= nil;
+        
+        
         
         //        // +++++++++++ Scaup  +++++++++++++
         // new additions:
@@ -4706,48 +4693,47 @@
         // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
         //        /*  97
         //         */
-        //        NSManagedObject *newManagedObject97 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject97 setValue:@"Scaup"       forKey:@"name"];
-        //        [newManagedObject97 setValue:@"New Zealand Scaup" forKey:@"othername"];
-        //        [newManagedObject97 setValue:@"New Zealand Scaup.\
-        //         " forKey:@"item_description"];
-        //        [newManagedObject97 setValue:@"http://www.nzbirdsonline.org.nz/species/new-zealand-scaup" forKey:@"link"];
-        //        [newManagedObject97 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject97 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject97 setValue:@"can fly,shy" forKey:@"behaviour"];
-        //        [newManagedObject97 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject97 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject97 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject97 setValue:@"Phasianidae" forKey:@"family"];
-        //        [newManagedObject97 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject97 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject97 setValue:@"plumed quail" forKey:@"short_name"];
-        //        [newManagedObject97 setValue:@"blackbird" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject97 setValue:@"Scaup"         forKey:@"image"];
-        //
-        //        NSURL *url97t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"Scaup_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data97t = [[NSData alloc] initWithContentsOfURL:url97t];
-        //        UIImage *imageSave97t=[[UIImage alloc]initWithData:data97t];
-        //        NSData *imageData97t = UIImagePNGRepresentation(imageSave97t);
-        //        [newManagedObject97 setValue:imageData97t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject97 setValue:@"NewZealandScaup" forKey:@"sound"];
-        //
-        //        [newManagedObject97 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject97 setValue:NO forKey:@"extra"];
-        //        [newManagedObject97 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject97= nil;
-        //
-
+        NSManagedObject *newManagedObject97 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+        //Set Bird_attributes
+        [newManagedObject97 setValue:@"New Zealand Scaup"       forKey:@"name"];
+        [newManagedObject97 setValue:@"Papango" forKey:@"othername"];
+        [newManagedObject97 setValue:@"New Zealand scaup are gregarious diving ducks common throughout New Zealand. Compact and blackish, they have the silhouette of a bath-toy duck. Large approachable flocks are a feature of the Rotorua and Queenstown lakeshores, and scaup are also common on the Avon River that flows through Christchurch.\n\nIdentification\n\nNew Zealand scaup are quite unlike any other resident duck species. Dark and squat with a rounded profile, they often occur in large flocks, floating with cork-like buoyancy. Scaup are diving ducks and spend a lot of time underwater, where they can travel considerable distances. Both sexes are dark-plumaged, but are easily distinguished. The male has dark black-brown plumage with iridescent blue-green head and wings, and lighter mottling on the chest and underparts. His iris is yellow and bill blue-grey. The female is a duller chocolate brown, paler on her underparts. Her iris is brown and bill grey, normally with a ring of white feathers at the base. Juvenile resemble females until 12 weeks-old when the male iris colour becomes yellow. In flight, all birds have a broad white upper-wing bar and pale white underwing. Scaup have a fast wing beat and often fly just above the water. They sometimes rest on land, but quickly retreat to water when disturbed.\n\nVoice: males have a high pitched whistle call weeee weo-weo weo-weo weo-weoooo. The female call is a low quiet wack wack.\n\nSimilar species: brown teal are a similar size but have a long, flat body. Vagrant Australian white-eyed ducks are larger and have white undertail coverts. Males also have white eyes and both sexes have a pale saddle on the upper mandible. Australian coots are similar in body size, shape, colouration and diving behaviour, but have a bright white bill and frontal shield.\n\nDistribution and habitat\n\nNew Zealand scaup are widely but patchily distributed throughout the North and South Islands. They are found on dune lakes in Northland and Manawatu, and on inland lakes in Waikato, Taupo, Rotorua and Hawke’s Bay. In the South lsland they are common on West Coast lakes, north Canterbury waterways (including Christchurch), and eastern and southern high country and hydroelectric lakes. They are common on large, deep, freshwater lakes, including hydro-electric lakes, and are becoming increasingly common on shallow lowland lakes, slow flowing rivers and salt water. They are not found on Stewart Island, and are no longer present on Chatham Islands.\n\nScaup often congregate in sheltered areas near willows or reed beds, moving as wind conditions change; although they have favoured locations. They are considered non-migratory despite being capable fliers. Their numbers can fluctuate greatly on otherwise preferred lakes, suggesting at least some localised seasonal movements. Movement is also driven by ice conditions during winter.\n\nPopulation\n\nThe New Zealand scaup population was estimated at 20,000 birds in the 1990s. This may have increased following the range and population expansion reported in Canterbury.\n\nThreats and conservation\n\nPopulations apparently declined during late 1800s and early 1900s due to land clearance, associated hydrological changes, predation and hunting. Adults and chicks are vulnerable to predation during nesting and chick-rearing which may result in low breeding success. Predator control and provision of suitable feeding and breeding habitat has led to population expansion at Bromley Oxidation Ponds and Te Huingi Manu Wildlife Refuge in Christchurch. The success of this one site has probably allowed the recolonisation of the wider Christchurch area.\n\nBreeding\n\nThe nest is well concealed on the ground close to the water. Nests may be partially open above, or covered, or have a tunnel leading to a concealed chamber. The nest is a tidy bowl consisting of the surrounding materials, and lined with a layer of down. Breeding mainly occurs between October and March. They nest solitary or in a loose colony. Only females incubate and care for young, but solitary males, or groups of males are often reported close to breeding sites. Chicks often form crèches.\n\nBehaviour and ecology\n\nThere have been few studies on the behaviour or ecology of scaup. They are social, and can form dense rafts especially in autumn and winter and are often associated with other species particularly coots, shoveler and crested grebes. A range of male courtship behaviours were documented by Stoke (1991) including “sneak” (neck extended), “head-flicks” (rapid upwards head and bill movement) and “kink-neck” (neck held at unusual angle). Aggressive displays occur between courting males. Several males attend females until a bond has established, the bonded male will defend the female and they separate themselves from the group. Pairs form at the breeding site and last only until the female begins nesting when the bond apparently breaks. Females have been recorded laying in the nests of other females at one well-studied population (Lake Clearwater, inland Canterbury)\n\nFood\n\nScaup obtain most of their food by diving. Prey items include snails, chironomid larvae and caddisfly larvae. Plant material is probably taken also..\\n\n" forKey:@"item_description"];
+        [newManagedObject97 setValue:@"http://www.nzbirdsonline.org.nz/species/new-zealand-scaup" forKey:@"link"];
+        [newManagedObject97 setValue:@"black" forKey:@"beak_colour"];
+        [newManagedObject97 setValue:@"duck" forKey:@"beak_length"];
+        [newManagedObject97 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
+        [newManagedObject97 setValue:@"0" forKey:@"category"];
+        [newManagedObject97 setValue:@"black" forKey:@"colour"];
+        [newManagedObject97 setValue:@"brown" forKey:@"leg_colour"];
+        [newManagedObject97 setValue:@"Anatidae" forKey:@"family"];
+        [newManagedObject97 setValue:@"bush,ocean,water,coast" forKey:@"habitat"];
+        [newManagedObject97 setValue:@"Not threatened" forKey:@"threat_status"];
+        [newManagedObject97 setValue:@"Scaup" forKey:@"short_name"];
+        [newManagedObject97 setValue:@"duck" forKey:@"size_and_shape"];
+        
+        
+        [newManagedObject97 setValue:@"Scaup NZ Bernard Spragg NZ"         forKey:@"image"];
+        
+        NSURL *url97t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                pathForResource:@"Scaup NZ Bernard Spragg NZ_TN"
+                                                ofType:@"jpg"]];
+        NSData *data97t = [[NSData alloc] initWithContentsOfURL:url97t];
+        UIImage *imageSave97t=[[UIImage alloc]initWithData:data97t];
+        NSData *imageData97t = UIImagePNGRepresentation(imageSave97t);
+        [newManagedObject97 setValue:imageData97t         forKey:@"thumbnail"];
+        
+        
+        //[newManagedObject97 setValue:@"NewZealandScaup" forKey:@"sound"];
+        
+        [newManagedObject97 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        [newManagedObject97 setValue:NO forKey:@"extra"];
+        [newManagedObject97 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+        [context save:NULL];
+        newManagedObject97= nil;
+        
+        
         //        // +++++++++++ Canada Goose  +++++++++++++
         // new additions:
         // Coot, Australian -http://www.nzbirdsonline.org.nz/species/australian-coot
@@ -4760,48 +4746,48 @@
         // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
         //        /*  98
         //         */
-        //        NSManagedObject *newManagedObject98 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject98 setValue:@"Canada Goose"       forKey:@"name"];
-        //        [newManagedObject98 setValue:@"Canada Goose" forKey:@"othername"];
-        //        [newManagedObject98 setValue:@"Canada Goose.\
-        //         " forKey:@"item_description"];
-        //        [newManagedObject98 setValue:@"http://www.nzbirdsonline.org.nz/species/canada-goose" forKey:@"link"];
-        //        [newManagedObject98 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject98 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject98 setValue:@"can fly,shy" forKey:@"behaviour"];
-        //        [newManagedObject98 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject98 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject98 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject98 setValue:@"Phasianidae" forKey:@"family"];
-        //        [newManagedObject98 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject98 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject98 setValue:@"plumed quail" forKey:@"short_name"];
-        //        [newManagedObject98 setValue:@"blackbird" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject98 setValue:@"CanadaGoose"         forKey:@"image"];
-        //
-        //        NSURL *url98t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"CanadaGoose_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data98t = [[NSData alloc] initWithContentsOfURL:url98t];
-        //        UIImage *imageSave98t=[[UIImage alloc]initWithData:data98t];
-        //        NSData *imageData98t = UIImagePNGRepresentation(imageSave98t);
-        //        [newManagedObject98 setValue:imageData98t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject98 setValue:@"CanadaGoose" forKey:@"sound"];
-        //
-        //        [newManagedObject98 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject98 setValue:NO forKey:@"extra"];
-        //        [newManagedObject98 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject98= nil;
-        //
-
+        NSManagedObject *newManagedObject98 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+        //Set Bird_attributes
+        [newManagedObject98 setValue:@"Canada Goose"       forKey:@"name"];
+        [newManagedObject98 setValue:@"Canada Goose (honker)" forKey:@"othername"];
+        [newManagedObject98 setValue:@"The distinctive and well-known Canada goose is a North American native that has been extensively introduced to UK, Scandinavia, and North Sea nations from Denmark to France, Russia and Ukraine, as well as New Zealand.\n\nIdentification\n        A large light-brown goose with black neck and head and a conspicuous white chinstrap. The breast and abdomen are barred white and light brown, and the abdomen and under-tail is white. Back and upper wing surface a darker brown. Bill, legs and feet black, eye dark brown-black. Sexes alike but females are noticeably smaller than males. Goslings have yellowish-grey down and the juveniles appear as dull versions of the adult.\n\nVoice: a distinctive and loud honk given when the birds are disturbed or surprised, or when flying.\nSimilar species: none. Other geese in New Zealand include the rare and vagrant Cape Barren goose and feral flocks of the domesticated greylag goose.\n\nDistribution and habitat\nCanada geese are widespread in the South Island and most numerous in pastoral areas of the eastern foothills of the Southern Alps from Marlborough to Central Otago, and around coastal lakes and lagoons. Their distribution is expanding in Fiordland and Southland. In the North Island, their distribution still reflects locations at which birds were released during the past 30 years, with the largest concentrations in Wairarapa, Hawkes Bay, Ruapehu-Taupo area, and Waikato.\n\nPastoral land adjacent to a lake or large pond provides preferred habitat, but geese may also be found in well-forested mountain valleys, especially in Fiordland, and around alpine tarns. Communal moult gatherings at secluded or very large lakes with grazing available at the immediate margins.         \n\nPopulation \n\nNumbers are controlled by annual culls to reduce damage to lakeside pastures in some areas. Total population of about 60,000, two-thirds of which are in the South Island, and have been maintained at this number for most of the past decade.\n\nEcological and economic impacts\n\nGrazing of high-country lakeside pasture, especially autumn-saved pasture, is considered an economic burden for sheep farmers. Widespread irrigation to promote dairy farming in formerly dry country has allowed geese to remain year round and graze highly nutritious grasses. This prompted farmer advocacy to declare the bird a pest, and in 2011 the Canada goose was declared an unprotected species.\
+         " forKey:@"item_description"];
+        [newManagedObject98 setValue:@"http://www.nzbirdsonline.org.nz/species/canada-goose" forKey:@"link"];
+        [newManagedObject98 setValue:@"black" forKey:@"beak_colour"];
+        [newManagedObject98 setValue:@"short" forKey:@"beak_length"];
+        [newManagedObject98 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
+        [newManagedObject98 setValue:@"0" forKey:@"category"];
+        [newManagedObject98 setValue:@"grey,brown,white,black" forKey:@"colour"];
+        [newManagedObject98 setValue:@"brown" forKey:@"leg_colour"];
+        [newManagedObject98 setValue:@"Anatidae" forKey:@"family"];
+        [newManagedObject98 setValue:@"bush,ocean,water,coast" forKey:@"habitat"];
+        [newManagedObject98 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+        [newManagedObject98 setValue:@"Canada Goose" forKey:@"short_name"];
+        [newManagedObject98 setValue:@"swan" forKey:@"size_and_shape"];
+        
+        
+        [newManagedObject98 setValue:@"Canada Geese Bernard Spragg NZ"         forKey:@"image"];
+        
+        NSURL *url98t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                pathForResource:@"Canada Geese Bernard Spragg NZ_NZ"
+                                                ofType:@"jpg"]];
+        NSData *data98t = [[NSData alloc] initWithContentsOfURL:url98t];
+        UIImage *imageSave98t=[[UIImage alloc]initWithData:data98t];
+        NSData *imageData98t = UIImagePNGRepresentation(imageSave98t);
+        [newManagedObject98 setValue:imageData98t         forKey:@"thumbnail"];
+        
+        
+        //[newManagedObject98 setValue:@"CanadaGoose" forKey:@"sound"];
+        
+        [newManagedObject98 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        [newManagedObject98 setValue:NO forKey:@"extra"];
+        [newManagedObject98 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+        [context save:NULL];
+        newManagedObject98= nil;
+        
+        
         //        // +++++++++++ Guinea Fowl  +++++++++++++
         // new additions:
         // Coot, Australian -http://www.nzbirdsonline.org.nz/species/australian-coot
@@ -4814,47 +4800,46 @@
         // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
         //        /*  99
         //         */
-        //        NSManagedObject *newManagedObject99 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject99 setValue:@"Guinea Fowl"       forKey:@"name"];
-        //        [newManagedObject99 setValue:@"Guinea Fowl" forKey:@"othername"];
-        //        [newManagedObject99 setValue:@"Guinea Fowl.\
-        //         " forKey:@"item_description"];
-        //        [newManagedObject99 setValue:@"http://www.nzbirdsonline.org.nz/species/helmeted-guineafowl" forKey:@"link"];
-        //        [newManagedObject99 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject99 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject99 setValue:@"can fly,shy" forKey:@"behaviour"];
-        //        [newManagedObject99 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject99 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject99 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject99 setValue:@"Phasianidae" forKey:@"family"];
-        //        [newManagedObject99 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject99 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject99 setValue:@"Canada Goose" forKey:@"short_name"];
-        //        [newManagedObject99 setValue:@"blackbird" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject99 setValue:@"GuineaFowl"         forKey:@"image"];
-        //
-        //        NSURL *url99t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"CanadaGoose_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data99t = [[NSData alloc] initWithContentsOfURL:url99t];
-        //        UIImage *imageSave99t=[[UIImage alloc]initWithData:data99t];
-        //        NSData *imageData99t = UIImagePNGRepresentation(imageSave99t);
-        //        [newManagedObject99 setValue:imageData99t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject99 setValue:@"GuineaFowl" forKey:@"sound"];
-        //
-        //        [newManagedObject99 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject99 setValue:NO forKey:@"extra"];
-        //        [newManagedObject99 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject99= nil;
-        //
+        NSManagedObject *newManagedObject99 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+        //Set Bird_attributes
+        [newManagedObject99 setValue:@"Guinea Fowl"       forKey:@"name"];
+        [newManagedObject99 setValue:@"Tufted Guinea Fowl" forKey:@"othername"];
+        [newManagedObject99 setValue:@"This distinctive African gamebird was first introduced to New Zealand in the 1860s; none of these early releases was successful. The scattered groups of birds found today probably all originated from birds that have wandered off from farmyards. The species has been domesticated for thousands of years, and probably all birds released locally come from domestic stock.\n\nIdentification\n\nThe helmeted guineafowl is a plump chicken-sized bird with a characteristic humped-back appearance. The slate grey plumage is speckled with numerous white spots, the neck is short and featherless, and the small bare head bears a scimitar-shaped bony casque. Skin on the lower face and upper neck is sky blue with red-tipped wattles and a darker blue throat flap. The cere, forehead and crown are red, the bill and casque are horn-coloured, and the iris brown. The lower neck is covered with brownish-grey down-like feathers that extend halfway up the back of the upper neck. Lower down these merge into normal slate-grey body feathers, each of which has a dozen or more uniformly spaced white spots, creating an overall speckled appearance. The flight feathers are similarly patterned, although the dots on the outer webs merge to form fine white stripes that align when the wing is closed, creating a barred appearance. Birds from domestic stock often have whitish facial skin, occasional white flight feathers, and irregular patches of white on the flanks and belly. The legs are dark grey in wild-type birds, and orange-brown in domestic birds; leg spurs absent. Females have shorter and narrower casques and smaller wattles, but are best distinguished by their distinctive, sex-specific call (see below).­­­ Young birds are similar to adults but have paler facial skin and less obvious white spots. Chicks are brownish-grey, with black fringes to the body and emerging flight feathers. Their head feathers are brown with longitudinal black stripes.\n\nVoice: males give a single, recurring chek note; females produce a distinctive, repetitive two-syllable call buck-wheat, the first note short, second one longer and rising. In both sexes, the rate of repetition of their calls increases when birds become agitated or excited. The alarm call is a repeated, harsh, rattling kek-kek-kek-kek-krrrrrrr.\n\nSimilar species: adult helmeted guineafowl may resemble adult female and immature wild turkeys and common pheasants but are distinguished by white-spotted grey plumage and a bony casque on the head.\n\nDistribution and habitat\n\nDuring the period 1999-2004, helmeted guineafowl were recorded from less than 1 per cent of the country, mostly around Auckland and farmland around Kaipara Harbour. Some earlier reported populations, such as around Aberfeldy, near Whanganui, no longer exist. Guineafowl do best in areas that have a mosaic of habitats. Populations tend to decline in areas of uniform grassland and pasture, especially where pesticides are commonly used.\n\nPopulation\n\nThe size of the current wild population is unknown but probably small. The history of failed introductions and small, short-lived populations suggest that this species cannot sustain itself naturally in New Zealand, at least under present conditions. There are a number of registered breeders in New Zealand, and an unknown number of owners of domestic guineafowl flocks, both of which can serve as sources of deliberate or inadvertent re-introductions.\n\nEcological and economic impacts\n\nGuineafowl can damage emerging seedlings of agricultural crops, but this is offset partly by the number of insects that they eat. Guineafowl are prime gamebirds in other parts of the world, but require careful management to prevent overharvesting.\n\n" forKey:@"item_description"];
+        [newManagedObject99 setValue:@"http://www.nzbirdsonline.org.nz/species/helmeted-guineafowl" forKey:@"link"];
+        [newManagedObject99 setValue:@"yellow,red" forKey:@"beak_colour"];
+        [newManagedObject99 setValue:@"short" forKey:@"beak_length"];
+        [newManagedObject99 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
+        [newManagedObject99 setValue:@"0" forKey:@"category"];
+        [newManagedObject99 setValue:@"black,white" forKey:@"colour"];
+        [newManagedObject99 setValue:@"red" forKey:@"leg_colour"];
+        [newManagedObject99 setValue:@"Phasianidae" forKey:@"family"];
+        [newManagedObject99 setValue:@"bush" forKey:@"habitat"];
+        [newManagedObject99 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+        [newManagedObject99 setValue:@"Helmeted Guineafowl" forKey:@"short_name"];
+        [newManagedObject99 setValue:@"blackbird" forKey:@"size_and_shape"];
+        
+        
+        [newManagedObject99 setValue:@"GuineaFowl_DennisJarvisFlickr"         forKey:@"image"];
+        
+        NSURL *url99t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                pathForResource:@"GuineaFowl_DennisJarvisFlickr_TN"
+                                                ofType:@"jpg"]];
+        NSData *data99t = [[NSData alloc] initWithContentsOfURL:url99t];
+        UIImage *imageSave99t=[[UIImage alloc]initWithData:data99t];
+        NSData *imageData99t = UIImagePNGRepresentation(imageSave99t);
+        [newManagedObject99 setValue:imageData99t         forKey:@"thumbnail"];
+        
+        
+        //[newManagedObject99 setValue:@"GuineaFowl" forKey:@"sound"];
+        
+        [newManagedObject99 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        [newManagedObject99 setValue:NO forKey:@"extra"];
+        [newManagedObject99 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+        [context save:NULL];
+        newManagedObject99= nil;
+        
         //        // +++++++++++ Brown Creeper  +++++++++++++
         // new additions:
         // Coot, Australian -http://www.nzbirdsonline.org.nz/species/australian-coot
@@ -4867,47 +4852,46 @@
         // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
         //        /*  100
         //         */
-        //        NSManagedObject *newManagedObject100 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject100 setValue:@"Brown Creeper"       forKey:@"name"];
-        //        [newManagedObject100 setValue:@"Brown Creeper" forKey:@"othername"];
-        //        [newManagedObject100 setValue:@"Brown Creeper.\
-        //         " forKey:@"item_description"];
-        //        [newManagedObject100 setValue:@"http://www.nzbirdsonline.org.nz/species/brown-creeper" forKey:@"link"];
-        //        [newManagedObject100 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject100 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject100 setValue:@"can fly,shy" forKey:@"behaviour"];
-        //        [newManagedObject100 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject100 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject100 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject100 setValue:@"Phasianidae" forKey:@"family"];
-        //        [newManagedObject100 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject100 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject100 setValue:@"Brown Creeper" forKey:@"short_name"];
-        //        [newManagedObject100 setValue:@"blackbird" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject100 setValue:@"Brown Creeper"         forKey:@"image"];
-        //
-        //        NSURL *url100t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"Brown Creeper_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data100t = [[NSData alloc] initWithContentsOfURL:url100t];
-        //        UIImage *imageSave100t=[[UIImage alloc]initWithData:data100t];
-        //        NSData *imageData100t = UIImagePNGRepresentation(imageSave100t);
-        //        [newManagedObject100 setValue:imageData100t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject100 setValue:@"BrownCreeper" forKey:@"sound"];
-        //
-        //        [newManagedObject100 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject100 setValue:NO forKey:@"extra"];
-        //        [newManagedObject100 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject100= nil;
-        //
+        NSManagedObject *newManagedObject100 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+        //Set Bird_attributes
+        [newManagedObject100 setValue:@"Brown Creeper"       forKey:@"name"];
+        [newManagedObject100 setValue:@"pīpipi" forKey:@"othername"];
+        [newManagedObject100 setValue:@"Brown creepers are found in a wide range of forested and shrubland habitats throughout the South Island and Stewart Island. Often the first sign is a large chattering flock high in the forest canopy. They can be attracted down by squeaking or pishing, but do not stay long as the flock moves on through the canopy. Once sighted the grey face and buff underparts are distinctive.\n         \n         Identification\n         \n         The brown creeper is a small, noisy flocking songbird found in forest and shrubland in the South Island and Stewart Island. It has ash- to dark-grey on the face, sharply demarcated from the light buff underparts. The crown, back, rump and tail are dark reddish brown, with a dark bar on the tip of the tail. The eye is reddish-brown and the bill, legs and feet are pinkish- or grey-brown. The sexes are alike and juveniles are similar.\n         \n                                Voice: harsh chattering contact calls, often by many birds in a flock, also canary-like song. Both the contact call and song can be confused with the related yellowhead where both species occur.\n\n         Similar species: dunnock is darker underneath and is more furtive, often close to or on the ground. Grey warbler is smaller, rarely occurs in groups larger than a pair, and does not have the sharp demarcation between grey on the face and pale underparts.\n         \n         Distribution and habitat\n         \n         Brown creepers occur throughout the South and Stewart Islands. It is present on some islands in the Marlborough Sounds (e.g. D’Urville, Arapawa and Maud Islands), Fiordland (including Secretary, Resolution and Chalky Islands) and a few islands off Stewart Island (Codfish, Ulva and north-east muttonbird islands). Isolated populations are present on Banks Peninsula, Mt Peel and the Hunters Hills, and they persist at other sites that appear isolated from main populations (e.g. Naseby, Central Otago, and coastal Otago centred on Dunedin).\n         \n         Brown creepers inhabit a wide range of forest types, from sea level to the tree-line, including tall beech and podocarp forests, manuka/kanuka and other scrub forests, muttonbird scrub, regrowing forest, mature pine forests, willow, gorse and broom.\n         \n         Population\n         \n         Brown creepers are common through most of their range. In the nonbreeding season they may form flocks of up to 60 individuals and associate with yellowheads and parakeets. They disappeared from large areas of the eastern South Island following forest clearance, but numbers and distribution now appear stable.\n         \n         Breeding\n         \n         Nesting can begin in September and extend through to early February, with egg-laying from late September to late January. Brown creeper can make up to four nesting attempts in a season but will only raise two broods. Laying peaks in early October, with a second peak in late November indicating renesting attempts. The female builds a compact deep cup of vegetative material including bark, twigs, moss and leaves. It is lined with dried grass, feathers and wool. Nests are found in dense patches of foliage in the forest canopy, sometimes in shrubs or low trees 1-10 m above the ground. Males closely attend females during nest building and the start of laying. The clutch is 2-4 (typically 3) eggs laid at 24 hour intervals. The female alone incubates for 17-21 days and broods the young, but both adults feed the chicks which fledge at 18-22 days. When renesting occurs the male takes over most feeding with some assistance from non-breeding birds.\n         \n         Brown creepers pairs are monogamous and exhibit high mate fidelity, with 64.7% staying together for two seasons and 29.4 % for three seasons; changes in pairs were precipitated by loss of the partner rather than divorce and mate swapping. In drought condition there have been reports of cooperative breeding with failed adults contributing food to a nest. The young of the year stay as a group once they become independent and often form larger groups through the autumn and winter. 63% of eggs hatch and 36% fledge. Predation accounted for 62% of eggs and 66% of nestlings lost, with an overall success rate of 1.6 fledglings/adult/year. Brown creepers can breed at one year old.\n\n         Brown creepers are the primary host for the long-tailed cuckoo in the South Island and Stewart Island.\n         \n         Behaviour and ecology\n         \n         Pairs defend territories during the breeding season and to a lesser extent during the rest of the year. Brown creepers are gregarious during autumn and winter, forming large flocks, often with other species (including silvereye, parakeet, grey warbler and fantail). At Kaikoura brown creeper formed the nucleus of mixed feeding flocks. They are non-migratory, but birds in high altitude forests will descend to lower altitudes in winter. Brown creepers mob long-tailed cuckoos when they are present in spring and summer.\n         \n         Brown creepers are vocal all day and all year except during the late summer moult. Males give territorial song which varies from bird to bird and is a phrase of slurs notes and whisltes. Females sing a rapid sequence of brief notes. Calls include a wide range of chatters, trills and ‘zicks’. In autumn and winter large flocks will call incessantly whereas small flocks will have periods of silence. They respond readily to “squeaking” and will closely investigate but then the flock will continue to move through the canopy.\n         \n         Food\n         \n         Brown creepers are insectivorous, but take some fruit. Their main prey are beetles, spiders, moths and caterpillars. They glean invertebrates from leaves and small branches in the canopy, and occasionally will glean from loose bark on main trunks and large branches, and will hang upside down to forage. Brown creepers rarely feed on the ground, with most foraging occurring from 2 m off the ground through to the canopy.\n           " forKey:@"item_description"];
+        [newManagedObject100 setValue:@"http://www.nzbirdsonline.org.nz/species/brown-creeper" forKey:@"link"];
+        [newManagedObject100 setValue:@"brown" forKey:@"beak_colour"];
+        [newManagedObject100 setValue:@"pointed" forKey:@"beak_length"];
+        [newManagedObject100 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
+        [newManagedObject100 setValue:@"0" forKey:@"category"];
+        [newManagedObject100 setValue:@"grey/brown" forKey:@"colour"];
+        [newManagedObject100 setValue:@"brown" forKey:@"leg_colour"];
+        [newManagedObject100 setValue:@"Pachycephalidae" forKey:@"family"];
+        [newManagedObject100 setValue:@"bush,garden" forKey:@"habitat"];
+        [newManagedObject100 setValue:@"Not Threatened" forKey:@"threat_status"];
+        [newManagedObject100 setValue:@"Brown Creeper" forKey:@"short_name"];
+        [newManagedObject100 setValue:@"blackbird" forKey:@"size_and_shape"];
+        
+        
+        [newManagedObject100 setValue:@"BrownCreeper"         forKey:@"image"];
+        
+        NSURL *url100t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                 pathForResource:@"BrownCreeper_10741276845_4385999547_k_TN"
+                                                 ofType:@"jpg"]];
+        NSData *data100t = [[NSData alloc] initWithContentsOfURL:url100t];
+        UIImage *imageSave100t=[[UIImage alloc]initWithData:data100t];
+        NSData *imageData100t = UIImagePNGRepresentation(imageSave100t);
+        [newManagedObject100 setValue:imageData100t         forKey:@"thumbnail"];
+        
+        
+        //[newManagedObject100 setValue:@"BrownCreeper" forKey:@"sound"];
+        
+        [newManagedObject100 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        [newManagedObject100 setValue:NO forKey:@"extra"];
+        [newManagedObject100 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+        [context save:NULL];
+        newManagedObject100= nil;
+        
         //        // +++++++++++ North-Island Kokako  +++++++++++++
         // new additions:
         // Coot, Australian -http://www.nzbirdsonline.org.nz/species/australian-coot
@@ -4920,180 +4904,235 @@
         // kokako (North Island) - http://www.nzbirdsonline.org.nz/species/north-island-kokako
         //        /*  101
         //         */
-        //        NSManagedObject *newManagedObject101 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject101 setValue:@"Kokako"       forKey:@"name"];
-        //        [newManagedObject101 setValue:@"Kokako" forKey:@"othername"];
-        //        [newManagedObject101 setValue:@"Kokako.\
-        //         " forKey:@"item_description"];
-        //        [newManagedObject101 setValue:@"http://www.nzbirdsonline.org.nz/species/north-island-kokako" forKey:@"link"];
-        //        [newManagedObject101 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject101 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject101 setValue:@"can fly,shy" forKey:@"behaviour"];
-        //        [newManagedObject101 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject101 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject101 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject101 setValue:@"Phasianidae" forKey:@"family"];
-        //        [newManagedObject101 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject101 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject101 setValue:@"Kokako (NI)" forKey:@"short_name"];
-        //        [newManagedObject101 setValue:@"blackbird" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject101 setValue:@"Kokako"         forKey:@"image"];
-        //
-        //        NSURL *url101t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"Kokako_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data101t = [[NSData alloc] initWithContentsOfURL:url101t];
-        //        UIImage *imageSave101t=[[UIImage alloc]initWithData:data101t];
-        //        NSData *imageData101t = UIImagePNGRepresentation(imageSave101t);
-        //        [newManagedObject101 setValue:imageData101t         forKey:@"thumbnail"];
-        //
-        //
-        //        [newManagedObject101 setValue:@"kokako-song_DOC" forKey:@"sound"];
-        //
-        //        [newManagedObject101 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject101 setValue:NO forKey:@"extra"];
-        //        [newManagedObject101 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject101= nil;
-        //
+        NSManagedObject *newManagedObject101 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
-////      SUGGESTIONS:
-
-//        Fiordland crested penguin 102
-//        South Island robin 103
-//        Stewart island kiwi 104
-
-
+        //Set Bird_attributes
+        [newManagedObject101 setValue:@"Kokako, North Island"       forKey:@"name"];
+        [newManagedObject101 setValue:@"blue-wattled crow" forKey:@"othername"];
+        [newManagedObject101 setValue:@"With their extraordinary haunting song, and obscure evolutionary relationships to other birds, kokako evoke the forests of ancient New Zealand/Aotearoa perhaps more than any other species. More likely to be heard than seen, North Island kokako have persisted in small populations particularly in the central North Island from the King Country through to Te Urewera. They typically inhabit tall native forest dominated by tawa (Beilschmiedia tawa), singing from tree-tops but often feeding in understorey layers.\n\n All mainland North Island populations persist only with sustained control of key pest mammals (ship rats and brushtail possums). All unmanaged populations are extinct.\n     \n Identification\n\n The North Island kokako is a large songbird with a blue-grey body, a striking black mask and small, rich blue wattles that arise from the base of the bill and sit under the throat. Typically, when seen backlit in forest, kokako seem dark-plumaged and neither mask nor wattles are seen. They have long, strong legs and a long down-curved tail. Kokako characteristically bound and run among branches, interspersed with glides on short, rounded wings. They are usually located by listening for song and calls. The sexes are alike; juveniles have pink or lilac wattles. A few adults have orange wattles (cf. South Island kokako).\n         \n                                Voice: rich, sonorous, sustained, organ-like notes are sung by both male and female North Island kokako, frequently as duet, and typically from a high perch.  There is a frequent close contact call of 'took', repeated variably.\n \n  Similar species: tui have similar silhouette and song (especially when mimicking kokako where they coexist), but they are much smaller, darker and more adept fliers, with very different head and throat ornamentation. Vagrant black-faced cuckoo-shrike from Australia is half the size, paler grey, lacks wattles, and is a bird of open woodlands, parks and gardens rather than dense native forest.\n   \n    Distribution and habitat\n  \n   Natural remnant North Island kokako populations are confined to a few scattered forests in the northern half of the North Island, particularly in the Waikato, Bay of Plenty, Te Urewera, South Auckland and Northland. Since 1981, has been successfully translocated to Little Barrier, Kapiti and Tiritiri Matangi Islands, Mount Bruce Scenic Reserve (Wairarapa), Boundary Stream Mainland Island (Hawkes Bay), Ngapukeriki (East Cape), Ark in the Park (Waitakeres, west Auckland), Whirinaki and Otanewainuku (Bay of Plenty), Maungatautari (Waikato) and Puketi (Northland). They characteristically reside in tall, diverse native forest, usually with a canopy of tawa or taraire with emergent podocarps or kauri. Kokako have successfully bred in planted diverse shrub- and tree- hardwoods on Tiritiri Matangi Island.\n    \n   Population\n    \n  The North Island kokako population has increased from c.330 pairs in 1999 to c.1595 in 2017 due to pest control at key sites, and translocation. The largest populations, with more than 100 pairs each, are in Pureora Forest, Hauturu (Little Barrier Island ), Te Urewera, and Mapara (Waikato). Other large populations (> 50 prs) are at Mataraua/Waima (Northland), Hunua Ranges, Kaharoa-Onaia and Rotoehu near Rotorua, and there are 14 other smaller populations. Breeding pairs and unpaired singles defend 4-25 ha territories year-round by singing, which limits density.\n  \n  Threats and conservation\n  \n    Predation at nests by ship rats and possums is the primary cause of current declines of North Island kokako. Food reduction mainly by possums and predation by stoats are unhelpful secondary factors. All current populations must be continually managed against introduced mammal pests, either by repeated pest control on the mainland, or by vigilance against pest invasion on islands. Ship rats and possums are routinely targeted by trapping and poisoning so that their numbers are low for the duration of the breeding season (November to February). Food supply influences the number of breeding attempts that kokako make, but nest predators determine the outcomes of these attempts. Several key populations are being restored primarily by community groups. Maintenance of genetic health also influences management; e.g. new populations are established with individuals from two different source populations, totalling >40 founders. The conservation status of this species was moved from nationally vulnerable to 'at risk - recovering' in 2013.\n" forKey:@"item_description"];
+        [newManagedObject101 setValue:@"http://www.nzbirdsonline.org.nz/species/north-island-kokako" forKey:@"link"];
+        [newManagedObject101 setValue:@"black" forKey:@"beak_colour"];
+        [newManagedObject101 setValue:@"short" forKey:@"beak_length"];
+        [newManagedObject101 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
+        [newManagedObject101 setValue:@"0" forKey:@"category"];
+        [newManagedObject101 setValue:@"grey/blue" forKey:@"colour"];
+        [newManagedObject101 setValue:@"black" forKey:@"leg_colour"];
+        [newManagedObject101 setValue:@"Callaeidae" forKey:@"family"];
+        [newManagedObject101 setValue:@"bush" forKey:@"habitat"];
+        [newManagedObject101 setValue:@"Recovering" forKey:@"threat_status"];
+        [newManagedObject101 setValue:@"North Island Kokako" forKey:@"short_name"];
+        [newManagedObject101 setValue:@"blackbird" forKey:@"size_and_shape"];
+        
+        
+        [newManagedObject101 setValue:@"Kokako"         forKey:@"image"];
+        
+        NSURL *url101t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                 pathForResource:@"Kokako5286526342_6811cdb98c_b_TN"
+                                                 ofType:@"jpg"]];
+        NSData *data101t = [[NSData alloc] initWithContentsOfURL:url101t];
+        UIImage *imageSave101t=[[UIImage alloc]initWithData:data101t];
+        NSData *imageData101t = UIImagePNGRepresentation(imageSave101t);
+        [newManagedObject101 setValue:imageData101t         forKey:@"thumbnail"];
+        
+        
+        [newManagedObject101 setValue:@"kokako-song_DOC" forKey:@"sound"];
+        
+        [newManagedObject101 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        [newManagedObject101 setValue:NO forKey:@"extra"];
+        [newManagedObject101 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+        [context save:NULL];
+        newManagedObject101= nil;
+        
+        
+        ////      SUGGESTIONS:
+        
+        //        Fiordland crested penguin 102
+        //        South Island robin 103
+        //        Stewart island kiwi 104
+        
+        
         //        /*  102 Fjordland Crested Penguin
         //         */
-        //        NSManagedObject *newManagedObject102 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject102 setValue:@"Fjordland Crested Penguin"       forKey:@"name"];
-        //        [newManagedObject102 setValue:@"Fjordland Crested Penguin" forKey:@"othername"];
-        //        [newManagedObject102 setValue:@"Fiordland crested penguins are endemic to New Zealand, breeding in small colonies on inaccessible headlands and islets along the shores of south-western South Island and Stewart Island. They can be seen and heard on landing beaches during July – December. Populations have declined considerably in range and numbers since human arrival. Immediate threats include fisheries bycatch, introduced predators, and human disturbance. Identification: Adult Fiordland crested penguins have dark blue-grey/black upperparts (which turn brown when approaching moult), often darker on the head. A broad yellow eyebrow stripe (crest) starts at the nostril and extends well past the eye, drooping down the neck; 3-6 whitish stripes on the cheeks are displayed when agitated. The underparts are silky white. The moderately large orange bill has a thin strip of black skin at the base (cf. broader bare pink skin on Snares crested penguin). Females have smaller bills (bill depth < 24 mm) than males (bill depth >24 mm). The eyes are brownish-red, and feet and legs pinkish-white above and blackish-brown behind and on the soles. Juveniles have short, thin pale-yellow eyebrow stripes and mottled whitish chin and throat. The dorsal plumage of newly-fledged chicks is distinctly bluish, fading to black with wear, then to mid-brown before moulting. Voice: calls include loud braying or trumpeting, high pitched contact calls, and low-pitched hissing and growling. Calls are similar to those of Snares crested penguins. Similar species: Fiordland crested penguins are most similar to Snares crested penguin, which (as adults) have dark cheeks, a larger bill with prominent pink skin at the base, and narrower eye-brow stripes. All other crested penguins are also similar, especially when immature, but note broad eye-brow stripes, throat and cheeks greyish white, and absence of bare skin at bill base in immature Fiordland crested penguins. Recently fledged young (which are smaller than adults and bluish dorsally) may be confused with little penguins when swimming, but are twice as large and have at least some yellow above the eye" forKey:@"item_description"];
-        //        [newManagedObject102 setValue:@"http://nzbirdsonline.org.nz/species/fiordland-crested-penguin" forKey:@"link"];
-        //        [newManagedObject102 setValue:@"" forKey:@"beak_colour"];
-        //        [newManagedObject102 setValue:@"" forKey:@"beak_length"];
-        //        [newManagedObject102 setValue:@"" forKey:@"behaviour"];
-        //        [newManagedObject102 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject102 setValue:@"" forKey:@"colour"];
-        //        [newManagedObject102 setValue:@"" forKey:@"leg_colour"];
-        //        [newManagedObject102 setValue:@"" forKey:@"family"];
-        //        [newManagedObject102 setValue:@"" forKey:@"habitat"];
-        //        [newManagedObject102 setValue:@"" forKey:@"threat_status"];
-        //        [newManagedObject102 setValue:@"Fjordland Crested Penguin" forKey:@"short_name"];
-        //        [newManagedObject102 setValue:@"" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject102 setValue:@"FjordlandCrestedPenguin"         forKey:@"image"];
-        //
-        //        NSURL *url102t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"FjordlandCrestedPenguin_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data102t = [[NSData alloc] initWithContentsOfURL:url102t];
-        //        UIImage *imageSave102t=[[UIImage alloc]initWithData:data102t];
-        //        NSData *imageData102t = UIImagePNGRepresentation(imageSave102t);
-        //        [newManagedObject102 setValue:imageData102t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject102 setValue:@"FjordlandCrestedPenguin" forKey:@"sound"];
-        //
-        //        [newManagedObject102 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject102 setValue:NO forKey:@"extra"];
-        //        [newManagedObject102 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject102= nil;
+        NSManagedObject *newManagedObject102 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+        //Set Bird_attributes
+        [newManagedObject102 setValue:@"Penguin, Fiordland Crested"       forKey:@"name"];
+        [newManagedObject102 setValue:@"tawaki" forKey:@"othername"];
+        [newManagedObject102 setValue:@"Fiordland crested penguins are endemic to New Zealand, breeding in small colonies on inaccessible headlands and islets along the shores of south-western South Island and Stewart Island. They can be seen and heard on landing beaches during July – December. Populations have declined considerably in range and numbers since human arrival. Immediate threats include fisheries bycatch, introduced predators, and human disturbance.\n\n Identification:\n\n Adult Fiordland crested penguins have dark blue-grey/black upperparts (which turn brown when approaching moult), often darker on the head. A broad yellow eyebrow stripe (crest) starts at the nostril and extends well past the eye, drooping down the neck; 3-6 whitish stripes on the cheeks are displayed when agitated. The underparts are silky white. The moderately large orange bill has a thin strip of black skin at the base (cf. broader bare pink skin on Snares crested penguin). Females have smaller bills (bill depth < 24 mm) than males (bill depth >24 mm). The eyes are brownish-red, and feet and legs pinkish-white above and blackish-brown behind and on the soles. Juveniles have short, thin pale-yellow eyebrow stripes and mottled whitish chin and throat. The dorsal plumage of newly-fledged chicks is distinctly bluish, fading to black with wear, then to mid-brown before moulting. \n\nVoice:\n\n calls include loud braying or trumpeting, high pitched contact calls, and low-pitched hissing and growling. Calls are similar to those of Snares crested penguins. \n\nSimilar species:\n\n Fiordland crested penguins are most similar to Snares crested penguin, which (as adults) have dark cheeks, a larger bill with prominent pink skin at the base, and narrower eye-brow stripes. All other crested penguins are also similar, especially when immature, but note broad eye-brow stripes, throat and cheeks greyish white, and absence of bare skin at bill base in immature Fiordland crested penguins. Recently fledged young (which are smaller than adults and bluish dorsally) may be confused with little penguins when swimming, but are twice as large and have at least some yellow above the eye" forKey:@"item_description"];
+        [newManagedObject102 setValue:@"http://nzbirdsonline.org.nz/species/fiordland-crested-penguin" forKey:@"link"];
+        [newManagedObject102 setValue:@"red" forKey:@"beak_colour"];
+        [newManagedObject102 setValue:@"medium" forKey:@"beak_length"];
+        [newManagedObject102 setValue:@"no,flightless" forKey:@"behaviour"];
+        [newManagedObject102 setValue:@"0" forKey:@"category"];
+        [newManagedObject102 setValue:@"black,white,yellow" forKey:@"colour"];
+        [newManagedObject102 setValue:@"red" forKey:@"leg_colour"];
+        [newManagedObject102 setValue:@"Spheniscidae" forKey:@"family"];
+        [newManagedObject102 setValue:@"coast" forKey:@"habitat"];
+        [newManagedObject102 setValue:@"Nationally vulnerable" forKey:@"threat_status"];
+        [newManagedObject102 setValue:@"Fiordland Penguin" forKey:@"short_name"];
+        [newManagedObject102 setValue:@"duck" forKey:@"size_and_shape"];
+        
+        
+        [newManagedObject102 setValue:@"FjordlandCrestedPenguin"         forKey:@"image"];
+        
+        NSURL *url102t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                 pathForResource:@"FjordlandCrestedPenguin2154751828_aca5bbb5da_o_TN"
+                                                 ofType:@"jpg"]];
+        NSData *data102t = [[NSData alloc] initWithContentsOfURL:url102t];
+        UIImage *imageSave102t=[[UIImage alloc]initWithData:data102t];
+        NSData *imageData102t = UIImagePNGRepresentation(imageSave102t);
+        [newManagedObject102 setValue:imageData102t         forKey:@"thumbnail"];
+        
+        
+        //[newManagedObject102 setValue:@"FjordlandCrestedPenguin" forKey:@"sound"];
+        
+        [newManagedObject102 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        [newManagedObject102 setValue:NO forKey:@"extra"];
+        [newManagedObject102 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+        [context save:NULL];
+        newManagedObject102= nil;
         
         //        /*  103 South Island Robin
         //         */
-        //        NSManagedObject *newManagedObject103 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
-        //
-        //        //Set Bird_attributes
-        //        [newManagedObject103 setValue:@"South Island Robin"       forKey:@"name"];
-        //        [newManagedObject103 setValue:@"South Island Robin" forKey:@"othername"];
-        //        [newManagedObject103 setValue:@"The South Island robin is a familiar bird to those who venture into the South Island back-country. It occurs in forest and scrub habitats, where it spends much time foraging on the ground, and can be recognised by its erect stance and relatively long legs. It is a territorial species, males in particular inhabiting the same patch of forest throughout their lives. Males are great songsters, particularly bachelors, singing loudly and often for many minutes at a time. Where robins are regularly exposed to people, such as along public walking tracks, they become quite confiding, often approaching to within a metre of a person sitting quietly. Juveniles will sometimes stand on a person’s boot. Identification: The adult male South Island robin is dark grey-black over the head, neck, mantle and upper chest; the flight feathers and tail are brownish-black, and the lower chest and belly white to yellowish white with a sharp demarcation between black and white on chest. Adult females are light to dark grey over the upper body. They further differ from males in the  white chest-belly area being smaller and not having such a distinct demarcation between grey and white feathering. Juveniles are similar to females, but often with a smaller or no white patch on the underparts. Adults of both sexes are able to expose a small white spot of feathers above the base of the beak during intraspecific and interspecific interactions. Voice: South Island robins have four recognisable vocalisations. Fullsong is a series of phrases given loudly by males only, generally from a high perch. Robins can be heard giving fullsong year round, but particularly during the breeding season. It is used to indicate territorial occupancy and to attract a mate – bachelors spend much more time singing than paired males. Subsong is similar to fullsong but given at much less volume, is given by both sexes, and most frequently during the moult. The downscale is a series of very loud ‘chuck’ calls, descending in tone, and which start in rapid succession and finish slowly. The call lasts 3-4 seconds, is given by both sexes, and is most frequently heard during the non-breeding season (January-June). The fourth vocalisation type is the ‘chuck’, which is given as single notes (contact calls) or in rapid succession and loudly (as an alarm call) when a predator is nearby. Similar species:there are no species that are similar to the robin in the South Island or Stewart Island. Robins are much larger and lack the white wing-bars of tomtits. Distribution: The South Island robin has a disjunct distribution through both the South and Stewart Islands. Its strongholds in the South Island are Marlborough, Nelson, West Coast as far south as about Harihari, and through Fiordland, with outliers at Jackson Bay and Dunedin. A comparison of the Ornithological Society of New Zealand’s atlas scheme results of 1969-79 and 1999-2004 suggest that the South Island robin’s distribution has changed little during the 20 year interval. Several populations, particularly on islands, have been established by translocations. Habitat: Robins occur in mature forest, scrub, and exotic plantations, particularly those that are fairly mature with an open understorey. They seem to favour moist areas where there is an open understorey under a closed canopy on fertile soils. Habitats that tend to be shunned are those with widely scattered trees and where the ground is covered by grasses or sparse vegetation on stony, droughty soils. Population: South Island robin is patchily distributed through its range, and is absent from some seemingly suitable areas while common in others. Pairs have territories of 1-5 ha on the mainland, although populations on pest-free islands can occur at much greater densities (0.2-0.6 ha / pair). \" forKey:@"item_description"];
-        //        [newManagedObject103 setValue:@"http://nzbirdsonline.org.nz/species/south-island-robin" forKey:@"link"];
-        //        [newManagedObject103 setValue:@"black" forKey:@"beak_colour"];
-        //        [newManagedObject103 setValue:@"short" forKey:@"beak_length"];
-        //        [newManagedObject103 setValue:@"can fly,shy" forKey:@"behaviour"];
-        //        [newManagedObject103 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject103 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject103 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject103 setValue:@"Phasianidae" forKey:@"family"];
-        //        [newManagedObject103 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject103 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-        //        [newManagedObject103 setValue:@"South Island Robin" forKey:@"short_name"];
-        //        [newManagedObject103 setValue:@"blackbird" forKey:@"size_and_shape"];
-        //
-        //
-        //        [newManagedObject103 setValue:@"SouthIslandRobin"         forKey:@"image"];
-        //
-        //        NSURL *url103t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"SouthIslandRobin_TN"
-        //                                                ofType:@"jpg"]];
-        //        NSData *data103t = [[NSData alloc] initWithContentsOfURL:url103t];
-        //        UIImage *imageSave103t=[[UIImage alloc]initWithData:data103t];
-        //        NSData *imageData103t = UIImagePNGRepresentation(imageSave103t);
-        //        [newManagedObject103 setValue:imageData103t         forKey:@"thumbnail"];
-        //
-        //
-        //        //[newManagedObject103 setValue:@"SouthIslandRobin" forKey:@"sound"];
-        //
-        //        [newManagedObject103 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject103 setValue:NO forKey:@"extra"];
-        //        [newManagedObject103 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
-        //
-        //        [context save:NULL];
-        //        newManagedObject103= nil;
+        NSManagedObject *newManagedObject103 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+        //Set Bird_attributes
+        [newManagedObject103 setValue:@"Robin (South Island)"       forKey:@"name"];
+        [newManagedObject103 setValue:@"South Island Robin" forKey:@"othername"];
+        [newManagedObject103 setValue:@"The South Island robin is a familiar bird to those who venture into the South Island back-country. It occurs in forest and scrub habitats, where it spends much time foraging on the ground, and can be recognised by its erect stance and relatively long legs. It is a territorial species, males in particular inhabiting the same patch of forest throughout their lives. Males are great songsters, particularly bachelors, singing loudly and often for many minutes at a time. Where robins are regularly exposed to people, such as along public walking tracks, they become quite confiding, often approaching to within a metre of a person sitting quietly. Juveniles will sometimes stand on a person’s boot.\n\n Identification:\n The adult male South Island robin is dark grey-black over the head, neck, mantle and upper chest; the flight feathers and tail are brownish-black, and the lower chest and belly white to yellowish white with a sharp demarcation between black and white on chest. Adult females are light to dark grey over the upper body. They further differ from males in the  white chest-belly area being smaller and not having such a distinct demarcation between grey and white feathering. Juveniles are similar to females, but often with a smaller or no white patch on the underparts. Adults of both sexes are able to expose a small white spot of feathers above the base of the beak during intraspecific and interspecific interactions.\n\n Voice:\n South Island robins have four recognisable vocalisations. Fullsong is a series of phrases given loudly by males only, generally from a high perch. Robins can be heard giving fullsong year round, but particularly during the breeding season. It is used to indicate territorial occupancy and to attract a mate – bachelors spend much more time singing than paired males. Subsong is similar to fullsong but given at much less volume, is given by both sexes, and most frequently during the moult. The downscale is a series of very loud ‘chuck’ calls, descending in tone, and which start in rapid succession and finish slowly. The call lasts 3-4 seconds, is given by both sexes, and is most frequently heard during the non-breeding season (January-June). The fourth vocalisation type is the 'chuck', which is given as single notes (contact calls) or in rapid succession and loudly (as an alarm call) when a predator is nearby.\n\n Similar species:\nthere are no species that are similar to the robin in the South Island or Stewart Island. Robins are much larger and lack the white wing-bars of tomtits. Distribution: The South Island robin has a disjunct distribution through both the South and Stewart Islands. Its strongholds in the South Island are Marlborough, Nelson, West Coast as far south as about Harihari, and through Fiordland, with outliers at Jackson Bay and Dunedin. A comparison of the Ornithological Society of New Zealand’s atlas scheme results of 1969-79 and 1999-2004 suggest that the South Island robin’s distribution has changed little during the 20 year interval. Several populations, particularly on islands, have been established by translocations.\n\n Habitat:\n Robins occur in mature forest, scrub, and exotic plantations, particularly those that are fairly mature with an open understorey. They seem to favour moist areas where there is an open understorey under a closed canopy on fertile soils. Habitats that tend to be shunned are those with widely scattered trees and where the ground is covered by grasses or sparse vegetation on stony, droughty soils.\n\n Population:\n South Island robin is patchily distributed through its range, and is absent from some seemingly suitable areas while common in others. Pairs have territories of 1-5 ha on the mainland, although populations on pest-free islands can occur at much greater densities (0.2-0.6 ha / pair). \n" forKey:@"item_description"];
+        [newManagedObject103 setValue:@"http://nzbirdsonline.org.nz/species/south-island-robin" forKey:@"link"];
+        [newManagedObject103 setValue:@"black,grey" forKey:@"beak_colour"];
+        [newManagedObject103 setValue:@"short" forKey:@"beak_length"];
+        [newManagedObject103 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
+        [newManagedObject103 setValue:@"0" forKey:@"category"];
+        [newManagedObject103 setValue:@"grey/brown" forKey:@"colour"];
+        [newManagedObject103 setValue:@"black" forKey:@"leg_colour"];
+        [newManagedObject103 setValue:@"Petroicidae" forKey:@"family"];
+        [newManagedObject103 setValue:@"bush" forKey:@"habitat"];
+        [newManagedObject103 setValue:@"Decling" forKey:@"threat_status"];
+        [newManagedObject103 setValue:@"New Zealand Robin" forKey:@"short_name"];
+        [newManagedObject103 setValue:@"sparrow" forKey:@"size_and_shape"];
+        
+        
+        [newManagedObject103 setValue:@"South Island Robin Bernard Spragg NZ"         forKey:@"image"];
+        
+        NSURL *url103t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                 pathForResource:@"South Island Robin Bernard Spragg NZ_TN"
+                                                 ofType:@"jpg"]];
+        NSData *data103t = [[NSData alloc] initWithContentsOfURL:url103t];
+        UIImage *imageSave103t=[[UIImage alloc]initWithData:data103t];
+        NSData *imageData103t = UIImagePNGRepresentation(imageSave103t);
+        [newManagedObject103 setValue:imageData103t         forKey:@"thumbnail"];
+        
+        
+        //[newManagedObject103 setValue:@"SouthIslandRobin" forKey:@"sound"];
+        
+        [newManagedObject103 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        [newManagedObject103 setValue:NO forKey:@"extra"];
+        [newManagedObject103 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+        [context save:NULL];
+        newManagedObject103= nil;
         
         //        /*  104 Stewart Island Kiwi
         //         */
-        //        NSManagedObject *newManagedObject104 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        NSManagedObject *newManagedObject104 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
+        
+        //Set Bird_attributes
+        [newManagedObject104 setValue:@"Kiwi (Stewart Island)"       forKey:@"name"];
+        [newManagedObject104 setValue:@"tokoeka" forKey:@"othername"];
+        [newManagedObject104 setValue:@"The Stewart Island tokoeka is the largest of the kiwi. Fiordland tokoeka are also very large, but Haast birds are smaller. Widespread in forest, scrub, tussock grasslands and subalpine zones of the south-western South Island and on Stewart Island. Flightless, with tiny vestigial wings and no tail. Generally nocturnal, therefore more often heard than seen, except on Stewart Island where birds often forage during the day. Male gives a repeated high-pitched ascending whistle, female gives a deeper throaty cry. A range of colours from rufous brown in Haast, to brown and dark brown elsewhere, streaked lengthways with reddish brown and black. Feather tips feel soft. Long pale bill, short legs and toes. \n\nIdentification:\n Large brown kiwi. Rufous to dark brown soft feathers streaked with brown and black; long pale bill, short pale legs and toes. Voice:  Male gives a high-pitched ascending whistle repeated 15-25 times, female gives a slower and lower pitched hoarse guttural call repeated 10-20 times. Similar species: rowi are smaller and greyer. The calls of weka are similar to the call of the male tokoeka, but weka have two-syllable calls, and usually have fewer repetitions. \n\nDistribution and habitat:\nSparse to locally common in native forests, scrub, tussock grassland and subalpine zones in parts of the Haast Range and Arawhata Valley; Fiordland, from Milford Sound to Preservation Inlet and east to Lake Te Anau, including many of the larger islands such as Secretary and Resolution Islands; Stewart Island and Ulva Island. Fiordland tokoeka were introduced to Kapiti Island in 1908, where they have hybridised with North Island brown kiwi. Recently, Haast tokoeka have been introduced to Coal and Rarotoka Islands, and to the Orokonui Ecosanctuary, Dunedin, and small islands in Lakes Te Anau and Manapouri are used as crèche sites for this taxon. Before human settlement of New Zealand tokoeka were widespread throughout the southern and eastern part of the South Island as far north as North Canterbury. \n\nPopulation:\n About 30,000 birds in 2012; Haast tokoeka, c. 350 birds; Fiordland tokoeka, c. 15,000 birds; Stewart Island tokoeka, c. 15,000 birds.\n" forKey:@"item_description"];
+        [newManagedObject104 setValue:@"http://nzbirdsonline.org.nz/species/southern-brown-kiwi" forKey:@"link"];
+        [newManagedObject104 setValue:@"brown" forKey:@"beak_colour"];
+        [newManagedObject104 setValue:@"long" forKey:@"beak_length"];
+        [newManagedObject104 setValue:@"no,flightless" forKey:@"behaviour"];
+        [newManagedObject104 setValue:@"0" forKey:@"category"];
+        [newManagedObject104 setValue:@"grey,brown" forKey:@"colour"];
+        [newManagedObject104 setValue:@"brown" forKey:@"leg_colour"];
+        [newManagedObject104 setValue:@"Apterygidae" forKey:@"family"];
+        [newManagedObject104 setValue:@"bush" forKey:@"habitat"];
+        [newManagedObject104 setValue:@"Nationally Endangered" forKey:@"threat_status"];
+        [newManagedObject104 setValue:@"Southern Brown Kiwi (Stewart I.)" forKey:@"short_name"];
+        [newManagedObject104 setValue:@"duck" forKey:@"size_and_shape"];
+        
+        
+        [newManagedObject104 setValue:@"South_Island_Brown_Kiwi_Canterbury_Museum"         forKey:@"image"];
+        
+        NSURL *url104t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                 pathForResource:@"South_Island_Brown_KiwiCanterbury_Museum_TN"
+                                                 ofType:@"jpg"]];
+        NSData *data104t = [[NSData alloc] initWithContentsOfURL:url104t];
+        UIImage *imageSave104t=[[UIImage alloc]initWithData:data104t];
+        NSData *imageData104t = UIImagePNGRepresentation(imageSave104t);
+        [newManagedObject104 setValue:imageData104t         forKey:@"thumbnail"];
+        
+        
+        //[newManagedObject104 setValue:@"StewartIslandKiwi" forKey:@"sound"];
+        
+        [newManagedObject104 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        [newManagedObject104 setValue:NO forKey:@"extra"];
+        [newManagedObject104 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        
+        [context save:NULL];
+        newManagedObject104= nil;
+        
+        
+        
+        
+        
+        //        // +++++++++++ Template  +++++++++++++
+        //        /*  85
+        //         */
+        //        NSManagedObject *newManagedObject85 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         //
         //        //Set Bird_attributes
-        //        [newManagedObject104 setValue:@"Stewart Island Kiwi"       forKey:@"name"];
-        //        [newManagedObject104 setValue:@"Stewart Island Kiwi" forKey:@"othername"];
-        //        [newManagedObject104 setValue:@"The Stewart Island tokoeka is the largest of the kiwi. Fiordland tokoeka are also very large, but Haast birds are smaller. Widespread in forest, scrub, tussock grasslands and subalpine zones of the south-western South Island and on Stewart Island. Flightless, with tiny vestigial wings and no tail. Generally nocturnal, therefore more often heard than seen, except on Stewart Island where birds often forage during the day. Male gives a repeated high-pitched ascending whistle, female gives a deeper throaty cry. A range of colours from rufous brown in Haast, to brown and dark brown elsewhere, streaked lengthways with reddish brown and black. Feather tips feel soft. Long pale bill, short legs and toes. Identification: Large brown kiwi. Rufous to dark brown soft feathers streaked with brown and black; long pale bill, short pale legs and toes. Voice:  Male gives a high-pitched ascending whistle repeated 15-25 times, female gives a slower and lower pitched hoarse guttural call repeated 10-20 times. Similar species: rowi are smaller and greyer. The calls of weka are similar to the call of the male tokoeka, but weka have two-syllable calls, and usually have fewer repetitions. Distribution [and habitat: ]Sparse to locally common in native forests, scrub, tussock grassland and subalpine zones in parts of the Haast Range and Arawhata Valley; Fiordland, from Milford Sound to Preservation Inlet and east to Lake Te Anau, including many of the larger islands such as Secretary and Resolution Islands; Stewart Island and Ulva Island. Fiordland tokoeka were introduced to Kapiti Island in 1908, where they have hybridised with North Island brown kiwi. Recently, Haast tokoeka have been introduced to Coal and Rarotoka Islands, and to the Orokonui Ecosanctuary, Dunedin, and small islands in Lakes Te Anau and Manapouri are used as crèche sites for this taxon. Before human settlement of New Zealand tokoeka were widespread throughout the southern and eastern part of the South Island as far north as North Canterbury. Population: About 30,000 birds in 2012; Haast tokoeka, c. 350 birds; Fiordland tokoeka, c. 15,000 birds; Stewart Island tokoeka, c. 15,000 birds.\" forKey:@"item_description"];
-        //        [newManagedObject104 setValue:@"http://nzbirdsonline.org.nz/species/southern-brown-kiwi" forKey:@"link"];
-        //        [newManagedObject104 setValue:@"brown" forKey:@"beak_colour"];
-        //        [newManagedObject104 setValue:@"long" forKey:@"beak_length"];
-        //        [newManagedObject104 setValue:@"flightless" forKey:@"behaviour"];
-        //        [newManagedObject104 setValue:@"0" forKey:@"category"];
-        //        [newManagedObject104 setValue:@"grey/brown" forKey:@"colour"];
-        //        [newManagedObject104 setValue:@"brown" forKey:@"leg_colour"];
-        //        [newManagedObject104 setValue:@"Apterygidae" forKey:@"family"];
-        //        [newManagedObject104 setValue:@"bush" forKey:@"habitat"];
-        //        [newManagedObject104 setValue:@"Nationally Endangered" forKey:@"threat_status"];
-        //        [newManagedObject104 setValue:@"Southern Brown Kiwi" forKey:@"short_name"];
-        //        [newManagedObject104 setValue:@"blackbird" forKey:@"size_and_shape"];
+        //        [newManagedObject85 setValue:@"California Quail"       forKey:@"name"];
+        //        [newManagedObject85 setValue:@"California Quail" forKey:@"othername"];
+        //        [newManagedObject85 setValue:@"California quail are stocky, predominantly grey and brown, with a diagnostic forward-curling black plume rising erect from the top of their heads. Males have a black chin and cheeks edged with white, and separate white ‘eyebrows’ join on the forehead. The breast is blue-grey and the lower belly cream to rust brown with distinctive black scalloping, which merges into strong, pale streaks on the dark brown flanks. \n\nThe female is slightly smaller, duller and browner, with some streaking on the neck and a more subdued scalloping on the belly, but with equally bold streaking on the flanks. Immature birds are similar to the female but a lighter brown. The female’s crest plume is much smaller than the male’s. Both sexes have fine speckling on the nape, which is bolder in the male. \n\nThere is no seasonal change in plumage. California quail have short, rounded wings and a relatively long tail. Their legs and bill are black and sturdy, with the bill being slightly hooked.\n\nForaging quail pace sedately, but when disturbed they run at speed, their feet a blur of movement, or burst into flight with noisy, rapid wingbeats.\
+        //         " forKey:@"item_description"];
+        //        [newManagedObject85 setValue:@"http://nzbirdsonline.org.nz/species/california-quail" forKey:@"link"];
+        //        [newManagedObject85 setValue:@"black" forKey:@"beak_colour"];
+        //        [newManagedObject85 setValue:@"short" forKey:@"beak_length"];
+        //        [newManagedObject85 setValue:@"yes,can fly,shy" forKey:@"behaviour"];
+        //        [newManagedObject85 setValue:@"0" forKey:@"category"];
+        //        [newManagedObject85 setValue:@"grey/brown" forKey:@"colour"];
+        //        [newManagedObject85 setValue:@"brown" forKey:@"leg_colour"];
+        //        [newManagedObject85 setValue:@"Phasianidae" forKey:@"family"];
+        //        [newManagedObject85 setValue:@"bush" forKey:@"habitat"];
+        //        [newManagedObject85 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
+        //        [newManagedObject85 setValue:@"plumed quail" forKey:@"short_name"];
+        //        [newManagedObject85 setValue:@"blackbird" forKey:@"size_and_shape"];
         //
         //
-        //        [newManagedObject104 setValue:@"StewartIslandKiwi"         forKey:@"image"];
+        //        [newManagedObject85 setValue:@"CaliforniaQuail_SidMosdell"         forKey:@"image"];
         //
-        //        NSURL *url104t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-        //                                                pathForResource:@"StewartIslandKiwi_TN"
+        //        NSURL *url85t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+        //                                                pathForResource:@"CaliforniaQuail_SidMosdell_TN"
         //                                                ofType:@"jpg"]];
-        //        NSData *data104t = [[NSData alloc] initWithContentsOfURL:url104t];
-        //        UIImage *imageSave104t=[[UIImage alloc]initWithData:data104t];
-        //        NSData *imageData104t = UIImagePNGRepresentation(imageSave104t);
-        //        [newManagedObject104 setValue:imageData104t         forKey:@"thumbnail"];
+        //        NSData *data85t = [[NSData alloc] initWithContentsOfURL:url85t];
+        //        UIImage *imageSave85t=[[UIImage alloc]initWithData:data85t];
+        //        NSData *imageData85t = UIImagePNGRepresentation(imageSave85t);
+        //        [newManagedObject85 setValue:imageData85t         forKey:@"thumbnail"];
         //
         //
-        //        //[newManagedObject104 setValue:@"StewartIslandKiwi" forKey:@"sound"];
+        //        //[newManagedObject85 setValue:@"Kiwi" forKey:@"sound"];
         //
-        //        [newManagedObject104 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
-        //        [newManagedObject104 setValue:NO forKey:@"extra"];
-        //        [newManagedObject104 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
+        //        [newManagedObject85 setValue:dateRepresentingThisDay forKey:@"date_last_changed"];
+        //        [newManagedObject85 setValue:NO forKey:@"extra"];
+        //        [newManagedObject85 setValue:[NSNumber numberWithBool:1] forKey:@"favourite"];
         //
         //        [context save:NULL];
-        //        newManagedObject104= nil;
+        //        newManagedObject85= nil;
+        
+        
+        
+        ////      SUGGESTIONS:
+        
+        //        Crested Grebe
+        //          Shearwaters & Albatrosses
+        //
         
         
         //**************
@@ -5112,21 +5151,21 @@
         context = nil;
         // LOGGING
         /*
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-        NSEntityDescription *entity = [NSEntityDescription
-                                       entityForName:@"Bird_attributes" inManagedObjectContext:context];
-        [fetchRequest setEntity:entity];
-        NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-        for (NSManagedObject *info in fetchedObjects) {
-            NSLog(@"Name: %@", [info valueForKey:@"name"]);
-            //NSManagedObject *item_description = [info valueForKey:@"item_description"];
-            NSLog(@"Link: %@", [info valueForKey:@"Link"]);
-            //NSLog(@"Picture: %@", [info valueForKey:@"image"]);
-            NSLog(@"favourite: %@", [info valueForKey:@"favourite"]);
-        }
-        */
+         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+         NSEntityDescription *entity = [NSEntityDescription
+         entityForName:@"Bird_attributes" inManagedObjectContext:context];
+         [fetchRequest setEntity:entity];
+         NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+         for (NSManagedObject *info in fetchedObjects) {
+         NSLog(@"Name: %@", [info valueForKey:@"name"]);
+         //NSManagedObject *item_description = [info valueForKey:@"item_description"];
+         NSLog(@"Link: %@", [info valueForKey:@"Link"]);
+         //NSLog(@"Picture: %@", [info valueForKey:@"image"]);
+         NSLog(@"favourite: %@", [info valueForKey:@"favourite"]);
+         }
+         */
         
-	}
+    }
     return _persistentStoreCoordinator;
 }
 - (NSDate *)dateAtBeginningOfDayForDate:(NSDate *)inputDate
@@ -5139,12 +5178,12 @@
     // Selectively convert the date components (year, month, day) of the input date
     NSDateComponents *dateComps = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:inputDate];
     // Set the time components manually
-//    [dateComps setHour:0];
-//    [dateComps setMinute:0];
-//    [dateComps setSecond:0];
-//    
+    //    [dateComps setHour:0];
+    //    [dateComps setMinute:0];
+    //    [dateComps setSecond:0];
+    //
     // Convert back
-   // NSDateComponents *dateComps =[calendar components:NSHourCalendarUnit | NSMinuteCalendarUnit fromDate:spot.dateLastChanged];
+    // NSDateComponents *dateComps =[calendar components:NSHourCalendarUnit | NSMinuteCalendarUnit fromDate:spot.dateLastChanged];
     NSDate *beginningOfDay = [calendar dateFromComponents:dateComps];
     return beginningOfDay;
 }

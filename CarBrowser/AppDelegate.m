@@ -24,9 +24,9 @@
     [shadow setShadowOffset: CGSizeMake(0.0f, 1.0f)];
     
     [[UINavigationBar appearance] setTitleTextAttributes:@{
-              NSForegroundColorAttributeName: [UIColor colorWithRed:245.0f/255.0f green:245.0f/255.0f blue:245.0f/255.0f alpha:1.0f],
-                      NSShadowAttributeName: shadow,
-                      NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0f]
+                                                           NSForegroundColorAttributeName: [UIColor colorWithRed:245.0f/255.0f green:245.0f/255.0f blue:245.0f/255.0f alpha:1.0f],
+                                                           NSShadowAttributeName: shadow,
+                                                           NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0f]
                                                            }];
     // Change the appearance of back button
     UIImage *backButtonImage = [[UIImage imageNamed:@"button_back"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 13, 0, 6)];
@@ -35,14 +35,14 @@
     // Change the appearance of other navigation button
     UIImage *barButtonImage = [[UIImage imageNamed:@"button_normal"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 6, 0, 6)];
     [[UIBarButtonItem appearance] setBackgroundImage:barButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-
+    
     UIImage* tabBarBackground = [UIImage imageNamed:@"tabbar.png"];
     [[UITabBar appearance] setBackgroundImage:tabBarBackground];
     [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"tabbar_selected.png"]];
-
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     
-    //self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     /////////////////
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
@@ -51,59 +51,73 @@
     else{
         
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil];
-        //self.window.rootViewController = [storyboard instantiateInitialViewController];;
+        //self.window.rootViewController = [storyboard instantiateInitialViewController];
     }
     
     /////////////////
     //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     
-//    UIViewController *viewController = // determine the initial view controller here and instantiate it with [storyboard instantiateViewControllerWithIdentifier:<storyboard id>];
-//
-//    self.window.rootViewController = viewController;
-//    [self.window makeKeyAndVisible];
-
+    //    UIViewController *viewController = // determine the initial view controller here and instantiate it with [storyboard instantiateViewControllerWithIdentifier:<storyboard id>];
+    //
+    //    self.window.rootViewController = viewController;
+    //    [self.window makeKeyAndVisible];
     
     
-    self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"introVC"];
-
-    UIViewController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"tabBarControl"];
     
-    // Assign tab bar item with titles
-    UITabBarController *tabBarController = (UITabBarController *)navigationController;
+    //self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"introVC"];
     
     
-    //[self.window makeKeyAndVisible];
+    UIViewController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"introVC"];
     
-    //Swift:   
-    //window?.rootViewController = UINavigationController(rootViewController: YourTabBarController())
     
-//    UITabBarController *tabBarController2 = (UITabBarController *)TabBarController.ViewController;
-//
-    ///<-- 23 Dec 18
-    UITabBar *tabBar = tabBarController.tabBar;
-    UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
-    UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
-    UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
-
-
-    //UITabBarItem *tabBarItem4 = [tabBar.items objectAtIndex:3];
-    //UITabBarItem *tabBarItem5 = [tabBar.items objectAtIndex:4];
-
-    tabBarItem1.title = @"Birds";
-    tabBarItem2.title = @"Map";
-    tabBarItem3.title = @"Observations";
-    //tabBarItem4.title = @"Info";
-    //tabBarItem4.title = @"Identify";
-
-
-    //[tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"home_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"home.png"]];
-    // OLD prior to Dev. 2018
-    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"maps_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"maps.png"]];
-///----->
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults] ;
     
-    //[tabBarItem2 initWithTitle:@"maps_selected" image:"maps_selected.png" tag:1 ];
-    //[tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"myplan_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"myplan.png"]];
-    //[tabBarItem4 setFinishedSelectedImage:[UIImage imageNamed:@"settings_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"settings.png"]];
+    if (![userDefaults boolForKey:@"SettingsShowTutorialOnLaunch"]){
+        //UIViewController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"introVC"];
+        navigationController = [storyboard instantiateViewControllerWithIdentifier:@"introVC"];
+        
+    }else{
+        //UIViewController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"tabBarControl"];
+        navigationController = [storyboard instantiateViewControllerWithIdentifier:@"tabBarControl"];
+        
+        // Assign tab bar item with titles
+        UITabBarController *tabBarController = (UITabBarController *)navigationController;
+        //Swift:
+        //window?.rootViewController = UINavigationController(rootViewController: YourTabBarController())
+        
+        //    UITabBarController *tabBarController2 = (UITabBarController *)TabBarController.ViewController;
+        //
+        ///<-- 23 Dec 18
+        UITabBar *tabBar = tabBarController.tabBar;
+        UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
+        UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
+        UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
+        
+        
+        //UITabBarItem *tabBarItem4 = [tabBar.items objectAtIndex:3];
+        //UITabBarItem *tabBarItem5 = [tabBar.items objectAtIndex:4];
+        
+        tabBarItem1.title = @"Birds";
+        tabBarItem2.title = @"Map";
+        tabBarItem3.title = @"Observations";
+        //tabBarItem4.title = @"Info";
+        //tabBarItem4.title = @"Identify";
+        
+        
+        //[tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"home_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"home.png"]];
+        // OLD prior to Dev. 2018
+        [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"maps_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"maps.png"]];
+        ///----->
+        
+        //[tabBarItem2 initWithTitle:@"maps_selected" image:"maps_selected.png" tag:1 ];
+        //[tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"myplan_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"myplan.png"]];
+        //[tabBarItem4 setFinishedSelectedImage:[UIImage imageNamed:@"settings_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"settings.png"]];
+        
+    }
+    
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
+    
     
     return YES;
     

@@ -4443,10 +4443,12 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0I-H6-KKB" userLabel="skipButton">
-                                <rect key="frame" x="528" y="617" width="151" height="218"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0I-H6-KKB" userLabel="skipButton">
+                                <rect key="frame" x="308.5" y="120" width="151" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="KLa-12-yV9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="26"/>
                                 <state key="normal" title="Get Started">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -4457,6 +4459,10 @@ Cg
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="V0I-H6-KKB" firstAttribute="top" secondItem="KAK-an-QmM" secondAttribute="bottom" constant="100" id="Uhn-wf-Lqy"/>
+                            <constraint firstItem="V0I-H6-KKB" firstAttribute="centerX" secondItem="NMd-JY-rNN" secondAttribute="centerX" id="skg-tu-aJy"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="dbT-t2-cb6"/>
                 </viewController>

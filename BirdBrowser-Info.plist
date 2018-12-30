@@ -17,11 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.4</string>
+	<string>1.2.5</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.4.1</string>
+	<string>1.2.5.5</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.reference</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -32,11 +32,11 @@
 		<true/>
 	</dict>
 	<key>NSLocationAlwaysUssageDescription</key>
-	<string>To record a bird sighting, NZBirder uses your device&apos;s GPS to determine your current location. NZBirder will use these coordinates to lookup the name of the location in the internet (using Apple&apos;s reverse geocoding service) and find a name for your current location if you give permission to use your location. If you don&apos;t give permission to use GPS you won&apos;t be able to record your observations.</string>
+	<string>To record a bird sighting the app uses your device&apos;s GPS to determine your current location. It will use these coordinates to lookup the name of the location in the internet (using Apple&apos;s reverse geocoding service) and find a name for your current location if you give permission to use your location. If you don&apos;t give permission to use GPS you won&apos;t be able to help GPS show your location but can still record observations.</string>
 	<key>NSLocationUsageDescription</key>
-	<string>To record a bird sighting, NZBirder uses your device&apos;s GPS to determine your current location. NZBirder will use these coordinates to lookup the name of the location in the internet (using Apple&apos;s reverse geocoding service) and find a name for your current location if you give permission to use your location. If you don&apos;t give permission to use GPS you won&apos;t be able to record your observations.</string>
+	<string>To record a bird sighting the app uses your device&apos;s GPS to determine your current location. It will use these coordinates to lookup the name of the location in the internet (using Apple&apos;s reverse geocoding service) and find a name for your current location if you give permission to use your location. If you don&apos;t give permission to use GPS you won&apos;t be able to help GPS show your location but can still record observations.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>To record a bird sighting, NZBirder uses your device&apos;s GPS to determine your current location. NZBirder will use these coordinates to lookup the name of the location in the internet (using Apple&apos;s reverse geocoding service) and find a name for your current location if you give permission to use your location. If you don&apos;t give permission to use GPS you won&apos;t be able to record your observations.</string>
+	<string>To record a bird sighting the app uses your device&apos;s GPS to determine your current location. It will use these coordinates to lookup the name of the location in the internet (using Apple&apos;s reverse geocoding service) and find a name for your current location if you give permission to use your location. If you don&apos;t give permission to use GPS you won&apos;t be able to help GPS show your location but can still record observations.</string>
 	<key>UIFileSharingEnabled</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
