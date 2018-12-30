@@ -119,7 +119,7 @@
     
 //    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"NZBirder.sqlite"];
 
-    //UNCOMMENT ALTERNATIVELY:
+//    //UNCOMMENT ALTERNATIVELY (run this once, then comment again for final run to create DB):
 //     // *****************************
 //    //THIS TO DELETE from the Application Documents directory before ReCreating the SQLLITE DB                                //1st option
 //    // must delete NZBirder.sqlite DB from the APPLICATION BUNDLE root FIRST! then put it back in after     //1st option
@@ -135,7 +135,7 @@
 //
 //    NSLog(@"Deleting NZBirder.sqlite DB");                                                      //1st option
 //     firstRun = YES;                                                          //1st option
-//
+
 //     // *****************************
     
     //OR THIS
@@ -3519,7 +3519,7 @@
         [newManagedObject62 setValue:@"Podicipedidae" forKey:@"family"];
         [newManagedObject62 setValue:@"coast" forKey:@"habitat"];
         [newManagedObject62 setValue:@"Nationally vulnerable" forKey:@"threat_status"];
-        [newManagedObject62 setValue:@"Crested Grebe" forKey:@"short_name"];
+        [newManagedObject62 setValue:@"Great Crested Grebe" forKey:@"short_name"];
         [newManagedObject62 setValue:@"duck" forKey:@"size_and_shape"];
         
         
@@ -4128,7 +4128,7 @@
         [newManagedObject78 setValue:@"Petroicidae" forKey:@"family"];
         [newManagedObject78 setValue:@"bush" forKey:@"habitat"];
         [newManagedObject78 setValue:@"Not Threatened" forKey:@"threat_status"];
-        [newManagedObject78 setValue:@"North-Island Robin" forKey:@"short_name"];
+        [newManagedObject78 setValue:@"New Zealand Robin (North I.)" forKey:@"short_name"];
         [newManagedObject78 setValue:@"sparrow" forKey:@"size_and_shape"];
         
         
@@ -4601,7 +4601,7 @@
                 [newManagedObject95 setValue:@"Rallidae" forKey:@"family"];
                 [newManagedObject95 setValue:@"water,coast,ocean" forKey:@"habitat"];
                 [newManagedObject95 setValue:@"Native/ Naturally uncommon" forKey:@"threat_status"];
-                [newManagedObject95 setValue:@"Coot" forKey:@"short_name"];
+                [newManagedObject95 setValue:@"Eurasian Coot" forKey:@"short_name"];
                 [newManagedObject95 setValue:@"duck" forKey:@"size_and_shape"];
         
         
@@ -4750,7 +4750,7 @@
         
                 //Set Bird_attributes
                 [newManagedObject98 setValue:@"Canada Goose"       forKey:@"name"];
-                [newManagedObject98 setValue:@"Canada Goose" forKey:@"othername"];
+                [newManagedObject98 setValue:@"Canada Goose (honker)" forKey:@"othername"];
         [newManagedObject98 setValue:@"The distinctive and well-known Canada goose is a North American native that has been extensively introduced to UK, Scandinavia, and North Sea nations from Denmark to France, Russia and Ukraine, as well as New Zealand.\n\nIdentification\n        A large light-brown goose with black neck and head and a conspicuous white chinstrap. The breast and abdomen are barred white and light brown, and the abdomen and under-tail is white. Back and upper wing surface a darker brown. Bill, legs and feet black, eye dark brown-black. Sexes alike but females are noticeably smaller than males. Goslings have yellowish-grey down and the juveniles appear as dull versions of the adult.\n\nVoice: a distinctive and loud honk given when the birds are disturbed or surprised, or when flying.\nSimilar species: none. Other geese in New Zealand include the rare and vagrant Cape Barren goose and feral flocks of the domesticated greylag goose.\n\nDistribution and habitat\nCanada geese are widespread in the South Island and most numerous in pastoral areas of the eastern foothills of the Southern Alps from Marlborough to Central Otago, and around coastal lakes and lagoons. Their distribution is expanding in Fiordland and Southland. In the North Island, their distribution still reflects locations at which birds were released during the past 30 years, with the largest concentrations in Wairarapa, Hawkes Bay, Ruapehu-Taupo area, and Waikato.\n\nPastoral land adjacent to a lake or large pond provides preferred habitat, but geese may also be found in well-forested mountain valleys, especially in Fiordland, and around alpine tarns. Communal moult gatherings at secluded or very large lakes with grazing available at the immediate margins.         \n\nPopulation \n\nNumbers are controlled by annual culls to reduce damage to lakeside pastures in some areas. Total population of about 60,000, two-thirds of which are in the South Island, and have been maintained at this number for most of the past decade.\n\nEcological and economic impacts\n\nGrazing of high-country lakeside pasture, especially autumn-saved pasture, is considered an economic burden for sheep farmers. Widespread irrigation to promote dairy farming in formerly dry country has allowed geese to remain year round and graze highly nutritious grasses. This prompted farmer advocacy to declare the bird a pest, and in 2011 the Canada goose was declared an unprotected species.\
                  " forKey:@"item_description"];
                 [newManagedObject98 setValue:@"http://www.nzbirdsonline.org.nz/species/canada-goose" forKey:@"link"];
@@ -4763,7 +4763,7 @@
                 [newManagedObject98 setValue:@"Anatidae" forKey:@"family"];
                 [newManagedObject98 setValue:@"bush,ocean,water,coast" forKey:@"habitat"];
                 [newManagedObject98 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-                [newManagedObject98 setValue:@"honker" forKey:@"short_name"];
+                [newManagedObject98 setValue:@"Canada Goose" forKey:@"short_name"];
                 [newManagedObject98 setValue:@"swan" forKey:@"size_and_shape"];
         
         
@@ -4816,7 +4816,7 @@
                 [newManagedObject99 setValue:@"Phasianidae" forKey:@"family"];
                 [newManagedObject99 setValue:@"bush" forKey:@"habitat"];
                 [newManagedObject99 setValue:@"Introduced and Naturalized" forKey:@"threat_status"];
-                [newManagedObject99 setValue:@"Guinea Fowl" forKey:@"short_name"];
+                [newManagedObject99 setValue:@"Helmeted Guineafowl" forKey:@"short_name"];
                 [newManagedObject99 setValue:@"blackbird" forKey:@"size_and_shape"];
         
         
@@ -4907,7 +4907,7 @@
                 NSManagedObject *newManagedObject101 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
                 //Set Bird_attributes
-                [newManagedObject101 setValue:@"Kokako"       forKey:@"name"];
+                [newManagedObject101 setValue:@"Kokako, North Island"       forKey:@"name"];
                 [newManagedObject101 setValue:@"blue-wattled crow" forKey:@"othername"];
         [newManagedObject101 setValue:@"With their extraordinary haunting song, and obscure evolutionary relationships to other birds, kokako evoke the forests of ancient New Zealand/Aotearoa perhaps more than any other species. More likely to be heard than seen, North Island kokako have persisted in small populations particularly in the central North Island from the King Country through to Te Urewera. They typically inhabit tall native forest dominated by tawa (Beilschmiedia tawa), singing from tree-tops but often feeding in understorey layers.\n\n All mainland North Island populations persist only with sustained control of key pest mammals (ship rats and brushtail possums). All unmanaged populations are extinct.\n     \n Identification\n\n The North Island kokako is a large songbird with a blue-grey body, a striking black mask and small, rich blue wattles that arise from the base of the bill and sit under the throat. Typically, when seen backlit in forest, kokako seem dark-plumaged and neither mask nor wattles are seen. They have long, strong legs and a long down-curved tail. Kokako characteristically bound and run among branches, interspersed with glides on short, rounded wings. They are usually located by listening for song and calls. The sexes are alike; juveniles have pink or lilac wattles. A few adults have orange wattles (cf. South Island kokako).\n         \n                                Voice: rich, sonorous, sustained, organ-like notes are sung by both male and female North Island kokako, frequently as duet, and typically from a high perch.  There is a frequent close contact call of 'took', repeated variably.\n \n  Similar species: tui have similar silhouette and song (especially when mimicking kokako where they coexist), but they are much smaller, darker and more adept fliers, with very different head and throat ornamentation. Vagrant black-faced cuckoo-shrike from Australia is half the size, paler grey, lacks wattles, and is a bird of open woodlands, parks and gardens rather than dense native forest.\n   \n    Distribution and habitat\n  \n   Natural remnant North Island kokako populations are confined to a few scattered forests in the northern half of the North Island, particularly in the Waikato, Bay of Plenty, Te Urewera, South Auckland and Northland. Since 1981, has been successfully translocated to Little Barrier, Kapiti and Tiritiri Matangi Islands, Mount Bruce Scenic Reserve (Wairarapa), Boundary Stream Mainland Island (Hawkes Bay), Ngapukeriki (East Cape), Ark in the Park (Waitakeres, west Auckland), Whirinaki and Otanewainuku (Bay of Plenty), Maungatautari (Waikato) and Puketi (Northland). They characteristically reside in tall, diverse native forest, usually with a canopy of tawa or taraire with emergent podocarps or kauri. Kokako have successfully bred in planted diverse shrub- and tree- hardwoods on Tiritiri Matangi Island.\n    \n   Population\n    \n  The North Island kokako population has increased from c.330 pairs in 1999 to c.1595 in 2017 due to pest control at key sites, and translocation. The largest populations, with more than 100 pairs each, are in Pureora Forest, Hauturu (Little Barrier Island ), Te Urewera, and Mapara (Waikato). Other large populations (> 50 prs) are at Mataraua/Waima (Northland), Hunua Ranges, Kaharoa-Onaia and Rotoehu near Rotorua, and there are 14 other smaller populations. Breeding pairs and unpaired singles defend 4-25 ha territories year-round by singing, which limits density.\n  \n  Threats and conservation\n  \n    Predation at nests by ship rats and possums is the primary cause of current declines of North Island kokako. Food reduction mainly by possums and predation by stoats are unhelpful secondary factors. All current populations must be continually managed against introduced mammal pests, either by repeated pest control on the mainland, or by vigilance against pest invasion on islands. Ship rats and possums are routinely targeted by trapping and poisoning so that their numbers are low for the duration of the breeding season (November to February). Food supply influences the number of breeding attempts that kokako make, but nest predators determine the outcomes of these attempts. Several key populations are being restored primarily by community groups. Maintenance of genetic health also influences management; e.g. new populations are established with individuals from two different source populations, totalling >40 founders. The conservation status of this species was moved from nationally vulnerable to 'at risk - recovering' in 2013.\n" forKey:@"item_description"];
                 [newManagedObject101 setValue:@"http://www.nzbirdsonline.org.nz/species/north-island-kokako" forKey:@"link"];
@@ -4920,7 +4920,7 @@
                 [newManagedObject101 setValue:@"Callaeidae" forKey:@"family"];
                 [newManagedObject101 setValue:@"bush" forKey:@"habitat"];
                 [newManagedObject101 setValue:@"Recovering" forKey:@"threat_status"];
-                [newManagedObject101 setValue:@"Kokako (NI)" forKey:@"short_name"];
+                [newManagedObject101 setValue:@"North Island Kokako" forKey:@"short_name"];
                 [newManagedObject101 setValue:@"blackbird" forKey:@"size_and_shape"];
         
         
@@ -4957,7 +4957,7 @@
                 NSManagedObject *newManagedObject102 = [NSEntityDescription insertNewObjectForEntityForName:@"Bird_attributes" inManagedObjectContext:context];
         
                 //Set Bird_attributes
-                [newManagedObject102 setValue:@"Penguin, Fjordland Crested"       forKey:@"name"];
+                [newManagedObject102 setValue:@"Penguin, Fiordland Crested"       forKey:@"name"];
                 [newManagedObject102 setValue:@"tawaki" forKey:@"othername"];
                 [newManagedObject102 setValue:@"Fiordland crested penguins are endemic to New Zealand, breeding in small colonies on inaccessible headlands and islets along the shores of south-western South Island and Stewart Island. They can be seen and heard on landing beaches during July – December. Populations have declined considerably in range and numbers since human arrival. Immediate threats include fisheries bycatch, introduced predators, and human disturbance.\n\n Identification:\n\n Adult Fiordland crested penguins have dark blue-grey/black upperparts (which turn brown when approaching moult), often darker on the head. A broad yellow eyebrow stripe (crest) starts at the nostril and extends well past the eye, drooping down the neck; 3-6 whitish stripes on the cheeks are displayed when agitated. The underparts are silky white. The moderately large orange bill has a thin strip of black skin at the base (cf. broader bare pink skin on Snares crested penguin). Females have smaller bills (bill depth < 24 mm) than males (bill depth >24 mm). The eyes are brownish-red, and feet and legs pinkish-white above and blackish-brown behind and on the soles. Juveniles have short, thin pale-yellow eyebrow stripes and mottled whitish chin and throat. The dorsal plumage of newly-fledged chicks is distinctly bluish, fading to black with wear, then to mid-brown before moulting. \n\nVoice:\n\n calls include loud braying or trumpeting, high pitched contact calls, and low-pitched hissing and growling. Calls are similar to those of Snares crested penguins. \n\nSimilar species:\n\n Fiordland crested penguins are most similar to Snares crested penguin, which (as adults) have dark cheeks, a larger bill with prominent pink skin at the base, and narrower eye-brow stripes. All other crested penguins are also similar, especially when immature, but note broad eye-brow stripes, throat and cheeks greyish white, and absence of bare skin at bill base in immature Fiordland crested penguins. Recently fledged young (which are smaller than adults and bluish dorsally) may be confused with little penguins when swimming, but are twice as large and have at least some yellow above the eye" forKey:@"item_description"];
                 [newManagedObject102 setValue:@"http://nzbirdsonline.org.nz/species/fiordland-crested-penguin" forKey:@"link"];
@@ -4970,7 +4970,7 @@
                 [newManagedObject102 setValue:@"Spheniscidae" forKey:@"family"];
                 [newManagedObject102 setValue:@"coast" forKey:@"habitat"];
                 [newManagedObject102 setValue:@"Nationally vulnerable" forKey:@"threat_status"];
-                [newManagedObject102 setValue:@"Fjordland Crested Penguin" forKey:@"short_name"];
+                [newManagedObject102 setValue:@"Fiordland Penguin" forKey:@"short_name"];
                 [newManagedObject102 setValue:@"duck" forKey:@"size_and_shape"];
         
         
@@ -5012,7 +5012,7 @@
                 [newManagedObject103 setValue:@"Petroicidae" forKey:@"family"];
                 [newManagedObject103 setValue:@"bush" forKey:@"habitat"];
                 [newManagedObject103 setValue:@"Decling" forKey:@"threat_status"];
-                [newManagedObject103 setValue:@"South Island Robin" forKey:@"short_name"];
+                [newManagedObject103 setValue:@"New Zealand Robin" forKey:@"short_name"];
                 [newManagedObject103 setValue:@"sparrow" forKey:@"size_and_shape"];
         
         
@@ -5054,7 +5054,7 @@
                 [newManagedObject104 setValue:@"Apterygidae" forKey:@"family"];
                 [newManagedObject104 setValue:@"bush" forKey:@"habitat"];
                 [newManagedObject104 setValue:@"Nationally Endangered" forKey:@"threat_status"];
-                [newManagedObject104 setValue:@"Southern Brown Kiwi" forKey:@"short_name"];
+                [newManagedObject104 setValue:@"Southern Brown Kiwi (Stewart I.)" forKey:@"short_name"];
                 [newManagedObject104 setValue:@"duck" forKey:@"size_and_shape"];
         
         
