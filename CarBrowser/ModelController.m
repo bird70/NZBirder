@@ -4,7 +4,7 @@
 //
 //  Created by Tilmann Steinmetz on 21/06/13.
 //  Copyright (c) 2013 Tilmann Steinmetz. All rights reserved.
-//  later additions for version 1.2.5, 1.3, 2.3
+//  later additions for version 1.2.5, 1.3, 1.4
 //
 //  This is used both during deployment and runtime
 //  If it finds that a local data store doesn't exist, a new one is created

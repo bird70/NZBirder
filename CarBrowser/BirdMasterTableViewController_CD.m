@@ -16,7 +16,9 @@
 
 
 @interface BirdMasterTableViewController_CD ()
-
+{
+    NSArray * IndexTitles;
+}
 @end
 
 
@@ -65,10 +67,15 @@
                  @"SIZE", @"sparrow", @"blackbird", @"pigeon", @"duck", @"goose", @"swan",@"albatross", @"ostrich", nil];
     
  
+    IndexTitles = @[@"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z"];
+
     
 }
 
-
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    return IndexTitles;
+}
 
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
