@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="P9Y-xS-3C4">
-    <device id="ipad9_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="P9Y-xS-3C4">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,11 +16,11 @@
                         <viewControllerLayoutGuide type="bottom" id="WFC-xL-OKT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jqI-kU-Z85">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kHV-qe-lVO">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="969"/>
+                                <rect key="frame" x="0.0" y="0.0" width="712" height="929"/>
                                 <connections>
                                     <outlet property="delegate" destination="lbs-bz-0FL" id="Zps-qs-SMx"/>
                                 </connections>
@@ -54,11 +52,11 @@
                         <viewControllerLayoutGuide type="bottom" id="tUa-2T-yPR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QE0-kR-0Yp">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" editable="NO" text="number in party (), protocol etc." translatesAutoresizingMaskIntoConstraints="NO" id="Y7i-Se-oPY">
-                                <rect key="frame" x="20" y="118" width="728" height="45"/>
+                                <rect key="frame" x="20" y="108" width="672" height="45"/>
                                 <color key="backgroundColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Gtz-FR-v0e"/>
@@ -109,7 +107,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="All Observations (Y/N)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kh-1C-gFJ">
-                                <rect key="frame" x="612" y="178" width="136" height="21"/>
+                                <rect key="frame" x="556" y="168" width="136" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="136" id="IOE-5o-Xfj"/>
                                 </constraints>
@@ -199,7 +197,7 @@
                     <navigationItem key="navigationItem" id="TKT-kX-6EE">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AIc-Yi-KQb">
-                            <rect key="frame" x="313.5" y="3" width="141" height="44"/>
+                            <rect key="frame" x="285.5" y="6" width="141" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="0239.png">
                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -236,33 +234,33 @@
             <objects>
                 <tableViewController id="sog-ii-Kwn" customClass="ObservationTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kEG-rb-cXy">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ObservationCell" textLabel="47I-Yr-1y0" detailTextLabel="MNv-5S-dfE" imageView="J92-eX-oIH" style="IBUITableViewCellStyleSubtitle" id="v6U-D8-2Xw">
-                                <rect key="frame" x="0.0" y="22" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="712" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v6U-D8-2Xw" id="XEP-XL-Ino">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="712" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="47I-Yr-1y0">
-                                            <rect key="frame" x="70" y="3" width="38.5" height="21.5"/>
+                                            <rect key="frame" x="43.399999999999999" y="3" width="38.5" height="21.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MNv-5S-dfE">
-                                            <rect key="frame" x="70" y="24.5" width="50" height="17"/>
+                                            <rect key="frame" x="43.400000000000006" y="24.5" width="50" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="0002.png" id="J92-eX-oIH">
-                                            <rect key="frame" x="20" y="4" width="35" height="35"/>
+                                            <rect key="frame" x="20" y="17.5" width="8.4000000000000004" height="8.4000000000000004"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -289,7 +287,7 @@
                         <viewControllerLayoutGuide type="bottom" id="InG-P6-630"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rt2-7H-Kh8">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2KV-IU-Qpf">
@@ -328,7 +326,7 @@
                         <viewControllerLayoutGuide type="bottom" id="CcA-MV-aoV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ffv-xt-3h6">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="854"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="828"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Kd-2f-zMO">
@@ -363,15 +361,15 @@
             <objects>
                 <tableViewController id="QJH-cP-9dg" customClass="MasterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="22" sectionFooterHeight="22" id="kDq-yB-ahm">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" restorationIdentifier="obsSpots" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="c6j-wc-Kq8" detailTextLabel="vEs-x1-DRg" rowHeight="66" style="IBUITableViewCellStyleSubtitle" id="qjf-v2-eSt">
-                                <rect key="frame" x="0.0" y="22" width="768" height="66"/>
+                                <rect key="frame" x="0.0" y="28" width="712" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qjf-v2-eSt" id="maT-gd-qdD">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="65.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="712" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c6j-wc-Kq8">
@@ -418,11 +416,11 @@
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="PSJ-RJ-4rc" customClass="BirdMasterTableViewController_CD" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="YM3-5U-K36">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="854"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="878"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <pickerView key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="c6p-gf-2NZ">
-                            <rect key="frame" x="0.0" y="0.0" width="768" height="164"/>
+                        <pickerView key="tableHeaderView" contentMode="scaleToFill" id="c6p-gf-2NZ">
+                            <rect key="frame" x="0.0" y="0.0" width="712" height="164"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <connections>
                                 <outlet property="dataSource" destination="PSJ-RJ-4rc" id="uMC-Q9-Pt6"/>
@@ -431,10 +429,10 @@
                         </pickerView>
                         <prototypes>
                             <tableViewCell alpha="0.80000000000000004" contentMode="scaleToFill" restorationIdentifier="bird table view cell" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="birdTableCell" id="lRG-L3-7pe" customClass="BirdTableViewCell">
-                                <rect key="frame" x="0.0" y="186" width="768" height="75"/>
+                                <rect key="frame" x="0.0" y="192" width="712" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lRG-L3-7pe" id="qzx-De-jCC">
-                                    <rect key="frame" x="0.0" y="0.0" width="730" height="74.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="681" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pt3-wv-NLJ">
@@ -474,7 +472,7 @@
                     <navigationItem key="navigationItem" id="nKw-Zn-bBj">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" restorationIdentifier="segmentControl" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" id="BCs-Ot-YPd">
-                            <rect key="frame" x="79.5" y="3" width="609" height="44"/>
+                            <rect key="frame" x="51.5" y="6" width="609" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="All">
@@ -524,7 +522,7 @@
                         <viewControllerLayoutGuide type="bottom" id="0KG-aG-KSf"/>
                     </layoutGuides>
                     <scrollView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" id="q16-AW-4ef">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="954"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="928"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9wh-xR-2sf">
@@ -712,7 +710,7 @@
                     <navigationItem key="navigationItem" id="Dvn-qR-KI9">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="5Ie-cV-Svn">
-                            <rect key="frame" x="254.5" y="3" width="259" height="44"/>
+                            <rect key="frame" x="226.5" y="6" width="259" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="tintColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" image="0038.png">
@@ -725,7 +723,7 @@
                         </button>
                         <barButtonItem key="rightBarButtonItem" title="Record" style="plain" id="8Ub-Qh-jpl">
                             <button key="customView" opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ytd-27-wTR">
-                                <rect key="frame" x="660" y="3" width="88" height="44"/>
+                                <rect key="frame" x="604" y="6" width="88" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                                 <color key="tintColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -767,11 +765,11 @@
             <objects>
                 <tableViewController id="U5e-XN-a7j" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bSN-Zz-7Jd">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="Yyg-Ht-lrH">
-                            <rect key="frame" x="0.0" y="0.0" width="768" height="105"/>
+                            <rect key="frame" x="0.0" y="0.0" width="712" height="105"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem id="Agw-Ju-VhM">
@@ -783,10 +781,10 @@
                             <tableViewSection headerTitle="How to use" id="uXF-Jn-NuK">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="454" id="FGm-8l-al5">
-                                        <rect key="frame" x="0.0" y="127" width="768" height="454"/>
+                                        <rect key="frame" x="0.0" y="133" width="712" height="454"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FGm-8l-al5" id="v5S-Wy-gUZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="453.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="712" height="454"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xms-oH-mLf">
@@ -797,7 +795,7 @@
                                                         <fragment>
                                                             <string key="content">BIRDS: Use the bird list to find images and general information and play sound files for each bird by selecting one bird. When you have an internet connection look up more detail with a left swipe from that bird's detail view. Swipe right to go back to previous screen. Filter the list for habitat by pressing the "Garden, Water, Bush" buttons in the navigation bar. MAP: Use the map to find where you are or where your favourite birding spot is located. Long-press on the map (approx. 1s) to create a new observation spot. The location name will be shown if you have an internet connection when you create the spot. Then edit details about duration and eBird Protocol and add a bird observation for that spot by clicking the 'Book' sign in the navigation bar. Go back to your observation spot at any time by clicking the "Left" button in the navigation bar (which will show the name of your spot. Using the "Letter" icon in the Navigation bar you can then create a eBird Record format CSV file and email to yourself for later upload.OBSERVATIONS: The observations tab lets you review your birdings spots. IDENTIFY: Use "Identify" tab by clicking the "Magnifier glass" icon in the navigation bar and specifying the three attributes "Colour", "Size" and "Bill length/shape" in order to filter the bird result list. The view will update when you click "Find". OBSERVATIONS: Review your older observation lists by clicking their spot on the map. A summary is shown on the "Observations" tab. THE CSV FILE CONTAINS A FORMATTED LIST OF YOUR OBSERVATIONS. CREATE AN ACCOUNT AT EBIRD.ORG TO UPLOAD IT.</string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -852,10 +850,10 @@
                             <tableViewSection headerTitle="Links" id="rjH-h1-TFM">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="170" id="VR1-I4-Ds5">
-                                        <rect key="frame" x="0.0" y="603" width="768" height="170"/>
+                                        <rect key="frame" x="0.0" y="643" width="712" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VR1-I4-Ds5" id="eWm-Fq-uEM">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="169.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="712" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ixd-4D-cj3">
@@ -865,7 +863,7 @@
                                                         <fragment>
                                                             <string key="content">http://www.doc.govt.nz/conservation/native-animals/birds/five-minute-bird-counts/                                       http://www.doc.govt.nz/getting-involved/get-trained/online-courses/bird-identification-online-course/)</string>
                                                             <attributes>
-                                                                <font key="NSFont" size="13" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user" size="13"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5"/>
                                                             </attributes>
                                                         </fragment>
@@ -883,7 +881,7 @@
                                                     <attributedString key="attributedText">
                                                         <fragment content="http://ebird.org/content/newzealand/">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://ebird.org/content/newzealand/about"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -959,10 +957,10 @@ URL: http://www.TeAra.govt.nz/en/birdwatching</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="260" id="sRF-3f-e4r">
-                                        <rect key="frame" x="0.0" y="773" width="768" height="260"/>
+                                        <rect key="frame" x="0.0" y="813" width="712" height="260"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sRF-3f-e4r" id="zTe-9Y-LXQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="259.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="712" height="260"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -971,10 +969,10 @@ URL: http://www.TeAra.govt.nz/en/birdwatching</string>
                             <tableViewSection headerTitle="Credits" id="UBX-gW-hpw">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="1570" id="X8B-eu-x7J">
-                                        <rect key="frame" x="0.0" y="1055" width="768" height="1570"/>
+                                        <rect key="frame" x="0.0" y="1129" width="712" height="1570"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X8B-eu-x7J" id="ajv-8v-mGa">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="1569.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="712" height="1570"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TKv-fb-BrS">
@@ -986,7 +984,7 @@ URL: http://www.TeAra.govt.nz/en/birdwatching</string>
                                                             <string key="content">Australian Magpie
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -1031,7 +1029,7 @@ URL: http://www.TeAra.govt.nz/en/birdwatching</string>
                                                         </fragment>
                                                         <fragment content="http://commons.wikimedia.org/wiki/File:G_tibicen_dorsalis_gnangarra.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://commons.wikimedia.org/wiki/File:G_tibicen_dorsalis_gnangarra.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -1082,7 +1080,7 @@ URL: http://www.TeAra.govt.nz/en/birdwatching</string>
 Banded Dotterel
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -1127,7 +1125,7 @@ Banded Dotterel
                                                         </fragment>
                                                         <fragment content="http://en.wikipedia.org/wiki/Double-banded_Plover">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://en.wikipedia.org/wiki/Double-banded_Plover"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -1176,7 +1174,7 @@ Banded Dotterel
 Cg
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -1221,7 +1219,7 @@ Cg
                                                         </fragment>
                                                         <fragment content="http://en.wikipedia.org/wiki/File:Charadrius_bicinctus_breeding_-_Ralphs_Bay.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://en.wikipedia.org/wiki/File:Charadrius_bicinctus_breeding_-_Ralphs_Bay.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -1269,7 +1267,7 @@ Cg
                                                             <string key="content">
 Interview about it: </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -1314,7 +1312,7 @@ Interview about it: </string>
                                                         </fragment>
                                                         <fragment content="http://www.doc.govt.nz/conservation/native-animals/birds/interviews-about-new-zealand-birds/banded-dotterel/">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://www.doc.govt.nz/conservation/native-animals/birds/interviews-about-new-zealand-birds/banded-dotterel/"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -1365,7 +1363,7 @@ Bellbird
 
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -1410,7 +1408,7 @@ Bellbird
                                                         </fragment>
                                                         <fragment content="http://www.teara.govt.nz/en/birdwatching/sources">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://www.teara.govt.nz/en/birdwatching/sources"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -1460,7 +1458,7 @@ Bellbird
 Blackbird
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -1505,7 +1503,7 @@ Blackbird
                                                         </fragment>
                                                         <fragment content="http://commons.wikimedia.org/wiki/File:Solsort.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://commons.wikimedia.org/wiki/File:Solsort.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -1551,7 +1549,7 @@ Blackbird
                                                         </fragment>
                                                         <fragment content=" (CC-SA generic: ">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -1597,7 +1595,7 @@ Blackbird
                                                         <fragment content="Malene Thyssen, ">
                                                             <attributes>
                                                                 <color key="NSBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="13" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user" size="13"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -1644,7 +1642,7 @@ Blackbird
                                                             <attributes>
                                                                 <color key="NSBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="NSColor" red="0.32156862745098042" green="0.13725490196078433" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="13" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user" size="13"/>
                                                                 <url key="NSLink" string="http://commons.wikimedia.org/wiki/User:Malene"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -1694,7 +1692,7 @@ Blackbird
                                                             <attributes>
                                                                 <color key="NSBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="NSColor" red="0.32156862745098042" green="0.13725490196078433" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="13" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user" size="13"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -1745,7 +1743,7 @@ Blackbird
 Chaffinch
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -1791,7 +1789,7 @@ Chaffinch
                                                         </fragment>
                                                         <fragment content="http://commons.wikimedia.org/wiki/File:Chaffinch_2.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://commons.wikimedia.org/wiki/File:Chaffinch_2.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -1846,7 +1844,7 @@ http://www.flickr.com/photos/kiwinz/ (http://www.flickr.com/photos/kiwinz/352669
 Grey Warbler
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -1892,7 +1890,7 @@ Grey Warbler
                                                         </fragment>
                                                         <fragment content="http://commons.wikimedia.org/wiki/File:Gerygone1888.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://commons.wikimedia.org/wiki/File:Gerygone1888.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -1943,7 +1941,7 @@ Grey Warbler
 Kakariki
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -1989,7 +1987,7 @@ Kakariki
                                                         </fragment>
                                                         <fragment content="http://commons.wikimedia.org/wiki/File:Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://commons.wikimedia.org/wiki/File:Cyanoramphus_novaezelandiae_-Kapiti_Island,_New_Zealand-8.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -2040,7 +2038,7 @@ Kakariki
 Kea
 Kea_(Nestor_notabilis)_-on_ground-8.JPG FROM </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -2086,7 +2084,7 @@ Kea_(Nestor_notabilis)_-on_ground-8.JPG FROM </string>
                                                         </fragment>
                                                         <fragment content="http://commons.wikimedia.org/wiki/File:Kea_(Nestor_notabilis)_-on_ground-8.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://commons.wikimedia.org/wiki/File:Kea_(Nestor_notabilis)_-on_ground-8.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -2133,7 +2131,7 @@ Kea_(Nestor_notabilis)_-on_ground-8.JPG FROM </string>
                                                         </fragment>
                                                         <fragment content=" (by Snowmanradio(talk))">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -2179,7 +2177,7 @@ Kea_(Nestor_notabilis)_-on_ground-8.JPG FROM </string>
                                                         </fragment>
                                                         <fragment content="http://commons.wikimedia.org/wiki/User:Snowmanradio">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://commons.wikimedia.org/wiki/User:Snowmanradio"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -2229,7 +2227,7 @@ Kea_(Nestor_notabilis)_-on_ground-8.JPG FROM </string>
 Cg
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -2279,7 +2277,7 @@ Cg
 </string>
                                                             <attributes>
                                                                 <color key="NSBackgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -2325,7 +2323,7 @@ Cg
                                                         </fragment>
                                                         <fragment content="http://commons.wikimedia.org/wiki/File:Nestor_notabilis_-Fiordland_National_Park-8a.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://commons.wikimedia.org/wiki/File:Nestor_notabilis_-Fiordland_National_Park-8a.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -2372,7 +2370,7 @@ Cg
                                                         </fragment>
                                                         <fragment content=" originally FROM http://flickr.com/photos/46888841@N00 (Author ">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -2420,7 +2418,7 @@ Cg
                                                             <attributes>
                                                                 <color key="NSBackgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="NSColor" red="0.32156862745098042" green="0.13725490196078433" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://flickr.com/photos/46888841@N00"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -2469,7 +2467,7 @@ Cg
                                                             <attributes>
                                                                 <color key="NSBackgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="NSColor" red="0.32156862745098042" green="0.13725490196078433" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -2519,7 +2517,7 @@ Cg
 Kereru
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -2565,7 +2563,7 @@ Kereru
                                                         </fragment>
                                                         <fragment content="http://commons.wikimedia.org/wiki/File:Kereru_maunga.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://commons.wikimedia.org/wiki/File:Kereru_maunga.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -2616,7 +2614,7 @@ Kereru
 Kiwi
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -2662,7 +2660,7 @@ Kiwi
                                                         </fragment>
                                                         <fragment content="http://www.doc.govt.nz/pagefiles/68975/distribution-of-kiwi.pdf">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://www.doc.govt.nz/pagefiles/68975/distribution-of-kiwi.pdf"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -2712,7 +2710,7 @@ Kiwi
 Cg
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -2758,7 +2756,7 @@ Cg
                                                         </fragment>
                                                         <fragment content="http://www.teara.govt.nz/en/kiwi/page-1">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://www.teara.govt.nz/en/kiwi/page-1"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -2809,7 +2807,7 @@ Cg
 Moa
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -2855,7 +2853,7 @@ Moa
                                                         </fragment>
                                                         <fragment content="https://commons.wikimedia.org/wiki/File:Dinornis1387.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="https://commons.wikimedia.org/wiki/File:Dinornis1387.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -2906,7 +2904,7 @@ Moa
 Morepork
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -2952,7 +2950,7 @@ Morepork
                                                         </fragment>
                                                         <fragment content="http://commons.wikimedia.org/wiki/File:MoreporkMaunga.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://commons.wikimedia.org/wiki/File:MoreporkMaunga.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -3002,7 +3000,7 @@ Morepork
 
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -3050,7 +3048,7 @@ Morepork
                                                             <string key="content">Myna
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -3095,7 +3093,7 @@ Morepork
                                                         </fragment>
                                                         <fragment content="https://en.wikipedia.org/wiki/File:Acridotheres_tristis_-Sydney,_Australia-8.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="https://en.wikipedia.org/wiki/File:Acridotheres_tristis_-Sydney,_Australia-8.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -3144,7 +3142,7 @@ Morepork
 Cg
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -3191,7 +3189,7 @@ Cg
                                                             <attributes>
                                                                 <color key="NSBackgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="NSColor" red="0.32156862745098042" green="0.13725490196078433" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://www.flickr.com/people/34094515@N00"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="19" defaultTabInterval="36">
                                                                     <tabStops/>
@@ -3203,7 +3201,7 @@ Cg
                                                         <fragment content=" from Australia (Flickr)  ">
                                                             <attributes>
                                                                 <color key="NSBackgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="19" defaultTabInterval="36">
                                                                     <tabStops/>
                                                                 </paragraphStyle>
@@ -3214,7 +3212,7 @@ Cg
 Cg
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="19" defaultTabInterval="36">
                                                                     <tabStops/>
                                                                 </paragraphStyle>
@@ -3225,7 +3223,7 @@ Cg
 Cg
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -3272,7 +3270,7 @@ Cg
                                                             <string key="content">Paradise Duck
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="19" defaultTabInterval="36">
                                                                     <tabStops/>
                                                                 </paragraphStyle>
@@ -3281,7 +3279,7 @@ Cg
                                                         </fragment>
                                                         <fragment content="http://commons.wikimedia.org/wiki/File:History_of_the_birds_of_NZ_1st_ed_p240.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://commons.wikimedia.org/wiki/File:History_of_the_birds_of_NZ_1st_ed_p240.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -3330,7 +3328,7 @@ Cg
                                                             <string key="content">
 originally from </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -3377,7 +3375,7 @@ originally from </string>
                                                         <fragment content="Walter Lawry Buller (1838-1906): ">
                                                             <attributes>
                                                                 <color key="NSBackgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -3471,7 +3469,7 @@ originally from </string>
                                                         <fragment content=" 1st edition. 1873, between pages 240,241. ">
                                                             <attributes>
                                                                 <color key="NSBackgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -3519,7 +3517,7 @@ originally from </string>
                                                             <attributes>
                                                                 <color key="NSBackgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="NSColor" red="0.32156862745098042" green="0.13725490196078433" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://archive.org/details/historyofbirdsof00bull"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -3568,7 +3566,7 @@ originally from </string>
                                                             <attributes>
                                                                 <color key="NSBackgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="NSColor" red="0.32156862745098042" green="0.13725490196078433" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -3614,7 +3612,7 @@ originally from </string>
                                                         </fragment>
                                                         <fragment content="Public Domain)">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -3665,7 +3663,7 @@ Cg
                                                             <attributes>
                                                                 <color key="NSBackgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="NSColor" red="0.32156862745098042" green="0.13725490196078433" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -3714,7 +3712,7 @@ Cg
 Rifleman
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -3760,7 +3758,7 @@ Rifleman
                                                         </fragment>
                                                         <fragment content="http://commons.wikimedia.org/wiki/File:Reiflman_Acanthisitta_chloris_crop.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://commons.wikimedia.org/wiki/File:Reiflman_Acanthisitta_chloris_crop.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -3811,7 +3809,7 @@ Rifleman
 Silvereye
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -3857,7 +3855,7 @@ Silvereye
                                                         </fragment>
                                                         <fragment content="http://en.wikipedia.org/wiki/File:Silvereye.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://en.wikipedia.org/wiki/File:Silvereye.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -3908,7 +3906,7 @@ Silvereye
 Stitchbird/Hihi
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -3954,7 +3952,7 @@ Stitchbird/Hihi
                                                         </fragment>
                                                         <fragment content="http://en.wikipedia.org/wiki/File:Hihi_(Stitchbird)-1.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://en.wikipedia.org/wiki/File:Hihi_(Stitchbird)-1.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -4005,7 +4003,7 @@ http://en.wikipedia.org/wiki/File:Male_stitchbird.JPG
 
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -4051,7 +4049,7 @@ http://en.wikipedia.org/wiki/File:Male_stitchbird.JPG
                                                         </fragment>
                                                         <fragment content="http://en.wikipedia.org/wiki/Stitchbird">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://en.wikipedia.org/wiki/Stitchbird"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -4098,7 +4096,7 @@ http://en.wikipedia.org/wiki/File:Male_stitchbird.JPG
                                                         </fragment>
                                                         <fragment content=" Bild (600px-Hihi.PNG) by: ">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -4144,7 +4142,7 @@ http://en.wikipedia.org/wiki/File:Male_stitchbird.JPG
                                                         </fragment>
                                                         <fragment content="http://commons.wikimedia.org/wiki/User:Tony_Wills">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://commons.wikimedia.org/wiki/User:Tony_Wills"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -4198,7 +4196,7 @@ Commons.wikimedia: Public Domain (2 images)
 Tomtit
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -4244,7 +4242,7 @@ Tomtit
                                                         </fragment>
                                                         <fragment content="http://commons.wikimedia.org/wiki/File:A_Tomtit.jpg">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://commons.wikimedia.org/wiki/File:A_Tomtit.jpg"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
@@ -4291,7 +4289,7 @@ Tomtit
                                                         </fragment>
                                                         <fragment content=" (CC)">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -4343,10 +4341,10 @@ Tomtit
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="160" id="awA-eU-LdN">
-                                        <rect key="frame" x="0.0" y="2625" width="768" height="160"/>
+                                        <rect key="frame" x="0.0" y="2699" width="712" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="awA-eU-LdN" id="WEq-8T-FQM">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="159.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="712" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nug-G0-z7y">
@@ -4356,7 +4354,7 @@ Tomtit
                                                     <attributedString key="attributedText">
                                                         <fragment content="http://www.birdingnz.net/">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://www.birdingnz.net/"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36">
                                                                     <tabStops/>
@@ -4368,7 +4366,7 @@ Tomtit
 IAo
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36">
                                                                     <tabStops/>
                                                                 </paragraphStyle>
@@ -4376,7 +4374,7 @@ IAo
                                                         </fragment>
                                                         <fragment content="http://commons.wikimedia.org/wiki/A_History_of_the_Birds_of_New_Zealand">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://commons.wikimedia.org/wiki/A_History_of_the_Birds_of_New_Zealand"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36">
                                                                     <tabStops/>
@@ -4388,7 +4386,7 @@ IAo
 Cg
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36">
                                                                     <tabStops/>
                                                                 </paragraphStyle>
@@ -4396,7 +4394,7 @@ Cg
                                                         </fragment>
                                                         <fragment content="http://en.wikipedia.org/wiki/Category:Important_Bird_Areas_of_New_Zealand">
                                                             <attributes>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" metaFont="user"/>
                                                                 <url key="NSLink" string="http://en.wikipedia.org/wiki/Category:Important_Bird_Areas_of_New_Zealand"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36">
                                                                     <tabStops/>
@@ -4444,7 +4442,7 @@ Cg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0I-H6-KKB" userLabel="skipButton">
-                                <rect key="frame" x="308.5" y="120" width="151" height="48"/>
+                                <rect key="frame" x="308.5" y="100" width="151" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="151" id="KLa-12-yV9"/>
                                 </constraints>
@@ -4500,7 +4498,7 @@ Cg
                     <tabBarItem key="tabBarItem" title="Map" image="0063.png" id="NK3-0N-lsw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hOb-Zz-h08">
-                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4522,10 +4520,10 @@ Cg
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell alpha="0.80000001192092896" contentMode="scaleToFill" restorationIdentifier="bird table view cell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="birdTableCell" id="MD2-zR-3Fh" customClass="BirdTableViewCell">
-                                <rect key="frame" x="0.0" y="22" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MD2-zR-3Fh" id="mwk-A8-ptx">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jFg-el-O7R">
@@ -4580,7 +4578,7 @@ Cg
                     <tabBarItem key="tabBarItem" title="Spots" image="0002.png" id="fdy-LW-rtI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bpq-3N-hnl">
-                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4601,7 +4599,7 @@ Cg
                     <navigationItem key="navigationItem" id="WP8-R4-TVr"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lfD-Xh-vbF">
-                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4642,7 +4640,7 @@ Cg
                     <rect key="frame" x="0.0" y="0.0" width="768" height="158"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="36T-Mi-C8f" id="viX-98-DlW">
-                        <rect key="frame" x="0.0" y="0.0" width="730" height="157.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="737" height="158"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w9q-9H-qpz">
@@ -4672,7 +4670,7 @@ Cg
                     <tabBarItem key="tabBarItem" title="identify" image="0090.png" id="yNL-7Y-Rvh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q0l-Ql-ePp">
-                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4685,18 +4683,18 @@ Cg
             <point key="canvasLocation" x="3333.59375" y="-3591.7968749999995"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="0002.png" width="35" height="35"/>
-        <image name="0038.png" width="35" height="35"/>
-        <image name="0043.png" width="35" height="35"/>
-        <image name="0063.png" width="35" height="35"/>
-        <image name="0090.png" width="35" height="35"/>
-        <image name="0209.png" width="35" height="35"/>
-        <image name="0239.png" width="35" height="35"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="id8-Jh-fbF"/>
-        <segue reference="7WX-2o-g93"/>
+        <segue reference="E97-Wc-t7X"/>
         <segue reference="DxM-bj-kZ8"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="0002.png" width="8.3999996185302734" height="8.3999996185302734"/>
+        <image name="0038.png" width="8.3999996185302734" height="8.3999996185302734"/>
+        <image name="0043.png" width="8.3999996185302734" height="8.3999996185302734"/>
+        <image name="0063.png" width="8.3999996185302734" height="8.3999996185302734"/>
+        <image name="0090.png" width="8.3999996185302734" height="8.3999996185302734"/>
+        <image name="0209.png" width="8.3999996185302734" height="8.3999996185302734"/>
+        <image name="0239.png" width="8.3999996185302734" height="8.3999996185302734"/>
+    </resources>
 </document>
