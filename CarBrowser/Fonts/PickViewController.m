@@ -74,6 +74,8 @@
                                              cancelButtonTitle:@"Find"
                                         destructiveButtonTitle:@"Cancel"
                                              otherButtonTitles:nil];
+    
+    
     // Add the picker
     UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0,185,0,0)];
     

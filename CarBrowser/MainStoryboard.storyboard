@@ -430,7 +430,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <pickerView key="tableHeaderView" contentMode="scaleToFill" id="iEm-c1-8No">
-                            <rect key="frame" x="0.0" y="0.0" width="265" height="85"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <connections>
                                 <outlet property="dataSource" destination="PSJ-RJ-4rc" id="KEx-Cr-qiX"/>
@@ -516,27 +516,10 @@
                         </segmentedControl>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchDisplayController" destination="6gC-vj-9ux" id="fcp-h2-Sn7"/>
                         <outlet property="segmentControl" destination="BCs-Ot-YPd" id="y1P-zI-pGc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSt-QR-jCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="JJo-Gd-DHE">
-                    <connections>
-                        <outlet property="delegate" destination="PSJ-RJ-4rc" id="bAt-1L-emY"/>
-                        <outlet property="searchContentsController" destination="PSJ-RJ-4rc" id="bem-la-Xa1"/>
-                        <outlet property="searchResultsDataSource" destination="PSJ-RJ-4rc" id="asA-r5-84r"/>
-                        <outlet property="searchResultsDelegate" destination="PSJ-RJ-4rc" id="kvc-77-AYX"/>
-                    </connections>
-                </searchDisplayController>
-                <searchDisplayController id="6gC-vj-9ux">
-                    <connections>
-                        <outlet property="delegate" destination="PSJ-RJ-4rc" id="NZZ-an-Ayy"/>
-                        <outlet property="searchContentsController" destination="PSJ-RJ-4rc" id="PMc-lL-j0s"/>
-                        <outlet property="searchResultsDataSource" destination="PSJ-RJ-4rc" id="3UR-Qg-XK0"/>
-                        <outlet property="searchResultsDelegate" destination="PSJ-RJ-4rc" id="Ff7-Q9-IIa"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="4336" y="-1666.8665667166417"/>
         </scene>
@@ -4692,7 +4675,7 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <pickerView key="tableHeaderView" contentMode="scaleToFill" id="gEy-H1-rPf">
-                            <rect key="frame" x="0.0" y="0.0" width="265" height="69"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <connections>
                                 <outlet property="dataSource" destination="uix-ai-Vgo" id="t0h-vg-Jnt"/>
