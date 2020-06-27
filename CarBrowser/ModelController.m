@@ -4605,7 +4605,7 @@
         [newManagedObject95 setValue:@"duck" forKey:@"size_and_shape"];
         
         
-        [newManagedObject95 setValue:@"AustralianCoot"         forKey:@"image"];
+        [newManagedObject95 setValue:@"AustralianCoot5929761570_1b9de7d162_o"         forKey:@"image"];
         
         NSURL *url95t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                                 pathForResource:@"AustralianCoot5929761570_1b9de7d162_o_TN"
@@ -4974,7 +4974,7 @@
         [newManagedObject102 setValue:@"duck" forKey:@"size_and_shape"];
         
         
-        [newManagedObject102 setValue:@"FjordlandCrestedPenguin"         forKey:@"image"];
+        [newManagedObject102 setValue:@"FjordlandCrestedPenguin2154751828_aca5bbb5da_o"         forKey:@"image"];
         
         NSURL *url102t = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                                  pathForResource:@"FjordlandCrestedPenguin2154751828_aca5bbb5da_o_TN"
