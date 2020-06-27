@@ -72,10 +72,8 @@
     
 }
 
-- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
-{
-    return IndexTitles;
-}
+
+
 
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
@@ -153,14 +151,34 @@
     return cell;
 }
 
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+
+// INSERTED 27/06/20 ==>
+
+//- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 //{
-//    BirdTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"birdTableCell" forIndexPath:indexPath];
-//    [self configureCell:(BirdTableViewCell *)cell atIndexPath:indexPath];
-//    return cell;
+//    return IndexTitles;
+//}
+////
+////- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+////    return [[UILocalizedIndexedCollation currentCollation] sectionIndexTitles];
+////}
+//
+////- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+////    if ([[self->IndexTitles objectAtIndex:section] count] > 0) {
+////        return [[[UILocalizedIndexedCollation currentCollation] sectionTitles] objectAtIndex:section];
+////    }
+////    return nil;
+////}
+//
+//- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+//{
+//    return [[UILocalizedIndexedCollation currentCollation] sectionForSectionIndexTitleAtIndex:index];
 //}
 //
+
+// INSERTED 27/06/20 <==
+
+
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.

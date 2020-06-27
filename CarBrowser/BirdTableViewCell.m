@@ -27,17 +27,29 @@
 		imageView.contentMode = UIViewContentModeScaleAspectFit;
         [self.contentView addSubview:imageView];
         
-        nameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        [nameLabel setFont:[UIFont systemFontOfSize:12.0]];
-        [nameLabel setTextColor:[UIColor darkGrayColor]];
-        [nameLabel setHighlightedTextColor:[UIColor whiteColor]];
-        [self.contentView addSubview:nameLabel];
+//        nameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+//        [nameLabel setFont:[UIFont systemFontOfSize:12.0]];
+//        [nameLabel setTextColor:[UIColor darkGrayColor]];
+//        [nameLabel setHighlightedTextColor:[UIColor whiteColor]];
+//        [self.contentView addSubview:nameLabel];
+//
+//        othernameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+//        [othernameLabel setFont:[UIFont systemFontOfSize:12.0]];
+//        [othernameLabel setTextColor:[UIColor blackColor]];
+//        [othernameLabel setHighlightedTextColor:[UIColor whiteColor]];
+//
+            nameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+            [nameLabel setFont:[UIFont systemFontOfSize:12.0]];
+//          [nameLabel setTextColor:[UIColor systemGrayColor]];
+//          [nameLabel setHighlightedTextColor:[UIColor whiteColor]];
+            [self.contentView addSubview:nameLabel];
+          
+            othernameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+            [othernameLabel setFont:[UIFont systemFontOfSize:12.0]];
+//          [othernameLabel setTextColor:[UIColor systemGrayColor]];
+//          [othernameLabel setHighlightedTextColor:[UIColor whiteColor]];
+          
         
-        othernameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        [othernameLabel setFont:[UIFont systemFontOfSize:12.0]];
-        [othernameLabel setTextColor:[UIColor blackColor]];
-        [othernameLabel setHighlightedTextColor:[UIColor whiteColor]];
-		
         [self.contentView addSubview:othernameLabel];
     }
     
@@ -46,23 +58,6 @@
 
 
 
-/*
- - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-*/
 
 #pragma mark Recipe set accessor
 
