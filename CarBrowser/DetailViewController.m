@@ -409,77 +409,7 @@ MFMailComposeViewController * controller;
     
     
     
-    // -----------
-    
-    //NSString * ident = spot.name;
-    //FMResultSet *resultBirdNumber = [db executeQuery:@"SELECT Z_PK FROM ZSpot WHERE  ZNAME= %@;", ident];
-
-    
-//    //deal with the bird
-//    FMResultSet *resultBird = [db executeQuery:@"SELECT ZBIRD_OBSERVED, ZNUMBER_HEARD, ZNUMBER_SEEN FROM ZObservation ;"]; //WHERE ZOBSERVATION_ATSPOT = 1 ;"];
-//    while ([resultBird next]) {
-//        
-//            NSDictionary *resultRow = [resultBird resultDictionary];
-//        NSLog(@"RowCnt is %lu",(unsigned long)resultRow.count);
-//        
-//        NSArray *orderedKeys = [[resultRow allKeys] sortedArrayUsingSelector:@selector(compare:)];
-//            // iterate over the array and write out each result row to CSV file
-//            for (NSString *columnname in orderedKeys) {
-//                
-//                    id value = [resultRow objectForKey:columnname];
-//                    //[csvWriter writeField:columnname];
-//                    [csvWriter writeField:value];
-//                NSLog(@" %@ is :%@",columnname, value);
-//                
-//             
-//        
-//            }
-//        [csvWriter writeField:self.spot.name];
-//        [csvWriter writeField:[NSString stringWithFormat:@"%.3f", self.spot.latitude]];
-//        [csvWriter writeField:[NSString stringWithFormat:@"%.3f", self.spot.longitude]];
-//        
-//        NSLog(@"%@", mySpot);
-//        NSLog([NSString stringWithFormat:@"%.3f, %.3f", self.spot.latitude, self.spot.longitude]);
-//        
-//        [csvWriter finishLine];
-//    resultBird = nil;
-//    resultRow = nil;
-//    orderedKeys = nil;
-//        [db close];
-//        
-//    }
-//    
-//    //deal with all other fields
-//    FMResultSet *results = [db executeQuery:@"SELECT * FROM ZObservation WHERE ZOBSERVATION_ATSPOT = 1 ;"];
-//    while ([results next]) {
-//            NSDictionary *resultRow = [results resultDictionary];
-//            NSArray *orderedKeys = [[resultRow allKeys] sortedArrayUsingSelector:@selector(compare:)];
-//            // iterate over the array and write out each result row to CSV file
-//            for (NSString *columnname in orderedKeys) {
-//                id value = [resultRow objectForKey:columnname];
-//              //  if ([columnname isEqual: @"ZBird_observed"]) {
-//                    NSLog( @"Value for %@: %@", columnname, value);
-//                    
-//                    //write values out to CSV file
-//                    [csvWriter writeField:value];
-//                
-//                   // [csvWriter writeField:[NSString stringWithFormat:@"%.3f, %.3f", spot.latitude, spot.latitude]];
-//                   // 
-//                    
-//            //    }
-////                else {
-////                    [csvWriter writeField:value];
-////                }
-//                
-//                
-//                //[csvWriter writeField:[spot latitude]]
-//                
-//            }
-//        
-//        
-//           // [csvWriter writeField:@"\n"];
-//        
-//    }
+  
     
     NSData *csvData = [NSData dataWithContentsOfFile:fullPath];
     MFMailComposeViewController * controller = [[MFMailComposeViewController alloc] init];
@@ -491,6 +421,21 @@ MFMailComposeViewController * controller;
     [controller setMessageBody:@"My Bird Observations. \nKey to eBird Fields: Common Name/	 Genus/	 Species/	 Number/     Species Comments/     Location Name/	 Latitude/	 Longitude/	 Date/	 Start Time/     State,Province/ Country Code/     Protocol/   Number of Observers/     Duration/     All observations reported?/Effort Distance Miles/     Effort area acres/	 Submission Comments" isHTML:NO];
     //[controller set]
     [controller addAttachmentData:csvData  mimeType:@"text/csv" fileName:@"CSVfile.csv"];
+    
+    
+    
+    // iOS 13 will show the Mail Controller in "Card Style" Modal Presentation mode by default. Let's use Full Screen instead:
+    if (@available(iOS 13.0, *)) {
+        [controller setModalPresentationStyle: UIModalPresentationFullScreen];
+    } else {
+        // Fallback on earlier versions
+    }
+    if (@available(iOS 13.0, *)) {
+        [controller setModalInPresentation:FALSE];
+    } else {
+        // Fallback on earlier versions
+    }
+    [controller setToolbarHidden:FALSE];
     [self presentViewController:controller animated:YES completion:nil];
     
     
@@ -499,66 +444,6 @@ MFMailComposeViewController * controller;
 }
 
 
-//-(NSString *)getdate{
-//    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-//    [dateFormat setDateFormat:@"MM-dd-yyyy"];
-//    NSDateFormatter *format = [[NSDateFormatter alloc] init];
-//    [format setDateFormat:@"MMM dd, yyyy HH:mm"];
-//    //NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
-//    //[timeFormat setDateFormat:@"HH:mm:ss"];
-//    //NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init] ;
-//    //[dateFormatter setDateFormat:@"EEEE"];
-//    
-//    NSDate *now = [[NSDate alloc] init];
-//    NSString *dateString = [dateFormat stringFromDate:now];
-//    NSString *theDate = [dateFormat stringFromDate:now];
-//    //NSString *theTime = [timeFormat stringFromDate:now];
-//    
-//    //NSString *week = [dateFormatter stringFromDate:now];
-//    NSLog(@"\n"
-//          "dateString: |%@| \n"
-//          //"dateFormatter: |%@| \n"
-//          "Now: |%@| \n"
-//          //"Week: |%@| \n"
-//          
-//          , dateString,theDate);
-//    
-//    return dateString;
-//    }
-
-//#pragma mark -
-//#pragma mark Compose Mail/SMS
-//
-//// Displays an email composition interface inside the application. Populates all the Mail fields.
-//-(void)displayMailComposerSheet
-//{
-//	MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
-//	picker.mailComposeDelegate = self;
-//	
-//	[picker setSubject:@"Hello from California!"];
-//	
-//	
-//	// Set up recipients
-//	NSArray *toRecipients = [NSArray arrayWithObject:@"first@example.com"];
-//	NSArray *ccRecipients = [NSArray arrayWithObjects:@"second@example.com", @"third@example.com", nil];
-//	NSArray *bccRecipients = [NSArray arrayWithObject:@"fourth@example.com"];
-//	
-//	[picker setToRecipients:toRecipients];
-//	[picker setCcRecipients:ccRecipients];
-//	[picker setBccRecipients:bccRecipients];
-//	
-//	// Attach an image to the email
-//	NSString *path = [[NSBundle mainBundle] pathForResource:@"rainy" ofType:@"jpg"];
-//	NSData *myData = [NSData dataWithContentsOfFile:path];
-//	[picker addAttachmentData:myData mimeType:@"image/jpeg" fileName:@"rainy"];
-//	
-//	// Fill out the email body text
-//	NSString *emailBody = @"It is raining in sunny California!";
-//	[picker setMessageBody:emailBody isHTML:NO];
-//	
-//	[self presentModalViewController:picker animated:YES];
-//	[picker release];
-//}
 
 
 
